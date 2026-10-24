@@ -12,6 +12,8 @@
 import sys, re, subprocess, pathlib, json
 sys.dont_write_bytecode = True
 ROOT = pathlib.Path(__file__).resolve().parent.parent
+# ★ 基线常量从【单一事实来源】读（★ tools/baseline.json）⇒ ★ 三个工具不可能再漏
+BASELINE_COMMIT = json.loads((ROOT / "tools/baseline.json").read_text(encoding="utf-8"))["baseline_commit"]
 sys.path.insert(0, str(ROOT / "tools"))
 
 from migrate_pointers import L1_MAP, LIVE, PATTERNS, L1_CTX  # noqa: E402
@@ -42,8 +44,12 @@ DEVIATIONS = [
 #   ⇒ ★ 落法：★ ① 这类指针**手工核**（★ 本轮已核 4 处）★ ② 记进本注释，★ 不当它不存在
 
 
+# ★★★ 基线【不能是 HEAD】（★ 同一个病根我已经在验收器里修过一次，★ 这里漏了）
+# ★   HEAD 会随 commit 往前走 ⇒ ★ **第一次 commit 之后，HEAD 里已经是被迁移过的文件**
+# ★   ⇒ ★ 期望值会算成「已迁移的指针再迁移一次」⇒ ★ 对拍必假红
+# ★ ⇒ ★ 落法：★ 基线固定为【本轮改稿前的 commit】⇒ ★ 与迁移器/验收器同一基线
 def head_text(rel):
-    r = subprocess.run(["git", "show", f"HEAD:{rel}"], cwd=ROOT,
+    r = subprocess.run(["git", "show", f"{BASELINE_COMMIT}:{rel}"], cwd=ROOT,
                        capture_output=True, text=True)
     return r.stdout if r.returncode == 0 else None
 

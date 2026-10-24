@@ -20,11 +20,14 @@ import sys
 sys.dont_write_bytecode = True
 
 import argparse
+import json
 import re
 import subprocess
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
+# ★ 基线常量从【单一事实来源】读（★ tools/baseline.json）⇒ ★ 三个工具不可能再漏
+BASELINE_COMMIT = json.loads((ROOT / "tools/baseline.json").read_text(encoding="utf-8"))["baseline_commit"]
 
 # ★ 四篇正文（★ 与 `四篇提纲` §0.2 一致）
 PAPERS = {
@@ -147,6 +150,27 @@ def numset(t):
     return set(NUM.findall(t or ""))
 
 
+def truncated_table_rows(text):
+    """★ S11 判据的可单测内核：★ 找出【表格残行】
+    ★ ★ 病因（★ 由 ②篇作者的一次真实事故抓出）：★
+    ★   `check_docx.py` 的列数检查要求行**以 `|` 开头且以 `|` 结尾**
+    ★   ⇒ ★ **整行替换时若丢了收尾的 `|`，★ 这一行会被整行从表里剔除**
+    ★   ⇒ ★ **列数检查完全看不见（★ 表格看上去"全绿"）**
+    ★   ⇒ ★ **实际：那一行已经变成段落，★ 而它原本是表格的一行**
+    ★ ⇒ ★ 落法：★ 扫「以 `|` 开头但不以 `|` 结尾」的行（★ 表格残行）
+    """
+    bad = []
+    for i, ln in enumerate((text or "").split("\n"), 1):
+        s = ln.strip()
+        if not s.startswith("|"):
+            continue
+        # ★ 代码围栏内的行不算（★ 表格化的代码块可能合法）
+        if s.endswith("|"):
+            continue
+        bad.append((i, s[:90]))
+    return bad
+
+
 def attr_violations(text):
     """★ S9 判据的可单测内核：★ 返回 (违例列表, 豁免行数)
     ★ 违例 = 【归因断言句】且【同行无限定词】且【不在豁免行】"""
@@ -174,7 +198,7 @@ def claim_violations(text):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--head", default="8649661",
+    ap.add_argument("--head", default=BASELINE_COMMIT,
                     help="★ 基线 commit（★ 默认 = 本轮改稿前的那个 commit，★ 固定值 ⇒ 第一次 commit 不会让它失效）")
     ap.add_argument("--verbose", action="store_true")
     ap.add_argument("--baseline-dir", default=None,
@@ -383,6 +407,23 @@ def main():
     else:
         infos.append(f"[S10] L1「本文的主张」共 {n_claims} 处，"
                      f"全部带限定 ✔（★ 治稿内自撞）")
+
+    # ── S11：★ 表格残行（★ 治"整行截断 ⇒ 静默退出表 ⇒ 列数检查看不见"）
+    s11_bad = []
+    for key, path in list(PAPERS.items()) + [("总纲", c) for c in CLUSTER_CARRIERS]:
+        txt = read(path)
+        if txt is None:
+            continue
+        for i, s in truncated_table_rows(txt):
+            s11_bad.append((path, i, s))
+    if s11_bad:
+        for path, i, s in s11_bad[:8]:
+            fails.append(f"[S11] {path}:{i} 表格残行（★ 以 | 开头但不以 | 结尾 ⇒ "
+                         f"★ 它已被表格解析器剔除，★ 列数检查看不见）⇒ {s}")
+        if len(s11_bad) > 8:
+            fails.append(f"[S11] 另有 {len(s11_bad) - 8} 处表格残行")
+    else:
+        infos.append(f"[S11] 表格残行扫描：0 处（★ 治『整行截断 ⇒ 静默退出表』）")
 
     # ── 报告 ─────────────────────────────────────────────────────────
     print("═" * 72)

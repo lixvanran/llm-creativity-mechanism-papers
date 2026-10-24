@@ -8,10 +8,11 @@
 ★   ⇒ ★ **⇒ 落法：★ 把改稿前的那些文件原样收进包内 `baseline/`，★ 并给验收器加 `--baseline-dir`**
 ★   ⇒ ★ **这样"数字一个都没动"在交付态可核，★ 而不只是在仓里可核**
 """
-import sys, subprocess, pathlib, hashlib
+import sys, subprocess, pathlib, hashlib, json
 sys.dont_write_bytecode = True
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-BASE_COMMIT = "8649661"
+# ★ 基线常量从【单一事实来源】读（★ tools/baseline.json）
+BASE_COMMIT = json.loads((ROOT / "tools/baseline.json").read_text(encoding="utf-8"))["baseline_commit"]
 OUT = ROOT / "baseline"
 
 # ★ 需要基线的文件（★ 与验收器里用 git_show 的两处一致：★ 四篇 + 簇级载体）
