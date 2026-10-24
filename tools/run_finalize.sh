@@ -18,6 +18,9 @@ DELIVER="/workspace/deliver"
 
 hr() { printf '\n\033[1m═══ %s ═══\033[0m\n' "$*"; }
 
+hr "①b 回填入口 md 的可实测事实（★ sha / 行数 / 三标记计数 ⇒ ★ 全部实测、★ 不许手写）"
+python3 tools/update_entry_facts.py 2>&1 | tail -8
+
 hr "② 重建 docx（★ 口径：★【已有 docx 的那个 md】⇒ ★ 覆盖全仓交付面、★ 不给底稿凭空造 docx）"
 # ★★★ 为什么改成这个口径（★ 2026-10-25 实测踩到）：★★
 #   ★ 原来只重建 `papers/` 和 `support/` ⇒ ★ **根目录的 md（含唯一入口 md）不在覆盖范围**

@@ -48,7 +48,20 @@ DEVIATIONS = [
 # ★   HEAD 会随 commit 往前走 ⇒ ★ **第一次 commit 之后，HEAD 里已经是被迁移过的文件**
 # ★   ⇒ ★ 期望值会算成「已迁移的指针再迁移一次」⇒ ★ 对拍必假红
 # ★ ⇒ ★ 落法：★ 基线固定为【本轮改稿前的 commit】⇒ ★ 与迁移器/验收器同一基线
+# ★★★ 基准来源：**baseline/ 优先、git 兜底**（★ 2026-10-25 实测抓到）★★
+#   ★ 原来只用 `git show` ⇒ ★ **交付态没有 .git** ⇒ ★ 全部返回 None ⇒ ★ 指针数 = 0
+#     ⇒ ★ 而脚本把「0 个不一致」判成「全一致」⇒ ★ ★ **判据在交付态失效、却报绿**（★ 假绿）
+#   ⇒ ★ 落法：★ ① 优先读 `baseline/`（★ 改写前的原文、★ 交付态里也在）★ ② 没有再回退 git
+#     ③ **★ 并且：★ 指针数为 0 时必须判红**（★ 见 main 末尾）
+BASELINE_DIR = ROOT / "baseline"
+EXPECTED_POINTERS = 25          # ★ 登记的期望指针数（★ 改了映射表就要同步改这里）
+
 def head_text(rel):
+    # ① baseline/（★ 交付态可用）
+    bp = BASELINE_DIR / rel
+    if bp.exists():
+        return bp.read_text(encoding="utf-8")
+    # ② git 兜底（★ 仓内用）
     r = subprocess.run(["git", "show", f"{BASELINE_COMMIT}:{rel}"], cwd=ROOT,
                        capture_output=True, text=True)
     return r.stdout if r.returncode == 0 else None
@@ -56,7 +69,8 @@ def head_text(rel):
 
 def main():
     print("═" * 78)
-    print("★ 指针迁移对拍：★ 期望值 = f(git HEAD 的旧指针) ⇒ 实际值 = 磁盘现状")
+    print("★ 指针迁移对拍：★ 期望值 = f(改写前原文的旧指针) ⇒ 实际值 = 磁盘现状")
+    print("★ 基准来源：★ baseline/（★ 交付态可用）优先、★ git 兜底")
     print("═" * 78)
     total, bad = 0, []
     for rel in LIVE:
@@ -122,6 +136,18 @@ def main():
     print("─" * 78)
     print(f"★ 对拍指针总数 {total} ｜ 不一致文件 {len(bad)} 个"
           f"{' ⇒ ' + ', '.join(bad) if bad else ' ⇒ ✔ 全部一致'}")
+    # ★★★ 【判据可用性闸门】（★ 2026-10-25 实测抓到）★★
+    #   ★ 原来：★ 指针数 = 0 时，★ 「0 个不一致」会被判成「全一致」⇒ ★ **假绿**
+    #     ⇒ ★ 典型场景：★ 交付态没有 .git ⇒ ★ 基准取不到 ⇒ ★ 全部跳过 ⇒ ★ 报绿
+    #   ⇒ ★ 落法：★ 指针数与【登记的期望数】不符 ⇒ ★ **判红并明说「基准不可用 ⇒ 判据失效」**
+    #     ⇒ ★ 这条闸门是"判据必须能红、且红在预期处"的最低要求
+    if total != EXPECTED_POINTERS:
+        print(f"⛔ 对拍指针总数 = {total}，★ 与登记的期望数 {EXPECTED_POINTERS} 不符")
+        print("   ⇒ ★ **基准不可用或基线漂移 ⇒ 这条判据本身失效了**")
+        print("   ⇒ ★ **绝不能把「0 个不一致」读成「全部一致」**（★ 那是假绿）")
+        if total == 0:
+            print("   ⇒ ★ 指针数 = 0 ⇒ ★ 大概率是【基准取不到】（★ 交付态没有 .git / baseline/ 缺失）")
+        return 1
     return 1 if bad else 0
 
 
