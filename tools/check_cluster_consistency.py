@@ -106,7 +106,14 @@ def run(cmd):
     return subprocess.run(cmd, cwd=ROOT, capture_output=True, text=True)
 
 
-def git_show(head, path):
+def git_show(head, path, baseline_dir=None):
+    """★ 取基线内容：★ 优先快照目录（★ 交付态），★ 否则 git（★ 仓内）
+    ★ ★ 两个来源都可核：★ 快照目录里的每个文件在 baseline/BASELINE_SHA256.txt 有登记"""
+    if baseline_dir is not None:
+        f = baseline_dir / path
+        if f.exists():
+            return f.read_text(encoding="utf-8", errors="replace")
+        return None
     r = run(["git", "show", f"{head}:{path}"])
     return r.stdout if r.returncode == 0 else None
 
@@ -170,21 +177,35 @@ def main():
     ap.add_argument("--head", default="8649661",
                     help="★ 基线 commit（★ 默认 = 本轮改稿前的那个 commit，★ 固定值 ⇒ 第一次 commit 不会让它失效）")
     ap.add_argument("--verbose", action="store_true")
+    ap.add_argument("--baseline-dir", default=None,
+                    help="★ 基线快照目录（★ 交付态用：★ 交付包里没有 .git ⇒ git show 不可用 "
+                         "⇒ ★ 指向包内 baseline/ 即可在交付态核 S1/S2）")
     a = ap.parse_args()
 
     head = a.head
     fails, warns, infos = [], [], []
     v = a.verbose
 
-    # ── S0 前置：git 必须有基线 ──────────────────────────────────────
-    if run(["git", "rev-parse", "--verify", head]).returncode != 0:
-        print(f"✖ 基线 {head} 不存在")
+    # ── S0 前置：基线来源（★ git 或 快照目录）──────────────────────────
+    # ★★★ 交付态（★ 包内无 .git）⇒ ★ git 基线不可用 ⇒ ★ 降级到 --baseline-dir
+    #   ⇒ ★ **"收件人拿到包能自己核 S1"** 是交付物的必要条件
+    baseline_dir = None
+    if a.baseline_dir:
+        bd = (ROOT / a.baseline_dir)
+        if not bd.exists():
+            print(f"✖ 基线快照目录不存在：{a.baseline_dir}")
+            return 2
+        baseline_dir = bd
+        print(f"★ 基线来源 = 快照目录 {a.baseline_dir}（★ 交付态模式）")
+    elif run(["git", "rev-parse", "--verify", head]).returncode != 0:
+        print(f"✖ 基线 {head} 不存在（★ 且未给 --baseline-dir）")
+        print(f"  ⇒ ★ 交付态请用：python3 tools/check_cluster_consistency.py --baseline-dir baseline")
         return 2
 
     # ── S1 数字零改动 / S2 标记不减（逐篇 vs 基线）────────────────────
     for key, path in PAPERS.items():
         cur = read(path)
-        base = git_show(head, path)
+        base = git_show(head, path, baseline_dir)
         if cur is None:
             fails.append(f"[S1/S2] {key}: 文件不存在 {path}")
             continue
@@ -276,7 +297,7 @@ def main():
         if not t:
             continue
         n = len(SELF_LIMIT.findall(t))
-        base = git_show(head, path)
+        base = git_show(head, path, baseline_dir)
         nb = len(SELF_LIMIT.findall(base)) if base else 0
         if n > nb:
             warns.append(f"[S7] {key}: 自我设限句 {nb} → {n}（★ 变多了 ⇒ 铁律三没落实）")

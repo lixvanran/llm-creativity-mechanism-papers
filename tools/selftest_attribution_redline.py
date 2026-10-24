@@ -66,10 +66,10 @@ def main():
             lines.insert(5, inject)
             p.write_text("\n".join(lines), encoding="utf-8")
             r = subprocess.run([sys.executable, str(wd / "tools/check_cluster_consistency.py"),
-                                "--head", "8649661"], cwd=wd, capture_output=True, text=True)
+                                "--baseline-dir", "baseline"], cwd=wd, capture_output=True, text=True)
             out = r.stdout + r.stderr
             hit = re.search(r"✖ \[S(?:9|10)\][^\n]*", out)
-            base_err = "基线" in out and "不存在" in out
+            base_err = ("基线" in out and "不存在" in out) or "基线快照目录不存在" in out
             good = (r.returncode != 0 and hit is not None and not base_err)
             ok = ok and good
             print(f"  {'✔' if good else '✘'} {name}  ⇒ 端到端 EXIT={r.returncode}"
