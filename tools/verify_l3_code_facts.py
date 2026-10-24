@@ -17,6 +17,12 @@ import os
 import sys
 import types
 
+# ★★ S-01（2026-10-25 包级复核 v2）：★ 本脚本 import 底稿的 workflow.py ⇒ 默认会在
+#   【被检树】里落 `__pycache__/workflow.cpython-311.pyc` ⇒ ★ **污染它自己检查的对象**
+#   （★ 不污染交付包 —— 打包器已排除 `__pycache__` —— ★ 但会脏仓，且会让「从脏树重建」
+#     这条路径看起来不可靠）⇒ 落法：★ 关掉字节码写入（★ 被检树的字节一个都不动）
+sys.dont_write_bytecode = True
+
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 SRC = os.path.join(ROOT, "来源与底稿", "第三组_治塌缩层3", "cmp8repo", "repro", "src")

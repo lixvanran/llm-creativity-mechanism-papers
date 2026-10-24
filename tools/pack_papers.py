@@ -7,7 +7,9 @@
   ② 清单必须【全量】核对，不能抽样 ⇒ 自建 SHA256SUMS.txt 并全量重算
   ③ 期望值不能来自被检查对象自己 ⇒ 内容集合取自【版本管理】的受管集（git ls-files）
   ④ ★ **可复现**：成员时间戳固定（1980-01-01 = ZIP 格式下限）⇒ ★ 清单文件的 mtime 不会随打包时刻漂移
-     ⇒ **同内容 ⇒ 同包 ⇒ 同 sha256** ⇒ ★ 包 sha256 才是稳定标识符（附带：不泄漏打包时刻）
+     ⇒ **同一批文件字节 ⇒ 同包 ⇒ 同 sha256** ⇒ ★ 包 sha256 稳定标识【这一份包字节】
+     （★ 边界：★ **重建 docx 会改 `dcterms:created` ⇒ 包 sha 必变**；★ **跨 zlib 实现不保证
+       压缩字节相同** ⇒ 跨实现请用 `SHA256SUMS.txt` 做【内容级】核验）（附带：不泄漏打包时刻）
   ⑤ ★ **权限位由内容决定**（带 shebang ⇒ 0o755，其余 0o644）⇒ 不依赖本地 FS 权限
      ⇒ ⇒ **解包后原地重建能产出逐字节相同的包**
 
@@ -40,7 +42,8 @@ MANIFEST = "SHA256SUMS.txt"
 EXCLUDE_DIRS = {".git", "dist", "__pycache__", ".tmp", ".mavis", ".idea"}
 EXCLUDE_SUFFIX = (".part", ".pyc", ".zip")
 # ★ 显式附加（即使不在受管集也要进包：★ 交付说明与验收工具是交付物的一部分）
-EXTRAS = ["交付说明_四篇改稿_2026-10-24.md", "tools/check_package.py"]
+EXTRAS = ["交付说明_四篇改稿_2026-10-24.md", "交付总览_人肉审版_2026-10-25.md",
+          "tools/check_package.py"]
 
 
 def repo_root():
@@ -228,7 +231,9 @@ def main(argv):
             b = hashlib.sha256(open(out2, "rb").read()).hexdigest()
             if a != b:
                 raise SystemExit("✘ 不可复现：%s vs %s" % (a[:16], b[:16]))
-            print("★ ✔ 可复现：两次打包 sha256 一致（%s…）⇒ **包 sha256 是稳定标识符**" % a[:16])
+            print("★ ✔ 可复现：两次打包 sha256 一致（%s…）⇒ ★ **同一批文件字节 ⇒ 同一份包 sha**"
+                  "（★ 边界见 交付总览 §1：重建 docx 会改包 sha；跨 zlib 实现不保证压缩字节相同）"
+                  % a[:16])
 
         if verify:
             print("★ 交付态验收：解包到临时目录后，在【交付态那棵树】上复跑 …")
