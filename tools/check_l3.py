@@ -222,6 +222,8 @@ hit_ln = sorted(LINEREF & set(nums), key=lambda x: int(x))
 print("  （结构性小节编号 %d 个已按同款判据豁免：%s）" % (len(STRUCT), sorted(STRUCT)[:14]))
 print("  ★ 行号通道（指向代码的行号，**非读数**；须逐条回源核对）：%s" % (hit_ln or "无"))
 print("  ★ 裸行号通道（★ 收紧：★ 须同文另有 `文件名:NN` 形态）：%s" % (sorted(BARE_LINEREF & set(nums), key=int) or "无"))
+print("     ★ ★ 注意：★ 这是【文档级】豁免（★ 同一数字在文内**任一处**有 `文件名:NN` 依托 ⇒ **全文**该数字都豁免）"
+      "★ ⇒ ★ 不是逐处级；★ 逐处级豁免见独立复核 v3.1 的残留 R3（★ 不阻塞）")
 print("  ★ 裸行号被【拒】（★ 孤零零、无文件名依托 ⇒ 仍按读数查台账）：%s" % (sorted((_BARE_ALL - BARE_LINEREF) & set(nums), key=int) or "无"))
 print("  ★ commit sha / 版本串通道：%s" % (sorted(SHAFRAG & set(nums), key=int) or "无"))
 print("  正文不同数字 %d 个；不在允许集合的 %d 个 %s" % (len(nums), len(bad), "✅" if not bad else "❌"))
