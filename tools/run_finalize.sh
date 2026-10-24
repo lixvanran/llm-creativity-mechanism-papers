@@ -73,41 +73,49 @@ python3 tools/selftest_attribution_redline.py 2>&1 | tail -2
 hr "⑧ 指针迁移对拍"
 python3 tools/verify_pointer_migration.py 2>&1 | tail -2
 
+hr "⑨a 断言：★ 每个 docx 的【内嵌源指纹】必须 == 对应 md 的当前 sha（★ docx↔md 不同步 ⇒ 就是 S-3 的实质）"
+# ★★★★ 口径说明（★ 2026-10-25 · 经审稿人 v3 指正后重定）：★★★★
+#   ★ v2 说的「S-3：包里装旧 docx」⇒ ★ **在本打包器实现下【本来就不成立】**：
+#     ★ `pack_papers.py` 的 `shutil.copy2(os.path.join(root, n), dst)` ⇒ ★ **取的是【工作树字节】**
+#     ⇒ ★ 索引里的旧版本【不会】进包 ⇒ ★ 那条担忧是【伪 S-3】
+#   ★ ★ **真正成立、且真正要防的是**：★ **docx 与它的源 md 【不同步】**（★ 指纹过期）
+#     ⇒ ★ 那会让 docx 里的表格/正文与 md 对不上 ⇒ ★ 读者读 docx 会读到旧内容
+#   ⇒ ★ 因此 ⑨a 改成核【指纹】⇒ ★ 这是**内容级**判据（★ 不依赖时间戳、★ 不依赖索引字节）
+python3 - <<'PYEOF'
+import subprocess, os, re, sys, zipfile, hashlib
+REPO = os.getcwd()
+def sh(*a): return subprocess.run(list(a), capture_output=True, cwd=REPO)
+out = sh("git", "-c", "core.quotepath=false", "ls-files", "--cached", "--others",
+         "--exclude-standard", "*.docx").stdout.decode("utf-8")
+docs = [x for x in out.split() if x and not x.startswith("baseline/")]
+bad, skipped = [], []
+for rel in docs:
+    md = rel[:-5] + ".md"
+    if not os.path.exists(os.path.join(REPO, md)):
+        skipped.append((rel, "★ 无同名 md")); continue
+    try:
+        with zipfile.ZipFile(os.path.join(REPO, rel)) as z:
+            core = z.read("docProps/core.xml").decode("utf-8", "ignore")
+    except Exception as e:
+        bad.append((rel, "★ 打不开：%s" % e)); continue
+    m = re.search(r"([0-9a-f]{16})", core)
+    cur = hashlib.sha256(open(os.path.join(REPO, md), "rb").read()).hexdigest()[:16]
+    if not m:
+        skipped.append((rel, "★ docx 内无指纹（★ 老版 docx）")); continue
+    if m.group(1) != cur:
+        bad.append((rel, "★ 指纹 %s ≠ md %s" % (m.group(1), cur)))
+if bad:
+    print("⛔ docx ↔ md 不同步（★ 读者读 docx 会读到旧内容）：")
+    for r, why in bad: print("   %s  %s" % (r, why))
+    sys.exit(1)
+print("✅ %d 个 docx：内嵌指纹 == 对应 md 的当前 sha（★ docx↔md 同步）" % (len(docs) - len(skipped)))
+for r, why in skipped[:6]: print("   （跳过 %s：%s）" % (r, why))
+PYEOF
+
 hr "⑨ 提交（★ 打包器按 git ls-files 取内容集 ⇒ 必须先提交）"
 git add -A
 git -c user.name="Mavis" -c user.email="mavis@local" commit -q -m "★ 收口：四篇定稿 + docx 全量重建 + 交付态基线快照" || echo "（★ 无改动）"
 git log --oneline -1
-
-hr "⑨b 断言：★ 索引里的每个 docx 必须 == 工作树（★ 否则包里装的是旧 docx）"
-python3 - <<'PYEOF'
-import subprocess, hashlib, os, sys
-REPO = os.path.dirname(os.path.dirname(os.path.abspath("tools/run_finalize.sh")))
-def sh(*a):
-    return subprocess.run(list(a), capture_output=True, cwd=REPO)
-# ★★★ 全部 docx（★ 含未追踪的 ⇒ ★ 新建的也要查）★★★
-out = sh("git", "-c", "core.quotepath=false", "ls-files", "--cached", "--others",
-         "--exclude-standard", "*.docx").stdout.decode("utf-8")
-tracked = [x for x in out.split() if x and not x.startswith("baseline/")]
-bad = []
-for rel in tracked:
-    wt = os.path.join(REPO, rel)
-    if not os.path.exists(wt):
-        continue
-    # ★★★ 判据用【字节比对】（★★ 2026-10-25 实测踩到）：★★
-    #   ★ 原写法拿 `git ls-files -s` 的值去比 sha256 ⇒ ★ **那是 git blob sha1**（★ 40 位）
-    #     ⇒ ★ **两种不同算法** ⇒ ★ 永远不等 ⇒ ★ **假红**（★ 而工作树其实和索引是一致的）
-    #   ⇒ ★ 正解：★ `git show :<path>` 取【索引里的字节】⇒ ★ 与工作树逐字节比
-    idx_bytes = sh("git", "show", ":" + rel).stdout
-    wt_bytes = open(wt, "rb").read()
-    if idx_bytes != wt_bytes:
-        bad.append((rel, hashlib.sha256(idx_bytes).hexdigest()[:12],
-                       hashlib.sha256(wt_bytes).hexdigest()[:12]))
-if bad:
-    print("⛔ 索引与工作树不一致（★ 打包器按 git ls-files 取内容集 ⇒ 包里会是旧 docx）：")
-    for r, a, b in bad: print("   %s  索引 %s ≠ 工作树 %s" % (r, a, b))
-    sys.exit(1)
-print("✅ %d 个 docx：索引字节 == 工作树字节（★ 打包内容与工作树一致）" % len(tracked))
-PYEOF
 
 hr "⑩ 打包（★ 含交付态验收 + 回读断言）"
 python3 tools/pack_papers.py "$OUT_ZIP" --repro 2>&1 | tail -12

@@ -83,4 +83,14 @@ if fails:
     print("⛔ 有命令在【这棵树上】跑不通 ⇒ ★ **入口 md §7 的承诺不成立** ⇒ ★ 不许发")
     for c, rc in fails: print("   %s (EXIT=%d)" % (c, rc))
     sys.exit(1)
-print("★ 总体：✅ 入口 md 承诺的每条命令在这棵树上都跑通了")
+# ★★★ 末行口径（★ NEW-8 · 审稿人 v3 指出「假绿表述」）：★★
+#   ★ 原来只写「✅ 每条命令都跑通了」⇒ ★ 而上一行写着「通过 8 ｜ 跳过 1」
+#     ⇒ ★ **把「跳过」算进了「都跑通」** ⇒ ★ 假绿表述
+#   ⇒ ★ 落法：★ **把「通过 / 失败 / 跳过」三个数一起写进末行**（★ 跳过不算通过）
+print("★ 总体：%s（★ 通过 %d ｜ 失败 %d ｜ 跳过 %d）" % (
+    "✅ 入口 md 承诺的命令在这棵树上全部跑通" if (ok == len(CMDS) and not fails)
+    else "⚠️ 有命令未跑通" if not fails else "❌ 有命令跑不通",
+    ok, len(fails), len(skipped)))
+if skipped:
+    print("   ★ 跳过的 %d 条（★ **不算通过**）：" % len(skipped))
+    for c, why in skipped: print("      · %s  ⇒ %s" % (c, why))

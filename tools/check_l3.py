@@ -168,10 +168,40 @@ for m in re.finditer(r"[\w./-]+\.(?:py|sh|md|json|txt):(\d+)(?:-(\d+))?", md):
 # ★★★ 【裸行号通道】（★ 2026-10-25 · 审稿人指出）
 #   现有 LINEREF 只认「文件名 + 冒号 + 数字」⇒ ★ **裸写法的 `:68` 漏网** ⇒ ★ 假红
 #   ⇒ ★ 落法：★ 凡是【冒号 + 数字】形态，★ 其数字按行号处理（★ 单独打印供回源核对）
-BARE_LINEREF = set()
+# ★★★ 【裸行号通道 · 收紧】（★ 2026-10-25 · 审稿人 v3 探针抓到假绿）：★★
+#   ★ 原写法 `re.finditer(r":(\d+)(?:-(\d+))?", md)` ⇒ ★ **凡冒号后跟数字一律豁免**
+#     ⇒ ★ 探针：★ 注入一个【确定不在台账里】的 7001 ⇒ 裸数字 ❌ 报红 ｜ `:7001` **✅ 放过** ⇒ ★ 假绿
+#   ⇒ ★ 收紧为：★ **裸行号只有在【同一个数字在本文里也以 `文件名:NN` 形态出现过】时才豁免**
+#     ⇒ ★ `ops.py:22` 的 22 与文中的 `:22` ⇒ 同一数字 ⇒ 豁免 ✔
+#     ⇒ ★ 孤零零的 `:7001`（★ 没有任何 `xxx.py:7001`）⇒ **不豁免** ⇒ ★ 探针被抓住 ✔
+_BARE_ALL = set()
 for m in re.finditer(r":(\d+)(?:-(\d+))?", md):
     for g in m.groups():
-        if g: BARE_LINEREF.add(g)
+        if g: _BARE_ALL.add(g)
+_FILEREF_NUMS = set()
+_SPANS = []
+for m in re.finditer(r"[\w./-]+\.(?:py|sh|md|json|txt):(\d+)(?:-(\d+))?", md):
+    for g in m.groups():
+        if g: _FILEREF_NUMS.add(g)
+    # ★★★ 【区间成员也算有依托】（★ 2026-10-25 收紧过头后的修正）：★★
+    #   ★ 文里常见形态：★ `ops.py:64-82`（★ 区间）＋ 裸写 `:68`（★ 指区间内某一行）
+    #     ⇒ ★ 只认「同文有 `文件名:NN`」会把它误杀（★ 收紧过头 ⇒ 假红）
+    #   ⇒ ★ 落法：★ 把区间内的行号也收进依托集合
+    a, b = m.group(1), m.group(2)
+    if a and b:
+        try:
+            lo, hi = int(a), int(b)
+            if hi >= lo and hi - lo <= 400:
+                _SPANS.append((lo, hi))
+        except ValueError:
+            pass
+def _in_span(n):
+    try:
+        v = int(n)
+    except ValueError:
+        return False
+    return any(lo <= v <= hi for lo, hi in _SPANS)
+BARE_LINEREF = {n for n in _BARE_ALL if n in _FILEREF_NUMS or _in_span(n)}
 # ★★★ 【commit sha / 版本串通道】（★ 审稿人指出）
 #   `e012f1e2` 这类 hex 串里的数字片段不是读数 ⇒ ★ 抽出豁免
 #   （★ 与 ①篇的 α 同族：★ 口径/版本串会被数字抽取器切碎）
@@ -191,7 +221,8 @@ bad = [n for n in nums if n not in allowed and n not in LINEREF
 hit_ln = sorted(LINEREF & set(nums), key=lambda x: int(x))
 print("  （结构性小节编号 %d 个已按同款判据豁免：%s）" % (len(STRUCT), sorted(STRUCT)[:14]))
 print("  ★ 行号通道（指向代码的行号，**非读数**；须逐条回源核对）：%s" % (hit_ln or "无"))
-print("  ★ 裸行号通道（`:68` 形态）：%s" % (sorted(BARE_LINEREF & set(nums), key=int) or "无"))
+print("  ★ 裸行号通道（★ 收紧：★ 须同文另有 `文件名:NN` 形态）：%s" % (sorted(BARE_LINEREF & set(nums), key=int) or "无"))
+print("  ★ 裸行号被【拒】（★ 孤零零、无文件名依托 ⇒ 仍按读数查台账）：%s" % (sorted((_BARE_ALL - BARE_LINEREF) & set(nums), key=int) or "无"))
 print("  ★ commit sha / 版本串通道：%s" % (sorted(SHAFRAG & set(nums), key=int) or "无"))
 print("  正文不同数字 %d 个；不在允许集合的 %d 个 %s" % (len(nums), len(bad), "✅" if not bad else "❌"))
 if bad:
