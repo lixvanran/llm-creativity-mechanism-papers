@@ -1,0 +1,59 @@
+════════ 步骤 0：副本初始状态 ════════
+28:| ★ **五篇 sha256（前 16 位）** | ★ L1 `2e8c0266a6203b8c`｜A `90568900dae1a642`｜C `95b8ab29d7f43003`｜D `4fce8495ab0cf1dc`｜L3 `7615eb707bacb0a1` |
+
+════════ 步骤 1：先跑一次（应当已是最新 / 或回填）════════
+· 五篇 sha 行内容未变（★ ★ 下面仍要逐个复核）
+✔ 回填后逐个复核通过（★ 五篇 sha == 实测值）
+   L1  2e8c0266a6203b8c  papers/01_L1_PrematureConvergence_交差稿.md
+   A   90568900dae1a642  papers/02_A_SelectionIsNotCreation_稿.md
+   C   95b8ab29d7f43003  papers/03_C_SixWaysToLookDone_稿.md
+   D   4fce8495ab0cf1dc  papers/04_D_StateMachineIsNotYetAPrompt_交差稿.md
+   L3  7615eb707bacb0a1  papers/06_L3_层3自修改_交差稿.md
+EXIT=0
+
+════════ 步骤 2：★ 故意改一篇 md 的内容 ★ ⇒ sha 必须过期 ════════
+   改后 03_C 的实测 sha16 = bf5740ca85ddc154
+   入口 md 里写的 C = C `95b8ab29d7f43003`
+
+════════ 步骤 3：再跑一次（★ 必须把 C 同步成新 sha）════════
+✔ 已回填五篇 sha
+✔ 回填后逐个复核通过（★ 五篇 sha == 实测值）
+   L1  2e8c0266a6203b8c  papers/01_L1_PrematureConvergence_交差稿.md
+   A   90568900dae1a642  papers/02_A_SelectionIsNotCreation_稿.md
+   C   bf5740ca85ddc154  papers/03_C_SixWaysToLookDone_稿.md
+   D   4fce8495ab0cf1dc  papers/04_D_StateMachineIsNotYetAPrompt_交差稿.md
+   L3  7615eb707bacb0a1  papers/06_L3_层3自修改_交差稿.md
+EXIT=0
+   回填后入口 md 里写的 C = C `bf5740ca85ddc154`
+   ★ 实测 C sha16        = bf5740ca85ddc154
+
+════════ 步骤 4：★ 幂等性（再跑一次，应报「未变」且仍复核通过）════════
+· 五篇 sha 行内容未变（★ ★ 下面仍要逐个复核）
+✔ 回填后逐个复核通过（★ 五篇 sha == 实测值）
+   L1  2e8c0266a6203b8c  papers/01_L1_PrematureConvergence_交差稿.md
+   A   90568900dae1a642  papers/02_A_SelectionIsNotCreation_稿.md
+   C   bf5740ca85ddc154  papers/03_C_SixWaysToLookDone_稿.md
+   D   4fce8495ab0cf1dc  papers/04_D_StateMachineIsNotYetAPrompt_交差稿.md
+   L3  7615eb707bacb0a1  papers/06_L3_层3自修改_交差稿.md
+EXIT=0
+
+════════ 步骤 5：★ 破坏性检验 —— 把入口 md 的 sha 行整行删掉 / 改成非 hex ════════
+   ★ 已把 C 的 sha 改成非 hex 形态 'ZZZZ'
+· 五篇 sha 行内容未变（★ ★ 下面仍要逐个复核）
+⛔ 回填后复核失败（★ ★ 这就是「静默半改」）：
+   C   入口 md 里=None  实测=bf5740ca85ddc154
+EXIT=1  （★ 期望：★ 复核失败并退出 1 ⇒ 静默半改被挡住）
+
+════════ 步骤 6：★ 恢复后复跑（确认脚本没把文件写坏）════════
+· 五篇 sha 行内容未变（★ ★ 下面仍要逐个复核）
+✔ 回填后逐个复核通过（★ 五篇 sha == 实测值）
+   L1  2e8c0266a6203b8c  papers/01_L1_PrematureConvergence_交差稿.md
+   A   90568900dae1a642  papers/02_A_SelectionIsNotCreation_稿.md
+   C   bf5740ca85ddc154  papers/03_C_SixWaysToLookDone_稿.md
+   D   4fce8495ab0cf1dc  papers/04_D_StateMachineIsNotYetAPrompt_交差稿.md
+   L3  7615eb707bacb0a1  papers/06_L3_层3自修改_交差稿.md
+EXIT=0
+
+★ 仓内原件是否被动过？（应当没有）
+   ★ 仓内入口 md sha16 = 2c37a4424e67f04a
+   ★ 审计开始时记录的 sha16 = 2c37a4424e67f04a
