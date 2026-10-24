@@ -79,22 +79,31 @@ hr "⑨b 断言：★ 索引里的每个 docx 必须 == 工作树（★ 否则�
 python3 - <<'PYEOF'
 import subprocess, hashlib, os, sys
 REPO = os.path.dirname(os.path.dirname(os.path.abspath("tools/run_finalize.sh")))
-tracked = subprocess.run(["git", "ls-files", "papers/*.docx"], capture_output=True, text=True,
-                         cwd=REPO).stdout.split()
+def sh(*a):
+    return subprocess.run(list(a), capture_output=True, cwd=REPO)
+# ★★★ 全部 docx（★ 含未追踪的 ⇒ ★ 新建的也要查）★★★
+out = sh("git", "-c", "core.quotepath=false", "ls-files", "--cached", "--others",
+         "--exclude-standard", "*.docx").stdout.decode("utf-8")
+tracked = [x for x in out.split() if x and not x.startswith("baseline/")]
 bad = []
 for rel in tracked:
-    idx = subprocess.run(["git", "ls-files", "-s", rel], capture_output=True, text=True,
-                         cwd=REPO).stdout.split()
-    idx_sha = idx[1] if len(idx) > 1 else ""
     wt = os.path.join(REPO, rel)
-    wt_sha = hashlib.sha256(open(wt, "rb").read()).hexdigest() if os.path.exists(wt) else ""
-    if idx_sha != wt_sha:
-        bad.append((rel, idx_sha[:12], wt_sha[:12]))
+    if not os.path.exists(wt):
+        continue
+    # ★★★ 判据用【字节比对】（★★ 2026-10-25 实测踩到）：★★
+    #   ★ 原写法拿 `git ls-files -s` 的值去比 sha256 ⇒ ★ **那是 git blob sha1**（★ 40 位）
+    #     ⇒ ★ **两种不同算法** ⇒ ★ 永远不等 ⇒ ★ **假红**（★ 而工作树其实和索引是一致的）
+    #   ⇒ ★ 正解：★ `git show :<path>` 取【索引里的字节】⇒ ★ 与工作树逐字节比
+    idx_bytes = sh("git", "show", ":" + rel).stdout
+    wt_bytes = open(wt, "rb").read()
+    if idx_bytes != wt_bytes:
+        bad.append((rel, hashlib.sha256(idx_bytes).hexdigest()[:12],
+                       hashlib.sha256(wt_bytes).hexdigest()[:12]))
 if bad:
     print("⛔ 索引与工作树不一致（★ 打包器按 git ls-files 取内容集 ⇒ 包里会是旧 docx）：")
     for r, a, b in bad: print("   %s  索引 %s ≠ 工作树 %s" % (r, a, b))
     sys.exit(1)
-print("✅ %d 个 docx：索引 == 工作树（★ 打包内容与工作树一致）" % len(tracked))
+print("✅ %d 个 docx：索引字节 == 工作树字节（★ 打包内容与工作树一致）" % len(tracked))
 PYEOF
 
 hr "⑩ 打包（★ 含交付态验收 + 回读断言）"
