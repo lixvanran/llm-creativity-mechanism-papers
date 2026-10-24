@@ -18,9 +18,22 @@ DELIVER="/workspace/deliver"
 
 hr() { printf '\n\033[1m═══ %s ═══\033[0m\n' "$*"; }
 
-hr "② 重建 docx"
-bash tools/build_docx.sh papers 2>&1 | tail -1
-bash tools/build_docx.sh support 2>&1 | tail -1
+hr "② 重建 docx（★ 口径：★【已有 docx 的那个 md】⇒ ★ 覆盖全仓交付面、★ 不给底稿凭空造 docx）"
+# ★★★ 为什么改成这个口径（★ 2026-10-25 实测踩到）：★★
+#   ★ 原来只重建 `papers/` 和 `support/` ⇒ ★ **根目录的 md（含唯一入口 md）不在覆盖范围**
+#     ⇒ ★ 入口 md 的 docx 指纹过期 ⇒ ★ 而指纹是【docx↔md 同步】的唯一判据 ⇒ ★ 判据失效
+#   ★ 而"目录下全部 md"也不行 ⇒ ★ 仓内 119 个 md、只有 40 个 docx ⇒ ★ 会给底稿凭空造 79 个
+#   ⇒ ★ 正解：★ **对每个已存在的 docx，重建它对应的 md**（★ = 交付面的准确口径）
+#   ⇒ ★ ★ **必须排除 baseline/** ⇒ ★ 那是 S1「数字零改动」的基线快照 ⇒ ★ 重建它 = 破坏基线
+# ★★★ `core.quotepath=false`（★ 2026-10-25 实测踩到）：★★
+#   ★ `git ls-files` 默认对【非 ASCII 路径】加引号（★ core.quotepath=true）
+#   ⇒ ★ 拿到的是 `"papers/00_论文簇总纲_交差版.docx"`（★ 连引号一起）⇒ ★ 文件找不到 ⇒ ★ 静默跳过
+#   ⇒ ★ ⇒ ★ 修法：★ 关掉 quotepath
+# ★ `--others --exclude-standard`（★ 2026-10-25 实测踩到）：★ 只用 `ls-files` **只含已追踪**的文件
+#   ⇒ ★ 本轮【新建】的 docx（★ 尚未 git add）不会进 mapfile ⇒ ★ 收口漏重建 ⇒ ★ 指纹过期
+mapfile -t DOCX_MDS < <(git -c core.quotepath=false ls-files --cached --others --exclude-standard '*.docx' | grep -v '^baseline/' | sed 's/\.docx$/.md/')
+echo "  交付面 md：${#DOCX_MDS[@]} 个（★ 已排除 baseline/）"
+bash tools/build_docx.sh "${DOCX_MDS[@]}" 2>&1 | tail -1
 
 hr "③ embed 指纹"
 python3 - <<'PY'
@@ -61,6 +74,28 @@ hr "⑨ 提交（★ 打包器按 git ls-files 取内容集 ⇒ 必须先提交�
 git add -A
 git -c user.name="Mavis" -c user.email="mavis@local" commit -q -m "★ 收口：四篇定稿 + docx 全量重建 + 交付态基线快照" || echo "（★ 无改动）"
 git log --oneline -1
+
+hr "⑨b 断言：★ 索引里的每个 docx 必须 == 工作树（★ 否则包里装的是旧 docx）"
+python3 - <<'PYEOF'
+import subprocess, hashlib, os, sys
+REPO = os.path.dirname(os.path.dirname(os.path.abspath("tools/run_finalize.sh")))
+tracked = subprocess.run(["git", "ls-files", "papers/*.docx"], capture_output=True, text=True,
+                         cwd=REPO).stdout.split()
+bad = []
+for rel in tracked:
+    idx = subprocess.run(["git", "ls-files", "-s", rel], capture_output=True, text=True,
+                         cwd=REPO).stdout.split()
+    idx_sha = idx[1] if len(idx) > 1 else ""
+    wt = os.path.join(REPO, rel)
+    wt_sha = hashlib.sha256(open(wt, "rb").read()).hexdigest() if os.path.exists(wt) else ""
+    if idx_sha != wt_sha:
+        bad.append((rel, idx_sha[:12], wt_sha[:12]))
+if bad:
+    print("⛔ 索引与工作树不一致（★ 打包器按 git ls-files 取内容集 ⇒ 包里会是旧 docx）：")
+    for r, a, b in bad: print("   %s  索引 %s ≠ 工作树 %s" % (r, a, b))
+    sys.exit(1)
+print("✅ %d 个 docx：索引 == 工作树（★ 打包内容与工作树一致）" % len(tracked))
+PYEOF
 
 hr "⑩ 打包（★ 含交付态验收 + 回读断言）"
 python3 tools/pack_papers.py "$OUT_ZIP" --repro 2>&1 | tail -12

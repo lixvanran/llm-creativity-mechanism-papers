@@ -45,6 +45,27 @@ def split_cells(row):
         c = re.sub(r'\x00SPAN(\d+)\x00', lambda m: spans[int(m.group(1))], c)
         out.append(c)
     return out
+def fenced_lines(md):
+    """★ 代码围栏内的行号集合（★ 围栏内不是表格 ⇒ ★ pandoc 也不当表格）
+    ★ ★ 为什么必须有：★ 净增益报告里那个核心公式
+    ★   `|W\\B| − |B\\W|  ≡  |W| − |B|`
+    ★ 放在 ``` 围栏里 ⇒ ★ **pandoc 正确地当代码块**，★ 但【表格碎片检测】把它当成了
+    ★ 「无表头的表格碎片」⇒ ★ **判据假红**（★ 同一族：★ 检查器必须与 pandoc 对齐）
+    """
+    out, inside, fence = set(), False, None
+    for i, l in enumerate(md.split("\n"), 1):
+        m = re.match(r"^\s{0,3}(`{3,}|~{3,})", l)
+        if m:
+            if not inside:
+                inside, fence = True, m.group(1)[0]
+            elif m.group(1)[0] == fence:
+                inside = False
+            continue
+        if inside:
+            out.add(i)
+    return out
+
+
 def is_sep(row): return set(row.replace('|','').replace(':','').replace('-','').strip())==set()
 def _trow(l):
     """★ 把一行还原成「表格行本体」⇒ **支持引用块里的表**。
@@ -61,7 +82,11 @@ def _trow(l):
     return None
 def split_tables(md):
     lines=md.split('\n'); tabs=[]; cur=None
+    fenced=fenced_lines(md)          # ★ 围栏内的行不是表格（★ 与 pandoc 对齐）
     for i,l in enumerate(lines,1):
+        if i in fenced:
+            if cur: tabs.append(cur); cur=None
+            continue
         row=_trow(l)
         if row is not None:
             if cur is None: cur=[]
@@ -80,7 +105,10 @@ def orphan_table(md):
 def missing_blank(md):
     """pandoc 不会把「前面无空行」的表格渲染成表 ⇒ 检出它们"""
     lines=md.split('\n'); bad=[]; i=0
+    fenced=fenced_lines(md)          # ★ 围栏内不算
     while i<len(lines):
+        if (i+1) in fenced:
+            i+=1; continue
         s=lines[i].strip()
         if s.startswith('|') and s.endswith('|') and len(s)>1:
             j=i-1
@@ -203,5 +231,8 @@ for f in sorted(x[:-3] for x in os.listdir(D) if x.endswith('.md')):
     for li,pv,txt in mb[:3]: print("        ⛔ L%-4d 前一行 L%-4d 非空: %r"%(li,pv,txt))
     for li,txt in orph[:3]: print("        ⛔ L%-4d 无表头的表格碎片: %r"%(li,txt))
 print()
-print("★ 交付自检：%s（表格单元格合计 %d）"%("✅ 全绿" if allok else "❌ 有问题", tot))
+# ★ 输出纪律：★ 「合计」是【总量】不是【问题数】⇒ ★ 放在一起会被误读成"有 9370 个问题"
+#   ⇒ ★ 改法：★ 问题数单独打；总量另起一行并明确标注
+print("★ 交付自检：%s"%("✅ 全绿" if allok else "❌ 有问题"))
+print("   （本次共核对 %d 个表格单元格；上面每行末尾的 ✅/❌ 是该文件的判定）"%tot)
 sys.exit(0 if allok else 1)

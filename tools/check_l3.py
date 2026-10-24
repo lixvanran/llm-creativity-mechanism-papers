@@ -36,6 +36,8 @@ FORBID = [
  ("⑪b","不如层2",                 [r"不如层2"]),
  ("⑪c","自迭代无效",              [r"自迭代无效"]),
  ("⑪d","训练没用",                [r"训练没用"]),
+ # ★★ 元声明豁免：★ 命中句若带【否定/禁令标记】⇒ ★ 它是在【禁止该措辞】⇒ 不算违规
+ #   （★ 同一族教训：★ check_cluster_consistency 的 S6 早就这么做了，★ 这里漏了 ⇒ ★ 一处漏就是假红）
  ("⑪e","与层2 等效",              [r"与层2\s*等效"]),
  ("⑬", "架构由训练产生",          [r"架构由训练产生"]),
  ("⑬b","自动的 Agent 架构搜索",    [r"自动的 ?Agent ?架构搜索"]),
@@ -46,12 +48,31 @@ FORBID = [
  ("⑳c","有依据支持的一方胜",      [r"有依据支持的一方胜"]),
  ("㉑", "层2 把『该不该发散』写死了",[r"层2\s*把.{0,12}该不该发散.{0,6}写死"]),
 ]
+# ★★★ 元声明豁免（★ 判据必须能红，且红在预期处）
+#   ★ 一个禁写措辞出现在【禁令句/否定句】里 ⇒ ★ 它是在"禁止这样写"⇒ **不是违规**
+#   ★ 命中句若带以下任一标记 ⇒ 豁免：
+#     不写 / 不许 / 不可 / 禁 / 勿 / 非 / 不是 / 未 / 不得 / 避免 / 排除 / 改成 / 误用
+META_EXEMPT = re.compile(
+    r"不写|不许|不可|禁[止写用]|勿写|不得|避免|排除|不是|并非|非断言|"
+    r"不做|不做任何|不主张|未写|不构成|误用|改成|应写成|禁止"
+)
+
+
+def _is_meta_context(line):
+    """★ 判断该行是不是【元声明/禁令句】⇒ ★ 是则豁免"""
+    return META_EXEMPT.search(line) is not None
+
+
 a1_hits = []
+a1_exempt = 0
 for tag, name, pats in FORBID:
     hits = []
     for i, l in enumerate(lines, 1):
         for p in pats:
             if re.search(p, l):
+                if _is_meta_context(l):
+                    a1_exempt += 1
+                    continue
                 hits.append((i, l.strip()[:110]))
     a1_hits += [(tag, name, h) for h in hits]
     print("  %-4s %-26s 命中 %d %s" % (tag, name, len(hits), "✅" if not hits else "❌"))
@@ -144,11 +165,34 @@ LINEREF = set()
 for m in re.finditer(r"[\w./-]+\.(?:py|sh|md|json|txt):(\d+)(?:-(\d+))?", md):
     for g in m.groups():
         if g: LINEREF.add(g)
+# ★★★ 【裸行号通道】（★ 2026-10-25 · 审稿人指出）
+#   现有 LINEREF 只认「文件名 + 冒号 + 数字」⇒ ★ **裸写法的 `:68` 漏网** ⇒ ★ 假红
+#   ⇒ ★ 落法：★ 凡是【冒号 + 数字】形态，★ 其数字按行号处理（★ 单独打印供回源核对）
+BARE_LINEREF = set()
+for m in re.finditer(r":(\d+)(?:-(\d+))?", md):
+    for g in m.groups():
+        if g: BARE_LINEREF.add(g)
+# ★★★ 【commit sha / 版本串通道】（★ 审稿人指出）
+#   `e012f1e2` 这类 hex 串里的数字片段不是读数 ⇒ ★ 抽出豁免
+#   （★ 与 ①篇的 α 同族：★ 口径/版本串会被数字抽取器切碎）
+SHAFRAG = set()
+for m in re.finditer(r"\b(?=[0-9a-f]{7,40}\b)(?=[0-9a-f]*[a-f])[0-9a-f]{7,40}\b", md):
+    for g in re.findall(r"\d+", m.group(0)):
+        SHAFRAG.add(g)
+# ★★★ 【日期通道】（★ 收紧 commit sha 通道后补上）
+#   ★ 纯 8 位数字串（20261101）是【日期】不是 commit sha ⇒ ★ 走这条通道
+#   ⇒ ★ 否则 sha 通道会顺带放过【形似 sha 的真读数】⇒ ★ 豁免过宽的代价
+for m in re.finditer(r"\b\d{4}-\d{2}-\d{2}\b|\b20\d{6}\b", md):
+    for g in re.findall(r"\d+", m.group(0)):
+        SHAFRAG.add(g)
 nums = sorted({m.group(0) for m in re.finditer(r"\d+(?:\.\d+)?", md)})
-bad = [n for n in nums if n not in allowed and n not in LINEREF]
+bad = [n for n in nums if n not in allowed and n not in LINEREF
+       and n not in BARE_LINEREF and n not in SHAFRAG]
 hit_ln = sorted(LINEREF & set(nums), key=lambda x: int(x))
 print("  （结构性小节编号 %d 个已按同款判据豁免：%s）" % (len(STRUCT), sorted(STRUCT)[:14]))
 print("  ★ 行号通道（指向代码的行号，**非读数**；须逐条回源核对）：%s" % (hit_ln or "无"))
+print("  ★ 裸行号通道（`:68` 形态）：%s" % (sorted(BARE_LINEREF & set(nums), key=int) or "无"))
+print("  ★ commit sha / 版本串通道：%s" % (sorted(SHAFRAG & set(nums), key=int) or "无"))
 print("  正文不同数字 %d 个；不在允许集合的 %d 个 %s" % (len(nums), len(bad), "✅" if not bad else "❌"))
 if bad:
     for n in bad: print("        ✘ %s" % n)

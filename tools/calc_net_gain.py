@@ -458,6 +458,9 @@ def run_task1(path: str) -> dict:
         "L3_added_true": 0, "L3_lost_true": 0,
         "L3_added_para": 0, "L3_lost_para": 0,
         "L3_net_AND": 0, "L3_net_v2": 0,
+        # ★ 明确命名的承重子层键（★ 别抽 L3_net_AND，★ 那个是断言层总净）
+        "L3_lb_OR_added": 0, "L3_lb_OR_lost": 0,
+        "L3_lb_AND_added": 0, "L3_lb_AND_lost": 0,
     })
     for p in results["pairs"]:
         a = agg[p["arm"]]
@@ -483,8 +486,19 @@ def run_task1(path: str) -> dict:
         a["L3_lost_para"] += d3["lost_paraphrase_same_decision"]
         a["L3_added_true"] += d3["added_truly_new_or_lost"]
         a["L3_lost_true"] += d3["lost_truly_new_or_lost"]
+        # ★★★ 【明确命名的承重子层键】（★ 2026-10-25 · 审稿人指出"抽键陷阱"）
+        #   ★★★ 陷阱：`L3_net_AND` 这个键名有误导性 ⇒ ★ 它装的是【断言层的总净增益】
+        #     （★ 在 AND 口径下分类 added/lost），★ **不是**【承重子层的净】
+        #     ⇒ ★ 第三方直抽它 ⇒ 会得出"承重子层 = +14 ⇒ 为正 ⇒ ②篇结论不成立"的【完全错误】结论
+        #   ⇒ ★ 落法：★ 承重两个口径各给一对【明确命名】的 added/lost/net 键
         a["L3_net_AND"] += p["L3_assertion_lb_AND"]["net_gain"]
         a["L3_net_v2"] += p["L3_assertion_norm_v2"]["net_gain"]
+        # ★ 承重 OR（主口径）：高承重新增 − 高承重丢失
+        a["L3_lb_OR_added"] += d3["added_lb"]
+        a["L3_lb_OR_lost"] += d3["lost_lb"]
+        # ★ 承重 AND（敏感性变体）
+        a["L3_lb_AND_added"] += p["L3_assertion_lb_AND"]["added_lb"]
+        a["L3_lb_AND_lost"] += p["L3_assertion_lb_AND"]["lost_lb"]
     results["aggregate"] = {k: dict(v) for k, v in agg.items()}
 
     # ── 工作流臂两两直接对比（W_design_L2 vs W_train_L3，同题同 rep）──
