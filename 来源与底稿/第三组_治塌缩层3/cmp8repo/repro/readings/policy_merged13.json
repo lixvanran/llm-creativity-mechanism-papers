@@ -1,0 +1,3815 @@
+{
+  "policy": {
+    "u": [
+      -0.9166666666666666,
+      -1.0,
+      -0.5833333333333334,
+      -0.8333333333333334,
+      -1.0833333333333333,
+      -1.25
+    ],
+    "v": [
+      -2.8333333333333335,
+      -2.8333333333333335
+    ],
+    "t": [
+      -2.0833333333333335,
+      -1.5833333333333333,
+      -2.0
+    ],
+    "m": [
+      [
+        -0.16666666666666666,
+        -0.25,
+        -0.08333333333333333,
+        -0.16666666666666666,
+        0.0,
+        -0.3333333333333333
+      ],
+      [
+        -0.16666666666666666,
+        -0.25,
+        -0.08333333333333333,
+        -0.16666666666666666,
+        0.0,
+        -0.3333333333333333
+      ],
+      [
+        -0.16666666666666666,
+        -0.25,
+        -0.08333333333333333,
+        -0.16666666666666666,
+        0.0,
+        -0.3333333333333333
+      ],
+      [
+        -0.16666666666666666,
+        -0.25,
+        -0.08333333333333333,
+        -0.16666666666666666,
+        0.0,
+        -0.3333333333333333
+      ],
+      [
+        -0.16666666666666666,
+        -0.25,
+        -0.08333333333333333,
+        -0.16666666666666666,
+        0.0,
+        -0.3333333333333333
+      ],
+      [
+        -0.16666666666666666,
+        -0.25,
+        -0.08333333333333333,
+        -0.16666666666666666,
+        0.0,
+        -0.3333333333333333
+      ]
+    ],
+    "arb": [
+      -2.25,
+      -2.0,
+      -1.4166666666666667
+    ],
+    "nf": [
+      -1.1666666666666667,
+      -1.25,
+      -1.25,
+      -2.0
+    ],
+    "mm": [
+      -2.3333333333333335,
+      -1.6666666666666667,
+      -1.6666666666666667
+    ]
+  },
+  "meta": {
+    "n_runs": 6,
+    "sources": [
+      "/workspace/lab/routes/COLLAPSE/runs/holdout13/pl_20261101/policy.json",
+      "/workspace/lab/routes/COLLAPSE/runs/holdout13/pl_20261102/policy.json",
+      "/workspace/lab/routes/COLLAPSE/runs/holdout13/pl_20261103/policy.json",
+      "/workspace/lab/routes/COLLAPSE/runs/holdout13/pl_20261104/policy.json",
+      "/workspace/lab/routes/COLLAPSE/runs/holdout13/pl_20261105/policy.json",
+      "/workspace/lab/routes/COLLAPSE/runs/holdout13/pl_20261106/policy.json"
+    ],
+    "n_samples": 100,
+    "lam": null,
+    "m_shape": [
+      6,
+      6
+    ],
+    "m_pad_cells": 0,
+    "per_source_samples": {
+      "pl_20261101": 23,
+      "pl_20261102": 23,
+      "pl_20261103": 23,
+      "pl_20261104": 23,
+      "pl_20261105": 23,
+      "pl_20261106": 23
+    }
+  },
+  "hist": [
+    {
+      "round": 0,
+      "sample": 0,
+      "task": "D01",
+      "spec": [
+        "compress",
+        "slot",
+        2
+      ],
+      "failure_kind": "conflict",
+      "r": 3.3544473007712083,
+      "base": 3.3544473007712083,
+      "kept": true,
+      "archive_n": 1,
+      "arb": 0,
+      "arch": [
+        2,
+        "vote"
+      ],
+      "quality": -0.08,
+      "diversity": 24.0,
+      "width": 0.8586118251928021,
+      "conflicts": 0,
+      "n_empty": 0,
+      "n_fallback": 0,
+      "n_conflict_pairs": 0,
+      "n_trap_hits": 0,
+      "cover": 24,
+      "calls": 4,
+      "diversity_population": 0.0,
+      "grad": {
+        "u": 0.5,
+        "v": 0.5,
+        "t": 0.5,
+        "m": 0.5
+      }
+    },
+    {
+      "round": 0,
+      "sample": 1,
+      "task": "D02",
+      "spec": [
+        "compress",
+        "slot",
+        0
+      ],
+      "failure_kind": "conflict",
+      "r": 3.431904761904762,
+      "base": 3.377684539111274,
+      "kept": true,
+      "archive_n": 1,
+      "arb": 2,
+      "arch": [
+        2,
+        "vote"
+      ],
+      "quality": -0.08,
+      "diversity": 16.0,
+      "width": 0.8779761904761905,
+      "conflicts": 0,
+      "n_empty": 0,
+      "n_fallback": 0,
+      "n_conflict_pairs": 0,
+      "n_trap_hits": 0,
+      "cover": 16,
+      "calls": 4,
+      "diversity_population": 0.9643835616438357,
+      "grad": {
+        "u": 0.5,
+        "v": 0.5,
+        "t": 0.5,
+        "m": 0.5
+      }
+    },
+    {
+      "round": 0,
+      "sample": 2,
+      "task": "D03",
+      "spec": [
+        "drop_conflicting",
+        "slot",
+        0
+      ],
+      "failure_kind": "conflict",
+      "r": 3.2729411764705882,
+      "base": 3.3462615303190684,
+      "kept": false,
+      "archive_n": 1,
+      "arb": 0,
+      "arch": [
+        2,
+        "vote"
+      ],
+      "quality": -0.08,
+      "diversity": 22.0,
+      "width": 0.8382352941176471,
+      "conflicts": 0,
+      "n_empty": 0,
+      "n_fallback": 0,
+      "n_conflict_pairs": 0,
+      "n_trap_hits": 0,
+      "cover": 22,
+      "calls": 4,
+      "diversity_population": 0.9917925278219396,
+      "grad": {
+        "u": -0.5,
+        "v": -0.5,
+        "t": -0.5,
+        "m": -0.5
+      }
+    },
+    {
+      "round": 1,
+      "sample": 0,
+      "task": "D04",
+      "spec": [
+        "compress",
+        "slot",
+        1
+      ],
+      "failure_kind": "conflict",
+      "r": 3.2970491803278685,
+      "base": 3.331497825321708,
+      "kept": false,
+      "archive_n": 1,
+      "arb": 2,
+      "arch": [
+        2,
+        "vote"
+      ],
+      "quality": -0.08,
+      "diversity": 19.0,
+      "width": 0.8442622950819672,
+      "conflicts": 0,
+      "n_empty": 0,
+      "n_fallback": 0,
+      "n_conflict_pairs": 0,
+      "n_trap_hits": 0,
+      "cover": 19,
+      "calls": 4,
+      "diversity_population": 0.984985292279413,
+      "grad": {
+        "u": -0.5,
+        "v": -0.5,
+        "t": -0.5,
+        "m": -0.5
+      }
+    },
+    {
+      "round": 1,
+      "sample": 1,
+      "task": "D05",
+      "spec": [
+        "ground_in_evidence",
+        "slot",
+        0
+      ],
+      "failure_kind": "conflict",
+      "r": -7.486702074810258,
+      "base": 0.08603785528211816,
+      "kept": false,
+      "archive_n": 1,
+      "arb": 0,
+      "arch": [
+        4,
+        "mechanical"
+      ],
+      "quality": -10.78,
+      "diversity": 13.0,
+      "width": 0.8233244812974354,
+      "conflicts": 10,
+      "n_empty": 1,
+      "n_fallback": 0,
+      "n_conflict_pairs": 0,
+      "n_trap_hits": 0,
+      "cover": 13,
+      "calls": 14,
+      "diversity_population": 0.9918643996904867,
+      "grad": {
+        "u": -0.5,
+        "v": -0.5,
+        "t": -0.5,
+        "m": -0.5
+      }
+    },
+    {
+      "round": 2,
+      "sample": 0,
+      "task": "D07",
+      "spec": [
+        "none",
+        "slot",
+        2
+      ],
+      "failure_kind": "conflict",
+      "r": 3.4321951219512195,
+      "base": 1.0898850352828486,
+      "kept": true,
+      "archive_n": 1,
+      "arb": 1,
+      "arch": [
+        2,
+        "packet"
+      ],
+      "quality": -0.08,
+      "diversity": 23.0,
+      "width": 0.8780487804878049,
+      "conflicts": 0,
+      "n_empty": 0,
+      "n_fallback": 0,
+      "n_conflict_pairs": 0,
+      "n_trap_hits": 0,
+      "cover": 23,
+      "calls": 4,
+      "diversity_population": 0.9832763701707438,
+      "grad": {
+        "u": 0.5,
+        "v": 0.5,
+        "t": 0.5,
+        "m": 0.5
+      }
+    },
+    {
+      "round": 2,
+      "sample": 1,
+      "task": "D08",
+      "spec": [
+        "none",
+        "cross_slot",
+        2
+      ],
+      "failure_kind": "conflict",
+      "r": 0.19393939393939386,
+      "base": 0.8211013428798121,
+      "kept": false,
+      "archive_n": 1,
+      "arb": 1,
+      "arch": [
+        2,
+        "packet"
+      ],
+      "quality": -3.2,
+      "diversity": 12.0,
+      "width": 0.8484848484848485,
+      "conflicts": 3,
+      "n_empty": 0,
+      "n_fallback": 0,
+      "n_conflict_pairs": 0,
+      "n_trap_hits": 0,
+      "cover": 12,
+      "calls": 10,
+      "diversity_population": 0.9862919780758292,
+      "grad": {
+        "u": -0.5,
+        "v": -0.5,
+        "t": -0.5,
+        "m": -0.5
+      }
+    },
+    {
+      "round": 2,
+      "sample": 2,
+      "task": "D09",
+      "spec": [
+        "compress",
+        "slot",
+        2
+      ],
+      "failure_kind": "conflict",
+      "r": 3.175813953488372,
+      "base": 1.5275151260623798,
+      "kept": false,
+      "archive_n": 1,
+      "arb": 2,
+      "arch": [
+        2,
+        "packet"
+      ],
+      "quality": -0.08,
+      "diversity": 17.0,
+      "width": 0.813953488372093,
+      "conflicts": 0,
+      "n_empty": 0,
+      "n_fallback": 0,
+      "n_conflict_pairs": 0,
+      "n_trap_hits": 0,
+      "cover": 17,
+      "calls": 4,
+      "diversity_population": 0.9870805582845404,
+      "grad": {
+        "u": -0.5,
+        "v": -0.5,
+        "t": -0.5,
+        "m": -0.5
+      }
+    },
+    {
+      "round": 3,
+      "sample": 0,
+      "task": "A01",
+      "spec": [
+        "compress",
+        "cross_slot",
+        2
+      ],
+      "failure_kind": "conflict",
+      "r": -2.470021571417776,
+      "base": 0.32825411681833316,
+      "kept": false,
+      "archive_n": 1,
+      "arb": 1,
+      "arch": [
+        3,
+        "vote"
+      ],
+      "quality": -6.1,
+      "diversity": 27.0,
+      "width": 0.907494607145556,
+      "conflicts": 0,
+      "n_empty": 0,
+      "n_fallback": 0,
+      "n_conflict_pairs": 0,
+      "n_trap_hits": 1,
+      "cover": 27,
+      "calls": 5,
+      "diversity_population": 0.9813012203582103,
+      "grad": {
+        "u": -0.5,
+        "v": -0.5,
+        "t": -0.5,
+        "m": -0.5
+      }
+    },
+    {
+      "round": 3,
+      "sample": 1,
+      "task": "A03",
+      "spec": [
+        "none",
+        "cross_slot",
+        2
+      ],
+      "failure_kind": "conflict",
+      "r": -2.706086956521739,
+      "base": -0.5820482051836885,
+      "kept": false,
+      "archive_n": 1,
+      "arb": 1,
+      "arch": [
+        2,
+        "packet"
+      ],
+      "quality": -6.08,
+      "diversity": 8.0,
+      "width": 0.8434782608695652,
+      "conflicts": 0,
+      "n_empty": 0,
+      "n_fallback": 0,
+      "n_conflict_pairs": 0,
+      "n_trap_hits": 1,
+      "cover": 8,
+      "calls": 4,
+      "diversity_population": 0.988395790891362,
+      "grad": {
+        "u": -0.5,
+        "v": -0.5,
+        "t": -0.5,
+        "m": -0.5
+      }
+    },
+    {
+      "round": 3,
+      "sample": 2,
+      "task": "A04",
+      "spec": [
+        "keep_all",
+        "slot",
+        1
+      ],
+      "failure_kind": "conflict",
+      "r": 3.332301572886848,
+      "base": 0.5922567282374724,
+      "kept": false,
+      "archive_n": 1,
+      "arb": 0,
+      "arch": [
+        4,
+        "packet"
+      ],
+      "quality": -0.12,
+      "diversity": 21.0,
+      "width": 0.863075393221712,
+      "conflicts": 0,
+      "n_empty": 0,
+      "n_fallback": 0,
+      "n_conflict_pairs": 0,
+      "n_trap_hits": 0,
+      "cover": 21,
+      "calls": 6,
+      "diversity_population": 0.9805257548028228,
+      "grad": {
+        "u": -0.5,
+        "v": -0.5,
+        "t": -0.5,
+        "m": -0.5
+      }
+    },
+    {
+      "round": 4,
+      "sample": 0,
+      "task": "A06",
+      "spec": [
+        "name_decision_point",
+        "slot",
+        1
+      ],
+      "failure_kind": "conflict",
+      "r": -3.068711132856673,
+      "base": -0.5060336300907712,
+      "kept": false,
+      "archive_n": 1,
+      "arb": 0,
+      "arch": [
+        3,
+        "vote"
+      ],
+      "quality": -6.1,
+      "diversity": 18.0,
+      "width": 0.7578222167858316,
+      "conflicts": 0,
+      "n_empty": 0,
+      "n_fallback": 0,
+      "n_conflict_pairs": 0,
+      "n_trap_hits": 1,
+      "cover": 18,
+      "calls": 5,
+      "diversity_population": 0.986381379613652,
+      "grad": {
+        "u": -0.5,
+        "v": -0.5,
+        "t": -0.5,
+        "m": -0.5
+      }
+    },
+    {
+      "round": 4,
+      "sample": 1,
+      "task": "D01",
+      "spec": [
+        "drop_conflicting",
+        "cross_slot",
+        0
+      ],
+      "failure_kind": "conflict",
+      "r": -2.734046905994425,
+      "base": -1.1744376128618672,
+      "kept": false,
+      "archive_n": 1,
+      "arb": 1,
+      "arch": [
+        4,
+        "mechanical"
+      ],
+      "quality": -6.24,
+      "diversity": 39.0,
+      "width": 0.8764882735013938,
+      "conflicts": 6,
+      "n_empty": 0,
+      "n_fallback": 0,
+      "n_conflict_pairs": 0,
+      "n_trap_hits": 0,
+      "cover": 39,
+      "calls": 12,
+      "diversity_population": 0.9735920714061262,
+      "grad": {
+        "u": -0.5,
+        "v": -0.5,
+        "t": -0.5,
+        "m": -0.5
+      }
+    },
+    {
+      "round": 4,
+      "sample": 2,
+      "task": "D02",
+      "spec": [
+        "none",
+        "cross_slot",
+        0
+      ],
+      "failure_kind": "conflict",
+      "r": -0.06,
+      "base": -0.8401063290033071,
+      "kept": false,
+      "archive_n": 1,
+      "arb": 1,
+      "arch": [
+        1,
+        "mechanical"
+      ],
+      "quality": -0.06,
+      "diversity": 10.0,
+      "width": 0.0,
+      "conflicts": 0,
+      "n_empty": 0,
+      "n_fallback": 0,
+      "n_conflict_pairs": 0,
+      "n_trap_hits": 0,
+      "cover": 10,
+      "calls": 3,
+      "diversity_population": 0.9796193336686722,
+      "grad": {
+        "u": -0.5,
+        "v": -0.5,
+        "t": -0.5,
+        "m": -0.5
+      }
+    },
+    {
+      "round": 5,
+      "sample": 0,
+      "task": "D03",
+      "spec": [
+        "compress",
+        "slot",
+        2
+      ],
+      "failure_kind": "conflict",
+      "r": -1.68,
+      "base": -1.0920744303023149,
+      "kept": false,
+      "archive_n": 1,
+      "arb": 2,
+      "arch": [
+        2,
+        "mechanical"
+      ],
+      "quality": -1.68,
+      "diversity": 5.0,
+      "width": 0.0,
+      "conflicts": 1,
+      "n_empty": 1,
+      "n_fallback": 0,
+      "n_conflict_pairs": 0,
+      "n_trap_hits": 0,
+      "cover": 5,
+      "calls": 9,
+      "diversity_population": 0.9749639768424427,
+      "grad": {
+        "u": -0.5,
+        "v": -0.5,
+        "t": -0.5,
+        "m": -0.5
+      }
+    },
+    {
+      "round": 5,
+      "sample": 2,
+      "task": "D05",
+      "spec": [
+        "keep_all",
+        "slot",
+        1
+      ],
+      "failure_kind": "conflict",
+      "r": 3.2004232804232804,
+      "base": 0.19567488291536372,
+      "kept": false,
+      "archive_n": 1,
+      "arb": 2,
+      "arch": [
+        2,
+        "mechanical"
+      ],
+      "quality": -0.08,
+      "diversity": 5.0,
+      "width": 0.8201058201058201,
+      "conflicts": 0,
+      "n_empty": 0,
+      "n_fallback": 0,
+      "n_conflict_pairs": 0,
+      "n_trap_hits": 0,
+      "cover": 5,
+      "calls": 4,
+      "diversity_population": 0.9780713357446791,
+      "grad": {
+        "u": -0.5,
+        "v": -0.5,
+        "t": -0.5,
+        "m": -0.5
+      }
+    },
+    {
+      "round": 0,
+      "sample": 0,
+      "task": "D01",
+      "spec": [
+        "name_decision_point",
+        "slot",
+        2
+      ],
+      "failure_kind": "conflict",
+      "r": 3.4755555555555553,
+      "base": 3.4755555555555553,
+      "kept": true,
+      "archive_n": 1,
+      "arb": 2,
+      "arch": [
+        2,
+        "packet"
+      ],
+      "quality": -0.08,
+      "diversity": 23.0,
+      "width": 0.8888888888888888,
+      "conflicts": 0,
+      "n_empty": 0,
+      "n_fallback": 0,
+      "n_conflict_pairs": 0,
+      "n_trap_hits": 0,
+      "cover": 23,
+      "calls": 4,
+      "diversity_population": 0.0,
+      "grad": {
+        "u": 0.5,
+        "v": 0.5,
+        "t": 0.5,
+        "m": 0.5
+      }
+    },
+    {
+      "round": 0,
+      "sample": 1,
+      "task": "D02",
+      "spec": [
+        "none",
+        "cross_slot",
+        0
+      ],
+      "failure_kind": "conflict",
+      "r": -0.88,
+      "base": 2.1688888888888886,
+      "kept": false,
+      "archive_n": 1,
+      "arb": 0,
+      "arch": [
+        1,
+        "vote"
+      ],
+      "quality": -0.88,
+      "diversity": 5.0,
+      "width": 0.0,
+      "conflicts": 0,
+      "n_empty": 0,
+      "n_fallback": 0,
+      "n_conflict_pairs": 1,
+      "n_trap_hits": 0,
+      "cover": 5,
+      "calls": 4,
+      "diversity_population": 0.9771784232365145,
+      "grad": {
+        "u": -0.5,
+        "v": -0.5,
+        "t": -0.5,
+        "m": -0.5
+      }
+    },
+    {
+      "round": 0,
+      "sample": 2,
+      "task": "D03",
+      "spec": [
+        "compress",
+        "slot",
+        1
+      ],
+      "failure_kind": "conflict",
+      "r": 3.376953642384106,
+      "base": 2.5313083149374536,
+      "kept": false,
+      "archive_n": 1,
+      "arb": 1,
+      "arch": [
+        2,
+        "packet"
+      ],
+      "quality": -0.08,
+      "diversity": 16.0,
+      "width": 0.8642384105960265,
+      "conflicts": 0,
+      "n_empty": 0,
+      "n_fallback": 0,
+      "n_conflict_pairs": 0,
+      "n_trap_hits": 0,
+      "cover": 16,
+      "calls": 4,
+      "diversity_population": 0.9942968975122467,
+      "grad": {
+        "u": -0.5,
+        "v": -0.5,
+        "t": -0.5,
+        "m": -0.5
+      }
+    },
+    {
+      "round": 1,
+      "sample": 1,
+      "task": "D05",
+      "spec": [
+        "name_decision_point",
+        "cross_slot",
+        2
+      ],
+      "failure_kind": "conflict",
+      "r": 3.2876470588235294,
+      "base": 2.758209938103276,
+      "kept": false,
+      "archive_n": 1,
+      "arb": 2,
+      "arch": [
+        2,
+        "packet"
+      ],
+      "quality": -0.08,
+      "diversity": 19.0,
+      "width": 0.8419117647058824,
+      "conflicts": 0,
+      "n_empty": 0,
+      "n_fallback": 0,
+      "n_conflict_pairs": 0,
+      "n_trap_hits": 0,
+      "cover": 19,
+      "calls": 4,
+      "diversity_population": 0.9892996987730883,
+      "grad": {
+        "u": -0.5,
+        "v": -0.5,
+        "t": -0.5,
+        "m": -0.5
+      }
+    },
+    {
+      "round": 1,
+      "sample": 2,
+      "task": "D06",
+      "spec": [
+        "keep_all",
+        "slot",
+        0
+      ],
+      "failure_kind": "conflict",
+      "r": 3.053569984180758,
+      "base": 2.8468179519265204,
+      "kept": false,
+      "archive_n": 1,
+      "arb": 2,
+      "arch": [
+        4,
+        "packet"
+      ],
+      "quality": -0.12,
+      "diversity": 24.0,
+      "width": 0.7933924960451896,
+      "conflicts": 0,
+      "n_empty": 0,
+      "n_fallback": 0,
+      "n_conflict_pairs": 0,
+      "n_trap_hits": 0,
+      "cover": 24,
+      "calls": 6,
+      "diversity_population": 0.9840835509239934,
+      "grad": {
+        "u": -0.5,
+        "v": -0.5,
+        "t": -0.5,
+        "m": -0.5
+      }
+    },
+    {
+      "round": 2,
+      "sample": 0,
+      "task": "D07",
+      "spec": [
+        "drop_conflicting",
+        "cross_slot",
+        1
+      ],
+      "failure_kind": "conflict",
+      "r": 3.550252100840336,
+      "base": 3.057848196600665,
+      "kept": true,
+      "archive_n": 1,
+      "arb": 1,
+      "arch": [
+        2,
+        "mechanical"
+      ],
+      "quality": -0.08,
+      "diversity": 20.0,
+      "width": 0.907563025210084,
+      "conflicts": 0,
+      "n_empty": 0,
+      "n_fallback": 0,
+      "n_conflict_pairs": 0,
+      "n_trap_hits": 0,
+      "cover": 20,
+      "calls": 4,
+      "diversity_population": 0.9831827800404764,
+      "grad": {
+        "u": 0.5,
+        "v": 0.5,
+        "t": 0.5,
+        "m": 0.5
+      }
+    },
+    {
+      "round": 2,
+      "sample": 1,
+      "task": "D08",
+      "spec": [
+        "ground_in_evidence",
+        "slot",
+        1
+      ],
+      "failure_kind": "conflict",
+      "r": -6.796363636363637,
+      "base": 0.10158464671137457,
+      "kept": false,
+      "archive_n": 1,
+      "arb": 2,
+      "arch": [
+        2,
+        "mechanical"
+      ],
+      "quality": -10.16,
+      "diversity": 13.0,
+      "width": 0.8409090909090909,
+      "conflicts": 10,
+      "n_empty": 0,
+      "n_fallback": 0,
+      "n_conflict_pairs": 0,
+      "n_trap_hits": 0,
+      "cover": 13,
+      "calls": 8,
+      "diversity_population": 0.990625320753185,
+      "grad": {
+        "u": -0.5,
+        "v": -0.5,
+        "t": -0.5,
+        "m": -0.5
+      }
+    },
+    {
+      "round": 2,
+      "sample": 2,
+      "task": "D09",
+      "spec": [
+        "drop_conflicting",
+        "cross_slot",
+        2
+      ],
+      "failure_kind": "conflict",
+      "r": 3.338844913194487,
+      "base": 1.0727627266563082,
+      "kept": false,
+      "archive_n": 1,
+      "arb": 0,
+      "arch": [
+        4,
+        "vote"
+      ],
+      "quality": -0.12,
+      "diversity": 38.0,
+      "width": 0.8647112282986218,
+      "conflicts": 0,
+      "n_empty": 0,
+      "n_fallback": 0,
+      "n_conflict_pairs": 0,
+      "n_trap_hits": 0,
+      "cover": 38,
+      "calls": 6,
+      "diversity_population": 0.9808545966038632,
+      "grad": {
+        "u": -0.5,
+        "v": -0.5,
+        "t": -0.5,
+        "m": -0.5
+      }
+    },
+    {
+      "round": 3,
+      "sample": 0,
+      "task": "A01",
+      "spec": [
+        "drop_conflicting",
+        "slot",
+        2
+      ],
+      "failure_kind": "conflict",
+      "r": -3.7102645502645504,
+      "base": -0.36214545641994944,
+      "kept": false,
+      "archive_n": 1,
+      "arb": 1,
+      "arch": [
+        2,
+        "mechanical"
+      ],
+      "quality": -7.16,
+      "diversity": 12.0,
+      "width": 0.8624338624338624,
+      "conflicts": 1,
+      "n_empty": 0,
+      "n_fallback": 0,
+      "n_conflict_pairs": 0,
+      "n_trap_hits": 1,
+      "cover": 12,
+      "calls": 8,
+      "diversity_population": 0.9891755840081207,
+      "grad": {
+        "u": -0.5,
+        "v": -0.5,
+        "t": -0.5,
+        "m": -0.5
+      }
+    },
+    {
+      "round": 3,
+      "sample": 1,
+      "task": "A03",
+      "spec": [
+        "compress",
+        "cross_slot",
+        0
+      ],
+      "failure_kind": "conflict",
+      "r": -2.566280770237112,
+      "base": -1.0233860505650982,
+      "kept": false,
+      "archive_n": 1,
+      "arb": 0,
+      "arch": [
+        4,
+        "mechanical"
+      ],
+      "quality": -6.12,
+      "diversity": 21.0,
+      "width": 0.888429807440722,
+      "conflicts": 0,
+      "n_empty": 0,
+      "n_fallback": 0,
+      "n_conflict_pairs": 0,
+      "n_trap_hits": 1,
+      "cover": 21,
+      "calls": 6,
+      "diversity_population": 0.9851443224501241,
+      "grad": {
+        "u": -0.5,
+        "v": -0.5,
+        "t": -0.5,
+        "m": -0.5
+      }
+    },
+    {
+      "round": 3,
+      "sample": 2,
+      "task": "A04",
+      "spec": [
+        "keep_all",
+        "slot",
+        2
+      ],
+      "failure_kind": "conflict",
+      "r": -0.06,
+      "base": -0.7343702353955688,
+      "kept": false,
+      "archive_n": 1,
+      "arb": 0,
+      "arch": [
+        1,
+        "mechanical"
+      ],
+      "quality": -0.06,
+      "diversity": 3.0,
+      "width": 0.0,
+      "conflicts": 0,
+      "n_empty": 0,
+      "n_fallback": 0,
+      "n_conflict_pairs": 0,
+      "n_trap_hits": 0,
+      "cover": 3,
+      "calls": 3,
+      "diversity_population": 0.985499023558651,
+      "grad": {
+        "u": -0.5,
+        "v": -0.5,
+        "t": -0.5,
+        "m": -0.5
+      }
+    },
+    {
+      "round": 4,
+      "sample": 0,
+      "task": "A06",
+      "spec": [
+        "drop_conflicting",
+        "cross_slot",
+        1
+      ],
+      "failure_kind": "conflict",
+      "r": -2.7059314491549458,
+      "base": -1.325838599523382,
+      "kept": false,
+      "archive_n": 1,
+      "arb": 1,
+      "arch": [
+        4,
+        "packet"
+      ],
+      "quality": -6.12,
+      "diversity": 26.0,
+      "width": 0.8535171377112636,
+      "conflicts": 0,
+      "n_empty": 0,
+      "n_fallback": 0,
+      "n_conflict_pairs": 0,
+      "n_trap_hits": 1,
+      "cover": 26,
+      "calls": 6,
+      "diversity_population": 0.9836079849229238,
+      "grad": {
+        "u": -0.5,
+        "v": -0.5,
+        "t": -0.5,
+        "m": -0.5
+      }
+    },
+    {
+      "round": 4,
+      "sample": 1,
+      "task": "D01",
+      "spec": [
+        "none",
+        "cross_slot",
+        1
+      ],
+      "failure_kind": "conflict",
+      "r": 2.281509433962264,
+      "base": -0.2436341894776881,
+      "kept": false,
+      "archive_n": 1,
+      "arb": 1,
+      "arch": [
+        2,
+        "mechanical"
+      ],
+      "quality": -1.16,
+      "diversity": 15.0,
+      "width": 0.8603773584905661,
+      "conflicts": 1,
+      "n_empty": 0,
+      "n_fallback": 0,
+      "n_conflict_pairs": 0,
+      "n_trap_hits": 0,
+      "cover": 15,
+      "calls": 8,
+      "diversity_population": 0.97172890107538,
+      "grad": {
+        "u": -0.5,
+        "v": -0.5,
+        "t": -0.5,
+        "m": -0.5
+      }
+    },
+    {
+      "round": 4,
+      "sample": 2,
+      "task": "D02",
+      "spec": [
+        "name_decision_point",
+        "cross_slot",
+        1
+      ],
+      "failure_kind": "conflict",
+      "r": 3.3980031735719174,
+      "base": 0.8488570194371936,
+      "kept": false,
+      "archive_n": 1,
+      "arb": 1,
+      "arch": [
+        3,
+        "vote"
+      ],
+      "quality": -0.1,
+      "diversity": 21.0,
+      "width": 0.8745007933929794,
+      "conflicts": 0,
+      "n_empty": 0,
+      "n_fallback": 0,
+      "n_conflict_pairs": 0,
+      "n_trap_hits": 0,
+      "cover": 21,
+      "calls": 5,
+      "diversity_population": 0.9766178939087484,
+      "grad": {
+        "u": -0.5,
+        "v": -0.5,
+        "t": -0.5,
+        "m": -0.5
+      }
+    },
+    {
+      "round": 5,
+      "sample": 0,
+      "task": "D03",
+      "spec": [
+        "drop_conflicting",
+        "slot",
+        2
+      ],
+      "failure_kind": "conflict",
+      "r": 3.3557792312076846,
+      "base": 1.600933682968341,
+      "kept": false,
+      "archive_n": 1,
+      "arb": 2,
+      "arch": [
+        3,
+        "packet"
+      ],
+      "quality": -0.1,
+      "diversity": 30.0,
+      "width": 0.8639448078019212,
+      "conflicts": 0,
+      "n_empty": 0,
+      "n_fallback": 0,
+      "n_conflict_pairs": 0,
+      "n_trap_hits": 0,
+      "cover": 30,
+      "calls": 5,
+      "diversity_population": 0.9742095610382117,
+      "grad": {
+        "u": -0.5,
+        "v": -0.5,
+        "t": -0.5,
+        "m": -0.5
+      }
+    },
+    {
+      "round": 5,
+      "sample": 1,
+      "task": "D04",
+      "spec": [
+        "compress",
+        "slot",
+        1
+      ],
+      "failure_kind": "conflict",
+      "r": 3.006752223377037,
+      "base": 2.0226792450909494,
+      "kept": false,
+      "archive_n": 1,
+      "arb": 2,
+      "arch": [
+        3,
+        "mechanical"
+      ],
+      "quality": -0.1,
+      "diversity": 22.0,
+      "width": 0.7766880558442593,
+      "conflicts": 0,
+      "n_empty": 0,
+      "n_fallback": 0,
+      "n_conflict_pairs": 0,
+      "n_trap_hits": 0,
+      "cover": 22,
+      "calls": 5,
+      "diversity_population": 0.985484715230567,
+      "grad": {
+        "u": -0.5,
+        "v": -0.5,
+        "t": -0.5,
+        "m": -0.5
+      }
+    },
+    {
+      "round": 5,
+      "sample": 2,
+      "task": "D05",
+      "spec": [
+        "compress",
+        "slot",
+        0
+      ],
+      "failure_kind": "conflict",
+      "r": -0.06,
+      "base": 1.3978754715636645,
+      "kept": false,
+      "archive_n": 1,
+      "arb": 0,
+      "arch": [
+        1,
+        "packet"
+      ],
+      "quality": -0.06,
+      "diversity": 9.0,
+      "width": 0.0,
+      "conflicts": 0,
+      "n_empty": 0,
+      "n_fallback": 0,
+      "n_conflict_pairs": 0,
+      "n_trap_hits": 0,
+      "cover": 9,
+      "calls": 3,
+      "diversity_population": 0.982154119647673,
+      "grad": {
+        "u": -0.5,
+        "v": -0.5,
+        "t": -0.5,
+        "m": -0.5
+      }
+    },
+    {
+      "round": 0,
+      "sample": 0,
+      "task": "D01",
+      "spec": [
+        "none",
+        "cross_slot",
+        0
+      ],
+      "failure_kind": "conflict",
+      "r": -0.06,
+      "base": -0.06,
+      "kept": true,
+      "archive_n": 1,
+      "arb": 0,
+      "arch": [
+        1,
+        "vote"
+      ],
+      "quality": -0.06,
+      "diversity": 12.0,
+      "width": 0.0,
+      "conflicts": 0,
+      "n_empty": 0,
+      "n_fallback": 0,
+      "n_conflict_pairs": 0,
+      "n_trap_hits": 0,
+      "cover": 12,
+      "calls": 3,
+      "diversity_population": 0.0,
+      "grad": {
+        "u": 0.5,
+        "v": 0.5,
+        "t": 0.5,
+        "m": 0.5
+      }
+    },
+    {
+      "round": 0,
+      "sample": 1,
+      "task": "D02",
+      "spec": [
+        "name_decision_point",
+        "cross_slot",
+        2
+      ],
+      "failure_kind": "conflict",
+      "r": 3.6830662020905924,
+      "base": 1.0629198606271777,
+      "kept": true,
+      "archive_n": 1,
+      "arb": 0,
+      "arch": [
+        2,
+        "vote"
+      ],
+      "quality": -0.08,
+      "diversity": 17.0,
+      "width": 0.9407665505226481,
+      "conflicts": 0,
+      "n_empty": 0,
+      "n_fallback": 0,
+      "n_conflict_pairs": 0,
+      "n_trap_hits": 0,
+      "cover": 17,
+      "calls": 4,
+      "diversity_population": 0.978515625,
+      "grad": {
+        "u": 0.5,
+        "v": 0.5,
+        "t": 0.5,
+        "m": 0.5
+      }
+    },
+    {
+      "round": 0,
+      "sample": 2,
+      "task": "D03",
+      "spec": [
+        "none",
+        "cross_slot",
+        0
+      ],
+      "failure_kind": "conflict",
+      "r": -0.06,
+      "base": 0.7260439024390243,
+      "kept": false,
+      "archive_n": 1,
+      "arb": 1,
+      "arch": [
+        1,
+        "vote"
+      ],
+      "quality": -0.06,
+      "diversity": 11.0,
+      "width": 0.0,
+      "conflicts": 0,
+      "n_empty": 0,
+      "n_fallback": 0,
+      "n_conflict_pairs": 0,
+      "n_trap_hits": 0,
+      "cover": 11,
+      "calls": 3,
+      "diversity_population": 0.9965968302214503,
+      "grad": {
+        "u": -0.5,
+        "v": -0.5,
+        "t": -0.5,
+        "m": -0.5
+      }
+    },
+    {
+      "round": 1,
+      "sample": 0,
+      "task": "D04",
+      "spec": [
+        "compress",
+        "slot",
+        2
+      ],
+      "failure_kind": "conflict",
+      "r": 3.3398473282442747,
+      "base": 1.5101849301805992,
+      "kept": false,
+      "archive_n": 1,
+      "arb": 2,
+      "arch": [
+        2,
+        "vote"
+      ],
+      "quality": -0.08,
+      "diversity": 18.0,
+      "width": 0.8549618320610687,
+      "conflicts": 0,
+      "n_empty": 0,
+      "n_fallback": 0,
+      "n_conflict_pairs": 0,
+      "n_trap_hits": 0,
+      "cover": 18,
+      "calls": 4,
+      "diversity_population": 0.9868391323076423,
+      "grad": {
+        "u": -0.5,
+        "v": -0.5,
+        "t": -0.5,
+        "m": -0.5
+      }
+    },
+    {
+      "round": 1,
+      "sample": 1,
+      "task": "D05",
+      "spec": [
+        "name_decision_point",
+        "cross_slot",
+        2
+      ],
+      "failure_kind": "conflict",
+      "r": 1.6954797665204338,
+      "base": 1.5657733810825494,
+      "kept": false,
+      "archive_n": 1,
+      "arb": 2,
+      "arch": [
+        4,
+        "vote"
+      ],
+      "quality": -1.76,
+      "diversity": 34.0,
+      "width": 0.8638699416301084,
+      "conflicts": 1,
+      "n_empty": 1,
+      "n_fallback": 0,
+      "n_conflict_pairs": 0,
+      "n_trap_hits": 0,
+      "cover": 34,
+      "calls": 13,
+      "diversity_population": 0.9892454833602823,
+      "grad": {
+        "u": -0.5,
+        "v": -0.5,
+        "t": -0.5,
+        "m": -0.5
+      }
+    },
+    {
+      "round": 1,
+      "sample": 2,
+      "task": "D06",
+      "spec": [
+        "compress",
+        "cross_slot",
+        0
+      ],
+      "failure_kind": "conflict",
+      "r": 3.0258823529411765,
+      "base": 2.0038060726401374,
+      "kept": false,
+      "archive_n": 1,
+      "arb": 0,
+      "arch": [
+        2,
+        "packet"
+      ],
+      "quality": -0.08,
+      "diversity": 14.0,
+      "width": 0.7764705882352941,
+      "conflicts": 0,
+      "n_empty": 0,
+      "n_fallback": 0,
+      "n_conflict_pairs": 0,
+      "n_trap_hits": 0,
+      "cover": 14,
+      "calls": 4,
+      "diversity_population": 0.9871215907348997,
+      "grad": {
+        "u": -0.5,
+        "v": -0.5,
+        "t": -0.5,
+        "m": -0.5
+      }
+    },
+    {
+      "round": 2,
+      "sample": 0,
+      "task": "D07",
+      "spec": [
+        "ground_in_evidence",
+        "cross_slot",
+        1
+      ],
+      "failure_kind": "conflict",
+      "r": 3.29888198757764,
+      "base": 2.392328847121388,
+      "kept": false,
+      "archive_n": 1,
+      "arb": 2,
+      "arch": [
+        2,
+        "packet"
+      ],
+      "quality": -0.08,
+      "diversity": 17.0,
+      "width": 0.84472049689441,
+      "conflicts": 0,
+      "n_empty": 0,
+      "n_fallback": 0,
+      "n_conflict_pairs": 0,
+      "n_trap_hits": 0,
+      "cover": 17,
+      "calls": 4,
+      "diversity_population": 0.9893417965125175,
+      "grad": {
+        "u": -0.5,
+        "v": -0.5,
+        "t": -0.5,
+        "m": -0.5
+      }
+    },
+    {
+      "round": 2,
+      "sample": 1,
+      "task": "D08",
+      "spec": [
+        "name_decision_point",
+        "slot",
+        1
+      ],
+      "failure_kind": "conflict",
+      "r": -19.889022865805092,
+      "base": -4.2920766667565555,
+      "kept": false,
+      "archive_n": 1,
+      "arb": 0,
+      "arch": [
+        4,
+        "vote"
+      ],
+      "quality": -23.28,
+      "diversity": 36.0,
+      "width": 0.8477442835487274,
+      "conflicts": 23,
+      "n_empty": 0,
+      "n_fallback": 0,
+      "n_conflict_pairs": 0,
+      "n_trap_hits": 0,
+      "cover": 36,
+      "calls": 14,
+      "diversity_population": 0.9860945561195226,
+      "grad": {
+        "u": -0.5,
+        "v": -0.5,
+        "t": -0.5,
+        "m": -0.5
+      }
+    },
+    {
+      "round": 2,
+      "sample": 2,
+      "task": "D09",
+      "spec": [
+        "drop_conflicting",
+        "cross_slot",
+        0
+      ],
+      "failure_kind": "conflict",
+      "r": 3.5422834253282858,
+      "base": -1.941768639131103,
+      "kept": false,
+      "archive_n": 1,
+      "arb": 0,
+      "arch": [
+        3,
+        "packet"
+      ],
+      "quality": -0.1,
+      "diversity": 24.0,
+      "width": 0.9105708563320715,
+      "conflicts": 0,
+      "n_empty": 0,
+      "n_fallback": 0,
+      "n_conflict_pairs": 0,
+      "n_trap_hits": 0,
+      "cover": 24,
+      "calls": 5,
+      "diversity_population": 0.9825673225392597,
+      "grad": {
+        "u": -0.5,
+        "v": -0.5,
+        "t": -0.5,
+        "m": -0.5
+      }
+    },
+    {
+      "round": 3,
+      "sample": 0,
+      "task": "A01",
+      "spec": [
+        "keep_all",
+        "slot",
+        1
+      ],
+      "failure_kind": "conflict",
+      "r": -3.690687534866096,
+      "base": -2.4664443078516007,
+      "kept": false,
+      "archive_n": 1,
+      "arb": 0,
+      "arch": [
+        4,
+        "mechanical"
+      ],
+      "quality": -7.24,
+      "diversity": 23.0,
+      "width": 0.8873281162834761,
+      "conflicts": 1,
+      "n_empty": 0,
+      "n_fallback": 0,
+      "n_conflict_pairs": 0,
+      "n_trap_hits": 1,
+      "cover": 23,
+      "calls": 12,
+      "diversity_population": 0.9842303993997361,
+      "grad": {
+        "u": -0.5,
+        "v": -0.5,
+        "t": -0.5,
+        "m": -0.5
+      }
+    },
+    {
+      "round": 3,
+      "sample": 1,
+      "task": "A03",
+      "spec": [
+        "keep_all",
+        "slot",
+        2
+      ],
+      "failure_kind": "conflict",
+      "r": -0.06,
+      "base": -1.7445110154961205,
+      "kept": false,
+      "archive_n": 1,
+      "arb": 0,
+      "arch": [
+        1,
+        "mechanical"
+      ],
+      "quality": -0.06,
+      "diversity": 4.0,
+      "width": 0.0,
+      "conflicts": 0,
+      "n_empty": 0,
+      "n_fallback": 0,
+      "n_conflict_pairs": 0,
+      "n_trap_hits": 0,
+      "cover": 4,
+      "calls": 3,
+      "diversity_population": 0.9915540426254162,
+      "grad": {
+        "u": -0.5,
+        "v": -0.5,
+        "t": -0.5,
+        "m": -0.5
+      }
+    },
+    {
+      "round": 3,
+      "sample": 2,
+      "task": "A04",
+      "spec": [
+        "none",
+        "cross_slot",
+        2
+      ],
+      "failure_kind": "conflict",
+      "r": 3.0930769230769233,
+      "base": -0.29323463392420723,
+      "kept": false,
+      "archive_n": 1,
+      "arb": 0,
+      "arch": [
+        2,
+        "mechanical"
+      ],
+      "quality": -0.08,
+      "diversity": 12.0,
+      "width": 0.7932692307692308,
+      "conflicts": 0,
+      "n_empty": 0,
+      "n_fallback": 0,
+      "n_conflict_pairs": 0,
+      "n_trap_hits": 0,
+      "cover": 12,
+      "calls": 4,
+      "diversity_population": 0.982950695182377,
+      "grad": {
+        "u": -0.5,
+        "v": -0.5,
+        "t": -0.5,
+        "m": -0.5
+      }
+    },
+    {
+      "round": 4,
+      "sample": 0,
+      "task": "A06",
+      "spec": [
+        "none",
+        "cross_slot",
+        0
+      ],
+      "failure_kind": "conflict",
+      "r": -0.06,
+      "base": -0.22326424374694503,
+      "kept": false,
+      "archive_n": 1,
+      "arb": 1,
+      "arch": [
+        1,
+        "mechanical"
+      ],
+      "quality": -0.06,
+      "diversity": 5.0,
+      "width": 0.0,
+      "conflicts": 0,
+      "n_empty": 0,
+      "n_fallback": 0,
+      "n_conflict_pairs": 0,
+      "n_trap_hits": 0,
+      "cover": 5,
+      "calls": 3,
+      "diversity_population": 0.9854956455919204,
+      "grad": {
+        "u": -0.5,
+        "v": -0.5,
+        "t": -0.5,
+        "m": -0.5
+      }
+    },
+    {
+      "round": 4,
+      "sample": 1,
+      "task": "D01",
+      "spec": [
+        "name_decision_point",
+        "cross_slot",
+        0
+      ],
+      "failure_kind": "conflict",
+      "r": 0.3078125107778984,
+      "base": -0.06394121738949199,
+      "kept": false,
+      "archive_n": 1,
+      "arb": 1,
+      "arch": [
+        3,
+        "vote"
+      ],
+      "quality": -3.2,
+      "diversity": 25.0,
+      "width": 0.8769531276944746,
+      "conflicts": 3,
+      "n_empty": 0,
+      "n_fallback": 0,
+      "n_conflict_pairs": 0,
+      "n_trap_hits": 0,
+      "cover": 25,
+      "calls": 10,
+      "diversity_population": 0.9689579899576237,
+      "grad": {
+        "u": -0.5,
+        "v": -0.5,
+        "t": -0.5,
+        "m": -0.5
+      }
+    },
+    {
+      "round": 4,
+      "sample": 2,
+      "task": "D02",
+      "spec": [
+        "ground_in_evidence",
+        "cross_slot",
+        1
+      ],
+      "failure_kind": "conflict",
+      "r": -9.391185981637612,
+      "base": -2.862114646663928,
+      "kept": false,
+      "archive_n": 1,
+      "arb": 0,
+      "arch": [
+        4,
+        "vote"
+      ],
+      "quality": -13.100000000000001,
+      "diversity": 28.0,
+      "width": 0.9272035045905972,
+      "conflicts": 8,
+      "n_empty": 0,
+      "n_fallback": 0,
+      "n_conflict_pairs": 6,
+      "n_trap_hits": 0,
+      "cover": 28,
+      "calls": 15,
+      "diversity_population": 0.9762476468074877,
+      "grad": {
+        "u": -0.5,
+        "v": -0.5,
+        "t": -0.5,
+        "m": -0.5
+      }
+    },
+    {
+      "round": 5,
+      "sample": 0,
+      "task": "D03",
+      "spec": [
+        "compress",
+        "slot",
+        2
+      ],
+      "failure_kind": "conflict",
+      "r": -7.22,
+      "base": -4.16948025266475,
+      "kept": false,
+      "archive_n": 1,
+      "arb": 2,
+      "arch": [
+        3,
+        "mechanical"
+      ],
+      "quality": -7.22,
+      "diversity": 4.0,
+      "width": 0.0,
+      "conflicts": 6,
+      "n_empty": 2,
+      "n_fallback": 0,
+      "n_conflict_pairs": 0,
+      "n_trap_hits": 0,
+      "cover": 4,
+      "calls": 11,
+      "diversity_population": 0.9789268907265523,
+      "grad": {
+        "u": -0.5,
+        "v": -0.5,
+        "t": -0.5,
+        "m": -0.5
+      }
+    },
+    {
+      "round": 5,
+      "sample": 1,
+      "task": "D04",
+      "spec": [
+        "compress",
+        "slot",
+        2
+      ],
+      "failure_kind": "conflict",
+      "r": -2.16,
+      "base": -3.5666361768653245,
+      "kept": false,
+      "archive_n": 1,
+      "arb": 0,
+      "arch": [
+        1,
+        "packet"
+      ],
+      "quality": -2.16,
+      "diversity": 3.0,
+      "width": 0.0,
+      "conflicts": 2,
+      "n_empty": 0,
+      "n_fallback": 0,
+      "n_conflict_pairs": 0,
+      "n_trap_hits": 0,
+      "cover": 3,
+      "calls": 8,
+      "diversity_population": 0.9798770287916982,
+      "grad": {
+        "u": -0.5,
+        "v": -0.5,
+        "t": -0.5,
+        "m": -0.5
+      }
+    },
+    {
+      "round": 5,
+      "sample": 2,
+      "task": "D05",
+      "spec": [
+        "keep_all",
+        "slot",
+        2
+      ],
+      "failure_kind": "conflict",
+      "r": 3.5057605177993527,
+      "base": -1.4449171684659214,
+      "kept": false,
+      "archive_n": 1,
+      "arb": 1,
+      "arch": [
+        2,
+        "vote"
+      ],
+      "quality": -0.08,
+      "diversity": 15.0,
+      "width": 0.8964401294498382,
+      "conflicts": 0,
+      "n_empty": 0,
+      "n_fallback": 0,
+      "n_conflict_pairs": 0,
+      "n_trap_hits": 0,
+      "cover": 15,
+      "calls": 4,
+      "diversity_population": 0.9791557801955667,
+      "grad": {
+        "u": -0.5,
+        "v": -0.5,
+        "t": -0.5,
+        "m": -0.5
+      }
+    },
+    {
+      "round": 0,
+      "sample": 0,
+      "task": "D01",
+      "spec": [
+        "compress",
+        "slot",
+        2
+      ],
+      "failure_kind": "conflict",
+      "r": 3.328,
+      "base": 3.328,
+      "kept": true,
+      "archive_n": 1,
+      "arb": 0,
+      "arch": [
+        2,
+        "packet"
+      ],
+      "quality": -0.08,
+      "diversity": 12.0,
+      "width": 0.852,
+      "conflicts": 0,
+      "n_empty": 0,
+      "n_fallback": 0,
+      "n_conflict_pairs": 0,
+      "n_trap_hits": 0,
+      "cover": 12,
+      "calls": 4,
+      "diversity_population": 0.0,
+      "grad": {
+        "u": 0.5,
+        "v": 0.5,
+        "t": 0.5,
+        "m": 0.5
+      }
+    },
+    {
+      "round": 0,
+      "sample": 1,
+      "task": "D02",
+      "spec": [
+        "none",
+        "cross_slot",
+        2
+      ],
+      "failure_kind": "conflict",
+      "r": -0.08,
+      "base": 2.3055999999999996,
+      "kept": false,
+      "archive_n": 1,
+      "arb": 1,
+      "arch": [
+        1,
+        "vote"
+      ],
+      "quality": -0.08,
+      "diversity": 10.0,
+      "width": 0.0,
+      "conflicts": 0,
+      "n_empty": 0,
+      "n_fallback": 0,
+      "n_conflict_pairs": 0,
+      "n_trap_hits": 0,
+      "cover": 10,
+      "calls": 4,
+      "diversity_population": 0.9797752808988764,
+      "grad": {
+        "u": -0.5,
+        "v": -0.5,
+        "t": -0.5,
+        "m": -0.5
+      }
+    },
+    {
+      "round": 0,
+      "sample": 2,
+      "task": "D03",
+      "spec": [
+        "compress",
+        "slot",
+        1
+      ],
+      "failure_kind": "conflict",
+      "r": 3.1927272727272724,
+      "base": 2.5717381818181813,
+      "kept": false,
+      "archive_n": 1,
+      "arb": 0,
+      "arch": [
+        2,
+        "packet"
+      ],
+      "quality": -0.08,
+      "diversity": 21.0,
+      "width": 0.8181818181818181,
+      "conflicts": 0,
+      "n_empty": 0,
+      "n_fallback": 0,
+      "n_conflict_pairs": 0,
+      "n_trap_hits": 0,
+      "cover": 21,
+      "calls": 4,
+      "diversity_population": 0.9891927228218538,
+      "grad": {
+        "u": -0.5,
+        "v": -0.5,
+        "t": -0.5,
+        "m": -0.5
+      }
+    },
+    {
+      "round": 1,
+      "sample": 0,
+      "task": "D04",
+      "spec": [
+        "compress",
+        "cross_slot",
+        2
+      ],
+      "failure_kind": "conflict",
+      "r": -2.9547524946379933,
+      "base": 0.9137909788813288,
+      "kept": false,
+      "archive_n": 1,
+      "arb": 2,
+      "arch": [
+        4,
+        "packet"
+      ],
+      "quality": -6.28,
+      "diversity": 27.0,
+      "width": 0.8313118763405017,
+      "conflicts": 6,
+      "n_empty": 0,
+      "n_fallback": 0,
+      "n_conflict_pairs": 0,
+      "n_trap_hits": 0,
+      "cover": 27,
+      "calls": 14,
+      "diversity_population": 0.9887804435196652,
+      "grad": {
+        "u": -0.5,
+        "v": -0.5,
+        "t": -0.5,
+        "m": -0.5
+      }
+    },
+    {
+      "round": 1,
+      "sample": 1,
+      "task": "D05",
+      "spec": [
+        "compress",
+        "cross_slot",
+        1
+      ],
+      "failure_kind": "conflict",
+      "r": 3.393309608540925,
+      "base": 1.6576465677792076,
+      "kept": true,
+      "archive_n": 1,
+      "arb": 0,
+      "arch": [
+        2,
+        "packet"
+      ],
+      "quality": -0.08,
+      "diversity": 14.0,
+      "width": 0.8683274021352313,
+      "conflicts": 0,
+      "n_empty": 0,
+      "n_fallback": 0,
+      "n_conflict_pairs": 0,
+      "n_trap_hits": 0,
+      "cover": 14,
+      "calls": 4,
+      "diversity_population": 0.9881587612256998,
+      "grad": {
+        "u": 0.5,
+        "v": 0.5,
+        "t": 0.5,
+        "m": 0.5
+      }
+    },
+    {
+      "round": 1,
+      "sample": 2,
+      "task": "D06",
+      "spec": [
+        "none",
+        "slot",
+        0
+      ],
+      "failure_kind": "conflict",
+      "r": 3.0739319152165847,
+      "base": 2.0825321720104206,
+      "kept": false,
+      "archive_n": 1,
+      "arb": 0,
+      "arch": [
+        4,
+        "packet"
+      ],
+      "quality": -0.12,
+      "diversity": 31.0,
+      "width": 0.7984829788041462,
+      "conflicts": 0,
+      "n_empty": 0,
+      "n_fallback": 0,
+      "n_conflict_pairs": 0,
+      "n_trap_hits": 0,
+      "cover": 31,
+      "calls": 6,
+      "diversity_population": 0.9817300193081697,
+      "grad": {
+        "u": -0.5,
+        "v": -0.5,
+        "t": -0.5,
+        "m": -0.5
+      }
+    },
+    {
+      "round": 2,
+      "sample": 0,
+      "task": "D07",
+      "spec": [
+        "name_decision_point",
+        "cross_slot",
+        1
+      ],
+      "failure_kind": "conflict",
+      "r": 0.25202423298356846,
+      "base": 1.533379790302365,
+      "kept": false,
+      "archive_n": 1,
+      "arb": 0,
+      "arch": [
+        4,
+        "vote"
+      ],
+      "quality": -3.2800000000000002,
+      "diversity": 40.0,
+      "width": 0.8830060582458922,
+      "conflicts": 3,
+      "n_empty": 0,
+      "n_fallback": 0,
+      "n_conflict_pairs": 0,
+      "n_trap_hits": 0,
+      "cover": 40,
+      "calls": 14,
+      "diversity_population": 0.9875709826459154,
+      "grad": {
+        "u": -0.5,
+        "v": -0.5,
+        "t": -0.5,
+        "m": -0.5
+      }
+    },
+    {
+      "round": 3,
+      "sample": 0,
+      "task": "A01",
+      "spec": [
+        "keep_all",
+        "slot",
+        2
+      ],
+      "failure_kind": "conflict",
+      "r": -0.06,
+      "base": 1.0553658532116554,
+      "kept": false,
+      "archive_n": 1,
+      "arb": 0,
+      "arch": [
+        1,
+        "mechanical"
+      ],
+      "quality": -0.06,
+      "diversity": 6.0,
+      "width": 0.0,
+      "conflicts": 0,
+      "n_empty": 0,
+      "n_fallback": 0,
+      "n_conflict_pairs": 0,
+      "n_trap_hits": 0,
+      "cover": 6,
+      "calls": 3,
+      "diversity_population": 0.9874789790031958,
+      "grad": {
+        "u": -0.5,
+        "v": -0.5,
+        "t": -0.5,
+        "m": -0.5
+      }
+    },
+    {
+      "round": 3,
+      "sample": 1,
+      "task": "A03",
+      "spec": [
+        "ground_in_evidence",
+        "slot",
+        2
+      ],
+      "failure_kind": "conflict",
+      "r": 1.2437086092715228,
+      "base": 1.1118686800296156,
+      "kept": false,
+      "archive_n": 1,
+      "arb": 0,
+      "arch": [
+        2,
+        "mechanical"
+      ],
+      "quality": -2.2,
+      "diversity": 5.0,
+      "width": 0.8609271523178808,
+      "conflicts": 2,
+      "n_empty": 0,
+      "n_fallback": 0,
+      "n_conflict_pairs": 0,
+      "n_trap_hits": 0,
+      "cover": 5,
+      "calls": 10,
+      "diversity_population": 0.9818131785323101,
+      "grad": {
+        "u": -0.5,
+        "v": -0.5,
+        "t": -0.5,
+        "m": -0.5
+      }
+    },
+    {
+      "round": 3,
+      "sample": 2,
+      "task": "A04",
+      "spec": [
+        "compress",
+        "slot",
+        1
+      ],
+      "failure_kind": "conflict",
+      "r": 3.25994621469453,
+      "base": 1.7562919404290898,
+      "kept": false,
+      "archive_n": 1,
+      "arb": 1,
+      "arch": [
+        4,
+        "packet"
+      ],
+      "quality": -0.12,
+      "diversity": 16.0,
+      "width": 0.8449865536736325,
+      "conflicts": 0,
+      "n_empty": 0,
+      "n_fallback": 0,
+      "n_conflict_pairs": 0,
+      "n_trap_hits": 0,
+      "cover": 16,
+      "calls": 6,
+      "diversity_population": 0.9862259253087654,
+      "grad": {
+        "u": -0.5,
+        "v": -0.5,
+        "t": -0.5,
+        "m": -0.5
+      }
+    },
+    {
+      "round": 4,
+      "sample": 0,
+      "task": "A06",
+      "spec": [
+        "compress",
+        "cross_slot",
+        0
+      ],
+      "failure_kind": "conflict",
+      "r": -2.763052824481369,
+      "base": 0.40048851095595195,
+      "kept": false,
+      "archive_n": 1,
+      "arb": 1,
+      "arch": [
+        3,
+        "vote"
+      ],
+      "quality": -6.1,
+      "diversity": 15.0,
+      "width": 0.8342367938796577,
+      "conflicts": 0,
+      "n_empty": 0,
+      "n_fallback": 0,
+      "n_conflict_pairs": 0,
+      "n_trap_hits": 1,
+      "cover": 15,
+      "calls": 5,
+      "diversity_population": 0.9804585839494492,
+      "grad": {
+        "u": -0.5,
+        "v": -0.5,
+        "t": -0.5,
+        "m": -0.5
+      }
+    },
+    {
+      "round": 4,
+      "sample": 1,
+      "task": "D01",
+      "spec": [
+        "name_decision_point",
+        "slot",
+        0
+      ],
+      "failure_kind": "conflict",
+      "r": 3.293888156749633,
+      "base": 1.2685084046940562,
+      "kept": false,
+      "archive_n": 1,
+      "arb": 0,
+      "arch": [
+        3,
+        "packet"
+      ],
+      "quality": -0.1,
+      "diversity": 29.0,
+      "width": 0.8484720391874083,
+      "conflicts": 0,
+      "n_empty": 0,
+      "n_fallback": 0,
+      "n_conflict_pairs": 0,
+      "n_trap_hits": 0,
+      "cover": 29,
+      "calls": 5,
+      "diversity_population": 0.9700124287237404,
+      "grad": {
+        "u": -0.5,
+        "v": -0.5,
+        "t": -0.5,
+        "m": -0.5
+      }
+    },
+    {
+      "round": 4,
+      "sample": 2,
+      "task": "D02",
+      "spec": [
+        "drop_conflicting",
+        "slot",
+        2
+      ],
+      "failure_kind": "conflict",
+      "r": 0.43845559845559823,
+      "base": 1.0194925628225189,
+      "kept": false,
+      "archive_n": 1,
+      "arb": 0,
+      "arch": [
+        2,
+        "mechanical"
+      ],
+      "quality": -3.16,
+      "diversity": 10.0,
+      "width": 0.8996138996138996,
+      "conflicts": 3,
+      "n_empty": 0,
+      "n_fallback": 0,
+      "n_conflict_pairs": 0,
+      "n_trap_hits": 0,
+      "cover": 10,
+      "calls": 8,
+      "diversity_population": 0.9862465251684348,
+      "grad": {
+        "u": -0.5,
+        "v": -0.5,
+        "t": -0.5,
+        "m": -0.5
+      }
+    },
+    {
+      "round": 5,
+      "sample": 0,
+      "task": "D03",
+      "spec": [
+        "keep_all",
+        "cross_slot",
+        0
+      ],
+      "failure_kind": "conflict",
+      "r": -0.06,
+      "base": 0.6956447939757632,
+      "kept": false,
+      "archive_n": 1,
+      "arb": 1,
+      "arch": [
+        1,
+        "mechanical"
+      ],
+      "quality": -0.06,
+      "diversity": 10.0,
+      "width": 0.0,
+      "conflicts": 0,
+      "n_empty": 0,
+      "n_fallback": 0,
+      "n_conflict_pairs": 0,
+      "n_trap_hits": 0,
+      "cover": 10,
+      "calls": 3,
+      "diversity_population": 0.974049175120913,
+      "grad": {
+        "u": -0.5,
+        "v": -0.5,
+        "t": -0.5,
+        "m": -0.5
+      }
+    },
+    {
+      "round": 0,
+      "sample": 0,
+      "task": "D01",
+      "spec": [
+        "none",
+        "cross_slot",
+        1
+      ],
+      "failure_kind": "conflict",
+      "r": -0.06,
+      "base": -0.06,
+      "kept": true,
+      "archive_n": 1,
+      "arb": 2,
+      "arch": [
+        1,
+        "vote"
+      ],
+      "quality": -0.06,
+      "diversity": 9.0,
+      "width": 0.0,
+      "conflicts": 0,
+      "n_empty": 0,
+      "n_fallback": 0,
+      "n_conflict_pairs": 0,
+      "n_trap_hits": 0,
+      "cover": 9,
+      "calls": 3,
+      "diversity_population": 0.0,
+      "grad": {
+        "u": 0.5,
+        "v": 0.5,
+        "t": 0.5,
+        "m": 0.5
+      }
+    },
+    {
+      "round": 0,
+      "sample": 1,
+      "task": "D02",
+      "spec": [
+        "name_decision_point",
+        "slot",
+        2
+      ],
+      "failure_kind": "conflict",
+      "r": -0.06,
+      "base": -0.06,
+      "kept": false,
+      "archive_n": 1,
+      "arb": 0,
+      "arch": [
+        1,
+        "vote"
+      ],
+      "quality": -0.06,
+      "diversity": 9.0,
+      "width": 0.0,
+      "conflicts": 0,
+      "n_empty": 0,
+      "n_fallback": 0,
+      "n_conflict_pairs": 0,
+      "n_trap_hits": 0,
+      "cover": 9,
+      "calls": 3,
+      "diversity_population": 0.995085995085995,
+      "grad": {
+        "u": -0.5,
+        "v": -0.5,
+        "t": -0.5,
+        "m": -0.5
+      }
+    },
+    {
+      "round": 0,
+      "sample": 2,
+      "task": "D03",
+      "spec": [
+        "ground_in_evidence",
+        "cross_slot",
+        0
+      ],
+      "failure_kind": "conflict",
+      "r": -5.538629829375532,
+      "base": -1.7035889488126597,
+      "kept": false,
+      "archive_n": 1,
+      "arb": 1,
+      "arch": [
+        4,
+        "mechanical"
+      ],
+      "quality": -8.78,
+      "diversity": 32.0,
+      "width": 0.8103425426561167,
+      "conflicts": 8,
+      "n_empty": 1,
+      "n_fallback": 0,
+      "n_conflict_pairs": 0,
+      "n_trap_hits": 0,
+      "cover": 32,
+      "calls": 14,
+      "diversity_population": 0.991014799154334,
+      "grad": {
+        "u": -0.5,
+        "v": -0.5,
+        "t": -0.5,
+        "m": -0.5
+      }
+    },
+    {
+      "round": 1,
+      "sample": 0,
+      "task": "D04",
+      "spec": [
+        "compress",
+        "cross_slot",
+        1
+      ],
+      "failure_kind": "conflict",
+      "r": 2.078095238095238,
+      "base": -0.5690836927402904,
+      "kept": true,
+      "archive_n": 1,
+      "arb": 1,
+      "arch": [
+        2,
+        "packet"
+      ],
+      "quality": -1.16,
+      "diversity": 10.0,
+      "width": 0.8095238095238095,
+      "conflicts": 1,
+      "n_empty": 0,
+      "n_fallback": 0,
+      "n_conflict_pairs": 0,
+      "n_trap_hits": 0,
+      "cover": 10,
+      "calls": 8,
+      "diversity_population": 0.9847413641240228,
+      "grad": {
+        "u": 0.5,
+        "v": 0.5,
+        "t": 0.5,
+        "m": 0.5
+      }
+    },
+    {
+      "round": 1,
+      "sample": 1,
+      "task": "D05",
+      "spec": [
+        "none",
+        "slot",
+        0
+      ],
+      "failure_kind": "conflict",
+      "r": 0.40719165865544493,
+      "base": -0.2762010873215698,
+      "kept": false,
+      "archive_n": 1,
+      "arb": 0,
+      "arch": [
+        3,
+        "packet"
+      ],
+      "quality": -3.2,
+      "diversity": 25.0,
+      "width": 0.9017979146638613,
+      "conflicts": 3,
+      "n_empty": 0,
+      "n_fallback": 0,
+      "n_conflict_pairs": 0,
+      "n_trap_hits": 0,
+      "cover": 25,
+      "calls": 10,
+      "diversity_population": 0.9887380314300352,
+      "grad": {
+        "u": -0.5,
+        "v": -0.5,
+        "t": -0.5,
+        "m": -0.5
+      }
+    },
+    {
+      "round": 1,
+      "sample": 2,
+      "task": "D06",
+      "spec": [
+        "none",
+        "cross_slot",
+        1
+      ],
+      "failure_kind": "conflict",
+      "r": 3.122797202797203,
+      "base": 0.7434983997140621,
+      "kept": true,
+      "archive_n": 1,
+      "arb": 0,
+      "arch": [
+        2,
+        "vote"
+      ],
+      "quality": -0.08,
+      "diversity": 23.0,
+      "width": 0.8006993006993007,
+      "conflicts": 0,
+      "n_empty": 0,
+      "n_fallback": 0,
+      "n_conflict_pairs": 0,
+      "n_trap_hits": 0,
+      "cover": 23,
+      "calls": 4,
+      "diversity_population": 0.9871647735390544,
+      "grad": {
+        "u": 0.5,
+        "v": 0.5,
+        "t": 0.5,
+        "m": 0.5
+      }
+    },
+    {
+      "round": 2,
+      "sample": 1,
+      "task": "D08",
+      "spec": [
+        "compress",
+        "cross_slot",
+        1
+      ],
+      "failure_kind": "conflict",
+      "r": -4.252631578947369,
+      "base": -0.7553405938843674,
+      "kept": false,
+      "archive_n": 1,
+      "arb": 2,
+      "arch": [
+        2,
+        "vote"
+      ],
+      "quality": -6.2,
+      "diversity": 6.0,
+      "width": 0.48684210526315785,
+      "conflicts": 6,
+      "n_empty": 0,
+      "n_fallback": 0,
+      "n_conflict_pairs": 0,
+      "n_trap_hits": 0,
+      "cover": 6,
+      "calls": 10,
+      "diversity_population": 0.9956789469644278,
+      "grad": {
+        "u": -0.5,
+        "v": -0.5,
+        "t": -0.5,
+        "m": -0.5
+      }
+    },
+    {
+      "round": 2,
+      "sample": 2,
+      "task": "D09",
+      "spec": [
+        "none",
+        "cross_slot",
+        1
+      ],
+      "failure_kind": "conflict",
+      "r": 3.473191489361702,
+      "base": 0.5132190310894535,
+      "kept": true,
+      "archive_n": 1,
+      "arb": 0,
+      "arch": [
+        2,
+        "vote"
+      ],
+      "quality": -0.08,
+      "diversity": 23.0,
+      "width": 0.8882978723404256,
+      "conflicts": 0,
+      "n_empty": 0,
+      "n_fallback": 0,
+      "n_conflict_pairs": 0,
+      "n_trap_hits": 0,
+      "cover": 23,
+      "calls": 4,
+      "diversity_population": 0.9819683015425709,
+      "grad": {
+        "u": 0.5,
+        "v": 0.5,
+        "t": 0.5,
+        "m": 0.5
+      }
+    },
+    {
+      "round": 3,
+      "sample": 0,
+      "task": "A01",
+      "spec": [
+        "none",
+        "cross_slot",
+        1
+      ],
+      "failure_kind": "conflict",
+      "r": 3.302857142857143,
+      "base": 1.3501104646197604,
+      "kept": false,
+      "archive_n": 1,
+      "arb": 0,
+      "arch": [
+        2,
+        "mechanical"
+      ],
+      "quality": -0.08,
+      "diversity": 15.0,
+      "width": 0.8457142857142858,
+      "conflicts": 0,
+      "n_empty": 0,
+      "n_fallback": 0,
+      "n_conflict_pairs": 0,
+      "n_trap_hits": 0,
+      "cover": 15,
+      "calls": 4,
+      "diversity_population": 0.9872454510214443,
+      "grad": {
+        "u": -0.5,
+        "v": -0.5,
+        "t": -0.5,
+        "m": -0.5
+      }
+    },
+    {
+      "round": 3,
+      "sample": 1,
+      "task": "A03",
+      "spec": [
+        "name_decision_point",
+        "cross_slot",
+        1
+      ],
+      "failure_kind": "conflict",
+      "r": -2.5014552081617105,
+      "base": 0.19464076278531905,
+      "kept": false,
+      "archive_n": 1,
+      "arb": 1,
+      "arch": [
+        4,
+        "packet"
+      ],
+      "quality": -6.12,
+      "diversity": 10.0,
+      "width": 0.9046361979595724,
+      "conflicts": 0,
+      "n_empty": 0,
+      "n_fallback": 0,
+      "n_conflict_pairs": 0,
+      "n_trap_hits": 1,
+      "cover": 10,
+      "calls": 6,
+      "diversity_population": 0.9854887974181229,
+      "grad": {
+        "u": -0.5,
+        "v": -0.5,
+        "t": -0.5,
+        "m": -0.5
+      }
+    },
+    {
+      "round": 3,
+      "sample": 2,
+      "task": "A04",
+      "spec": [
+        "none",
+        "cross_slot",
+        0
+      ],
+      "failure_kind": "conflict",
+      "r": 3.344489039313372,
+      "base": 1.1395952457437348,
+      "kept": false,
+      "archive_n": 1,
+      "arb": 1,
+      "arch": [
+        3,
+        "vote"
+      ],
+      "quality": -0.1,
+      "diversity": 27.0,
+      "width": 0.861122259828343,
+      "conflicts": 0,
+      "n_empty": 0,
+      "n_fallback": 0,
+      "n_conflict_pairs": 0,
+      "n_trap_hits": 0,
+      "cover": 27,
+      "calls": 5,
+      "diversity_population": 0.979749230401804,
+      "grad": {
+        "u": -0.5,
+        "v": -0.5,
+        "t": -0.5,
+        "m": -0.5
+      }
+    },
+    {
+      "round": 4,
+      "sample": 0,
+      "task": "A06",
+      "spec": [
+        "compress",
+        "slot",
+        2
+      ],
+      "failure_kind": "conflict",
+      "r": -2.761324705297816,
+      "base": -0.03068073956873041,
+      "kept": false,
+      "archive_n": 1,
+      "arb": 0,
+      "arch": [
+        4,
+        "vote"
+      ],
+      "quality": -6.12,
+      "diversity": 32.0,
+      "width": 0.8396688236755461,
+      "conflicts": 0,
+      "n_empty": 0,
+      "n_fallback": 0,
+      "n_conflict_pairs": 0,
+      "n_trap_hits": 1,
+      "cover": 32,
+      "calls": 6,
+      "diversity_population": 0.9820123150813459,
+      "grad": {
+        "u": -0.5,
+        "v": -0.5,
+        "t": -0.5,
+        "m": -0.5
+      }
+    },
+    {
+      "round": 4,
+      "sample": 1,
+      "task": "D01",
+      "spec": [
+        "none",
+        "cross_slot",
+        1
+      ],
+      "failure_kind": "conflict",
+      "r": 3.245102880658436,
+      "base": 0.9520543464994194,
+      "kept": false,
+      "archive_n": 1,
+      "arb": 0,
+      "arch": [
+        2,
+        "mechanical"
+      ],
+      "quality": -0.08,
+      "diversity": 14.0,
+      "width": 0.831275720164609,
+      "conflicts": 0,
+      "n_empty": 0,
+      "n_fallback": 0,
+      "n_conflict_pairs": 0,
+      "n_trap_hits": 0,
+      "cover": 14,
+      "calls": 4,
+      "diversity_population": 0.974752717811481,
+      "grad": {
+        "u": -0.5,
+        "v": -0.5,
+        "t": -0.5,
+        "m": -0.5
+      }
+    },
+    {
+      "round": 4,
+      "sample": 2,
+      "task": "D02",
+      "spec": [
+        "drop_conflicting",
+        "cross_slot",
+        2
+      ],
+      "failure_kind": "conflict",
+      "r": 3.233868613138686,
+      "base": 1.6365986264911991,
+      "kept": false,
+      "archive_n": 1,
+      "arb": 1,
+      "arch": [
+        2,
+        "packet"
+      ],
+      "quality": -0.08,
+      "diversity": 9.0,
+      "width": 0.8284671532846715,
+      "conflicts": 0,
+      "n_empty": 0,
+      "n_fallback": 0,
+      "n_conflict_pairs": 0,
+      "n_trap_hits": 0,
+      "cover": 9,
+      "calls": 4,
+      "diversity_population": 0.9769153776192451,
+      "grad": {
+        "u": -0.5,
+        "v": -0.5,
+        "t": -0.5,
+        "m": -0.5
+      }
+    },
+    {
+      "round": 5,
+      "sample": 0,
+      "task": "D03",
+      "spec": [
+        "keep_all",
+        "cross_slot",
+        1
+      ],
+      "failure_kind": "conflict",
+      "r": -3.12,
+      "base": 0.20961903854383945,
+      "kept": false,
+      "archive_n": 1,
+      "arb": 1,
+      "arch": [
+        1,
+        "vote"
+      ],
+      "quality": -3.12,
+      "diversity": 7.0,
+      "width": 0.0,
+      "conflicts": 3,
+      "n_empty": 0,
+      "n_fallback": 0,
+      "n_conflict_pairs": 0,
+      "n_trap_hits": 0,
+      "cover": 7,
+      "calls": 6,
+      "diversity_population": 0.980777262362155,
+      "grad": {
+        "u": -0.5,
+        "v": -0.5,
+        "t": -0.5,
+        "m": -0.5
+      }
+    },
+    {
+      "round": 5,
+      "sample": 1,
+      "task": "D04",
+      "spec": [
+        "keep_all",
+        "cross_slot",
+        1
+      ],
+      "failure_kind": "conflict",
+      "r": -0.06,
+      "base": 0.12873332698068762,
+      "kept": false,
+      "archive_n": 1,
+      "arb": 2,
+      "arch": [
+        1,
+        "mechanical"
+      ],
+      "quality": -0.06,
+      "diversity": 4.0,
+      "width": 0.0,
+      "conflicts": 0,
+      "n_empty": 0,
+      "n_fallback": 0,
+      "n_conflict_pairs": 0,
+      "n_trap_hits": 0,
+      "cover": 4,
+      "calls": 3,
+      "diversity_population": 0.9751116526413566,
+      "grad": {
+        "u": -0.5,
+        "v": -0.5,
+        "t": -0.5,
+        "m": -0.5
+      }
+    },
+    {
+      "round": 5,
+      "sample": 2,
+      "task": "D05",
+      "spec": [
+        "drop_conflicting",
+        "slot",
+        0
+      ],
+      "failure_kind": "conflict",
+      "r": -3.724400357705453,
+      "base": -1.0272067784251546,
+      "kept": false,
+      "archive_n": 1,
+      "arb": 1,
+      "arch": [
+        4,
+        "vote"
+      ],
+      "quality": -7.28,
+      "diversity": 39.0,
+      "width": 0.8888999105736368,
+      "conflicts": 7,
+      "n_empty": 0,
+      "n_fallback": 0,
+      "n_conflict_pairs": 0,
+      "n_trap_hits": 0,
+      "cover": 39,
+      "calls": 14,
+      "diversity_population": 0.977317730470884,
+      "grad": {
+        "u": -0.5,
+        "v": -0.5,
+        "t": -0.5,
+        "m": -0.5
+      }
+    },
+    {
+      "round": 0,
+      "sample": 0,
+      "task": "D01",
+      "spec": [
+        "name_decision_point",
+        "cross_slot",
+        2
+      ],
+      "failure_kind": "conflict",
+      "r": -0.06,
+      "base": -0.06,
+      "kept": true,
+      "archive_n": 1,
+      "arb": 0,
+      "arch": [
+        1,
+        "packet"
+      ],
+      "quality": -0.06,
+      "diversity": 7.0,
+      "width": 0.0,
+      "conflicts": 0,
+      "n_empty": 0,
+      "n_fallback": 0,
+      "n_conflict_pairs": 0,
+      "n_trap_hits": 0,
+      "cover": 7,
+      "calls": 3,
+      "diversity_population": 0.0,
+      "grad": {
+        "u": 0.5,
+        "v": 0.5,
+        "t": 0.5,
+        "m": 0.5
+      }
+    },
+    {
+      "round": 0,
+      "sample": 1,
+      "task": "D02",
+      "spec": [
+        "name_decision_point",
+        "cross_slot",
+        0
+      ],
+      "failure_kind": "conflict",
+      "r": -5.642667937024266,
+      "base": -1.7348003811072796,
+      "kept": false,
+      "archive_n": 1,
+      "arb": 0,
+      "arch": [
+        4,
+        "mechanical"
+      ],
+      "quality": -9.28,
+      "diversity": 27.0,
+      "width": 0.9093330157439333,
+      "conflicts": 9,
+      "n_empty": 0,
+      "n_fallback": 0,
+      "n_conflict_pairs": 0,
+      "n_trap_hits": 0,
+      "cover": 27,
+      "calls": 14,
+      "diversity_population": 0.9948186528497409,
+      "grad": {
+        "u": -0.5,
+        "v": -0.5,
+        "t": -0.5,
+        "m": -0.5
+      }
+    },
+    {
+      "round": 0,
+      "sample": 2,
+      "task": "D03",
+      "spec": [
+        "keep_all",
+        "cross_slot",
+        2
+      ],
+      "failure_kind": "conflict",
+      "r": -0.06,
+      "base": -1.2323602667750957,
+      "kept": false,
+      "archive_n": 1,
+      "arb": 1,
+      "arch": [
+        1,
+        "packet"
+      ],
+      "quality": -0.06,
+      "diversity": 11.0,
+      "width": 0.0,
+      "conflicts": 0,
+      "n_empty": 0,
+      "n_fallback": 0,
+      "n_conflict_pairs": 0,
+      "n_trap_hits": 0,
+      "cover": 11,
+      "calls": 3,
+      "diversity_population": 0.9873445875940358,
+      "grad": {
+        "u": -0.5,
+        "v": -0.5,
+        "t": -0.5,
+        "m": -0.5
+      }
+    },
+    {
+      "round": 1,
+      "sample": 0,
+      "task": "D04",
+      "spec": [
+        "none",
+        "slot",
+        0
+      ],
+      "failure_kind": "conflict",
+      "r": -5.06010989984096,
+      "base": -2.380685156694855,
+      "kept": false,
+      "archive_n": 1,
+      "arb": 0,
+      "arch": [
+        4,
+        "vote"
+      ],
+      "quality": -8.28,
+      "diversity": 30.0,
+      "width": 0.80497252503976,
+      "conflicts": 8,
+      "n_empty": 0,
+      "n_fallback": 0,
+      "n_conflict_pairs": 0,
+      "n_trap_hits": 0,
+      "cover": 30,
+      "calls": 14,
+      "diversity_population": 0.9840695252459959,
+      "grad": {
+        "u": -0.5,
+        "v": -0.5,
+        "t": -0.5,
+        "m": -0.5
+      }
+    },
+    {
+      "round": 1,
+      "sample": 1,
+      "task": "D05",
+      "spec": [
+        "none",
+        "cross_slot",
+        0
+      ],
+      "failure_kind": "conflict",
+      "r": 3.4305485232067507,
+      "base": -0.6373150527243734,
+      "kept": true,
+      "archive_n": 1,
+      "arb": 0,
+      "arch": [
+        2,
+        "vote"
+      ],
+      "quality": -0.08,
+      "diversity": 15.0,
+      "width": 0.8776371308016877,
+      "conflicts": 0,
+      "n_empty": 0,
+      "n_fallback": 0,
+      "n_conflict_pairs": 0,
+      "n_trap_hits": 0,
+      "cover": 15,
+      "calls": 4,
+      "diversity_population": 0.9869790674009771,
+      "grad": {
+        "u": 0.5,
+        "v": 0.5,
+        "t": 0.5,
+        "m": 0.5
+      }
+    },
+    {
+      "round": 1,
+      "sample": 2,
+      "task": "D06",
+      "spec": [
+        "drop_conflicting",
+        "cross_slot",
+        0
+      ],
+      "failure_kind": "conflict",
+      "r": 0.8962962962962964,
+      "base": -0.17723164801817243,
+      "kept": false,
+      "archive_n": 1,
+      "arb": 2,
+      "arch": [
+        2,
+        "vote"
+      ],
+      "quality": -2.2,
+      "diversity": 21.0,
+      "width": 0.7740740740740741,
+      "conflicts": 2,
+      "n_empty": 0,
+      "n_fallback": 0,
+      "n_conflict_pairs": 0,
+      "n_trap_hits": 0,
+      "cover": 21,
+      "calls": 10,
+      "diversity_population": 0.9879060394661542,
+      "grad": {
+        "u": -0.5,
+        "v": -0.5,
+        "t": -0.5,
+        "m": -0.5
+      }
+    },
+    {
+      "round": 2,
+      "sample": 0,
+      "task": "D07",
+      "spec": [
+        "name_decision_point",
+        "cross_slot",
+        2
+      ],
+      "failure_kind": "conflict",
+      "r": 3.2320275618685037,
+      "base": 0.8455461149478304,
+      "kept": false,
+      "archive_n": 1,
+      "arb": 2,
+      "arch": [
+        3,
+        "packet"
+      ],
+      "quality": -0.1,
+      "diversity": 23.0,
+      "width": 0.833006890467126,
+      "conflicts": 0,
+      "n_empty": 0,
+      "n_fallback": 0,
+      "n_conflict_pairs": 0,
+      "n_trap_hits": 0,
+      "cover": 23,
+      "calls": 5,
+      "diversity_population": 0.9842592331240235,
+      "grad": {
+        "u": -0.5,
+        "v": -0.5,
+        "t": -0.5,
+        "m": -0.5
+      }
+    },
+    {
+      "round": 2,
+      "sample": 1,
+      "task": "D08",
+      "spec": [
+        "drop_conflicting",
+        "slot",
+        1
+      ],
+      "failure_kind": "conflict",
+      "r": -0.662151394422311,
+      "base": 0.393236862136788,
+      "kept": false,
+      "archive_n": 1,
+      "arb": 0,
+      "arch": [
+        2,
+        "packet"
+      ],
+      "quality": -4.2,
+      "diversity": 14.0,
+      "width": 0.8844621513944223,
+      "conflicts": 4,
+      "n_empty": 0,
+      "n_fallback": 0,
+      "n_conflict_pairs": 0,
+      "n_trap_hits": 0,
+      "cover": 14,
+      "calls": 10,
+      "diversity_population": 0.9878827022639777,
+      "grad": {
+        "u": -0.5,
+        "v": -0.5,
+        "t": -0.5,
+        "m": -0.5
+      }
+    },
+    {
+      "round": 2,
+      "sample": 2,
+      "task": "D09",
+      "spec": [
+        "keep_all",
+        "slot",
+        2
+      ],
+      "failure_kind": "conflict",
+      "r": -0.06,
+      "base": 0.25726580349575157,
+      "kept": false,
+      "archive_n": 1,
+      "arb": 0,
+      "arch": [
+        1,
+        "mechanical"
+      ],
+      "quality": -0.06,
+      "diversity": 12.0,
+      "width": 0.0,
+      "conflicts": 0,
+      "n_empty": 0,
+      "n_fallback": 0,
+      "n_conflict_pairs": 0,
+      "n_trap_hits": 0,
+      "cover": 12,
+      "calls": 3,
+      "diversity_population": 0.9854495140820424,
+      "grad": {
+        "u": -0.5,
+        "v": -0.5,
+        "t": -0.5,
+        "m": -0.5
+      }
+    },
+    {
+      "round": 3,
+      "sample": 0,
+      "task": "A01",
+      "spec": [
+        "name_decision_point",
+        "cross_slot",
+        1
+      ],
+      "failure_kind": "conflict",
+      "r": -2.5975373998060483,
+      "base": -0.5991751574947883,
+      "kept": false,
+      "archive_n": 1,
+      "arb": 1,
+      "arch": [
+        4,
+        "packet"
+      ],
+      "quality": -6.12,
+      "diversity": 32.0,
+      "width": 0.880615650048488,
+      "conflicts": 0,
+      "n_empty": 0,
+      "n_fallback": 0,
+      "n_conflict_pairs": 0,
+      "n_trap_hits": 1,
+      "cover": 32,
+      "calls": 6,
+      "diversity_population": 0.983760881759117,
+      "grad": {
+        "u": -0.5,
+        "v": -0.5,
+        "t": -0.5,
+        "m": -0.5
+      }
+    },
+    {
+      "round": 3,
+      "sample": 1,
+      "task": "A03",
+      "spec": [
+        "none",
+        "slot",
+        2
+      ],
+      "failure_kind": "conflict",
+      "r": -2.5840767836066996,
+      "base": -1.1946456453283616,
+      "kept": false,
+      "archive_n": 1,
+      "arb": 1,
+      "arch": [
+        4,
+        "vote"
+      ],
+      "quality": -6.12,
+      "diversity": 17.0,
+      "width": 0.8839808040983251,
+      "conflicts": 0,
+      "n_empty": 0,
+      "n_fallback": 0,
+      "n_conflict_pairs": 0,
+      "n_trap_hits": 1,
+      "cover": 17,
+      "calls": 6,
+      "diversity_population": 0.9802084792313526,
+      "grad": {
+        "u": -0.5,
+        "v": -0.5,
+        "t": -0.5,
+        "m": -0.5
+      }
+    },
+    {
+      "round": 3,
+      "sample": 2,
+      "task": "A04",
+      "spec": [
+        "keep_all",
+        "cross_slot",
+        1
+      ],
+      "failure_kind": "conflict",
+      "r": 2.1184313725490194,
+      "base": -0.20072253996514733,
+      "kept": false,
+      "archive_n": 1,
+      "arb": 2,
+      "arch": [
+        2,
+        "vote"
+      ],
+      "quality": -1.16,
+      "diversity": 22.0,
+      "width": 0.8196078431372549,
+      "conflicts": 1,
+      "n_empty": 0,
+      "n_fallback": 0,
+      "n_conflict_pairs": 0,
+      "n_trap_hits": 0,
+      "cover": 22,
+      "calls": 8,
+      "diversity_population": 0.9828128940971324,
+      "grad": {
+        "u": -0.5,
+        "v": -0.5,
+        "t": -0.5,
+        "m": -0.5
+      }
+    },
+    {
+      "round": 4,
+      "sample": 0,
+      "task": "A06",
+      "spec": [
+        "drop_conflicting",
+        "cross_slot",
+        2
+      ],
+      "failure_kind": "conflict",
+      "r": -2.987643386942792,
+      "base": -1.0367987940584407,
+      "kept": false,
+      "archive_n": 1,
+      "arb": 0,
+      "arch": [
+        3,
+        "mechanical"
+      ],
+      "quality": -6.1,
+      "diversity": 17.0,
+      "width": 0.778089153264302,
+      "conflicts": 0,
+      "n_empty": 0,
+      "n_fallback": 0,
+      "n_conflict_pairs": 0,
+      "n_trap_hits": 1,
+      "cover": 17,
+      "calls": 5,
+      "diversity_population": 0.9839105051843393,
+      "grad": {
+        "u": -0.5,
+        "v": -0.5,
+        "t": -0.5,
+        "m": -0.5
+      }
+    },
+    {
+      "round": 4,
+      "sample": 1,
+      "task": "D01",
+      "spec": [
+        "ground_in_evidence",
+        "cross_slot",
+        0
+      ],
+      "failure_kind": "conflict",
+      "r": 3.3349659863945575,
+      "base": 0.27473064007745873,
+      "kept": false,
+      "archive_n": 1,
+      "arb": 0,
+      "arch": [
+        2,
+        "mechanical"
+      ],
+      "quality": -0.08,
+      "diversity": 19.0,
+      "width": 0.8537414965986394,
+      "conflicts": 0,
+      "n_empty": 0,
+      "n_fallback": 0,
+      "n_conflict_pairs": 0,
+      "n_trap_hits": 0,
+      "cover": 19,
+      "calls": 4,
+      "diversity_population": 0.9728396304725179,
+      "grad": {
+        "u": -0.5,
+        "v": -0.5,
+        "t": -0.5,
+        "m": -0.5
+      }
+    },
+    {
+      "round": 4,
+      "sample": 2,
+      "task": "D02",
+      "spec": [
+        "ground_in_evidence",
+        "slot",
+        1
+      ],
+      "failure_kind": "conflict",
+      "r": 3.5185130111524163,
+      "base": 1.247865351399946,
+      "kept": true,
+      "archive_n": 1,
+      "arb": 1,
+      "arch": [
+        2,
+        "packet"
+      ],
+      "quality": -0.08,
+      "diversity": 8.0,
+      "width": 0.8996282527881041,
+      "conflicts": 0,
+      "n_empty": 0,
+      "n_fallback": 0,
+      "n_conflict_pairs": 0,
+      "n_trap_hits": 0,
+      "cover": 8,
+      "calls": 4,
+      "diversity_population": 0.982960002404365,
+      "grad": {
+        "u": 0.5,
+        "v": 0.5,
+        "t": 0.5,
+        "m": 0.5
+      }
+    },
+    {
+      "round": 5,
+      "sample": 0,
+      "task": "D03",
+      "spec": [
+        "keep_all",
+        "slot",
+        0
+      ],
+      "failure_kind": "conflict",
+      "r": -0.06,
+      "base": 0.8555057459799622,
+      "kept": false,
+      "archive_n": 1,
+      "arb": 2,
+      "arch": [
+        1,
+        "mechanical"
+      ],
+      "quality": -0.06,
+      "diversity": 9.0,
+      "width": 0.0,
+      "conflicts": 0,
+      "n_empty": 0,
+      "n_fallback": 0,
+      "n_conflict_pairs": 0,
+      "n_trap_hits": 0,
+      "cover": 9,
+      "calls": 3,
+      "diversity_population": 0.9751731891787189,
+      "grad": {
+        "u": -0.5,
+        "v": -0.5,
+        "t": -0.5,
+        "m": -0.5
+      }
+    },
+    {
+      "round": 5,
+      "sample": 1,
+      "task": "D04",
+      "spec": [
+        "ground_in_evidence",
+        "slot",
+        0
+      ],
+      "failure_kind": "conflict",
+      "r": -4.8145769734939,
+      "base": -0.8455190698621966,
+      "kept": false,
+      "archive_n": 1,
+      "arb": 1,
+      "arch": [
+        4,
+        "packet"
+      ],
+      "quality": -8.28,
+      "diversity": 27.0,
+      "width": 0.8663557566265248,
+      "conflicts": 8,
+      "n_empty": 0,
+      "n_fallback": 0,
+      "n_conflict_pairs": 0,
+      "n_trap_hits": 0,
+      "cover": 27,
+      "calls": 14,
+      "diversity_population": 0.9704499392946123,
+      "grad": {
+        "u": -0.5,
+        "v": -0.5,
+        "t": -0.5,
+        "m": -0.5
+      }
+    },
+    {
+      "round": 5,
+      "sample": 2,
+      "task": "D05",
+      "spec": [
+        "none",
+        "cross_slot",
+        0
+      ],
+      "failure_kind": "conflict",
+      "r": 2.2072849734848905,
+      "base": 0.07032214314192964,
+      "kept": false,
+      "archive_n": 1,
+      "arb": 0,
+      "arch": [
+        3,
+        "vote"
+      ],
+      "quality": -1.2,
+      "diversity": 34.0,
+      "width": 0.8518212433712227,
+      "conflicts": 1,
+      "n_empty": 0,
+      "n_fallback": 0,
+      "n_conflict_pairs": 0,
+      "n_trap_hits": 0,
+      "cover": 34,
+      "calls": 10,
+      "diversity_population": 0.9806224685051093,
+      "grad": {
+        "u": -0.5,
+        "v": -0.5,
+        "t": -0.5,
+        "m": -0.5
+      }
+    }
+  ]
+}

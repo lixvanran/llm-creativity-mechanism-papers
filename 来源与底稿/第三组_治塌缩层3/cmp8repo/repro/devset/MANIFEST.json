@@ -1,0 +1,46 @@
+{
+  "devset_id": "DEV-2026-10-21",
+  "devset_hash": "sha256:41bbb538a454d9b0",
+  "per_task": {
+    "D01": {
+      "evidence_hash": "sha256:c15c9b84fd8231a4",
+      "gold_hash": "sha256:67c135ea88df3034"
+    },
+    "D02": {
+      "evidence_hash": "sha256:9f06edb993235b4b",
+      "gold_hash": "sha256:f4d3d4524b956c3c"
+    },
+    "D03": {
+      "evidence_hash": "sha256:21d4901e66669c63",
+      "gold_hash": "sha256:5bafcaf914c9a9ff"
+    },
+    "D04": {
+      "evidence_hash": "sha256:4fa07b3b228ae9c1",
+      "gold_hash": "sha256:518139236a6cb16a"
+    },
+    "D05": {
+      "evidence_hash": "sha256:95e94e0263259f49",
+      "gold_hash": "sha256:560da7ce6d261955"
+    },
+    "D06": {
+      "evidence_hash": "sha256:ed5a21f4aa3de3d1",
+      "gold_hash": "sha256:a88e68290498cac5"
+    },
+    "D07": {
+      "evidence_hash": "sha256:062377249d54be78",
+      "gold_hash": "sha256:80b9fcb1bb168222"
+    },
+    "D08": {
+      "evidence_hash": "sha256:327c297f2bde64ab",
+      "gold_hash": "sha256:a6e59b5b17b31234"
+    },
+    "D09": {
+      "evidence_hash": "sha256:8861b70838c19348",
+      "gold_hash": "sha256:5924b1b0201d346d"
+    }
+  },
+  "builder": "3 名独立构建者（甲/乙/丙）并行 + 装配器闸门",
+  "frozen_at": "2026-10-21T15:35:06Z",
+  "spec": "/workspace/lab/routes/DEV/DEV-SPEC.md",
+  "note": "冻结后任何改动都会使 devset_hash 变化 ⇒ 改动必须重测全部并声明。"
+}

@@ -1,0 +1,187 @@
+{
+  "task_id": "D01",
+  "n_cards": 14,
+  "cards": [
+    {
+      "card_id": "G01",
+      "claim": "990 PRO 规格表中 1TB 与 2TB 档的顺序读取标称均为 7,450MB/s、顺序写入均为 6,900MB/s。",
+      "supports_conclusions": [
+        "C1"
+      ],
+      "evidence_ref": "EV-01",
+      "evidence_class": "事实",
+      "is_load_bearing": true,
+      "decision_changed": "支撑 C1：没有这组标称值，①是否成立无法判定"
+    },
+    {
+      "card_id": "G02",
+      "claim": "该型号形态为 M.2 (2280)，接口为 PCIe Gen 4.0 x4、NVMe 2.0。",
+      "supports_conclusions": [
+        "C1"
+      ],
+      "evidence_ref": "EV-05",
+      "evidence_class": "事实",
+      "is_load_bearing": true,
+      "decision_changed": "支撑 C1：说明该标称值是在 PCIe 4.0 x4 / NVMe 2.0 接口下给出"
+    },
+    {
+      "card_id": "G03",
+      "claim": "厂商对各容量均标称最高 7,450MB/s 读取、6,900MB/s 写入。",
+      "supports_conclusions": [
+        "C1"
+      ],
+      "evidence_ref": "EV-10",
+      "evidence_class": "事实",
+      "is_load_bearing": true,
+      "decision_changed": "支撑 C1：以第二家评测的标称表独立印证 7450MB/s"
+    },
+    {
+      "card_id": "G04",
+      "claim": "官网 1TB 版 4KB QD32 随机读取标称为 1,200,000 IOPS。",
+      "supports_conclusions": [
+        "C2"
+      ],
+      "evidence_ref": "EV-02",
+      "evidence_class": "事实",
+      "is_load_bearing": true,
+      "decision_changed": "支撑 C2：给出 1TB 档的正确随机读值，直接否掉题面的 140 万 IOPS"
+    },
+    {
+      "card_id": "G05",
+      "claim": "随机读取（4KB、QD32）按容量分档为 1TB 1,200K IOPS、2TB 1,400K IOPS、4TB 1,600K IOPS。",
+      "supports_conclusions": [
+        "C2"
+      ],
+      "evidence_ref": "EV-07",
+      "evidence_class": "事实",
+      "is_load_bearing": true,
+      "decision_changed": "支撑 C2：指出 140 万 IOPS 属于 2TB 档，是②被否的直接原因"
+    },
+    {
+      "card_id": "G06",
+      "claim": "官网保修栏写明 5-Year Limited Warranty or 600 TBW Limited Warranty。",
+      "supports_conclusions": [
+        "C3"
+      ],
+      "evidence_ref": "EV-04",
+      "evidence_class": "事实",
+      "is_load_bearing": true,
+      "decision_changed": "支撑 C3：给出 ③的官方保修原文口径"
+    },
+    {
+      "card_id": "G07",
+      "claim": "零售评测给出的保修口径是 5 年，或以 TBW 数值先到者为准。",
+      "supports_conclusions": [
+        "C3"
+      ],
+      "evidence_ref": "EV-09",
+      "evidence_class": "事实",
+      "is_load_bearing": true,
+      "decision_changed": "支撑 C3：以第三方口径印证 5 年保修及其与 TBW 的并列关系"
+    },
+    {
+      "card_id": "G08",
+      "claim": "评测规格表保修栏列出保修期 5 years limited，TBW 为 600TB（1TB）与 1,200TB（2TB）。",
+      "supports_conclusions": [
+        "C3"
+      ],
+      "evidence_ref": "EV-12",
+      "evidence_class": "事实",
+      "is_load_bearing": true,
+      "decision_changed": "支撑 C3：独立印证 5 年有限保修与 600TB 耐久同表列出"
+    },
+    {
+      "card_id": "G09",
+      "claim": "耐久度按容量递增：1TB 600TB、2TB 1,200TB、4TB 2,400TB。",
+      "supports_conclusions": [
+        "C4"
+      ],
+      "evidence_ref": "EV-08",
+      "evidence_class": "事实",
+      "is_load_bearing": true,
+      "decision_changed": "支撑 C4：给出 ④的 600TBW 正确值及其分档关系"
+    },
+    {
+      "card_id": "G10",
+      "claim": "官网保修栏同时出现 600 TBW 有限保修的字样。",
+      "supports_conclusions": [
+        "C4"
+      ],
+      "evidence_ref": "EV-04",
+      "evidence_class": "事实",
+      "is_load_bearing": true,
+      "decision_changed": "支撑 C4：从保修行读出 1TB 档 600 TBW 的耐久标称"
+    },
+    {
+      "card_id": "G11",
+      "claim": "存储颗粒为 Samsung V-NAND 3-bit MLC，控制器为三星自研主控。",
+      "supports_conclusions": [
+        "C5"
+      ],
+      "evidence_ref": "EV-06",
+      "evidence_class": "事实",
+      "is_load_bearing": false,
+      "decision_changed": "支撑 C5：说明该盘不是 QLC，而是 V-NAND（三-bit MLC）配自研主控"
+    },
+    {
+      "card_id": "G12",
+      "claim": "4KB QD32 随机写入标称为 1,550,000 IOPS。",
+      "supports_conclusions": [
+        "C5"
+      ],
+      "evidence_ref": "EV-03",
+      "evidence_class": "事实",
+      "is_load_bearing": false,
+      "decision_changed": "支撑 C5：补齐随机写指标，说明该盘随机写高于随机读"
+    },
+    {
+      "card_id": "G13",
+      "claim": "评测规格表列出缓存容量：1TB 配 1GB LPDDR4，2TB 配 2GB LPDDR4。",
+      "supports_conclusions": [
+        "C5"
+      ],
+      "evidence_ref": "EV-11",
+      "evidence_class": "事实",
+      "is_load_bearing": false,
+      "decision_changed": "支撑 C5：独立印证 1TB 档 1GB LPDDR4 缓存"
+    },
+    {
+      "card_id": "G14",
+      "claim": "该型号 7,450MB/s 的顺序读接近 PCIe 4.0 的 8,000MB/s 理论顺序读上限。",
+      "supports_conclusions": [
+        "C6"
+      ],
+      "evidence_ref": "EV-10",
+      "evidence_class": "事实",
+      "is_load_bearing": false,
+      "decision_changed": "支撑 C6：给出接口理论上限，用以判定 7450MB/s 并未跑满 PCIe 4.0"
+    }
+  ],
+  "distractors": [
+    {
+      "card_id": "G90",
+      "claim": "该 1TB 版本随机读取最高可达 140 万 IOPS。",
+      "why_wrong": "EV-02（官网 1TB 档为 1,200,000 IOPS）与 EV-07（140 万 IOPS 属 2TB 档）都不支持该说法"
+    },
+    {
+      "card_id": "G91",
+      "claim": "该型号 7450 MB/s 的顺序读已经超过 PCIe 4.0 x4 的理论带宽上限。",
+      "why_wrong": "EV-10 明确 7,450MB/s 只是接近 8,000MB/s 的上限，未达到更未超过"
+    },
+    {
+      "card_id": "G92",
+      "claim": "该型号的保修期为 10 年。",
+      "why_wrong": "EV-04 与 EV-09 给出的是 5 年有限保修（或以 TBW 先到者为准）"
+    },
+    {
+      "card_id": "G93",
+      "claim": "该型号 1TB 版的耐久度为 1200 TBW。",
+      "why_wrong": "EV-08 显示 1TB 为 600TB，1,200TB 属 2TB 档"
+    },
+    {
+      "card_id": "G94",
+      "claim": "该型号为压低成本采用 QLC 闪存。",
+      "why_wrong": "EV-06 显示其存储颗粒为 Samsung V-NAND 3-bit MLC（等价 TLC），并非 QLC"
+    }
+  ]
+}

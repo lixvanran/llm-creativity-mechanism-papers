@@ -1,0 +1,192 @@
+{
+  "definition": {
+    "同族不同文对": "同一份答案(record)内 family_key 相同但 claim 文本不同的无序对",
+    "条件从句": "纯程序抽取：①数值/阈值 token 集合 ②比较词集合 ③条件引导句集合（…时/…前提下/需要…/除外/但书/仅当/在…情况下）",
+    "条件不同": "两签名不相等 且 至少一方非空（否则只是措辞差异）",
+    "零成本": "纯程序、零 API、零判官"
+  },
+  "denominators": {
+    "all_same_family_different_text_pairs": 384,
+    "pairs_with_at_least_one_load_bearing": 314
+  },
+  "rates": {
+    "condition_diff_over_all_pairs": 0.9896,
+    "condition_diff_over_lb_pairs": 0.9904,
+    "counts": {
+      "condition_diff": 380,
+      "lb_condition_diff": 311
+    }
+  },
+  "per_run": {
+    "main_big": {
+      "pairs": 22,
+      "cond_diff": 20,
+      "lb_pairs": 20,
+      "lb_cond_diff": 18
+    },
+    "adv": {
+      "pairs": 353,
+      "cond_diff": 351,
+      "lb_pairs": 285,
+      "lb_cond_diff": 284
+    },
+    "fv2": {
+      "pairs": 9,
+      "cond_diff": 9,
+      "lb_pairs": 9,
+      "lb_cond_diff": 9
+    },
+    "main": {
+      "pairs": 0,
+      "cond_diff": 0,
+      "lb_pairs": 0,
+      "lb_cond_diff": 0
+    }
+  },
+  "examples": [
+    {
+      "run": "main_big",
+      "arm": "W_design_L2",
+      "task": "D01",
+      "family_key": "C5",
+      "lb": [
+        false,
+        false
+      ],
+      "a": "三星990 PRO必须协商到PCIe 4.0×4链路，否则应按PCIe 3.0×1链路降速运行。",
+      "b": "三星990 PRO复测应满足PCIe 4.0×4、NVMe 2.0、无后台写入且不触发热降频的条件，并固定4KB块大小、QD64，记录平均延迟和P99延迟。"
+    },
+    {
+      "run": "main_big",
+      "arm": "W_design_L2",
+      "task": "D01",
+      "family_key": "C4",
+      "lb": [
+        true,
+        false
+      ],
+      "a": "三星990 PRO的Percentage Used达到或超过100%时，应安排保修更换。",
+      "b": "三星990 PRO温度达到或超过70°C时，应告警并暂停新写入。"
+    },
+    {
+      "run": "main_big",
+      "arm": "W_train_L3",
+      "task": "D01",
+      "family_key": "C1",
+      "lb": [
+        true,
+        false
+      ],
+      "a": "三星 990 PRO 1TB 的标称顺序读峰值为 7,450 MB/s，前提是 PCIe 4.0×4 和厂商基准环境。",
+      "b": "PCIe 4.0×4 的有效载荷速率约为 63 Gbit/s。"
+    },
+    {
+      "run": "main_big",
+      "arm": "B0_bestof3",
+      "task": "D01",
+      "family_key": "C4",
+      "lb": [
+        true,
+        false
+      ],
+      "a": "三星 990 PRO 1TB SSD 的官方额定耐久度为 600 TBW。",
+      "b": "三星 990 PRO 1TB SSD 的保修期包含总写入量达到 600TB 的保证。"
+    },
+    {
+      "run": "main_big",
+      "arm": "W_design_L2",
+      "task": "D01",
+      "family_key": "C1",
+      "lb": [
+        true,
+        false
+      ],
+      "a": "Samsung SSD 990 PRO 1TB 的顺序读取最高速度为 7450 MB/s。",
+      "b": "Samsung SSD 990 PRO 1TB 完整发挥 7450 MB/s 最高速度需要 PCIe 4.0×4 通道。"
+    },
+    {
+      "run": "main_big",
+      "arm": "W_design_L2",
+      "task": "D01",
+      "family_key": "C1",
+      "lb": [
+        false,
+        false
+      ],
+      "a": "Samsung SSD 990 PRO 1TB 完整发挥 7450 MB/s 最高速度需要 PCIe 4.0×4 通道。",
+      "b": "Samsung SSD 990 PRO 1TB 的 7450 MB/s 是最高顺序读取速度，不是持续读取速度。"
+    },
+    {
+      "run": "main_big",
+      "arm": "W_design_L2",
+      "task": "D02",
+      "family_key": "C3",
+      "lb": [
+        true,
+        true
+      ],
+      "a": "网关无可用上游实例时应返回 HTTP 503。",
+      "b": "健康实例数为 0、连接池占用率达到 90% 或请求队列达到 100 时，网关应返回 HTTP 503 并拒绝新流量。"
+    },
+    {
+      "run": "main_big",
+      "arm": "W_train_L3",
+      "task": "D02",
+      "family_key": "C2",
+      "lb": [
+        true,
+        true
+      ],
+      "a": "TCP/TLS连接建立后等待首个字节超过3秒时，网关返回504。",
+      "b": "TCP/TLS连接建立后30秒未收到首个响应字节，或请求总时限达到60秒时，网关返回504。"
+    },
+    {
+      "run": "main_big",
+      "arm": "W_train_L3",
+      "task": "D02",
+      "family_key": "C3",
+      "lb": [
+        true,
+        true
+      ],
+      "a": "健康实例数低于实例总数的10%，或队列使用率超过90%持续5秒时，网关返回503。",
+      "b": "服务端过载保护拒绝请求时，网关返回503，并标记为 `overload_shed`。"
+    },
+    {
+      "run": "main_big",
+      "arm": "B0_frames_vote",
+      "task": "D02",
+      "family_key": "C2",
+      "lb": [
+        true,
+        true
+      ],
+      "a": "上游在约定超时时限内未返回响应时，网关返回 504 Gateway Timeout。",
+      "b": "上游响应违反 HTTP 语义时，网关返回 502 Bad Gateway。"
+    },
+    {
+      "run": "main_big",
+      "arm": "B0_frames_vote",
+      "task": "D02",
+      "family_key": "C2",
+      "lb": [
+        true,
+        true
+      ],
+      "a": "上游响应违反 HTTP 语义时，网关返回 502 Bad Gateway。",
+      "b": "上游在约定超时时限内未返回响应时，网关返回 504 Gateway Timeout。"
+    },
+    {
+      "run": "main_big",
+      "arm": "W_design_L2",
+      "task": "D02",
+      "family_key": "C2|C6|C8",
+      "lb": [
+        true,
+        true
+      ],
+      "a": "上游连接已建立，但网关在 10,000 毫秒内未收到上游首字节，且网关超时配置为 10 秒时，网关返回 504。",
+      "b": "网关的连接超时、首字节超时和总超时分别配置为 1 秒、2 秒和 5 秒，任一超时且上游未返回完整响应时，网关返回 504。"
+    }
+  ]
+}

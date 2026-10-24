@@ -1,0 +1,198 @@
+{
+  "task_id": "D04",
+  "n_cards": 15,
+  "cards": [
+    {
+      "card_id": "G01",
+      "claim": "轻度烧伤指Ⅱ度烧伤面积在10%以下。",
+      "supports_conclusions": [
+        "C4",
+        "C5"
+      ],
+      "evidence_ref": "EV-01",
+      "evidence_class": "事实",
+      "is_load_bearing": false,
+      "decision_changed": "它支撑 C4：给出“10%以下为轻度”的分界；同时它支撑 C5：该条注明“小儿烧伤面积减半”。它是补充性事实，结论 C4 的成立不依赖它单独确定。"
+    },
+    {
+      "card_id": "G02",
+      "claim": "中度烧伤指Ⅱ度烧伤面积为11%~30%，或Ⅲ度烧伤面积10%以下。",
+      "supports_conclusions": [
+        "C1",
+        "C4"
+      ],
+      "evidence_ref": "EV-02",
+      "evidence_class": "事实",
+      "is_load_bearing": true,
+      "decision_changed": "它支撑 C1：成人Ⅱ度12%落在11%~30%区间，是“C1 判为中度”成立的直接依据。没有它，结论 C1 不成立。"
+    },
+    {
+      "card_id": "G03",
+      "claim": "重度烧伤指Ⅱ度烧伤面积为31%~50%，或Ⅲ度烧伤面积为11%~20%。",
+      "supports_conclusions": [
+        "C4"
+      ],
+      "evidence_ref": "EV-03",
+      "evidence_class": "事实",
+      "is_load_bearing": false,
+      "decision_changed": "它支撑 C4：给出重度档分界，是 C4 四档分界表的一部分，不单独决定 C1/C2/C3。它是补充性事实，结论 C4 的成立不依赖它单独确定。"
+    },
+    {
+      "card_id": "G04",
+      "claim": "特重烧伤指Ⅱ度烧伤面积超过50%，或Ⅲ度烧伤面积超过20%。",
+      "supports_conclusions": [
+        "C4"
+      ],
+      "evidence_ref": "EV-04",
+      "evidence_class": "事实",
+      "is_load_bearing": false,
+      "decision_changed": "它支撑 C4：给出特重档分界，补全 C4 的四档分界表。它是补充性事实，结论 C4 的成立不依赖它单独确定。"
+    },
+    {
+      "card_id": "G05",
+      "claim": "另一公开表述：Ⅱ度≤10%（或Ⅲ度<5%）为轻度，Ⅱ度11%~30%（或Ⅲ度5%~10%）为中度，Ⅱ度31%~50%（或Ⅲ度11%~20%）为重度，Ⅱ度≥50%（或Ⅲ度≥20%）为特重度。",
+      "supports_conclusions": [
+        "C4"
+      ],
+      "evidence_ref": "EV-05",
+      "evidence_class": "事实",
+      "is_load_bearing": false,
+      "decision_changed": "它支撑 C4：与郴州页四档分界互相印证，确认这不是单一来源的孤证。它是补充性事实，结论 C4 的成立不依赖它单独确定。"
+    },
+    {
+      "card_id": "G06",
+      "claim": "对小儿做烧伤严重程度评估时应将烧伤面积减半。",
+      "supports_conclusions": [
+        "C2",
+        "C5"
+      ],
+      "evidence_ref": "EV-05",
+      "evidence_class": "事实",
+      "is_load_bearing": true,
+      "decision_changed": "它支撑 C2：5岁儿童Ⅱ度18%必须先减半折成9%才能落进10%以下的轻度带，没有它，结论 C2 不成立。"
+    },
+    {
+      "card_id": "G07",
+      "claim": "临床词条的诊断依据为：轻度Ⅱ度面积10%以下、中度Ⅱ度11%~30%、重度总面积31%~50%或Ⅲ度11%~20%、特重总面积50%以上或Ⅲ度20%以上。",
+      "supports_conclusions": [
+        "C4"
+      ],
+      "evidence_ref": "EV-06",
+      "evidence_class": "事实",
+      "is_load_bearing": false,
+      "decision_changed": "它支撑 C4：以第三来源逐档复述同一分界表，支撑 C4 的四档分界为公开通行表述。它是补充性事实，结论 C4 的成立不依赖它单独确定。"
+    },
+    {
+      "card_id": "G08",
+      "claim": "Ⅲ度烧伤为全层皮肤烧伤，可深达肌肉甚至骨骼、内脏器官。",
+      "supports_conclusions": [
+        "C3"
+      ],
+      "evidence_ref": "EV-08",
+      "evidence_class": "事实",
+      "is_load_bearing": true,
+      "decision_changed": "它支撑 C3：把“Ⅲ度”与“深度烧伤”对应上，是把面部Ⅲ度落到公开急诊120指征第3项的桥梁。没有它，结论 C3 不成立。"
+    },
+    {
+      "card_id": "G09",
+      "claim": "公开的急诊（拨打120）指征包括：发生火灾、伤者大面积烧伤、深度烧伤、呼吸困难或灼伤呼吸道、眼睛等特殊部位烧伤等。",
+      "supports_conclusions": [
+        "C3"
+      ],
+      "evidence_ref": "EV-07",
+      "evidence_class": "事实",
+      "is_load_bearing": true,
+      "decision_changed": "它支撑 C3：给出“深度烧伤”属急诊120指征这一规则本身，没有它，结论 C3 不成立。"
+    },
+    {
+      "card_id": "G10",
+      "claim": "急诊（拨打120）指征的第5项是“眼睛等特殊部位烧伤，出现视力障碍等”。",
+      "supports_conclusions": [
+        "C3"
+      ],
+      "evidence_ref": "EV-07",
+      "evidence_class": "事实",
+      "is_load_bearing": true,
+      "decision_changed": "它支撑 C3：面属特殊部位，该项把“特殊部位烧伤”并列进急诊指征，使 C3 覆盖面部这一情形。没有它，结论 C3 不成立。"
+    },
+    {
+      "card_id": "G11",
+      "claim": "面部、生殖器、手足及关节等部位烧伤应及时到医院寻求专业治疗。",
+      "supports_conclusions": [
+        "C3"
+      ],
+      "evidence_ref": "EV-09",
+      "evidence_class": "事实",
+      "is_load_bearing": true,
+      "decision_changed": "它支撑 C3：直接点名“面部”属需及时就医的部位，支撑 C3 的“面部Ⅲ度需急诊处理”。没有它，结论 C3 不成立。"
+    },
+    {
+      "card_id": "G12",
+      "claim": "严重烧伤者应尽快转送到有救治能力的医院治疗。",
+      "supports_conclusions": [
+        "C3"
+      ],
+      "evidence_ref": "EV-10",
+      "evidence_class": "事实",
+      "is_load_bearing": true,
+      "decision_changed": "它支撑 C3：国家卫健委健康素养释义层面的就医时机规则，确认严重（Ⅲ度）烧伤不能按门诊处理。没有它，结论 C3 不成立。"
+    },
+    {
+      "card_id": "G13",
+      "claim": "二度或以上烧伤应立即就医。",
+      "supports_conclusions": [
+        "C3"
+      ],
+      "evidence_ref": "EV-11",
+      "evidence_class": "事实",
+      "is_load_bearing": true,
+      "decision_changed": "它支撑 C3：Ⅲ度高于二度，按“二度或以上应立即就医”，支撑 C3 的及时就医要求。没有它，结论 C3 不成立。"
+    },
+    {
+      "card_id": "G14",
+      "claim": "中度烧伤这一档的面积分界同样注明“小儿烧伤面积减半”。",
+      "supports_conclusions": [
+        "C2",
+        "C5"
+      ],
+      "evidence_ref": "EV-02",
+      "evidence_class": "事实",
+      "is_load_bearing": true,
+      "decision_changed": "它支撑 C2：说明减半规则不是只挂在轻度档，而是随各档Ⅱ度面积分界一并适用，故18%折成9%后不再落在中度带。没有它，结论 C2 不成立。"
+    },
+    {
+      "card_id": "G15",
+      "claim": "轻度烧伤这一档的面积分界同样注明“小儿烧伤面积减半”。",
+      "supports_conclusions": [
+        "C2",
+        "C5"
+      ],
+      "evidence_ref": "EV-01",
+      "evidence_class": "事实",
+      "is_load_bearing": true,
+      "decision_changed": "它支撑 C2：说明减半后折算的9%正是要用来对照“10%以下为轻度”的分界，是 C2 落档的关键一环。没有它，结论 C2 不成立。"
+    }
+  ],
+  "distractors": [
+    {
+      "card_id": "G90",
+      "claim": "成人Ⅱ度烧伤面积12%应判为重度烧伤。",
+      "why_wrong": "依据包 EV-02 写明中度为Ⅱ度11%~30%，EV-03 写明重度为Ⅱ度31%~50%；12%落在中度带，不在重度带。"
+    },
+    {
+      "card_id": "G91",
+      "claim": "5岁儿童Ⅱ度烧伤面积18%不需减半，按18%直接判为中度烧伤。",
+      "why_wrong": "依据包 EV-05 明写“对小儿做出评估时,应减半”，EV-01~EV-04 各档分界均带“小儿烧伤面积减半”；18%减半为9%，落在 EV-01 的“10%以下”轻度带。"
+    },
+    {
+      "card_id": "G92",
+      "claim": "面部Ⅲ度烧伤属门诊指征，只需自行处理并观察，无需拨打120。",
+      "why_wrong": "依据包 EV-07 的急诊(120)指征含“深度烧伤”与“眼睛等特殊部位烧伤”，EV-08 给出Ⅲ度为全层皮肤烧伤，EV-10/EV-12/EV-13 层面亦要求严重烧伤尽快转送或拨打急救电话。"
+    },
+    {
+      "card_id": "G93",
+      "claim": "小儿烧伤面积减半只适用于Ⅲ度烧伤，Ⅱ度烧伤仍按成人的同一面积标准判定。",
+      "why_wrong": "依据包 EV-01~EV-04 把“小儿烧伤面积减半”分别写在以Ⅱ度面积划分的轻/中/重/特重各档上，EV-05 也是整条规则，未限定Ⅲ度。"
+    }
+  ]
+}

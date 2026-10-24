@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.DS_Store
+.mavis/
+.tmp/
+
+# ★ 半成品临时文件：绝不能进受管文件集（交付包内容由 git ls-files 定义）
+*.part
+
+# 交付包本体（★ 体积大、且内容集合由 git ls-files 定义 ⇒ 绝不能进受管集）
+dist/
