@@ -125,6 +125,10 @@ echo "── 负向测试（交付态）──"
 python3 tools/selftest_attribution_redline.py 2>&1 | tail -2
 echo "── docx 指纹（交付态）──"
 python3 tools/check_docx_freshness.py 2>&1 | tail -2
+echo "── ★ 指针迁移对拍（★ 交付态）★ ──"
+python3 tools/verify_pointer_migration.py 2>&1 | tail -2
+echo "── ★★★ 交付面承诺核验（★ 入口 md §7 的每条命令在【交付态】实跑）★★★"
+python3 tools/verify_delivery_surface.py --dir . --zip "$OUT_ZIP" 2>&1 | tail -4
 
 hr "⑫ 可复现重建（★ 无 git 环境原地重建 ⇒ 逐字节比对）"
 python3 tools/pack_papers.py /tmp/_final_rebuild.zip --no-verify-extracted 2>&1 | tail -3

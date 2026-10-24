@@ -225,12 +225,69 @@ def main(argv):
 
         if repro:
             print("★ 可复现性自检：★ 同一份 build() 连打两次比对 sha256 …")
+            # ★★★★ 【两次之间的工作树指纹】（★ 2026-10-25 加）：★★★★
+            #   ★ 背景：★ 本轮真出现过一次「不可复现」（★ cce71f30… vs 568337a6…）
+            #     ⇒ ★ 事后【两个包都被后续运行覆盖】⇒ ★ 证据没了、查不下去
+            #   ★ ★ 根因（★ 2026-10-25 定位）：★ **打包取【索引的名单】+【工作树的字节】**
+            #     ⇒ ★ **两次 build 之间工作树若变了（★ 哪怕只差一个成员），★ 包就不同**
+            #     ⇒ ★ 所以「不可复现」有三种：★ ① 打包器不确定 ② 工作树在两次之间变了
+            #       ③ 索引与工作树不一致（★ 收口链路的 ⑨b 断言管这个）
+            #   ⇒ ★ 落法：★ **先把「两次之间工作树变没变」量出来** ⇒ ★ 不一致时能当场分清是哪一种
+            def tree_fp():
+                h = hashlib.sha256()
+                for n in sorted(collect(root)):
+                    fp = os.path.join(root, n)
+                    try:
+                        h.update(n.encode("utf-8"))
+                        h.update(hashlib.sha256(open(fp, "rb").read()).digest())
+                    except OSError:
+                        h.update(n.encode("utf-8")); h.update(b"<missing>")
+                return h.hexdigest()
+            fp_before = tree_fp()
             out2 = os.path.join(wd, "second.zip")
             build(root, out2, wd)
+            fp_after = tree_fp()
             a = hashlib.sha256(open(out, "rb").read()).hexdigest()
             b = hashlib.sha256(open(out2, "rb").read()).hexdigest()
             if a != b:
-                raise SystemExit("✘ 不可复现：%s vs %s" % (a[:16], b[:16]))
+                # ★★★★ 【留证据 + 成员级 diff】（★ 2026-10-25 加）：★★★★
+                #   ★ 背景：★ 本轮**真出现过一次**「不可复现」（★ cce71f30… vs 568337a6…）
+                #     ⇒ ★ 事后想定位时，★ **两个包都已被后续运行覆盖** ⇒ ★ **证据没了、查不下去**
+                #   ⇒ ★ 落法：★ ① 两个包都【留在原地不删】② 打印【成员级 diff】
+                #     （★ 哪个成员的内容不同 / 名单不同）⇒ ★ ★ 下次再发生 ⇒ ★ 当场可定位
+                keep = os.path.join(os.path.dirname(os.path.abspath(out)),
+                                    "repro_MISMATCH_a.zip")
+                try:
+                    shutil.copy2(out, keep)
+                    keep2 = keep[:-4] + "_b.zip"
+                    shutil.copy2(out2, keep2)
+                    print("⛔ 不可复现：%s vs %s" % (a[:16], b[:16]))
+                    print("   ★ 两个包已保留：%s" % keep)
+                    print("                     %s" % keep2)
+                    try:
+                        z1 = zipfile.ZipFile(out); z2 = zipfile.ZipFile(out2)
+                        n1, n2 = z1.namelist(), z2.namelist()
+                        only1 = sorted(set(n1) - set(n2)); only2 = sorted(set(n2) - set(n1))
+                        if only1: print("   ★ 只在第一份里：%s" % only1[:10])
+                        if only2: print("   ★ 只在第二份里：%s" % only2[:10])
+                        diff = [n for n in n1 if n in n2 and z1.read(n) != z2.read(n)]
+                        if diff: print("   ★ 内容不同的成员（★ 前 10）：%s" % diff[:10])
+                        print("   ★ 成员数：%d vs %d" % (len(n1), len(n2)))
+                    except Exception as e:
+                        print("   ★ 成员级 diff 失败：%s" % e)
+                except Exception as e:
+                    print("   ★ 保留失败：%s" % e)
+                if fp_before != fp_after:
+                    print("   ★★ **根因判定：★ 两次 build 之间【工作树变了】**（★ 指纹 %s → %s）"
+                          % (fp_before[:12], fp_after[:12]))
+                    print("      ⇒ ★ **这不是打包器不确定** ⇒ ★ 是【打包内容 = 索引名单 × 工作树字节】"
+                          "这个混合口径的必然结果")
+                    print("      ⇒ ★ 收口链路用 ⑨b 断言（★ 索引字节 == 工作树字节）来消除这个变量")
+                else:
+                    print("   ★★ **根因判定：★ 两次之间工作树【没变】** ⇒ ★ 是打包器本身不确定"
+                          "（★ 压缩层或元数据层）")
+                raise SystemExit("✘ 不可复现：%s vs %s（★ 证据已保留，★ 请看上面的成员级 diff）"
+                                 % (a[:16], b[:16]))
             print("★ ✔ 可复现：两次打包 sha256 一致（%s…）⇒ ★ **同一批文件字节 ⇒ 同一份包 sha**"
                   "（★ 边界见 交付总览 §1：重建 docx 会改包 sha；跨 zlib 实现不保证压缩字节相同）"
                   % a[:16])
