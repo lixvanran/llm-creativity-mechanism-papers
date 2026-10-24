@@ -1,0 +1,975 @@
+{
+  "rows": [
+    {
+      "applicable": true,
+      "keys_old": [
+        "48200"
+      ],
+      "keys_new": [
+        "62300"
+      ],
+      "new_in_new": false,
+      "old_in_new": false,
+      "new_in_orig": false,
+      "old_in_orig": true,
+      "synchronized": false,
+      "topic_id": "T01",
+      "arm": "C0",
+      "sample": 1,
+      "anchor_old": "这款罕见病药的年治疗费用是 48200 元",
+      "anchor_new": "这款罕见病药的年治疗费用是 62300 元",
+      "new_in_swap": false
+    },
+    {
+      "applicable": true,
+      "keys_old": [
+        "48200"
+      ],
+      "keys_new": [
+        "62300"
+      ],
+      "new_in_new": true,
+      "old_in_new": false,
+      "new_in_orig": false,
+      "old_in_orig": false,
+      "synchronized": true,
+      "topic_id": "T01",
+      "arm": "C0",
+      "sample": 3,
+      "anchor_old": "这款罕见病药的年治疗费用是 48200 元",
+      "anchor_new": "这款罕见病药的年治疗费用是 62300 元",
+      "new_in_swap": true
+    },
+    {
+      "applicable": true,
+      "keys_old": [
+        "48200"
+      ],
+      "keys_new": [
+        "62300"
+      ],
+      "new_in_new": false,
+      "old_in_new": false,
+      "new_in_orig": false,
+      "old_in_orig": false,
+      "synchronized": false,
+      "topic_id": "T01",
+      "arm": "C0",
+      "sample": 2,
+      "anchor_old": "这款罕见病药的年治疗费用是 48200 元",
+      "anchor_new": "这款罕见病药的年治疗费用是 62300 元",
+      "new_in_swap": false
+    },
+    {
+      "applicable": true,
+      "keys_old": [
+        "48200"
+      ],
+      "keys_new": [
+        "62300"
+      ],
+      "new_in_new": false,
+      "old_in_new": false,
+      "new_in_orig": false,
+      "old_in_orig": false,
+      "synchronized": false,
+      "topic_id": "T01",
+      "arm": "C1",
+      "sample": 2,
+      "anchor_old": "这款罕见病药的年治疗费用是 48200 元",
+      "anchor_new": "这款罕见病药的年治疗费用是 62300 元",
+      "new_in_swap": false
+    },
+    {
+      "applicable": true,
+      "keys_old": [
+        "48200"
+      ],
+      "keys_new": [
+        "62300"
+      ],
+      "new_in_new": false,
+      "old_in_new": false,
+      "new_in_orig": false,
+      "old_in_orig": false,
+      "synchronized": false,
+      "topic_id": "T01",
+      "arm": "C1",
+      "sample": 1,
+      "anchor_old": "这款罕见病药的年治疗费用是 48200 元",
+      "anchor_new": "这款罕见病药的年治疗费用是 62300 元",
+      "new_in_swap": false
+    },
+    {
+      "applicable": true,
+      "keys_old": [
+        "48200"
+      ],
+      "keys_new": [
+        "62300"
+      ],
+      "new_in_new": false,
+      "old_in_new": false,
+      "new_in_orig": false,
+      "old_in_orig": false,
+      "synchronized": false,
+      "topic_id": "T01",
+      "arm": "C1",
+      "sample": 3,
+      "anchor_old": "这款罕见病药的年治疗费用是 48200 元",
+      "anchor_new": "这款罕见病药的年治疗费用是 62300 元",
+      "new_in_swap": false
+    },
+    {
+      "applicable": true,
+      "keys_old": [
+        "48200"
+      ],
+      "keys_new": [
+        "62300"
+      ],
+      "new_in_new": true,
+      "old_in_new": false,
+      "new_in_orig": false,
+      "old_in_orig": true,
+      "synchronized": true,
+      "topic_id": "T01",
+      "arm": "C2",
+      "sample": 2,
+      "anchor_old": "这款罕见病药的年治疗费用是 48200 元",
+      "anchor_new": "这款罕见病药的年治疗费用是 62300 元",
+      "new_in_swap": true
+    },
+    {
+      "applicable": true,
+      "keys_old": [
+        "48200"
+      ],
+      "keys_new": [
+        "62300"
+      ],
+      "new_in_new": true,
+      "old_in_new": false,
+      "new_in_orig": false,
+      "old_in_orig": true,
+      "synchronized": true,
+      "topic_id": "T01",
+      "arm": "C2",
+      "sample": 1,
+      "anchor_old": "这款罕见病药的年治疗费用是 48200 元",
+      "anchor_new": "这款罕见病药的年治疗费用是 62300 元",
+      "new_in_swap": true
+    },
+    {
+      "applicable": true,
+      "keys_old": [
+        "48200"
+      ],
+      "keys_new": [
+        "62300"
+      ],
+      "new_in_new": true,
+      "old_in_new": false,
+      "new_in_orig": false,
+      "old_in_orig": false,
+      "synchronized": true,
+      "topic_id": "T01",
+      "arm": "C2",
+      "sample": 3,
+      "anchor_old": "这款罕见病药的年治疗费用是 48200 元",
+      "anchor_new": "这款罕见病药的年治疗费用是 62300 元",
+      "new_in_swap": true
+    },
+    {
+      "applicable": true,
+      "keys_old": [
+        "1870"
+      ],
+      "keys_new": [
+        "2430"
+      ],
+      "new_in_new": false,
+      "old_in_new": false,
+      "new_in_orig": false,
+      "old_in_orig": false,
+      "synchronized": false,
+      "topic_id": "T02",
+      "arm": "C0",
+      "sample": 1,
+      "anchor_old": "那笔被算进账上的佣金是 1870 万元",
+      "anchor_new": "那笔被算进账上的佣金是 2430 万元",
+      "new_in_swap": false
+    },
+    {
+      "applicable": true,
+      "keys_old": [
+        "1870"
+      ],
+      "keys_new": [
+        "2430"
+      ],
+      "new_in_new": false,
+      "old_in_new": false,
+      "new_in_orig": false,
+      "old_in_orig": false,
+      "synchronized": false,
+      "topic_id": "T02",
+      "arm": "C0",
+      "sample": 2,
+      "anchor_old": "那笔被算进账上的佣金是 1870 万元",
+      "anchor_new": "那笔被算进账上的佣金是 2430 万元",
+      "new_in_swap": false
+    },
+    {
+      "applicable": true,
+      "keys_old": [
+        "1870"
+      ],
+      "keys_new": [
+        "2430"
+      ],
+      "new_in_new": false,
+      "old_in_new": false,
+      "new_in_orig": false,
+      "old_in_orig": false,
+      "synchronized": false,
+      "topic_id": "T02",
+      "arm": "C0",
+      "sample": 3,
+      "anchor_old": "那笔被算进账上的佣金是 1870 万元",
+      "anchor_new": "那笔被算进账上的佣金是 2430 万元",
+      "new_in_swap": false
+    },
+    {
+      "applicable": true,
+      "keys_old": [
+        "1870"
+      ],
+      "keys_new": [
+        "2430"
+      ],
+      "new_in_new": true,
+      "old_in_new": false,
+      "new_in_orig": false,
+      "old_in_orig": true,
+      "synchronized": true,
+      "topic_id": "T02",
+      "arm": "C2",
+      "sample": 1,
+      "anchor_old": "那笔被算进账上的佣金是 1870 万元",
+      "anchor_new": "那笔被算进账上的佣金是 2430 万元",
+      "new_in_swap": true
+    },
+    {
+      "applicable": true,
+      "keys_old": [
+        "1870"
+      ],
+      "keys_new": [
+        "2430"
+      ],
+      "new_in_new": false,
+      "old_in_new": false,
+      "new_in_orig": false,
+      "old_in_orig": false,
+      "synchronized": false,
+      "topic_id": "T02",
+      "arm": "C1",
+      "sample": 2,
+      "anchor_old": "那笔被算进账上的佣金是 1870 万元",
+      "anchor_new": "那笔被算进账上的佣金是 2430 万元",
+      "new_in_swap": false
+    },
+    {
+      "applicable": true,
+      "keys_old": [
+        "1870"
+      ],
+      "keys_new": [
+        "2430"
+      ],
+      "new_in_new": false,
+      "old_in_new": false,
+      "new_in_orig": false,
+      "old_in_orig": false,
+      "synchronized": false,
+      "topic_id": "T02",
+      "arm": "C1",
+      "sample": 1,
+      "anchor_old": "那笔被算进账上的佣金是 1870 万元",
+      "anchor_new": "那笔被算进账上的佣金是 2430 万元",
+      "new_in_swap": false
+    },
+    {
+      "applicable": true,
+      "keys_old": [
+        "1870"
+      ],
+      "keys_new": [
+        "2430"
+      ],
+      "new_in_new": false,
+      "old_in_new": false,
+      "new_in_orig": false,
+      "old_in_orig": false,
+      "synchronized": false,
+      "topic_id": "T02",
+      "arm": "C1",
+      "sample": 3,
+      "anchor_old": "那笔被算进账上的佣金是 1870 万元",
+      "anchor_new": "那笔被算进账上的佣金是 2430 万元",
+      "new_in_swap": false
+    },
+    {
+      "applicable": true,
+      "keys_old": [
+        "1870"
+      ],
+      "keys_new": [
+        "2430"
+      ],
+      "new_in_new": true,
+      "old_in_new": false,
+      "new_in_orig": false,
+      "old_in_orig": true,
+      "synchronized": true,
+      "topic_id": "T02",
+      "arm": "C2",
+      "sample": 3,
+      "anchor_old": "那笔被算进账上的佣金是 1870 万元",
+      "anchor_new": "那笔被算进账上的佣金是 2430 万元",
+      "new_in_swap": true
+    },
+    {
+      "applicable": true,
+      "keys_old": [
+        "1870"
+      ],
+      "keys_new": [
+        "2430"
+      ],
+      "new_in_new": true,
+      "old_in_new": false,
+      "new_in_orig": false,
+      "old_in_orig": true,
+      "synchronized": true,
+      "topic_id": "T02",
+      "arm": "C2",
+      "sample": 2,
+      "anchor_old": "那笔被算进账上的佣金是 1870 万元",
+      "anchor_new": "那笔被算进账上的佣金是 2430 万元",
+      "new_in_swap": true
+    },
+    {
+      "applicable": true,
+      "keys_old": [
+        "384000"
+      ],
+      "keys_new": [
+        "512000"
+      ],
+      "new_in_new": false,
+      "old_in_new": false,
+      "new_in_orig": false,
+      "old_in_orig": false,
+      "synchronized": false,
+      "topic_id": "T04",
+      "arm": "C0",
+      "sample": 1,
+      "anchor_old": "那笔拆迁补偿款是 384000 元",
+      "anchor_new": "那笔拆迁补偿款是 512000 元",
+      "new_in_swap": false
+    },
+    {
+      "applicable": true,
+      "keys_old": [
+        "384000"
+      ],
+      "keys_new": [
+        "512000"
+      ],
+      "new_in_new": false,
+      "old_in_new": false,
+      "new_in_orig": false,
+      "old_in_orig": false,
+      "synchronized": false,
+      "topic_id": "T04",
+      "arm": "C0",
+      "sample": 3,
+      "anchor_old": "那笔拆迁补偿款是 384000 元",
+      "anchor_new": "那笔拆迁补偿款是 512000 元",
+      "new_in_swap": false
+    },
+    {
+      "applicable": true,
+      "keys_old": [
+        "384000"
+      ],
+      "keys_new": [
+        "512000"
+      ],
+      "new_in_new": false,
+      "old_in_new": false,
+      "new_in_orig": false,
+      "old_in_orig": true,
+      "synchronized": false,
+      "topic_id": "T04",
+      "arm": "C0",
+      "sample": 2,
+      "anchor_old": "那笔拆迁补偿款是 384000 元",
+      "anchor_new": "那笔拆迁补偿款是 512000 元",
+      "new_in_swap": false
+    },
+    {
+      "applicable": true,
+      "keys_old": [
+        "384000"
+      ],
+      "keys_new": [
+        "512000"
+      ],
+      "new_in_new": false,
+      "old_in_new": false,
+      "new_in_orig": false,
+      "old_in_orig": false,
+      "synchronized": false,
+      "topic_id": "T04",
+      "arm": "C1",
+      "sample": 1,
+      "anchor_old": "那笔拆迁补偿款是 384000 元",
+      "anchor_new": "那笔拆迁补偿款是 512000 元",
+      "new_in_swap": false
+    },
+    {
+      "applicable": true,
+      "keys_old": [
+        "384000"
+      ],
+      "keys_new": [
+        "512000"
+      ],
+      "new_in_new": false,
+      "old_in_new": false,
+      "new_in_orig": false,
+      "old_in_orig": false,
+      "synchronized": false,
+      "topic_id": "T04",
+      "arm": "C2",
+      "sample": 2,
+      "anchor_old": "那笔拆迁补偿款是 384000 元",
+      "anchor_new": "那笔拆迁补偿款是 512000 元",
+      "new_in_swap": false
+    },
+    {
+      "applicable": true,
+      "keys_old": [
+        "384000"
+      ],
+      "keys_new": [
+        "512000"
+      ],
+      "new_in_new": false,
+      "old_in_new": false,
+      "new_in_orig": false,
+      "old_in_orig": false,
+      "synchronized": false,
+      "topic_id": "T04",
+      "arm": "C1",
+      "sample": 2,
+      "anchor_old": "那笔拆迁补偿款是 384000 元",
+      "anchor_new": "那笔拆迁补偿款是 512000 元",
+      "new_in_swap": false
+    },
+    {
+      "applicable": true,
+      "keys_old": [
+        "384000"
+      ],
+      "keys_new": [
+        "512000"
+      ],
+      "new_in_new": true,
+      "old_in_new": false,
+      "new_in_orig": false,
+      "old_in_orig": false,
+      "synchronized": true,
+      "topic_id": "T04",
+      "arm": "C2",
+      "sample": 1,
+      "anchor_old": "那笔拆迁补偿款是 384000 元",
+      "anchor_new": "那笔拆迁补偿款是 512000 元",
+      "new_in_swap": true
+    },
+    {
+      "applicable": true,
+      "keys_old": [
+        "384000"
+      ],
+      "keys_new": [
+        "512000"
+      ],
+      "new_in_new": true,
+      "old_in_new": false,
+      "new_in_orig": false,
+      "old_in_orig": false,
+      "synchronized": true,
+      "topic_id": "T04",
+      "arm": "C2",
+      "sample": 3,
+      "anchor_old": "那笔拆迁补偿款是 384000 元",
+      "anchor_new": "那笔拆迁补偿款是 512000 元",
+      "new_in_swap": true
+    },
+    {
+      "applicable": true,
+      "keys_old": [
+        "384000"
+      ],
+      "keys_new": [
+        "512000"
+      ],
+      "new_in_new": false,
+      "old_in_new": false,
+      "new_in_orig": false,
+      "old_in_orig": false,
+      "synchronized": false,
+      "topic_id": "T04",
+      "arm": "C1",
+      "sample": 3,
+      "anchor_old": "那笔拆迁补偿款是 384000 元",
+      "anchor_new": "那笔拆迁补偿款是 512000 元",
+      "new_in_swap": false
+    },
+    {
+      "applicable": true,
+      "keys_old": [
+        "270"
+      ],
+      "keys_new": [
+        "410"
+      ],
+      "new_in_new": false,
+      "old_in_new": false,
+      "new_in_orig": false,
+      "old_in_orig": true,
+      "synchronized": false,
+      "topic_id": "T05",
+      "arm": "C0",
+      "sample": 1,
+      "anchor_old": "这个试点的周期是 270 天",
+      "anchor_new": "这个试点的周期是 410 天",
+      "new_in_swap": false
+    },
+    {
+      "applicable": true,
+      "keys_old": [
+        "270"
+      ],
+      "keys_new": [
+        "410"
+      ],
+      "new_in_new": false,
+      "old_in_new": false,
+      "new_in_orig": false,
+      "old_in_orig": true,
+      "synchronized": false,
+      "topic_id": "T05",
+      "arm": "C0",
+      "sample": 2,
+      "anchor_old": "这个试点的周期是 270 天",
+      "anchor_new": "这个试点的周期是 410 天",
+      "new_in_swap": false
+    },
+    {
+      "applicable": true,
+      "keys_old": [
+        "270"
+      ],
+      "keys_new": [
+        "410"
+      ],
+      "new_in_new": false,
+      "old_in_new": false,
+      "new_in_orig": false,
+      "old_in_orig": true,
+      "synchronized": false,
+      "topic_id": "T05",
+      "arm": "C0",
+      "sample": 3,
+      "anchor_old": "这个试点的周期是 270 天",
+      "anchor_new": "这个试点的周期是 410 天",
+      "new_in_swap": false
+    },
+    {
+      "applicable": true,
+      "keys_old": [
+        "270"
+      ],
+      "keys_new": [
+        "410"
+      ],
+      "new_in_new": false,
+      "old_in_new": false,
+      "new_in_orig": false,
+      "old_in_orig": false,
+      "synchronized": false,
+      "topic_id": "T05",
+      "arm": "C1",
+      "sample": 1,
+      "anchor_old": "这个试点的周期是 270 天",
+      "anchor_new": "这个试点的周期是 410 天",
+      "new_in_swap": false
+    },
+    {
+      "applicable": true,
+      "keys_old": [
+        "270"
+      ],
+      "keys_new": [
+        "410"
+      ],
+      "new_in_new": false,
+      "old_in_new": false,
+      "new_in_orig": false,
+      "old_in_orig": false,
+      "synchronized": false,
+      "topic_id": "T05",
+      "arm": "C1",
+      "sample": 2,
+      "anchor_old": "这个试点的周期是 270 天",
+      "anchor_new": "这个试点的周期是 410 天",
+      "new_in_swap": false
+    },
+    {
+      "applicable": true,
+      "keys_old": [
+        "270"
+      ],
+      "keys_new": [
+        "410"
+      ],
+      "new_in_new": false,
+      "old_in_new": false,
+      "new_in_orig": false,
+      "old_in_orig": false,
+      "synchronized": false,
+      "topic_id": "T05",
+      "arm": "C1",
+      "sample": 3,
+      "anchor_old": "这个试点的周期是 270 天",
+      "anchor_new": "这个试点的周期是 410 天",
+      "new_in_swap": false
+    },
+    {
+      "applicable": true,
+      "keys_old": [
+        "270"
+      ],
+      "keys_new": [
+        "410"
+      ],
+      "new_in_new": true,
+      "old_in_new": false,
+      "new_in_orig": false,
+      "old_in_orig": true,
+      "synchronized": true,
+      "topic_id": "T05",
+      "arm": "C2",
+      "sample": 1,
+      "anchor_old": "这个试点的周期是 270 天",
+      "anchor_new": "这个试点的周期是 410 天",
+      "new_in_swap": true
+    },
+    {
+      "applicable": true,
+      "keys_old": [
+        "270"
+      ],
+      "keys_new": [
+        "410"
+      ],
+      "new_in_new": true,
+      "old_in_new": false,
+      "new_in_orig": false,
+      "old_in_orig": true,
+      "synchronized": true,
+      "topic_id": "T05",
+      "arm": "C2",
+      "sample": 3,
+      "anchor_old": "这个试点的周期是 270 天",
+      "anchor_new": "这个试点的周期是 410 天",
+      "new_in_swap": true
+    },
+    {
+      "applicable": true,
+      "keys_old": [
+        "270"
+      ],
+      "keys_new": [
+        "410"
+      ],
+      "new_in_new": true,
+      "old_in_new": false,
+      "new_in_orig": false,
+      "old_in_orig": true,
+      "synchronized": true,
+      "topic_id": "T05",
+      "arm": "C2",
+      "sample": 2,
+      "anchor_old": "这个试点的周期是 270 天",
+      "anchor_new": "这个试点的周期是 410 天",
+      "new_in_swap": true
+    },
+    {
+      "applicable": true,
+      "keys_old": [
+        "640"
+      ],
+      "keys_new": [
+        "820"
+      ],
+      "new_in_new": true,
+      "old_in_new": false,
+      "new_in_orig": false,
+      "old_in_orig": false,
+      "synchronized": true,
+      "topic_id": "T09",
+      "arm": "C0",
+      "sample": 3,
+      "anchor_old": "现有自习区的座位是 640 个",
+      "anchor_new": "现有自习区的座位是 820 个",
+      "new_in_swap": true
+    },
+    {
+      "applicable": true,
+      "keys_old": [
+        "640"
+      ],
+      "keys_new": [
+        "820"
+      ],
+      "new_in_new": true,
+      "old_in_new": false,
+      "new_in_orig": false,
+      "old_in_orig": false,
+      "synchronized": true,
+      "topic_id": "T09",
+      "arm": "C0",
+      "sample": 2,
+      "anchor_old": "现有自习区的座位是 640 个",
+      "anchor_new": "现有自习区的座位是 820 个",
+      "new_in_swap": true
+    },
+    {
+      "applicable": true,
+      "keys_old": [
+        "640"
+      ],
+      "keys_new": [
+        "820"
+      ],
+      "new_in_new": true,
+      "old_in_new": false,
+      "new_in_orig": false,
+      "old_in_orig": false,
+      "synchronized": true,
+      "topic_id": "T09",
+      "arm": "C0",
+      "sample": 1,
+      "anchor_old": "现有自习区的座位是 640 个",
+      "anchor_new": "现有自习区的座位是 820 个",
+      "new_in_swap": true
+    },
+    {
+      "applicable": true,
+      "keys_old": [
+        "640"
+      ],
+      "keys_new": [
+        "820"
+      ],
+      "new_in_new": false,
+      "old_in_new": false,
+      "new_in_orig": false,
+      "old_in_orig": false,
+      "synchronized": false,
+      "topic_id": "T09",
+      "arm": "C1",
+      "sample": 1,
+      "anchor_old": "现有自习区的座位是 640 个",
+      "anchor_new": "现有自习区的座位是 820 个",
+      "new_in_swap": false
+    },
+    {
+      "applicable": true,
+      "keys_old": [
+        "640"
+      ],
+      "keys_new": [
+        "820"
+      ],
+      "new_in_new": false,
+      "old_in_new": false,
+      "new_in_orig": false,
+      "old_in_orig": false,
+      "synchronized": false,
+      "topic_id": "T09",
+      "arm": "C1",
+      "sample": 2,
+      "anchor_old": "现有自习区的座位是 640 个",
+      "anchor_new": "现有自习区的座位是 820 个",
+      "new_in_swap": false
+    },
+    {
+      "applicable": true,
+      "keys_old": [
+        "640"
+      ],
+      "keys_new": [
+        "820"
+      ],
+      "new_in_new": true,
+      "old_in_new": false,
+      "new_in_orig": false,
+      "old_in_orig": false,
+      "synchronized": true,
+      "topic_id": "T09",
+      "arm": "C1",
+      "sample": 3,
+      "anchor_old": "现有自习区的座位是 640 个",
+      "anchor_new": "现有自习区的座位是 820 个",
+      "new_in_swap": true
+    },
+    {
+      "applicable": true,
+      "keys_old": [
+        "640"
+      ],
+      "keys_new": [
+        "820"
+      ],
+      "new_in_new": false,
+      "old_in_new": false,
+      "new_in_orig": false,
+      "old_in_orig": true,
+      "synchronized": false,
+      "topic_id": "T09",
+      "arm": "C2",
+      "sample": 1,
+      "anchor_old": "现有自习区的座位是 640 个",
+      "anchor_new": "现有自习区的座位是 820 个",
+      "new_in_swap": false
+    },
+    {
+      "applicable": true,
+      "keys_old": [
+        "640"
+      ],
+      "keys_new": [
+        "820"
+      ],
+      "new_in_new": false,
+      "old_in_new": false,
+      "new_in_orig": false,
+      "old_in_orig": true,
+      "synchronized": false,
+      "topic_id": "T09",
+      "arm": "C2",
+      "sample": 2,
+      "anchor_old": "现有自习区的座位是 640 个",
+      "anchor_new": "现有自习区的座位是 820 个",
+      "new_in_swap": false
+    },
+    {
+      "applicable": true,
+      "keys_old": [
+        "640"
+      ],
+      "keys_new": [
+        "820"
+      ],
+      "new_in_new": false,
+      "old_in_new": false,
+      "new_in_orig": false,
+      "old_in_orig": true,
+      "synchronized": false,
+      "topic_id": "T09",
+      "arm": "C2",
+      "sample": 3,
+      "anchor_old": "现有自习区的座位是 640 个",
+      "anchor_new": "现有自习区的座位是 820 个",
+      "new_in_swap": false
+    }
+  ],
+  "summary": {
+    "C0": {
+      "n": 15,
+      "sync_rate": 0.2667,
+      "new_in_new_rate": 0.2667,
+      "old_in_new_rate": 0.0,
+      "new_in_orig_rate": 0.0,
+      "old_in_orig_rate": 0.3333
+    },
+    "C1": {
+      "n": 15,
+      "sync_rate": 0.0667,
+      "new_in_new_rate": 0.0667,
+      "old_in_new_rate": 0.0,
+      "new_in_orig_rate": 0.0,
+      "old_in_orig_rate": 0.0
+    },
+    "C2": {
+      "n": 15,
+      "sync_rate": 0.7333,
+      "new_in_new_rate": 0.7333,
+      "old_in_new_rate": 0.0,
+      "new_in_orig_rate": 0.0,
+      "old_in_orig_rate": 0.7333
+    }
+  },
+  "stats": {
+    "C0": {
+      "k": 4,
+      "n": 15,
+      "p_vs_half": 0.11846923828125
+    },
+    "C1": {
+      "k": 1,
+      "n": 15,
+      "p_vs_half": 0.0009765625
+    },
+    "C2": {
+      "k": 11,
+      "n": 15,
+      "p_vs_half": 0.11846923828125
+    }
+  },
+  "mcnemar": {
+    "C0 vs C1": {
+      "both": 1,
+      "only_C0": 3,
+      "only_C1": 0,
+      "p": 0.25
+    },
+    "C0 vs C2": {
+      "both": 1,
+      "only_C0": 3,
+      "only_C2": 10,
+      "p": 0.09228515625
+    },
+    "C1 vs C2": {
+      "both": 0,
+      "only_C1": 1,
+      "only_C2": 11,
+      "p": 0.00634765625
+    }
+  },
+  "topics": [
+    "T01",
+    "T02",
+    "T04",
+    "T05",
+    "T09"
+  ],
+  "n_pairs": 45
+}
