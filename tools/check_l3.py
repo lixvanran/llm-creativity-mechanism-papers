@@ -162,8 +162,31 @@ def chk(name, cond, extra=""):
     if not cond: ok = False
 chk("A4  档位标记 ✅/◐/【待完成】/in-sample 齐备",
     all(x in md for x in ["✅", "◐", "【待完成】", "in-sample"]))
-chk("A5  四轴判决关键词齐",
-    all(x in md for x in ["架构级轴", "局部避坑行为", "偏好只覆盖部分维度", "机制存在性轴", "共线"]))
+# ★★★ A5 改成判【表结构】而不是判【旧措辞】（★ 教训见下）
+#   ★ 原判据要求「偏好只覆盖部分维度」这个措辞 ⇒ ★ 重写稿把那个轴改成了
+#     「机制存在性轴（偏好覆盖度）」⇒ ★ 措辞判据假红
+#   ★ 而且轴从四条变成六条 ⇒ ★ **「四轴」这个前提本身已过时**
+#   ⇒ ★ **落法：★ 判「按轴分写的判决表存在，★ 且每行都有 结论/依据/限定 三列」**
+#     ⇒ ★ 措辞随便改都不影响它，★ 而"某一行缺依据"这种真问题照样抓
+_ax_tbl = None
+# ★★★ 换行必须显式（★ 上一版 `.*$` 贪婪 ⇒ 把整行吃掉 ⇒ 捕获长度 0 ⇒ 轴数 0）
+_m = re.search(r"^#{2,4}[^\n]*按轴分写[^\n]*$\n(.*?)(?=^#{2,4} |\Z)", md, re.M | re.S)
+if _m:
+    _rows = [ln for ln in _m.group(1).split("\n")
+             if ln.strip().startswith("|") and ln.strip().endswith("|")
+             and not re.match(r"^\s*\|[-: |]+\|\s*$", ln)]
+    _hdr = next((ln for ln in _rows if "轴" in ln and "结论" in ln), None)
+    _body = [ln for ln in _rows if _hdr and ln is not _hdr and "轴" in ln]
+    _ax_tbl = (_hdr, _body)
+chk("A5  按轴分写的判决表存在，★ 每行都有 结论/依据/限定 三列",
+    _ax_tbl is not None
+    and _ax_tbl[0] is not None
+    and len(_ax_tbl[1]) >= 4
+    and all(("不可分辨" in r or "未检出" in r or "成立" in r or "未测" in r) for r in _ax_tbl[1])
+    and all(("n=" in r or "样本" in r or "臂" in r or "题" in r) for r in _ax_tbl[1]),
+    extra=f"★ 轴数 {len(_ax_tbl[1]) if _ax_tbl else 0}")
+chk("A5c 关键轴名与共线判据在位（★ 措辞可有变体）",
+    all(x in md for x in ["架构级轴", "局部避坑行为", "机制存在性轴", "共线"]))
 chk("A5b 避坑轴带 in-sample + n=6 + 负对照持平",
     "每臂 n=6" in md and "负对照臂" in md and "in-sample" in md)
 chk("A6  P2 与 P4 判据逐字照抄",
@@ -173,8 +196,11 @@ chk("A7a 推断链—证伪条件表 六列",
     "| # | 从（读数）| 到（构念解释）| 该箭头的**独立**证伪条件 | 当前状态 | 还缺什么 |" in md)
 chk("A7b 数据来源与独立性声明 七列",
     "① 原始实验及其日期" in md and "⑥ 与其他篇的共享部分" in md)
+# ★★★ 按【标题文本】匹配，★ 不写死节号与分隔符
+#   （★ 教训：★ ③篇重编号后 `## 13. 未来工作` → `## 12 · 未来工作` ⇒ ★ 写死节号的判据必假红
+#    ⇒ ★ **判据要判【内容在不在】，★ 不该判【它在第几节】**）
 chk("A8  未来工作标题 + 六列表头",
-    "## 13. 未来工作（不属于本文证据）" in md
+    re.search(r"^#{2,4}\s*[\d.]*\s*[·.、]?\s*未来工作（不属于本文证据）", md, re.M) is not None
     and "| # | 事项 | 状态 | 是否影响本文核心结论 | 成本 | 承载位置 |" in md)
 chk("A8b 未来工作前奏三件（状态列图例/编号说明/列语义）",
     "状态列图例" in md and "编号说明" in md and "是否影响本文核心结论" in md)
@@ -189,7 +215,7 @@ chk("A11 附录 A 无扁平化前路径 routes/",
 chk("A11b 附录 A 标出不在包内的组件",
     "不在包内" in md and "第三方不可复算" in md)
 chk("A12 《读数口径变更记录》小节存在",
-    "## 14 读数口径变更记录" in md and "读数口径变更记录" in md)
+    re.search(r"^#{2,4}\s*[\d.]*\s*[·.、]?\s*读数口径变更记录", md, re.M) is not None)
 chk("A16 三条代码级事实 + 复现命令与真实输出",
     "tools/verify_l3_code_facts.py" in md and "EXIT=0" in md and "全部 6 条断言成立" in md)
 chk("§12 含 L3-26 条局限", md.count("| L3-") >= 20)
