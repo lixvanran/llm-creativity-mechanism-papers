@@ -41,7 +41,15 @@ SWAP_NAME = "p2_swap.jsonl"
 NUM_RE = re.compile(r"(?<![\d.])(\d{2,7})(?![\d])")
 
 # 相对自身向上搜索的候选数据目录（按优先级）
+# ★★★ 2026-10-25 · owner 补（★ **只改路径候选，★ 计算逻辑一个字没动**）：★★
+#   ★ 审稿人写这个脚本时，★ 数据目录的**候选路径全是旧布局**（★ `第四组交付/data`）
+#     ⇒ ★ 脚本进了包、★ 数据也在包里（★ `来源与底稿/第四组/group4_state_driven/archive/runs/`）
+#     ⇒ ★ 但**路径探测找不到** ⇒ ★ 第三方一跑就报「找不到数据目录」⇒ ★ **脚本进包 ≠ 第三方能跑**
+#   ⇒ ★ 落法：★ 把【仓内真实布局】放在候选首位；★ 旧候选全部保留（★ 不删别人的假设）
+#   ⇒ ★ ★ **披露纪律**：★ 这是 owner 对审稿人脚本的唯一改动，★ 已在 evidence/README 与入口 md 登记
 CANDIDATE_SUFFIXES = [
+    # ★★★ 仓内真实布局（★ 2026-10-25 实测）★★★
+    os.path.join("来源与底稿", "第四组", "group4_state_driven", "archive", "runs"),
     os.path.join("来源与底稿", "第四组交付", "data"),
     os.path.join("第四组交付", "data"),
     os.path.join("data",),
