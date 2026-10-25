@@ -116,6 +116,9 @@ hr "⑧b 合订本（★ 生成 + 「没改一个字」判据）"
 python3 tools/build_anthology.py 2>&1 | tail -7
 python3 tools/check_anthology.py 2>&1 | tail -3
 
+hr "⑧c 新增读数回源核验（★ v3.1 的「核不到 ⑧」★ 本轮补上）"
+python3 tools/verify_new_readings.py 2>&1 | tail -3
+
 hr "⑨ 提交（★ 打包器按 git ls-files 取内容集 ⇒ 必须先提交）"
 git add -A
 git -c user.name="Mavis" -c user.email="mavis@local" commit -q -m "★ 收口：四篇定稿 + docx 全量重建 + 交付态基线快照" || echo "（★ 无改动）"
