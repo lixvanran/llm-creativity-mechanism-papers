@@ -37,11 +37,15 @@ def facts(rel):
     }
 F = {k: facts(v) for k, v in PAPERS}
 
-def find(prefix):
-    return next((i for i, l in enumerate(lines) if l.startswith(prefix)), None)
+def find(anchor):
+    """★ 锚【不许带装饰前缀】（★ 2026-10-25 实测踩到）：
+       去装饰那一轮把入口 md 的 "★ " 前缀剥掉了 ⇒ ★ 原来靠 "| ★ **五篇 sha256…** |"
+       找行的写法【整条失效】⇒ ★ 回填静默不执行 ⇒ ★ 而复核段会报"不一致"、★ 整轮收口停住。
+       ⇒ ★ 正解：★ 锚只取【不会被装饰改动的核心词】。"""
+    return next((i for i, l in enumerate(lines) if anchor in l), None)
 
 # ① 五篇 sha
-i = find("| ★ **五篇 sha256（前 16 位）** |")
+i = find("五篇 sha256")
 if i is not None:
     new = lines[i]
     for k, _ in PAPERS:
@@ -51,22 +55,22 @@ if i is not None:
     print("✔ 五篇 sha 已回填")
 
 # ② 五篇正文（★ 行数）
-i = find("| ★ **五篇正文** |")
+i = find("**五篇正文**")
 if i is not None:
-    body = "｜".join("★ `%s`（★ %d 行）" % (k, F[k]["lines"]) for k, _ in PAPERS)
-    lines[i] = ("| ★ **五篇正文** | ★ " + body + " |")
+    body = "｜".join("`%s`（%d 行）" % (k, F[k]["lines"]) for k, _ in PAPERS)
+    lines[i] = "| **五篇正文** | " + body + " |"
     print("✔ 五篇行数已回填")
 
 # ③ 三标记
-i = find("| ★ **三标记（只增不减）** |")
+i = find("**三标记")
 if i is not None:
     parts = []
     for k, _ in PAPERS:
         if k == "C":
             continue      # ★ ③C 不在这三标记口径里（★ 原文也没写它）
         f = F[k]
-        parts.append("★ %s ⚠️%d/待完成%d/📌%d" % (k, f["warn"], f["todo"], f["pin"]))
-    lines[i] = "| ★ **三标记（只增不减）** | ★ " + "｜".join(parts) + " |"
+        parts.append("%s ⚠️%d/待完成%d/📌%d" % (k, f["warn"], f["todo"], f["pin"]))
+    lines[i] = "| **三标记（只增不减）** | " + "｜".join(parts) + " |"
     print("✔ 三标记计数已回填")
 
 ENTRY.write_text("\n".join(lines), encoding="utf-8")
@@ -78,7 +82,7 @@ for k, rel in PAPERS:
     m = re.search(r"\b%s `([0-9a-f]{16})`" % re.escape(k), "\n".join(cur))
     if not m or m.group(1) != F[k]["sha"]:
         bad.append(("sha", k, m.group(1) if m else None, F[k]["sha"]))
-    m2 = re.search(r"`%s`（★ (\d+) 行）" % re.escape(k), "\n".join(cur))
+    m2 = re.search(r"`%s`（\s*(\d+)\s*行）" % re.escape(k), "\n".join(cur))
     if not m2 or int(m2.group(1)) != F[k]["lines"]:
         bad.append(("lines", k, m2.group(1) if m2 else None, F[k]["lines"]))
 if bad:
