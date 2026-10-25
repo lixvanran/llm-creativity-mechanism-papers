@@ -111,6 +111,8 @@ def main():
         "来源与底稿/第四组_新产出/T-D-03_外部锚点/raw/raw_2605.29420.txt",
         "来源与底稿/第四组_新产出/T-D-03_外部锚点/raw/raw_2609.03218.txt",
         "来源与底稿/第四组_新产出/T-D-03_外部锚点/raw/SHA256SUMS.txt",
+        "来源与底稿/第四组_新产出/T-D-03_外部锚点/raw/line_index.json",
+        "来源与底稿/第四组_新产出/T-D-03_外部锚点/raw/push_branch.py",
     ]
     allok = True
     for f in files:
