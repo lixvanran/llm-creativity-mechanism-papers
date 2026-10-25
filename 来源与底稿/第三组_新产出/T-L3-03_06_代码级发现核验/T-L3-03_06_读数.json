@@ -1,0 +1,57 @@
+{
+  "report": {
+    "git_all_history_f6_hits": 16,
+    "git_all_history_f6_commits": [
+      "11f3f27 docs(routes): 暂停全训练路线 + 推设计侧（DEV 集开工 + 优化器契约落地）",
+      "e95d186 docs(routes): 暂停全训练路线 + 推设计侧（DEV 集开工 + 优化器契约落地）",
+      "03640d5 docs(routes): 三条路线全部被独立复核判 FAIL + 重训 8/8 完成 + 负责人自我纠错",
+      "bcdedf5 docs(routes): 三条路线全部被独立复核判 FAIL + 重训 8/8 完成 + 负责人自我纠错",
+      "60c27c8 docs(routes): 三路线设计定稿 + 综合报告 + 6 张程序流程图",
+      "f41d30f docs(routes): 三路线设计定稿 + 综合报告 + 6 张程序流程图",
+      "127e487 docs(routes): 三路线设计产出（T0 协议定稿 + A/B/C 规格与可执行代码）",
+      "6c636a3 docs(routes): 三路线设计产出（T0 协议定稿 + A/B/C 规格与可执行代码）",
+      "bdb2492 docs(routes): 三路线程序流程图 + 团队计划（思维面=有效信息维度数）",
+      "757e3ef docs(routes): 三路线程序流程图 + 团队计划（思维面=有效信息维度数）",
+      "6946e59 docs(train): 存现版本训练快照（arch_learn_fixed，训练进行中）",
+      "61ced20 docs(train): 存现版本训练快照（arch_learn_fixed，训练进行中）"
+    ],
+    "before_commit": "777a5fe",
+    "before_snippet": "  54| def op_features(g: Graph, op: str, target: Node | None, depth: int) -> list:\n  55|     \"\"\"**局部**特征：只看当前节点与本分支历史，不看题目/题集。\n  56|     这是绕开「在题集上挑赢家」过拟合的关键——特征与题无关，n = 决策次数。\"\"\"\n  57|     f = [0.0] * 14\n  58|     f[OPS.index(op)] = 1.0\n  59|     if target is not None:\n  60|         f[7] = 1.0 if target.kind == \"CLAIM\" else 0.0\n  61|         f[8] = 1.0 if target.verdict == \"支持\" else 0.0\n  62|         f[9] = 1.0 if target.verdict == \"矛盾\" else 0.0\n  63|         f[10] = 1.0 if target.verdict is None else 0.0\n  64|         f[11] = min(len(target.text) / 300.0, 1.0)\n  65|         anc = _ancestors(g, target.nid)\n  66|         succ = sum(1 for a in anc if g.nodes[a].verdict == \"支持\")\n  67|         fail = sum(1 for a in anc if g.nodes[a].verdict == \"矛盾\")\n  68|         f[12] = min(succ / 5.0, 1.0)\n  69|         f[13] = min(fail / 3.0, 1.0)\n  70|     f[6] = min(depth / 6.0, 1.0)\n  71|     return f\n  72| ",
+    "before_has_f6_depth_write": true,
+    "before_feature_dim": 14,
+    "after_commit": "11f3f27",
+    "after_explanation": "    # ★ 修 f[6] 索引冲突（2026-10-21）：\n    #   原来这里写的是 `f[6] = min(depth / 6.0, 1.0)`，而 f[6] 本来是 STOP 的 one-hot\n    #   （OPS 有 7 个，索引 0..6）⇒ 同一个下标被写两次：\n    #   - STOP 的 one-hot 被 depth 覆盖 ⇒ **STOP 永远选不中**（只有 ε 能触发）\n    #   - depth 对**所有** op 是同一个值 ⇒ softmax 里是公共常数 ⇒ **完全抵消** ⇒ 零作用\n    #   实测：STOP 在 depth=3 时 f[6]=0.5（应为 1.0）；同状态下各 op 分数差异与 depth 无关。\n    #   修法：**丢掉 depth**（它对决策可证明为零），把 f[6] 还给 STOP。\n    #   ★ 保持 14 维不变（特征空间不变 ⇒ 与既有对照仍可比）。\n    #   ⚠️ 行为变化：STOP 从\"不可选\"变成\"可选\" ⇒ **新权重与 cmp8 旧权重不可比**。",
+    "ops_definition_line": "OPS = (\"GEN_PLAIN\", \"GEN_ANGLE\", \"EXTRACT\", \"SPLIT\", \"VERIFY\", \"MERGE\", \"STOP\")",
+    "candidates_contain_merge": true,
+    "batches_by_time": [
+      [
+        "main",
+        "2026-10-23 01:39"
+      ],
+      [
+        "main_grok",
+        "2026-10-23 06:58"
+      ],
+      [
+        "main_mm25",
+        "2026-10-23 08:04"
+      ],
+      [
+        "fv2",
+        "2026-10-24 02:10"
+      ],
+      [
+        "main_big",
+        "2026-10-24 02:54"
+      ],
+      [
+        "adv",
+        "2026-10-24 10:23"
+      ]
+    ],
+    "batch2_candidates": "main_grok"
+  },
+  "fails": [
+    "候选集竟含 MERGE ⇒ 与结论相反，需重核"
+  ]
+}

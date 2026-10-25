@@ -1,0 +1,967 @@
+{
+  "batches": {
+    "adv": {
+      "n_rows": 22,
+      "n_arms": 5,
+      "n_tasks": 3,
+      "arms": [
+        "B0_bestof3",
+        "B0_direct",
+        "B0_frames_vote",
+        "W_design_L2",
+        "W_train_L3"
+      ],
+      "tasks": [
+        "A01",
+        "A02",
+        "A03"
+      ],
+      "rows_per_arm": 4.4,
+      "kind_counts": {
+        "ok": 22
+      },
+      "cells": {
+        "B0_bestof3": {
+          "A01": {
+            "eff": 2,
+            "raw": 2,
+            "ok": 2
+          },
+          "A02": {
+            "eff": 2,
+            "raw": 2,
+            "ok": 2
+          },
+          "A03": {
+            "eff": 1,
+            "raw": 1,
+            "ok": 1
+          }
+        },
+        "B0_direct": {
+          "A01": {
+            "eff": 2,
+            "raw": 2,
+            "ok": 2
+          },
+          "A02": {
+            "eff": 2,
+            "raw": 2,
+            "ok": 2
+          },
+          "A03": {
+            "eff": 1,
+            "raw": 1,
+            "ok": 1
+          }
+        },
+        "B0_frames_vote": {
+          "A01": {
+            "eff": 2,
+            "raw": 2,
+            "ok": 2
+          },
+          "A02": {
+            "eff": 2,
+            "raw": 2,
+            "ok": 2
+          },
+          "A03": {
+            "eff": 0,
+            "raw": 0
+          }
+        },
+        "W_design_L2": {
+          "A01": {
+            "eff": 2,
+            "raw": 2,
+            "ok": 2
+          },
+          "A02": {
+            "eff": 2,
+            "raw": 2,
+            "ok": 2
+          },
+          "A03": {
+            "eff": 0,
+            "raw": 0
+          }
+        },
+        "W_train_L3": {
+          "A01": {
+            "eff": 2,
+            "raw": 2,
+            "ok": 2
+          },
+          "A02": {
+            "eff": 2,
+            "raw": 2,
+            "ok": 2
+          },
+          "A03": {
+            "eff": 0,
+            "raw": 0
+          }
+        }
+      },
+      "load_bearing_zero_dist": {
+        "非零": 19,
+        "零(可计入分母)": 3
+      }
+    },
+    "fv2": {
+      "n_rows": 4,
+      "n_arms": 1,
+      "n_tasks": 2,
+      "arms": [
+        "B0_frames_vote"
+      ],
+      "tasks": [
+        "D01",
+        "D02"
+      ],
+      "rows_per_arm": 4.0,
+      "kind_counts": {
+        "ok": 4
+      },
+      "cells": {
+        "B0_frames_vote": {
+          "D01": {
+            "eff": 2,
+            "raw": 2,
+            "ok": 2
+          },
+          "D02": {
+            "eff": 2,
+            "raw": 2,
+            "ok": 2
+          }
+        }
+      },
+      "load_bearing_zero_dist": {
+        "非零": 4
+      }
+    },
+    "main": {
+      "n_rows": 3,
+      "n_arms": 3,
+      "n_tasks": 1,
+      "arms": [
+        "B0_bestof3",
+        "B0_direct",
+        "W_design_L2"
+      ],
+      "tasks": [
+        "D01"
+      ],
+      "rows_per_arm": 1.0,
+      "kind_counts": {
+        "zero_instr": 2,
+        "ok": 1
+      },
+      "cells": {
+        "B0_bestof3": {
+          "D01": {
+            "eff": 1,
+            "raw": 1,
+            "ok": 1
+          }
+        },
+        "B0_direct": {
+          "D01": {
+            "eff": 0,
+            "raw": 1,
+            "zero_instr": 1
+          }
+        },
+        "W_design_L2": {
+          "D01": {
+            "eff": 0,
+            "raw": 1,
+            "zero_instr": 1
+          }
+        }
+      },
+      "load_bearing_zero_dist": {
+        "零(可计入分母)": 2,
+        "非零": 1
+      }
+    },
+    "main_big": {
+      "n_rows": 20,
+      "n_arms": 5,
+      "n_tasks": 2,
+      "arms": [
+        "B0_bestof3",
+        "B0_direct",
+        "B0_frames_vote",
+        "W_design_L2",
+        "W_train_L3"
+      ],
+      "tasks": [
+        "D01",
+        "D02"
+      ],
+      "rows_per_arm": 4.0,
+      "kind_counts": {
+        "ok": 17,
+        "zero_instr": 3
+      },
+      "cells": {
+        "B0_bestof3": {
+          "D01": {
+            "eff": 2,
+            "raw": 2,
+            "ok": 2
+          },
+          "D02": {
+            "eff": 2,
+            "raw": 2,
+            "ok": 2
+          }
+        },
+        "B0_direct": {
+          "D01": {
+            "eff": 2,
+            "raw": 2,
+            "ok": 2
+          },
+          "D02": {
+            "eff": 2,
+            "raw": 2,
+            "ok": 2
+          }
+        },
+        "B0_frames_vote": {
+          "D01": {
+            "eff": 0,
+            "raw": 2,
+            "zero_instr": 2
+          },
+          "D02": {
+            "eff": 1,
+            "raw": 2,
+            "zero_instr": 1,
+            "ok": 1
+          }
+        },
+        "W_design_L2": {
+          "D01": {
+            "eff": 2,
+            "raw": 2,
+            "ok": 2
+          },
+          "D02": {
+            "eff": 2,
+            "raw": 2,
+            "ok": 2
+          }
+        },
+        "W_train_L3": {
+          "D01": {
+            "eff": 2,
+            "raw": 2,
+            "ok": 2
+          },
+          "D02": {
+            "eff": 2,
+            "raw": 2,
+            "ok": 2
+          }
+        }
+      },
+      "load_bearing_zero_dist": {
+        "非零": 17,
+        "零(可计入分母)": 3
+      }
+    },
+    "main_grok": {
+      "n_rows": 16,
+      "n_arms": 4,
+      "n_tasks": 2,
+      "arms": [
+        "B0_bestof3",
+        "B0_direct",
+        "W_design_L2",
+        "W_train_L3"
+      ],
+      "tasks": [
+        "D01",
+        "D02"
+      ],
+      "rows_per_arm": 4.0,
+      "kind_counts": {
+        "ok": 16
+      },
+      "cells": {
+        "B0_bestof3": {
+          "D01": {
+            "eff": 2,
+            "raw": 2,
+            "ok": 2
+          },
+          "D02": {
+            "eff": 2,
+            "raw": 2,
+            "ok": 2
+          }
+        },
+        "B0_direct": {
+          "D01": {
+            "eff": 2,
+            "raw": 2,
+            "ok": 2
+          },
+          "D02": {
+            "eff": 2,
+            "raw": 2,
+            "ok": 2
+          }
+        },
+        "W_design_L2": {
+          "D01": {
+            "eff": 2,
+            "raw": 2,
+            "ok": 2
+          },
+          "D02": {
+            "eff": 2,
+            "raw": 2,
+            "ok": 2
+          }
+        },
+        "W_train_L3": {
+          "D01": {
+            "eff": 2,
+            "raw": 2,
+            "ok": 2
+          },
+          "D02": {
+            "eff": 2,
+            "raw": 2,
+            "ok": 2
+          }
+        }
+      },
+      "load_bearing_zero_dist": {
+        "非零": 13,
+        "零(可计入分母)": 3
+      }
+    },
+    "main_mm25": {
+      "n_rows": 16,
+      "n_arms": 4,
+      "n_tasks": 2,
+      "arms": [
+        "B0_bestof3",
+        "B0_direct",
+        "W_design_L2",
+        "W_train_L3"
+      ],
+      "tasks": [
+        "D01",
+        "D02"
+      ],
+      "rows_per_arm": 4.0,
+      "kind_counts": {
+        "ok": 16
+      },
+      "cells": {
+        "B0_bestof3": {
+          "D01": {
+            "eff": 2,
+            "raw": 2,
+            "ok": 2
+          },
+          "D02": {
+            "eff": 2,
+            "raw": 2,
+            "ok": 2
+          }
+        },
+        "B0_direct": {
+          "D01": {
+            "eff": 2,
+            "raw": 2,
+            "ok": 2
+          },
+          "D02": {
+            "eff": 2,
+            "raw": 2,
+            "ok": 2
+          }
+        },
+        "W_design_L2": {
+          "D01": {
+            "eff": 2,
+            "raw": 2,
+            "ok": 2
+          },
+          "D02": {
+            "eff": 2,
+            "raw": 2,
+            "ok": 2
+          }
+        },
+        "W_train_L3": {
+          "D01": {
+            "eff": 2,
+            "raw": 2,
+            "ok": 2
+          },
+          "D02": {
+            "eff": 2,
+            "raw": 2,
+            "ok": 2
+          }
+        }
+      },
+      "load_bearing_zero_dist": {
+        "非零": 15,
+        "零(可计入分母)": 1
+      }
+    },
+    "mb2": {
+      "n_rows": 1,
+      "n_arms": 1,
+      "n_tasks": 1,
+      "arms": [
+        "B0_direct"
+      ],
+      "tasks": [
+        "D01"
+      ],
+      "rows_per_arm": 1.0,
+      "kind_counts": {
+        "ok": 1
+      },
+      "cells": {
+        "B0_direct": {
+          "D01": {
+            "eff": 1,
+            "raw": 1,
+            "ok": 1
+          }
+        }
+      },
+      "load_bearing_zero_dist": {
+        "非零": 1
+      }
+    },
+    "valid_lookup": {
+      "n_rows": 18,
+      "n_arms": 3,
+      "n_tasks": 6,
+      "arms": [
+        "B0_bestof3",
+        "B0_direct",
+        "W_train_L3"
+      ],
+      "tasks": [
+        "A01",
+        "A02",
+        "A03",
+        "A04",
+        "A05",
+        "A06"
+      ],
+      "rows_per_arm": 6.0,
+      "kind_counts": {
+        "ok": 18
+      },
+      "cells": {
+        "B0_bestof3": {
+          "A01": {
+            "eff": 1,
+            "raw": 1,
+            "ok": 1
+          },
+          "A02": {
+            "eff": 1,
+            "raw": 1,
+            "ok": 1
+          },
+          "A03": {
+            "eff": 1,
+            "raw": 1,
+            "ok": 1
+          },
+          "A04": {
+            "eff": 1,
+            "raw": 1,
+            "ok": 1
+          },
+          "A05": {
+            "eff": 1,
+            "raw": 1,
+            "ok": 1
+          },
+          "A06": {
+            "eff": 1,
+            "raw": 1,
+            "ok": 1
+          }
+        },
+        "B0_direct": {
+          "A01": {
+            "eff": 1,
+            "raw": 1,
+            "ok": 1
+          },
+          "A02": {
+            "eff": 1,
+            "raw": 1,
+            "ok": 1
+          },
+          "A03": {
+            "eff": 1,
+            "raw": 1,
+            "ok": 1
+          },
+          "A04": {
+            "eff": 1,
+            "raw": 1,
+            "ok": 1
+          },
+          "A05": {
+            "eff": 1,
+            "raw": 1,
+            "ok": 1
+          },
+          "A06": {
+            "eff": 1,
+            "raw": 1,
+            "ok": 1
+          }
+        },
+        "W_train_L3": {
+          "A01": {
+            "eff": 1,
+            "raw": 1,
+            "ok": 1
+          },
+          "A02": {
+            "eff": 1,
+            "raw": 1,
+            "ok": 1
+          },
+          "A03": {
+            "eff": 1,
+            "raw": 1,
+            "ok": 1
+          },
+          "A04": {
+            "eff": 1,
+            "raw": 1,
+            "ok": 1
+          },
+          "A05": {
+            "eff": 1,
+            "raw": 1,
+            "ok": 1
+          },
+          "A06": {
+            "eff": 1,
+            "raw": 1,
+            "ok": 1
+          }
+        }
+      },
+      "load_bearing_zero_dist": {
+        "非零": 17,
+        "零(可计入分母)": 1
+      }
+    },
+    "valid_merged": {
+      "n_rows": 18,
+      "n_arms": 3,
+      "n_tasks": 6,
+      "arms": [
+        "B0_bestof3",
+        "B0_direct",
+        "W_train_L3"
+      ],
+      "tasks": [
+        "A01",
+        "A02",
+        "A03",
+        "A04",
+        "A05",
+        "A06"
+      ],
+      "rows_per_arm": 6.0,
+      "kind_counts": {
+        "ok": 18
+      },
+      "cells": {
+        "B0_bestof3": {
+          "A01": {
+            "eff": 1,
+            "raw": 1,
+            "ok": 1
+          },
+          "A02": {
+            "eff": 1,
+            "raw": 1,
+            "ok": 1
+          },
+          "A03": {
+            "eff": 1,
+            "raw": 1,
+            "ok": 1
+          },
+          "A04": {
+            "eff": 1,
+            "raw": 1,
+            "ok": 1
+          },
+          "A05": {
+            "eff": 1,
+            "raw": 1,
+            "ok": 1
+          },
+          "A06": {
+            "eff": 1,
+            "raw": 1,
+            "ok": 1
+          }
+        },
+        "B0_direct": {
+          "A01": {
+            "eff": 1,
+            "raw": 1,
+            "ok": 1
+          },
+          "A02": {
+            "eff": 1,
+            "raw": 1,
+            "ok": 1
+          },
+          "A03": {
+            "eff": 1,
+            "raw": 1,
+            "ok": 1
+          },
+          "A04": {
+            "eff": 1,
+            "raw": 1,
+            "ok": 1
+          },
+          "A05": {
+            "eff": 1,
+            "raw": 1,
+            "ok": 1
+          },
+          "A06": {
+            "eff": 1,
+            "raw": 1,
+            "ok": 1
+          }
+        },
+        "W_train_L3": {
+          "A01": {
+            "eff": 1,
+            "raw": 1,
+            "ok": 1
+          },
+          "A02": {
+            "eff": 1,
+            "raw": 1,
+            "ok": 1
+          },
+          "A03": {
+            "eff": 1,
+            "raw": 1,
+            "ok": 1
+          },
+          "A04": {
+            "eff": 1,
+            "raw": 1,
+            "ok": 1
+          },
+          "A05": {
+            "eff": 1,
+            "raw": 1,
+            "ok": 1
+          },
+          "A06": {
+            "eff": 1,
+            "raw": 1,
+            "ok": 1
+          }
+        }
+      },
+      "load_bearing_zero_dist": {
+        "非零": 15,
+        "零(可计入分母)": 3
+      }
+    },
+    "valid_uniform": {
+      "n_rows": 18,
+      "n_arms": 3,
+      "n_tasks": 6,
+      "arms": [
+        "B0_bestof3",
+        "B0_direct",
+        "W_train_L3"
+      ],
+      "tasks": [
+        "A01",
+        "A02",
+        "A03",
+        "A04",
+        "A05",
+        "A06"
+      ],
+      "rows_per_arm": 6.0,
+      "kind_counts": {
+        "ok": 18
+      },
+      "cells": {
+        "B0_bestof3": {
+          "A01": {
+            "eff": 1,
+            "raw": 1,
+            "ok": 1
+          },
+          "A02": {
+            "eff": 1,
+            "raw": 1,
+            "ok": 1
+          },
+          "A03": {
+            "eff": 1,
+            "raw": 1,
+            "ok": 1
+          },
+          "A04": {
+            "eff": 1,
+            "raw": 1,
+            "ok": 1
+          },
+          "A05": {
+            "eff": 1,
+            "raw": 1,
+            "ok": 1
+          },
+          "A06": {
+            "eff": 1,
+            "raw": 1,
+            "ok": 1
+          }
+        },
+        "B0_direct": {
+          "A01": {
+            "eff": 1,
+            "raw": 1,
+            "ok": 1
+          },
+          "A02": {
+            "eff": 1,
+            "raw": 1,
+            "ok": 1
+          },
+          "A03": {
+            "eff": 1,
+            "raw": 1,
+            "ok": 1
+          },
+          "A04": {
+            "eff": 1,
+            "raw": 1,
+            "ok": 1
+          },
+          "A05": {
+            "eff": 1,
+            "raw": 1,
+            "ok": 1
+          },
+          "A06": {
+            "eff": 1,
+            "raw": 1,
+            "ok": 1
+          }
+        },
+        "W_train_L3": {
+          "A01": {
+            "eff": 1,
+            "raw": 1,
+            "ok": 1
+          },
+          "A02": {
+            "eff": 1,
+            "raw": 1,
+            "ok": 1
+          },
+          "A03": {
+            "eff": 1,
+            "raw": 1,
+            "ok": 1
+          },
+          "A04": {
+            "eff": 1,
+            "raw": 1,
+            "ok": 1
+          },
+          "A05": {
+            "eff": 1,
+            "raw": 1,
+            "ok": 1
+          },
+          "A06": {
+            "eff": 1,
+            "raw": 1,
+            "ok": 1
+          }
+        }
+      },
+      "load_bearing_zero_dist": {
+        "零(可计入分母)": 3,
+        "非零": 15
+      }
+    }
+  },
+  "batch2_4arm": {
+    "adv": {
+      "B0_bestof3": {
+        "eff": 5,
+        "raw": 5,
+        "per_task": {
+          "A01": 2,
+          "A02": 2,
+          "A03": 1
+        }
+      },
+      "B0_direct": {
+        "eff": 5,
+        "raw": 5,
+        "per_task": {
+          "A01": 2,
+          "A02": 2,
+          "A03": 1
+        }
+      },
+      "W_design_L2": {
+        "eff": 4,
+        "raw": 4,
+        "per_task": {
+          "A01": 2,
+          "A02": 2,
+          "A03": 0
+        }
+      },
+      "W_train_L3": {
+        "eff": 4,
+        "raw": 4,
+        "per_task": {
+          "A01": 2,
+          "A02": 2,
+          "A03": 0
+        }
+      }
+    },
+    "main_big": {
+      "B0_bestof3": {
+        "eff": 4,
+        "raw": 4,
+        "per_task": {
+          "D01": 2,
+          "D02": 2
+        }
+      },
+      "B0_direct": {
+        "eff": 4,
+        "raw": 4,
+        "per_task": {
+          "D01": 2,
+          "D02": 2
+        }
+      },
+      "W_design_L2": {
+        "eff": 4,
+        "raw": 4,
+        "per_task": {
+          "D01": 2,
+          "D02": 2
+        }
+      },
+      "W_train_L3": {
+        "eff": 4,
+        "raw": 4,
+        "per_task": {
+          "D01": 2,
+          "D02": 2
+        }
+      }
+    },
+    "main_grok": {
+      "B0_bestof3": {
+        "eff": 4,
+        "raw": 4,
+        "per_task": {
+          "D01": 2,
+          "D02": 2
+        }
+      },
+      "B0_direct": {
+        "eff": 4,
+        "raw": 4,
+        "per_task": {
+          "D01": 2,
+          "D02": 2
+        }
+      },
+      "W_design_L2": {
+        "eff": 4,
+        "raw": 4,
+        "per_task": {
+          "D01": 2,
+          "D02": 2
+        }
+      },
+      "W_train_L3": {
+        "eff": 4,
+        "raw": 4,
+        "per_task": {
+          "D01": 2,
+          "D02": 2
+        }
+      }
+    },
+    "main_mm25": {
+      "B0_bestof3": {
+        "eff": 4,
+        "raw": 4,
+        "per_task": {
+          "D01": 2,
+          "D02": 2
+        }
+      },
+      "B0_direct": {
+        "eff": 4,
+        "raw": 4,
+        "per_task": {
+          "D01": 2,
+          "D02": 2
+        }
+      },
+      "W_design_L2": {
+        "eff": 4,
+        "raw": 4,
+        "per_task": {
+          "D01": 2,
+          "D02": 2
+        }
+      },
+      "W_train_L3": {
+        "eff": 4,
+        "raw": 4,
+        "per_task": {
+          "D01": 2,
+          "D02": 2
+        }
+      }
+    }
+  },
+  "note": "★ 行数 ≠ 题数 ≠ 臂数（T-L3-01）；★ 有效分母已剔「失败单元」与「仪器层零」（T-L3-08）"
+}
