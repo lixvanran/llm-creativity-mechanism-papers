@@ -95,9 +95,26 @@ def main():
         print("   （dry-run：未推）")
         return 0
 
-    # ③ push
-    porcelain.push(ROOT, url, [b"refs/heads/main", ("refs/heads/" + BRANCH).encode()])
-    print("   push 完成")
+    # ③ push（★ 沙箱里连接会被掐 ⇒ 必重试；★ 且【判据用 tree sha】⇒ 内容相同 <=> tree 相同）
+    import time as _t
+    ok = False
+    for attempt in range(1, 5):
+        try:
+            porcelain.push(ROOT, url, [b"refs/heads/main", ("refs/heads/" + BRANCH).encode()])
+            # ★ 推完立刻核远端 main 的 tree
+            live = api("/repos/%s/git/ref/heads/main" % REPO)["object"]["sha"]
+            live_tree = api("/repos/%s/git/commits/%s" % (REPO, live))["tree"]["sha"]
+            if live_tree == c.tree.decode():
+                print("   push 完成（第 %d 次）｜ 远端 main tree = 本地 tree" % attempt)
+                ok = True
+                break
+            print("   推了但 tree 不对 ⇒ 重试")
+        except Exception as e:
+            print("   push 第 %d 次失败：%s" % (attempt, str(e)[:90]))
+        _t.sleep(5 * attempt)
+    if not ok:
+        print("   push 未能确认 ⇒ 查远端实际状态再决定")
+        return 1
 
     # ④ 回核（★ 推完不核等于没推）
     bad = 0
@@ -107,11 +124,18 @@ def main():
         except FileNotFoundError:
             continue
         # ★ contents API 只内联 1MB；★ 大的走 blob API
-        try:
-            remote = api_bytes("/repos/%s/contents/%s?ref=main" % (REPO, f))
-        except Exception:
-            meta = api("/repos/%s/contents/%s?ref=main" % (REPO, f))
-            remote = api_bytes("/repos/%s/git/blobs/%s" % (REPO, meta["sha"]), raw=True)
+        remote = None
+        for attempt in range(3):
+            try:
+                meta = api("/repos/%s/contents/%s?ref=main" % (REPO, f))
+                remote = api_bytes("/repos/%s/git/blobs/%s" % (REPO, meta["sha"]), raw=True)
+                break
+            except Exception:
+                time.sleep(3 * (attempt + 1))
+        if remote is None:
+            bad += 1
+            print("   %-46s 取不回来" % f)
+            continue
         same = hashlib.sha256(remote).hexdigest() == hashlib.sha256(local).hexdigest()
         if not same:
             bad += 1
