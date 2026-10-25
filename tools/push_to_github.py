@@ -65,8 +65,18 @@ def main():
 
     url = "https://x:%s@github.com/%s.git" % (os.environ["GITHUB_TOKEN_LIXVANRAN"], REPO)
 
-    # ① fetch 远端
-    res = porcelain.fetch(ROOT, url, quiet=True)
+    # ① fetch 远端（★ 网络会抖 ⇒ 必须重试；★ dulwich 自己不重试）
+    res = None
+    for attempt in range(1, 6):
+        try:
+            res = porcelain.fetch(ROOT, url, quiet=True)
+            break
+        except Exception as e:
+            print("   fetch 第 %d 次失败：%s" % (attempt, str(e)[:80]))
+            time.sleep(4 * attempt)
+    if res is None:
+        print("   fetch 连续失败 ⇒ 不推（★ 宁可不推、★ 不要推一半）")
+        return 1
     remote_main = res.refs[b"refs/heads/main"]
     r = Repo(ROOT)
     refs = r.get_refs()
