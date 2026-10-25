@@ -146,13 +146,16 @@ def run_one(model, tok, pr, task, arm, ri, seed, qi, ai):
             steps.append(st)
             hs_prev = hs_last
 
-        # ---- logit 熵：★ 用 lm_head(hidden_states[-1]) 反解 raw logits（自证：raw/0.7 == scores）
+        # ---- logit 熵：★ 用 lm_head(hidden_states[-1]) 反解 raw logits（自证：raw ≈ temperature × scores）
         logit_check = {}
         if hss is not None and out.scores is not None:
             lents, lents_s, top1 = [], [], []
             ratio_ok = 0
             for k in range(K):
-                h = hss[k][-1][0, -1].detach().float()
+                # ★ hidden 必须【转成 lm_head 权重的 dtype】——transformers 5.x 的 output_hidden_states
+                #   末层可能是 float32，而 lm_head 权重是 bf16 ⇒ 直接喂 float32 会 dtype 不匹配
+                #   （2026-10-26 首跑的崩溃点；下方一行 .to(weight.dtype) 是稳健写法，两种 dtype 都成立）★
+                h = hss[k][-1][0, -1].detach().to(model.lm_head.weight.dtype)
                 raw = model.lm_head(h.unsqueeze(0)).squeeze(0).float().numpy()
                 pr_ = np.exp(raw - raw.max())
                 pr_ = pr_ / pr_.sum()
@@ -161,7 +164,7 @@ def run_one(model, tok, pr, task, arm, ri, seed, qi, ai):
                 sc = out.scores[k][0].detach().float().numpy()
                 sp = np.exp(sc - sc.max()); sp = sp / sp.sum()
                 lents_s.append(float(-(sp[sp > 0] * np.log(sp[sp > 0])).sum()))
-                if abs(raw.max() - sc.max() * PL.TEMPERATURE) < 5.0:
+                if abs(raw.max() - sc.max() * PL.TEMPERATURE) < 0.5:
                     ratio_ok += 1
             logit_check = {"logit_entropy_raw": lents, "logit_entropy_sampled": lents_s,
                            "logit_top1_raw": top1, "raw_vs_scaled_max_ok": ratio_ok, "K": K}
