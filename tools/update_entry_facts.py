@@ -9,7 +9,7 @@
 
 ★ **口径固定（★ 别改）**：
   · 行数 = `wc -l` 口径（★ 换行符个数）⇒ ★ 与 `wc -l` 一致（★ 不是 `split("\\n")`，★ 那个会多 1）
-  · 三标记 = 全文出现次数（★ ⚠️ / 【待完成】 / 📌）
+  · 两个状态标记 = 全文出现次数（★ 【待完成】 / 【待回查】）
 """
 import sys, re, pathlib, hashlib
 sys.dont_write_bytecode = True
@@ -31,9 +31,8 @@ def facts(rel):
     return {
         "sha": hashlib.sha256(raw).hexdigest()[:16],
         "lines": raw.count(b"\n"),
-        "warn": txt.count("⚠️"),
         "todo": txt.count("【待完成】"),
-        "pin":  txt.count("📌"),
+        "pin":  txt.count("【待回查】"),
     }
 F = {k: facts(v) for k, v in PAPERS}
 
@@ -69,7 +68,7 @@ if i is not None:
         if k == "C":
             continue      # ★ ③C 不在这三标记口径里（★ 原文也没写它）
         f = F[k]
-        parts.append("%s ⚠️%d/待完成%d/📌%d" % (k, f["warn"], f["todo"], f["pin"]))
+        parts.append("%s 待完成%d/待回查%d" % (k, f["todo"], f["pin"]))
     lines[i] = "| **三标记（只增不减）** | " + "｜".join(parts) + " |"
     print("✔ 三标记计数已回填")
 
@@ -92,4 +91,4 @@ if bad:
 print("✔ 回填后逐个复核通过（★ sha 与行数 == 实测值）")
 for k, rel in PAPERS:
     f = F[k]
-    print("   %-3s %s  %4d 行  ⚠️%d/待完成%d/📌%d" % (k, f["sha"], f["lines"], f["warn"], f["todo"], f["pin"]))
+    print("   %-3s %s  %4d 行  待完成%d/待回查%d" % (k, f["sha"], f["lines"], f["todo"], f["pin"]))

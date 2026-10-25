@@ -36,6 +36,15 @@ PAPERS = {
     "L3": "papers/06_L3_层3自修改_交差稿.md",
     "D":  "papers/04_D_StateMachineIsNotYetAPrompt_交差稿.md",
 }
+# ★★ 2026-10-26：★ ① 篇改成了【主稿 + 详稿】两个文件（★ 主稿按五章结构重排，★ 原 994 行全文留作详稿）
+#   ⇒ ★ ① 篇的【交付内容】＝ 两个文件加起来
+#   ⇒ ★ S1（数字零改动）与 S2（标记不减）必须把两个文件【拼起来】与基线那份单文件比
+#   ⇒ ★ 否则「细节搬到详稿」会被误判成「读数被删」「限定条款被删」
+COMPOUND = {
+    "L1": ["papers/01_L1_PrematureConvergence_交差稿.md",
+           "papers/01_L1_注意力层归因_详稿_2026-10-25.md"],
+}
+
 # ★ 承载簇级声明的载体（★ 这些也必须同步 ⇒ 一处错全链）
 CLUSTER_CARRIERS = [
     "papers/00_论文簇总纲_交差版.md",
@@ -43,7 +52,9 @@ CLUSTER_CARRIERS = [
     "交付总览_人肉审版_2026-10-25.md",
 ]
 
-MARKS = ["⚠️", "【待完成】", "📌"]
+MARKS = ["【待完成】", "【待回查】"]   # ★ 2026-10-26：★ emoji 标记全部换成文字标记
+#   ★ ⚠️ / ✅ / 📌 已从正文移除（★ 它们是冗余前缀）⇒ ★ 只保留【待完成】与【待回查】两个可计数的状态标记
+#   ★ ⚠️ 原本同时兼表「限制」⇒ ★ 那部分语义现在由正文文字承担，★ 不再机械计数
 
 # ★ 每篇必须出现的核心公式标记（★ §0.4）
 CORE_FORMULA = {
@@ -228,7 +239,15 @@ def main():
 
     # ── S1 数字零改动 / S2 标记不减（逐篇 vs 基线）────────────────────
     for key, path in PAPERS.items():
-        cur = read(path)
+        # ★ COMPOUND 篇（★ ① = 主稿 + 详稿）⇒ ★ 拼起来读（★ 基线仍是改前那一份单文件）
+        if key in COMPOUND:
+            parts = [read(x) for x in COMPOUND[key]]
+            if any(x is None for x in parts):
+                fails.append(f"[S1/S2] {key}: 组成文件缺失 {COMPOUND[key]}")
+                continue
+            cur = "\n".join(parts)
+        else:
+            cur = read(path)
         base = git_show(head, path, baseline_dir)
         if cur is None:
             fails.append(f"[S1/S2] {key}: 文件不存在 {path}")
@@ -386,7 +405,8 @@ def main():
     # ── S9 / S10：★ ①篇注意力归因红线 + 稿内自撞（★ 审稿人 V1 提供）
     #   S9：★ 归因断言句，同行不带限定 ⇒ 判红
     #   S10：★ 「本文的主张」句必须带限定（★ 治"稿内自撞"：既说"判决悬置"又无条件归因）
-    l1 = read(PAPERS["L1"]) or ""
+    # ★ ① 篇 = 主稿 + 详稿（★ 两条都要受注意力红线约束）
+    l1 = "\n".join(x for x in (read(y) for y in COMPOUND["L1"]) if x) or ""
     viol, exempt_n = attr_violations(l1)
     viol = [(i, s[:88]) for i, s in viol]
     if viol:

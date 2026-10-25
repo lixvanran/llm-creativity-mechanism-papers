@@ -37,6 +37,10 @@ hr "② 重建 docx（★ 口径：★【已有 docx 的那个 md】⇒ ★ 覆�
 mapfile -t DOCX_MDS < <(git -c core.quotepath=false ls-files --cached --others --exclude-standard '*.docx' | grep -v '^baseline/' | sed 's/\.docx$/.md/')
 echo "  交付面 md：${#DOCX_MDS[@]} 个（★ 已排除 baseline/）"
 bash tools/build_docx.sh "${DOCX_MDS[@]}" 2>&1 | tail -1
+# ★ ① 篇的【详稿】是 2026-10-26 新增的交付面 md（★ 没有旧 docx 可反推）⇒ ★ 显式建一份
+if [ -f "papers/01_L1_注意力层归因_详稿_2026-10-25.md" ]; then
+  bash tools/build_docx.sh "papers/01_L1_注意力层归因_详稿_2026-10-25.md" 2>&1 | tail -1
+fi
 
 hr "③ embed 指纹"
 python3 - <<'PY'
