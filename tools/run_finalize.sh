@@ -112,6 +112,10 @@ print("✅ %d 个 docx：内嵌指纹 == 对应 md 的当前 sha（★ docx↔md
 for r, why in skipped[:6]: print("   （跳过 %s：%s）" % (r, why))
 PYEOF
 
+hr "⑧b 合订本（★ 生成 + 「没改一个字」判据）"
+python3 tools/build_anthology.py 2>&1 | tail -7
+python3 tools/check_anthology.py 2>&1 | tail -3
+
 hr "⑨ 提交（★ 打包器按 git ls-files 取内容集 ⇒ 必须先提交）"
 git add -A
 git -c user.name="Mavis" -c user.email="mavis@local" commit -q -m "★ 收口：四篇定稿 + docx 全量重建 + 交付态基线快照" || echo "（★ 无改动）"
