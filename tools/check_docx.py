@@ -21,6 +21,15 @@ def norm(s):
     # ★ pandoc 会把「反斜杠 + ASCII 标点」里的反斜杠吃掉（`B\*` ⇒ 渲染成 `B*`）
     #   ⇒ 归一化时必须做同一条规则，否则「单元格零丢失」会【假报】（2026-10-24 06_L3 实测）
     s=re.sub(r'\\([!\"#\$%&\'()*+,\-./:;<=>?@\[\\\]\^_`{|}~])',r'\1',s)
+    # ★ ★ md 侧的【markdown 链接标记】：★ pandoc 渲染后【只剩链接文字】⇒ 判据不剥就会假报 ★
+    #   ★ 实测（2026-10-26）：README 的「索引见 [DATASETS.md](DATASETS.md)」被误判成「丢 1 格」★★
+    #   ⇒ ★ 【code span 里的不能剥】：★ pandoc 对 code span 原样保留、★ 剥了会造成【假阴性】★★
+    _spans=[]
+    def _keep(m):
+        _spans.append(m.group(0)); return '\x00SPAN%d\x00' % (len(_spans)-1)
+    s = re.sub(r'(`+)(.*?)\1', _keep, s, flags=re.S)
+    s = re.sub(r'!?\[([^\]]*)\]\([^)]*\)', r'\1', s)
+    s = re.sub(r'\x00SPAN(\d+)\x00', lambda m: _spans[int(m.group(1))], s)
     s=re.sub(r'~~|</?br\s*/?>|\\\|','',s); s=re.sub(r'[*`]','',s)
     s=s.replace('“','"').replace('”','"').replace('‘',"'").replace('’',"'")
     return re.sub(r'\s+','',s)
