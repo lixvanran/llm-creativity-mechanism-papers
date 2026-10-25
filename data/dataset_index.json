@@ -56,7 +56,7 @@
       "sha256": "84db49c62e57fa2229976ad8020b2a0583dbabfe4c42ff762491cb5616ac9925"
     },
     "open_tasks": {
-      "bytes": 26883,
+      "bytes": 26924,
       "file": "data/open_tasks.jsonl",
       "format": "jsonl",
       "rows": 45,
@@ -71,7 +71,7 @@
         "注意": "columns 与 fields 按位置对应；★ 有些表的列名不同，★ 用 fields[0] 当编号",
         "粒度": "一条待取证任务"
       },
-      "sha256": "3443129b77173cdd698dcebd46b1b463289e4f05baf3a65d3af23cb9d52c35d4"
+      "sha256": "c5519e1d45f71a6a69075bbccd9d0e6359c3e81c272dc26c4135248c9c251ba1"
     },
     "pointer_migrations": {
       "bytes": 124,

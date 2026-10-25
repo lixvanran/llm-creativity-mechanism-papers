@@ -12,7 +12,7 @@
 | `audit_objects` | `data/audit_objects.jsonl` | jsonl | 23 | 11005 | `97955780faeb6b3f` |
 | `audit_verdicts` | `data/audit_verdicts.jsonl` | jsonl | 108 | 53626 | `be3859557d831220` |
 | `negative_results` | `data/negative_results.jsonl` | jsonl | 475 | 298359 | `84db49c62e57fa22` |
-| `open_tasks` | `data/open_tasks.jsonl` | jsonl | 45 | 26883 | `3443129b77173cdd` |
+| `open_tasks` | `data/open_tasks.jsonl` | jsonl | 45 | 26924 | `c5519e1d45f71a6a` |
 | `pointer_migrations` | `data/pointer_migrations.json` | json | 1 | 124 | `edb15e71a7f72501` |
 | `readings` | `data/readings.jsonl` | jsonl | 1678 | 1149330 | `7afe815faf742b4a` |
 
@@ -79,6 +79,15 @@
   - `source_class` —— 出处等级（一手材料/审稿留痕/复算底稿/改稿规格/前作基线）
   - `sources` —— 出处列表（文件 + 行号 + 等级）
 - **注意**：只收录【在仓内找得到出处】的 token；无出处的由 verify_new_readings.py 单独报
+
+## 怎么取这些文件
+
+| 情形 | 怎么取 |
+|---|---|
+| 正常网络 | `git clone https://github.com/lixvanran/llm-creativity-mechanism-papers.git` 后直接读 |
+| 只想拿一个小于 1 MB 的文件 | `GET /repos/lixvanran/llm-creativity-mechanism-papers/contents/<路径>?ref=main` |
+| 拿大于 1 MB 的文件（ `readings.jsonl` 约 1.1 MB） | contents API 不内联； 用 `GET /git/blobs/<blob sha>` 并带 `Accept: application/vnd.github.raw`， 或直接 clone |
+| 沙箱 / 受限网络 | `raw.githubusercontent.com` 可能被掐； 走 API 或 clone |
 
 ## 怎么用
 

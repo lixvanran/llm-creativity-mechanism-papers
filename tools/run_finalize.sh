@@ -130,6 +130,12 @@ bash tools/build_docx.sh 四篇正文合订本_2026-10-25.md 2>&1 | tail -3
 hr "⑧c 新增读数回源核验（★ v3.1 的「核不到 ⑧」★ 本轮补上）"
 python3 tools/verify_new_readings.py 2>&1 | tail -3
 
+# ★ ⑧d 过程数据包（★ 机器可读的那几张表）★ —— ★ 必须在这里重建、★
+#   ★ 否则 data/*.jsonl 会跟正文漂（★ 正文改一句、★ 表里的旧句还在 ⇒ 第三方读到错的口径）
+hr "⑧d 过程数据包（★ 生成 + 逐条回源 + 负向测试）"
+python3 tools/build_data_package.py 2>&1 | tail -8
+python3 tools/check_data_package.py --negative 2>&1 | tail -6
+
 hr "⑨ 提交（★ 打包器按 git ls-files 取内容集 ⇒ 必须先提交）"
 git add -A
 git -c user.name="Mavis" -c user.email="mavis@local" commit -q -m "★ 收口：四篇定稿 + docx 全量重建 + 交付态基线快照" || echo "（★ 无改动）"
