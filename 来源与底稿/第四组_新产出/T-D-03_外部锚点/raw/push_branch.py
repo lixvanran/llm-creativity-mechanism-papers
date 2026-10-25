@@ -117,7 +117,7 @@ def main():
         p = os.path.join(ROOT, f)
         lb = open(p, "rb").read()
         try:
-            rb = api("/repos/%s/contents/%s" % (REPO, urllib.parse.quote(f)), raw=True)
+            rb = api("/repos/%s/contents/%s?ref=%s" % (REPO, urllib.parse.quote(f), urllib.parse.quote(BRANCH)), raw=True)
         except Exception as e:
             print("   ✘ 拉取失败 %s：%s" % (f, str(e)[:80])); allok = False; continue
         same = (hashlib.sha256(lb).hexdigest() == hashlib.sha256(rb).hexdigest())
