@@ -1,0 +1,347 @@
+{
+  "report": {
+    "adv": {
+      "batch": "adv",
+      "n_raw": 22,
+      "arms": {
+        "B0_bestof3": {
+          "n_raw": 5,
+          "n_valid": 5,
+          "n_failed": 0,
+          "n_instrument_zero": 0,
+          "n_true_zero": 1,
+          "n_nonzero": 4,
+          "nonzero_ratio": 0.8,
+          "n_missing_field": 0
+        },
+        "B0_direct": {
+          "n_raw": 5,
+          "n_valid": 5,
+          "n_failed": 0,
+          "n_instrument_zero": 0,
+          "n_true_zero": 2,
+          "n_nonzero": 3,
+          "nonzero_ratio": 0.6,
+          "n_missing_field": 0
+        },
+        "B0_frames_vote": {
+          "n_raw": 4,
+          "n_valid": 4,
+          "n_failed": 0,
+          "n_instrument_zero": 0,
+          "n_true_zero": 0,
+          "n_nonzero": 4,
+          "nonzero_ratio": 1.0,
+          "n_missing_field": 0
+        },
+        "W_design_L2": {
+          "n_raw": 4,
+          "n_valid": 2,
+          "n_failed": 2,
+          "n_instrument_zero": 0,
+          "n_true_zero": 0,
+          "n_nonzero": 2,
+          "nonzero_ratio": 1.0,
+          "n_missing_field": 0
+        },
+        "W_train_L3": {
+          "n_raw": 4,
+          "n_valid": 3,
+          "n_failed": 1,
+          "n_instrument_zero": 0,
+          "n_true_zero": 0,
+          "n_nonzero": 3,
+          "nonzero_ratio": 1.0,
+          "n_missing_field": 0
+        }
+      },
+      "zero_distribution": {
+        "n_cells_with_rep": 8,
+        "sigma_per_cell": [
+          0.5,
+          3.5,
+          0.0,
+          1.5,
+          2.0,
+          2.5,
+          2.0,
+          0.5
+        ],
+        "median_rep_sigma": 1.75,
+        "note": "★ H0 来源 = 同臂同题不同 rep（总则第 3 条）"
+      }
+    },
+    "main_big": {
+      "batch": "main_big",
+      "n_raw": 20,
+      "arms": {
+        "B0_bestof3": {
+          "n_raw": 4,
+          "n_valid": 4,
+          "n_failed": 0,
+          "n_instrument_zero": 0,
+          "n_true_zero": 0,
+          "n_nonzero": 4,
+          "nonzero_ratio": 1.0,
+          "n_missing_field": 0
+        },
+        "B0_direct": {
+          "n_raw": 4,
+          "n_valid": 4,
+          "n_failed": 0,
+          "n_instrument_zero": 0,
+          "n_true_zero": 0,
+          "n_nonzero": 4,
+          "nonzero_ratio": 1.0,
+          "n_missing_field": 0
+        },
+        "B0_frames_vote": {
+          "n_raw": 4,
+          "n_valid": 1,
+          "n_failed": 0,
+          "n_instrument_zero": 3,
+          "n_true_zero": 0,
+          "n_nonzero": 1,
+          "nonzero_ratio": 1.0,
+          "n_missing_field": 0
+        },
+        "W_design_L2": {
+          "n_raw": 4,
+          "n_valid": 2,
+          "n_failed": 2,
+          "n_instrument_zero": 0,
+          "n_true_zero": 0,
+          "n_nonzero": 2,
+          "nonzero_ratio": 1.0,
+          "n_missing_field": 0
+        },
+        "W_train_L3": {
+          "n_raw": 4,
+          "n_valid": 4,
+          "n_failed": 0,
+          "n_instrument_zero": 0,
+          "n_true_zero": 0,
+          "n_nonzero": 4,
+          "nonzero_ratio": 1.0,
+          "n_missing_field": 0
+        }
+      },
+      "zero_distribution": {
+        "n_cells_with_rep": 6,
+        "sigma_per_cell": [
+          0.0,
+          0.5,
+          2.5,
+          1.0,
+          0.0,
+          2.0
+        ],
+        "median_rep_sigma": 0.75,
+        "note": "★ H0 来源 = 同臂同题不同 rep（总则第 3 条）"
+      }
+    },
+    "main_grok": {
+      "batch": "main_grok",
+      "n_raw": 16,
+      "arms": {
+        "B0_bestof3": {
+          "n_raw": 4,
+          "n_valid": 4,
+          "n_failed": 0,
+          "n_instrument_zero": 0,
+          "n_true_zero": 1,
+          "n_nonzero": 3,
+          "nonzero_ratio": 0.75,
+          "n_missing_field": 0
+        },
+        "B0_direct": {
+          "n_raw": 4,
+          "n_valid": 4,
+          "n_failed": 0,
+          "n_instrument_zero": 0,
+          "n_true_zero": 0,
+          "n_nonzero": 4,
+          "nonzero_ratio": 1.0,
+          "n_missing_field": 0
+        },
+        "W_design_L2": {
+          "n_raw": 4,
+          "n_valid": 2,
+          "n_failed": 2,
+          "n_instrument_zero": 0,
+          "n_true_zero": 1,
+          "n_nonzero": 1,
+          "nonzero_ratio": 0.5,
+          "n_missing_field": 0
+        },
+        "W_train_L3": {
+          "n_raw": 4,
+          "n_valid": 2,
+          "n_failed": 2,
+          "n_instrument_zero": 0,
+          "n_true_zero": 1,
+          "n_nonzero": 1,
+          "nonzero_ratio": 0.5,
+          "n_missing_field": 0
+        }
+      },
+      "zero_distribution": {
+        "n_cells_with_rep": 4,
+        "sigma_per_cell": [
+          0.0,
+          1.0,
+          0.0,
+          2.5
+        ],
+        "median_rep_sigma": 0.5,
+        "note": "★ H0 来源 = 同臂同题不同 rep（总则第 3 条）"
+      }
+    },
+    "main_mm25": {
+      "batch": "main_mm25",
+      "n_raw": 16,
+      "arms": {
+        "B0_bestof3": {
+          "n_raw": 4,
+          "n_valid": 4,
+          "n_failed": 0,
+          "n_instrument_zero": 0,
+          "n_true_zero": 0,
+          "n_nonzero": 4,
+          "nonzero_ratio": 1.0,
+          "n_missing_field": 0
+        },
+        "B0_direct": {
+          "n_raw": 4,
+          "n_valid": 4,
+          "n_failed": 0,
+          "n_instrument_zero": 0,
+          "n_true_zero": 0,
+          "n_nonzero": 4,
+          "nonzero_ratio": 1.0,
+          "n_missing_field": 0
+        },
+        "W_design_L2": {
+          "n_raw": 4,
+          "n_valid": 3,
+          "n_failed": 1,
+          "n_instrument_zero": 0,
+          "n_true_zero": 0,
+          "n_nonzero": 3,
+          "nonzero_ratio": 1.0,
+          "n_missing_field": 0
+        },
+        "W_train_L3": {
+          "n_raw": 4,
+          "n_valid": 2,
+          "n_failed": 2,
+          "n_instrument_zero": 0,
+          "n_true_zero": 0,
+          "n_nonzero": 2,
+          "nonzero_ratio": 1.0,
+          "n_missing_field": 0
+        }
+      },
+      "zero_distribution": {
+        "n_cells_with_rep": 5,
+        "sigma_per_cell": [
+          0.0,
+          3.0,
+          1.0,
+          0.5,
+          1.0
+        ],
+        "median_rep_sigma": 1.0,
+        "note": "★ H0 来源 = 同臂同题不同 rep（总则第 3 条）"
+      }
+    },
+    "main": {
+      "batch": "main",
+      "n_raw": 3,
+      "arms": {
+        "B0_bestof3": {
+          "n_raw": 1,
+          "n_valid": 1,
+          "n_failed": 0,
+          "n_instrument_zero": 0,
+          "n_true_zero": 0,
+          "n_nonzero": 1,
+          "nonzero_ratio": 1.0,
+          "n_missing_field": 0
+        },
+        "B0_direct": {
+          "n_raw": 1,
+          "n_valid": 0,
+          "n_failed": 0,
+          "n_instrument_zero": 1,
+          "n_true_zero": 0,
+          "n_nonzero": 0,
+          "nonzero_ratio": null,
+          "n_missing_field": 0
+        },
+        "W_design_L2": {
+          "n_raw": 1,
+          "n_valid": 0,
+          "n_failed": 1,
+          "n_instrument_zero": 0,
+          "n_true_zero": 0,
+          "n_nonzero": 0,
+          "nonzero_ratio": null,
+          "n_missing_field": 0
+        }
+      },
+      "zero_distribution": {
+        "n_cells_with_rep": 0,
+        "median_rep_sigma": null,
+        "note": "★ 无同臂同题多 rep ⇒ 本批零分布不可得"
+      }
+    },
+    "fv2": {
+      "batch": "fv2",
+      "n_raw": 4,
+      "arms": {
+        "B0_frames_vote": {
+          "n_raw": 4,
+          "n_valid": 4,
+          "n_failed": 0,
+          "n_instrument_zero": 0,
+          "n_true_zero": 0,
+          "n_nonzero": 4,
+          "nonzero_ratio": 1.0,
+          "n_missing_field": 0
+        }
+      },
+      "zero_distribution": {
+        "n_cells_with_rep": 2,
+        "sigma_per_cell": [
+          1.5,
+          0.5
+        ],
+        "median_rep_sigma": 1.0,
+        "note": "★ H0 来源 = 同臂同题不同 rep（总则第 3 条）"
+      }
+    },
+    "mb2": {
+      "batch": "mb2",
+      "n_raw": 1,
+      "arms": {
+        "B0_direct": {
+          "n_raw": 1,
+          "n_valid": 1,
+          "n_failed": 0,
+          "n_instrument_zero": 0,
+          "n_true_zero": 0,
+          "n_nonzero": 1,
+          "nonzero_ratio": 1.0,
+          "n_missing_field": 0
+        }
+      },
+      "zero_distribution": {
+        "n_cells_with_rep": 0,
+        "median_rep_sigma": null,
+        "note": "★ 无同臂同题多 rep ⇒ 本批零分布不可得"
+      }
+    }
+  },
+  "fails": []
+}
