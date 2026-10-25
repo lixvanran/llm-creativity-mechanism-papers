@@ -1,0 +1,15 @@
+   已造：papers/a.md（v1）、papers/a.docx（内嵌 v1 指纹）、papers/old.docx（无指纹）
+════════ A（基线）：docx 与 md 同步 ⇒ 期望 ✅ ════════
+✅ 1 个 docx：内嵌指纹 == 对应 md 的当前 sha（★ docx↔md 同步）
+   （跳过 papers/old.docx：★ 无同名 md）
+   ⇒ 退出码=0
+
+════════ A2：docx 无指纹（老版 docx）⇒ 期望【跳过】而不是红 ════════
+✅ 1 个 docx：内嵌指纹 == 对应 md 的当前 sha（★ docx↔md 同步）
+   （跳过 papers/old.docx：★ 无同名 md）
+   ⇒ 退出码=0  （★ skipped 列表里有 old.docx 吗？）
+
+════════ B：★ md 改了、docx 指纹没重嵌 ⇒ 期望红 ════════
+⛔ docx ↔ md 不同步（★ 读者读 docx 会读到旧内容）：
+   papers/a.docx  ★ 指纹 dc016ff1690a57b5 ≠ md 5953f5144ed1183c
+   ⇒ 退出码=1  （★ 期望 1 = 能红）

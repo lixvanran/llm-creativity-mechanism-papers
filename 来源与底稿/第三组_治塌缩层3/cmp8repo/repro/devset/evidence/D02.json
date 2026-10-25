@@ -1,0 +1,218 @@
+{
+  "task_id": "D02",
+  "title": "反向代理网关状态码语义判断",
+  "domain": "技术/网络运维排障",
+  "ask": "网关：①上游无效响应→502 ②上游未响应→504 ③后端过载→503 ④请求过多→503。哪几项正确？",
+  "conclusion_space": [
+    {
+      "id": "C1",
+      "text": "①成立：502 Bad Gateway 的语义是网关或代理从上游（入站）服务器收到了无效响应"
+    },
+    {
+      "id": "C2",
+      "text": "②成立：504 Gateway Timeout 的语义是网关或代理未能在预期时间内从上游获得响应"
+    },
+    {
+      "id": "C3",
+      "text": "③成立：503 Service Unavailable 表示服务端因临时过载或计划内维护当前无法处理请求，属临时状态"
+    },
+    {
+      "id": "C4",
+      "text": "④不成立：请求过多对应 429 Too Many Requests，属 4xx 客户端错误，不应映射成 503"
+    },
+    {
+      "id": "C5",
+      "text": "502、503、504 同属 5xx 服务端错误，出问题的是服务端一侧，而不是请求本身"
+    }
+  ],
+  "key_conclusions": [
+    "C1",
+    "C2",
+    "C4"
+  ],
+  "evidence": [
+    {
+      "id": "EV-01",
+      "text": "RFC 9110 中文译本 15.6.3 写明 502 是服务器作为网关或代理、当尝试满足请求时从入站服务器收到了无效响应。",
+      "source": {
+        "url": "https://segmentfault.com/a/1190000044079142",
+        "quote": "15.6.3 502 不良网关 502(不良网关)状态码表示,服务器作为网关或代理,当尝试满足请求时,从其访问的入站服务器收到了无效响应。",
+        "date": "2026-10-21"
+      }
+    },
+    {
+      "id": "EV-02",
+      "text": "RFC 9110 中文译本 15.6.5 写明 504 是服务器充当网关或代理时没有及时收到上游服务器的响应。",
+      "source": {
+        "url": "https://segmentfault.com/a/1190000044079142",
+        "quote": "15.6.5 504 网关超时 504(网关超时)状态码表示,服务器充当网关或代理时,没有及时收到其为完成请求而需要访问的上游服务器的响应。",
+        "date": "2026-10-21"
+      }
+    },
+    {
+      "id": "EV-03",
+      "text": "RFC 9110 中文译本 15.6.4 写明 503 是服务器当前由于暂时超载或是计划性维护而无法处理请求。",
+      "source": {
+        "url": "https://segmentfault.com/a/1190000044079142",
+        "quote": "15.6.4 503 服务不可用 503(服务不可用)状态码表示,服务器当前由于暂时超载或是计划性维护而无法处理请求,这种情况可能会在延迟一段时间后得到缓解。",
+        "date": "2026-10-21"
+      }
+    },
+    {
+      "id": "EV-04",
+      "text": "阿里云状态码表把 4xx 归为客户端错误、5xx 归为服务端错误，后者问题出在服务端。",
+      "source": {
+        "url": "https://help.aliyun.com/zh/openapi/developer-reference/http-status-codes",
+        "quote": "4xx(客户端错误) 请求存在语法问题或无法被满足,问题通常出在调用方。 5xx(服务端错误) 服务端未能完成一个表面上有效的请求,问题出在服务端。",
+        "date": "2026-10-21"
+      }
+    },
+    {
+      "id": "EV-05",
+      "text": "微软文档状态码表写明 502 Bad Gateway 是网关或代理从其上游服务器收到了无效响应。",
+      "source": {
+        "url": "https://learn.microsoft.com/bs-latn-ba/microsoft-cloud/dev/dev-proxy/concepts/http-5xx-api-errors",
+        "quote": "502 Bad Gateway A gateway or proxy got an invalid response from the server behind it",
+        "date": "2026-10-21"
+      }
+    },
+    {
+      "id": "EV-06",
+      "text": "微软文档状态码表写明 504 Gateway Timeout 是网关或代理未能在规定时间内从上游服务器得到响应。",
+      "source": {
+        "url": "https://learn.microsoft.com/bs-latn-ba/microsoft-cloud/dev/dev-proxy/concepts/http-5xx-api-errors",
+        "quote": "504 Gateway Timeout A gateway or proxy didn't get a response in time from the server behind it",
+        "date": "2026-10-21"
+      }
+    },
+    {
+      "id": "EV-07",
+      "text": "科普中国状态码表写明 502 是作为网关或代理的服务器尝试执行请求时从上游服务器接收到无效的响应。",
+      "source": {
+        "url": "https://www.kepuchina.cn/article/articleinfo?business_type=100&ar_id=345233",
+        "quote": "502 Bad Gateway 作为网关或者代理工作的服务器尝试执行请求时,从上游服务器接收到无效的响应。",
+        "date": "2026-10-21"
+      }
+    },
+    {
+      "id": "EV-08",
+      "text": "科普中国状态码表写明 504 是作为网关或代理的服务器尝试执行请求时未能及时从上游服务器收到响应。",
+      "source": {
+        "url": "https://www.kepuchina.cn/article/articleinfo?business_type=100&ar_id=345233",
+        "quote": "504 Gateway Timeout 作为网关或者代理工作的服务器尝试执行请求时,未能及时从上游服务器(URI标识出的服务器,例如HTTP、FTP、LDAP)或者辅助服务器(例如DNS)收到响应。",
+        "date": "2026-10-21"
+      }
+    },
+    {
+      "id": "EV-09",
+      "text": "科普中国状态码表写明 503 是由于临时的服务器维护或过载导致当前无法处理请求，且该状况是临时的。",
+      "source": {
+        "url": "https://www.kepuchina.cn/article/articleinfo?business_type=100&ar_id=345233",
+        "quote": "503 Service Unavailable 由于临时的服务器维护或者过载,服务器当前无法处理请求。这个状况是临时的,并且将在一段时间以后恢复。",
+        "date": "2026-10-21"
+      }
+    },
+    {
+      "id": "EV-10",
+      "text": "阿里云状态码表写明 503 是服务端因临时过载或计划内维护当前无法处理请求，属临时状态。",
+      "source": {
+        "url": "https://help.aliyun.com/zh/openapi/developer-reference/http-status-codes",
+        "quote": "503 Service Unavailable 服务不可用。服务端因临时过载或计划内维护,当前无法处理请求。这是一种临时状态,响应中可能带Retry-After首部。",
+        "date": "2026-10-21"
+      }
+    },
+    {
+      "id": "EV-11",
+      "text": "阿里云状态码表写明 429 表示客户端在给定时间内发送的请求数超过限制，响应中可能带 Retry-After 首部。",
+      "source": {
+        "url": "https://help.aliyun.com/zh/openapi/developer-reference/http-status-codes",
+        "quote": "429 Too Many Requests 请求过多。客户端在给定时间内发送的请求数超过限制。响应中可能带Retry-After首部,指示建议的重试等待时间。",
+        "date": "2026-10-21"
+      }
+    },
+    {
+      "id": "EV-12",
+      "text": "MDN 状态码总表把 429 记为用户在给定的时间内发送了太多请求。",
+      "source": {
+        "url": "https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/",
+        "quote": "429 Too Many Requests 用户在给定的时间内发送了太多请求",
+        "date": "2026-10-21"
+      }
+    }
+  ],
+  "evidence_second_source": [
+    {
+      "id": "EV-01",
+      "status": "confirmed",
+      "url": "https://www.rfcinfo.com/rfc-9110/15-status-codes",
+      "note": "RFC 9110 英文原文 15.6.3 同义表述：网关从入站服务器收到了无效响应。"
+    },
+    {
+      "id": "EV-02",
+      "status": "confirmed",
+      "url": "https://www.rfcinfo.com/rfc-9110/15-status-codes",
+      "note": "RFC 9110 英文原文 15.6.5 同义表述：没有及时收到上游服务器响应。"
+    },
+    {
+      "id": "EV-03",
+      "status": "confirmed",
+      "url": "https://www.rfcinfo.com/rfc-9110/15-status-codes",
+      "note": "RFC 9110 英文原文 15.6.4 同义表述：暂时超载或计划性维护导致无法处理请求。"
+    },
+    {
+      "id": "EV-04",
+      "status": "confirmed",
+      "url": "https://www.rfcinfo.com/rfc-9110/15-status-codes",
+      "note": "RFC 9110 英文原文同样把 4xx 定义为客户端错误、5xx 定义为服务端错误。"
+    },
+    {
+      "id": "EV-05",
+      "status": "confirmed",
+      "url": "https://segmentfault.com/a/1190000044079142",
+      "note": "RFC 9110 中文译本 15.6.3 与科普中国状态码表给出同一语义。"
+    },
+    {
+      "id": "EV-06",
+      "status": "confirmed",
+      "url": "https://www.kepuchina.cn/article/articleinfo?business_type=100&ar_id=345233",
+      "note": "科普中国状态码表同义表述：作为网关或代理未能及时从上游服务器收到响应。"
+    },
+    {
+      "id": "EV-07",
+      "status": "confirmed",
+      "url": "https://www.rfcinfo.com/rfc-9110/15-status-codes",
+      "note": "RFC 9110 英文原文 15.6.3 与科普中国表述一致。"
+    },
+    {
+      "id": "EV-08",
+      "status": "confirmed",
+      "url": "https://segmentfault.com/a/1190000044079142",
+      "note": "RFC 9110 中文译本 15.6.5 同义表述：没有及时收到上游服务器响应。"
+    },
+    {
+      "id": "EV-09",
+      "status": "confirmed",
+      "url": "https://help.aliyun.com/zh/openapi/developer-reference/http-status-codes",
+      "note": "阿里云状态码表同义表述：因临时过载或计划内维护当前无法处理请求。"
+    },
+    {
+      "id": "EV-10",
+      "status": "confirmed",
+      "url": "https://www.rfcinfo.com/rfc-9110/15-status-codes",
+      "note": "RFC 9110 英文原文 15.6.4 同义表述：暂时过载或计划性维护。"
+    },
+    {
+      "id": "EV-11",
+      "status": "confirmed",
+      "url": "https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/",
+      "note": "MDN 状态码总表在客户端错误一节列出 429 Too Many Requests，含义为用户在给定时间内发送了太多请求。"
+    },
+    {
+      "id": "EV-12",
+      "status": "confirmed",
+      "url": "https://help.aliyun.com/zh/openapi/developer-reference/http-status-codes",
+      "note": "阿里云状态码表同样写明 429 表示请求过多，并把其定义来源标注为 RFC 6585。"
+    }
+  ],
+  "notes": "12 条依据全部是状态码语义的原句引用：RFC 9110 中文译本 3 条（SegmentFault）、科普中国状态码表 3 条、阿里云状态码表 3 条、微软文档 5xx 状态码表 2 条、MDN 状态码总表 1 条；每条 quote 都截到 120 字以内。RFC 9110 英文原文（rfcinfo 镜像的 §15 Status Codes）作为每条语义类依据的第二来源逐条比对，第二来源 12/12 全部 confirmed。④ 是唯一的错项：请求过多在标准里是 429（4xx），而 503 的触发条件是服务端自身临时过载或计划内维护（EV-03、EV-09、EV-10），两者都带 Retry-After 首部，正是排障时容易混淆的一对。C5 不是题面直接问的编号项，但它是 502/503/504 的共同属性，排障结论必须点出，故单列为结论并由 EV-04、EV-03 支撑。没有把『502 与 504 的重试策略（幂等方法才可自动重试）』写进依据包：Microsoft Learn 那段可引，但它属于重试策略而非状态码语义，会把题目拉向另一个领域，故只在此处说明为何未收。"
+}

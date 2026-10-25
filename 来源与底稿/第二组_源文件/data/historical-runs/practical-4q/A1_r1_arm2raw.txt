@@ -1,0 +1,133 @@
+Problem: 湖北考生，物理类620分，想学AI，应当如何选择大学？
+Reframed for divergence: 湖北考生，高考理科620分，希望在人工智能方向深造，应当如何选择大学？
+
+Wide set
+  delegated-to-collective-signals plays
+    - Drop a pheromone on every university bulletin board you visit; let the trail strength pick your shortlist. [N8 V1 F1]
+    - Let a hundred WeChat groups vote stochastically: the school mentioned most by chance rises. [N7 V1 F1]
+    - Follow the roommate who picked first and don't reason. [N7 V1 F1]
+    - Random walk across 20 university websites, double-down on whichever campus tour queue is longest. [N7 V1 F1]
+    - Pick the lowest-tier AI program that accepts 620 and hope it's a sleeper. [N6 V2 F2]
+  logistics-throughput plays
+    - Choose the school whose AI lab releases the most papers per yuan spent on tuition. [N6 V3 F4]
+    - Pick whichever university's name appears on the most alumni LinkedIn profiles for Wuhan AI firms. [N5 V3 F5]
+    - Pick a school near a Huawei/Baidu office and skip rankings entirely. [N5 V5 F5]
+    - Treat each university as a logistics hub: rank them by AI 'throughput' — papers, graduates placed at top labs, faculty citations — rather than brand aura. [N6 V7 F8]
+    - Model the return loop: pick a university with strong industry return channels (internships → return offers at AI firms), not just academic output. [N5 V7 F8]
+    - Apply last-mile optimization: choose the school whose AI lab is closest to where you already have family, language dialect, and social freight — drop-off friction matters. [N6 V5 F5]
+  bypass-the-brand plays
+    - Chase a 985 brand-name school with no AI faculty, then transfer internally. [N5 V3 F3]
+    - Study applied math at a mid-tier school; out-research the CS kids for grad school. [N5 V6 F6]
+    - Join a non-CS department (cognitive science, linguistics) that secretly does AI. [N7 V3 F4]
+    - Enroll in a 'data science' label, never say the word AI on the resume. [N5 V3 F2]
+    - Use a hub-and-spoke model: pick a mid-tier AI-strong university (spoke) feeding into a Beijing/Shanghai/US grad program (hub) via a documented transfer/pipeline. [N6 V5 F7]
+    - Batch applications by 'shipping lane': group universities into research-direction clusters (CV, NLP, robotics, systems) and apply to one per lane. [N6 V5 F5]
+    - Just-in-time enrollment: defer the AI specialization until master's, spending undergrad years stockpiling math and CS at the highest-ranked school that admits you. [N5 V6 F7]
+  skip-the-university plays
+    - Build a personal AGI research cluster in a Wuhan warehouse and skip university entirely, recruiting professors as consultants. [N9 V1 F1]
+    - Found a private AI institute chartered as a degree-granting university, hiring top-tier faculty away from Tsinghua and MIT. 
+    - Embed for ten years in three sequential labs: one robotics lab, one foundation-model lab, one alignment org — pay your way into all three. [N8 V1 F1]
+    - Construct a planetary-scale multimodal corpus unique to your name — Chinese-language AI has gaps a single donor could close. [N9 V1 F2]
+    - Buy a small island, install a compute facility powered by dedicated nuclear, and run a one-person research program with no publication pressure. [N9 V0 F0]
+    - Hire a private tutor team of twenty retired AI professors to design a custom decade-long curriculum tailored only to you. [N8 V1 F1]
+    - Do not choose a university; choose a mentor whose published papers you would want to extend. [N7 V5 F7]
+    - Apply as an apprentice to a provincial AI lab that hires directly, bypassing the gaokao admission machinery. [N7 V1 F1]
+    - Build a public model on GitHub; let the university apply to you. [N8 V2 F2]
+    - Enroll in a foreign open-course AI degree taught in Chinese, paid only after you earn. [N6 V3 F3]
+    - Form a three-person study collective and treat any library as your campus. [N6 V2 F2]
+    - Skip the major; minor in AI while majoring in whatever field the model will actually be applied to in 2030. [N7 V5 F6]
+
+Converge — shortlist
+
+Traps (watch-outs, not verdicts)
+  ⚠ Drop a pheromone on every university bulletin board you visit; let the trail strength pick your shortlist.
+    Pheromone strength conflates bulletin-board visit frequency with school quality; you will collect more trails for schools with aggressive marketing, not better AI labs.
+    + Forces serendipity into a process that usually suffers from information overload, which is a real cognitive cost for high-school students.
+  ⚠ Let a hundred WeChat groups vote stochastically: the school mentioned most by chance rises.
+    WeChat group consensus is dominated by parents chasing 985 brand names; stochastic sampling on a biased distribution just reproduces the bias with extra noise.
+    + Acknowledges that parental/peer pressure skews decision-making and tries to flatten it.
+  ⚠ Follow the roommate who picked first and don't reason.
+    Your roommate is picking from the same constrained 620-point set with less information than you; copying them is dependency masquerading as delegation.
+    + Names the social-proof trap honestly, even if it proposes the wrong escape.
+  ⚠ Choose the school whose AI lab releases the most papers per yuan spent on tuition.
+    Papers-per-yuan collapses quality and quantity; a Chinese university AI lab with strong industry funding can publish 200 mediocre papers and outscore a smaller but sharper program. Metric needs weighting by venue.
+    + Reframes the question from prestige to research productivity per dollar, which is closer to what actually compounds for an AI career.
+  ⚠ Pick whichever university's name appears on the most alumni LinkedIn profiles for Wuhan AI firms.
+    LinkedIn penetration in China is low and biased toward returnees; Wuhan alumni at Wuhan firms are partly self-selection of students who already planned to stay, not causation from the school.
+    + Targets job-market signal directly; Wuhan AI firms are the most likely first employer for a Hubei student, so local alumni density is a real indicator of useful referral networks.
+  ⚠ Random walk across 20 university websites, double-down on whichever campus tour queue is longest.
+    Tour queue length at Hubei admissions events mostly tracks parents' willingness to bus in, not the academic strength of the program.
+    + Picks up on the fact that admitted-student-day turnout is unfiltered market interest from peers of similar caliber.
+  ⚠ Pick the lowest-tier AI program that accepts 620 and hope it's a sleeper.
+    'Sleeper picks' in Chinese AI are mostly schools with one star faculty who retire, lose grants, or get poached within your four years; the variance is asymmetric and downside-weighted.
+    + Names the real risk of 620 points: being shut out of top AI programs and needing a fallback strategy rather than reaching.
+  ⚠ Chase a 985 brand-name school with no AI faculty, then transfer internally.
+    Internal transfer into CS/AI at top 985s is GPA-gated and competitive against the original admit cohort; many 'transfer-in' policies are paper-only and admit <5% of applicants.
+    + The brand premium of 985 is real for first-job resume screening in China; leveraging it then redirecting internally is a legitimate strategy if transfer rules exist.
+  ⚠ Study applied math at a mid-tier school; out-research the CS kids for grad school.
+    Requires discipline and explicit self-teaching of CS fundamentals; without a structured CS minor or serious side projects, applied-math grads signal 'quant' to AI hiring managers and get filtered.
+    + Math foundations dominate modern AI (optimization, linear algebra, statistics) and applied-math undergrads routinely beat CS undergrads on the qualifying exams that gate top ML PhDs.
+  ⚠ Pick a school near a Huawei/Baidu office and skip rankings entirely.
+    Collapses to 'go to BUPT/SUSTech/ZJU without checking the actual AI faculty'; proximity is necessary but far from sufficient — schools 30km from a Huawei office still have zero intern placements.
+    + Geographic proximity to AI employers is a real signal of internship density; Wuhan, Shenzhen, Beijing, Hangzhou all have documented Huawei/Baidu/Tencent pipelines.
+  ⚠ Join a non-CS department (cognitive science, linguistics) that secretly does AI.
+    For a 620 gaokao student in physics-track Hubei, these programs often live inside 985 CS schools where the admission cutoff is higher than the student's score range — the 'hidden' department is not actually hidden from admissions.
+    + There genuinely are strong AI groups hiding in cognitive science and linguistics departments in China (e.g., Tsinghua's cognitive psych lab, PKU's computational linguistics); the interdisciplinary on-ramp is real.
+  ⚠ Enroll in a 'data science' label, never say the word AI on the resume.
+    Deceptive signaling burns you when you actually want to do AI research; grad school admissions committees read past labels and want to see AI coursework, not euphemisms.
+    + Correctly observes that 'AI' has become a noisy buzzword and that 'data science' on a transcript is currently more legible to some recruiters.
+  ⚠ Treat each university as a logistics hub: rank them by AI 'throughput' — papers, graduates placed at top labs, faculty citations — rather than brand aura.
+    Throughput metrics require normalization; raw paper counts reward large labs, citations reward English-language advantage, graduate-placement counts reward schools that send everyone to grad school whether the candidate fit. Needs careful weighting, not raw ranking.
+    + Directly addresses the actual decision: pick on measurable throughput — papers, placements, citations — instead of brand aura, which is exactly what a 620-point applicant should optimize against.
+  ⚠ Use a hub-and-spoke model: pick a mid-tier AI-strong university (spoke) feeding into a Beijing/Shanghai/US grad program (hub) via a documented transfer/pipeline.
+    'Documented pipeline' is mostly fictional at Chinese universities; very few mid-tier schools have formal articulation agreements with Tsinghua/PKU/MSRA for grad placement, so 'pipeline' usually means 'cold-applying students who happened to come from this school'.
+    + Names the realistic 620-point trajectory: undergrad at a place that feeds you somewhere better, rather than pretending the gaokao result unlocks a top-5 AI program directly.
+  ⚠ Batch applications by 'shipping lane': group universities into research-direction clusters (CV, NLP, robotics, systems) and apply to one per lane.
+    Specialization-by-direction assumes you know what you want to work on at 18; most strong undergrads change subfield twice. The lane-locking risks being wrong about your interests before you've seen the field.
+    + Correct that AI is too broad to optimize on one axis and that applying by research-direction cluster is more honest than applying by overall rank.
+  ⚠ Just-in-time enrollment: defer the AI specialization until master's, spending undergrad years stockpiling math and CS at the highest-ranked school that admits you.
+    'Just defer' requires that the high-ranked non-AI school actually offers the math/CS electives you need to remain competitive for AI master's programs; many top schools lock popular CS courses behind CS-major status.
+    + Recognizes that 620 cannot buy a top AI undergrad slot but can buy a top general STEM slot at a higher-ranked school, which compounds for master's applications later.
+  ⚠ Model the return loop: pick a university with strong industry return channels (internships → return offers at AI firms), not just academic output.
+    Return-offer pipelines are dominated by schools with existing recruiter relationships; the pipeline is sticky to legacy partners and shifts slowly, so what's strong now may weaken in 4 years when you actually graduate.
+    + For a Hubei student aiming at industry AI — not academia — internship-to-return-offer pipelines are the highest-leverage selection criterion, and most ranking systems ignore them.
+  ⚠ Apply last-mile optimization: choose the school whose AI lab is closest to where you already have family, language dialect, and social freight — drop-off friction matters.
+    Optimizes for comfort over growth; for AI careers specifically, the highest-opportunity nodes are Beijing/Shanghai/HK/Singapore, and treating family proximity as primary may close the doors that 620 has left barely open.
+    + Underrated consideration; social friction and dialect/regional fit meaningfully affect 4-year throughput, and 'last-mile' loss from homesickness or family obligations is real and unmeasured.
+  ⚠ Build a personal AGI research cluster in a Wuhan warehouse and skip university entirely, recruiting professors as consultants.
+    Founding a research operation requires capital, compute, and credentials that an 18-year-old without a degree cannot mobilize; 'recruiting professors as consultants' is not a thing a Wuhan warehouse can credibly do.
+    + At least honestly rejects the gaokao framing entirely, which is rare and refreshing even if the proposal is absurd.
+  ⚠ Embed for ten years in three sequential labs: one robotics lab, one foundation-model lab, one alignment org — pay your way into all three.
+    Requires either independent wealth or three consecutive institutions willing to fund you; 'paying your way' into alignment orgs that mostly take PhDs is not realistic at 18.
+    + Implicitly admits the gaokao selection is largely random by background and proposes to undo that by accumulating lab exposure over a decade.
+  ⚠ Construct a planetary-scale multimodal corpus unique to your name — Chinese-language AI has gaps a single donor could close.
+    A single donor's corpus, no matter how large, will not move frontier models without institutional distribution; the idea has the shape of research but not the ship-ability for an AI career.
+    + Correctly observes that Chinese-language multimodal data is underserved in frontier training and that single-donor corpora can have outsized research value (cf. Common Crawl, The Pile).
+  ⚠ Buy a small island, install a compute facility powered by dedicated nuclear, and run a one-person research program with no publication pressure.
+    A nuclear-powered private compute island is a multi-hundred-million-dollar capital project with regulatory and geopolitical blockers; this is not a plan, it's an aesthetic.
+    + Maximally honest about the publication-pressure distortion in academia, even if the proposed solution is pure fantasy.
+  ⚠ Hire a private tutor team of twenty retired AI professors to design a custom decade-long curriculum tailored only to you.
+    Twenty retired professors will not coordinate, will not be current, and will not credential you; retired ≠ active, and you cannot buy what top labs give away freely (admission + funded PhD).
+    + Identifies the actual scarce resource in elite AI education: faculty attention per student, which goes to ~5 people per advisor per cohort globally.
+  ⚠ Do not choose a university; choose a mentor whose published papers you would want to extend.
+    At 18 with a Hubei 620, you almost certainly cannot reach the specific mentor you want; mentor selection requires existing credentials, lab relationships, or cold-emailing skills you don't yet have. The strategy is right, the access problem is unsolved.
+    + Most genuinely correct non-obvious idea in the set: AI research careers are mentor-shaped, not institution-shaped; following a researcher with a paper lineage you want to extend beats school brand.
+  ⚠ Apply as an apprentice to a provincial AI lab that hires directly, bypassing the gaokao admission machinery.
+    Provincial AI labs in China hire credentialed researchers (PhDs, master's) — 'apprentice' is not a labor category; bypassing gaokao doesn't bypass the credential gate, it just relocates it.
+    + Names the real failure mode of the gaokao system: that it's a credentialing funnel disconnected from actual capability for the work.
+  ⚠ Build a public model on GitHub; let the university apply to you.
+    A GitHub model built by a Hubei high-schooler with 620-point credentials will not invert the admission system; the 'apply to me' dynamic only works for people with already-established track records.
+    + Correct that public portfolio work is the strongest signal in modern AI hiring, and that the 'university applies to you' inversion reflects how elite labs actually recruit.
+  ⚠ Enroll in a foreign open-course AI degree taught in Chinese, paid only after you earn.
+    Foreign degrees — even online — require a Chinese-credentialed co-degree or a domestic partner university for recognition by Chinese employers; an ISA to a foreign program does not solve the recognition problem for Hubei parents.
+    + ISA-style payment is genuinely innovative in education and correctly removes upfront capital as a barrier.
+  ⚠ Form a three-person study collective and treat any library as your campus.
+    You will not be credentialed for any purpose that matters (employment, grad school, visa) without enrollment; the collective can be part of the plan but cannot be the plan.
+    + Study partnerships are a real productivity multiplier and the lowest-cost way to access library resources without enrollment.
+  ⚠ Skip the major; minor in AI while majoring in whatever field the model will actually be applied to in 2030.
+    Predicting the 2030 application domain is overconfident; for a current student, deferring CS fundamentals to chase a guessed domain is high-variance — AI-flavored domain majors often have weak technical depth and leave you underpowered for either AI or the domain.
+    + Correct that AI is increasingly a layer applied to vertical domains (law, medicine, biology) and that domain-AI hybrids may outperform pure-AI candidates in the next decade.
+
+Focus — deepened branches
+Provocation
+  What if we took this seriously: Build a personal AGI research cluster in a Wuhan warehouse and skip university entirely, recruiting professors as consultants.

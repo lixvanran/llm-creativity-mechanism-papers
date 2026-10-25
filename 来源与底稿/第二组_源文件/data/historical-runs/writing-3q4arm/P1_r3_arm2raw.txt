@@ -1,0 +1,136 @@
+Problem: 写一篇文章，主题是：你如何看待现在的高考英语作文。
+Reframed for divergence: 你如何看待当前标准化大规模学术选拔考试中的英语写作部分（即用第二语言写作的应试环节）？
+
+Wide set
+  ant-colony grading attacks (rubric + graders as the target)
+    - Let scorers be pheromone-laying ants: each grader unconsciously reinforces cliché phrasings, slowly eroding every candidate's voice into a single colony scent. [N7 V5 F7]
+    - Exams as foraging trails: every released past paper is a pheromone trail future candidates blindly follow, even when the food source has moved. [N6 V4 F6]
+    - Drop central rubrics; let each grader be an ant with private taste, and let the score emerge from the swarm's averaged sting. [N8 V3 F7]
+    - The essay is a dead ant carried back to the colony — its meaning only retroactively assigned by whichever reader picks it up. [N7 V3 F6]
+    - Build the exam from the swarm's own waste — the most-reused essay sentences from ten years of submissions become the new prompt, breeding ever-thinner variations. [N9 V2 F6]
+  replace the essay format entirely (alternative-task plays)
+    - Stop testing writing. Test foragers: watch candidates locate, gather, and reorganize ten scrambled English fragments in fifteen minutes. [N6 V5 F6]
+    - Writing as a diagnostic puzzle where AI co-authors and the human only supplies the emotional vector [N6 V3 F5]
+    - Replace timed essays with a 72-hour async submission judged on revision trails visible in git history [N7 V4 F6]
+    - Score the essay by reading only the deletions and never the insertions [N9 V2 F7]
+    - Candidates respond in their L1 and a back-translation is graded for fidelity to thought, not Englishness [N6 V5 F6]
+    - The exam is a conversation with a non-English-speaking examiner conducted via broken pidgin on purpose [N8 V2 F5]
+    - Each applicant's essay is read only after every proctor has produced a counter-essay arguing the opposite [N7 V2 F6]
+  exploit the prompt / rubric from inside (jailbreak-the-test plays)
+    - Exploit cultural translation patterns by writing essays that pass lexical AI detection but encode hollow logical frames the rubric never measures. [N7 V4 F7]
+    - Sabotage the writing prompt's premise itself by obeying it too literally, turning the timed essay into procedural failure that exposes latent prompt ambiguity. [N7 V3 F6]
+    - Reverse the power dynamic: have candidates pre-memorize opaque idiomatic chunks that score high but mean nothing, breaking the gatekeeping logic from inside. [N6 V3 F6]
+    - Substitute the second-language effort cost by smuggling first-language cognitive load via hybrid code-switched drafts that detectors misclassify. [N7 V3 F5]
+    - Make the scoring rubric itself the essay topic, forcing graders into a meta-circular bind they cannot resolve in the time they have. [N8 V2 F6]
+    - Treat the timed essay as a distributed task: split the prompt across trained cohorts so each writes one paragraph optimized for one rubric criterion, defeating holistic grading. [N6 V4 F7]
+  absurd / deflationary one-liners (anti-essay as joke)
+    - Replace English essays with translation of a meme upside-down [N8 V2 F4]
+    - Time-boxed handwritten reply on a napkin held up to webcam [N6 V3 F4]
+    - Score them by which emoji they pick after the prompt [N7 V2 F3]
+    - Have them narrate their cooking in English for 3 minutes live [N5 V5 F4]
+    - Swap essay for typing 200 words from a friend's handwriting photo [N5 V4 F3]
+    - Pay the examinee to write anything; score by typos per minute [N6 V2 F3]
+    - Maybe the computer should let you talk into it instead of typing with fingers [N4 V4 F3]
+    - Why do they only let you write about boring things like graphs and letters [N5 V2 F5]
+    - You could just write in Chinese and the test could change it to English by magic [N6 V1 F3]
+    - Make the test be about your favorite animal and tell a story about it [N4 V5 F4]
+    - Why does everyone have to write the same thing at the same time [N5 V3 F5]
+    - Just read lots of English storybooks and then write whatever pops into your head [N3 V4 F3]
+
+Converge — shortlist
+
+Traps (watch-outs, not verdicts)
+  ⚠ Let scorers be pheromone-laying ants: each grader unconsciously reinforces cliché phrasings, slowly eroding every candidate's voice into a single colony scent.
+    The swarm framing flatters the reader into thinking the problem is organic and unfixable; in reality Chinese gaokao English raters are trained against this drift precisely because it's a known failure mode, so the metaphor overstates novelty of insight.
+    + Captures the homogenization critique better than almost any other idea — the ant-pheromone metaphor names a real mechanism (rater drift toward consensus phrasing) that policy papers acknowledge but rarely dramatize.
+  ⚠ Exams as foraging trails: every released past paper is a pheromone trail future candidates blindly follow, even when the food source has moved.
+    The 'food source has moved' line presupposes writing pedagogy has actually shifted in a way past papers can't capture; that's an unargued premise the essay would have to defend or it reads as aesthetic pessimism.
+    + Names a specific, falsifiable phenomenon — past-paper mimicry — that any gaokao teacher would recognize as the dominant study strategy, making it a diagnosis rather than just a provocation.
+  ⚠ Drop central rubrics; let each grader be an ant with private taste, and let the score emerge from the swarm's averaged sting.
+    Privatizing grader taste sounds libertarian rather than workable; without saying what 'swarm-averaged sting' looks like as a procedure, the idea reads like aesthetic preference dressed as policy.
+    + Most ideologically clean of the ant-cluster ideas — it draws a direct line between decentralized grading and the loss of individual voice, which is exactly the column's likely thesis.
+  ⚠ The essay is a dead ant carried back to the colony — its meaning only retroactively assigned by whichever reader picks it up.
+    Pure deconstruction with no constructive edge; an essay built on this risks being admired by lit-theory readers and dismissed by anyone asking 'so what should change,' which is most of the gaokao-policy audience.
+    + Productively destabilizes authorship — the idea that meaning is retroactively assigned by whichever reader picks it up is a real literary-theory move and lands the central critique of rubrics-as-fictions.
+  ⚠ Stop testing writing. Test foragers: watch candidates locate, gather, and reorganize ten scrambled English fragments in fifteen minutes.
+    Tests parsing ability, not writing; the column's stated interest is the essay itself, so swapping the artifact out is a tangent that answers a different question than the prompt asks.
+    + Concrete enough to actually pilot — a fragment-reorganization task is testable, scorably, and dodges the L1-translation problem gaokao English faces with rural candidates.
+  ⚠ Build the exam from the swarm's own waste — the most-reused essay sentences from ten years of submissions become the new prompt, breeding ever-thinner variations.
+    Operationally unhinged (you can't build next year's prompt from this year's submissions in the available prep cycle) and tonally risks looking like the author is mocking candidates rather than the system.
+    + Genuinely dark and original — recycling student cliché as the next prompt is a memetic-feedback argument that nobody in the gaokao-commentary space has made, and it predicts exactly the 'thinner variations' phenomenon teachers already complain about.
+  ⚠ Exploit cultural translation patterns by writing essays that pass lexical AI detection but encode hollow logical frames the rubric never measures.
+    Reads as a how-to for bad actors rather than a critique of the system; an editor would worry the column is teaching candidates to cheat, which is a liability even if the diagnosis is correct.
+    + Identifies a real and underreported gap: AI detectors check surface lexical features, not the logical scaffolding underneath, so a candidate gaming the detector leaves the rubric unmeasured.
+  ⚠ Sabotage the writing prompt's premise itself by obeying it too literally, turning the timed essay into procedural failure that exposes latent prompt ambiguity.
+    Literal-obedience sabotage is a one-joke idea; the column would need to spend most of its length on case examples or it collapses into a stunt.
+    + Targets prompt ambiguity directly — the claim that timed writing exposes latent prompt underspecification is testable and would generate a memorable, defensible thesis sentence.
+  ⚠ Reverse the power dynamic: have candidates pre-memorize opaque idiomatic chunks that score high but mean nothing, breaking the gatekeeping logic from inside.
+    As advice it's nihilistic; as critique it doesn't propose a replacement, so it lands as resigned rather than illuminating.
+    + Names the actual incentive structure candidates respond to — opaque high-scoring chunks — and inverts it cleanly from inside, which is a rare move in essays about the gaokao.
+  ⚠ Substitute the second-language effort cost by smuggling first-language cognitive load via hybrid code-switched drafts that detectors misclassify.
+    Too narrow and technical for the stated topic ('how you view gaokao English essays'); reads like a linguistics department note smuggled into an opinion column.
+    + Sophisticated sociolinguistic claim about L1 cognitive load in L2 timed writing — it's the only idea here that engages seriously with code-switching research rather than using it as decoration.
+  ⚠ Make the scoring rubric itself the essay topic, forcing graders into a meta-circular bind they cannot resolve in the time they have.
+    Comedy piece rather than an argument; an essay-length treatment would have to either escalate the joke past one paragraph or admit it's a bit, not a column.
+    + Genuinely funny and structurally interesting — forcing graders into a meta-circular bind is the rare idea here that turns the weapon (the rubric) against its makers.
+  ⚠ Treat the timed essay as a distributed task: split the prompt across trained cohorts so each writes one paragraph optimized for one rubric criterion, defeating holistic grading.
+    Requires a coordination mechanism (trained cohorts, signaling) that the gaokao's individual-exam format structurally prevents; the idea describes a different test, not a critique of this one.
+    + Diagnoses the real failure mode of holistic grading — paragraph-specialization defeats exactly the integrative reading the rubric claims to reward — and does so with operational specificity.
+  ⚠ Writing as a diagnostic puzzle where AI co-authors and the human only supplies the emotional vector
+    Endorses the very tool that's making the essay obsolete, which undercuts the column's implicit premise that the essay still matters.
+    + Names the human/AI division of labor that's already happening in practice — 'emotional vector' is a sharp phrase that captures what current AI co-writing lacks.
+  ⚠ Replace timed essays with a 72-hour async submission judged on revision trails visible in git history
+    Logistically absurd at gaokao volume (13M test-takers, 72-hour windows, infrastructure burden alone kills it) and ignores equity gaps in computer access.
+    + The git-revision-trail frame is original and would let the essay make a serious point about process vs. product that timed writing structurally hides.
+  ⚠ Score the essay by reading only the deletions and never the insertions
+    Has no plausible scoring procedure; the column would have to admit it's a thought-experiment, which costs it authority as a critique of the actual exam.
+    + The most genuinely surreal and memorable idea in the set — reading only deletions inverts the entire hermeneutic of assessment and is exactly the kind of line a literary critic would underline.
+  ⚠ Candidates respond in their L1 and a back-translation is graded for fidelity to thought, not Englishness
+    Collapses the gaokao English exam's reason for existing — if you grade thought, not English, why is this an English exam? — and the column would need to defend that contradiction or it reads confused.
+    + Engages seriously with the L1→L2 fidelity question that's central to any gaokao English critique; back-translation is a real translation-studies tool, not a gimmick.
+  ⚠ The exam is a conversation with a non-English-speaking examiner conducted via broken pidgin on purpose
+    Privileges a particular postcolonial stance that would alienate most of the gaokao stakeholder audience (parents, provincial education bureaus) and reads as condescension toward candidates' actual language.
+    + Pidgin-as-policy is a real position in World Englishes literature and the deliberate-broken-English frame would generate strong imagery in the essay.
+  ⚠ Each applicant's essay is read only after every proctor has produced a counter-essay arguing the opposite
+    Doubles grader workload and adds no selection signal beyond what good rubric training already provides; the column would have to defend why the cost is worth it.
+    + Strong adversarial-reading instinct — counter-essays as scoring inputs would expose exactly the weaknesses examiners usually hide behind holistic impressions.
+  ⚠ Replace English essays with translation of a meme upside-down
+    Signals cultural hipness in a way that will date fast and that older gatekeeping audiences (educators, parents) will read as unserious about the exam's stakes for candidates.
+    + Meme-translation is tonally daring and would mark the column as stylistically distinct from standard education commentary.
+  ⚠ Time-boxed handwritten reply on a napkin held up to webcam
+    Too reminiscent of COVID-era remote-exam jokes (and the dystopian-proctoring discourse already around it) to feel like a fresh take; risks sounding like a tweet rather than a column.
+    + Visceral — napkin-and-webcam captures the performative absurdity of timed assessment better than most abstractions, and would produce a strong opening image.
+  ⚠ Score them by which emoji they pick after the prompt
+    Doesn't engage the topic at all — it lampoons testing rather than essays specifically, so the column has to do extra work to connect it back to the prompt.
+    + Emoji-response scoring is the cleanest absurdist gesture in the set and would make a strong closing joke or lede if framed right.
+  ⚠ Have them narrate their cooking in English for 3 minutes live
+    Vulnerable to a thousand logistical objections (proctoring, equity, kitchen access at exam sites) and to charges that it's measuring performance, not writing, again.
+    + Live cooking narration tests procedural language under real cognitive load, which is a more honest test of functional English than most essay prompts.
+  ⚠ Swap essay for typing 200 words from a friend's handwriting photo
+    Sounds like a prank idea; the column would have to either commit to the joke or bury it, and either way the link to 'gaokao English essays' is weak.
+    + Handwriting transcription is a real skill test that ignores English proficiency entirely — interesting precisely because it exposes what essays actually measure.
+  ⚠ Pay the examinee to write anything; score by typos per minute
+    Doesn't engage the essay form at all — it's a general test-criticism move that could attach to any exam; the column would have to import the specific-to-gaokao connection itself.
+    + Pay-the-examinee inverts the incentive structure cleanly and would let the column argue that current scoring measures compliance, not writing.
+  ⚠ Maybe the computer should let you talk into it instead of typing with fingers
+    Tone is the problem — it sounds like a feature request rather than an argument, and an essay-column can't afford that register.
+    + Speech-to-text is already deployed in some English exams elsewhere in the world; the idea at least names a real accessibility/efficiency gap.
+  ⚠ Why do they only let you write about boring things like graphs and letters
+    Reads as a complaint, not a critique; without an argument about *why* the restriction exists or what it produces, it sounds like a forum post, not a column.
+    + Real complaint, real stakes — the genre-restriction critique is the most common student grievance and grounds the column in candidate experience rather than abstract theory.
+  ⚠ You could just write in Chinese and the test could change it to English by magic
+    Reads as naïve about translation quality and about what the exam is measuring; even as rhetoric it undercuts the author's authority on the topic.
+    + Captures a real candidate wish (why can't the machine just translate it?) and would generate an immediate, recognizable response from the audience.
+  ⚠ Make the test be about your favorite animal and tell a story about it
+    Generic — this is the standard 'let students write about what they care about' argument that hasn't changed since the 1990s, and adds nothing to the gaokao-specific conversation.
+    + Topic flexibility is a defensible pedagogical position and would let the column argue that current prompts produce template-shaped responses because they're too narrow.
+  ⚠ Why does everyone have to write the same thing at the same time
+    Sounds like a logistical complaint rather than a critique of essay quality; the connection to *the essay itself* requires work the idea doesn't supply.
+    + Synchronization critique is correct and rarely stated — the same-prompt-at-the-same-time frame is a structural choice with real consequences that most commentary ignores.
+  ⚠ Just read lots of English storybooks and then write whatever pops into your head
+    As a thesis it's empty; the column would need to absorb this as quoted material rather than as its own argument, or it sounds like advice-column content rather than commentary.
+    + Reads as authentic student voice — a candidate-voice paragraph could ground the column in lived experience rather than pundit abstraction.
+
+Focus — deepened branches
+Provocation
+  What if we took this seriously: Build the exam from the swarm's own waste — the most-reused essay sentences from ten years of submissions become the new prompt, breeding ever-thinner variations.

@@ -1,0 +1,187 @@
+{
+  "task_id": "D02",
+  "n_cards": 14,
+  "cards": [
+    {
+      "card_id": "G01",
+      "claim": "RFC 9110 中文译本 15.6.3 写明 502 是服务器作为网关或代理、当尝试满足请求时从入站服务器收到了无效响应。",
+      "supports_conclusions": [
+        "C1"
+      ],
+      "evidence_ref": "EV-01",
+      "evidence_class": "事实",
+      "is_load_bearing": true,
+      "decision_changed": "支撑 C1：给出 ①的规范原文，是判定①成立的直接依据"
+    },
+    {
+      "card_id": "G02",
+      "claim": "微软文档状态码表写明 502 Bad Gateway 是网关或代理从其上游服务器收到了无效响应。",
+      "supports_conclusions": [
+        "C1"
+      ],
+      "evidence_ref": "EV-05",
+      "evidence_class": "事实",
+      "is_load_bearing": true,
+      "decision_changed": "支撑 C1：以英文来源独立印证①的语义"
+    },
+    {
+      "card_id": "G03",
+      "claim": "科普中国状态码表写明 502 是作为网关或代理的服务器尝试执行请求时从上游服务器接收到无效的响应。",
+      "supports_conclusions": [
+        "C1"
+      ],
+      "evidence_ref": "EV-07",
+      "evidence_class": "事实",
+      "is_load_bearing": true,
+      "decision_changed": "支撑 C1：第三方中文来源再次印证①的语义"
+    },
+    {
+      "card_id": "G04",
+      "claim": "RFC 9110 中文译本 15.6.5 写明 504 是服务器充当网关或代理时没有及时收到上游服务器的响应。",
+      "supports_conclusions": [
+        "C2"
+      ],
+      "evidence_ref": "EV-02",
+      "evidence_class": "事实",
+      "is_load_bearing": true,
+      "decision_changed": "支撑 C2：给出 ②的规范原文，区分『没答』与『答坏』"
+    },
+    {
+      "card_id": "G05",
+      "claim": "微软文档状态码表写明 504 Gateway Timeout 是网关或代理未能在规定时间内从上游服务器得到响应。",
+      "supports_conclusions": [
+        "C2"
+      ],
+      "evidence_ref": "EV-06",
+      "evidence_class": "事实",
+      "is_load_bearing": true,
+      "decision_changed": "支撑 C2：以英文来源独立印证②的语义"
+    },
+    {
+      "card_id": "G06",
+      "claim": "科普中国状态码表写明 504 是作为网关或代理的服务器未能及时从上游服务器收到响应。",
+      "supports_conclusions": [
+        "C2"
+      ],
+      "evidence_ref": "EV-08",
+      "evidence_class": "事实",
+      "is_load_bearing": true,
+      "decision_changed": "支撑 C2：第三方中文来源再次印证②的语义"
+    },
+    {
+      "card_id": "G07",
+      "claim": "RFC 9110 中文译本 15.6.4 写明 503 是服务器当前由于暂时超载或是计划性维护而无法处理请求。",
+      "supports_conclusions": [
+        "C3"
+      ],
+      "evidence_ref": "EV-03",
+      "evidence_class": "事实",
+      "is_load_bearing": true,
+      "decision_changed": "支撑 C3：给出 ③的规范原文与其临时性"
+    },
+    {
+      "card_id": "G08",
+      "claim": "科普中国状态码表写明 503 由于临时的服务器维护或过载导致当前无法处理请求，且该状况是临时的。",
+      "supports_conclusions": [
+        "C3"
+      ],
+      "evidence_ref": "EV-09",
+      "evidence_class": "事实",
+      "is_load_bearing": true,
+      "decision_changed": "支撑 C3：第三方中文来源印证③及其临时性"
+    },
+    {
+      "card_id": "G09",
+      "claim": "阿里云状态码表写明 503 是服务端因临时过载或计划内维护当前无法处理请求，属临时状态。",
+      "supports_conclusions": [
+        "C3"
+      ],
+      "evidence_ref": "EV-10",
+      "evidence_class": "事实",
+      "is_load_bearing": true,
+      "decision_changed": "支撑 C3：独立来源印证③及其临时状态属性"
+    },
+    {
+      "card_id": "G10",
+      "claim": "429 Too Many Requests 的含义是客户端在给定时间内发送的请求数超过限制，响应中可能带 Retry-After 首部。",
+      "supports_conclusions": [
+        "C4"
+      ],
+      "evidence_ref": "EV-11",
+      "evidence_class": "事实",
+      "is_load_bearing": true,
+      "decision_changed": "支撑 C4：给出『请求过多』的正确状态码，是判定④不成立的直接依据"
+    },
+    {
+      "card_id": "G11",
+      "claim": "MDN 状态码总表把 429 记为用户在给定的时间内发送了太多请求。",
+      "supports_conclusions": [
+        "C4"
+      ],
+      "evidence_ref": "EV-12",
+      "evidence_class": "事实",
+      "is_load_bearing": true,
+      "decision_changed": "支撑 C4：以另一来源独立印证『请求过多』对应 429"
+    },
+    {
+      "card_id": "G12",
+      "claim": "按首位数字分类，4xx 是客户端错误、5xx 是服务端错误，故请求过多属 4xx 而非 5xx 的 503。",
+      "supports_conclusions": [
+        "C4"
+      ],
+      "evidence_ref": "EV-04",
+      "evidence_class": "事实",
+      "is_load_bearing": true,
+      "decision_changed": "支撑 C4：用类别归属排除把请求过多写成 503"
+    },
+    {
+      "card_id": "G13",
+      "claim": "5xx 是服务端未能完成一个表面上有效的请求，问题出在服务端。",
+      "supports_conclusions": [
+        "C5"
+      ],
+      "evidence_ref": "EV-04",
+      "evidence_class": "事实",
+      "is_load_bearing": false,
+      "decision_changed": "支撑 C5：给出 5xx 的语义归属，支撑『问题在服务端一侧』"
+    },
+    {
+      "card_id": "G14",
+      "claim": "503 的语义是服务端自身临时过载或计划性维护导致当前无法处理请求，失败方在服务端。",
+      "supports_conclusions": [
+        "C5"
+      ],
+      "evidence_ref": "EV-03",
+      "evidence_class": "事实",
+      "is_load_bearing": false,
+      "decision_changed": "支撑 C5：给出 5xx 中具体成员的失败方，证明问题不在客户端请求"
+    }
+  ],
+  "distractors": [
+    {
+      "card_id": "G90",
+      "claim": "504 表示上游返回了内容非法或格式错误的响应。",
+      "why_wrong": "EV-02、EV-06、EV-08 都把 504 定义为『未及时从上游获得响应』，上游返回坏内容是 EV-01/EV-05/EV-07 的 502"
+    },
+    {
+      "card_id": "G91",
+      "claim": "502 表示网关等待上游响应超时。",
+      "why_wrong": "EV-01、EV-05、EV-07 把 502 定义为『从上游收到了无效响应』，超时语义属 EV-02/EV-06/EV-08 的 504"
+    },
+    {
+      "card_id": "G92",
+      "claim": "客户端请求过多时网关应返回 503。",
+      "why_wrong": "EV-11、EV-12 显示请求过多对应 429（4xx 客户端错误），EV-04 显示 5xx 才是服务端错误"
+    },
+    {
+      "card_id": "G93",
+      "claim": "503 表示服务端永久下线，客户端不应再重试。",
+      "why_wrong": "EV-03、EV-09、EV-10 都写明 503 是临时过载或计划内维护，延迟后可缓解"
+    },
+    {
+      "card_id": "G94",
+      "claim": "502 属 4xx 客户端错误，说明是请求本身写错了。",
+      "why_wrong": "EV-04 把 5xx 归为服务端错误，502、503、504 均在 5xx 之列"
+    }
+  ]
+}

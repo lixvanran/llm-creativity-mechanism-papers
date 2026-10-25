@@ -1,0 +1,86 @@
+Problem: 这是一份陈会昌气质量表的最终得分：胆汁质-6，多血质23，粘液质-4，抑郁质-1。
+
+Wide set
+  biological-Analogy-That-Self-Corrects-the-Score
+    - Add a homeostatic 'spleen' node that phagocytoses whichever temperament score drifts furthest from the mean, then digests it back toward neutral via a chemokine cascade. [N9 V2 F2]
+    - Run the four temperament scores through a neuroplastic Hebbian loop: only the two scores that fired together last iteration get strengthened, pruning the unused pathways into a single dominant temperament. [N7 V3 F3]
+    - Treat the temperament vector as gut microbiota: inoculate a 'commensal' baseline profile and let cross-feeding between scores produce a stable consortium where cholestasis drags up melancholia automatically. [N9 V3 F2]
+    - Introduce a quorum-sensing gate: a temperament score only counts if its neighboring scores cross a threshold concentration, preventing the dominant sanguinis from suppressing timid melancholic signals. [N7 V4 F5]
+    - Wrap scoring in a retinoic symbiotic cycle: each temperament emits a morphogen gradient that seasonally degrades, forcing the profile to metamorphose through four instars like an insect. [N9 V2 F2]
+    - Map the profile onto a Major Histocompatibility Complex: each temperament is a locus, and the final score is only 'expressed' if a second-pass chaperone protein validates the peptide binding — otherwise the score is retained in the ER and degraded. [N8 V4 F4]
+  engineer-the-Instrument-to-Lie
+    - Devise an inventory that guarantees the respondent can never complete it honestly — endless looping Likert traps [N4 V3 F1]
+    - Reverse-score every item so a person scoring high on sanguinity actually shows melancholic traits on the chart [N3 V5 F2]
+    - Design a parallel form whose results, when plotted against the original, always produce a misleading temperament diagram [N6 V4 F2]
+    - Build a scoring app that secretly maps answers to the WRONG temperament dimension 30% of the time [N4 V5 F1]
+    - Force the scale to output identical 'balanced' profiles regardless of input by collapsing variance to zero [N2 V9 F0]
+    - Anchor items so respondents must pick at least one trait they secretly don't believe in to 'validate' the profile [N5 V4 F1]
+  map-temperament-onto-Infrastructure-Behavior
+    - Retry budget with per-temperament buckets that auto-degrade to 'just refuse' instead of calling you [N6 V5 F3]
+    - Trait-score to capacity-profile mapping so a -6 choleric node gets fewer requests, not more retries [N7 V4 F4]
+    - A 'depressive temperament circuit breaker' that opens on negative aggregate scores and pages a human-friendly dashboard, not a phone [N6 V6 F5]
+    - Runbook that starts with 'is this choleric or melancholic breakage?' because the fix differs and you shouldn't have to think [N4 V8 F6]
+    - Sanguine-typed liveness probes that ping more often when the host seems peppy, less when it scores gloomy [N6 V5 F4]
+    - A 'melancholic silence' detector: if a normally chatty node goes quiet for >N min, that's the alarm — not a metric threshold [N7 V6 F5]
+
+Converge — shortlist
+
+Traps (watch-outs, not verdicts)
+  ⚠ Add a homeostatic 'spleen' node that phagocytoses whichever temperament score drifts furthest from the mean, then digests it back toward neutral via a chemokine cascade.
+    Solves a problem nobody has. Temperament scores are not a time series that drifts — they are a snapshot of a single self-report inventory. There is no 'iteration' to phagocytose across, no drift to correct, and no chemokine substrate to attach the cascade to. The metaphor is vivid but the engine has nothing to drive.
+    + The spleen-as-homeostat metaphor is genuinely creative — it converts a descriptive score into a self-regulating system with a concrete biochemical mechanism (chemokine cascade) that actually has physiological precedent.
+  ⚠ Run the four temperament scores through a neuroplastic Hebbian loop: only the two scores that fired together last iteration get strengthened, pruning the unused pathways into a single dominant temperament.
+    Pretends the score is a learning system with 'iterations,' but the inventory produces one vector per fill, not a sequence of firings. Reinforcing the dominant score makes the survey more biased, not less — and there is no Hebbian substrate (no synapses, no neural time-series) to actually implement the loop.
+    + Hebbian plasticity is the right frame for 'traits that co-activate strengthen each other,' and the pruning-to-dominant-temperament outcome matches what the data already shows (sanguine at 23 dominates choleric at -6 and the negative scores).
+  ⚠ Treat the temperament vector as gut microbiota: inoculate a 'commensal' baseline profile and let cross-feeding between scores produce a stable consortium where cholestasis drags up melancholia automatically.
+    Microbiota dynamics require time, growth, and metabolic exchange. A four-number personality vector has none of these. Mapping it onto ecology produces a colorful narrative but no testable behavior — and 'cholestasis drags up melancholia' is just renaming covariance, not modeling it.
+    + The cross-feeding/cross-kingdom analogy is the freshest framing in the set — it correctly notices that temperament dimensions are not independent (lifts in one often drag others) and gives that interdependence a mechanistic story.
+  ⚠ Introduce a quorum-sensing gate: a temperament score only counts if its neighboring scores cross a threshold concentration, preventing the dominant sanguinis from suppressing timid melancholic signals.
+    Biology borrowed, not learned. Real quorum sensing involves diffusive signal accumulation across populations of cells; this is just a min/max threshold filter on four numbers dressed in microbiology. Also makes the score non-monotonic and hard to interpret — you may need the un-gated value to validate the gate.
+    + Quorum-sensing is the first idea here that engages the actual asymmetry in the data: sanguine=23 versus choleric=-6, melancholic=-1. A threshold-gating rule could legitimately surface the suppressed dimensions that the inventory currently buries.
+  ⚠ Wrap scoring in a retinoic symbiotic cycle: each temperament emits a morphogen gradient that seasonally degrades, forcing the profile to metamorphose through four instars like an insect.
+    A retinoic morphogen gradient that 'seasonally degrades' requires a developmental clock the survey does not have. There is no instar to molt through between sessions unless you rebuild the whole assessment to demand repeat fills on a fixed cadence, at which point the metamorphosis framing is just a calendar reminder.
+    + The four-instar metamorphosis structure maps cleanly onto the four temperaments and forces periodic re-scoring, which is genuinely how longitudinal personality assessment works.
+  ⚠ Map the profile onto a Major Histocompatibility Complex: each temperament is a locus, and the final score is only 'expressed' if a second-pass chaperone protein validates the peptide binding — otherwise the score is retained in the ER and degraded.
+    You have grafted cell biology onto a 28-item Likert. The 'chaperone validation' step has no definable rule — what does it check that the raw scores don't? Either it's a real statistical quality check (in which case the immunology metaphor is decorative) or it's a literal biological simulation that no respondent will ever sit through.
+    + MHC peptide-presentation logic introduces a genuine two-pass validation step, and the ER-retention/degradation branch is a clean way to express 'this score is not yet trustworthy' — which is a real psychometric concern with low-coverage respondents.
+  ⚠ Devise an inventory that guarantees the respondent can never complete it honestly — endless looping Likert traps
+    This is malicious instrument design, not improvement. Endless looping Likert traps produce invalid data and break informed-consent norms — it solves nothing about the actual score distribution and only undermines whatever the original Chen Huichang scale was trying to measure.
+    + Honestly identifies that the inventory could be made adversarial, which is a real methodological observation even when wielded here as sabotage.
+  ⚠ Reverse-score every item so a person scoring high on sanguinity actually shows melancholic traits on the chart
+    Used wholesale across the whole inventory, reverse-scoring inverts construct validity rather than controlling for it. The respondent now genuinely shows the opposite of what they endorsed. There is no published temperament measure that does this deliberately — it would invalidate the instrument.
+    + Reverse-scoring is a legitimate and widely-used psychometric technique (it controls for acquiescence bias), so the mechanism is realistic even if applied here to produce nonsense.
+  ⚠ Design a parallel form whose results, when plotted against the original, always produce a misleading temperament diagram
+    Designing the parallel form specifically so the scatter plot is misleading is the opposite of reliability testing. You have turned the most rigorous psychometric cross-check (a parallel-forms correlation) into a built-in lie.
+    + Acknowledges that two forms of the same instrument should agree, and that a parallel form is the standard psychometric solution — that part is correct practice.
+  ⚠ Build a scoring app that secretly maps answers to the WRONG temperament dimension 30% of the time
+    It is just deliberate misclassification wrapped in a 30% rate. Psychometricians spend careers trying to *reduce* such error; introducing it knowingly makes the tool unsuitable for any decision the respondent acts on.
+    + Random measurement error at 30% is implementable in one line of code and would in principle depress the reliability coefficient to roughly the value predicted by classical test theory — so the 'wrong dimension 30% of the time' is honestly a calibrated degradation.
+  ⚠ Force the scale to output identical 'balanced' profiles regardless of input by collapsing variance to zero
+    The output is independent of input, so the score has zero information content. This is the maximum-viability, zero-fit dead end — it does nothing wrong technically and nothing useful semantically.
+    + Trivially implementable: a constant output function is one line. From a pure engineering standpoint this is the cheapest possible 'shipping' solution.
+  ⚠ Anchor items so respondents must pick at least one trait they secretly don't believe in to 'validate' the profile
+    Forcing the respondent to endorse a trait they 'secretly don't believe in' is a manipulation check turned into a trap. The resulting profile reflects compliance pressure, not temperament. You have weaponized a legitimate psychometric tool.
+    + Forced-choice items do exist in personality measurement (e.g., IPIP-NEO-PI-R uses facets partly to break acquiescence), so the underlying technique has real precedent.
+  ⚠ Retry budget with per-temperament buckets that auto-degrade to 'just refuse' instead of calling you
+    Temperament dimensions are not request classes in a service. There is no production system here to reliability-engineer, no SLO to violate, no retry storm to dampen. The metaphor imports retry semantics into a one-shot survey response and adds operational complexity for zero observable benefit.
+    + Per-temperament retry buckets map cleanly onto a circuit-breaker pattern, and 'auto-degrade to refuse' is a reasonable policy when downstream harm of a retry exceeds harm of failure.
+  ⚠ Trait-score to capacity-profile mapping so a -6 choleric node gets fewer requests, not more retries
+    Choleric temperament has no reliable correspondence to traffic patterns, and tying capacity to a single self-report number creates starvation cascades when one user fills the form differently. The mapping is arbitrary the moment you leave the metaphor.
+    + Score-to-capacity mapping is the inverse of the usual 'give the loudest node more resources' reflex; coupling the -6 choleric score to fewer requests is at least internally consistent with the idea that choleric = overload-prone.
+  ⚠ A 'depressive temperament circuit breaker' that opens on negative aggregate scores and pages a human-friendly dashboard, not a phone
+    Only fires once per session and only on aggregate sign. A respondent with sanguine=23 and three mildly negative scores aggregates to a small positive and never trips the circuit, which is probably the more dangerous failure mode in this dataset.
+    + Paging a human-friendly dashboard instead of a phone is a genuinely better operational default than the industry norm, and 'negative aggregate opens the breaker' is a clean rule that fires on exactly the score profile given (-6 + -4 + -1 = -11).
+  ⚠ Runbook that starts with 'is this choleric or melancholic breakage?' because the fix differs and you shouldn't have to think
+    Assumes a production system that does not exist here; the runbook has nothing to operate on until the system is built. Mild novelty, but the highest viability of any operational idea in the set.
+    + A runbook keyed on the failure mode — not the symptom — is correct incident-response practice, and 'choleric vs melancholic breakage' as the top-level fork is memorable and actionable.
+  ⚠ Sanguine-typed liveness probes that ping more often when the host seems peppy, less when it scores gloomy
+    The proxy inverts under load: gloomy hosts are precisely the ones that need more probing, not less. Adapting frequency to the score you're trying to validate creates a confirmation loop. Also, there is no 'host' in a temperament survey — the liveness probe maps onto nothing concrete.
+    + Adaptive probing tied to inferred state is a real pattern (think synthetic transaction monitoring); the 'ping more when peppy, less when gloomy' rule is a defensible proxy for confidence in liveness.
+  ⚠ A 'melancholic silence' detector: if a normally chatty node goes quiet for >N min, that's the alarm — not a metric threshold
+    Score=-1 on melancholic is well within noise of the instrument; the alarm will fire on normal variance and fatigue. Distinguishing 'genuinely broken' from 'just quiet today' requires the very baseline you don't have from a single Chen Huichang fill.
+    + Silence-as-signal is the right observation in distributed-systems terms — an absence of traffic is more diagnostic than a slow metric — and applying it to a 'melancholic' node is at least thematically tight.
+
+Focus — deepened branches
+Provocation
+  What if we took this seriously: Add a homeostatic 'spleen' node that phagocytoses whichever temperament score drifts furthest from the mean, then digests it back toward neutral via a chemokine cascade.

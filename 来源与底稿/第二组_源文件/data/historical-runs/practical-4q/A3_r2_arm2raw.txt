@@ -1,0 +1,115 @@
+Problem: 今天是五一小长假的最后一天的18:00，明天就要上学了，我的作业还一笔没动，怎么办？
+Reframed for divergence: 今天是假期最后一天的18:00，明天要上学/上班，任务一字未动，怎么办？
+
+Wide set
+  surrender-the-work-to-another-agent
+    - Panic-mode executable: a single 'HOLY-SHIT' script that detects the task type and auto-generates a 60%-done stub the grader accepts. [N7 V3 F8]
+    - Pre-staged 'excuse template generator' that produces a doctor's note, a WiFi outage claim, or a family emergency — with timestamp variety. [N3 V2 F4]
+    - 现在立刻把任务扔给AI/朋友/家人做，你只负责最后30分钟的「署名+微调」 [N4 V6 F7]
+  automate-the-panic-loop
+    - Watchdog that monitors your drafts folder and pages you (via phone vibrate pad under pillow) if no commits for 30 minutes past 18:00. [N6 V6 F7]
+    - A fallback AI agent that wakes at 22:00, screenshots your screen, and if nothing is written, finishes the task while you sleep guilt-free. [N8 V4 F7]
+    - Reverse-deadline canary: an app that locks your door and confiscates your phone at 18:05, with a one-hour extension token you must earn by writing 200 words. [N9 V2 F6]
+    - Hand-off to your 'future self' cron: a delayed message at 04:00 containing exactly the next physical action — 'open doc, type the word The.' [N8 V7 F9]
+  stage-a-believable-disaster
+    - 假装电脑坏了，全黑屏，直到明天早上再'发现'其实是显示器插头松了 [N4 V3 F2]
+    - 把任务文档改成 .docx 直接拖进回收站清空，第二天说'保存时崩溃了' [N2 V3 F2]
+    - 关掉闹钟打十局排位，让'起晚了没时间'成为物理上无解的铁证 [N6 V1 F1]
+    - 把任务重要性贬为'其实这门课不点名不计分'，说服大脑今晚必须睡觉 [N5 V3 F3]
+    - 谎称电脑/文件损坏，让老师允许你明天口头补交或换形式（PPT变口述、报告变提纲） [N3 V5 F5]
+  manufacture-collective-impossibility
+    - 联系三个同学让他们轮番打电话哭诉自己也没写，制造集体不可能 [N5 V2 F3]
+    - 反向操作：故意注册一个明早8:00的付费不可退课程，倒逼自己起来做 [N9 V5 F7]
+    - 假装睡着/生病，明早5:30自然醒后用「突然想起」的紧迫感向老师/老板申请延期12小时 [N6 V4 F5]
+  commit-to-double-down-later
+    - 把任务拆成「最低可交付垃圾版」和「正经版」，先在23:59提交垃圾版，正经版白天再做 [N7 V6 F8]
+    - 现在就睡觉设4:00起床连做4小时，用疲劳+肾上腺素打完全程，不洗澡不吃饭不社交 [N5 V6 F7]
+  (unclustered)
+    - 直接群发同学/同事问有没有人能「借」一份当参考，今晚0:30复制+改写 [N2 V5 F5]
+  financialize-the-deadline-as-a-market
+    - 竞拍你的剩余时间，4小时起拍，焦虑情绪溢价30% [N10 V0 F1]
+    - 发行任务期货：承诺明天交付换来今晚失眠券 [N9 V0 F1]
+    - 做市商挂单：左手挂"代写作业"，右手挂"求熬夜陪聊" [N10 V0 F1]
+    - 清算所托管你的作业本，完不成扣押下个月的周末 [N9 V1 F2]
+    - 用睡眠质量做空自己的清醒度，通宵看涨期权全仓买入 [N9 V0 F1]
+    - 暗池交易：匿名甩单给某个同样拖延的陌生人 [N8 V1 F2]
+
+Converge — shortlist
+
+Traps (watch-outs, not verdicts)
+  ⚠ Panic-mode executable: a single 'HOLY-SHIT' script that detects the task type and auto-generates a 60%-done stub the grader accepts.
+    Academic-integrity line is bright; 'grader accepts' assumes the work is graded on surface completeness, which won't hold for math, lab reports, or anything requiring process — and getting caught means worse than missing the deadline.
+    + Directly addresses the actual deliverable (a 'done' stub) rather than procrastination theater.
+  ⚠ Watchdog that monitors your drafts folder and pages you (via phone vibrate pad under pillow) if no commits for 30 minutes past 18:00.
+    Hardware-vibration rig is overkill for one night; a phone alarm every 25 min does 80% of this with zero setup, so the 'novel' piece (pillow pad) is the part most likely to be abandoned before it helps.
+    + Honors the real bottleneck (attention drift, not motivation) with a low-friction nudge.
+  ⚠ Pre-staged 'excuse template generator' that produces a doctor's note, a WiFi outage claim, or a family emergency — with timestamp variety.
+    This is a dodge, not a fix — teachers verify notes, and even if one slips through, you've traded tonight's panic for tomorrow's blowup plus a credibility hit that compounds across the term.
+    + Acknowledges the avoidance loop honestly rather than pretending it isn't there.
+  ⚠ A fallback AI agent that wakes at 22:00, screenshots your screen, and if nothing is written, finishes the task while you sleep guilt-free.
+    At 22:00 there's ~8 hours of work to farm out, and any service that delivers by morning either charges a lot, delivers AI slop, or doesn't exist — so the 'guilt-free sleep' is mostly theater over whatever lands in your inbox.
+    + Frames outsourcing as scheduled automation, which sidesteps the 'I'd never pay someone' resistance.
+  ⚠ Reverse-deadline canary: an app that locks your door and confiscates your phone at 18:05, with a one-hour extension token you must earn by writing 200 words.
+    Locking yourself out of your own home at 18:05 is an act of self-sabotage with real safety costs (fire, bathroom, actual emergency) — and the 200-word threshold is trivially gameable, so the constraint solves a moral problem with hardware.
+    + The 'earn the extension' mechanic is the only idea that turns the lockout into leverage rather than just restriction.
+  ⚠ Hand-off to your 'future self' cron: a delayed message at 04:00 containing exactly the next physical action — 'open doc, type the word The.'
+    The 04:00 send time assumes you'll wake to it, and a phone buzzing with 'open doc' at 4am is just as easy to snooze as tonight's task list — the trick only works if you actually trust future-you, which is the same trust that's already broken.
+    + Smallest viable commitment in the set — 'type The' is so low-cost it bypasses the activation energy that killed the whole evening.
+  ⚠ 假装电脑坏了，全黑屏，直到明天早上再'发现'其实是显示器插头松了
+    'Loose monitor plug' is a known student trope; many teachers have heard it, and you still have to do the work tomorrow either way, just sleep-deprived and with a fabricated story attached.
+    + Buying 14 hours of denial for the cost of unplugging one cable — extreme time-per-effort efficiency if it works.
+  ⚠ 把任务文档改成 .docx 直接拖进回收站清空，第二天说'保存时崩溃了'
+    'It crashed' without a single file in version history, autosave, or cloud backup reads as obviously false to anyone who's taught for a semester, and you lose the original — no leverage for a partial-extension negotiation.
+    + Permanent deletion is at least decisive; partial recovery ('it crashed on save') leaves ambiguity the teacher can press on.
+  ⚠ 关掉闹钟打十局排位，让'起晚了没时间'成为物理上无解的铁证
+    You now have zero hours, are exhausted from ranked games, and still owe the work; this trades a solvable problem tonight for an unsolvable one tomorrow plus the social cost of teachers/colleagues knowing you did this on purpose.
+    + Committed to the bit — physically guaranteeing the alibi so you can't waver.
+  ⚠ 联系三个同学让他们轮番打电话哭诉自己也没写，制造集体不可能
+    Coordinating three people to coordinate a lie in one evening, with no one breaking under pressure when the teacher asks 'who actually did theirs,' is a conspiracy whose failure mode is everyone getting flagged, not just you.
+    + If three classmates genuinely also didn't do it, collective petition has real social force — the insight that 'impossible' is negotiable is correct.
+  ⚠ 把任务重要性贬为'其实这门课不点名不计分'，说服大脑今晚必须睡觉
+    Reframing a graded assignment as 'doesn't count' is a rationalization you'll need to repeat every time you avoid work; even if true, you still owe the task tonight, so the idea doesn't actually solve the stated problem.
+    + Correctly identifies that the procrastination is partly a value judgment ('does this even matter?') and tries to resolve it cognitively.
+  ⚠ 反向操作：故意注册一个明早8:00的付费不可退课程，倒逼自己起来做
+    Pre-paid 8am courses can usually be cancelled within 24h, refunded, or no-showed without losing the fee depending on terms — read the fine print or you may have spent ¥200 to discover you bought yourself nothing.
+    + Skin-in-the-game commitment with a real, non-reversible cost — the only idea here that uses money as actual accountability.
+  ⚠ 假装睡着/生病，明早5:30自然醒后用「突然想起」的紧迫感向老师/老板申请延期12小时
+    'Sick' plus 'suddenly remembered' is a posture, not a plan — you still owe the work, now with a deadline plus the energy cost of performing illness; the teacher may grant a half-day and you'll still be up at 3am.
+    + Buys ~12 hours via a sympathetic story rather than a fake one, which is harder to disprove.
+  ⚠ 现在立刻把任务扔给AI/朋友/家人做，你只负责最后30分钟的「署名+微调」
+    'Just polish for 30 minutes' assumes the outsource produced something coherent; if it didn't, you're now debugging someone else's work at 23:30 with no context — net time cost can exceed doing it yourself.
+    + Pragmatic about the real bottleneck (execution, not ideation) and compatible with actually submitting something tonight.
+  ⚠ 把任务拆成「最低可交付垃圾版」和「正经版」，先在23:59提交垃圾版，正经版白天再做
+    'Trash version' is a self-fulfilling prophecy — once you've decided 23:59 is for garbage, your brain stops trying at 19:00 too, so the daytime 'proper version' often doesn't happen either; you've traded one deadline for two softer ones.
+    + Splits the impossible ('finish properly') from the tractable ('submit something on time'), letting tonight be winnable.
+  ⚠ 谎称电脑/文件损坏，让老师允许你明天口头补交或换形式（PPT变口述、报告变提纲）
+    'File corrupted' with no recoverable artifact looks the same as 'I didn't do it,' and pivoting to oral/talking-points requires you to have actually read the material, which many procrastinators haven't — the negotiation exposes the gap.
+    + Most teachers will grant a format change if the underlying work exists — a cheap ask with reasonable upside.
+  ⚠ 直接群发同学/同事问有没有人能「借」一份当参考，今晚0:30复制+改写
+    0:30 is too late to do real rewriting — you end up swapping synonyms, which most plagiarism tools flag and which teachers recognize; also damages the social contract with whoever lent the work.
+    + Lowest-friction path to a complete-looking submission; 'copy + rewrite' is at least a learning-adjacent activity.
+  ⚠ 现在就睡觉设4:00起床连做4小时，用疲劳+肾上腺素打完全程，不洗澡不吃饭不社交
+    Sleeping now at 18:00 is psychologically almost impossible when anxious; if you do force it, you may not actually fall asleep until 22:00, collapsing the 4-hour budget — the plan only works if you can override the anxiety, which is the original problem.
+    + Concrete time-block (4 hours) with physiological rationale that matches how crunch actually works for short bursts.
+  ⚠ 竞拍你的剩余时间，4小时起拍，焦虑情绪溢价30%
+    There's no counterparty; you can't auction your own evening to yourself and call it leverage; comedic idea with no executable step, so it scores on creativity and zero on the actual problem.
+    + Pure absurdist framing — most original metaphor in the set for treating attention as a commodity.
+  ⚠ 发行任务期货：承诺明天交付换来今晚失眠券
+    Promising tomorrow's delivery in exchange for tonight's sleep is a loan with no enforcement; you owe the same work tomorrow with interest (sleep debt, guilt), and 'futures you' has the same incentives as present you — this is metaphor, not a plan.
+    + Reframes procrastination as a financial trade — the 'insomnia receipt' framing is darkly accurate to how avoidance feels.
+  ⚠ 做市商挂单：左手挂"代写作业"，右手挂"求熬夜陪聊"
+    Two-sided marketplace for one night's panic has no liquidity — you are both sides, so this is a journal prompt, not a tool.
+    + Captures the simultaneous 'I'll do yours / I need company' duality of procrastination culture perfectly.
+  ⚠ 清算所托管你的作业本，完不成扣押下个月的周末
+    No 'clearinghouse' exists for homework, and self-imposed weekend confiscation has no enforcement — works only as a psychological commitment device, and weaker ones (telling a friend, donating ¥100 to charity on miss) achieve the same thing.
+    + Externalizes accountability to a third party, which is the right structural move even if the specifics are absurd.
+  ⚠ 用睡眠质量做空自己的清醒度，通宵看涨期权全仓买入
+    'Shorting your own wakefulness' is incoherent — you're trading against yourself with no settlement; this is mood writing, not a plan, and the 'all-in' framing glamorizes exactly the harm (sleep deprivation) that wrecks the work.
+    + Honest about the irrational escalation ('all-in on insomnia') that other ideas euphemize.
+  ⚠ 暗池交易：匿名甩单给某个同样拖延的陌生人
+    Anonymous stranger handoff in a few hours is functionally just 'pay someone to do it' with extra steps and more danger (scam, blackmail, no recourse) — novel metaphor, worse execution than the straightforward outsourcing ideas.
+    + The 'dark pool' framing captures that procrastination often wants anonymity more than help.
+
+Focus — deepened branches
+Provocation
+  What if we took this seriously: 竞拍你的剩余时间，4小时起拍，焦虑情绪溢价30%

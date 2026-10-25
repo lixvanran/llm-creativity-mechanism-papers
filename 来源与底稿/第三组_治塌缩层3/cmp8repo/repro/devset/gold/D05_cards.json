@@ -1,0 +1,190 @@
+{
+  "task_id": "D05",
+  "n_cards": 14,
+  "cards": [
+    {
+      "card_id": "G01",
+      "claim": "居住证的申领条件共四项：居住登记满6个月、在居住地有合法稳定就业、在居住地有合法稳定住所、在居住地连续就读。",
+      "supports_conclusions": [
+        "C2"
+      ],
+      "evidence_ref": "EV-01",
+      "evidence_class": "事实",
+      "is_load_bearing": false,
+      "decision_changed": "它支撑 C2：列出条件全集，是“四选一”结构的底稿它是补充性事实，结论 C2 的成立不依赖它单独确定。"
+    },
+    {
+      "card_id": "G02",
+      "claim": "公开口径为“满足以下条件之一”即可向居住地公安派出所申领居住证。",
+      "supports_conclusions": [
+        "C1",
+        "C2"
+      ],
+      "evidence_ref": "EV-01",
+      "evidence_class": "事实",
+      "is_load_bearing": true,
+      "decision_changed": "它支撑 C1 与 C2：正是“条件之一”的表述使丙、丁在未满6个月的情况下仍可申领，没有它，结论 C1 不成立。"
+    },
+    {
+      "card_id": "G03",
+      "claim": "“自办理居住登记之日起满6个月”指在派出所基础信息管理系统中登记流动人口居住信息满6个月。",
+      "supports_conclusions": [
+        "C1"
+      ],
+      "evidence_ref": "EV-02",
+      "evidence_class": "事实",
+      "is_load_bearing": true,
+      "decision_changed": "它支撑 C1：给出“满6个月”的可核口径，乙满6个月成立而甲仅3个月不成立。没有它，结论 C1 不成立。"
+    },
+    {
+      "card_id": "G04",
+      "claim": "“有合法稳定就业”是指未来可能在居住地就业6个月以上。",
+      "supports_conclusions": [
+        "C3"
+      ],
+      "evidence_ref": "EV-03",
+      "evidence_class": "事实",
+      "is_load_bearing": true,
+      "decision_changed": "它支撑 C3：把丙的劳动合同归入“合法稳定就业”，是 C3 成立的直接依据。没有它，结论 C3 不成立。"
+    },
+    {
+      "card_id": "G05",
+      "claim": "“有合法稳定住所”是指拥有未来可以在居住地居住6个月以上的住所。",
+      "supports_conclusions": [
+        "C2"
+      ],
+      "evidence_ref": "EV-04",
+      "evidence_class": "事实",
+      "is_load_bearing": false,
+      "decision_changed": "它支撑 C2：补全条件定义；本题无人依赖住所条件，故它是补充性事实，结论 C2 的成立不依赖它单独确定。"
+    },
+    {
+      "card_id": "G06",
+      "claim": "“连续就读”指在居住地中、小学取得学籍的就读，以及在中职、高校、研究生培养机构取得学籍并接受全日制学历教育的就读。",
+      "supports_conclusions": [
+        "C4"
+      ],
+      "evidence_ref": "EV-05",
+      "evidence_class": "事实",
+      "is_load_bearing": true,
+      "decision_changed": "它支撑 C4：明确“小学取得学籍”即属连续就读，是丁可申领的依据。没有它，结论 C4 不成立。"
+    },
+    {
+      "card_id": "G07",
+      "claim": "公民离开常住户口所在地到其他市县居住半年以上，或者符合合法稳定就业、合法稳定住所、连续就读条件之一的，可以在居住地申领居住证。",
+      "supports_conclusions": [
+        "C1"
+      ],
+      "evidence_ref": "EV-06",
+      "evidence_class": "事实",
+      "is_load_bearing": true,
+      "decision_changed": "它支撑 C1：以第二来源口径复述“或……条件之一的”可申领，确认丙、丁无需居住满半年。没有它，结论 C1 不成立。"
+    },
+    {
+      "card_id": "G08",
+      "claim": "合法稳定就业证明材料包括营业执照、劳动合同、缴纳社会保险证明、用人单位出具的劳动关系证明等。",
+      "supports_conclusions": [
+        "C5"
+      ],
+      "evidence_ref": "EV-07",
+      "evidence_class": "事实",
+      "is_load_bearing": true,
+      "decision_changed": "它支撑 C5：给出丙需提交的材料种类，是 C5 成立的直接依据。没有它，结论 C5 不成立。"
+    },
+    {
+      "card_id": "G09",
+      "claim": "申领居住证所需证明材料为居住登记满6个月、合法稳定住所、合法稳定就业、连续就读四类证明材料之一。",
+      "supports_conclusions": [
+        "C5"
+      ],
+      "evidence_ref": "EV-09",
+      "evidence_class": "事实",
+      "is_load_bearing": true,
+      "decision_changed": "它支撑 C5：说明证明材料按条件类型四选一，丙走就业路径即交就业类材料。没有它，结论 C5 不成立。"
+    },
+    {
+      "card_id": "G10",
+      "claim": "连续就读证明材料包括学生证，以及就读学校、科研机构、培训机构出具的能够证明连续就读的材料。",
+      "supports_conclusions": [
+        "C4"
+      ],
+      "evidence_ref": "EV-08",
+      "evidence_class": "事实",
+      "is_load_bearing": false,
+      "decision_changed": "它支撑 C4：给出就读类路径的材料口径，它是补充性事实，结论 C4 的成立不依赖它单独确定。"
+    },
+    {
+      "card_id": "G11",
+      "claim": "居住登记满6个月的证明材料以派出所基础信息系统打印的《流动人口居住凭证》为依据。",
+      "supports_conclusions": [
+        "C1"
+      ],
+      "evidence_ref": "EV-11",
+      "evidence_class": "事实",
+      "is_load_bearing": true,
+      "decision_changed": "它支撑 C1：给出“居住登记满6个月”这一路径可核验的凭证，说明乙的申领依据确实存在。没有它，结论 C1 不成立。"
+    },
+    {
+      "card_id": "G12",
+      "claim": "除居住登记满6个月外，合法稳定就业、合法稳定住所、连续就读三项条件各自独立成立。",
+      "supports_conclusions": [
+        "C1",
+        "C2"
+      ],
+      "evidence_ref": "EV-01",
+      "evidence_class": "事实",
+      "is_load_bearing": true,
+      "decision_changed": "它支撑 C1 与 C2：说明三条非居住时长路径可单独满足条件，是丙、丁合格而甲不合格的根据。没有它，结论 C1 不成立。"
+    },
+    {
+      "card_id": "G13",
+      "claim": "按一个子女每月2000元的扣除标准，可由父母一方享受百分之百扣除。",
+      "supports_conclusions": [
+        "C1"
+      ],
+      "evidence_ref": "EV-11",
+      "evidence_class": "事实",
+      "is_load_bearing": true,
+      "decision_changed": "它支撑 C1：说明每个子女每月2000元可全额落到一方，是 C1 中两个子女各计2000元的实现方式。没有它，结论 C1 不成立。"
+    },
+    {
+      "card_id": "G14",
+      "claim": "符合合法稳定就业、合法稳定住所、连续就读条件之一的，可以在居住地申领居住证。",
+      "supports_conclusions": [
+        "C2",
+        "C3"
+      ],
+      "evidence_ref": "EV-06",
+      "evidence_class": "事实",
+      "is_load_bearing": true,
+      "decision_changed": "它支撑 C2 与 C3：把丙的情形直接对应到“合法稳定就业”路径，是 C3 的第二来源印证。没有它，结论 C2 不成立。"
+    }
+  ],
+  "distractors": [
+    {
+      "card_id": "G90",
+      "claim": "甲居住登记已满3个月并有居住登记记录，因此也符合居住证申领条件。",
+      "why_wrong": "依据包 EV-01、EV-02 要求“自办理居住登记之日起满6个月”，3个月未满门槛；甲也不具备就业、住所、就读中的任何一项。"
+    },
+    {
+      "card_id": "G91",
+      "claim": "居住证申领必须同时满足居住登记满6个月、合法稳定就业、合法稳定住所、连续就读四项条件。",
+      "why_wrong": "依据包 EV-01 原文是“满足以下条件之一”即可（EV-06 同为“……条件之一的”），并非要求同时满足。"
+    },
+    {
+      "card_id": "G92",
+      "claim": "丙虽有劳动合同，但未在居住地登记居住满6个月，所以不能申领居住证。",
+      "why_wrong": "依据包 EV-01、EV-03、EV-06 显示“在居住地有合法稳定就业”是与“满6个月”并列的独立条件之一，丙不需再等居住登记满6个月。"
+    },
+    {
+      "card_id": "G93",
+      "claim": "丁在居住地读小学不属于“连续就读”，只有中等职业学校或高等学校就读才属于。",
+      "why_wrong": "依据包 EV-05 明写“连续就读,是指在居住地中、小学取得学籍的就读”，EV-06、EV-08 同向。"
+    },
+    {
+      "card_id": "G94",
+      "claim": "申领居住证需要先缴纳费用，丙须缴费后才能提交材料。",
+      "why_wrong": "依据包 EV-12 写明相关规定均未规定居住证申领需要收费，EV-10 之外舒城页亦写“收费依据及标准:免费”。"
+    }
+  ]
+}

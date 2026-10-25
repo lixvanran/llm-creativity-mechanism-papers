@@ -1,0 +1,6 @@
+{
+  "_readme": "★ 全体工具共用的基线常量（★ 单一事实来源）★ ★ 为什么必须集中：★ 「基线不能是 HEAD」这条纪律我自己在【验收器】里修了、却在【对拍器】里漏了 ⇒ ★ 结果第一次 commit 之后对拍必假红（★ 期望值会算成『已迁移的指针再迁移一次』）⇒ ⇒ ★ **纪律写在文档里不够，★ 必须落成【所有工具都读同一个常量】**",
+  "baseline_commit": "8649661",
+  "_baseline_commit_readme": "★ = 本轮改稿【开始前】的仓内状态（★ 也就是『改写前那一版』）★ ★ 三个工具都必须用它：★ ① tools/check_cluster_consistency.py（--head 的默认值）② tools/verify_pointer_migration.py（期望值的来源）③ tools/build_baseline_snapshot.py（快照的出处）★ ★ ★ 换成别的 sha 时，★ 这三个都要跟着换 ⇒ ★ 所以它们必须读同一个文件",
+  "package_zip": "四篇改稿+方向③层3_交付包_2026-10-25_v2.zip"
+}

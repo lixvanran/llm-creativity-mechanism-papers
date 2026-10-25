@@ -1,0 +1,36 @@
+{"tid": "P3", "rep": 1, "arm": 1, "calls": 1, "chars": 1025}
+{"tid": "P1", "rep": 1, "arm": 1, "calls": 1, "chars": 822}
+{"tid": "P2", "rep": 1, "arm": 1, "calls": 1, "chars": 813}
+{"tid": "P1", "rep": 1, "arm": 2, "calls": 11, "ideas": 24, "chars": 0}
+{"tid": "P3", "rep": 1, "arm": 2, "calls": 11, "ideas": 24, "chars": 9576}
+{"tid": "P2", "rep": 1, "arm": 2, "calls": 11, "ideas": 24, "chars": 663}
+{"tid": "P1", "rep": 1, "arm": 3, "calls": 8, "branches": 4, "chars": 931}
+{"tid": "P3", "rep": 1, "arm": 3, "calls": 8, "branches": 4, "chars": 971}
+{"tid": "P2", "rep": 1, "arm": 3, "calls": 8, "branches": 4, "chars": 887}
+{"tid": "P3", "rep": 1, "arm": 4, "calls": 6, "branches": 5, "chars": 1320, "diag": [{"model": "MiniMax-M3.1-Flash-Preview", "frame": "系统承载力", "ok": true, "chars": 887}, {"model": "MiniMax-M3", "frame": "长时段尺度", "ok": true, "chars": 918}, {"model": "MiniMax-M3.1-Flash-Preview", "frame": "系统承载力", "ok": true, "chars": 966}, {"model": "MiniMax-M2.7", "frame": "反面案例", "ok": true, "chars": 814}, {"model": "MiniMax-M2.5", "frame": "无利害观察者", "ok": true, "chars": 871}, {"model": "MiniMax-M2.1", "frame": "被改变生活的人", "ok": true, "chars": 886}]}
+{"tid": "P3", "rep": 2, "arm": 1, "calls": 1, "chars": 773}
+{"tid": "P3", "rep": 2, "arm": 2, "calls": 11, "ideas": 24, "chars": 920}
+{"tid": "P2", "rep": 1, "arm": 4, "calls": 6, "branches": 5, "chars": 1363, "diag": [{"model": "MiniMax-M3.1-Flash-Preview", "frame": "系统承载力", "ok": true, "chars": 887}, {"model": "MiniMax-M3", "frame": "长时段尺度", "ok": true, "chars": 918}, {"model": "MiniMax-M3.1-Flash-Preview", "frame": "系统承载力", "ok": true, "chars": 966}, {"model": "MiniMax-M2.7", "frame": "反面案例", "ok": true, "chars": 814}, {"model": "MiniMax-M2.5", "frame": "无利害观察者", "ok": true, "chars": 871}, {"model": "MiniMax-M2.1", "frame": "被改变生活的人", "ok": true, "chars": 886}, {"model": "MiniMax-M2.7", "frame": "反面案例", "ok": true, "chars": 778}, {"model": "MiniMax-M2.5", "frame": "无利害观察者", "ok": true, "chars": 849}, {"model": "MiniMax-M3", "frame": "长时段尺度", "persona": "你是一名 1962 年出生、退休前在", "ok": true, "chars": 248}, {"model": "MiniMax-M3.1-Flash-Preview", "frame": "系统承载力", "persona": "你是一名 1998 年出生、在城市做", "ok": false, "chars": 25}, {"model": "MiniMax-M2.7", "frame": "反面案例", "persona": "你是一名 1975 年出生、在县城开", "ok": true, "chars": 1764}, {"model": "MiniMax-M2.5", "frame": "无利害观察者", "persona": "你是一名 2003 年出生、正在读高", "ok": true, "chars": 527}, {"model": "MiniMax-M2.1", "frame": "被改变生活的人", "persona": "你是一名 1955 年出生、在报社做", "ok": true, "chars": 887}, {"model": "MiniMax-M2.1", "frame": "被改变生活的人", "ok": true, "chars": 1062}]}
+{"tid": "P2", "rep": 2, "arm": 1, "calls": 1, "chars": 909}
+{"tid": "P3", "rep": 2, "arm": 3, "calls": 8, "branches": 4, "chars": 959}
+{"tid": "P2", "rep": 2, "arm": 2, "calls": 11, "ideas": 24, "chars": 1144}
+{"tid": "P2", "rep": 2, "arm": 3, "calls": 8, "branches": 4, "chars": 1073}
+{"tid": "P1", "rep": 1, "arm": 4, "calls": 6, "branches": 5, "chars": 1196, "diag": [{"model": "MiniMax-M3", "frame": "长时段尺度", "ok": true, "chars": 944}, {"model": "MiniMax-M2.7", "frame": "反面案例", "ok": true, "chars": 753}, {"model": "MiniMax-M3.1-Flash-Preview", "frame": "系统承载力", "ok": true, "chars": 808}, {"model": "MiniMax-M2.5", "frame": "无利害观察者", "ok": true, "chars": 1423}]}
+{"tid": "P1", "rep": 2, "arm": 1, "calls": 1, "chars": 1169}
+{"tid": "P3", "rep": 2, "arm": 4, "calls": 6, "branches": 5, "chars": 1065, "diag": [{"model": "MiniMax-M3", "frame": "长时段尺度", "ok": true, "chars": 944}, {"model": "MiniMax-M2.7", "frame": "反面案例", "ok": true, "chars": 753}, {"model": "MiniMax-M3.1-Flash-Preview", "frame": "系统承载力", "ok": true, "chars": 808}, {"model": "MiniMax-M2.5", "frame": "无利害观察者", "ok": true, "chars": 1423}, {"model": "MiniMax-M2.1", "frame": "被改变生活的人", "ok": true, "chars": 1072}, {"model": "MiniMax-M2.7", "frame": "反面案例", "ok": true, "chars": 1040}]}
+{"tid": "P3", "rep": 3, "arm": 1, "calls": 1, "chars": 1236}
+{"tid": "P1", "rep": 2, "arm": 2, "calls": 11, "ideas": 24, "chars": 695}
+{"tid": "P3", "rep": 3, "arm": 2, "calls": 11, "ideas": 24, "chars": 1396}
+{"tid": "P1", "rep": 2, "arm": 3, "calls": 8, "branches": 4, "chars": 832}
+{"tid": "P2", "rep": 2, "arm": 4, "calls": 6, "branches": 5, "chars": 1405, "diag": [{"model": "MiniMax-M2.1", "frame": "被改变生活的人", "ok": true, "chars": 850}, {"model": "MiniMax-M3", "frame": "长时段尺度", "persona": "你是一名 1962 年出生、退休前在", "ok": true, "chars": 477}, {"model": "MiniMax-M3.1-Flash-Preview", "frame": "系统承载力", "persona": "你是一名 1998 年出生、在城市做", "ok": false, "chars": 25}, {"model": "MiniMax-M2.7", "frame": "反面案例", "persona": "你是一名 1975 年出生、在县城开", "ok": true, "chars": 549}, {"model": "MiniMax-M2.5", "frame": "无利害观察者", "persona": "你是一名 2003 年出生、正在读高", "ok": true, "chars": 530}, {"model": "MiniMax-M2.1", "frame": "被改变生活的人", "persona": "你是一名 1955 年出生、在报社做", "ok": true, "chars": 1111}, {"model": "MiniMax-M3", "frame": "长时段尺度", "ok": true, "chars": 994}]}
+{"tid": "P2", "rep": 3, "arm": 1, "calls": 1, "chars": 885}
+{"tid": "P3", "rep": 3, "arm": 3, "calls": 8, "branches": 4, "chars": 712}
+{"tid": "P2", "rep": 3, "arm": 2, "calls": 11, "ideas": 24, "chars": 958}
+{"tid": "P2", "rep": 3, "arm": 3, "calls": 8, "branches": 4, "chars": 1220}
+{"tid": "P1", "rep": 2, "arm": 4, "calls": 6, "branches": 5, "chars": 1223, "diag": [{"model": "MiniMax-M2.1", "frame": "被改变生活的人", "ok": true, "chars": 1150}, {"model": "MiniMax-M2.1", "frame": "被改变生活的人", "ok": true, "chars": 938}, {"model": "MiniMax-M3", "frame": "长时段尺度", "ok": true, "chars": 961}]}
+{"tid": "P1", "rep": 3, "arm": 1, "calls": 1, "chars": 792}
+{"tid": "P3", "rep": 3, "arm": 4, "calls": 6, "branches": 5, "chars": 1121, "diag": [{"model": "MiniMax-M2.1", "frame": "被改变生活的人", "ok": true, "chars": 1150}, {"model": "MiniMax-M2.1", "frame": "被改变生活的人", "ok": true, "chars": 938}, {"model": "MiniMax-M3", "frame": "长时段尺度", "ok": true, "chars": 961}, {"model": "MiniMax-M3.1-Flash-Preview", "frame": "系统承载力", "ok": true, "chars": 964}]}
+{"tid": "P1", "rep": 3, "arm": 2, "calls": 11, "ideas": 24, "chars": 763}
+{"tid": "P2", "rep": 3, "arm": 4, "calls": 6, "branches": 5, "chars": 1400, "diag": [{"model": "MiniMax-M2.1", "frame": "被改变生活的人", "ok": true, "chars": 1150}, {"model": "MiniMax-M2.1", "frame": "被改变生活的人", "ok": true, "chars": 938}, {"model": "MiniMax-M3", "frame": "长时段尺度", "ok": true, "chars": 961}, {"model": "MiniMax-M3.1-Flash-Preview", "frame": "系统承载力", "ok": true, "chars": 964}, {"model": "MiniMax-M2.7", "frame": "反面案例", "ok": true, "chars": 1161}, {"model": "MiniMax-M2.5", "frame": "无利害观察者", "ok": true, "chars": 888}, {"model": "MiniMax-M2.1", "frame": "被改变生活的人", "ok": true, "chars": 1020}]}
+{"tid": "P1", "rep": 3, "arm": 3, "calls": 8, "branches": 4, "chars": 1336}
+{"tid": "P1", "rep": 3, "arm": 4, "calls": 6, "branches": 5, "chars": 1484, "diag": [{"model": "MiniMax-M3", "frame": "长时段尺度", "ok": true, "chars": 984}, {"model": "MiniMax-M3.1-Flash-Preview", "frame": "系统承载力", "ok": true, "chars": 963}, {"model": "MiniMax-M2.7", "frame": "反面案例", "ok": true, "chars": 1121}, {"model": "MiniMax-M2.5", "frame": "无利害观察者", "ok": true, "chars": 1061}, {"model": "MiniMax-M2.1", "frame": "被改变生活的人", "ok": true, "chars": 30411}]}

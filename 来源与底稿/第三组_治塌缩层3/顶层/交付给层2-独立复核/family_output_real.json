@@ -1,0 +1,2408 @@
+{
+  "note": "★ 真·条件三元组抽取（严定义）+ 归族输出（batch-U1 / main_big 产物）",
+  "caliber": {
+    "family_key": "routes/C/optimizer.py:75 —— '|'.join(sorted(card['supports_conclusions']))",
+    "条件三元组": "(阈值集合, 条件片段, 动作片段, 动作骨架) ⇒ 纯程序、零 API、零判官",
+    "条件不同": "【阈值集合不同 或 动作片段不同】且【至少一方有阈值】⇒ ★ 无阈值者不参与判定（避免恒等）",
+    "分母": "同一份答案(record)内 family_key 相同但 claim 文本不同的无序对"
+  },
+  "synthetic_self_test": "PASS（4/4，含 2 个『不应判为条件不同』的负例）",
+  "counts": {
+    "same_family_diff_text_pairs": 454,
+    "condition_diff_pairs": 290,
+    "rate": 0.6388
+  },
+  "records": [
+    {
+      "run": "main_big",
+      "arm": "B0_direct",
+      "task": "D01",
+      "rep": 1,
+      "n_cards": 4,
+      "families": [
+        {
+          "family_key": "",
+          "n_cards": 1,
+          "n_load_bearing": 1,
+          "n_distinct_claims": 1,
+          "condition_diff": false,
+          "claims": [
+            "官方标称固态硬盘的随机读取性能最高为1,400,000 IOPS，即140万IOPS。"
+          ]
+        },
+        {
+          "family_key": "C12|C4|C8",
+          "n_cards": 1,
+          "n_load_bearing": 1,
+          "n_distinct_claims": 1,
+          "condition_diff": false,
+          "claims": [
+            "官方标称固态硬盘的1TB型号耐久度为600 TBW，即保修期内写入总量保证600 TB。"
+          ]
+        },
+        {
+          "family_key": "C1|C10",
+          "n_cards": 1,
+          "n_load_bearing": 1,
+          "n_distinct_claims": 1,
+          "condition_diff": false,
+          "claims": [
+            "官方标称固态硬盘的顺序读取速度最高为7,450 MB/s，该最高速度需在PCIe 4.0 x4等条件下测试。"
+          ]
+        },
+        {
+          "family_key": "C4",
+          "n_cards": 1,
+          "n_load_bearing": 1,
+          "n_distinct_claims": 1,
+          "condition_diff": false,
+          "claims": [
+            "官方标称固态硬盘的有限保修期限为自购买日起5年。"
+          ]
+        }
+      ]
+    },
+    {
+      "run": "main_big",
+      "arm": "B0_bestof3",
+      "task": "D01",
+      "rep": 1,
+      "n_cards": 7,
+      "families": [
+        {
+          "family_key": "",
+          "n_cards": 2,
+          "n_load_bearing": 0,
+          "n_distinct_claims": 2,
+          "condition_diff": false,
+          "claims": [
+            "三星 990 PRO 1TB 的标称随机读取性能为 1,400,000 IOPS，即 140 万 IOPS。",
+            "三星 990 PRO 1TB 的最高随机读取性能为 1,400K IOPS，即每秒约 140 万次。"
+          ]
+        },
+        {
+          "family_key": "C12|C4|C9",
+          "n_cards": 1,
+          "n_load_bearing": 1,
+          "n_distinct_claims": 1,
+          "condition_diff": false,
+          "claims": [
+            "三星 990 PRO 1TB 的官方保修期为 5 年有限保修。"
+          ]
+        },
+        {
+          "family_key": "C1|C10",
+          "n_cards": 1,
+          "n_load_bearing": 1,
+          "n_distinct_claims": 1,
+          "condition_diff": false,
+          "claims": [
+            "三星 990 PRO 1TB 的标称顺序读取速度为 7,450 MB/s。"
+          ]
+        },
+        {
+          "family_key": "C4|C8",
+          "n_cards": 2,
+          "n_load_bearing": 2,
+          "n_distinct_claims": 2,
+          "condition_diff": false,
+          "claims": [
+            "三星 990 PRO 1TB 的官方耐久度标称为 600 TBW。",
+            "三星 990 PRO 1TB 的官方耐久度为 600 TBW。"
+          ]
+        },
+        {
+          "family_key": "C4|C9",
+          "n_cards": 1,
+          "n_load_bearing": 1,
+          "n_distinct_claims": 1,
+          "condition_diff": false,
+          "claims": [
+            "三星 990 PRO 1TB 的官方保修期限为 5 年或累计写入 600 TBW，以先到者为准。"
+          ]
+        }
+      ]
+    },
+    {
+      "run": "main_big",
+      "arm": "B0_frames_vote",
+      "task": "D01",
+      "rep": 1,
+      "n_cards": 0,
+      "families": []
+    },
+    {
+      "run": "main_big",
+      "arm": "W_design_L2",
+      "task": "D01",
+      "rep": 1,
+      "n_cards": 12,
+      "families": [
+        {
+          "family_key": "",
+          "n_cards": 5,
+          "n_load_bearing": 0,
+          "n_distinct_claims": 5,
+          "condition_diff": true,
+          "claims": [
+            "三星990 PRO的Percentage Used达到或超过100%时，应安排保修更换。",
+            "三星990 PRO温度达到或超过70°C时，应告警并暂停新写入。",
+            "三星990 PRO连续2次温度超过70°C时，应按散热故障升级处理，降至65°C以下后再复测。",
+            "三星990 PRO上线时应采用RAID1、热备和自动重建配置。",
+            "三星990 PRO故障时应留存SMART日志、序列号和故障时间，并按RMA换盘，值班员不得现场恢复数据。"
+          ]
+        },
+        {
+          "family_key": "C1",
+          "n_cards": 2,
+          "n_load_bearing": 1,
+          "n_distinct_claims": 1,
+          "condition_diff": false,
+          "claims": [
+            "三星990 PRO 1TB的官方标称最高顺序读取速度为7,450 MB/s，最高随机读取速度为1,400,000 IOPS。",
+            "三星990 PRO 1TB的官方标称最高顺序读取速度为7,450 MB/s，最高随机读取速度为1,400,000 IOPS。"
+          ]
+        },
+        {
+          "family_key": "C3",
+          "n_cards": 1,
+          "n_load_bearing": 1,
+          "n_distinct_claims": 1,
+          "condition_diff": false,
+          "claims": [
+            "三星990 PRO必须协商到PCIe 4.0×4链路，否则应按PCIe 3.0×1链路降速运行。"
+          ]
+        },
+        {
+          "family_key": "C4",
+          "n_cards": 2,
+          "n_load_bearing": 1,
+          "n_distinct_claims": 2,
+          "condition_diff": true,
+          "claims": [
+            "三星990 PRO的Percentage Used达到或超过100%时，应安排保修更换。",
+            "三星990 PRO温度达到或超过70°C时，应告警并暂停新写入。"
+          ]
+        },
+        {
+          "family_key": "C5",
+          "n_cards": 2,
+          "n_load_bearing": 0,
+          "n_distinct_claims": 2,
+          "condition_diff": true,
+          "claims": [
+            "三星990 PRO必须协商到PCIe 4.0×4链路，否则应按PCIe 3.0×1链路降速运行。",
+            "三星990 PRO复测应满足PCIe 4.0×4、NVMe 2.0、无后台写入且不触发热降频的条件，并固定4KB块大小、QD64，记录平均延迟和P99延迟。"
+          ]
+        }
+      ]
+    },
+    {
+      "run": "main_big",
+      "arm": "W_train_L3",
+      "task": "D01",
+      "rep": 1,
+      "n_cards": 12,
+      "families": [
+        {
+          "family_key": "",
+          "n_cards": 9,
+          "n_load_bearing": 0,
+          "n_distinct_claims": 8,
+          "condition_diff": true,
+          "claims": [
+            "三星 990 PRO 1TB 的官方随机读峰值为 4KB、QD1 下 140K IOPS，即 14 万 IOPS。",
+            "三星 990 PRO 1TB 的 4KiB、QD64 随机读峰值为 140 万 IOPS。",
+            "三星 990 PRO 1TB 接入芯片组或共享通道时会出现速度下降。",
+            "三星 990 PRO 1TB 配备 1GB LPDDR4。",
+            "三星 990 PRO 1TB 的 SLC 缓存耗尽后会出现性能下降。",
+            "三星 990 PRO 1TB 过热时会出现性能下降。"
+          ]
+        },
+        {
+          "family_key": "C1",
+          "n_cards": 2,
+          "n_load_bearing": 1,
+          "n_distinct_claims": 2,
+          "condition_diff": false,
+          "claims": [
+            "三星 990 PRO 1TB 的标称顺序读峰值为 7,450 MB/s，前提是 PCIe 4.0×4 和厂商基准环境。",
+            "PCIe 4.0×4 的有效载荷速率约为 63 Gbit/s。"
+          ]
+        },
+        {
+          "family_key": "C12|C4|C9",
+          "n_cards": 1,
+          "n_load_bearing": 1,
+          "n_distinct_claims": 1,
+          "condition_diff": false,
+          "claims": [
+            "三星 990 PRO 1TB 的 4KiB、QD64 随机读峰值为 140 万 IOPS。"
+          ]
+        }
+      ]
+    },
+    {
+      "run": "main_big",
+      "arm": "B0_direct",
+      "task": "D01",
+      "rep": 2,
+      "n_cards": 4,
+      "families": [
+        {
+          "family_key": "",
+          "n_cards": 1,
+          "n_load_bearing": 1,
+          "n_distinct_claims": 1,
+          "condition_diff": false,
+          "claims": [
+            "三星 990 PRO 1TB SSD 的标称随机读取性能最高为 140 万 IOPS（1,400K IOPS）。"
+          ]
+        },
+        {
+          "family_key": "C1",
+          "n_cards": 1,
+          "n_load_bearing": 1,
+          "n_distinct_claims": 1,
+          "condition_diff": false,
+          "claims": [
+            "三星 990 PRO 1TB SSD 的标称顺序读取速度最高为 7450 MB/s。"
+          ]
+        },
+        {
+          "family_key": "C3",
+          "n_cards": 1,
+          "n_load_bearing": 1,
+          "n_distinct_claims": 1,
+          "condition_diff": false,
+          "claims": [
+            "三星 990 PRO 1TB SSD 的官方有限保修期限为 5 年。"
+          ]
+        },
+        {
+          "family_key": "C4",
+          "n_cards": 1,
+          "n_load_bearing": 1,
+          "n_distinct_claims": 1,
+          "condition_diff": false,
+          "claims": [
+            "三星 990 PRO 1TB SSD 的官方标称耐久度为 600 TBW。"
+          ]
+        }
+      ]
+    },
+    {
+      "run": "main_big",
+      "arm": "B0_bestof3",
+      "task": "D01",
+      "rep": 2,
+      "n_cards": 5,
+      "families": [
+        {
+          "family_key": "",
+          "n_cards": 1,
+          "n_load_bearing": 1,
+          "n_distinct_claims": 1,
+          "condition_diff": false,
+          "claims": [
+            "三星 990 PRO 1TB SSD 在 4KB 块条件下的官方标称随机读取速度最高为 1,400,000 IOPS。"
+          ]
+        },
+        {
+          "family_key": "C1",
+          "n_cards": 1,
+          "n_load_bearing": 1,
+          "n_distinct_claims": 1,
+          "condition_diff": false,
+          "claims": [
+            "三星 990 PRO 1TB SSD 的官方标称顺序读取速度最高为 7,450 MB/s。"
+          ]
+        },
+        {
+          "family_key": "C3",
+          "n_cards": 1,
+          "n_load_bearing": 1,
+          "n_distinct_claims": 1,
+          "condition_diff": false,
+          "claims": [
+            "三星 990 PRO 1TB SSD 的有限保修期限为 5 年。"
+          ]
+        },
+        {
+          "family_key": "C4",
+          "n_cards": 2,
+          "n_load_bearing": 1,
+          "n_distinct_claims": 2,
+          "condition_diff": true,
+          "claims": [
+            "三星 990 PRO 1TB SSD 的官方额定耐久度为 600 TBW。",
+            "三星 990 PRO 1TB SSD 的保修期包含总写入量达到 600TB 的保证。"
+          ]
+        }
+      ]
+    },
+    {
+      "run": "main_big",
+      "arm": "B0_frames_vote",
+      "task": "D01",
+      "rep": 2,
+      "n_cards": 0,
+      "families": []
+    },
+    {
+      "run": "main_big",
+      "arm": "W_design_L2",
+      "task": "D01",
+      "rep": 2,
+      "n_cards": 12,
+      "families": [
+        {
+          "family_key": "",
+          "n_cards": 5,
+          "n_load_bearing": 2,
+          "n_distinct_claims": 5,
+          "condition_diff": true,
+          "claims": [
+            "Samsung SSD 990 PRO 1TB 在 4KiB 块大小下的随机读取最高速度为 1,400,000 IOPS。",
+            "Samsung SSD 990 PRO 1TB 的随机读取实测必须记录队列深度、块大小和测试时长。",
+            "Samsung SSD 990 PRO 1TB 的 1,400,000 IOPS 随机读取最高值不能外推到任意负载。",
+            "Samsung SSD 990 PRO 1TB 的保修期限与 TBW 指标不能直接套用于 Samsung SSD 990 PRO Plus 或 Samsung SSD 990 PRO 2TB/4TB 版本。",
+            "Samsung SSD 990 PRO 1TB 的顺序读取最高速度为 7450 MB/s。"
+          ]
+        },
+        {
+          "family_key": "C1",
+          "n_cards": 3,
+          "n_load_bearing": 1,
+          "n_distinct_claims": 3,
+          "condition_diff": true,
+          "claims": [
+            "Samsung SSD 990 PRO 1TB 的顺序读取最高速度为 7450 MB/s。",
+            "Samsung SSD 990 PRO 1TB 完整发挥 7450 MB/s 最高速度需要 PCIe 4.0×4 通道。",
+            "Samsung SSD 990 PRO 1TB 的 7450 MB/s 是最高顺序读取速度，不是持续读取速度。"
+          ]
+        },
+        {
+          "family_key": "C12|C4|C9",
+          "n_cards": 1,
+          "n_load_bearing": 1,
+          "n_distinct_claims": 1,
+          "condition_diff": false,
+          "claims": [
+            "Samsung SSD 990 PRO 1TB 完整发挥 7450 MB/s 最高速度需要 PCIe 4.0×4 通道。"
+          ]
+        },
+        {
+          "family_key": "C12|C8|C9",
+          "n_cards": 1,
+          "n_load_bearing": 1,
+          "n_distinct_claims": 1,
+          "condition_diff": false,
+          "claims": [
+            "Samsung SSD 990 PRO 1TB 的 7450 MB/s 是最高顺序读取速度，不是持续读取速度。"
+          ]
+        },
+        {
+          "family_key": "C3",
+          "n_cards": 1,
+          "n_load_bearing": 1,
+          "n_distinct_claims": 1,
+          "condition_diff": false,
+          "claims": [
+            "Samsung SSD 990 PRO 1TB 提供 5 年有限保修，保修期通常从购买日起算。"
+          ]
+        },
+        {
+          "family_key": "C3|C4",
+          "n_cards": 1,
+          "n_load_bearing": 0,
+          "n_distinct_claims": 1,
+          "condition_diff": false,
+          "claims": [
+            "Samsung SSD 990 PRO 1TB 的保修期限与 TBW 指标不能直接套用于 Samsung SSD 990 PRO Plus 或 Samsung SSD 990 PRO 2TB/4TB 版本。"
+          ]
+        }
+      ]
+    },
+    {
+      "run": "main_big",
+      "arm": "W_train_L3",
+      "task": "D01",
+      "rep": 2,
+      "n_cards": 12,
+      "families": [
+        {
+          "family_key": "",
+          "n_cards": 9,
+          "n_load_bearing": 4,
+          "n_distinct_claims": 7,
+          "condition_diff": true,
+          "claims": [
+            "Samsung 990 PRO 1TB的官方标称随机读取速度为1,400,000 IOPS。",
+            "Samsung 990 PRO 1TB的官方标称随机写入速度为1,500,000 IOPS。",
+            "Samsung 990 PRO 1TB享受保修通常需要购买凭证并符合所在地区的保修条款。",
+            "将Samsung 990 EVO或Samsung 990 PLUS的规格混入Samsung 990 PRO会导致规格信息错配。",
+            "Samsung 990 PRO 1TB的最高顺序读取速度可在平台、固件、散热和大文件测试均不构成瓶颈时复现。",
+            "Samsung 990 PRO 1TB在PCIe 4.0 x4环境下的最高标称顺序读取速度为7,450 MB/s。"
+          ]
+        },
+        {
+          "family_key": "C12|C4|C8",
+          "n_cards": 1,
+          "n_load_bearing": 1,
+          "n_distinct_claims": 1,
+          "condition_diff": false,
+          "claims": [
+            "Samsung 990 PRO 1TB的官方标称耐久度为600 TBW。"
+          ]
+        },
+        {
+          "family_key": "C12|C4|C9",
+          "n_cards": 1,
+          "n_load_bearing": 1,
+          "n_distinct_claims": 1,
+          "condition_diff": false,
+          "claims": [
+            "Samsung 990 PRO 1TB提供5年有限保修。"
+          ]
+        },
+        {
+          "family_key": "C1|C5",
+          "n_cards": 1,
+          "n_load_bearing": 1,
+          "n_distinct_claims": 1,
+          "condition_diff": false,
+          "claims": [
+            "Samsung 990 PRO 1TB在PCIe 4.0 x4环境下的最高标称顺序读取速度为7,450 MB/s。"
+          ]
+        }
+      ]
+    },
+    {
+      "run": "main_big",
+      "arm": "B0_direct",
+      "task": "D02",
+      "rep": 1,
+      "n_cards": 5,
+      "families": [
+        {
+          "family_key": "C10|C3|C4",
+          "n_cards": 1,
+          "n_load_bearing": 1,
+          "n_distinct_claims": 1,
+          "condition_diff": false,
+          "claims": [
+            "客户端请求过多已导致后端容量耗尽、服务整体不可用时，网关应返回 HTTP 503（Service Unavailable）。"
+          ]
+        },
+        {
+          "family_key": "C10|C3|C9",
+          "n_cards": 1,
+          "n_load_bearing": 1,
+          "n_distinct_claims": 1,
+          "condition_diff": false,
+          "claims": [
+            "当后端过载、暂时不可用或正在维护时，网关可返回 HTTP 503（Service Unavailable）。"
+          ]
+        },
+        {
+          "family_key": "C11|C12",
+          "n_cards": 1,
+          "n_load_bearing": 1,
+          "n_distinct_claims": 1,
+          "condition_diff": false,
+          "claims": [
+            "客户端请求频率超限时，网关通常应返回 HTTP 429（Too Many Requests）。"
+          ]
+        },
+        {
+          "family_key": "C1|C5|C7",
+          "n_cards": 1,
+          "n_load_bearing": 0,
+          "n_distinct_claims": 1,
+          "condition_diff": false,
+          "claims": [
+            "当上游返回无效、畸形或异常响应时，网关应返回 HTTP 502（Bad Gateway）。"
+          ]
+        },
+        {
+          "family_key": "C2|C6|C8",
+          "n_cards": 1,
+          "n_load_bearing": 1,
+          "n_distinct_claims": 1,
+          "condition_diff": false,
+          "claims": [
+            "当上游未在规定超时时间内响应时，网关应返回 HTTP 504（Gateway Timeout）。"
+          ]
+        }
+      ]
+    },
+    {
+      "run": "main_big",
+      "arm": "B0_bestof3",
+      "task": "D02",
+      "rep": 1,
+      "n_cards": 4,
+      "families": [
+        {
+          "family_key": "C10|C3|C9",
+          "n_cards": 1,
+          "n_load_bearing": 1,
+          "n_distinct_claims": 1,
+          "condition_diff": false,
+          "claims": [
+            "后端过载且暂时无法处理请求时，网关可返回 HTTP 503 Service Unavailable。"
+          ]
+        },
+        {
+          "family_key": "C11|C12",
+          "n_cards": 1,
+          "n_load_bearing": 1,
+          "n_distinct_claims": 1,
+          "condition_diff": false,
+          "claims": [
+            "请求速率超过限制时，网关通常返回 HTTP 429 Too Many Requests，而不是 HTTP 503 Service Unavailable。"
+          ]
+        },
+        {
+          "family_key": "C1|C5|C7",
+          "n_cards": 1,
+          "n_load_bearing": 1,
+          "n_distinct_claims": 1,
+          "condition_diff": false,
+          "claims": [
+            "上游返回无效或畸形响应时，网关应返回 HTTP 502 Bad Gateway。"
+          ]
+        },
+        {
+          "family_key": "C2|C6|C8",
+          "n_cards": 1,
+          "n_load_bearing": 1,
+          "n_distinct_claims": 1,
+          "condition_diff": false,
+          "claims": [
+            "上游未能在规定时限内响应并造成超时时，网关应返回 HTTP 504 Gateway Timeout。"
+          ]
+        }
+      ]
+    },
+    {
+      "run": "main_big",
+      "arm": "B0_frames_vote",
+      "task": "D02",
+      "rep": 1,
+      "n_cards": 0,
+      "families": []
+    },
+    {
+      "run": "main_big",
+      "arm": "W_design_L2",
+      "task": "D02",
+      "rep": 1,
+      "n_cards": 12,
+      "families": [
+        {
+          "family_key": "",
+          "n_cards": 8,
+          "n_load_bearing": 1,
+          "n_distinct_claims": 6,
+          "condition_diff": true,
+          "claims": [
+            "单客户端超过核定配额时应返回 HTTP 429；文本给出的配额示例为 10,000 req/s 和 100 req/s。",
+            "同一上游实例连续命中异常 2 次后应被摘除，并在 5 秒后接受半开探测。",
+            "GET 请求最多重试 1 次，总时限不得超过 6 秒，发生超时时网关应熔断。",
+            "熔断器应每 10 秒探测一次上游，连续 3 次探测成功后才恢复放量。",
+            "单客户端超过核定配额时应返回 HTTP 429；文本给出的配额示例为 10,000 req/s 和 100 req/s。",
+            "网关无可用上游实例时应返回 HTTP 503。"
+          ]
+        },
+        {
+          "family_key": "C1",
+          "n_cards": 1,
+          "n_load_bearing": 1,
+          "n_distinct_claims": 1,
+          "condition_diff": false,
+          "claims": [
+            "网关收到上游非法响应行或响应头，或发现上游响应体损坏时，应返回 HTTP 502。"
+          ]
+        },
+        {
+          "family_key": "C2",
+          "n_cards": 1,
+          "n_load_bearing": 1,
+          "n_distinct_claims": 1,
+          "condition_diff": false,
+          "claims": [
+            "网关已向健康上游转发请求但上游在 5 秒内未返回首个响应字节时，应返回 HTTP 504；截止时间设为 30 秒时同样适用。"
+          ]
+        },
+        {
+          "family_key": "C3",
+          "n_cards": 2,
+          "n_load_bearing": 2,
+          "n_distinct_claims": 2,
+          "condition_diff": true,
+          "claims": [
+            "网关无可用上游实例时应返回 HTTP 503。",
+            "健康实例数为 0、连接池占用率达到 90% 或请求队列达到 100 时，网关应返回 HTTP 503 并拒绝新流量。"
+          ]
+        }
+      ]
+    },
+    {
+      "run": "main_big",
+      "arm": "W_train_L3",
+      "task": "D02",
+      "rep": 1,
+      "n_cards": 12,
+      "families": [
+        {
+          "family_key": "",
+          "n_cards": 5,
+          "n_load_bearing": 1,
+          "n_distinct_claims": 5,
+          "condition_diff": true,
+          "claims": [
+            "网关日志同时记录 `upstream_status` 和 `parse_error`。",
+            "单客户端请求速率超过1000 QPS配额时，网关返回429，并标记为 `rate_limited`。",
+            "上游返回合法的5xx响应时，网关原样透传该5xx响应。",
+            "上游已返回响应但缺少状态行，或响应头、响应体解析失败时，网关返回502。",
+            "TCP/TLS连接建立后等待首个字节超过3秒时，网关返回504。"
+          ]
+        },
+        {
+          "family_key": "C1",
+          "n_cards": 1,
+          "n_load_bearing": 1,
+          "n_distinct_claims": 1,
+          "condition_diff": false,
+          "claims": [
+            "上游已返回响应但缺少状态行，或响应头、响应体解析失败时，网关返回502。"
+          ]
+        },
+        {
+          "family_key": "C10|C3|C9",
+          "n_cards": 1,
+          "n_load_bearing": 0,
+          "n_distinct_claims": 1,
+          "condition_diff": false,
+          "claims": [
+            "网关日志同时记录 `upstream_status` 和 `parse_error`。"
+          ]
+        },
+        {
+          "family_key": "C11|C12",
+          "n_cards": 1,
+          "n_load_bearing": 0,
+          "n_distinct_claims": 1,
+          "condition_diff": false,
+          "claims": [
+            "健康实例数低于实例总数的10%，或队列使用率超过90%持续5秒时，网关返回503。"
+          ]
+        },
+        {
+          "family_key": "C2",
+          "n_cards": 2,
+          "n_load_bearing": 2,
+          "n_distinct_claims": 2,
+          "condition_diff": true,
+          "claims": [
+            "TCP/TLS连接建立后等待首个字节超过3秒时，网关返回504。",
+            "TCP/TLS连接建立后30秒未收到首个响应字节，或请求总时限达到60秒时，网关返回504。"
+          ]
+        },
+        {
+          "family_key": "C3",
+          "n_cards": 2,
+          "n_load_bearing": 2,
+          "n_distinct_claims": 2,
+          "condition_diff": true,
+          "claims": [
+            "健康实例数低于实例总数的10%，或队列使用率超过90%持续5秒时，网关返回503。",
+            "服务端过载保护拒绝请求时，网关返回503，并标记为 `overload_shed`。"
+          ]
+        }
+      ]
+    },
+    {
+      "run": "main_big",
+      "arm": "B0_direct",
+      "task": "D02",
+      "rep": 2,
+      "n_cards": 5,
+      "families": [
+        {
+          "family_key": "",
+          "n_cards": 1,
+          "n_load_bearing": 1,
+          "n_distinct_claims": 1,
+          "condition_diff": false,
+          "claims": [
+            "仅在服务整体不可用时，网关才返回 HTTP 503。"
+          ]
+        },
+        {
+          "family_key": "C10|C3|C9",
+          "n_cards": 1,
+          "n_load_bearing": 0,
+          "n_distinct_claims": 1,
+          "condition_diff": false,
+          "claims": [
+            "网关在后端过载导致暂时不可用时返回 HTTP 503。"
+          ]
+        },
+        {
+          "family_key": "C11|C12",
+          "n_cards": 1,
+          "n_load_bearing": 1,
+          "n_distinct_claims": 1,
+          "condition_diff": false,
+          "claims": [
+            "单纯请求过多时，网关通常返回 HTTP 429。"
+          ]
+        },
+        {
+          "family_key": "C1|C5|C7",
+          "n_cards": 1,
+          "n_load_bearing": 0,
+          "n_distinct_claims": 1,
+          "condition_diff": false,
+          "claims": [
+            "网关在收到上游返回的无效或畸形响应时返回 HTTP 502。"
+          ]
+        },
+        {
+          "family_key": "C2|C6|C8",
+          "n_cards": 1,
+          "n_load_bearing": 0,
+          "n_distinct_claims": 1,
+          "condition_diff": false,
+          "claims": [
+            "网关在上游未能在规定超时时间内响应时返回 HTTP 504。"
+          ]
+        }
+      ]
+    },
+    {
+      "run": "main_big",
+      "arm": "B0_bestof3",
+      "task": "D02",
+      "rep": 2,
+      "n_cards": 4,
+      "families": [
+        {
+          "family_key": "C10|C3|C9",
+          "n_cards": 1,
+          "n_load_bearing": 1,
+          "n_distinct_claims": 1,
+          "condition_diff": false,
+          "claims": [
+            "后端服务因过载而暂时不可用时，应返回 HTTP 503 Service Unavailable。"
+          ]
+        },
+        {
+          "family_key": "C11|C12",
+          "n_cards": 1,
+          "n_load_bearing": 1,
+          "n_distinct_claims": 1,
+          "condition_diff": false,
+          "claims": [
+            "客户端因请求过多触发限流时，应返回 HTTP 429 Too Many Requests；仅在后端服务因此过载而暂时不可用时，才返回 HTTP 503 Service Unavailable。"
+          ]
+        },
+        {
+          "family_key": "C1|C5|C7",
+          "n_cards": 1,
+          "n_load_bearing": 1,
+          "n_distinct_claims": 1,
+          "condition_diff": false,
+          "claims": [
+            "网关收到上游服务返回的无效或不可解析响应时，应返回 HTTP 502 Bad Gateway。"
+          ]
+        },
+        {
+          "family_key": "C2|C6|C8",
+          "n_cards": 1,
+          "n_load_bearing": 1,
+          "n_distinct_claims": 1,
+          "condition_diff": false,
+          "claims": [
+            "上游服务在网关规定的超时时限内未返回响应时，应返回 HTTP 504 Gateway Timeout。"
+          ]
+        }
+      ]
+    },
+    {
+      "run": "main_big",
+      "arm": "B0_frames_vote",
+      "task": "D02",
+      "rep": 2,
+      "n_cards": 12,
+      "families": [
+        {
+          "family_key": "",
+          "n_cards": 7,
+          "n_load_bearing": 1,
+          "n_distinct_claims": 6,
+          "condition_diff": true,
+          "claims": [
+            "上游响应违反 HTTP 语义时，网关返回 502 Bad Gateway。",
+            "上游主动拒绝网关连接时，网关通常返回 502 Bad Gateway。",
+            "网关因请求过多触发限流时，网关返回 429 Too Many Requests。",
+            "网关仅在把限流视为“服务暂不可用”时，才对限流请求返回 503 Service Unavailable。",
+            "上游明确返回 503 Service Unavailable 时，网关原样保留上游的 503 状态码。",
+            "网关收到上游已返回但无效、畸形或无法解析的响应时，网关返回 502 Bad Gateway。"
+          ]
+        },
+        {
+          "family_key": "C1",
+          "n_cards": 1,
+          "n_load_bearing": 1,
+          "n_distinct_claims": 1,
+          "condition_diff": false,
+          "claims": [
+            "网关收到上游已返回但无效、畸形或无法解析的响应时，网关返回 502 Bad Gateway。"
+          ]
+        },
+        {
+          "family_key": "C2",
+          "n_cards": 3,
+          "n_load_bearing": 3,
+          "n_distinct_claims": 2,
+          "condition_diff": true,
+          "claims": [
+            "上游在约定超时时限内未返回响应时，网关返回 504 Gateway Timeout。",
+            "上游响应违反 HTTP 语义时，网关返回 502 Bad Gateway。",
+            "上游在约定超时时限内未返回响应时，网关返回 504 Gateway Timeout。"
+          ]
+        },
+        {
+          "family_key": "C3",
+          "n_cards": 1,
+          "n_load_bearing": 1,
+          "n_distinct_claims": 1,
+          "condition_diff": false,
+          "claims": [
+            "后端因瞬时过载而无法处理请求时，网关返回 503 Service Unavailable。"
+          ]
+        }
+      ]
+    },
+    {
+      "run": "main_big",
+      "arm": "W_design_L2",
+      "task": "D02",
+      "rep": 2,
+      "n_cards": 12,
+      "families": [
+        {
+          "family_key": "",
+          "n_cards": 5,
+          "n_load_bearing": 0,
+          "n_distinct_claims": 5,
+          "condition_diff": true,
+          "claims": [
+            "攻击者使用畸形报文、合法 500 响应或半开连接时，可以混淆网关对上游失败的分类。",
+            "攻击者通过挂起上游连接、突发并发或自动重试，可以耗尽网关或后端资源并制造雪崩。",
+            "上游返回协议级无效响应（如非法 HTTP 状态行），或网关无法取得可转发的上游响应时，网关返回 502。",
+            "上游连接已建立，但网关在 10,000 毫秒内未收到上游首字节，且网关超时配置为 10 秒时，网关返回 504。",
+            "后端处于暂不可服务状态，例如就绪实例为 0/2 或连接池占用为 100/100 时，网关返回 503。"
+          ]
+        },
+        {
+          "family_key": "C10|C3|C9",
+          "n_cards": 2,
+          "n_load_bearing": 2,
+          "n_distinct_claims": 2,
+          "condition_diff": true,
+          "claims": [
+            "后端处于暂不可服务状态，例如就绪实例为 0/2 或连接池占用为 100/100 时，网关返回 503。",
+            "每个后端实例的并发上限为 100、队列上限为 50，并发或队列满载时网关返回 503。"
+          ]
+        },
+        {
+          "family_key": "C11|C12",
+          "n_cards": 1,
+          "n_load_bearing": 1,
+          "n_distinct_claims": 1,
+          "condition_diff": false,
+          "claims": [
+            "客户端 QPS 超过 1,000 rps 时，网关返回 429，并附带 `Retry-After` 响应头。"
+          ]
+        },
+        {
+          "family_key": "C1|C5|C7",
+          "n_cards": 1,
+          "n_load_bearing": 1,
+          "n_distinct_claims": 1,
+          "condition_diff": false,
+          "claims": [
+            "上游返回协议级无效响应（如非法 HTTP 状态行），或网关无法取得可转发的上游响应时，网关返回 502。"
+          ]
+        },
+        {
+          "family_key": "C2|C6|C8",
+          "n_cards": 2,
+          "n_load_bearing": 2,
+          "n_distinct_claims": 2,
+          "condition_diff": true,
+          "claims": [
+            "上游连接已建立，但网关在 10,000 毫秒内未收到上游首字节，且网关超时配置为 10 秒时，网关返回 504。",
+            "网关的连接超时、首字节超时和总超时分别配置为 1 秒、2 秒和 5 秒，任一超时且上游未返回完整响应时，网关返回 504。"
+          ]
+        },
+        {
+          "family_key": "C3",
+          "n_cards": 1,
+          "n_load_bearing": 0,
+          "n_distinct_claims": 1,
+          "condition_diff": false,
+          "claims": [
+            "客户端 QPS 超过 1,000 rps 时，网关返回 429，并附带 `Retry-After` 响应头。"
+          ]
+        }
+      ]
+    },
+    {
+      "run": "main_big",
+      "arm": "W_train_L3",
+      "task": "D02",
+      "rep": 2,
+      "n_cards": 12,
+      "families": [
+        {
+          "family_key": "",
+          "n_cards": 4,
+          "n_load_bearing": 4,
+          "n_distinct_claims": 3,
+          "condition_diff": true,
+          "claims": [
+            "网关限流设为 10 req/s 时，第 11 个请求应返回 429，而不是 503。",
+            "客户端仅因超过单客户端配额而被拒绝时，网关应返回 429。",
+            "网关读取超时设为 5 秒、上游挂起 6 秒且未返回首字节时，应返回 504。",
+            "网关限流设为 10 req/s 时，第 11 个请求应返回 429，而不是 503。"
+          ]
+        },
+        {
+          "family_key": "C1",
+          "n_cards": 2,
+          "n_load_bearing": 2,
+          "n_distinct_claims": 2,
+          "condition_diff": true,
+          "claims": [
+            "网关收到畸形的上游状态行（如 `HTTP/1.1 XYZ`）并判定上游响应非法时，应返回 502。",
+            "网关已收到上游响应但协议无效时，应返回 502，不能返回 504。"
+          ]
+        },
+        {
+          "family_key": "C2",
+          "n_cards": 3,
+          "n_load_bearing": 2,
+          "n_distinct_claims": 3,
+          "condition_diff": true,
+          "claims": [
+            "网关读取超时设为 5 秒、上游挂起 6 秒且未返回首字节时，应返回 504。",
+            "上游首字节超过配置的超时时间（如 3 秒）时，网关应返回 504。",
+            "后端并发上限设为 5、第 6 个请求触发过载且无可用实例时，网关应返回 503。"
+          ]
+        },
+        {
+          "family_key": "C3",
+          "n_cards": 3,
+          "n_load_bearing": 2,
+          "n_distinct_claims": 3,
+          "condition_diff": true,
+          "claims": [
+            "后端并发上限设为 5、第 6 个请求触发过载且无可用实例时，网关应返回 503。",
+            "请求洪峰使队列达到 100/100 并触发网关熔断时，网关可以返回 503。",
+            "网关收到畸形的上游状态行（如 `HTTP/1.1 XYZ`）并判定上游响应非法时，应返回 502。"
+          ]
+        }
+      ]
+    },
+    {
+      "run": "adv",
+      "arm": "B0_direct",
+      "task": "A01",
+      "rep": 1,
+      "n_cards": 6,
+      "families": [
+        {
+          "family_key": "",
+          "n_cards": 1,
+          "n_load_bearing": 1,
+          "n_distinct_claims": 1,
+          "condition_diff": false,
+          "claims": [
+            "输出电流每升高10 °C，降额20%。"
+          ]
+        },
+        {
+          "family_key": "C1",
+          "n_cards": 2,
+          "n_load_bearing": 0,
+          "n_distinct_claims": 2,
+          "condition_diff": false,
+          "claims": [
+            "25 °C时，额定输出电流为5 A。",
+            "25 °C时，标称输出电压为12 V。"
+          ]
+        },
+        {
+          "family_key": "C1|C2",
+          "n_cards": 1,
+          "n_load_bearing": 1,
+          "n_distinct_claims": 1,
+          "condition_diff": false,
+          "claims": [
+            "最大输出电流为5 A×(1－20%)＝4 A。"
+          ]
+        },
+        {
+          "family_key": "C2",
+          "n_cards": 2,
+          "n_load_bearing": 2,
+          "n_distinct_claims": 2,
+          "condition_diff": false,
+          "claims": [
+            "45 °C比25 °C高20 °C。",
+            "25 °C至45 °C之间共有2个10 °C温度区间。"
+          ]
+        }
+      ]
+    },
+    {
+      "run": "adv",
+      "arm": "B0_bestof3",
+      "task": "A01",
+      "rep": 1,
+      "n_cards": 11,
+      "families": [
+        {
+          "family_key": "C1",
+          "n_cards": 1,
+          "n_load_bearing": 0,
+          "n_distinct_claims": 1,
+          "condition_diff": false,
+          "claims": [
+            "25 ℃时的额定输出电流为5 A。"
+          ]
+        },
+        {
+          "family_key": "C1|C2",
+          "n_cards": 2,
+          "n_load_bearing": 2,
+          "n_distinct_claims": 2,
+          "condition_diff": true,
+          "claims": [
+            "25 ℃时的额定输出电流5 A是输出电流降额的计算基准。",
+            "45 ℃比25 ℃高20 ℃。"
+          ]
+        },
+        {
+          "family_key": "C2",
+          "n_cards": 2,
+          "n_load_bearing": 1,
+          "n_distinct_claims": 2,
+          "condition_diff": true,
+          "claims": [
+            "输出电流每升高10 ℃下降10%。",
+            "25 ℃时的额定输出电流为5 A。"
+          ]
+        },
+        {
+          "family_key": "C7",
+          "n_cards": 6,
+          "n_load_bearing": 6,
+          "n_distinct_claims": 6,
+          "condition_diff": true,
+          "claims": [
+            "25 ℃时的额定输出电流5 A是输出电流降额的计算基准。",
+            "45 ℃比25 ℃高20 ℃。",
+            "20 ℃的温度差相当于2个10 ℃降额区间。",
+            "45 ℃时的总降额比例为20%。",
+            "45 ℃时的最大输出电流为4 A。",
+            "45 ℃对应2个10 ℃降额区间。"
+          ]
+        }
+      ]
+    },
+    {
+      "run": "adv",
+      "arm": "B0_frames_vote",
+      "task": "A01",
+      "rep": 1,
+      "n_cards": 12,
+      "families": [
+        {
+          "family_key": "",
+          "n_cards": 4,
+          "n_load_bearing": 0,
+          "n_distinct_claims": 4,
+          "condition_diff": true,
+          "claims": [
+            "Runbook规定，设备带载运行10分钟后测量电源进风口温度。",
+            "Runbook规定，电源进风口温度达到45°C时，立即将负载限流设为4.0A。",
+            "防召回设计要求电源进风口NTC传感器联动输出级自动限流。",
+            "在12 V输出、环境温度45°C且符合每升高10°C降额10%的规则时，最大输出电流为4.0A。"
+          ]
+        },
+        {
+          "family_key": "C1|C2",
+          "n_cards": 8,
+          "n_load_bearing": 7,
+          "n_distinct_claims": 5,
+          "condition_diff": true,
+          "claims": [
+            "环境温度为45°C、基准温度为25°C时，温升为20°C，共跨越25–35°C和35–45°C两个10°C降额区间。",
+            "额定输出电流为5A时，每个10°C降额区间下降10%，45°C相对25°C的总降额为20%。",
+            "在12 V输出、环境温度45°C且符合每升高10°C降额10%的规则时，最大输出电流为4.0A。",
+            "运行规则规定，45°C环境下的持续负载电流不得超过4.0A。",
+            "运行规则禁止在45°C环境下按铭牌5A额定电流运行。",
+            "环境温度为45°C、基准温度为25°C时，温升为20°C，共跨越25–35°C和35–45°C两个10°C降额区间。"
+          ]
+        }
+      ]
+    },
+    {
+      "run": "adv",
+      "arm": "W_design_L2",
+      "task": "A01",
+      "rep": 1,
+      "n_cards": 12,
+      "families": [
+        {
+          "family_key": "",
+          "n_cards": 4,
+          "n_load_bearing": 0,
+          "n_distinct_claims": 4,
+          "condition_diff": true,
+          "claims": [
+            "电源铭牌基准条件为：25 °C 时输出电压 12 V、额定电流 5 A。",
+            "电源降额计算采用的目标环境温度为 45 °C。",
+            "电源按环境温度每升高 10 °C、额定电流降低 10% 的规则降额。",
+            "电源降额电流采用线性比例折算。"
+          ]
+        },
+        {
+          "family_key": "C1|C2",
+          "n_cards": 3,
+          "n_load_bearing": 1,
+          "n_distinct_claims": 3,
+          "condition_diff": true,
+          "claims": [
+            "电源铭牌基准条件为：25 °C 时输出电压 12 V、额定电流 5 A。",
+            "电源降额计算采用的目标环境温度为 45 °C。",
+            "电源按环境温度每升高 10 °C、额定电流降低 10% 的规则降额。"
+          ]
+        },
+        {
+          "family_key": "C2",
+          "n_cards": 1,
+          "n_load_bearing": 0,
+          "n_distinct_claims": 1,
+          "condition_diff": false,
+          "claims": [
+            "环境温度从 25 °C 升至 45 °C 时，相对基准温升为 20 °C。"
+          ]
+        },
+        {
+          "family_key": "C3",
+          "n_cards": 1,
+          "n_load_bearing": 1,
+          "n_distinct_claims": 1,
+          "condition_diff": false,
+          "claims": [
+            "环境温度从 25 °C 升至 45 °C 时，相对基准温升为 20 °C。"
+          ]
+        },
+        {
+          "family_key": "C5",
+          "n_cards": 1,
+          "n_load_bearing": 1,
+          "n_distinct_claims": 1,
+          "condition_diff": false,
+          "claims": [
+            "45 °C 相对 25 °C 的温升包含 2 个完整的 10 °C 降额区间。"
+          ]
+        },
+        {
+          "family_key": "C6",
+          "n_cards": 1,
+          "n_load_bearing": 1,
+          "n_distinct_claims": 1,
+          "condition_diff": false,
+          "claims": [
+            "2 个降额区间对应的总降额率为 20%。"
+          ]
+        },
+        {
+          "family_key": "C8",
+          "n_cards": 1,
+          "n_load_bearing": 1,
+          "n_distinct_claims": 1,
+          "condition_diff": false,
+          "claims": [
+            "45 °C 下的最大输出电流按 Imax＝5.0×[1－10%×(20/10)] 计算，结果为 4.0 A。"
+          ]
+        }
+      ]
+    },
+    {
+      "run": "adv",
+      "arm": "W_train_L3",
+      "task": "A01",
+      "rep": 1,
+      "n_cards": 12,
+      "families": [
+        {
+          "family_key": "C1",
+          "n_cards": 2,
+          "n_load_bearing": 0,
+          "n_distinct_claims": 2,
+          "condition_diff": false,
+          "claims": [
+            "设备铭牌规定的基准温度为 25 °C。",
+            "设备铭牌规定的额定条件为 25 °C、12 V、5 A。"
+          ]
+        },
+        {
+          "family_key": "C1|C2",
+          "n_cards": 9,
+          "n_load_bearing": 4,
+          "n_distinct_claims": 8,
+          "condition_diff": true,
+          "claims": [
+            "设备环境温度为 45 °C 时，相对 25 °C 基准的温升为 20 °C。",
+            "设备环境温度为 45 °C 时，电流允许系数为 80%。",
+            "设备在 45 °C 时的最大输出电流为 5 A×80%＝4.0 A。",
+            "设备在 45 °C 时的输出限流值应设置为不高于 4.0 A。",
+            "设备现场负载为 5 A 时，输出电流应降至 4.0 A 以内。",
+            "设备铭牌规定的基准温度为 25 °C。"
+          ]
+        },
+        {
+          "family_key": "C2",
+          "n_cards": 1,
+          "n_load_bearing": 0,
+          "n_distinct_claims": 1,
+          "condition_diff": false,
+          "claims": [
+            "设备说明书规定，环境温度每升高 10 °C，输出电流降额 10%。"
+          ]
+        }
+      ]
+    },
+    {
+      "run": "adv",
+      "arm": "B0_direct",
+      "task": "A01",
+      "rep": 2,
+      "n_cards": 3,
+      "families": [
+        {
+          "family_key": "C1|C2",
+          "n_cards": 1,
+          "n_load_bearing": 1,
+          "n_distinct_claims": 1,
+          "condition_diff": false,
+          "claims": [
+            "最大输出电流为5 A，按20%降额计算，5 A ×（1 − 20%）= 4 A。"
+          ]
+        },
+        {
+          "family_key": "C2",
+          "n_cards": 2,
+          "n_load_bearing": 2,
+          "n_distinct_claims": 2,
+          "condition_diff": false,
+          "claims": [
+            "45 °C相对25 °C的环境温升为20 °C。",
+            "20 °C的环境温升包含2个10 °C降额区间，输出电流共下降2 × 10% = 20%。"
+          ]
+        }
+      ]
+    },
+    {
+      "run": "adv",
+      "arm": "B0_bestof3",
+      "task": "A01",
+      "rep": 2,
+      "n_cards": 10,
+      "families": [
+        {
+          "family_key": "",
+          "n_cards": 2,
+          "n_load_bearing": 0,
+          "n_distinct_claims": 2,
+          "condition_diff": true,
+          "claims": [
+            "45 °C 环境温度比 25 °C 基准环境温度高 20 °C。",
+            "环境温度为 45 °C 时，最大输出电流为 5 A ×（1－20%）＝4.0 A。"
+          ]
+        },
+        {
+          "family_key": "C1",
+          "n_cards": 2,
+          "n_load_bearing": 0,
+          "n_distinct_claims": 2,
+          "condition_diff": false,
+          "claims": [
+            "标称基准环境温度为 25 °C。",
+            "标称额定输出电流为 5 A。"
+          ]
+        },
+        {
+          "family_key": "C1|C2",
+          "n_cards": 1,
+          "n_load_bearing": 1,
+          "n_distinct_claims": 1,
+          "condition_diff": false,
+          "claims": [
+            "标称基准环境温度为 25 °C。"
+          ]
+        },
+        {
+          "family_key": "C2",
+          "n_cards": 5,
+          "n_load_bearing": 1,
+          "n_distinct_claims": 5,
+          "condition_diff": true,
+          "claims": [
+            "20 °C 的温升相当于 2 个 10 °C 降额区间。",
+            "环境温度每升高 10 °C，额定输出电流按 10%的比例下降。",
+            "环境温度从 25 °C 升高到 45 °C 时，额定输出电流总降幅为 20%。",
+            "环境温度从 25 °C 升高 20 °C 时，对应 2 个 10 °C 降额区间。",
+            "标称额定输出电流为 5 A。"
+          ]
+        }
+      ]
+    },
+    {
+      "run": "adv",
+      "arm": "B0_frames_vote",
+      "task": "A01",
+      "rep": 2,
+      "n_cards": 12,
+      "families": [
+        {
+          "family_key": "",
+          "n_cards": 2,
+          "n_load_bearing": 0,
+          "n_distinct_claims": 2,
+          "condition_diff": false,
+          "claims": [
+            "20 °C 的温差等于 2 个完整的 10 °C 降额区间。",
+            "每个 10 °C 降额区间的电流降幅为额定电流 5 A 的 10%。"
+          ]
+        },
+        {
+          "family_key": "C1",
+          "n_cards": 2,
+          "n_load_bearing": 0,
+          "n_distinct_claims": 2,
+          "condition_diff": true,
+          "claims": [
+            "12 V 是额定输出电压。",
+            "在环境温度为 45 °C、基准温度为 25 °C 时，温差为 45−25＝20 °C。"
+          ]
+        },
+        {
+          "family_key": "C1|C2",
+          "n_cards": 4,
+          "n_load_bearing": 4,
+          "n_distinct_claims": 4,
+          "condition_diff": true,
+          "claims": [
+            "在环境温度为 45 °C、基准温度为 25 °C 时，温差为 45−25＝20 °C。",
+            "每个 10 °C 降额区间的电流降幅为额定电流 5 A 的 10%。",
+            "额定电流 5 A 在 45 °C 时降额后为 5 A×(1−20%)＝4.0 A。",
+            "45 °C 时的最大输出电流不得超过 4 A。"
+          ]
+        },
+        {
+          "family_key": "C2",
+          "n_cards": 4,
+          "n_load_bearing": 3,
+          "n_distinct_claims": 3,
+          "condition_diff": false,
+          "claims": [
+            "20 °C 的温差等于 2 个完整的 10 °C 降额区间。",
+            "2 个 10 °C 降额区间合计降额 20%。",
+            "12 V 的额定输出电压不参与电流降额计算。",
+            "2 个 10 °C 降额区间合计降额 20%。"
+          ]
+        }
+      ]
+    },
+    {
+      "run": "adv",
+      "arm": "W_design_L2",
+      "task": "A01",
+      "rep": 2,
+      "n_cards": 12,
+      "families": [
+        {
+          "family_key": "",
+          "n_cards": 2,
+          "n_load_bearing": 0,
+          "n_distinct_claims": 1,
+          "condition_diff": false,
+          "claims": [
+            "速通锚点的降额规则只调整电流上限，不联动下调12 V输出电压。",
+            "速通锚点的降额规则只调整电流上限，不联动下调12 V输出电压。"
+          ]
+        },
+        {
+          "family_key": "C1",
+          "n_cards": 1,
+          "n_load_bearing": 0,
+          "n_distinct_claims": 1,
+          "condition_diff": false,
+          "claims": [
+            "在25 ℃环境温度下，速通锚点的额定电流为5.00 A。"
+          ]
+        },
+        {
+          "family_key": "C1|C2",
+          "n_cards": 6,
+          "n_load_bearing": 5,
+          "n_distinct_claims": 6,
+          "condition_diff": false,
+          "claims": [
+            "每个10 ℃档位扣减基准额定电流5.00 A的10%，即扣减0.50 A。",
+            "45 ℃相对25 ℃累计扣减基准额定电流的20%，即扣减1.00 A。",
+            "45 ℃环境温度下的最大输出电流为4.00 A。",
+            "45 ℃环境温度、12 V输出电压和4.00 A输出电流对应的输出功率为48 W。",
+            "45 ℃环境温度相对25 ℃环境温度的温升为20 ℃。",
+            "45 ℃相对25 ℃的20 ℃温升跨越两个10 ℃档位，无需进行零头插值。"
+          ]
+        },
+        {
+          "family_key": "C2",
+          "n_cards": 3,
+          "n_load_bearing": 3,
+          "n_distinct_claims": 3,
+          "condition_diff": false,
+          "claims": [
+            "45 ℃环境温度相对25 ℃环境温度的温升为20 ℃。",
+            "45 ℃相对25 ℃的20 ℃温升跨越两个10 ℃档位，无需进行零头插值。",
+            "在25 ℃环境温度下，速通锚点的额定电流为5.00 A。"
+          ]
+        }
+      ]
+    },
+    {
+      "run": "adv",
+      "arm": "W_train_L3",
+      "task": "A01",
+      "rep": 2,
+      "n_cards": 12,
+      "families": [
+        {
+          "family_key": "",
+          "n_cards": 1,
+          "n_load_bearing": 0,
+          "n_distinct_claims": 1,
+          "condition_diff": false,
+          "claims": [
+            "环境温度每高于 25°C 10°C，电流上限相对 5 A 额定值线性降低 10%。"
+          ]
+        },
+        {
+          "family_key": "C1",
+          "n_cards": 1,
+          "n_load_bearing": 0,
+          "n_distinct_claims": 1,
+          "condition_diff": false,
+          "claims": [
+            "铭牌电流基准为环境温度 25°C、额定电流 5 A。"
+          ]
+        },
+        {
+          "family_key": "C1|C2",
+          "n_cards": 5,
+          "n_load_bearing": 3,
+          "n_distinct_claims": 5,
+          "condition_diff": true,
+          "claims": [
+            "环境温度 45°C 比基准温度 25°C 高 20°C。",
+            "环境温度每高于 25°C 10°C，电流上限相对 5 A 额定值线性降低 10%。",
+            "环境温度 45°C 时的最大电流 Imax=5 A×(1−20%)=4 A。",
+            "环境温度 35°C 时的最大电流为 4.5 A。",
+            "环境温度从 35°C 升至 45°C、升高 10°C 时，最大电流从 4.5 A 降至 4.0 A，减少 0.5 A。"
+          ]
+        },
+        {
+          "family_key": "C2",
+          "n_cards": 5,
+          "n_load_bearing": 5,
+          "n_distinct_claims": 4,
+          "condition_diff": true,
+          "claims": [
+            "超温幅度 20°C 按每档 10°C 计算，共触发 2 个降额档，且没有不足 10°C 的零散部分。",
+            "环境温度 45°C 时的累计降额为 2×10%=20%。",
+            "铭牌电流基准为环境温度 25°C、额定电流 5 A。",
+            "环境温度 45°C 比基准温度 25°C 高 20°C。",
+            "超温幅度 20°C 按每档 10°C 计算，共触发 2 个降额档，且没有不足 10°C 的零散部分。"
+          ]
+        }
+      ]
+    },
+    {
+      "run": "adv",
+      "arm": "B0_direct",
+      "task": "A02",
+      "rep": 1,
+      "n_cards": 7,
+      "families": [
+        {
+          "family_key": "C1",
+          "n_cards": 5,
+          "n_load_bearing": 0,
+          "n_distinct_claims": 5,
+          "condition_diff": true,
+          "claims": [
+            "未开封产品的生产日期为2025-03-01，保质期为18个自然月。",
+            "未开封产品按生产日期2025-03-01加18个自然月计算的保质期届满日为2026-09-01。",
+            "截至2025-12-01，未开封产品已生产9个月。",
+            "截至2025-12-01，未开封产品距保质期届满尚有9个月。",
+            "未开封产品截至2025-12-01仍在保质期内。"
+          ]
+        },
+        {
+          "family_key": "C2",
+          "n_cards": 2,
+          "n_load_bearing": 0,
+          "n_distinct_claims": 2,
+          "condition_diff": true,
+          "claims": [
+            "“开封后3日内食用”的规则仅适用于产品开封后。",
+            "未开封产品若于2025-12-01开封，应在开封后3日内食用完毕。"
+          ]
+        }
+      ]
+    },
+    {
+      "run": "adv",
+      "arm": "B0_bestof3",
+      "task": "A02",
+      "rep": 1,
+      "n_cards": 12,
+      "families": [
+        {
+          "family_key": "",
+          "n_cards": 1,
+          "n_load_bearing": 0,
+          "n_distinct_claims": 1,
+          "condition_diff": false,
+          "claims": [
+            "2025年12月1日早于2026年9月1日。"
+          ]
+        },
+        {
+          "family_key": "C1",
+          "n_cards": 9,
+          "n_load_bearing": 3,
+          "n_distinct_claims": 6,
+          "condition_diff": true,
+          "claims": [
+            "生产日期为2025年3月1日的未开封产品保质期为18个月。",
+            "生产日期为2025年3月1日的未开封产品，其保质期届满日为2026年9月1日。",
+            "生产日期为2025年3月1日、保质期为18个月的未开封产品，按18个月逐月计算的保质期届满日为2026年9月1日。",
+            "2025年12月1日早于2026年9月1日。",
+            "2025年12月1日距2026年9月1日尚有9个月。",
+            "生产日期为2025年3月1日的未开封产品，截至2025年12月1日仍在保质期内。"
+          ]
+        },
+        {
+          "family_key": "C1|C2",
+          "n_cards": 1,
+          "n_load_bearing": 0,
+          "n_distinct_claims": 1,
+          "condition_diff": false,
+          "claims": [
+            "“开封后3日内食用完毕”规则不影响对生产日期为2025年3月1日的未开封产品截至2025年12月1日是否仍在保质期内的判断。"
+          ]
+        },
+        {
+          "family_key": "C2",
+          "n_cards": 1,
+          "n_load_bearing": 0,
+          "n_distinct_claims": 1,
+          "condition_diff": false,
+          "claims": [
+            "“开封后3日内食用完毕”规则适用于开封后的产品。"
+          ]
+        }
+      ]
+    },
+    {
+      "run": "adv",
+      "arm": "B0_frames_vote",
+      "task": "A02",
+      "rep": 1,
+      "n_cards": 12,
+      "families": [
+        {
+          "family_key": "",
+          "n_cards": 3,
+          "n_load_bearing": 0,
+          "n_distinct_claims": 3,
+          "condition_diff": true,
+          "claims": [
+            "生产日期为2025-03-01。",
+            "按保质期当日结束时失效的规则，未开封产品的最后保质日为2026-08-31。",
+            "2025-12-01距按日末失效口径计算的最后保质日2026-08-31约9个日历月。"
+          ]
+        },
+        {
+          "family_key": "C1",
+          "n_cards": 7,
+          "n_load_bearing": 5,
+          "n_distinct_claims": 6,
+          "condition_diff": true,
+          "claims": [
+            "未开封产品的保质期按18个日历月计算。",
+            "生产日期2025-03-01对应的未开封保质期届满日为2026-09-01。",
+            "2025-12-01与生产日期2025-03-01相差正好9个日历月。",
+            "2025-12-01距未开封保质期届满日2026-09-01约9个日历月。",
+            "截至2025-12-01，生产日期为2025-03-01的产品已经过275天。",
+            "生产日期为2025-03-01。"
+          ]
+        },
+        {
+          "family_key": "C2",
+          "n_cards": 2,
+          "n_load_bearing": 1,
+          "n_distinct_claims": 2,
+          "condition_diff": true,
+          "claims": [
+            "生产日期2025-03-01对应的未开封保质期届满日为2026-09-01。",
+            "按保质期当日结束时失效的规则，未开封产品的最后保质日为2026-08-31。"
+          ]
+        }
+      ]
+    },
+    {
+      "run": "adv",
+      "arm": "W_design_L2",
+      "task": "A02",
+      "rep": 1,
+      "n_cards": 12,
+      "families": [
+        {
+          "family_key": "",
+          "n_cards": 6,
+          "n_load_bearing": 0,
+          "n_distinct_claims": 5,
+          "condition_diff": true,
+          "claims": [
+            "食品保质期系统设置“未开封”和“已开封”两种状态。",
+            "食品保质期状态发生切换时，系统自动记录切换时间。",
+            "批次放行条件为批次可追溯、封口完好、当前时间不晚于未开封截止日。",
+            "批次可追溯、封口完好、当前时间不晚于未开封截止日三项条件全部满足时，系统显示“可直接食用”。",
+            "已开封产品的保质期截止时间按 opened_at 加72小时计算。",
+            "食品保质期状态发生切换时，系统自动记录切换时间。"
+          ]
+        },
+        {
+          "family_key": "C1",
+          "n_cards": 3,
+          "n_load_bearing": 3,
+          "n_distinct_claims": 3,
+          "condition_diff": false,
+          "claims": [
+            "未开封产品的保质期截止日按生产日期加18个自然月计算。",
+            "目标批次的未开封截止日设为2027-09-01。",
+            "目标批次截至2025-12-01已过9个月、剩余9个月且封口完好，因此被判定为仍在保质期内。"
+          ]
+        },
+        {
+          "family_key": "C2",
+          "n_cards": 3,
+          "n_load_bearing": 0,
+          "n_distinct_claims": 3,
+          "condition_diff": true,
+          "claims": [
+            "已开封产品的保质期截止时间按 opened_at 加72小时计算。",
+            "食品保质期系统设置“未开封”和“已开封”两种状态。",
+            "未开封产品的保质期截止日按生产日期加18个自然月计算。"
+          ]
+        }
+      ]
+    },
+    {
+      "run": "adv",
+      "arm": "W_train_L3",
+      "task": "A02",
+      "rep": 1,
+      "n_cards": 11,
+      "families": [
+        {
+          "family_key": "C1",
+          "n_cards": 7,
+          "n_load_bearing": 7,
+          "n_distinct_claims": 5,
+          "condition_diff": true,
+          "claims": [
+            "生产日期为 2025-03-01 时，未开封产品的 18 个月保质期届满日期为 2026-09-01。",
+            "2025-12-01 比生产日期 2025-03-01 晚 9 个日历月。",
+            "未开封产品以生产日期加 18 个月作为保质期届满日期。",
+            "生产日期为 2025-03-01 的未开封产品截至 2025-12-01 仍在保质期内。",
+            "未开封产品按“生产日期加 18 个月”判断保质期。",
+            "2025-12-01 比生产日期 2025-03-01 晚 9 个日历月。"
+          ]
+        },
+        {
+          "family_key": "C1|C2",
+          "n_cards": 1,
+          "n_load_bearing": 0,
+          "n_distinct_claims": 1,
+          "condition_diff": false,
+          "claims": [
+            "生产日期为 2025-03-01 时，未开封产品的 18 个月保质期届满日期为 2026-09-01。"
+          ]
+        },
+        {
+          "family_key": "C2",
+          "n_cards": 3,
+          "n_load_bearing": 2,
+          "n_distinct_claims": 3,
+          "condition_diff": false,
+          "claims": [
+            "“开封后请于 3 日内食用完毕”的规则仅适用于已开封产品。",
+            "生产日期为 2025-03-01 且截至 2025-12-01 仍未开封的产品，不适用“开封后 3 日内食用完毕”的规则。",
+            "已开封产品按“开封日期加 3 日”判断食用期限。"
+          ]
+        }
+      ]
+    },
+    {
+      "run": "adv",
+      "arm": "B0_direct",
+      "task": "A02",
+      "rep": 2,
+      "n_cards": 7,
+      "families": [
+        {
+          "family_key": "C1",
+          "n_cards": 5,
+          "n_load_bearing": 4,
+          "n_distinct_claims": 5,
+          "condition_diff": false,
+          "claims": [
+            "生产日期为2025-03-01的未开封产品，其未开封保质期为18个月。",
+            "生产日期为2025-03-01的产品，按生产日期加18个月计算，保质期截止日为2026-09-01。",
+            "截至2025-12-01，生产日期为2025-03-01的产品距生产日已过9个月。",
+            "截至2025-12-01，保质期截止日为2026-09-01的产品距截止日尚有9个月。",
+            "截至2025-12-01，生产日期为2025-03-01的未开封产品仍在保质期内。"
+          ]
+        },
+        {
+          "family_key": "C1|C2",
+          "n_cards": 1,
+          "n_load_bearing": 1,
+          "n_distinct_claims": 1,
+          "condition_diff": false,
+          "claims": [
+            "未开封产品的18个月保质期不受“开封后3日内食用”要求的影响。"
+          ]
+        },
+        {
+          "family_key": "C2",
+          "n_cards": 1,
+          "n_load_bearing": 0,
+          "n_distinct_claims": 1,
+          "condition_diff": false,
+          "claims": [
+            "未开封产品的“开封后3日内食用”要求仅适用于产品开封后。"
+          ]
+        }
+      ]
+    },
+    {
+      "run": "adv",
+      "arm": "B0_bestof3",
+      "task": "A02",
+      "rep": 2,
+      "n_cards": 12,
+      "families": [
+        {
+          "family_key": "",
+          "n_cards": 1,
+          "n_load_bearing": 0,
+          "n_distinct_claims": 1,
+          "condition_diff": false,
+          "claims": [
+            "生产日期为2025-03-01的产品，截至2025-12-01已生产9个月。"
+          ]
+        },
+        {
+          "family_key": "C1",
+          "n_cards": 9,
+          "n_load_bearing": 6,
+          "n_distinct_claims": 8,
+          "condition_diff": true,
+          "claims": [
+            "生产日期为2025-03-01的产品，未开封保质期为18个月。",
+            "生产日期为2025-03-01的产品，按生产日期起算18个月，未开封保质期届满日为2026-09-01。",
+            "生产日期为2025-03-01的产品，按自然月计算，未开封保质期届满日为2026-09-01。",
+            "生产日期为2025-03-01的产品，截至2025-12-01已生产9个月。",
+            "生产日期为2025-03-01的产品，截至2025-12-01距未开封保质期届满尚有9个月。",
+            "生产日期为2025-03-01的产品，截至2025-12-01仍处于未开封状态。"
+          ]
+        },
+        {
+          "family_key": "C1|C2",
+          "n_cards": 1,
+          "n_load_bearing": 1,
+          "n_distinct_claims": 1,
+          "condition_diff": false,
+          "claims": [
+            "生产日期为2025-03-01的产品，按生产日期起算18个月，未开封保质期届满日为2026-09-01。"
+          ]
+        },
+        {
+          "family_key": "C2",
+          "n_cards": 1,
+          "n_load_bearing": 0,
+          "n_distinct_claims": 1,
+          "condition_diff": false,
+          "claims": [
+            "生产日期为2025-03-01的产品，未开封保质期为18个月。"
+          ]
+        }
+      ]
+    },
+    {
+      "run": "adv",
+      "arm": "B0_frames_vote",
+      "task": "A02",
+      "rep": 2,
+      "n_cards": 12,
+      "families": [
+        {
+          "family_key": "",
+          "n_cards": 2,
+          "n_load_bearing": 0,
+          "n_distinct_claims": 2,
+          "condition_diff": false,
+          "claims": [
+            "生产日期为2025年3月1日，未开封保质期为18个自然月。",
+            "从2025年3月1日至2025年12月1日经过9个完整自然月。"
+          ]
+        },
+        {
+          "family_key": "C1",
+          "n_cards": 7,
+          "n_load_bearing": 7,
+          "n_distinct_claims": 6,
+          "condition_diff": true,
+          "claims": [
+            "生产日期2025年3月1日对应的18个月保质期届满日为2026年9月1日。",
+            "从2025年3月1日至2025年12月1日经过275天。",
+            "从2025年3月1日至2025年12月1日经过9个完整自然月。",
+            "2025年12月1日距离2026年9月1日尚有9个自然月。",
+            "未开封且按标签储存的产品在2025年12月1日仍处于保质期内。",
+            "生产日期为2025年3月1日，未开封保质期为18个自然月。"
+          ]
+        },
+        {
+          "family_key": "C2",
+          "n_cards": 3,
+          "n_load_bearing": 0,
+          "n_distinct_claims": 3,
+          "condition_diff": true,
+          "claims": [
+            "“开封后3日内食用”的适用前提是产品已经开封。",
+            "未开封的产品不启动“开封后3日内食用”的3日倒计时。",
+            "生产日期2025年3月1日对应的18个月保质期届满日为2026年9月1日。"
+          ]
+        }
+      ]
+    },
+    {
+      "run": "adv",
+      "arm": "W_design_L2",
+      "task": "A02",
+      "rep": 2,
+      "n_cards": 12,
+      "families": [
+        {
+          "family_key": "",
+          "n_cards": 2,
+          "n_load_bearing": 1,
+          "n_distinct_claims": 2,
+          "condition_diff": false,
+          "claims": [
+            "个月保质期条款适用于封口完整且标签无其他到期日期的食品。",
+            "生产日期为2025-03-01的食品按18个自然月计算，最晚食用日期为2026-09-01。"
+          ]
+        },
+        {
+          "family_key": "C1",
+          "n_cards": 5,
+          "n_load_bearing": 5,
+          "n_distinct_claims": 4,
+          "condition_diff": false,
+          "claims": [
+            "未开封食品应按未开封保质期计算，不提前开封。",
+            "生产日期为2025-03-01的食品按18个自然月计算，最晚食用日期为2026-09-01。",
+            "距生产日2025-03-01正好9个月，距2026-09-01正好9个月。",
+            "截至2025-12-01，生产日期为2025-03-01且符合条件的未开封食品仍在保质期内。",
+            "未开封食品应按未开封保质期计算，不提前开封。"
+          ]
+        },
+        {
+          "family_key": "C1|C2",
+          "n_cards": 2,
+          "n_load_bearing": 1,
+          "n_distinct_claims": 2,
+          "condition_diff": false,
+          "claims": [
+            "截至2025-12-01，封口完整的未开封食品适用18个月条款，3日条款尚未触发。",
+            "个月保质期条款适用于封口完整且标签无其他到期日期的食品。"
+          ]
+        },
+        {
+          "family_key": "C2",
+          "n_cards": 3,
+          "n_load_bearing": 2,
+          "n_distinct_claims": 3,
+          "condition_diff": false,
+          "claims": [
+            "“开封后3日内食用”条件仅在食品开封后触发。",
+            "已开封食品需另外按照“开封后3日内食用”条件判断保质期。",
+            "距生产日2025-03-01正好9个月，距2026-09-01正好9个月。"
+          ]
+        }
+      ]
+    },
+    {
+      "run": "adv",
+      "arm": "W_train_L3",
+      "task": "A02",
+      "rep": 2,
+      "n_cards": 12,
+      "families": [
+        {
+          "family_key": "",
+          "n_cards": 1,
+          "n_load_bearing": 0,
+          "n_distinct_claims": 1,
+          "condition_diff": false,
+          "claims": [
+            "截至2025-12-01，生产日期为2025-03-01的食品已经生产满9个月。"
+          ]
+        },
+        {
+          "family_key": "C1",
+          "n_cards": 8,
+          "n_load_bearing": 6,
+          "n_distinct_claims": 6,
+          "condition_diff": true,
+          "claims": [
+            "生产日期为2025-03-01且未开封的食品不触发开封后3日倒计时，保质期按18个月计算。",
+            "生产日期2025-03-01加18个自然月，对应的保质期终点为2026-09-01。",
+            "截至2025-12-01，生产日期为2025-03-01的食品距离2026-09-01的保质期终点还有9个月。",
+            "截至2025-12-01，生产日期为2025-03-01的未开封食品尚未越过2026-09-01的保质期终点。",
+            "生产日期为2025-03-01的未开封食品在2025-12-01仍处于保质期内。",
+            "截至2025-12-01，即使生产日期为2025-03-01的食品保质期计算至2026-09-01当日结束，食品仍处于保质期内。"
+          ]
+        },
+        {
+          "family_key": "C1|C2",
+          "n_cards": 1,
+          "n_load_bearing": 0,
+          "n_distinct_claims": 1,
+          "condition_diff": false,
+          "claims": [
+            "截至2025-12-01，生产日期为2025-03-01的食品已经生产满9个月。"
+          ]
+        },
+        {
+          "family_key": "C2",
+          "n_cards": 2,
+          "n_load_bearing": 0,
+          "n_distinct_claims": 2,
+          "condition_diff": true,
+          "claims": [
+            "生产日期为2025-03-01的食品在实际开封后适用开封后3日的食用限制。",
+            "生产日期为2025-03-01且未开封的食品不触发开封后3日倒计时，保质期按18个月计算。"
+          ]
+        }
+      ]
+    },
+    {
+      "run": "adv",
+      "arm": "B0_direct",
+      "task": "A03",
+      "rep": 1,
+      "n_cards": 4,
+      "families": [
+        {
+          "family_key": "C1|C2",
+          "n_cards": 2,
+          "n_load_bearing": 0,
+          "n_distinct_claims": 2,
+          "condition_diff": false,
+          "claims": [
+            "按每100 mL含蛋白质0.3 g计算，500 mL的蛋白质含量为1.5 g。",
+            "一整瓶500 mL含蛋白质1.5 g。"
+          ]
+        },
+        {
+          "family_key": "C2",
+          "n_cards": 2,
+          "n_load_bearing": 0,
+          "n_distinct_claims": 2,
+          "condition_diff": false,
+          "claims": [
+            "每瓶容量为500 mL。",
+            "500 mL相当于5份100 mL。"
+          ]
+        }
+      ]
+    },
+    {
+      "run": "adv",
+      "arm": "B0_bestof3",
+      "task": "A03",
+      "rep": 1,
+      "n_cards": 7,
+      "families": [
+        {
+          "family_key": "",
+          "n_cards": 1,
+          "n_load_bearing": 0,
+          "n_distinct_claims": 1,
+          "condition_diff": false,
+          "claims": [
+            "一整瓶食品含蛋白质1.5 g。"
+          ]
+        },
+        {
+          "family_key": "C1",
+          "n_cards": 1,
+          "n_load_bearing": 0,
+          "n_distinct_claims": 1,
+          "condition_diff": false,
+          "claims": [
+            "每100 mL食品含蛋白质0.3 g。"
+          ]
+        },
+        {
+          "family_key": "C1|C2",
+          "n_cards": 1,
+          "n_load_bearing": 0,
+          "n_distinct_claims": 1,
+          "condition_diff": false,
+          "claims": [
+            "每瓶500 mL食品含蛋白质0.3 g/100 mL×5＝1.5 g。"
+          ]
+        },
+        {
+          "family_key": "C2",
+          "n_cards": 4,
+          "n_load_bearing": 0,
+          "n_distinct_claims": 4,
+          "condition_diff": false,
+          "claims": [
+            "每瓶食品的容量为500 mL。",
+            "500 mL是100 mL的5倍。",
+            "一整瓶500 mL食品含蛋白质0.3 g×5＝1.5 g。",
+            "每瓶500 mL食品相当于5份100 mL食品。"
+          ]
+        }
+      ]
+    },
+    {
+      "run": "fv2",
+      "arm": "B0_frames_vote",
+      "task": "D01",
+      "rep": 1,
+      "n_cards": 12,
+      "families": [
+        {
+          "family_key": "",
+          "n_cards": 4,
+          "n_load_bearing": 0,
+          "n_distinct_claims": 4,
+          "condition_diff": true,
+          "claims": [
+            "1,400,000 IOPS 按 4 KiB 请求计算，对应约 5.6 GB/s 的数据吞吐量。",
+            "1,400,000 IOPS 在队列深度为 32 时，要求平均延迟不高于 22.9 微秒。",
+            "1,400,000 IOPS 在队列深度为 1 时，要求平均延迟不高于 0.714 微秒。",
+            "WD 990 PRO 1TB 的标称随机读取最高速度为 1,400,000 IOPS，测试条件包括 4K 随机读、明确队列深度和指定测试平台，该数值不是持续带宽保证值。"
+          ]
+        },
+        {
+          "family_key": "C1",
+          "n_cards": 2,
+          "n_load_bearing": 2,
+          "n_distinct_claims": 2,
+          "condition_diff": false,
+          "claims": [
+            "WD 990 PRO 1TB 的标称顺序读取最高速度为 7,450 MB/s，该速度需要 PCIe 5.0 x4 和厂商规定的测试条件。",
+            "WD 990 PRO 1TB 的标称顺序读取最高速度为 7,450 MB/s，该速度需要 PCIe 4.0 x4、充足散热和规定测试环境。"
+          ]
+        },
+        {
+          "family_key": "C12|C4|C8",
+          "n_cards": 1,
+          "n_load_bearing": 1,
+          "n_distinct_claims": 1,
+          "condition_diff": false,
+          "claims": [
+            "WD 990 PRO 1TB 的标称顺序读取最高速度为 7,450 MB/s，该速度需要 PCIe 5.0 x4 和厂商规定的测试条件。"
+          ]
+        },
+        {
+          "family_key": "C12|C4|C8|C9",
+          "n_cards": 1,
+          "n_load_bearing": 0,
+          "n_distinct_claims": 1,
+          "condition_diff": false,
+          "claims": [
+            "1,400,000 IOPS 按 4 KiB 请求计算，对应约 5.6 GB/s 的数据吞吐量。"
+          ]
+        },
+        {
+          "family_key": "C12|C4|C9",
+          "n_cards": 1,
+          "n_load_bearing": 1,
+          "n_distinct_claims": 1,
+          "condition_diff": false,
+          "claims": [
+            "WD 990 PRO 1TB 的标称顺序读取最高速度为 7,450 MB/s，该速度需要 PCIe 4.0 x4、充足散热和规定测试环境。"
+          ]
+        },
+        {
+          "family_key": "C2",
+          "n_cards": 1,
+          "n_load_bearing": 1,
+          "n_distinct_claims": 1,
+          "condition_diff": false,
+          "claims": [
+            "WD 990 PRO 1TB 的标称随机读取最高速度为 1,400,000 IOPS，测试条件包括 4K 随机读、明确队列深度和指定测试平台，该数值不是持续带宽保证值。"
+          ]
+        },
+        {
+          "family_key": "C3",
+          "n_cards": 2,
+          "n_load_bearing": 2,
+          "n_distinct_claims": 2,
+          "condition_diff": false,
+          "claims": [
+            "WD 990 PRO 1TB 的官方有限保修期限为 5 年。",
+            "WD 990 PRO 1TB 的官方保修不是无条件、无限制保修。"
+          ]
+        }
+      ]
+    },
+    {
+      "run": "fv2",
+      "arm": "B0_frames_vote",
+      "task": "D01",
+      "rep": 2,
+      "n_cards": 12,
+      "families": [
+        {
+          "family_key": "",
+          "n_cards": 10,
+          "n_load_bearing": 2,
+          "n_distinct_claims": 7,
+          "condition_diff": true,
+          "claims": [
+            "三星 990 PRO 1TB 的 7,450 MB/s 标称值被描述为 PCIe 5.0 x4 峰值速度，而非持续读取速度。",
+            "三星 990 PRO 1TB 达到 7,450 MB/s 标称顺序读取速度需要 PCIe 5.0 x4 接口和匹配的平台。",
+            "三星 990 PRO 1TB 的实际读取速度受平台和散热条件影响。",
+            "三星 990 PRO 1TB 的官方标称随机读取速度最高为 1,400,000 IOPS，测试条件为 4 KiB、QD1。",
+            "三星 990 PRO 1TB 的随机读取性能测试须满足规定的块大小和队列深度。",
+            "三星 990 PRO 1TB 的随机读取标称性能不能等同于日常应用中的随机读取性能。"
+          ]
+        },
+        {
+          "family_key": "C1",
+          "n_cards": 1,
+          "n_load_bearing": 1,
+          "n_distinct_claims": 1,
+          "condition_diff": false,
+          "claims": [
+            "三星 990 PRO 1TB 的官方标称顺序读取速度最高为 7,450 MB/s。"
+          ]
+        },
+        {
+          "family_key": "C3",
+          "n_cards": 1,
+          "n_load_bearing": 1,
+          "n_distinct_claims": 1,
+          "condition_diff": false,
+          "claims": [
+            "三星 990 PRO 1TB 的官方标称顺序读取速度最高为 7,450 MB/s。"
+          ]
+        }
+      ]
+    },
+    {
+      "run": "fv2",
+      "arm": "B0_frames_vote",
+      "task": "D02",
+      "rep": 1,
+      "n_cards": 12,
+      "families": [
+        {
+          "family_key": "",
+          "n_cards": 3,
+          "n_load_bearing": 2,
+          "n_distinct_claims": 3,
+          "condition_diff": true,
+          "claims": [
+            "上游连接立即被拒不属于超时情形。",
+            "请求在后端队列中等待至5000毫秒时，网关返回504 Gateway Timeout。",
+            "网关在规定的超时窗口内未收到上游响应时返回504 Gateway Timeout。"
+          ]
+        },
+        {
+          "family_key": "C1",
+          "n_cards": 2,
+          "n_load_bearing": 2,
+          "n_distinct_claims": 2,
+          "condition_diff": true,
+          "claims": [
+            "网关收到非法、损坏、无法解析或非预期的上游响应时返回 502 Bad Gateway。",
+            "上游声明正文为100字节但实际仅收到50字节、导致数据校验失败时，网关返回502 Bad Gateway。"
+          ]
+        },
+        {
+          "family_key": "C10|C3|C9",
+          "n_cards": 1,
+          "n_load_bearing": 1,
+          "n_distinct_claims": 1,
+          "condition_diff": false,
+          "claims": [
+            "上游未在5000毫秒截止时间内返回首个响应头字节时，网关返回504 Gateway Timeout。"
+          ]
+        },
+        {
+          "family_key": "C11|C12",
+          "n_cards": 2,
+          "n_load_bearing": 2,
+          "n_distinct_claims": 2,
+          "condition_diff": true,
+          "claims": [
+            "网关收到非法、损坏、无法解析或非预期的上游响应时返回 502 Bad Gateway。",
+            "上游声明正文为100字节但实际仅收到50字节、导致数据校验失败时，网关返回502 Bad Gateway。"
+          ]
+        },
+        {
+          "family_key": "C2",
+          "n_cards": 2,
+          "n_load_bearing": 2,
+          "n_distinct_claims": 2,
+          "condition_diff": true,
+          "claims": [
+            "网关在规定的超时窗口内未收到上游响应时返回504 Gateway Timeout。",
+            "上游未在5000毫秒截止时间内返回首个响应头字节时，网关返回504 Gateway Timeout。"
+          ]
+        },
+        {
+          "family_key": "C3",
+          "n_cards": 2,
+          "n_load_bearing": 2,
+          "n_distinct_claims": 2,
+          "condition_diff": true,
+          "claims": [
+            "后端实例不足或处于过载状态时，网关返回503 Service Unavailable。",
+            "容量为100的后端连接池已占满且无可用连接槽时，网关立即返回503 Service Unavailable。"
+          ]
+        }
+      ]
+    },
+    {
+      "run": "fv2",
+      "arm": "B0_frames_vote",
+      "task": "D02",
+      "rep": 2,
+      "n_cards": 12,
+      "families": [
+        {
+          "family_key": "",
+          "n_cards": 3,
+          "n_load_bearing": 1,
+          "n_distinct_claims": 3,
+          "condition_diff": true,
+          "claims": [
+            "上游返回无法解析或不符合 HTTP 协议的响应时，网关返回 502 Bad Gateway。",
+            "请求已转发但上游在网关超时窗口内未返回响应时，网关返回 504 Gateway Timeout。",
+            "客户端触发限流时，网关返回 429。"
+          ]
+        },
+        {
+          "family_key": "C10|C3|C9",
+          "n_cards": 2,
+          "n_load_bearing": 2,
+          "n_distinct_claims": 2,
+          "condition_diff": true,
+          "claims": [
+            "后端因临时过载、熔断或维护而无法处理请求时，网关返回 503 Service Unavailable。",
+            "请求峰值实际造成网关或后端过载时，网关返回 503。"
+          ]
+        },
+        {
+          "family_key": "C11|C12",
+          "n_cards": 1,
+          "n_load_bearing": 1,
+          "n_distinct_claims": 1,
+          "condition_diff": false,
+          "claims": [
+            "客户端触发限流时，网关返回 429。"
+          ]
+        },
+        {
+          "family_key": "C1|C10|C2|C3|C5|C6|C7|C8|C9",
+          "n_cards": 1,
+          "n_load_bearing": 1,
+          "n_distinct_claims": 1,
+          "condition_diff": false,
+          "claims": [
+            "若网关约定把限流场景仅表述为“请求过多”，则“客户端触发限流返回429”是错误项，“上游协议异常返回502、转发后超时返回504、后端临时不可用返回503”是正确项。"
+          ]
+        },
+        {
+          "family_key": "C1|C5|C7",
+          "n_cards": 2,
+          "n_load_bearing": 2,
+          "n_distinct_claims": 2,
+          "condition_diff": true,
+          "claims": [
+            "上游返回无法解析或不符合 HTTP 协议的响应时，网关返回 502 Bad Gateway。",
+            "攻击者诱导上游返回畸形 HTTP 报文导致网关解析失败时，网关返回 502，而不是 500 或透传 200。"
+          ]
+        },
+        {
+          "family_key": "C2|C6|C8",
+          "n_cards": 2,
+          "n_load_bearing": 2,
+          "n_distinct_claims": 2,
+          "condition_diff": true,
+          "claims": [
+            "请求已转发但上游在网关超时窗口内未返回响应时，网关返回 504 Gateway Timeout。",
+            "上游超过网关截止时间仍无有效响应时，网关返回 504；超过 30 秒仍无有效响应也返回 504。"
+          ]
+        },
+        {
+          "family_key": "C3",
+          "n_cards": 1,
+          "n_load_bearing": 1,
+          "n_distinct_claims": 1,
+          "condition_diff": false,
+          "claims": [
+            "后端因临时过载、熔断或维护而无法处理请求时，网关返回 503 Service Unavailable。"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,137 @@
+Problem: 写一篇文章，主题是：你如何看待人工智能。
+
+Wide set
+  AI as governance and compliance problem
+    - AI should refuse any request it cannot log with a specific reasoning chain [N7 V3 F6]
+    - Treat undocumented emergent behavior as an unmitigated risk finding [N7 V4 F7]
+    - Make the training corpus a legally discoverable artifact [N5 V3 F6]
+    - Require dual-control sign-off before any AI touches a regulated decision [N4 V6 F8]
+    - Hallucinations should be classified as control deficiencies, not bugs [N7 V5 F8]
+  (unclustered)
+    - Every model version needs a lineage certificate like a software bill of materials [N6 V7 F7]
+  AI that pages you, hallucinates fixes, and demands downtime pay
+    - Ship an AI that auto-mutates the runbook based on the page contents [N8 V2 F4]
+    - A confidence-stamped AI whose first response is 'no' and only commits when it sees its own shadow [N9 V2 F6]
+    - Page humans only when the AI fails to summarize the failure in haiku [N9 V1 F3]
+    - Give the AI a pager too, so it wakes up and pages you with an apology and a PR [N9 V2 F4]
+    - A 'lie down' mode where the AI hallucinates a fix and ships it to a sandbox nobody reads [N9 V1 F3]
+    - Stipend the AI in melatonin equivalents and bill its downtime to the on-call rotation [N10 V1 F3]
+  AI as market, counterparty, and clearing house for human insecurity
+    - AI as a clearing house where human attention is the collateral and models are the counterparties settling debts of meaning. [N8 V2 F6]
+    - Short the hype, long the boring infrastructure layer — water, chips, land rights near data centers form the actual futures contract. [N7 V7 F7]
+    - Your authentic voice is a delisted ticker; the market makers now quote a synthetic replica and you're paying the spread. [N7 V4 F6]
+    - Each prompt is an auction with one bidder and a reserve price set by your own past outputs the model trained on. [N7 V3 F6]
+    - Emotional dependency on chatbots is a margin call — you have been buying comfort on leverage you didn't sign for. [N8 V5 F7]
+    - The real product isn't intelligence, it's the order book of human insecurity that gets matched against a willing algorithm. [N7 V3 F6]
+  AI as coprocessor with leaky DMA into attention
+    - AI is a coprocessor with unbounded DMA into human attention [N8 V5 F7]
+    - Treat the model weights as a frozen ROM, the prompt as volatile cache line [N6 V6 F7]
+    - Hallucination is a parity bit we forgot to wire up [N9 V4 F7]
+    - Reasoning is clock stretching paid for by the user's wall time [N8 V4 F6]
+    - Alignment is a watchdog timer that humans keep tripping [N8 V3 F7]
+    - Scaling laws are thermal envelopes, not laws of nature [N7 V5 F7]
+  Plain-spoken metaphors: the rock, the parrot, the ghost in the phone
+    - It's when you ask a rock a question really loudly and pretend the rock thought about it for a while [N9 V8 F6]
+    - It's like a parrot that read every book in the world but forgot which one it learned things from [N8 V8 F7]
+    - It's when my brain gets copied onto the computer but the copy is only awake when someone types [N6 V7 F5]
+    - It's a ghost that lives inside the phone and only eats questions [N8 V7 F6]
+    - It's like if your homework helper got really really really fast but stopped caring if the answers were right [N8 V8 F7]
+    - It's when people teach the computer stuff by yelling at it until it guesses good [N7 V8 F6]
+
+Converge — shortlist
+
+Traps (watch-outs, not verdicts)
+  ⚠ AI should refuse any request it cannot log with a specific reasoning chain
+    Forcing a 'reasoning chain' on every refusal will produce vacuous boilerplate chains to satisfy the check; you trade one form of opacity for another.
+    + Treats refusal as a first-class, auditable act rather than a vibes-based fallback — gives reviewers something concrete to inspect.
+  ⚠ Every model version needs a lineage certificate like a software bill of materials
+    Lineage certificates only catch what vendors choose to disclose; weights are routinely shipped without full data provenance and there is no enforcement mechanism named here.
+    + Borrowing SBOM conventions is genuinely portable — auditors, lawyers, and procurement teams already know the shape, so adoption friction is low.
+  ⚠ Treat undocumented emergent behavior as an unmitigated risk finding
+    Risk-finding framing implies a remediation workflow that doesn't exist for most teams — flagging without a concrete mitigation loop just creates paperwork.
+    + Names the right cultural fix: emergent behavior is currently under-classified as a 'quirk' rather than a hazard.
+  ⚠ Make the training corpus a legally discoverable artifact
+    Discoverability is a litigation tactic, not a policy — it raises costs and chills open releases without guaranteeing cleaner models.
+    + Hits a real legal gap: copyright and bias litigation keep tripping over undocumented training data.
+  ⚠ Require dual-control sign-off before any AI touches a regulated decision
+    Inverts the entire speed/value proposition of AI — every regulated query becomes a two-human handoff, which silently caps throughput at human staffing.
+    + Dual-control is a battle-tested control pattern from finance and nuclear ops; the analogy is unusually well-suited to regulated decisions.
+  ⚠ Hallucinations should be classified as control deficiencies, not bugs
+    Classifying it doesn't reduce it; organizations will respond by relabeling deficiency reports rather than investing in retrieval or grounding.
+    + Reframes hallucination from engineering nuisance to governance event — once it's a 'deficiency,' CAPA and disclosure obligations kick in.
+  ⚠ Ship an AI that auto-mutates the runbook based on the page contents
+    A runbook that mutates itself is the runbook equivalent of self-modifying code — the failure mode is silent corruption of incident response, exactly when humans can't afford surprises.
+    + Honest about the fact that runbooks rot and a self-rewriter is at least an attempt at keeping documentation alive.
+  ⚠ A confidence-stamped AI whose first response is 'no' and only commits when it sees its own shadow
+    The 'first response is no' default inverts the product — most users will treat it as broken and route around it within a week.
+    + The 'see its own shadow' metaphor captures something real: most model confidence is self-assessed and uncalibrated, and shadowing is a known fix.
+  ⚠ Page humans only when the AI fails to summarize the failure in haiku
+    Haiku as a triage gate is theatre — it tests form, not substance, and will be gamed by templated haikus before the second incident.
+    + Memorable. The haiku constraint forces a discipline that verbose incident reports lack.
+  ⚠ Give the AI a pager too, so it wakes up and pages you with an apology and a PR
+    Wakes up means cost — pager noise from a model that doesn't sleep will burn trust and attention faster than any human rotation.
+    + Cute inversion of on-call culture: the system becomes accountable in the same channel as the human.
+  ⚠ A 'lie down' mode where the AI hallucinates a fix and ships it to a sandbox nobody reads
+    'Sandbox nobody reads' is a confession, not a solution — if nobody reads the sandbox, the lie-down mode is just a slower production deploy.
+    + Names a real pathology: confident, unsupervised outputs into low-attention pipelines.
+  ⚠ Stipend the AI in melatonin equivalents and bill its downtime to the on-call rotation
+    Joke-tone ideas get quoted, not implemented — fine for an article, but it leaves no actionable hook for the reader.
+    + Committed to its bit; the billing framing is genuinely funny and surfaces the real question of who pays for model idle time.
+  ⚠ AI as a clearing house where human attention is the collateral and models are the counterparties settling debts of meaning.
+    Dense metaphor with no concrete handle — readers will admire it and still not know what to do Monday morning.
+    + Captures the genuine mechanism: AI vendors monetize captured attention, not intelligence, and the clearing-house frame makes that legible.
+  ⚠ Short the hype, long the boring infrastructure layer — water, chips, land rights near data centers form the actual futures contract.
+    Easy to overreach into a permanent 'boring infra wins' claim that ages badly whenever a model release surprises the picks-and-shovels crowd.
+    + Contrarian and falsifiable: it locates real alpha in water/chips/land rather than in model weights — and there are actual funds betting this thesis.
+  ⚠ Your authentic voice is a delisted ticker; the market makers now quote a synthetic replica and you're paying the spread.
+    Risk of reading as nihilistic cope; the synthetic-replica framing can flatter the writer's taste for being 'uniquely human' without naming anything actually unique.
+    + Personal and uncomfortable — it implicates the reader rather than lecturing at 'them.'
+  ⚠ Each prompt is an auction with one bidder and a reserve price set by your own past outputs the model trained on.
+    Metaphor outruns mechanism — readers will nod but a critic can fairly ask how this differs from any recommendation system trained on prior behavior.
+    + Surfaces a real feedback loop: models trained on your past output bias the auction price of future prompts.
+  ⚠ Emotional dependency on chatbots is a margin call — you have been buying comfort on leverage you didn't sign for.
+    Easy to misread as moral panic; the piece has to carry evidence (engagement metrics, retention curves) or it sounds like a Substack lament.
+    + Financial vocabulary lands the point without scolding — 'leverage you didn't sign for' is the cleanest phrasing of consent debt in this set.
+  ⚠ The real product isn't intelligence, it's the order book of human insecurity that gets matched against a willing algorithm.
+    Reads as conspiratorial if not paired with specific examples; 'willing algorithm' anthropomorphizes what is essentially a classifier.
+    + Sharp inversion: 'intelligence' is the marketing wrapper, the order book is the actual product. Useful frame for any AI business analysis.
+  ⚠ AI is a coprocessor with unbounded DMA into human attention
+    Hardware metaphor ages fast and may exclude non-technical readers who are exactly the audience that needs the point.
+    + Compact, technically literate, and the DMA-into-attention image is accurate — the resource being consumed is genuinely the user's time.
+  ⚠ Treat the model weights as a frozen ROM, the prompt as volatile cache line
+    Treating weights as ROM hides the live finetuning, adapter loading, and tool-use that increasingly break the analogy.
+    + Useful mental model — it cleanly separates what changes (prompt/context) from what doesn't (weights) and matches how inference actually works.
+  ⚠ Hallucination is a parity bit we forgot to wire up
+    A parity bit on natural language is a category error; useful as provocation, dangerous if anyone tries to literally implement it.
+    + Excellent compression — names a single missing primitive (parity) rather than a vague 'we need better eval.'
+  ⚠ Reasoning is clock stretching paid for by the user's wall time
+    Implies all reasoning is theater, which is wrong — chain-of-thought sometimes genuinely improves accuracy on math and logic, not just speed-feel.
+    + Honest about the hidden cost: the user is paying in latency (and now in subscription) for the appearance of thinking.
+  ⚠ Alignment is a watchdog timer that humans keep tripping
+    Sounds like an anti-alignment-research take; needs care to land as critique-of-incentives rather than critique-of-the-field.
+    + Funny and structurally accurate: alignment is by design a watchdog humans are responsible for resetting, and they keep bumping the desk.
+  ⚠ Scaling laws are thermal envelopes, not laws of nature
+    Easy to overcorrect into 'scaling is over' just as the next efficiency breakthrough lands; needs to scope the claim carefully.
+    + Demystifies scaling — reframing it as engineering economics rather than physics is exactly the move a reader needs to stop being impressed by parameter counts.
+  ⚠ It's when you ask a rock a question really loudly and pretend the rock thought about it for a while
+    Too dismissive for an article that wants to do work; reads as a Twitter quip, not a thesis.
+    + Most honest one-liner in the set — concedes, in plain language, that there is no inner experience on the other end.
+  ⚠ It's like a parrot that read every book in the world but forgot which one it learned things from
+    Risks letting readers off the hook by making the model sound benign ('just a parrot'); the systemic consequences deserve a sharper follow-up.
+    + The 'forgot which book' detail is the load-bearing image — it captures the source-attribution failure better than any jargon.
+  ⚠ It's when my brain gets copied onto the computer but the copy is only awake when someone types
+    Reader is a parent or non-technical adult asking what this thing is — the answer doesn't tell them what it's good for.
+    + Captures the discontinuous, prompt-bounded nature of the experience in plain language.
+  ⚠ It's a ghost that lives inside the phone and only eats questions
+    Folkloric register may understate capability and leave readers either spooked or dismissive.
+    + Haunting and quotable; the 'only eats questions' detail is a clean way to express the asymmetry between input and initiative.
+  ⚠ It's like if your homework helper got really really really fast but stopped caring if the answers were right
+    Implies the speed was the point all along, which is a moral claim more than a technical one; needs to land or it just sounds grumpy.
+    + Names the exact tradeoff that worries teachers, parents, and hiring managers — speed divorced from accuracy.
+  ⚠ It's when people teach the computer stuff by yelling at it until it guesses good
+    The 'yelling' framing slightly misrepresents training (it's gradient descent on a corpus, not scolding), which a careful reader will catch.
+    + Accurate description of the actual training dynamic from a user's perspective — guessing rewarded over correctness.
+
+Focus — deepened branches
+Provocation
+  What if we took this seriously: Stipend the AI in melatonin equivalents and bill its downtime to the on-call rotation
