@@ -1,0 +1,85 @@
+{
+ "2609.03218": {
+  "file": "raw_2609.03218.txt",
+  "lines": 969,
+  "sha256": "e264f99b0a670e841780c7e0affd5c6a67479bcc12ed1a59b0bba2de9428ea0c",
+  "quotes": {
+   "the panel retains 69": [
+    29
+   ],
+   "interpretive drift: models assign different evidence-based scores": [
+    29
+   ],
+   "Pinning retrieval removes only a minority of the role effect": [
+    38
+   ],
+   "median Jaccard is exactly 1.000": [
+    519
+   ],
+   "most user-context spillover comes from how models interpret the same evidence": [
+    4
+   ],
+   "Retention is the share of that effect that survives byte-identical retrieval": [
+    25
+   ],
+   "most instability comes from interpreting identical chunks differently": [
+    44
+   ],
+   "per-filing role spread": [
+    521
+   ]
+  }
+ },
+ "2605.29420": {
+  "file": "raw_2605.29420.txt",
+  "lines": 133,
+  "sha256": "94ddd6668b4426fa3eb3bcd07e7e6dfcd620d2d0ac7e442099c21c64ecafa791",
+  "quotes": {
+   "Baseline achieves the highest average score (4.390)": [
+    43
+   ],
+   "Baseline 4.054 3.638 4.749": [
+    45
+   ],
+   "Clarity moves in the opposite direction": [
+    47
+   ],
+   "primarily reshapes response characteristics rather than broadly improving capability": [
+    6,
+    75
+   ],
+   "closely tied to changes in discourse style rather than purely factual improvements": [
+    65
+   ],
+   "persona prompting changes LLM behavior more reliably than it improves overall capability": [
+    66
+   ]
+  }
+ },
+ "2603.18507": {
+  "file": "raw_2603.18507.txt",
+  "lines": 430,
+  "sha256": "b12ff3e4d8ec6980d3398b340fc242f01bd6c7fd4c114e0707b8519b4767dbc5",
+  "quotes": {
+   "does not add new factual knowledge but steers the model toward structured format": [
+    21
+   ],
+   "overall accuracy: 68.0% vs. 71.6% base model": [
+    17
+   ],
+   "W/o persona (9/10)": [
+    19
+   ],
+   "boosts attack refusal rates across all three safety benchmarks": [
+    22
+   ],
+   "LLM Persona hurts pretrained knowledge retrieval, but helps instruction-alignment tasks": [
+    4,
+    8
+   ],
+   "memorized factual knowledge (Humanities": [
+    18
+   ]
+  }
+ }
+}
