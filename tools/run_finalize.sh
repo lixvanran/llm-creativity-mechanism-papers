@@ -162,6 +162,8 @@ for f in 01_L1_PrematureConvergence_交差稿 02_A_SelectionIsNotCreation_稿 \
   cp "papers/$f.md" "$DELIVER/$f.md"
 done
 cp "交付总览_人肉审版_2026-10-25.md" "$DELIVER/"
+# ★ 合订本（★ 单文件五篇原文、★ 人肉可读）★ ⇒ ★ 必须在交付面、★ 否则用户拿到的是 zip 而不是「一个文件」
+cp "四篇正文合订本_2026-10-25.md" "$DELIVER/"
 ls -la "$DELIVER"
 echo
 echo "★ 包 sha256:"; sha256sum "$OUT_ZIP"
