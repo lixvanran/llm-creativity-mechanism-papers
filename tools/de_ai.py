@@ -59,6 +59,24 @@ NUM_RE = re.compile(r"(?<![\w.])\d+(?:\.\d+)?%?")
 #   ★ 绝大多数标记是【冗余前缀】——★ 后面紧跟的文字已经把话说完了 ⇒ ★ 直接删
 #   ★ 唯一例外 = 📌：★ 它在一批位置上是【唯一的状态指示】（★ 「一手材料在另一沙箱、待回查」）
 #     ⇒ ★ 换成文字标记【待回查】，★ 与【待完成】同一套体例、★ 且仍然可被机械计数
+# ★★★ 证据等级记号 → 文字标记（★ 2026-10-26 用户直指「还是有一堆表情符号」的第二次处置）★★★
+#   ★ 这些记号原本写���【行内码】里（★ 如 `✅` / `◐` / `⬜` / `❓` / `📌` / `📄`）★ ⇒ ★ 上一轮被
+#     「保护行内码」的规则挡住了。★ 但它们是【记号系统】、★ 不是逐字引用 ⇒ ★ 整套换文字。
+#   ★ 判定「纯记号」：★ 行内码内容去掉空白与【】后、★ 只剩记号字符 ⇒ ★ 才换
+#     ⇒ ★ 真正的逐字引用（★ 含其它文字的行内码）★ 一律不动
+MARK_TEXT = {
+    "✅": "【已核】", "✔": "【已核】",
+    "◐": "【方向】",
+    "⬜": "【未证】",
+    "❓": "【未知】",
+    "📌": "【待回查】",
+    "📄": "【文档】",
+    "❌": "", "✘": "", "✖": "", "⛔": "",
+}
+# ★ 白名单 = 空白 + 全部记号字符（★ 判据：★ 行内码里【只有记号】⇒ 那是记号系统、★ 换成文字；
+#   ★ 含有其它文字的行内码 ⇒ 那是逐字引用、★ 一律不动）
+MARK_ONLY = re.compile(r"^[\s\u3000【】★⇒⚠✅◐⬜❓📌📄✔❌✘✖⛔]*$")
+
 EMOJI_MAP = [
     ("⚠️", ""), ("⚠", ""),
     ("✅", ""), ("✔", ""), ("✓", ""),
@@ -113,6 +131,22 @@ def _clean_spacing(s: str) -> str:
     return "\n".join(l.rstrip() for l in s.split("\n"))
 
 
+def _swap_mark_spans(s: str) -> str:
+    """★ 把【纯记号】的行内码换成文字标记（★ 含其它文字的逐字引用不动）"""
+    def rep(m):
+        inner = m.group(0)[1:-1]
+        if not MARK_ONLY.match(inner):
+            return m.group(0)      # ★ 真引用 ⇒ ★ 不动
+        out = inner
+        for k, v in MARK_TEXT.items():
+            out = out.replace(k, v)
+        out = out.strip()
+        if not out:
+            return ""
+        return "`%s`" % out
+    return re.sub(r"`[^`\n]+`", rep, s)
+
+
 def _deco_prose(s: str) -> str:
     """★ 对一段散文做去装饰（★ 假定不含围栏与行内码）"""
     s = s.replace("★", "")
@@ -139,7 +173,10 @@ def transform(text: str) -> str:
         fenced.append("\x00F%d\x00" % (len(holder) - 1))
         pos = m.end()
     fenced.append(text[pos:])
-    stage = SPAN_RE.sub(_stash_span, "".join(fenced))
+    stage = "".join(fenced)
+    # ★★★ 顺序要紧：★ 记号替换必须在【行内码被抽走之前】做（★ 否则行内码已是占位符、★ 匹配不到）
+    stage = _swap_mark_spans(stage)
+    stage = SPAN_RE.sub(_stash_span, stage)
     stage = _deco_prose(stage)
     # 回填
     def _restore(m):
