@@ -1,0 +1,88 @@
+{
+ "task": "T-A-03",
+ "purpose": "回源核验：型号池静默下架 ⇒ N_BRANCH=5 的 dual 臂实测支数",
+ "source_repo": "lixvanran/agent-creativity-mechanism-study",
+ "source_branch": "main",
+ "source_ref_sha": "e012f1e2574cd28a5e64fc4609786a46a534efd4",
+ "files": {
+  "creativity_lab/client.py": {
+   "blob_sha": "4660f82df58ea07434601e8d35d05ba9300c7734"
+  },
+  "creativity_lab/arms/dual.py": {
+   "blob_sha": "fd1eab123d580c637f9fce46c648f86b837efbc5"
+  }
+ },
+ "models_pool": {
+  "line": 17,
+  "n": 9,
+  "list": [
+   "MiniMax-M3",
+   "MiniMax-M3.1-Flash-Preview",
+   "MiniMax-M2.7",
+   "MiniMax-M2.5",
+   "MiniMax-M2.1",
+   "MiniMax-M2",
+   "MiniMax-M2.7-highspeed",
+   "MiniMax-M2.5-highspeed",
+   "MiniMax-M2.1-highspeed"
+  ]
+ },
+ "models_pool_index_map": {
+  "0": "MiniMax-M3",
+  "1": "MiniMax-M3.1-Flash-Preview",
+  "2": "MiniMax-M2.7",
+  "3": "MiniMax-M2.5",
+  "4": "MiniMax-M2.1",
+  "5": "MiniMax-M2",
+  "6": "MiniMax-M2.7-highspeed",
+  "7": "MiniMax-M2.5-highspeed",
+  "8": "MiniMax-M2.1-highspeed"
+ },
+ "n_branch": {
+  "value": 5,
+  "line": 18
+ },
+ "branch_specs_line": 23,
+ "empty_filter_line": 46,
+ "branch_i_to_model": [
+  "MiniMax-M3",
+  "MiniMax-M3.1-Flash-Preview",
+  "MiniMax-M2.7",
+  "MiniMax-M2.5",
+  "MiniMax-M2.1"
+ ],
+ "dead_models_declared": [
+  "MiniMax-M2",
+  "MiniMax-M2.1",
+  "MiniMax-M2.1-highspeed"
+ ],
+ "dead_models_in_5_branch_arms": [
+  "MiniMax-M2.1"
+ ],
+ "live_branch_count_5_arm": 4,
+ "live_branch_models_5_arm": [
+  "MiniMax-M3",
+  "MiniMax-M3.1-Flash-Preview",
+  "MiniMax-M2.7",
+  "MiniMax-M2.5"
+ ],
+ "six_branch_check": {
+  "branch_i_to_model": [
+   "MiniMax-M3",
+   "MiniMax-M3.1-Flash-Preview",
+   "MiniMax-M2.7",
+   "MiniMax-M2.5",
+   "MiniMax-M2.1",
+   "MiniMax-M2"
+  ],
+  "dead_models_in_6_branch_arms": [
+   "MiniMax-M2.1",
+   "MiniMax-M2"
+  ],
+  "note": "凡声称用满 6 支的场合，必须先核支数是否真为 6"
+ },
+ "verdict": {
+  "mechanism_confirmed": true,
+  "statement": "N_BRANCH=5，第 5 支（i=4）取到 MODELS[4]=MiniMax-M2.1，该型号已下架返空，被 arms/dual.py:46 的 `if o` 过滤 ⇒ 5 支静默变 4 支；表上看不出来。"
+ }
+}
