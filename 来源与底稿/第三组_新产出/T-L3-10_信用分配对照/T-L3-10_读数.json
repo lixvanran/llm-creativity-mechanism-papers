@@ -1,0 +1,741 @@
+{
+  "report": {
+    "adv": {
+      "n_valid": 19,
+      "tasks": [
+        "A01",
+        "A02",
+        "A03"
+      ],
+      "overall_best": {
+        "A01": "B0_direct",
+        "A02": "B0_direct",
+        "A03": "B0_direct"
+      },
+      "n_comparable": 3,
+      "n_match": 2,
+      "n_ambiguous": 6,
+      "consistency": 0.6666666666666666,
+      "random_baseline_perm": 0.5,
+      "random_baseline_perm_sd": 0.0,
+      "random_baseline_analytic": 0.24583333333333335,
+      "random_baseline_analytic_mc": 0.241125,
+      "random_baseline_analytic_sd": 0.21216734992689143,
+      "z": 2.0056887490620006,
+      "mc_runs": 200,
+      "mc_runs_analytic": 2000,
+      "detail": [
+        {
+          "task": "A01",
+          "cid": "C1",
+          "attr_best": "B0_frames_vote",
+          "overall_best": "B0_direct",
+          "match": false,
+          "rates": {
+            "B0_direct": 0.222,
+            "B0_bestof3": 0.143,
+            "B0_frames_vote": 0.458,
+            "W_design_L2": 0.25,
+            "W_train_L3": 0.292
+          }
+        },
+        {
+          "task": "A01",
+          "cid": "C2",
+          "attr_best": "B0_direct",
+          "overall_best": "B0_direct",
+          "match": true,
+          "rates": {
+            "B0_direct": 0.667,
+            "B0_bestof3": 0.238,
+            "B0_frames_vote": 0.583,
+            "W_design_L2": 0.375,
+            "W_train_L3": 0.5
+          }
+        },
+        {
+          "task": "A02",
+          "cid": "C1",
+          "ambiguous": true,
+          "winners": [
+            "B0_frames_vote",
+            "W_train_L3"
+          ],
+          "rates": {
+            "B0_direct": 0.357,
+            "B0_bestof3": 0.417,
+            "B0_frames_vote": 0.5,
+            "W_train_L3": 0.5
+          }
+        },
+        {
+          "task": "A02",
+          "cid": "C2",
+          "attr_best": "B0_direct",
+          "overall_best": "B0_direct",
+          "match": true,
+          "rates": {
+            "B0_direct": 0.071,
+            "B0_bestof3": 0.042,
+            "B0_frames_vote": 0.042
+          }
+        }
+      ]
+    },
+    "main_big": {
+      "n_valid": 15,
+      "tasks": [
+        "D01",
+        "D02"
+      ],
+      "overall_best": {
+        "D01": "B0_direct",
+        "D02": "W_design_L2"
+      },
+      "n_comparable": 14,
+      "n_match": 3,
+      "n_ambiguous": 6,
+      "consistency": 0.21428571428571427,
+      "random_baseline_perm": 0.2,
+      "random_baseline_perm_sd": 0.0,
+      "random_baseline_analytic": 0.36354166666666665,
+      "random_baseline_analytic_mc": 0.1563125,
+      "random_baseline_analytic_sd": 0.08457150728082125,
+      "z": 0.6854934498591015,
+      "mc_runs": 200,
+      "mc_runs_analytic": 2000,
+      "detail": [
+        {
+          "task": "D01",
+          "cid": "C1",
+          "attr_best": "B0_direct",
+          "overall_best": "B0_direct",
+          "match": true,
+          "rates": {
+            "B0_direct": 0.25,
+            "B0_bestof3": 0.167,
+            "W_train_L3": 0.083,
+            "W_design_L2": 0.083
+          }
+        },
+        {
+          "task": "D01",
+          "cid": "C10",
+          "attr_best": "B0_direct",
+          "overall_best": "B0_direct",
+          "match": true,
+          "rates": {
+            "B0_direct": 0.125,
+            "B0_bestof3": 0.083
+          }
+        },
+        {
+          "task": "D01",
+          "cid": "C12",
+          "attr_best": "W_design_L2",
+          "overall_best": "B0_direct",
+          "match": false,
+          "rates": {
+            "B0_direct": 0.125,
+            "B0_bestof3": 0.083,
+            "W_train_L3": 0.125,
+            "W_design_L2": 0.167
+          }
+        },
+        {
+          "task": "D01",
+          "cid": "C3",
+          "attr_best": "B0_direct",
+          "overall_best": "B0_direct",
+          "match": true,
+          "rates": {
+            "B0_direct": 0.125,
+            "B0_bestof3": 0.083,
+            "W_design_L2": 0.083
+          }
+        },
+        {
+          "task": "D01",
+          "cid": "C4",
+          "attr_best": "B0_bestof3",
+          "overall_best": "B0_direct",
+          "match": false,
+          "rates": {
+            "B0_direct": 0.375,
+            "B0_bestof3": 0.417,
+            "W_train_L3": 0.125,
+            "W_design_L2": 0.083
+          }
+        },
+        {
+          "task": "D01",
+          "cid": "C8",
+          "attr_best": "B0_bestof3",
+          "overall_best": "B0_direct",
+          "match": false,
+          "rates": {
+            "B0_direct": 0.125,
+            "B0_bestof3": 0.167,
+            "W_train_L3": 0.042,
+            "W_design_L2": 0.083
+          }
+        },
+        {
+          "task": "D01",
+          "cid": "C9",
+          "ambiguous": true,
+          "winners": [
+            "B0_bestof3",
+            "W_design_L2"
+          ],
+          "rates": {
+            "B0_bestof3": 0.167,
+            "W_train_L3": 0.083,
+            "W_design_L2": 0.167
+          }
+        },
+        {
+          "task": "D02",
+          "cid": "C1",
+          "attr_best": "B0_bestof3",
+          "overall_best": "W_design_L2",
+          "match": false,
+          "rates": {
+            "B0_bestof3": 0.25,
+            "W_design_L2": 0.083,
+            "W_train_L3": 0.125,
+            "B0_frames_vote": 0.083
+          }
+        },
+        {
+          "task": "D02",
+          "cid": "C10",
+          "attr_best": "B0_bestof3",
+          "overall_best": "W_design_L2",
+          "match": false,
+          "rates": {
+            "B0_direct": 0.2,
+            "B0_bestof3": 0.25
+          }
+        },
+        {
+          "task": "D02",
+          "cid": "C11",
+          "attr_best": "B0_bestof3",
+          "overall_best": "W_design_L2",
+          "match": false,
+          "rates": {
+            "B0_direct": 0.2,
+            "B0_bestof3": 0.25
+          }
+        },
+        {
+          "task": "D02",
+          "cid": "C12",
+          "attr_best": "B0_bestof3",
+          "overall_best": "W_design_L2",
+          "match": false,
+          "rates": {
+            "B0_direct": 0.2,
+            "B0_bestof3": 0.25
+          }
+        },
+        {
+          "task": "D02",
+          "cid": "C2",
+          "ambiguous": true,
+          "winners": [
+            "B0_bestof3",
+            "B0_frames_vote"
+          ],
+          "rates": {
+            "B0_direct": 0.1,
+            "B0_bestof3": 0.25,
+            "W_design_L2": 0.083,
+            "W_train_L3": 0.167,
+            "B0_frames_vote": 0.25
+          }
+        },
+        {
+          "task": "D02",
+          "cid": "C3",
+          "attr_best": "B0_bestof3",
+          "overall_best": "W_design_L2",
+          "match": false,
+          "rates": {
+            "B0_direct": 0.2,
+            "B0_bestof3": 0.25,
+            "W_design_L2": 0.167,
+            "W_train_L3": 0.167,
+            "B0_frames_vote": 0.083
+          }
+        },
+        {
+          "task": "D02",
+          "cid": "C6",
+          "attr_best": "B0_bestof3",
+          "overall_best": "W_design_L2",
+          "match": false,
+          "rates": {
+            "B0_direct": 0.1,
+            "B0_bestof3": 0.25
+          }
+        },
+        {
+          "task": "D02",
+          "cid": "C8",
+          "attr_best": "B0_bestof3",
+          "overall_best": "W_design_L2",
+          "match": false,
+          "rates": {
+            "B0_direct": 0.1,
+            "B0_bestof3": 0.25
+          }
+        },
+        {
+          "task": "D02",
+          "cid": "C9",
+          "attr_best": "B0_bestof3",
+          "overall_best": "W_design_L2",
+          "match": false,
+          "rates": {
+            "B0_direct": 0.1,
+            "B0_bestof3": 0.25
+          }
+        }
+      ]
+    },
+    "main_grok": {
+      "n_valid": 12,
+      "tasks": [
+        "D01",
+        "D02"
+      ],
+      "overall_best": {
+        "D01": "B0_direct",
+        "D02": "B0_direct"
+      },
+      "n_comparable": 9,
+      "n_match": 9,
+      "n_ambiguous": 8,
+      "consistency": 1.0,
+      "random_baseline_perm": 1.0,
+      "random_baseline_perm_sd": 0.0,
+      "random_baseline_analytic": 0.3888888888888889,
+      "random_baseline_analytic_mc": 0.3898333333333333,
+      "random_baseline_analytic_sd": 0.1595490462151001,
+      "z": 3.8243203650622584,
+      "mc_runs": 200,
+      "mc_runs_analytic": 2000,
+      "detail": [
+        {
+          "task": "D01",
+          "cid": "C1",
+          "attr_best": "B0_direct",
+          "overall_best": "B0_direct",
+          "match": true,
+          "rates": {
+            "B0_direct": 0.25,
+            "B0_bestof3": 0.182,
+            "W_train_L3": 0.2
+          }
+        },
+        {
+          "task": "D01",
+          "cid": "C12",
+          "attr_best": "B0_direct",
+          "overall_best": "B0_direct",
+          "match": true,
+          "rates": {
+            "B0_direct": 0.5,
+            "B0_bestof3": 0.091,
+            "W_design_L2": 0.25
+          }
+        },
+        {
+          "task": "D01",
+          "cid": "C4",
+          "attr_best": "B0_direct",
+          "overall_best": "B0_direct",
+          "match": true,
+          "rates": {
+            "B0_direct": 0.5,
+            "B0_bestof3": 0.455,
+            "W_design_L2": 0.25,
+            "W_train_L3": 0.2
+          }
+        },
+        {
+          "task": "D01",
+          "cid": "C8",
+          "attr_best": "B0_direct",
+          "overall_best": "B0_direct",
+          "match": true,
+          "rates": {
+            "B0_direct": 0.25,
+            "B0_bestof3": 0.091,
+            "W_design_L2": 0.083,
+            "W_train_L3": 0.2
+          }
+        },
+        {
+          "task": "D01",
+          "cid": "C9",
+          "attr_best": "B0_direct",
+          "overall_best": "B0_direct",
+          "match": true,
+          "rates": {
+            "B0_direct": 0.25,
+            "B0_bestof3": 0.091,
+            "W_design_L2": 0.167
+          }
+        },
+        {
+          "task": "D02",
+          "cid": "C1",
+          "attr_best": "B0_direct",
+          "overall_best": "B0_direct",
+          "match": true,
+          "rates": {
+            "B0_direct": 0.2,
+            "B0_bestof3": 0.091
+          }
+        },
+        {
+          "task": "D02",
+          "cid": "C11",
+          "attr_best": "B0_direct",
+          "overall_best": "B0_direct",
+          "match": true,
+          "rates": {
+            "B0_direct": 0.1,
+            "B0_bestof3": 0.091
+          }
+        },
+        {
+          "task": "D02",
+          "cid": "C2",
+          "attr_best": "B0_direct",
+          "overall_best": "B0_direct",
+          "match": true,
+          "rates": {
+            "B0_direct": 0.2,
+            "B0_bestof3": 0.091
+          }
+        },
+        {
+          "task": "D02",
+          "cid": "C3",
+          "attr_best": "B0_direct",
+          "overall_best": "B0_direct",
+          "match": true,
+          "rates": {
+            "B0_direct": 0.2,
+            "B0_bestof3": 0.182
+          }
+        }
+      ]
+    },
+    "main_mm25": {
+      "n_valid": 13,
+      "tasks": [
+        "D01",
+        "D02"
+      ],
+      "overall_best": {
+        "D01": "B0_direct",
+        "D02": "W_train_L3"
+      },
+      "n_comparable": 16,
+      "n_match": 5,
+      "n_ambiguous": 4,
+      "consistency": 0.3125,
+      "random_baseline_perm": 0.29411764705882354,
+      "random_baseline_perm_sd": 0.0,
+      "random_baseline_analytic": 0.31862745098039214,
+      "random_baseline_analytic_mc": 0.16047058823529411,
+      "random_baseline_analytic_sd": 0.08146614980477376,
+      "z": 1.8661666487127546,
+      "mc_runs": 200,
+      "mc_runs_analytic": 2000,
+      "detail": [
+        {
+          "task": "D01",
+          "cid": "C1",
+          "attr_best": "B0_bestof3",
+          "overall_best": "B0_direct",
+          "match": false,
+          "rates": {
+            "B0_direct": 0.25,
+            "B0_bestof3": 0.267,
+            "W_train_L3": 0.167
+          }
+        },
+        {
+          "task": "D01",
+          "cid": "C10",
+          "attr_best": "B0_direct",
+          "overall_best": "B0_direct",
+          "match": true,
+          "rates": {
+            "B0_direct": 0.25,
+            "B0_bestof3": 0.067,
+            "W_train_L3": 0.167
+          }
+        },
+        {
+          "task": "D01",
+          "cid": "C12",
+          "attr_best": "B0_direct",
+          "overall_best": "B0_direct",
+          "match": true,
+          "rates": {
+            "B0_direct": 0.5,
+            "B0_bestof3": 0.067,
+            "W_design_L2": 0.083
+          }
+        },
+        {
+          "task": "D01",
+          "cid": "C4",
+          "attr_best": "B0_direct",
+          "overall_best": "B0_direct",
+          "match": true,
+          "rates": {
+            "B0_direct": 0.5,
+            "B0_bestof3": 0.133,
+            "W_design_L2": 0.083
+          }
+        },
+        {
+          "task": "D01",
+          "cid": "C8",
+          "attr_best": "B0_direct",
+          "overall_best": "B0_direct",
+          "match": true,
+          "rates": {
+            "B0_direct": 0.25,
+            "B0_bestof3": 0.067,
+            "W_design_L2": 0.042
+          }
+        },
+        {
+          "task": "D01",
+          "cid": "C9",
+          "attr_best": "B0_direct",
+          "overall_best": "B0_direct",
+          "match": true,
+          "rates": {
+            "B0_direct": 0.25,
+            "B0_bestof3": 0.067,
+            "W_design_L2": 0.083
+          }
+        },
+        {
+          "task": "D02",
+          "cid": "C1",
+          "ambiguous": true,
+          "winners": [
+            "B0_bestof3",
+            "W_design_L2",
+            "W_train_L3"
+          ],
+          "rates": {
+            "B0_direct": 0.1,
+            "B0_bestof3": 0.167,
+            "W_train_L3": 0.167,
+            "W_design_L2": 0.167
+          }
+        },
+        {
+          "task": "D02",
+          "cid": "C10",
+          "attr_best": "B0_direct",
+          "overall_best": "W_train_L3",
+          "match": false,
+          "rates": {
+            "B0_direct": 0.3,
+            "B0_bestof3": 0.083,
+            "W_design_L2": 0.167
+          }
+        },
+        {
+          "task": "D02",
+          "cid": "C11",
+          "attr_best": "B0_bestof3",
+          "overall_best": "W_train_L3",
+          "match": false,
+          "rates": {
+            "B0_direct": 0.2,
+            "B0_bestof3": 0.333,
+            "W_design_L2": 0.25
+          }
+        },
+        {
+          "task": "D02",
+          "cid": "C12",
+          "attr_best": "B0_bestof3",
+          "overall_best": "W_train_L3",
+          "match": false,
+          "rates": {
+            "B0_direct": 0.2,
+            "B0_bestof3": 0.333,
+            "W_design_L2": 0.25
+          }
+        },
+        {
+          "task": "D02",
+          "cid": "C2",
+          "attr_best": "W_design_L2",
+          "overall_best": "W_train_L3",
+          "match": false,
+          "rates": {
+            "B0_direct": 0.1,
+            "B0_bestof3": 0.167,
+            "W_train_L3": 0.083,
+            "W_design_L2": 0.25
+          }
+        },
+        {
+          "task": "D02",
+          "cid": "C3",
+          "attr_best": "B0_direct",
+          "overall_best": "W_train_L3",
+          "match": false,
+          "rates": {
+            "B0_direct": 0.3,
+            "B0_bestof3": 0.167,
+            "W_train_L3": 0.167,
+            "W_design_L2": 0.167
+          }
+        },
+        {
+          "task": "D02",
+          "cid": "C5",
+          "attr_best": "W_design_L2",
+          "overall_best": "W_train_L3",
+          "match": false,
+          "rates": {
+            "B0_direct": 0.1,
+            "B0_bestof3": 0.083,
+            "W_design_L2": 0.167
+          }
+        },
+        {
+          "task": "D02",
+          "cid": "C6",
+          "attr_best": "W_design_L2",
+          "overall_best": "W_train_L3",
+          "match": false,
+          "rates": {
+            "B0_direct": 0.1,
+            "B0_bestof3": 0.083,
+            "W_design_L2": 0.25
+          }
+        },
+        {
+          "task": "D02",
+          "cid": "C7",
+          "attr_best": "W_design_L2",
+          "overall_best": "W_train_L3",
+          "match": false,
+          "rates": {
+            "B0_direct": 0.1,
+            "B0_bestof3": 0.083,
+            "W_design_L2": 0.167
+          }
+        },
+        {
+          "task": "D02",
+          "cid": "C8",
+          "attr_best": "W_design_L2",
+          "overall_best": "W_train_L3",
+          "match": false,
+          "rates": {
+            "B0_direct": 0.1,
+            "B0_bestof3": 0.083,
+            "W_design_L2": 0.25
+          }
+        },
+        {
+          "task": "D02",
+          "cid": "C9",
+          "attr_best": "B0_direct",
+          "overall_best": "W_train_L3",
+          "match": false,
+          "rates": {
+            "B0_direct": 0.3,
+            "B0_bestof3": 0.083,
+            "W_design_L2": 0.167
+          }
+        }
+      ]
+    },
+    "main": {
+      "n_valid": 1,
+      "tasks": [
+        "D01"
+      ],
+      "overall_best": {},
+      "n_comparable": 0,
+      "n_match": 0,
+      "n_ambiguous": 0,
+      "consistency": null,
+      "random_baseline_perm": null,
+      "random_baseline_perm_sd": null,
+      "random_baseline_analytic": null,
+      "random_baseline_analytic_mc": null,
+      "random_baseline_analytic_sd": null,
+      "z": null,
+      "mc_runs": 0,
+      "mc_runs_analytic": 0,
+      "detail": []
+    },
+    "fv2": {
+      "n_valid": 4,
+      "tasks": [
+        "D01",
+        "D02"
+      ],
+      "overall_best": {},
+      "n_comparable": 0,
+      "n_match": 0,
+      "n_ambiguous": 0,
+      "consistency": null,
+      "random_baseline_perm": null,
+      "random_baseline_perm_sd": null,
+      "random_baseline_analytic": null,
+      "random_baseline_analytic_mc": null,
+      "random_baseline_analytic_sd": null,
+      "z": null,
+      "mc_runs": 0,
+      "mc_runs_analytic": 0,
+      "detail": []
+    },
+    "mb2": {
+      "n_valid": 1,
+      "tasks": [
+        "D01"
+      ],
+      "overall_best": {},
+      "n_comparable": 0,
+      "n_match": 0,
+      "n_ambiguous": 0,
+      "consistency": null,
+      "random_baseline_perm": null,
+      "random_baseline_perm_sd": null,
+      "random_baseline_analytic": null,
+      "random_baseline_analytic_mc": null,
+      "random_baseline_analytic_sd": null,
+      "z": null,
+      "mc_runs": 0,
+      "mc_runs_analytic": 0,
+      "detail": []
+    }
+  },
+  "fails": [
+    "main：无可比的 (题,结论ID) 格 ⇒ 归因不可分辨",
+    "fv2：无可比的 (题,结论ID) 格 ⇒ 归因不可分辨",
+    "mb2：无可比的 (题,结论ID) 格 ⇒ 归因不可分辨"
+  ]
+}
