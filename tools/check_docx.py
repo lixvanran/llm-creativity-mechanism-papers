@@ -97,7 +97,7 @@ def split_tables(md):
     return tabs
 def orphan_table(md):
     """没有表头的表格碎片（块内第 2 行不是分隔行）⇒ pandoc 不认它是表，整块会掉成段落"""
-    out=[]
+    out=[]; short=[]
     for t in split_tables(md):
         if len(t)<2 or not is_sep(t[1][1]):
             out.append((t[0][0], t[0][1][:60]))
@@ -125,7 +125,7 @@ def col_mismatch(md):
       ⇒ 第 ⑥ 列的 7 格内容**整列消失**，而「表格数 md==docx」**照样相等**。
       ⇒ 只有「单元格零丢失」抓得到 ⇒ ★ 但那是在渲染之后；本项能在【改稿阶段】直接抓到。）
     """
-    out=[]
+    out=[]; short=[]
     for t in split_tables(md):
         if len(t)<2 or not is_sep(t[1][1]):
             continue
@@ -135,9 +135,28 @@ def col_mismatch(md):
             out.append((t[1][0], n_head, n_sep, '表头 %d 列 vs 分隔行 %d 列'%(n_head,n_sep)))
         for (li,l) in t[2:]:
             n_row=len(split_cells(l))
-            if n_row!=n_sep:
-                out.append((li, n_sep, n_row, '分隔行 %d 列 vs 该行 %d 列'%(n_sep,n_row)))
+            # ★★★ 2026-10-26 修正判据语义：★★★★★
+            #   ★ pandoc 的 pipe_tables 行为是：★ **行比表头少 ⇒ 补空单元格（不丢内容）**
+            #     ★ **行比表头多 ⇒ 截列（★ 多出来的格子内容整段消失）**
+            #   ★ ⇒ ★ 所以【只有多出格子】才是「内容会丢」的形态 ⇒ ★ 只判这一类
+            #   ★ 少格子那一类（旧判据也判红）⇒ ★ pandoc 会补空 ⇒ **不丢内容** ⇒ 报成 info
+            if n_row > n_sep:
+                out.append((li, n_sep, n_row, '分隔行 %d 列 vs 该行 %d 列（★ 多出的格子会被 pandoc 截掉 ⇒ 内容丢）'%(n_sep,n_row)))
+            elif n_row < n_sep:
+                short.append((li, n_sep, n_row))
     return out
+def col_short(md):
+    """★ 行格子【少于】表头 ⇒ pandoc 补空单元格（不丢内容）⇒ 只报告、★ 不判红 ★"""
+    out=[]
+    for t in split_tables(md):
+        if len(t)<2 or not is_sep(t[1][1]): continue
+        n_sep=len(split_cells(t[1][1]))
+        for (li,l) in t[2:]:
+            n_row=len(split_cells(l))
+            if n_row<n_sep: out.append((li,n_sep,n_row))
+    return out
+
+
 def angle_swallow(md):
     """★ 表格单元格里出现**裸尖括号** `<xxx>` ⇒ pandoc 当成 HTML 标签 ⇒ 内容在 docx 里被吞掉。
 
@@ -213,6 +232,9 @@ for f in sorted(x[:-3] for x in os.listdir(D) if x.endswith('.md')):
     cb=code_block_table(md)
     ang=angle_swallow(md)
     cm=col_mismatch(md)
+    _short = col_short(md)
+    if _short:
+        print("     · 少格子 %d 处（★ pandoc 会补空单元格、★ **不丢内容**）⇒ 只报告不判红" % len(_short))
     if cm:
         allok=False
         print("     ⛔ 表格列数不一致 L%d：%s（pandoc 会按其中一种截列 ⇒ 整列内容消失）"%(cm[0][0],cm[0][3]))
