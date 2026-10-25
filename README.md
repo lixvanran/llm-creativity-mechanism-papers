@@ -40,6 +40,19 @@ MIT License ｜ 数据快照 2026-10-25 ｜ 面向第三方复算、审计与再
 
 ---
 
+## 怎么取这份数据
+
+```bash
+git clone https://github.com/lixvanran/llm-creativity-mechanism-papers.git
+```
+
+`data/readings.jsonl` 约 1.1 MB，**超过 GitHub contents API 的 1 MB 内联上限**：
+只想取单个小文件用 `contents` API；取大文件用 `GET /git/blobs/<blob sha>`
+（带 `Accept: application/vnd.github.raw`）或直接 clone。
+受限网络下 `raw.githubusercontent.com` 可能不可达 —— 走 API 或 clone。
+
+---
+
 ## 三种用法
 
 ### 1) 跑判据（验证这份数据自洽）
