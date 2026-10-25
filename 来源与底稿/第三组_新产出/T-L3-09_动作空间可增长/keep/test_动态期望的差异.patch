@@ -1,0 +1,34 @@
+--- /workspace/lab/routes/COLLAPSE/test_workflow.py	2026-10-24 09:52:43.269679503 +0800
++++ workflow_ext/test_workflow.py	2026-10-25 19:02:49.795180456 +0800
+@@ -374,8 +374,12 @@
+     # ── 14. ★ 动作空间是**可组合的一族**（不是 6 个查表模板）
+     def c14():
+         specs = W.all_action_specs()
+-        if len(specs) != 36:
+-            return False, "动作数 %d（应 36 = 6 修复型 × 2 范围 × 3 强度）" % len(specs)
++        # ★★★ 动态期望（★ 不写死 36/57 ⇒ 动作空间可增长时断言自动跟着变）
++        exp_n = len(W.REPAIR_TYPES) * len(W.SCOPES) * len(W.STRICTNESS)
++        if len(specs) != exp_n:
++            return False, "动作数 %d（应 %d = %d 修复型 × %d 范围 × %d 强度）" % (
++                len(specs), exp_n, len(W.REPAIR_TYPES), len(W.SCOPES),
++                len(W.STRICTNESS))
+         if len(set(specs)) != len(specs):
+             return False, "有重复动作"
+         # 不同 spec ⇒ 不同提示词（否则"可组合"是假的）
+@@ -393,8 +397,14 @@
+     def c15():
+         p0 = W.ActionPolicy()
+         # 6 修复型 + 2 范围 + 3 强度 + 36 交互 + 3 仲裁 + 4 发散度 + 3 合并方式 = 57
+-        if p0.param_count() != 57:
+-            return False, "参数量 %d（应 57 = 6+2+3+36+3仲裁+4发散度+3合并方式）" % p0.param_count()
++        # ★ 动态期望：u + v + t + m(行×列) + 仲裁 + 发散度 + 合并方式
++        exp_p = (len(p0.u) + len(p0.v) + len(p0.t)
++                 + len(p0.m) * len(p0.m[0]) + len(p0.arb)
++                 + len(p0.nf) + len(p0.mm))
++        if p0.param_count() != exp_p:
++            return False, "参数量 %d（应 %d = %d+%+d+%d+%d×%d+%d+%d+%d）" % (
++                p0.param_count(), exp_p, len(p0.u), len(p0.v), len(p0.t),
++                len(p0.m), len(p0.m[0]), len(p0.arb), len(p0.nf), len(p0.mm))
+         probs = p0.probs("conflict")
+         if abs(sum(probs) - 1.0) > 1e-6:
+             return False, "概率没归一：%r" % sum(probs)

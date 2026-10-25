@@ -1,0 +1,64 @@
+{
+  "report": {
+    "baseline": {
+      "n_repair_types": 6,
+      "n_scopes": 2,
+      "n_strictness": 3,
+      "n_actions": 36,
+      "u_dim": 6,
+      "v_dim": 2,
+      "m_dim": 18,
+      "total_params": 26
+    },
+    "extended": {
+      "n_repair_types": 7,
+      "n_scopes": 2,
+      "n_strictness": 3,
+      "n_actions": 42,
+      "u_dim": 7,
+      "v_dim": 2,
+      "m_dim": 21,
+      "total_params": 30
+    },
+    "tests": {
+      "rc": 1,
+      "passed": null,
+      "tail": "ge_cost          D01 案例抓到（['option_verdict']），一致内容不误报\n  ✔ conflict_drives_evolution                  矛盾 2 处 → 演化出 ['act_conflict']\n  ✘ action_space_is_composable                 动作数 42（应 36 = 6 修复型 × 2 范围 × 3 强度）\n  ✘ policy_is_learnable                        参数量 64（应 57 = 6+2+3+36+3仲裁+4发散度+3合并方式）\n  ✔ policy_mode_produces_composed_action       组合动作 ['act_ground_in_evidence_slot_0']（参数 64 个）\n  ✔ anchor_out_decision_is_mechanical          锚内1 锚外1 写不出岔口1；锚内不误判\n  ✔ equal_budget_control_arm                   3 次生成 + 3 次抽取（与 W 的 6 次同量）\n  ✔ conflict_arbitration_modes                 检出 1 对；none 容忍(丢0) drop_one 丢1 且两向不同\n  ✔ architecture_freedom_is_learned            策略选的架构生效：nf=(2, 'packet') mm=packet；三种合并都可用\n--------------------------------------------------------------------------\n正常模式：18/20 通过\n",
+      "test_file": "test_workflow.py"
+    },
+    "params_extensible": true,
+    "weight_migration": [
+      {
+        "version": "15题版",
+        "u_len": 6,
+        "m_shape": [
+          6,
+          6
+        ],
+        "new_u_len": 7,
+        "new_m_shape": [
+          7,
+          7
+        ],
+        "migratable_directly": false
+      },
+      {
+        "version": "13题版",
+        "u_len": 6,
+        "m_shape": [
+          6,
+          6
+        ],
+        "new_u_len": 7,
+        "new_m_shape": [
+          7,
+          7
+        ],
+        "migratable_directly": false
+      }
+    ]
+  },
+  "fails": [
+    "既有测试在扩后不绿"
+  ]
+}

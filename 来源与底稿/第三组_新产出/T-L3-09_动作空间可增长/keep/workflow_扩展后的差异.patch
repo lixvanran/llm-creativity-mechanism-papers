@@ -1,0 +1,10 @@
+--- /workspace/lab/routes/COLLAPSE/workflow.py	2026-10-24 17:11:07.426808119 +0800
++++ workflow_ext/workflow.py	2026-10-25 19:02:18.382862751 +0800
+@@ -204,6 +204,7 @@
+ #   （这正是 AgentSquare 模块池的思路在"动作"上的落法）
+ 
+ REPAIR_TYPES: Dict[str, Optional[str]] = {
++    "cross_refine": "★新增（可增长性验证用）：**对照其它各路的内容**，逐条指出冲突并改写",
+     "none": None,                     # 什么都不改（保留 ⇒ 策略可选择"不作为"）
+     "drop_conflicting": "凡是与别的句子、或与依据冲突的，**直接删掉**",
+     "ground_in_evidence": "每一条都必须**能在依据里指到出处**（写���编号）",
