@@ -30,6 +30,19 @@ BATCHES = ["adv", "main_big", "main_grok", "main_mm25", "main", "fv2", "mb2"]
 FOUR = ["B0_bestof3", "B0_direct", "W_design_L2", "W_train_L3"]
 
 
+
+def wilson(k, n, z=1.96):
+    """★ Wilson 95% 区间（★ 比例型读数的检出力地板；★ 不用正态近似，
+       因为 n 小且 p 接近 0.5 时正态近似会给出越界区间）"""
+    if n == 0:
+        return (None, None)
+    ph = k / float(n)
+    d = 1.0 + z * z / n
+    c = (ph + z * z / (2 * n)) / d
+    h = z * math.sqrt(ph * (1 - ph) / n + z * z / (4 * n * n)) / d
+    return (max(0.0, c - h), min(1.0, c + h))
+
+
 def classify(rec):
     """★ 返回 (状态, n_load_bearing)；状态 ∈ ok / failed / instrument_zero"""
     if rec.get("failures"):
@@ -125,6 +138,30 @@ def main():
                   " ⇒ 无法从本批定零分布 ⇒ 阈值不可从本批得出")
             binfo["zero_distribution"] = dict(n_cells_with_rep=0, median_rep_sigma=None,
                                               note="★ 无同臂同题多 rep ⇒ 本批零分布不可得")
+        # ── 判据判定：阈值 0.5 + Wilson 区间（★ 判决线锚本批噪声地板）──
+        #   ★ 判据「>0.5」是硬阈值；n=88/100 时翻转一个样本就变号 ⇒ 本身无分辨率
+        #   ⇒ 判决规则：区间【不覆盖】0.5 ⇒ 成立/不成立；区间【覆盖】0.5 ⇒ 不可分辨
+        THRESH = 0.5
+        for arm, d in binfo["arms"].items():
+            n, k = d["n_valid"], d["n_nonzero"]
+            lo, hi = wilson(k, n)
+            d["wilson95"] = [lo, hi]
+            d["threshold"] = THRESH
+            d["distance_in_samples"] = (k - THRESH * n)
+            if lo is None:
+                d["judgement"] = "未测（无有效样本）"
+            elif lo > THRESH:
+                d["judgement"] = "成立（区间下界 %.3f > 0.5）" % lo
+            elif hi < THRESH:
+                d["judgement"] = "不成立（区间上界 %.3f < 0.5）" % hi
+            else:
+                d["judgement"] = ("★ 不可分辨（Wilson 95%% 区间 [%.3f, %.3f] 覆盖阈值 0.5；"
+                                  "距阈值 %+.1f 个样本）" % (lo, hi, k - THRESH * n))
+            print("  ★ %-18s 承重非零 %d/%d = %.3f  Wilson95=[%s, %s]  ⇒ %s"
+                  % (arm, k, n, (k / n if n else 0),
+                     ("%.3f" % lo) if lo is not None else "n/a",
+                     ("%.3f" % hi) if hi is not None else "n/a",
+                     d["judgement"]))
         rep[batch] = binfo
 
     out = dict(report=rep, fails=fails)

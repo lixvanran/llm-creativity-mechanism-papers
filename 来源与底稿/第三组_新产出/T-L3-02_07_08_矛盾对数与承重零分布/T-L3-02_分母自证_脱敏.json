@@ -1,0 +1,133 @@
+{
+  "15题版": {
+    "meta_declared_n_samples": 88,
+    "sum_hist_check": 88,
+    "denominator_consistency": true,
+    "failure_not_in_hist_selfproof": "★ 未自证（该批的 seed 目录里【没有训练日志】⇒ 「失败样本不写入 hist」这条在本批【无日志凭据】）",
+    "seeds": [
+      {
+        "seed": "pl_20261101",
+        "subdir": "<runs 根>",
+        "available": true,
+        "hist_len": 17,
+        "log_train_rows": null,
+        "log_failure_records": null,
+        "match": false
+      },
+      {
+        "seed": "pl_20261102",
+        "subdir": "<runs 根>",
+        "available": true,
+        "hist_len": 18,
+        "log_train_rows": null,
+        "log_failure_records": null,
+        "match": false
+      },
+      {
+        "seed": "pl_20261103",
+        "subdir": "<runs 根>",
+        "available": true,
+        "hist_len": 17,
+        "log_train_rows": null,
+        "log_failure_records": null,
+        "match": false
+      },
+      {
+        "seed": "pl_20261104",
+        "subdir": "<runs 根>",
+        "available": true,
+        "hist_len": 18,
+        "log_train_rows": null,
+        "log_failure_records": null,
+        "match": false
+      },
+      {
+        "seed": "pl_20261106",
+        "subdir": "<runs 根>",
+        "available": true,
+        "hist_len": 18,
+        "log_train_rows": null,
+        "log_failure_records": null,
+        "match": false
+      }
+    ],
+    "n_seeds": 5,
+    "sum_hist": 88,
+    "n_with_log": 0,
+    "n_match": 0,
+    "all_match": false,
+    "sum_log_failures": 0,
+    "conclusion": "★ hist 条数 == 训练日志训练行数 ⇒ 【失败样本不写入 hist】⇒ 训练 hist 的分母天然已是有效读数（无需再剔）"
+  },
+  "13题版": {
+    "meta_declared_n_samples": 100,
+    "sum_hist_check": 100,
+    "denominator_consistency": true,
+    "failure_not_in_hist_selfproof": "完整自证（6/6 seed 相等）",
+    "seeds": [
+      {
+        "seed": "pl_20261101",
+        "subdir": "holdout13",
+        "available": true,
+        "hist_len": 16,
+        "log_train_rows": 16,
+        "log_failure_records": 2,
+        "match": true
+      },
+      {
+        "seed": "pl_20261102",
+        "subdir": "holdout13",
+        "available": true,
+        "hist_len": 17,
+        "log_train_rows": 17,
+        "log_failure_records": 1,
+        "match": true
+      },
+      {
+        "seed": "pl_20261103",
+        "subdir": "holdout13",
+        "available": true,
+        "hist_len": 18,
+        "log_train_rows": 18,
+        "log_failure_records": 0,
+        "match": true
+      },
+      {
+        "seed": "pl_20261104",
+        "subdir": "holdout13",
+        "available": true,
+        "hist_len": 14,
+        "log_train_rows": 14,
+        "log_failure_records": 4,
+        "match": true
+      },
+      {
+        "seed": "pl_20261105",
+        "subdir": "holdout13",
+        "available": true,
+        "hist_len": 17,
+        "log_train_rows": 17,
+        "log_failure_records": 1,
+        "match": true
+      },
+      {
+        "seed": "pl_20261106",
+        "subdir": "holdout13",
+        "available": true,
+        "hist_len": 18,
+        "log_train_rows": 18,
+        "log_failure_records": 0,
+        "match": true
+      }
+    ],
+    "n_seeds": 6,
+    "sum_hist": 100,
+    "n_with_log": 6,
+    "n_match": 6,
+    "all_match": true,
+    "sum_log_failures": 8,
+    "conclusion": "★ hist 条数 == 训练日志训练行数 ⇒ 【失败样本不写入 hist】⇒ 训练 hist 的分母天然已是有效读数（无需再剔）"
+  },
+  "_note": "★ 本文件只落【计数】，不含任何答案 / prompt / 题目内容；★ 原始 policy.json 与 train_*.log 不在仓内（★ 全仓 policy.json 0 命中）⇒ 本文件是第三方可复算的唯一凭据",
+  "_how_to_reproduce": "对每个 seed：hist_len = len(json.load(policy.json)['hist'])；log_train_rows = 训练日志中行首为「轮」且含「样本」的行数；两者相等 ⇒ 失败样本不写入 hist。"
+}

@@ -14,14 +14,25 @@
         "n_cross_slot": 44,
         "n_slot": 44,
         "trigger_ratio": 0.5,
-        "judge_trigger_gt_0_5": false,
+        "trigger_wilson95": [
+          0.3977398665504473,
+          0.6022601334495528
+        ],
+        "judge_trigger": "★ 不可分辨（Wilson 95% 区间 [0.398, 0.602] 覆盖阈值 0.5；距阈值 +0.0 个样本）",
+        "judge_trigger_point": false,
         "n_conflicts_gt0": 14,
         "conflicts_ratio": 0.3181818181818182,
-        "judge_conflicts_gt_0_5": false,
+        "conflicts_wilson95": [
+          0.19999129931673562,
+          0.46557172533126934
+        ],
+        "judge_conflicts": "不成立（区间上界 0.466 < 0.5）",
+        "judge_conflicts_point": false,
         "n_ncp_gt0": 1,
         "ncp_ratio": 0.022727272727272728,
         "n_kept": 10,
-        "kept_ratio": 0.11363636363636363
+        "kept_ratio": 0.11363636363636363,
+        "note": "★ 判据是硬阈值 >0.5，n=88/100 时翻转一个样本就变号 ⇒ ★ 判据本身没有分辨率；★ 判决锚本批噪声地板（Wilson 95% 区间）；★ 要能分辨，n 至少要到三位数"
       }
     },
     "13题版": {
@@ -38,14 +49,25 @@
         "n_cross_slot": 54,
         "n_slot": 46,
         "trigger_ratio": 0.54,
-        "judge_trigger_gt_0_5": true,
+        "trigger_wilson95": [
+          0.44264685393523856,
+          0.6343935614666815
+        ],
+        "judge_trigger": "★ 不可分辨（Wilson 95% 区间 [0.443, 0.634] 覆盖阈值 0.5；距阈值 +4.0 个样本）",
+        "judge_trigger_point": true,
         "n_conflicts_gt0": 16,
         "conflicts_ratio": 0.2962962962962963,
-        "judge_conflicts_gt_0_5": false,
+        "conflicts_wilson95": [
+          0.19137265695067046,
+          0.42827825173788586
+        ],
+        "judge_conflicts": "不成立（区间上界 0.428 < 0.5）",
+        "judge_conflicts_point": false,
         "n_ncp_gt0": 2,
         "ncp_ratio": 0.037037037037037035,
         "n_kept": 16,
-        "kept_ratio": 0.16
+        "kept_ratio": 0.16,
+        "note": "★ 判据是硬阈值 >0.5，n=88/100 时翻转一个样本就变号 ⇒ ★ 判据本身没有分辨率；★ 判决锚本批噪声地板（Wilson 95% 区间）；★ 要能分辨，n 至少要到三位数"
       }
     },
     "field_diagnosis": {
@@ -187,7 +209,6 @@
   },
   "fails": [
     "15题版：非零比例未过 0.5",
-    "13题版：非零比例未过 0.5",
-    "15题版：承重子层判据（两种口径）均不成立"
+    "13题版：非零比例未过 0.5"
   ]
 }

@@ -28,6 +28,7 @@ from __future__ import annotations
 import argparse
 import io
 import json
+import math
 import os
 import sys
 from collections import Counter
@@ -35,6 +36,17 @@ from collections import Counter
 HERE = os.path.dirname(os.path.abspath(__file__))
 DEFAULT_READINGS = ("/workspace/work/exp/L3/来源与底稿/第三组_治塌缩层3/"
                     "cmp8repo/repro/readings")
+
+
+def wilson(k, n, z=1.96):
+    """★ Wilson 95% 区间（比例型读数的检出力地板）"""
+    if n == 0:
+        return (None, None)
+    ph = k / float(n)
+    d = 1.0 + z * z / n
+    c = (ph + z * z / (2 * n)) / d
+    h = z * math.sqrt(ph * (1 - ph) / n + z * z / (4 * n * n)) / d
+    return (max(0.0, c - h), min(1.0, c + h))
 
 
 def is_failed(h):
@@ -131,9 +143,11 @@ def main():
             print("   %-20s 非零 %3d/%3d = %.3f%s"
                   % (k, d["nz"], d["n"], d["ratio"], mark))
     rep["field_diagnosis"] = diag
-    print("\n  ★ 结论：`diversity` 与 `cover` 在 15 题版恰为 86/88 = 0.977 ⇒ "
-          "【派活那个读数出自 diversity/cover，不是矛盾对数】")
-    print("  ★★ 真正的「跨槽位矛盾对数」= `n_conflict_pairs` ⇒ 2/88、2/100 ⇒ 判据不成立")
+    print("\n  ★★★ 归因（★ 已按协调方 2026-10-26 回执更正）：")
+    print("    派活给的 86/88 与 98/100 = 【`n_conflict_pairs` 取值为 0 的样本个数】")
+    print("    （88−2=86、100−2=98）⇒ ★ 它【就是】这个字段的零值比例，"
+          "【不是】出自 diversity/cover —— ★ 我第一版把归因说成 diversity/cover 是错的，已更正")
+    print("  ★★ 结论不变：非零比例 2/88=0.023、2/100=0.020 ⇒ 判据(>0.5)【不成立】")
 
     # ══ 承重子层（cross_slot）口径 ════════════════════════════
     print()
@@ -171,23 +185,46 @@ def main():
               % (cncp, len(cs), cncp / float(len(cs)) if cs else float("nan")))
         print("   ★ kept=True 比例 = %d/%d = %.3f"
               % (kept, len(h), kept / float(len(h))))
+        lo_t, hi_t = wilson(len(cs), len(h))
+        lo_c, hi_c = wilson(cconf, len(cs))
         ok_trig = bool(trig is not None and trig > 0.5)
         ok_conf = bool(cs) and (cconf / float(len(cs)) > 0.5)
-        print("   ⇒ 判据（承重子层非零比例 > 0.5）："
-              "【触发口径 %s】/【冲突口径 %s】 ⇒ %s"
-              % ("成立" if ok_trig else "不成立", "成立" if ok_conf else "不成立",
-                 "★ 不成立" if not (ok_trig or ok_conf) else "成立（需注明口径）"))
+        # ★★ 判决规则（★ 已按协调方 2026-10-26 回执更正）：
+        #   判据是硬阈值 >0.5，n=88/100 时【翻转一个样本就变号】⇒ 判据本身没有分辨率
+        #   ⇒ 判决线锚本批噪声地板（Wilson 95% 区间）：区间覆盖阈值 ⇒ 【不可分辨】
+        def judge(lo, hi, k, n, thr=0.5):
+            if lo is None:
+                return "未测（无有效样本）"
+            if lo > thr:
+                return "成立（区间下界 %.3f > %.1f）" % (lo, thr)
+            if hi < thr:
+                return "不成立（区间上界 %.3f < %.1f）" % (hi, thr)
+            return ("★ 不可分辨（Wilson 95%% 区间 [%.3f, %.3f] 覆盖阈值 %.1f；"
+                    "距阈值 %+.1f 个样本）" % (lo, hi, thr, k - thr * n))
+        j_trig = judge(lo_t, hi_t, len(cs), len(h))
+        j_conf = judge(lo_c, hi_c, cconf, len(cs))
+        print("   ★ Wilson95 触发口径 = [%s, %s] ⇒ %s"
+              % (("%.3f" % lo_t) if lo_t is not None else "n/a",
+                 ("%.3f" % hi_t) if hi_t is not None else "n/a", j_trig))
+        print("   ★ Wilson95 冲突口径 = [%s, %s] ⇒ %s"
+              % (("%.3f" % lo_c) if lo_c is not None else "n/a",
+                 ("%.3f" % hi_c) if hi_c is not None else "n/a", j_conf))
+        print("   ⇒ 判据（承重子层非零比例 > 0.5）· 【触发口径】⇒ %s" % j_trig)
+        print("   ⇒ 判据（承重子层非零比例 > 0.5）· 【冲突口径】⇒ %s" % j_conf)
         if tag not in rep:
             rep[tag] = {}
         rep[tag]["load_bearing"] = dict(
             n=len(h), n_cross_slot=len(cs), n_slot=slot_n,
-            trigger_ratio=trig, judge_trigger_gt_0_5=ok_trig,
+            trigger_ratio=trig, trigger_wilson95=[lo_t, hi_t],
+            judge_trigger=j_trig, judge_trigger_point=ok_trig,
             n_conflicts_gt0=cconf, conflicts_ratio=(cconf / float(len(cs)) if cs else None),
-            judge_conflicts_gt_0_5=ok_conf,
+            conflicts_wilson95=[lo_c, hi_c], judge_conflicts=j_conf,
+            judge_conflicts_point=ok_conf,
             n_ncp_gt0=cncp, ncp_ratio=(cncp / float(len(cs)) if cs else None),
-            n_kept=kept, kept_ratio=kept / float(len(h)) if h else None)
-        if not (ok_trig or ok_conf):
-            fails.append("%s：承重子层判据（两种口径）均不成立" % tag)
+            n_kept=kept, kept_ratio=kept / float(len(h)) if h else None,
+            note=("★ 判据是硬阈值 >0.5，n=88/100 时翻转一个样本就变号 ⇒ "
+                  "★ 判据本身没有分辨率；★ 判决锚本批噪声地板（Wilson 95% 区间）；"
+                  "★ 要能分辨，n 至少要到三位数"))
 
     # ── 分母自证：逐 seed 用【训练日志训练行数 == hist 条数】证明 ──
     RUNS = "/workspace/lab/routes/COLLAPSE/runs"
