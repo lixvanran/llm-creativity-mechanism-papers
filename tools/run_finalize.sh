@@ -41,6 +41,11 @@ bash tools/build_docx.sh "${DOCX_MDS[@]}" 2>&1 | tail -1
 if [ -f "papers/01_L1_注意力层归因_详稿_2026-10-25.md" ]; then
   bash tools/build_docx.sh "papers/01_L1_注意力层归因_详稿_2026-10-25.md" 2>&1 | tail -1
 fi
+# ★ 2026-10-26：★ 定位改为「科研过程数据」后新增的三个交付面 md（★ 同样没有旧 docx 可反推）
+#   ⇒ ★ 显式建一份；★ 否则 check_docx 会判「缺 docx」（★ 那条判据是对的、★ 不该改判据）
+for _m in "papers/README.md" "DATASETS.md" "PROVENANCE.md"; do
+  [ -f "$_m" ] && bash tools/build_docx.sh "$_m" 2>&1 | tail -1
+done
 
 hr "③ embed 指纹"
 python3 - <<'PY'

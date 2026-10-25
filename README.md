@@ -57,7 +57,7 @@ python3 tools/check_data_package.py --negative
 ```python
 import json
 rd = [json.loads(l) for l in open('data/readings.jsonl', encoding='utf-8')]
-# 每条带 sources: [{file, line, class}, ...] ⇒ 第三方可自己去那一行核
+# 每条带 sources: [{file, line, class}, ...] -> 第三方可自己去那一行核
 hit = [r for r in rd if r['token'] == '0.886']
 ```
 
@@ -151,7 +151,7 @@ NLL / perplexity / typicality / PMI 全族作废；无 GPU。唯一允许的写�
 ## 复现与核验
 
 ```bash
-# 1) 重建全部 DOCX（构建参数固化 ⇒ 外部可逐字节重建）
+# 1) 重建全部 DOCX（构建参数固化 -> 外部可逐字节重建）
 cd tools && bash build_docx.sh ../papers
 
 # 2) 核验 DOCX 无单元格丢失
@@ -168,7 +168,7 @@ python3 tools/check_data_package.py --negative
 同一份 md 在不同机器、不同 pandoc 版本下可能产出不同的 docx，外部就复核不了我们交付的 docx。
 关闭 `smart`，md 与 docx 逐字一致，「单元格零丢失」才是个真判据。
 
-**打包规则**：交付包的内容集合由 `git ls-files` 定义 ⇒ **先 commit，再打包，再自检**。
+**打包规则**：交付包的内容集合由 `git ls-files` 定义 -> **先 commit，再打包，再自检**。
 顺序反了会出现「包里少文件、而自检照样全绿」。
 
 ---
