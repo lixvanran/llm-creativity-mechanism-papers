@@ -1,0 +1,175 @@
+{
+  "task_id": "D06",
+  "n_cards": 13,
+  "cards": [
+    {
+      "card_id": "G01",
+      "claim": "3岁以下婴幼儿照护、子女教育专项附加扣除标准已由每孩每月1000元提高到2000元。",
+      "supports_conclusions": [
+        "C1"
+      ],
+      "evidence_ref": "EV-01",
+      "evidence_class": "事实",
+      "is_load_bearing": true,
+      "decision_changed": "它支撑 C1：给出婴幼儿照护与子女教育两项的单价2000元，是合计数中两行的来源。没有它，结论 C1 不成立。"
+    },
+    {
+      "card_id": "G02",
+      "claim": "赡养老人扣除标准为每月3000元，独生子女定额扣除，非独生子女每人分摊不超过每月1500元。",
+      "supports_conclusions": [
+        "C1",
+        "C3"
+      ],
+      "evidence_ref": "EV-02",
+      "evidence_class": "事实",
+      "is_load_bearing": true,
+      "decision_changed": "它支撑 C1 与 C3：给出赡养老人3000元这一行，并排除了1500元的分摊上限口径。没有它，结论 C1 不成立。"
+    },
+    {
+      "card_id": "G03",
+      "claim": "每个孩子从出生到完成学历教育，其父母每个月可以在税前扣除2000元。",
+      "supports_conclusions": [
+        "C1",
+        "C2"
+      ],
+      "evidence_ref": "EV-03",
+      "evidence_class": "事实",
+      "is_load_bearing": true,
+      "decision_changed": "它支撑 C2：这是“同一孩子不重复享受两项”的成文依据没有它，结论 C1 不成立。"
+    },
+    {
+      "card_id": "G04",
+      "claim": "住房贷款利息每月1000元；住房租金按城市分档为每月1500/1100/800元。",
+      "supports_conclusions": [
+        "C4"
+      ],
+      "evidence_ref": "EV-05",
+      "evidence_class": "事实",
+      "is_load_bearing": true,
+      "decision_changed": "它支撑 C4：给出住房贷款利息1000元这一行金额，是合计数中住房一行的来源。没有它，结论 C4 不成立。"
+    },
+    {
+      "card_id": "G05",
+      "claim": "住房贷款利息与住房租金两项不可同时享受。",
+      "supports_conclusions": [
+        "C4"
+      ],
+      "evidence_ref": "EV-06",
+      "evidence_class": "事实",
+      "is_load_bearing": true,
+      "decision_changed": "它支撑 C4：排除了再叠加住房租金1500元的算法，是 C4“只计贷款利息”的规则依据。没有它，结论 C4 不成立。"
+    },
+    {
+      "card_id": "G06",
+      "claim": "纳税人赡养年满60岁的父母可享受赡养老人专项附加扣除，父母是否有退休金不影响享受。",
+      "supports_conclusions": [
+        "C1",
+        "C3"
+      ],
+      "evidence_ref": "EV-07",
+      "evidence_class": "事实",
+      "is_load_bearing": true,
+      "decision_changed": "它支撑 C1 与 C3：确认题设“父母满60周岁”足以启动赡养老人扣除3000元。没有它，结论 C1 不成立。"
+    },
+    {
+      "card_id": "G07",
+      "claim": "独生子女按一个月3000元定额扣除赡养老人；非独生子女需与所有兄弟姐妹分摊3000元且每人最多1500元。",
+      "supports_conclusions": [
+        "C3"
+      ],
+      "evidence_ref": "EV-08",
+      "evidence_class": "事实",
+      "is_load_bearing": true,
+      "decision_changed": "它支撑 C3：直接给出独生子女3000元定额这一口径，C3 由它成立。没有它，结论 C3 不成立。"
+    },
+    {
+      "card_id": "G08",
+      "claim": "3岁以下婴幼儿照护每孩每月2000元，子女教育每孩每月2000元。",
+      "supports_conclusions": [
+        "C1",
+        "C2"
+      ],
+      "evidence_ref": "EV-10",
+      "evidence_class": "事实",
+      "is_load_bearing": true,
+      "decision_changed": "它支撑 C1 与 C2：把两个项目各列一行、金额相同，从而为 C2 的“不可叠加”提供对照。没有它，结论 C1 不成立。"
+    },
+    {
+      "card_id": "G09",
+      "claim": "填写婴幼儿照护与子女教育两项专项附加扣除时，每个子女每月可抵扣2000元。",
+      "supports_conclusions": [
+        "C2"
+      ],
+      "evidence_ref": "EV-09",
+      "evidence_class": "事实",
+      "is_load_bearing": true,
+      "decision_changed": "它支撑 C2：“每个子女每月可抵扣2000元”限定了一个子女的月度扣除总额，正是 C2 的直接依据。没有它，结论 C2 不成立。"
+    },
+    {
+      "card_id": "G10",
+      "claim": "专项附加扣除是在每月5000元基本减除费用标准基础上再予以叠加扣除。",
+      "supports_conclusions": [
+        "C1"
+      ],
+      "evidence_ref": "EV-04",
+      "evidence_class": "事实",
+      "is_load_bearing": true,
+      "decision_changed": "它支撑 C1：本题的合计口径只算四项专项附加扣除，5000元基本减除费用不并入其中，否则合计数会变成13000元。没有它，结论 C1 不成立。"
+    },
+    {
+      "card_id": "G11",
+      "claim": "提高后的3岁以下婴幼儿照护、子女教育、赡养老人扣除标准自2023年1月1日起执行。",
+      "supports_conclusions": [
+        "C3"
+      ],
+      "evidence_ref": "EV-01",
+      "evidence_class": "事实",
+      "is_load_bearing": false,
+      "decision_changed": "它支撑 C3：说明题设所问的是提高后的现行标准一档（2000元/3000元），而不是旧的1000元/2000元。它是补充性事实，结论 C3 的成立不依赖它单独确定。"
+    },
+    {
+      "card_id": "G12",
+      "claim": "赡养老人扣除额度由兄弟姐妹分摊时，每人的分摊上限是每月1500元。",
+      "supports_conclusions": [
+        "C3"
+      ],
+      "evidence_ref": "EV-02",
+      "evidence_class": "事实",
+      "is_load_bearing": false,
+      "decision_changed": "它支撑 C3：说明1500元是非独生子女分摊时的上限，而不是独生子女的扣除标准。它是补充性事实，结论 C3 的成立不依赖它单独确定。"
+    },
+    {
+      "card_id": "G13",
+      "claim": "如拥有首套住房贷款，应填报住房贷款利息扣除。",
+      "supports_conclusions": [
+        "C4"
+      ],
+      "evidence_ref": "EV-06",
+      "evidence_class": "事实",
+      "is_load_bearing": true,
+      "decision_changed": "它支撑 C4：确认有首套住房贷款时该走住房贷款利息这条扣除路径，是 C4 成立的直接依据。没有它，结论 C4 不成立。"
+    }
+  ],
+  "distractors": [
+    {
+      "card_id": "G90",
+      "claim": "该纳税人每月可扣除合计10000元（把2岁幼儿同时按婴幼儿照护和子女教育各扣2000元）。",
+      "why_wrong": "依据包 EV-03 写“每个孩子从出生到完成学历教育,其父母每个月可以在税前扣除2000元”，EV-09 写“每个子女每月可抵扣2000元”，同一子女不得两项叠加。"
+    },
+    {
+      "card_id": "G91",
+      "claim": "该纳税人每月可扣除合计7000元（未计住房贷款利息1000元）。",
+      "why_wrong": "依据包 EV-05、EV-06 写明住房贷款利息每月1000元且与住房租金互斥，题设“有首套住房贷款”应当计入这一行。"
+    },
+    {
+      "card_id": "G92",
+      "claim": "该纳税人每月可扣除合计6500元（赡养老人按非独生子女上限1500元计）。",
+      "why_wrong": "依据包 EV-02、EV-08 写明1500元是非独生子女分摊时的上限，独生子女按每月3000元定额扣除。"
+    },
+    {
+      "card_id": "G93",
+      "claim": "该纳税人可同时按住房贷款利息1000元和住房租金1500元扣除，每月合计9500元。",
+      "why_wrong": "依据包 EV-06 明确“住房贷款利息与住房租金两项不可同时享受”，EV-05 给出租金分档标准但不可与贷款利息并行。"
+    }
+  ]
+}

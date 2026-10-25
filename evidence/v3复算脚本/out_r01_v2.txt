@@ -1,0 +1,26 @@
+════════ ① 真不一致（索引旧 / 工作树新）能不能红？ ════════
+⛔ 索引与工作树不一致：
+   papers/02_A_稿.docx  索引 5a1e412ed050 ≠ 工作树 83e3ee1637d8
+   papers/_FINAL_REVIEW_DONE.docx  索引 93744cb6aeba ≠ 工作树 6e5eb22d1b89
+   ⇒ 退出码=1  （★ 期望 1 = 能红）
+
+════════ ② ★ 未追踪（untracked）的 docx ⇒ 会不会假红？ ════════
+On branch master
+nothing to commit, working tree clean
+   ★ 新增一个未追踪 docx（★ 工作树有、索引无）
+⛔ 索引与工作树不一致：
+   papers/_NEW_untracked.docx  索引 e3b0c44298fc ≠ 工作树 04c5af4487fe
+   ⇒ 退出码=1  （★ 若=1 ⇒ ★★ 假红：git show :<未追踪路径> = 空 ⇒ 必然不等 ★★）
+
+════════ ③ ★ 脚本真实顺序：⑨(git add -A + commit) → ⑨b ⇒ 还能红吗？ ════════
+On branch master
+nothing to commit, working tree clean
+   ★ 真实状态：索引 = OLD，工作树 = STALE ⇒ 【真的不一致】
+   --- 先跑 ⑨（★ git add -A + commit）---
+   --- 再跑 ⑨b ---
+✅ 2 个 docx：索引字节 == 工作树字节
+   ⇒ 退出码=0  （★ 若=0 ⇒ ★★ ⑨b 排在 ⑨ 之后 ⇒ 恒真 ⇒ 抓不到任何东西 ★★）
+
+   ★ 复核：⑨ 之后索引里到底是什么字节？
+     git show :papers/_FINAL_REVIEW_DONE.docx = STALE-INDEX-ASCII
+     工作树 = STALE-INDEX-ASCII

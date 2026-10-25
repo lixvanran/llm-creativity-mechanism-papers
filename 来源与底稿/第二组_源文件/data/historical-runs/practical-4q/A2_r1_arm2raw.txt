@@ -1,0 +1,131 @@
+Problem: 公路自行车个人比赛（无车队），单圈1.6km共计15圈，单圈由两个800m直路和两个回头弯构成，本人在大集团里处于中上等水平，该如何安排战术？
+Reframed for divergence: 如何在公路自行车单发个人赛（无车队）中以中上水平选手的身份，针对由两段直路和两个回头弯组成的15圈赛道（单圈1.6km，总计24km）制定战术以争取最佳成绩？
+
+Wide set
+  reframe race as a game with hidden state
+    - Treat each lap as a 'room' with a 2-minute par timer; pace deficits become visible damage to a hidden HP bar. 
+    - Award a 'drafting bonus' meter that only fills when you tuck behind virtual ghosts of seeded opponents on each straight. [N7 V3 F5]
+    - Introduce a 'save-state' at each hairpin: the rider is allowed one fully coasting recovery micro-rest per U-turn, but using it telegraphs fatigue to a hidden AI rival model. [N8 V2 F5]
+    - Rebuild the course as a 15-level speedrun with two skip-glitches: late-apex the first U-turn for a slingshot, and brake-drift the second for a corner exit boost. [N6 V1 F2]
+    - Friction-loop: every lap the rider 'loses an item' — a bottle, a gel, mental focus — and must decide whether to burn a coin to refill or run the final laps on empty. [N7 V4 F6]
+    - Energy budget per lap displayed as a 'fuel gauge' so you only look up the page when reserves drop below 20% [N5 V7 F8]
+    - Failover corner: if a wheel slips in turn one, the rehearsed recovery line treats it like a service degradation, not a crash [N7 V6 F7]
+    - Race plan written as 'if statement' tree: IF in lead group at lap 10 THEN sit and sprint ELSE IF dropped THEN TT-mode survival [N5 V7 F9]
+  hide/raw instrumentation of effort
+    - Hide watts and heartrate behind a 'command deck' UI showing only cadence, perceived effort, and distance to next U-turn. [N6 V5 F7]
+    - Pre-race drift detector that wakes you only when power data flatlines for >4 laps, not every blip [N5 V6 F7]
+    - Lap-by-lap pacing checkpoint with auto-calculated 'am I cooked?' alert based on heart rate vs. lap progression [N4 V7 F9]
+    - 以毫秒级GPS/IMU数据驱动每圈最优赛车线，弯道入口速度浮动±0.3km/h全部分析完毕再上场 [N5 V7 F8]
+  pre-script deterministic corner lines
+    - Treat the two U-turns as deterministic state machines — pre-script the exact line, brake point, and exit gear for each lap [N4 V8 F9]
+    - 在第一个回头弯外侧切到赛道对面的肩线，利用弯道的椭圆轨迹偷出 ~3m 距离，15 圈累积 45m [N6 V3 F5]
+    - 认准领骑人换位时前轮刚离开草边的 0.2 秒窗口超车，避免被录像标记为危险动作 [N7 V4 F6]
+    - 把换胎/补给当作 save scum — 第 5 圈故意压过溅水带触发中立区机械故障，再以第 14 圈故障豁免借机重组 [N9 V1 F1]
+    - 在每个回头弯外侧提前0.8秒开始发力,牺牲一圈末的乳酸堆积换取下一圈头段的免费速度 [N5 V6 F8]
+  energy budgeting across laps
+    - 起跑时把节奏锁到刚好不超过 U23 功率阈值，避免触发 UCI 偶然检查告警 [N4 V1 F1]
+    - 从第二名跟风 14 圈半，最后一圈才真正发力，留出体力应对 UCI 赛后尿检 [N4 V3 F4]
+    - 前两圈故意输 30 秒，把集团拉成单人 TT 模式来完全控制风向 [N7 V2 F3]
+    - 第6-8圈刻意放慢3%心率上限,让对手在前段耗尽糖原后段独自冲刺 [N6 V5 F7]
+    - 赛前用千次虚拟赛找出'弯道后出弯功率低谷'的具体蹬踏数,反向训练弥补生理死区 [N6 V7 F7]
+    - 把两段直道定义为完全不同的强度区段:第一段匀巡航,第二段阶梯式冲,把回头弯当恢复区 [N5 V7 F8]
+    - 为该赛道专门训练一项'出弯后3秒内不喘气'的横膈膜呼吸模式,绕开乳酸阈的死锁 [N6 V5 F6]
+  race-as-market manipulation plays
+    - Treat the two straightaways as separate markets with independent clearing prices, and the U-turns as auctions where you bid watts to outbid rivals for the lead going into the next exchange. 
+    - Run a covert futures position: bank time on lap 1–3 by drafting a strong breakaway, then settle the contract in lap 13–15 when the field has overpaid for the front. [N8 V4 F5]
+    - Be a market-maker at the U-turn apex: hold the inside line consistently so rivals pay a 'spread' in extra distance every lap, accumulating an invisible tariff. [N7 V5 F6]
+    - Identify one 'whale' rider in the field and short their ego — let them lead into both headwind straights so they absorb the market's clearing cost while you sit in their slipstream. [N7 V6 F7]
+    - Trigger a manufactured crash (a 'flash crash') in the peloton on lap 10 by sudden deceleration at turn 2, then sprint through the gap before the order-book rebuilds. [N8 V0 F0]
+    - Trade the race as a clearing house: stabilize tempo on laps 4–12 (settlement phase), then unwind your position with a single decisive bid in the final 3 laps. [N6 V5 F6]
+
+Converge — shortlist
+
+Traps (watch-outs, not verdicts)
+  ⚠ Hide watts and heartrate behind a 'command deck' UI showing only cadence, perceived effort, and distance to next U-turn.
+    Cadence and RPE without power is too coarse to drive corner-entry speed decisions on a tight 1.6km loop; you'll under-brake into the U-turns before you realize you're cooked.
+    + Targets the actual problem of mid-pack riders staring at their computer too much instead of racing — perceived effort + cadence is genuinely closer to race-readiness data than Watts in a criterium.
+  ⚠ Award a 'drafting bonus' meter that only fills when you tuck behind virtual ghosts of seeded opponents on each straight.
+    Ghost drafting is solo training theatre; the actual pack dynamics (surges, gaps, elbows) won't be in the model, so any 'bonus' calibrated to ghosts mis-tunes you for real racing.
+    + Forces the rider to think about positioning relative to actual opponents, not abstract watts — that's the right unit of analysis for a criterium.
+  ⚠ Introduce a 'save-state' at each hairpin: the rider is allowed one fully coasting recovery micro-rest per U-turn, but using it telegraphs fatigue to a hidden AI rival model.
+    A 'coasting micro-rest per U-turn' is mechanically illegal/dangerous in a tightly bunched criterium field; you'll either get shelled or cause a crash before the AI rival model matters.
+    + The 'telegraphing fatigue to a rival model' framing forces an honest cost-benefit on every micro-rest — most pacing schemes never force that trade.
+  ⚠ Rebuild the course as a 15-level speedrun with two skip-glitches: late-apex the first U-turn for a slingshot, and brake-drift the second for a corner exit boost.
+    Late-apex slingshots and brake-drift exits on a tight hairpin in a 60-rider field aren't 'glitches' — they're crashes waiting to happen and will get you relegated, not faster.
+    + Reframes training as a skill game, which can actually motivate corner-specific reps for someone stuck at mid-pack.
+  ⚠ Friction-loop: every lap the rider 'loses an item' — a bottle, a gel, mental focus — and must decide whether to burn a coin to refill or run the final laps on empty.
+    Framing mechanicals/focus as 'coins' can trick you into hoarding when you should burn a gel in lap 8; the metaphor has to be backed by hard fueling numbers or it becomes superstition.
+    + Forces an explicit inventory of finite resources (bottles, gels, focus) which is exactly what a 15-lap criterium actually is — most plans ignore the gel math.
+  ⚠ Pre-race drift detector that wakes you only when power data flatlines for >4 laps, not every blip
+    By the time power has flatlined for 4 laps on a 15-lap race, you're already dropped and chasing; the alert needs to fire at lap 2 of decline, not lap 4.
+    + Right diagnosis: over-monitoring power blips during a criterium is itself a performance leak — a 4-lap flatline filter is genuinely useful.
+  ⚠ Lap-by-lap pacing checkpoint with auto-calculated 'am I cooked?' alert based on heart rate vs. lap progression
+    HRV/HR lag means by the time the alert fires, the physiological decision was made 30 seconds ago; pair it with a pre-committed response rule or it just becomes noise.
+    + HR-vs-lap-progression is the cleanest proxy for the 'am I cooked?' question that actually decides mid-pack criterium outcomes.
+  ⚠ Treat the two U-turns as deterministic state machines — pre-script the exact line, brake point, and exit gear for each lap
+    Pre-scripting assumes you're riding solo at the front; in a mid-pack position you're reacting to the rider ahead, not executing a script. Useful only for the laps you lead.
+    + Deterministic scripting of brake point / line / exit gear per lap is exactly how top crit riders actually race — small inputs but compounded 30 times.
+  ⚠ Energy budget per lap displayed as a 'fuel gauge' so you only look up the page when reserves drop below 20%
+    An energy budget computed before the race can't account for surging to close gaps, wind shifts, or a crash-induced effort spike — the gauge will lie exactly when you need it most.
+    + Energy-budget-as-fuel-gauge is a clean translation of the actual physiological problem into something glanceable mid-race.
+  ⚠ Failover corner: if a wheel slips in turn one, the rehearsed recovery line treats it like a service degradation, not a crash
+    Reframing crashes as 'service degradation' can breed complacency; if the rehearsed line is wrong for the actual slide geometry, you've just pre-loaded a bigger crash.
+    + Rehearsing a 'wheel slip' recovery line is a real and underrated skill — most riders only drill the clean line and panic when it goes wrong.
+  ⚠ Race plan written as 'if statement' tree: IF in lead group at lap 10 THEN sit and sprint ELSE IF dropped THEN TT-mode survival
+    A two-branch tree ignores the common middle case (you're at the back but contact is 2 seconds ahead, recoverable with one surge), which is exactly where mid-pack riders lose races.
+    + A simple if/then race tree forces the rider to pre-commit to a response for the two outcomes that actually matter (in lead group vs. dropped) — eliminates mid-race indecision.
+  ⚠ 在第一个回头弯外侧切到赛道对面的肩线，利用弯道的椭圆轨迹偷出 ~3m 距离，15 圈累积 45m
+    On a tight hairpin with 60 riders, the outside line is usually occupied or forces you to cross the field into the braking zone — the 45m gains evaporate in the contact penalty.
+    + Outside-line slingshot through the U-turn is a real technique that mid-pack riders under-use; even 1m/lap compounds on a 15-lap crit.
+  ⚠ 起跑时把节奏锁到刚好不超过 U23 功率阈值，避免触发 UCI 偶然检查告警
+    Optimizing around UCI anti-doping testing thresholds is gaming the wrong system — you will either test positive anyway or race at a level where this isn't the bottleneck.
+    + Honest about the doping-control constraint, which most 'race tactics' content ignores entirely.
+  ⚠ 从第二名跟风 14 圈半，最后一圈才真正发力，留出体力应对 UCI 赛后尿检
+    14 laps of pure sit-in on a 15-lap crit is too conservative — the field will gap you on lap 6-8 with any surge, and you'll arrive at the sprint with nothing left because you never opened a single turn.
+    + The instinct to save matches for the final lap is sound; pinning it to 'second place's wheel for 14 laps' gives a concrete sit-in target.
+  ⚠ 前两圈故意输 30 秒，把集团拉成单人 TT 模式来完全控制风向
+    Losing 30 seconds on purpose in laps 1-2 of a 15-lap race is unrecoverable for a mid-pack rider; you'll be lapped or pulled before you ever get to set tempo.
+    + Recognizes that 'controlling the race' is a legitimate tactic beyond just following wheels — most amateur plans never consider race-craft at all.
+  ⚠ 认准领骑人换位时前轮刚离开草边的 0.2 秒窗口超车，避免被录像标记为危险动作
+    A 0.2-second window is below human reaction time at race speed; this works in theory but in practice you'll either jump too early and get shut out or too late and lose momentum.
+    + Identifies a real and specific overtaking window (the moment the lead rider's wheel clears the grass edge on a swap) that most mid-pack riders never consciously target.
+  ⚠ 把换胎/补给当作 save scum — 第 5 圈故意压过溅水带触发中立区机械故障，再以第 14 圈故障豁免借机重组
+    Deliberately triggering a 'neutral mechanical' by riding through a wet strip is cheating — and a mid-pack rider doing it will be black-flagged, not rewarded.
+    + Honest acknowledgment that mechanicals and restarts are part of racing and worth having a plan for.
+  ⚠ 以毫秒级GPS/IMU数据驱动每圈最优赛车线，弯道入口速度浮动±0.3km/h全部分析完毕再上场
+    Pre-race obsession with perfect lines from data doesn't transfer under race adrenaline and pack pressure; useful as training feedback, not race-day input.
+    + Post-session analysis at ±0.3 km/h resolution on corner entries will surface real, fixable mistakes a mid-pack rider doesn't know they're making.
+  ⚠ 在每个回头弯外侧提前0.8秒开始发力,牺牲一圈末的乳酸堆积换取下一圈头段的免费速度
+    Doing it every lap for 15 laps is a lactate accumulation trap; the 'free speed' compounds into a lap-10 blow-up unless you modulate by effort lap, not every lap.
+    + Pre-loading the next straight before exiting the U-turn is a real power application technique that mid-pack riders typically do reactively instead of deliberately.
+  ⚠ 第6-8圈刻意放慢3%心率上限,让对手在前段耗尽糖原后段独自冲刺
+    3% HR cap assumes linear decay in the field; in reality someone will attack laps 6-8 and force you to choose between the plan and staying in the group.
+    + Conservative HR capping on laps 6-8 is a textbook negative-split strategy that the heart-rate framing makes executable.
+  ⚠ 赛前用千次虚拟赛找出'弯道后出弯功率低谷'的具体蹬踏数,反向训练弥补生理死区
+    Reversing causality between training and the dead spot requires lab-grade measurement; chasing pedal-strokes can mask a real fitness gap that no pedaling technique will fix.
+    + Diagnosing a specific post-corner power dip ('dead spot') is exactly the kind of micro-deficit that separates mid-pack from front-pack crit riders.
+  ⚠ 把两段直道定义为完全不同的强度区段:第一段匀巡航,第二段阶梯式冲,把回头弯当恢复区
+    Treating the U-turn as 'recovery' overstates it; on a 1.6km crit the U-turn is more positioning than rest, and spending it coasting costs you the inside line into the next straight.
+    + Forces you to treat the two straights differently, which is the right call — first straight into headwind needs cruise, second often has positioning battles.
+  ⚠ 为该赛道专门训练一项'出弯后3秒内不喘气'的横膈膜呼吸模式,绕开乳酸阈的死锁
+    A 3-second post-corner no-panting protocol can conflict with the higher corner-exit power needed on a crit; trade-off has to be tested, not assumed.
+    + Breath control as a lactate-threshold workaround is a legitimate physiological lever most mid-pack riders ignore in favor of just 'sucking less'.
+  ⚠ Run a covert futures position: bank time on lap 1–3 by drafting a strong breakaway, then settle the contract in lap 13–15 when the field has overpaid for the front.
+    You can't 'settle' against a field that hasn't agreed to settle; one attacker in laps 13-15 collapses your entire futures model and you have no contingency.
+    + Forces a deliberate front/back split between banking phase and settlement phase, which mirrors how smart teams actually race crits.
+  ⚠ Be a market-maker at the U-turn apex: hold the inside line consistently so rivals pay a 'spread' in extra distance every lap, accumulating an invisible tariff.
+    Holding inside every lap for 15 laps paints a target on you in the sprint; rivals know exactly where you'll be exiting turn 15 and can set up accordingly.
+    + Consistent inside-line holding at U-turns is a real skill — it forces others wide and compounds over 15 laps more than most riders realize.
+  ⚠ Identify one 'whale' rider in the field and short their ego — let them lead into both headwind straights so they absorb the market's clearing cost while you sit in their slipstream.
+    Drafting behind a single whale all race creates a predictable trajectory that rivals can counter-attack from behind you; the 'invisible tariff' is visible from the chase group.
+    + The 'whale' concept (one rider who'll over-commit to leading) is a real pack-dynamic pattern worth identifying pre-race — most riders never scout the field.
+  ⚠ Trigger a manufactured crash (a 'flash crash') in the peloton on lap 10 by sudden deceleration at turn 2, then sprint through the gap before the order-book rebuilds.
+    Manufactured crashes cause catastrophic injury to others; this is not a tactic, it's assault, and any system that treats it as viable is broken.
+    + Honest about the fact that races are sometimes won by chaos, not fitness — which is a real observation most tactical advice sanitizes away.
+  ⚠ Trade the race as a clearing house: stabilize tempo on laps 4–12 (settlement phase), then unwind your position with a single decisive bid in the final 3 laps.
+    A mid-pack rider trying to stabilize tempo on laps 4-12 will get chewed up by surges they can't match; this strategy requires front-pack fitness the rider doesn't have.
+    + The 'settlement phase' framing correctly identifies laps 4-12 as the actual race, with the finale as a separate event — useful mental model.
+
+Focus — deepened branches
+Provocation
+  What if we took this seriously: 把换胎/补给当作 save scum — 第 5 圈故意压过溅水带触发中立区机械故障，再以第 14 圈故障豁免借机重组

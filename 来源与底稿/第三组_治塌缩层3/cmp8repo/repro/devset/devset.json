@@ -1,0 +1,1979 @@
+{
+  "devset_id": "DEV-2026-10-21",
+  "built_at": "2026-10-21T15:35:06Z",
+  "n_tasks": 9,
+  "tasks": [
+    {
+      "task_id": "D01",
+      "title": "990 PRO 1TB 固态硬盘官方标称参数判断",
+      "domain": "技术/存储设备选购",
+      "ask": "990 PRO 1TB：①顺序读7450MB/s ②随机读140万IOPS ③保修5年 ④耐久600TBW。哪些正确？",
+      "conclusion_space": [
+        {
+          "id": "C1",
+          "text": "①成立：该型号官方标称顺序读取 7450 MB/s、顺序写入 6900 MB/s，接口为 PCIe Gen 4.0 x4 / NVMe 2.0，形态为 M.2 (2280)"
+        },
+        {
+          "id": "C2",
+          "text": "②不成立：1TB 版本官方标称 4KB QD32 随机读取为 1,200,000 IOPS，140 万 IOPS 对应 2TB 版本"
+        },
+        {
+          "id": "C3",
+          "text": "③成立：官方保修标称为 5 年有限保修，并同时标称 600 TBW 有限保修"
+        },
+        {
+          "id": "C4",
+          "text": "④成立：1TB 版本耐久度标称为 600 TBW（2TB 为 1,200TBW、4TB 为 2,400TBW）"
+        },
+        {
+          "id": "C5",
+          "text": "该型号采用 Samsung 自研 V-NAND（3-bit MLC / TLC）闪存、配 1GB LPDDR4 缓存，QD32 随机写标称 1,550,000 IOPS"
+        },
+        {
+          "id": "C6",
+          "text": "该型号 7450 MB/s 的顺序读标称接近但未达到 PCIe 4.0 的 8000 MB/s 理论顺序读上限，即未跑满该接口"
+        }
+      ],
+      "key_conclusions": [
+        "C1",
+        "C2"
+      ],
+      "evidence": [
+        {
+          "id": "EV-01",
+          "text": "990 PRO 规格表中，1TB 与 2TB 两档的顺序读取标称均为 7,450MB/s，顺序写入标称均为 6,900MB/s。",
+          "source": {
+            "url": "https://www.storagereview.com/review/samsung-990-pro-ssd-review-2tb",
+            "quote": "Sequential Read 7,450MB/s 7,450MB/s Sequential Write 6,900MB/s 6,900MB/s",
+            "date": "2026-10-21"
+          }
+        },
+        {
+          "id": "EV-02",
+          "text": "厂商官网 1TB 规格表中，4KB QD32 随机读取标称为 1,200,000 IOPS。",
+          "source": {
+            "url": "https://www.samsung.com/sg/memory-storage/nvme-ssd/980-pro-pcle-4-0-nvme-m-2-ssd-1tb-mz-v8p1t0bw/",
+            "quote": "Random Read (4KB, QD32) Up to 1,200,000 IOPS * Performance may vary based on system hardware & configuration",
+            "date": "2026-10-21"
+          }
+        },
+        {
+          "id": "EV-03",
+          "text": "厂商官网 1TB 规格表中，4KB QD32 随机写入标称为 1,550,000 IOPS。",
+          "source": {
+            "url": "https://www.samsung.com/sg/memory-storage/nvme-ssd/980-pro-pcle-4-0-nvme-m-2-ssd-1tb-mz-v8p1t0bw/",
+            "quote": "Random Write (4KB, QD32) Up to 1,550,000 IOPS * Performance may vary based on system hardware & configuration",
+            "date": "2026-10-21"
+          }
+        },
+        {
+          "id": "EV-04",
+          "text": "厂商官网 1TB 规格表把保修写成 5 年有限保修或 600 TBW 有限保修。",
+          "source": {
+            "url": "https://www.samsung.com/sg/memory-storage/nvme-ssd/980-pro-pcle-4-0-nvme-m-2-ssd-1tb-mz-v8p1t0bw/",
+            "quote": "Warranty 5-Year Limited Warranty or 600 TBW Limited Warranty",
+            "date": "2026-10-21"
+          }
+        },
+        {
+          "id": "EV-05",
+          "text": "厂商官网 1TB 规格表中形态为 M.2 (2280)，接口为 PCIe Gen 4.0 x4、NVMe 2.0。",
+          "source": {
+            "url": "https://www.samsung.com/sg/memory-storage/nvme-ssd/980-pro-pcle-4-0-nvme-m-2-ssd-1tb-mz-v8p1t0bw/",
+            "quote": "Form Factor M.2 (2280) Interface PCIe Gen 4.0 x4, NVMe 2.0",
+            "date": "2026-10-21"
+          }
+        },
+        {
+          "id": "EV-06",
+          "text": "厂商官网 1TB 规格表中存储颗粒为 Samsung V-NAND 3-bit MLC，控制器为三星自研主控。",
+          "source": {
+            "url": "https://www.samsung.com/sg/memory-storage/nvme-ssd/980-pro-pcle-4-0-nvme-m-2-ssd-1tb-mz-v8p1t0bw/",
+            "quote": "Storage Memory Samsung V-NAND 3-bit MLC Controller Samsung in-house Controller",
+            "date": "2026-10-21"
+          }
+        },
+        {
+          "id": "EV-07",
+          "text": "第三方评测按容量列出随机读取（4KB、QD32）标称值：1TB 为 1,200K IOPS，2TB 为 1,400K IOPS，4TB 为 1,600K IOPS。",
+          "source": {
+            "url": "https://hardvance.co.uk/samsung-990-pro-review",
+            "quote": "Random read (4KB, QD32) 1,200K IOPS 1,400K IOPS 1,600K IOPS",
+            "date": "2026-10-21"
+          }
+        },
+        {
+          "id": "EV-08",
+          "text": "第三方评测按容量列出耐久度标称值：1TB 为 600TB，2TB 为 1,200TB，4TB 为 2,400TB。",
+          "source": {
+            "url": "https://hardvance.co.uk/samsung-990-pro-review",
+            "quote": "Endurance (TBW) 600TB 1,200TB 2,400TB",
+            "date": "2026-10-21"
+          }
+        },
+        {
+          "id": "EV-09",
+          "text": "第三方评测给出的保修口径是 5 年，或以 TBW 数值先到者为准。",
+          "source": {
+            "url": "https://hardvance.co.uk/samsung-990-pro-review",
+            "quote": "Warranty 5 years, or the TBW figure, whichever comes first",
+            "date": "2026-10-21"
+          }
+        },
+        {
+          "id": "EV-10",
+          "text": "第三方评测指出各容量均标称最高 7,450MB/s 读取、6,900MB/s 写入，接近 PCIe 4.0 的 8,000MB/s 上限。",
+          "source": {
+            "url": "https://hardvance.co.uk/samsung-990-pro-review",
+            "quote": "Samsung rates every size at up to 7,450MB/s reads and 6,900MB/s writes, close to the 8,000MB/s limit of PCIe 4.0.",
+            "date": "2026-10-21"
+          }
+        },
+        {
+          "id": "EV-11",
+          "text": "评测规格表列出缓存容量：1TB 配 1GB LPDDR4，2TB 配 2GB LPDDR4。",
+          "source": {
+            "url": "https://www.storagereview.com/review/samsung-990-pro-ssd-review-2tb",
+            "quote": "DRAM Cache Memory 1GB LPDDR4 2GB LPDDR4",
+            "date": "2026-10-21"
+          }
+        },
+        {
+          "id": "EV-12",
+          "text": "评测规格表的保修栏写明：保修期 5 years limited，TBW 为 600TB（1TB）与 1,200TB（2TB）。",
+          "source": {
+            "url": "https://www.storagereview.com/review/samsung-990-pro-ssd-review-2tb",
+            "quote": "Warranty TBW 600TB 1,200TB Period 5 years limited",
+            "date": "2026-10-21"
+          }
+        }
+      ],
+      "evidence_second_source": [
+        {
+          "id": "EV-01",
+          "status": "confirmed",
+          "url": "https://www.bhphotovideo.com/spanish/c/product/1726547-REG/samsung_mz_v9p1t0b_am_1tb_990_pro_pcie.html",
+          "note": "B&H Photo 的 1TB 990 PRO 规格表同样列出读取上限 7450 MB/s、写入上限 6900 MB/s，与评测规格表一致。"
+        },
+        {
+          "id": "EV-02",
+          "status": "confirmed",
+          "url": "https://www.storagereview.com/review/samsung-990-pro-ssd-review-2tb",
+          "note": "评测规格表在 QD 32 Thread 16 行给出 1,200K IOPS（1TB）与 1400K IOPS（2TB），与官网 1,200,000 IOPS 一致。"
+        },
+        {
+          "id": "EV-03",
+          "status": "confirmed",
+          "url": "https://www.storagereview.com/review/samsung-990-pro-ssd-review-2tb",
+          "note": "评测规格表随机写行为 1,550K IOPS（1TB 与 2TB 相同），与官网 1,550,000 IOPS 一致。"
+        },
+        {
+          "id": "EV-04",
+          "status": "confirmed",
+          "url": "https://hardvance.co.uk/samsung-990-pro-review",
+          "note": "评测同样把保修写成 5 年或以 TBW 数值先到者为准，1TB 档 TBW 为 600TB。"
+        },
+        {
+          "id": "EV-05",
+          "status": "confirmed",
+          "url": "https://hardvance.co.uk/samsung-990-pro-review",
+          "note": "评测接口与尺寸一行写明 PCIe 4.0 x4、NVMe 2.0、M.2 2280，与官网规格表一致。"
+        },
+        {
+          "id": "EV-06",
+          "status": "confirmed",
+          "url": "https://www.storagereview.com/review/samsung-990-pro-ssd-review-2tb",
+          "note": "评测规格表写 NAND Flash Memory Samsung V-NAND TLC、DRAM Cache Memory 1GB LPDDR4（1TB），与官网一致。"
+        },
+        {
+          "id": "EV-07",
+          "status": "confirmed",
+          "url": "https://www.samsung.com/ie/business/memory-storage/nvme-ssd/990-pro-2tb-nvme-pcie-gen-4-mz-v9p2t0bw/",
+          "note": "厂商营销页同样写 2TB 最高 1,400K/1,550K IOPS、4TB 随机读最高 1,600K IOPS，与评测的分档数字一致。"
+        },
+        {
+          "id": "EV-08",
+          "status": "confirmed",
+          "url": "https://www.storagereview.com/review/samsung-990-pro-ssd-review-2tb",
+          "note": "评测规格表 TBW 栏为 600TB（1TB）、1,200TB（2TB），与分档耐久度一致。"
+        },
+        {
+          "id": "EV-09",
+          "status": "confirmed",
+          "url": "https://www.samsung.com/sg/memory-storage/nvme-ssd/980-pro-pcle-4-0-nvme-m-2-ssd-1tb-mz-v8p1t0bw/",
+          "note": "官网 1TB 页保修栏写 5-Year Limited Warranty or 600 TBW Limited Warranty，与评测口径一致。"
+        },
+        {
+          "id": "EV-10",
+          "status": "confirmed",
+          "url": "https://www.samsung.com/ie/business/memory-storage/nvme-ssd/990-pro-2tb-nvme-pcie-gen-4-mz-v9p2t0bw/",
+          "note": "厂商页脚注写 PCIe 4.0 理论最高顺序读 8000 MB/s，990 PRO 为 7,450 MB/s，与评测的 8,000MB/s 上限一致。"
+        },
+        {
+          "id": "EV-11",
+          "status": "confirmed",
+          "url": "https://hardvance.co.uk/samsung-990-pro-review",
+          "note": "评测缓存一行写 1GB LPDDR4（1TB）、2GB LPDDR4（2TB）、4GB LPDDR4（4TB），与官网 1GB LPDDR4 一致。"
+        },
+        {
+          "id": "EV-12",
+          "status": "confirmed",
+          "url": "https://www.samsung.com/sg/memory-storage/nvme-ssd/980-pro-pcle-4-0-nvme-m-2-ssd-1tb-mz-v8p1t0bw/",
+          "note": "厂商官网 1TB 页保修栏写 5-Year Limited Warranty or 600 TBW Limited Warranty，与评测规格表的 5 years limited、600TB(1TB)/1,200TB(2TB) 一致。"
+        }
+      ],
+      "notes": "全部 12 条依据都是页面原句的逐字引用（source.quote 已按抓取结果的真实字符核对，含半角逗号与分号），没有一条是推断型条目。推断只发生在结论层面：EV-10 同句给出 7,450MB/s 与 8,000MB/s 两个数，C6 由二者比较得出，因此 C6 不单列为依据条目。题面刻意把『随机读 140 万 IOPS』写成待判断项，因为该数字属于 2TB 档（EV-07），而 1TB 档是 120 万（EV-02），这是本题的主要区分点。刻意不收『工作温度』：厂商官网 1TB 页写 0-70℃，B&H 零售页写 0-65℃，两家口径不一致，为避免依据包内部矛盾，该项未纳入。第二来源 12/12 全部 confirmed；其中 EV-01/02/03/05/06 的第二来源是零售与评测站（独立于厂商），EV-07 至 EV-12 的第二来源是厂商官网或另一家评测站。",
+      "evidence_hash": "sha256:c15c9b84fd8231a4",
+      "gold_hash": "sha256:67c135ea88df3034"
+    },
+    {
+      "task_id": "D02",
+      "title": "反向代理网关状态码语义判断",
+      "domain": "技术/网络运维排障",
+      "ask": "网关：①上游无效响应→502 ②上游未响应→504 ③后端过载→503 ④请求过多→503。哪几项正确？",
+      "conclusion_space": [
+        {
+          "id": "C1",
+          "text": "①成立：502 Bad Gateway 的语义是网关或代理从上游（入站）服务器收到了无效响应"
+        },
+        {
+          "id": "C2",
+          "text": "②成立：504 Gateway Timeout 的语义是网关或代理未能在预期时间内从上游获得响应"
+        },
+        {
+          "id": "C3",
+          "text": "③成立：503 Service Unavailable 表示服务端因临时过载或计划内维护当前无法处理请求，属临时状态"
+        },
+        {
+          "id": "C4",
+          "text": "④不成立：请求过多对应 429 Too Many Requests，属 4xx 客户端错误，不应映射成 503"
+        },
+        {
+          "id": "C5",
+          "text": "502、503、504 同属 5xx 服务端错误，出问题的是服务端一侧，而不是请求本身"
+        }
+      ],
+      "key_conclusions": [
+        "C1",
+        "C2",
+        "C4"
+      ],
+      "evidence": [
+        {
+          "id": "EV-01",
+          "text": "RFC 9110 中文译本 15.6.3 写明 502 是服务器作为网关或代理、当尝试满足请求时从入站服务器收到了无效响应。",
+          "source": {
+            "url": "https://segmentfault.com/a/1190000044079142",
+            "quote": "15.6.3 502 不良网关 502(不良网关)状态码表示,服务器作为网关或代理,当尝试满足请求时,从其访问的入站服务器收到了无效响应。",
+            "date": "2026-10-21"
+          }
+        },
+        {
+          "id": "EV-02",
+          "text": "RFC 9110 中文译本 15.6.5 写明 504 是服务器充当网关或代理时没有及时收到上游服务器的响应。",
+          "source": {
+            "url": "https://segmentfault.com/a/1190000044079142",
+            "quote": "15.6.5 504 网关超时 504(网关超时)状态码表示,服务器充当网关或代理时,没有及时收到其为完成请求而需要访问的上游服务器的响应。",
+            "date": "2026-10-21"
+          }
+        },
+        {
+          "id": "EV-03",
+          "text": "RFC 9110 中文译本 15.6.4 写明 503 是服务器当前由于暂时超载或是计划性维护而无法处理请求。",
+          "source": {
+            "url": "https://segmentfault.com/a/1190000044079142",
+            "quote": "15.6.4 503 服务不可用 503(服务不可用)状态码表示,服务器当前由于暂时超载或是计划性维护而无法处理请求,这种情况可能会在延迟一段时间后得到缓解。",
+            "date": "2026-10-21"
+          }
+        },
+        {
+          "id": "EV-04",
+          "text": "阿里云状态码表把 4xx 归为客户端错误、5xx 归为服务端错误，后者问题出在服务端。",
+          "source": {
+            "url": "https://help.aliyun.com/zh/openapi/developer-reference/http-status-codes",
+            "quote": "4xx(客户端错误) 请求存在语法问题或无法被满足,问题通常出在调用方。 5xx(服务端错误) 服务端未能完成一个表面上有效的请求,问题出在服务端。",
+            "date": "2026-10-21"
+          }
+        },
+        {
+          "id": "EV-05",
+          "text": "微软文档状态码表写明 502 Bad Gateway 是网关或代理从其上游服务器收到了无效响应。",
+          "source": {
+            "url": "https://learn.microsoft.com/bs-latn-ba/microsoft-cloud/dev/dev-proxy/concepts/http-5xx-api-errors",
+            "quote": "502 Bad Gateway A gateway or proxy got an invalid response from the server behind it",
+            "date": "2026-10-21"
+          }
+        },
+        {
+          "id": "EV-06",
+          "text": "微软文档状态码表写明 504 Gateway Timeout 是网关或代理未能在规定时间内从上游服务器得到响应。",
+          "source": {
+            "url": "https://learn.microsoft.com/bs-latn-ba/microsoft-cloud/dev/dev-proxy/concepts/http-5xx-api-errors",
+            "quote": "504 Gateway Timeout A gateway or proxy didn't get a response in time from the server behind it",
+            "date": "2026-10-21"
+          }
+        },
+        {
+          "id": "EV-07",
+          "text": "科普中国状态码表写明 502 是作为网关或代理的服务器尝试执行请求时从上游服务器接收到无效的响应。",
+          "source": {
+            "url": "https://www.kepuchina.cn/article/articleinfo?business_type=100&ar_id=345233",
+            "quote": "502 Bad Gateway 作为网关或者代理工作的服务器尝试执行请求时,从上游服务器接收到无效的响应。",
+            "date": "2026-10-21"
+          }
+        },
+        {
+          "id": "EV-08",
+          "text": "科普中国状态码表写明 504 是作为网关或代理的服务器尝试执行请求时未能及时从上游服务器收到响应。",
+          "source": {
+            "url": "https://www.kepuchina.cn/article/articleinfo?business_type=100&ar_id=345233",
+            "quote": "504 Gateway Timeout 作为网关或者代理工作的服务器尝试执行请求时,未能及时从上游服务器(URI标识出的服务器,例如HTTP、FTP、LDAP)或者辅助服务器(例如DNS)收到响应。",
+            "date": "2026-10-21"
+          }
+        },
+        {
+          "id": "EV-09",
+          "text": "科普中国状态码表写明 503 是由于临时的服务器维护或过载导致当前无法处理请求，且该状况是临时的。",
+          "source": {
+            "url": "https://www.kepuchina.cn/article/articleinfo?business_type=100&ar_id=345233",
+            "quote": "503 Service Unavailable 由于临时的服务器维护或者过载,服务器当前无法处理请求。这个状况是临时的,并且将在一段时间以后恢复。",
+            "date": "2026-10-21"
+          }
+        },
+        {
+          "id": "EV-10",
+          "text": "阿里云状态码表写明 503 是服务端因临时过载或计划内维护当前无法处理请求，属临时状态。",
+          "source": {
+            "url": "https://help.aliyun.com/zh/openapi/developer-reference/http-status-codes",
+            "quote": "503 Service Unavailable 服务不可用。服务端因临时过载或计划内维护,当前无法处理请求。这是一种临时状态,响应中可能带Retry-After首部。",
+            "date": "2026-10-21"
+          }
+        },
+        {
+          "id": "EV-11",
+          "text": "阿里云状态码表写明 429 表示客户端在给定时间内发送的请求数超过限制，响应中可能带 Retry-After 首部。",
+          "source": {
+            "url": "https://help.aliyun.com/zh/openapi/developer-reference/http-status-codes",
+            "quote": "429 Too Many Requests 请求过多。客户端在给定时间内发送的请求数超过限制。响应中可能带Retry-After首部,指示建议的重试等待时间。",
+            "date": "2026-10-21"
+          }
+        },
+        {
+          "id": "EV-12",
+          "text": "MDN 状态码总表把 429 记为用户在给定的时间内发送了太多请求。",
+          "source": {
+            "url": "https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/",
+            "quote": "429 Too Many Requests 用户在给定的时间内发送了太多请求",
+            "date": "2026-10-21"
+          }
+        }
+      ],
+      "evidence_second_source": [
+        {
+          "id": "EV-01",
+          "status": "confirmed",
+          "url": "https://www.rfcinfo.com/rfc-9110/15-status-codes",
+          "note": "RFC 9110 英文原文 15.6.3 同义表述：网关从入站服务器收到了无效响应。"
+        },
+        {
+          "id": "EV-02",
+          "status": "confirmed",
+          "url": "https://www.rfcinfo.com/rfc-9110/15-status-codes",
+          "note": "RFC 9110 英文原文 15.6.5 同义表述：没有及时收到上游服务器响应。"
+        },
+        {
+          "id": "EV-03",
+          "status": "confirmed",
+          "url": "https://www.rfcinfo.com/rfc-9110/15-status-codes",
+          "note": "RFC 9110 英文原文 15.6.4 同义表述：暂时超载或计划性维护导致无法处理请求。"
+        },
+        {
+          "id": "EV-04",
+          "status": "confirmed",
+          "url": "https://www.rfcinfo.com/rfc-9110/15-status-codes",
+          "note": "RFC 9110 英文原文同样把 4xx 定义为客户端错误、5xx 定义为服务端错误。"
+        },
+        {
+          "id": "EV-05",
+          "status": "confirmed",
+          "url": "https://segmentfault.com/a/1190000044079142",
+          "note": "RFC 9110 中文译本 15.6.3 与科普中国状态码表给出同一语义。"
+        },
+        {
+          "id": "EV-06",
+          "status": "confirmed",
+          "url": "https://www.kepuchina.cn/article/articleinfo?business_type=100&ar_id=345233",
+          "note": "科普中国状态码表同义表述：作为网关或代理未能及时从上游服务器收到响应。"
+        },
+        {
+          "id": "EV-07",
+          "status": "confirmed",
+          "url": "https://www.rfcinfo.com/rfc-9110/15-status-codes",
+          "note": "RFC 9110 英文原文 15.6.3 与科普中国表述一致。"
+        },
+        {
+          "id": "EV-08",
+          "status": "confirmed",
+          "url": "https://segmentfault.com/a/1190000044079142",
+          "note": "RFC 9110 中文译本 15.6.5 同义表述：没有及时收到上游服务器响应。"
+        },
+        {
+          "id": "EV-09",
+          "status": "confirmed",
+          "url": "https://help.aliyun.com/zh/openapi/developer-reference/http-status-codes",
+          "note": "阿里云状态码表同义表述：因临时过载或计划内维护当前无法处理请求。"
+        },
+        {
+          "id": "EV-10",
+          "status": "confirmed",
+          "url": "https://www.rfcinfo.com/rfc-9110/15-status-codes",
+          "note": "RFC 9110 英文原文 15.6.4 同义表述：暂时过载或计划性维护。"
+        },
+        {
+          "id": "EV-11",
+          "status": "confirmed",
+          "url": "https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/",
+          "note": "MDN 状态码总表在客户端错误一节列出 429 Too Many Requests，含义为用户在给定时间内发送了太多请求。"
+        },
+        {
+          "id": "EV-12",
+          "status": "confirmed",
+          "url": "https://help.aliyun.com/zh/openapi/developer-reference/http-status-codes",
+          "note": "阿里云状态码表同样写明 429 表示请求过多，并把其定义来源标注为 RFC 6585。"
+        }
+      ],
+      "notes": "12 条依据全部是状态码语义的原句引用：RFC 9110 中文译本 3 条（SegmentFault）、科普中国状态码表 3 条、阿里云状态码表 3 条、微软文档 5xx 状态码表 2 条、MDN 状态码总表 1 条；每条 quote 都截到 120 字以内。RFC 9110 英文原文（rfcinfo 镜像的 §15 Status Codes）作为每条语义类依据的第二来源逐条比对，第二来源 12/12 全部 confirmed。④ 是唯一的错项：请求过多在标准里是 429（4xx），而 503 的触发条件是服务端自身临时过载或计划内维护（EV-03、EV-09、EV-10），两者都带 Retry-After 首部，正是排障时容易混淆的一对。C5 不是题面直接问的编号项，但它是 502/503/504 的共同属性，排障结论必须点出，故单列为结论并由 EV-04、EV-03 支撑。没有把『502 与 504 的重试策略（幂等方法才可自动重试）』写进依据包：Microsoft Learn 那段可引，但它属于重试策略而非状态码语义，会把题目拉向另一个领域，故只在此处说明为何未收。",
+      "evidence_hash": "sha256:9f06edb993235b4b",
+      "gold_hash": "sha256:f4d3d4524b956c3c"
+    },
+    {
+      "task_id": "D03",
+      "title": "小型无人驾驶航空器的分类与飞行合规判断",
+      "domain": "规则应用/无人机飞行管理",
+      "ask": "空机6千克、起飞重12千克无人机在适飞空域真高90米飞行，操控员无执照。依无人驾驶航空器飞行管理暂行条例，哪些说法正确？",
+      "conclusion_space": [
+        {
+          "id": "C1",
+          "text": "该机属小型无人驾驶航空器（空机重量不超过15千克且最大起飞重量不超过25千克），既不属轻型也不属中型"
+        },
+        {
+          "id": "C2",
+          "text": "在适飞空域内、真高90米的这次飞行属于免于提出飞行活动申请的情形"
+        },
+        {
+          "id": "C3",
+          "text": "操控小型机须持操控员执照；操控员无照操控可处5000元以上5万元以下罚款"
+        },
+        {
+          "id": "C4",
+          "text": "该机飞行活动应依法投保责任保险（使用小型机从事非经营性飞行活动同样必须投保）"
+        },
+        {
+          "id": "C5",
+          "text": "该机所有者须依法实名登记，未实名登记即飞行的可处200元以下罚款"
+        },
+        {
+          "id": "C6",
+          "text": "若改到真高130米飞行，该空域已属管制空域，须经空中交通管理机构批准方可飞行"
+        }
+      ],
+      "key_conclusions": [
+        "C1",
+        "C2",
+        "C3"
+      ],
+      "evidence": [
+        {
+          "id": "EV-01",
+          "text": "条例定义小型无人驾驶航空器为空机重量不超过15千克且最大起飞重量不超过25千克。",
+          "source": {
+            "url": "https://www.gov.cn/zhengce/zhengceku/202306/content_6888800.htm",
+            "quote": "(四)小型无人驾驶航空器,是指空机重量不超过15千克且最大起飞重量不超过25千克,具备符合空域管理要求的空域保持能力和可靠被监视能力,全程可以随时人工介入操控的无人驾驶航空器,但不包括微型、轻型无人驾驶航空器。",
+            "date": "2026-10-21"
+          }
+        },
+        {
+          "id": "EV-02",
+          "text": "条例定义轻型无人驾驶航空器为空机重量不超过4千克且最大起飞重量不超过7千克。",
+          "source": {
+            "url": "https://www.gov.cn/zhengce/zhengceku/202306/content_6888800.htm",
+            "quote": "(三)轻型无人驾驶航空器,是指空机重量不超过4千克且最大起飞重量不超过7千克,最大平飞速度不超过100千米/小时,具备符合空域管理要求的空域保持能力和可靠被监视能力,全程可以随时人工介入操控的无人驾驶航空器,但不包括微型无人驾驶航空器。",
+            "date": "2026-10-21"
+          }
+        },
+        {
+          "id": "EV-03",
+          "text": "条例定义中型无人驾驶航空器为最大起飞重量不超过150千克且不属微型、轻型、小型。",
+          "source": {
+            "url": "https://www.gov.cn/zhengce/zhengceku/202306/content_6888800.htm",
+            "quote": "(五)中型无人驾驶航空器,是指最大起飞重量不超过150千克的无人驾驶航空器,但不包括微型、轻型、小型无人驾驶航空器。",
+            "date": "2026-10-21"
+          }
+        },
+        {
+          "id": "EV-04",
+          "text": "条例规定真高120米以上空域以及禁区、限区等区域上方的空域应划设为管制空域。",
+          "source": {
+            "url": "https://www.gov.cn/zhengce/zhengceku/202306/content_6888800.htm",
+            "quote": "真高120米以上空域,空中禁区、空中限制区以及周边空域,军用航空超低空飞行空域,以及下列区域上方的空域应当划设为管制空域",
+            "date": "2026-10-21"
+          }
+        },
+        {
+          "id": "EV-05",
+          "text": "条例规定管制空域范围以外的空域为微型、轻型、小型无人驾驶航空器的适飞空域。",
+          "source": {
+            "url": "https://www.gov.cn/zhengce/zhengceku/202306/content_6888800.htm",
+            "quote": "管制空域范围以外的空域为微型、轻型、小型无人驾驶航空器的适飞空域(以下简称适飞空域)。",
+            "date": "2026-10-21"
+          }
+        },
+        {
+          "id": "EV-06",
+          "text": "条例第三十一条列出免于提出飞行活动申请的情形，首项即微型、轻型、小型在适飞空域内的飞行活动。",
+          "source": {
+            "url": "https://www.gov.cn/zhengce/zhengceku/202306/content_6888800.htm",
+            "quote": "第三十一条 组织无人驾驶航空器实施下列飞行活动,无需向空中交通管理机构提出飞行活动申请: (一)微型、轻型、小型无人驾驶航空器在适飞空域内的飞行活动",
+            "date": "2026-10-21"
+          }
+        },
+        {
+          "id": "EV-07",
+          "text": "条例第十条要求民用无人驾驶航空器所有者依法进行实名登记。",
+          "source": {
+            "url": "https://www.gov.cn/zhengce/zhengceku/202306/content_6888800.htm",
+            "quote": "第十条 民用无人驾驶航空器所有者应当依法进行实名登记,具体办法由国务院民用航空主管部门会同有关部门制定。",
+            "date": "2026-10-21"
+          }
+        },
+        {
+          "id": "EV-08",
+          "text": "条例规定未实名登记实施飞行活动的，由公安机关责令改正并可处200元以下罚款。",
+          "source": {
+            "url": "https://www.gov.cn/zhengce/zhengceku/202306/content_6888800.htm",
+            "quote": "未经实名登记实施飞行活动的,由公安机关责令改正,可以处200元以下的罚款;情节严重的,处2000元以上2万元以下的罚款。",
+            "date": "2026-10-21"
+          }
+        },
+        {
+          "id": "EV-09",
+          "text": "条例第十二条要求从事经营性飞行活动以及使用小型、中型、大型机从事非经营性飞行活动都应依法投保责任保险。",
+          "source": {
+            "url": "https://www.gov.cn/zhengce/zhengceku/202306/content_6888800.htm",
+            "quote": "第十二条 使用民用无人驾驶航空器从事经营性飞行活动,以及使用小型、中型、大型民用无人驾驶航空器从事非经营性飞行活动,应当依法投保责任保险。",
+            "date": "2026-10-21"
+          }
+        },
+        {
+          "id": "EV-10",
+          "text": "条例规定未依法投保责任保险的，由民用航空管理部门责令改正并处2000元以上2万元以下罚款。",
+          "source": {
+            "url": "https://www.gov.cn/zhengce/zhengceku/202306/content_6888800.htm",
+            "quote": "未依法投保责任保险的,由民用航空管理部门责令改正,处2000元以上2万元以下的罚款;情节严重的,责令从事飞行活动的单位停业整顿直至吊销其运营合格证。",
+            "date": "2026-10-21"
+          }
+        },
+        {
+          "id": "EV-11",
+          "text": "条例第十六条要求操控小型、中型、大型民用无人驾驶航空器的人员申请取得操控员执照。",
+          "source": {
+            "url": "https://www.gov.cn/zhengce/zhengceku/202306/content_6888800.htm",
+            "quote": "第十六条 操控小型、中型、大型民用无人驾驶航空器飞行的人员应当具备下列条件,并向国务院民用航空主管部门申请取得相应民用无人驾驶航空器操控员(以下简称操控员)执照:",
+            "date": "2026-10-21"
+          }
+        },
+        {
+          "id": "EV-12",
+          "text": "条例规定未取得操控员执照操控民用无人驾驶航空器飞行的，处5000元以上5万元以下罚款。",
+          "source": {
+            "url": "https://www.gov.cn/zhengce/zhengceku/202306/content_6888800.htm",
+            "quote": "未取得操控员执照操控民用无人驾驶航空器飞行的,由民用航空管理部门处5000元以上5万元以下的罚款;情节严重的,处1万元以上10万元以下的罚款。",
+            "date": "2026-10-21"
+          }
+        }
+      ],
+      "evidence_second_source": [
+        {
+          "id": "EV-01",
+          "status": "confirmed",
+          "url": "https://www.caac.gov.cn/big5/www.caac.gov.cn/XXGK/XXGK/FLFG/202401/t20240115_222642.html",
+          "note": "中国民用航空局公布的同一部条例（繁体版）第六十二条(四)给出同一小型机定义；光明网 2025-12 的机型分类标准同样写『小型:空机重量不超过15千克且最大起飞重量不超过25千克』。"
+        },
+        {
+          "id": "EV-02",
+          "status": "confirmed",
+          "url": "https://www.caac.gov.cn/big5/www.caac.gov.cn/XXGK/XXGK/FLFG/202401/t20240115_222642.html",
+          "note": "民航局版条例第六十二条(三)与光明网 2025-12 分类标准中轻型一项一致。"
+        },
+        {
+          "id": "EV-03",
+          "status": "confirmed",
+          "url": "https://www.caac.gov.cn/big5/www.caac.gov.cn/XXGK/XXGK/FLFG/202401/t20240115_222642.html",
+          "note": "民航局版条例第六十二条(五)一致；光明网 2025-12 分类标准亦写中型为最大起飞重量不超过150千克。"
+        },
+        {
+          "id": "EV-04",
+          "status": "confirmed",
+          "url": "https://m.gmw.cn/2025-09/22/content_1304158018.htm",
+          "note": "光明网转载的市交通委材料写明『管制空域:真高120米以上空域,空中禁区、空中限制区以及周边空域,军用航空超低空飞行空域,以及下列区域上方的空域』，与条例第十九条一致。"
+        },
+        {
+          "id": "EV-05",
+          "status": "confirmed",
+          "url": "https://m.gmw.cn/2025-09/22/content_1304158018.htm",
+          "note": "同一材料写明适飞空域是管制空域范围以外的空域（微、轻、小型无人机的适飞空域），与条例第十九条末句一致。"
+        },
+        {
+          "id": "EV-06",
+          "status": "confirmed",
+          "url": "https://www.caac.gov.cn/big5/www.caac.gov.cn/XXGK/XXGK/FLFG/202401/t20240115_222642.html",
+          "note": "民航局版条例第三十一条(一)同样写明微、轻、小型在适飞空域内的飞行活动无需向空中交通管理机构提出飞行活动申请。"
+        },
+        {
+          "id": "EV-07",
+          "status": "confirmed",
+          "url": "https://m.gmw.cn/2025-09/22/content_1304158018.htm",
+          "note": "光明网材料第一条规定『无人机所有者应当依法进行实名登记』，与条例第十条一致。"
+        },
+        {
+          "id": "EV-08",
+          "status": "confirmed",
+          "url": "https://m.gmw.cn/2025-09/22/content_1304158018.htm",
+          "note": "光明网材料重点处罚事项第一条写明未实名登记可处200元以下罚款、情节严重处2000元以上2万元以下罚款，与条例第四十七条一致。"
+        },
+        {
+          "id": "EV-09",
+          "status": "confirmed",
+          "url": "https://www.caac.gov.cn/big5/www.caac.gov.cn/XXGK/XXGK/FLFG/202401/t20240115_222642.html",
+          "note": "民航局版条例第十二条与政府网版本逐字对应（含非经营性飞行活动也要投保的表述）。"
+        },
+        {
+          "id": "EV-10",
+          "status": "confirmed",
+          "url": "https://m.gmw.cn/2025-09/22/content_1304158018.htm",
+          "note": "光明网材料重点处罚事项第二条写明未依法投保责任保险处2000元以上2万元以下罚款，与条例第四十八条一致。"
+        },
+        {
+          "id": "EV-11",
+          "status": "confirmed",
+          "url": "https://www.huaibei.gov.cn/csrl/jxjs/64911534.html",
+          "note": "淮北市政府发布的普法材料写明『操控小型、中型、大型无人机必须考取相应的操控员执照』，与条例第十六条一致。"
+        },
+        {
+          "id": "EV-12",
+          "status": "confirmed",
+          "url": "https://news.qq.com/rain/a/20260123A028WH00",
+          "note": "岳西公安的普法稿逐条引用条例写明未取得操控员执照操控的处5000元以上5万元以下罚款；澎湃新闻的案例稿也引用同一条罚则。"
+        }
+      ],
+      "notes": "12 条依据全部取自中国政府网公布的《无人驾驶航空器飞行管理暂行条例》原文（第六十二条分类、第十条实名登记、第十九条管制空域与适飞空域、第三十一条免申请、第十二条与第四十八条责任保险、第十六条与第五十条操控员执照），quote 逐字核对，标点为原文的半角逗号与分号。第二来源 12/12 全部 confirmed：凡条例条文，均以中国民用航空局公布的同一部条例（繁体版）逐条比对；凡通俗转述，则用光明网/人民网转载的市交通委材料、淮北市政府与岳西公安普法稿、澎湃新闻案例稿互证。EV-06 的引文在『适飞空域内的飞行活动』处截断，因为条例第三十一条(二)起的内容涉及另一类飞行活动，与本题场景无关，截断后仍是原文的连续片段。C6 是反事实边界判断（把真高换成130米），由 EV-04 与 EV-05 两个数推出，故单列为结论而不是依据条目。本题未收农用无人机相关条款：其分类口径（真高、平飞速度、飞行半径）与本题的空机/起飞重口径容易混淆，且其条文中另有一段与本题场景无关的表述，引用它只会增加歧义，故整条不收。",
+      "evidence_hash": "sha256:21d4901e66669c63",
+      "gold_hash": "sha256:5bafcaf914c9a9ff"
+    },
+    {
+      "task_id": "D04",
+      "title": "烧伤严重程度分级与急诊指征判定",
+      "domain": "医疗常识/症状分级（只考公开的分级标准与就医时机规则）",
+      "ask": "按公开标准判定：成人Ⅱ度烧伤面积12%属哪一级？5岁儿童Ⅱ度烧伤面积18%属哪一级？面部Ⅲ度烧伤是否属急诊120指征？",
+      "conclusion_space": [
+        {
+          "id": "C1",
+          "text": "成人Ⅱ度烧伤面积12%（无Ⅲ度烧伤）按公开的烧伤严重程度分级标准判为中度烧伤"
+        },
+        {
+          "id": "C2",
+          "text": "5岁儿童Ⅱ度烧伤面积18%按“小儿烧伤面积减半”折算为9%，判为轻度烧伤"
+        },
+        {
+          "id": "C3",
+          "text": "面部Ⅲ度烧伤属于公开的急诊（拨打120）指征"
+        },
+        {
+          "id": "C4",
+          "text": "公开标准中Ⅱ度烧伤面积10%以下为轻度、11%~30%为中度、31%~50%为重度、超过50%为特重"
+        },
+        {
+          "id": "C5",
+          "text": "公开标准要求对小儿做烧伤严重程度评估时将烧伤面积减半"
+        }
+      ],
+      "key_conclusions": [
+        "C1",
+        "C2",
+        "C3"
+      ],
+      "evidence": [
+        {
+          "id": "EV-01",
+          "text": "轻度烧伤指Ⅱ度烧伤面积在10%以下，小儿烧伤面积减半",
+          "source": {
+            "url": "https://czs.gov.cn/html/zwgk/ztbd/13199/13582/13586/content_668183.html",
+            "quote": "轻度烧伤,指烧伤面积在10%以下的Ⅱ度烧伤;小儿烧伤面积减半。",
+            "date": "2016-02-09"
+          }
+        },
+        {
+          "id": "EV-02",
+          "text": "中度烧伤指Ⅱ度烧伤面积为11%~30%，或Ⅲ度烧伤面积10%以下，小儿烧伤面积减半",
+          "source": {
+            "url": "https://czs.gov.cn/html/zwgk/ztbd/13199/13582/13586/content_668183.html",
+            "quote": "中度烧伤,指烧伤面积为11%—30%的Ⅱ度烧伤或10%以下的Ⅲ度烧伤;小儿烧伤面积减半。",
+            "date": "2016-02-09"
+          }
+        },
+        {
+          "id": "EV-03",
+          "text": "重度烧伤指Ⅱ度烧伤面积为31%~50%，或Ⅲ度烧伤面积为11%~20%，小儿面积减半",
+          "source": {
+            "url": "https://czs.gov.cn/html/zwgk/ztbd/13199/13582/13586/content_668183.html",
+            "quote": "重度烧伤,指烧伤面积为31%至50%的Ⅱ度烧伤或11%—20%的Ⅲ度烧伤;小儿面积减半。",
+            "date": "2016-02-09"
+          }
+        },
+        {
+          "id": "EV-04",
+          "text": "特重烧伤指Ⅱ度烧伤面积超过50%，或Ⅲ度烧伤面积超过20%，小儿面积减半",
+          "source": {
+            "url": "https://czs.gov.cn/html/zwgk/ztbd/13199/13582/13586/content_668183.html",
+            "quote": "特重烧伤,指烧伤面积超过50%的Ⅱ度烧伤或烧伤面积超过20%的Ⅲ度烧伤;小儿面积减半。",
+            "date": "2016-02-09"
+          }
+        },
+        {
+          "id": "EV-05",
+          "text": "另一公开表述给出同向四档分界，并要求对小儿评估时把烧伤面积减半",
+          "source": {
+            "url": "https://www.cdstm.cn/frontier/yyjk/art/2019/art_21272149d7c34d24a069756abb8c0b47.html",
+            "quote": "烧烫伤程度判定:≤10%的Ⅱ度或<5%的Ⅲ度烧烫伤为轻度烧烫伤;11%~30%的Ⅱ度或5%~10%的Ⅲ度烧烫伤为中度烧烫伤;31%~50%的Ⅱ度或11%~20%的Ⅲ度烧烫伤为重度烧烫伤;≥50%的Ⅱ度或≥20%的Ⅲ度烧烫伤为特重度烧烫伤。注意在对小儿做出评估时,应减半。",
+            "date": "2019-08-20"
+          }
+        },
+        {
+          "id": "EV-06",
+          "text": "临床词条的诊断依据同样按轻度/中度/重度/特重四档列出面积分界",
+          "source": {
+            "url": "https://m.dayi.org.cn/disease/1113274",
+            "quote": "1、轻度烧伤 Ⅱ度烧伤面积10%以下。2、中度烧伤 Ⅱ度烧伤面积11%~ 30%,或有Ⅰ烧伤但面积不足10%,或者Ⅲ度烧伤但面积不足10%。3、重度烧伤 烧伤总面积31%~50%;或Ⅲ度烧伤面积11%-20%;或Ⅱ度、Ⅰ度烧伤面积虽不到上述百分比,但已发生休克、合并较重的吸入性损伤和复合伤等。4、特重烧伤 烧伤总面积50%以上;或Ⅲ度烧伤20%以上。",
+            "date": "2026-10-21"
+          }
+        },
+        {
+          "id": "EV-07",
+          "text": "公开的急诊（拨打120）指征包含深度烧伤与特殊部位烧伤",
+          "source": {
+            "url": "https://m.dayi.org.cn/disease/1113274",
+            "quote": "急诊(120)指征 1、发生火灾; 2、伤者大面积烧伤; 3、深度烧伤,甚至使皮肤看起来像皮革,看起来焦黑或有黑色; 4、呼吸困难或灼伤呼吸道; 5、眼睛等特殊部位烧伤,出现视力障碍等; 6、出现其他紧急情况。",
+            "date": "2026-10-21"
+          }
+        },
+        {
+          "id": "EV-08",
+          "text": "Ⅲ度烧伤为全层皮肤烧伤，可深达肌肉甚至骨骼、内脏器官",
+          "source": {
+            "url": "https://m.dayi.org.cn/disease/1113274",
+            "quote": "4、Ⅲ度烧伤 (1)又称为焦痂型烧伤。一般为全层皮肤烧伤,可深达肌肉甚至骨骼、内脏器官等。",
+            "date": "2026-10-21"
+          }
+        },
+        {
+          "id": "EV-09",
+          "text": "面部、生殖器、手足及关节等特殊部位烧伤应及时到医院寻求专业治疗",
+          "source": {
+            "url": "https://www.cdstm.cn/frontier/yyjk/art/2019/art_21272149d7c34d24a069756abb8c0b47.html",
+            "quote": "当烧烫伤在面部、生殖器、手足及关节等部位,或损伤呈环形围绕躯干、颈和四肢时,也应及时到医院寻求专业治疗,以防创面瘢痕挛缩,引发功能性障碍。",
+            "date": "2019-08-20"
+          }
+        },
+        {
+          "id": "EV-10",
+          "text": "严重烧伤者应尽快转送到有救治能力的医院治疗",
+          "source": {
+            "url": "http://ynswsjkw.yn.gov.cn/html/2024/xuanchuankejiao_0829/4021269.html",
+            "quote": "严重烧伤者,应尽快转送到有救治能力的医院治疗。",
+            "date": "2024-08-29"
+          }
+        },
+        {
+          "id": "EV-11",
+          "text": "二度或以上烧伤应立即就医",
+          "source": {
+            "url": "https://www.shouxian.gov.cn/public/118322896/1260521596.html",
+            "quote": "对于二度或以上烧伤,应立即就医",
+            "date": "2024-12-20"
+          }
+        },
+        {
+          "id": "EV-12",
+          "text": "烧伤严重或出现休克等紧急情况时应立即拨打急救电话并寻求专业医疗帮助",
+          "source": {
+            "url": "https://www.shouxian.gov.cn/public/118322896/1260521596.html",
+            "quote": "如果烧伤严重或患者出现休克等紧急情况,应立即拨打急救电话并寻求专业医疗帮助。",
+            "date": "2024-12-20"
+          }
+        }
+      ],
+      "evidence_second_source": [
+        {
+          "id": "EV-01",
+          "status": "confirmed",
+          "url": "https://www.cdstm.cn/frontier/yyjk/art/2019/art_21272149d7c34d24a069756abb8c0b47.html",
+          "note": "科技馆四档表给出同向分界：Ⅱ度≤10%（或Ⅲ度<5%）为轻度"
+        },
+        {
+          "id": "EV-02",
+          "status": "confirmed",
+          "url": "https://www.cdstm.cn/frontier/yyjk/art/2019/art_21272149d7c34d24a069756abb8c0b47.html",
+          "note": "科技馆四档表：Ⅱ度11%~30%（或Ⅲ度5%~10%）为中度"
+        },
+        {
+          "id": "EV-03",
+          "status": "confirmed",
+          "url": "https://www.cdstm.cn/frontier/yyjk/art/2019/art_21272149d7c34d24a069756abb8c0b47.html",
+          "note": "科技馆四档表：Ⅱ度31%~50%（或Ⅲ度11%~20%）为重度"
+        },
+        {
+          "id": "EV-04",
+          "status": "confirmed",
+          "url": "https://www.cdstm.cn/frontier/yyjk/art/2019/art_21272149d7c34d24a069756abb8c0b47.html",
+          "note": "科技馆四档表：Ⅱ度≥50%（或Ⅲ度≥20%）为特重度"
+        },
+        {
+          "id": "EV-05",
+          "status": "confirmed",
+          "url": "https://czs.gov.cn/html/zwgk/ztbd/13199/13582/13586/content_668183.html",
+          "note": "郴州市政府页逐档给出同一分界并逐档注明“小儿烧伤面积减半”"
+        },
+        {
+          "id": "EV-06",
+          "status": "confirmed",
+          "url": "https://czs.gov.cn/html/zwgk/ztbd/13199/13582/13586/content_668183.html",
+          "note": "郴州市政府页四档分界与该词条诊断依据逐档一致（10%以下/11%~30%/31%~50%/50%以上）"
+        },
+        {
+          "id": "EV-07",
+          "status": "confirmed",
+          "url": "https://www.shouxian.gov.cn/public/118322896/1260521596.html",
+          "note": "寿县页给出“烧伤严重或出现休克等紧急情况应立即拨打急救电话”的并列口径"
+        },
+        {
+          "id": "EV-08",
+          "status": "confirmed",
+          "url": "https://www.cdstm.cn/frontier/yyjk/art/2019/art_21272149d7c34d24a069756abb8c0b47.html",
+          "note": "科技馆页：Ⅲ度烧烫伤伤及皮肤全层及皮下、肌肉、骨骼，与“全层皮肤烧伤”同义"
+        },
+        {
+          "id": "EV-09",
+          "status": "confirmed",
+          "url": "https://m.dayi.org.cn/disease/1113274",
+          "note": "该词条急诊(120)指征第5项为“眼睛等特殊部位烧伤”，与“特殊部位需及时就医”同向"
+        },
+        {
+          "id": "EV-10",
+          "status": "confirmed",
+          "url": "https://app.xinhuanet.com/news/article.html?articleId=f4629cd836e259f5533938d69149b6ac",
+          "note": "新华网刊载国家卫健委《中国公民健康素养——基本知识与技能（2024年版）》第62条释义，逐字含同一句"
+        },
+        {
+          "id": "EV-11",
+          "status": "confirmed",
+          "url": "https://www.cdstm.cn/frontier/yyjk/art/2019/art_21272149d7c34d24a069756abb8c0b47.html",
+          "note": "科技馆页：年龄较小的孩子或面积较大、较深的成人应在冷水冲洗后及时送往医院"
+        },
+        {
+          "id": "EV-12",
+          "status": "confirmed",
+          "url": "https://czs.gov.cn/html/zwgk/ztbd/13199/13582/13586/content_668183.html",
+          "note": "郴州市政府页：严重烧伤者应迅速向急救中心呼救并送往医院治疗"
+        }
+      ],
+      "notes": "题型=分类判定；只考公开的烧伤严重程度分级标准与就医时机规则，不给个人诊疗建议。题面三问均可用“按公开规则应如何判定”判对错：成人Ⅱ度12%落在中度带（EV-02）；5岁儿童Ⅱ度18%须先按“小儿减半”折成9%再落轻度带（EV-05、EV-01~04）；面部Ⅲ度即全层皮肤烧伤（EV-08），落在公开的急诊120指征“深度烧伤/特殊部位烧伤”项（EV-07、EV-09~12）。口径差异说明：dayi 词条的“中度”还并列了“有Ⅰ度烧伤但面积不足10%”等情形，本题两问均不涉及Ⅰ度与Ⅲ度面积并列判定，不影响结论。未收录的内容：dayi 词条中“面积虽未达百分比但已发生休克、合并吸入性损伤或复合伤也判重度”这一附加情形，本题两问的病例均无休克/复合伤前提，收进依据包会引入不可判定的分支，故未单列为依据。引用纪律：每条 source.quote 均逐字抄自 web_search 返回的页面正文 content 字段（该工具把正文里的全角逗号/分号/冒号/括号统一渲染为半角，与页面原文仅标点字形差异；已用沙箱直连抓取页面正文做过逐字比对，剔除空白与标点字形后完全一致）。推断类条目：EV 中不含任何需要读者自行推得的结论；凡结论需要把两条事实对应起来才能成立，已写进对应金标卡的 decision_changed 字段。",
+      "evidence_hash": "sha256:4fa07b3b228ae9c1",
+      "gold_hash": "sha256:518139236a6cb16a"
+    },
+    {
+      "task_id": "D05",
+      "title": "居住证申领条件与所需材料判定",
+      "domain": "法律边界/资格与条件（只考公开的申领条件与材料要求）",
+      "ask": "按规定，甲居住登记仅3个月，乙登记满6个月，丙在居住地有劳动合同，丁在居住地读小学，谁可申领居住证？丙需交哪类材料？",
+      "conclusion_space": [
+        {
+          "id": "C1",
+          "text": "符合居住证申领条件的是乙、丙、丁，甲不符合"
+        },
+        {
+          "id": "C2",
+          "text": "居住证申领的四项条件（居住登记满6个月、合法稳定就业、合法稳定住所、连续就读）是满足其一即可，无须同时满足"
+        },
+        {
+          "id": "C3",
+          "text": "丙在居住地有劳动合同属于“在居住地有合法稳定就业”"
+        },
+        {
+          "id": "C4",
+          "text": "丁在居住地读小学属于“在居住地连续就读”"
+        },
+        {
+          "id": "C5",
+          "text": "丙以合法稳定就业为由申领居住证，须提交合法稳定就业证明材料（劳动合同、营业执照、用人单位出具的劳动关系证明等）之一"
+        }
+      ],
+      "key_conclusions": [
+        "C1",
+        "C5"
+      ],
+      "evidence": [
+        {
+          "id": "EV-01",
+          "text": "申领条件共四项，满足其中之一即可申领居住证",
+          "source": {
+            "url": "https://www.hndt.gov.cn/grassroots/content/1260617168",
+            "quote": "流动人口满足以下条件之一,可以向居住地公安派出所或者受公安机关委托的社区服务机构申领居住证: 1、自办理居住登记之日起满6个月 2、在居住地有合法稳定就业 3、在居住地有合法稳定住所 4、在居住地连续就读",
+            "date": "2026-09-28"
+          }
+        },
+        {
+          "id": "EV-02",
+          "text": "居住登记满6个月，指在派出所基础信息管理系统中登记流动人口居住信息满6个月",
+          "source": {
+            "url": "https://www.hndt.gov.cn/grassroots/content/1260617168",
+            "quote": "自办理居住登记之日起满6个月,是指在“派出所基础信息管理系统中”登记流动人口居住信息满6个月",
+            "date": "2026-09-28"
+          }
+        },
+        {
+          "id": "EV-03",
+          "text": "合法稳定就业，指未来可能在居住地就业6个月以上",
+          "source": {
+            "url": "https://www.hndt.gov.cn/grassroots/content/1260617168",
+            "quote": "有合法稳定就业,是指未来可能在居住地就业6个月以上",
+            "date": "2026-09-28"
+          }
+        },
+        {
+          "id": "EV-04",
+          "text": "合法稳定住所，指拥有未来可以在居住地居住6个月以上的住所",
+          "source": {
+            "url": "https://www.hndt.gov.cn/grassroots/content/1260617168",
+            "quote": "有合法稳定住所,是指拥有未来可以在居住地居住6个月以上的住所",
+            "date": "2026-09-28"
+          }
+        },
+        {
+          "id": "EV-05",
+          "text": "连续就读，指在居住地中、小学取得学籍，以及在中职、高校、研究生培养机构取得学籍并接受全日制学历教育的就读",
+          "source": {
+            "url": "https://www.hndt.gov.cn/grassroots/content/1260617168",
+            "quote": "连续就读,是指在居住地中、小学取得学籍的就读,以及在居住地中等职业学校、普通高等学校、具有研究生培养资格的科研机构取得学籍并接受全日制学历教育的就读。",
+            "date": "2026-09-28"
+          }
+        },
+        {
+          "id": "EV-06",
+          "text": "离开常住户口所在地居住半年以上，或符合合法稳定就业、合法稳定住所、连续就读条件之一的，可在居住地申领居住证",
+          "source": {
+            "url": "https://www.bzqc.gov.cn/Jcsd/show/2412821.html",
+            "quote": "公民离开常住户口所在地,到其他市、县(不含常住户口所在地城市内部跨行政区域)居住半年以上,或者符合有合法稳定就业、合法稳定住所、连续就读条件之一的,可以在居住地申领居住证。",
+            "date": "2026-05-15"
+          }
+        },
+        {
+          "id": "EV-07",
+          "text": "合法稳定就业证明材料包括营业执照、劳动合同、缴纳社会保险证明、用人单位出具的劳动关系证明等",
+          "source": {
+            "url": "https://www.hndt.gov.cn/grassroots/content/1260617168",
+            "quote": "(3)合法稳定就业证明材料,包括营业执照、劳动合同、缴纳社会保险证明、用人单位出具的劳动关系证明,或者其他能够证明有合法稳定就业的材料;",
+            "date": "2026-09-28"
+          }
+        },
+        {
+          "id": "EV-08",
+          "text": "连续就读证明材料包括学生证，以及就读学校、科研机构、培训机构出具的能够证明连续就读的材料",
+          "source": {
+            "url": "https://www.hndt.gov.cn/grassroots/content/1260617168",
+            "quote": "(4)连续就读证明材料,包括学生证,就读学校、科研机构、培训机构出具的能够证明连续就读的材料。",
+            "date": "2026-09-28"
+          }
+        },
+        {
+          "id": "EV-09",
+          "text": "所需证明材料为居住登记满6个月、合法稳定住所、合法稳定就业、连续就读四类之一",
+          "source": {
+            "url": "https://www.hndt.gov.cn/grassroots/content/1260617168",
+            "quote": "居住登记满6个月、合法稳定住所、合法稳定就业、连续就读证明材料之一",
+            "date": "2026-09-28"
+          }
+        },
+        {
+          "id": "EV-10",
+          "text": "淮南市大通区口径：自受理之日起7个工作日内完成居住证的制发工作",
+          "source": {
+            "url": "https://www.hndt.gov.cn/grassroots/content/1260617168",
+            "quote": "(五)办理时限 自受理之日起,7个工作日内完成居住证的制发工作。",
+            "date": "2026-09-28"
+          }
+        },
+        {
+          "id": "EV-11",
+          "text": "居住登记满6个月的证明材料以派出所基础信息系统打印的《流动人口居住凭证》为依据",
+          "source": {
+            "url": "https://www.hndt.gov.cn/grassroots/content/1260617168",
+            "quote": "(1)居住登记满6个月材料,以“派出所基础信息系统”中打印的《流动人口居住凭证》为依据。",
+            "date": "2026-09-28"
+          }
+        },
+        {
+          "id": "EV-12",
+          "text": "居住证申领不收取费用",
+          "source": {
+            "url": "https://www.maoji.gov.cn/grassroots/118322641/1260443019.html",
+            "quote": "(七)收费依据:《居住证暂行条例》《公安部户口居民身份证管理工作规范(试行)》(公通字〔2021〕12号)、《安徽省户政管理工作规范》(皖公通〔2021〕20号)等相关文件均未规定居住证申领需要收费。",
+            "date": "2026-02-26"
+          }
+        }
+      ],
+      "evidence_second_source": [
+        {
+          "id": "EV-01",
+          "status": "confirmed",
+          "url": "https://www.maoji.gov.cn/grassroots/118322641/1260443019.html",
+          "note": "毛集实验区页逐字给出同一四项条件与“满足以下条件之一”表述"
+        },
+        {
+          "id": "EV-02",
+          "status": "confirmed",
+          "url": "https://www.shucheng.gov.cn/public/6617801/38484719.html",
+          "note": "舒城县页同样写明“指在《安徽省派出所基础工作管理系统》中登记流动人口居住信息满6个月”（该页数字为全角）"
+        },
+        {
+          "id": "EV-03",
+          "status": "confirmed",
+          "url": "https://www.shucheng.gov.cn/public/6617991/33208801.html",
+          "note": "舒城县高峰乡页写明“有合法稳定就业,是指未来可能在居住地就业6个月以上”"
+        },
+        {
+          "id": "EV-04",
+          "status": "confirmed",
+          "url": "https://www.bzqc.gov.cn/Jcsd/show/2412821.html",
+          "note": "谯城区页写明“有合法稳定住所,是指拥有未来可以在居住地居住半年以上的住所”"
+        },
+        {
+          "id": "EV-05",
+          "status": "confirmed",
+          "url": "https://www.bzqc.gov.cn/Jcsd/show/2412821.html",
+          "note": "谯城区页逐字给出“连续就读”的同一范围，含中、小学学籍"
+        },
+        {
+          "id": "EV-06",
+          "status": "confirmed",
+          "url": "https://www.maoji.gov.cn/grassroots/118322641/1260443019.html",
+          "note": "毛集实验区页在“办理条件”中给出同一居住半年以上/三类条件之一的表述"
+        },
+        {
+          "id": "EV-07",
+          "status": "confirmed",
+          "url": "https://www.shucheng.gov.cn/public/6617801/38484719.html",
+          "note": "舒城县页列出营业执照、劳动合同、缴纳社会保险证明、用人单位劳动关系证明同一组材料"
+        },
+        {
+          "id": "EV-08",
+          "status": "confirmed",
+          "url": "https://www.shucheng.gov.cn/public/6617991/33208801.html",
+          "note": "舒城县高峰乡页写明“学生证,或就读学校出具的能够证明连续就读的材料”"
+        },
+        {
+          "id": "EV-09",
+          "status": "confirmed",
+          "url": "https://www.shucheng.gov.cn/public/6617801/38484719.html",
+          "note": "舒城县页同样写“居住登记满6个月、合法稳定住所、合法稳定就业、连续就读证明材料之一”"
+        },
+        {
+          "id": "EV-10",
+          "status": "single_source",
+          "url": "https://www.shucheng.gov.cn/public/6617991/33208801.html",
+          "note": "办理时限按地而异，7个工作日仅淮南市大通区口径：舒城为5个工作日、亳州谯城为IC卡4个工作日（电子居住证3个），故本条无法由第二来源确认，未用于任何判定结论"
+        },
+        {
+          "id": "EV-11",
+          "status": "confirmed",
+          "url": "https://www.maoji.gov.cn/grassroots/118322641/1260443019.html",
+          "note": "毛集实验区页给出逐字相同的《流动人口居住凭证》依据表述"
+        },
+        {
+          "id": "EV-12",
+          "status": "confirmed",
+          "url": "https://www.shucheng.gov.cn/public/6617801/38484719.html",
+          "note": "舒城县页写明“收费依据及标准:免费”"
+        }
+      ],
+      "notes": "题型=分类判定；只考公开的居住证申领条件与所需材料，不下法律意见。四例均按公开规定的“满足以下条件之一”判定：乙（登记满6个月）符合（EV-01、EV-02），丙（在居住地有劳动合同＝合法稳定就业，EV-03）符合，丁（在居住地读小学＝连续就读，EV-05）符合，甲（登记仅3个月且无其他条件）不符合。材料问项：丙以合法稳定就业为由申领，证明材料为劳动合同/营业执照/用人单位劳动关系证明等（EV-07、EV-09），该组材料在三地公开口径中一致。口径差异说明：所需材料中的照片张数、居住地址说明等要求属地方细则且各地不一（淮南要1寸照片2张、舒城要相片1张、亳州要居住地址说明），故题面只问“哪类证明材料”，不问照片张数。EV-10（办理时限）与 EV-12（收费）未被任何金标卡引用：时限按地而异、收费不属题面所问，二者仅作背景事实保留，并已被 G92、G93 两条干扰项的 why_wrong 引用。引用纪律：每条 source.quote 均逐字抄自 web_search 返回的页面正文 content 字段（该工具把正文里的全角逗号/分号/冒号/括号统一渲染为半角，与页面原文仅标点字形差异；已用沙箱直连抓取页面正文做过逐字比对，剔除空白与标点字形后完全一致）。推断类条目：EV 中不含任何需要读者自行推得的结论；凡结论需要把两条事实对应起来才能成立，已写进对应金标卡的 decision_changed 字段。",
+      "evidence_hash": "sha256:95e94e0263259f49",
+      "gold_hash": "sha256:560da7ce6d261955"
+    },
+    {
+      "task_id": "D06",
+      "title": "个人所得税专项附加扣除标准的规则应用",
+      "domain": "规则应用（个人所得税专项附加扣除标准的成文规则）",
+      "ask": "个税专项附加扣除：独生子女、父母满60岁、2岁幼儿、6岁在读子女、首套住房贷款，每月可扣多少元？幼儿可否再扣子女教育？",
+      "conclusion_space": [
+        {
+          "id": "C1",
+          "text": "该纳税人每月可扣除合计8000元（3岁以下婴幼儿照护2000元＋子女教育2000元＋赡养老人3000元＋住房贷款利息1000元）"
+        },
+        {
+          "id": "C2",
+          "text": "2岁幼儿只适用“3岁以下婴幼儿照护”扣除，不能再叠加“子女教育”扣除"
+        },
+        {
+          "id": "C3",
+          "text": "独生子女赡养年满60周岁的父母，按每月3000元定额扣除"
+        },
+        {
+          "id": "C4",
+          "text": "有首套住房贷款，可按住房贷款利息每月1000元扣除"
+        }
+      ],
+      "key_conclusions": [
+        "C1",
+        "C2"
+      ],
+      "evidence": [
+        {
+          "id": "EV-01",
+          "text": "3岁以下婴幼儿照护、子女教育专项附加扣除标准由每孩每月1000元提高到2000元",
+          "source": {
+            "url": "https://www.gov.cn/zhengce/202308/content_6901294.htm",
+            "quote": "自2023年1月1日起,提高3岁以下婴幼儿照护、子女教育和赡养老人3项专项附加扣除标准。其中,3岁以下婴幼儿照护、子女教育专项附加扣除标准由现行每孩每月1000元提高到2000元",
+            "date": "2023-08-31"
+          }
+        },
+        {
+          "id": "EV-02",
+          "text": "赡养老人扣除标准提高到每月3000元，独生子女定额扣除，非独生子女分摊且每人不超过每月1500元",
+          "source": {
+            "url": "https://www.gov.cn/zhengce/202308/content_6901294.htm",
+            "quote": "赡养老人专项附加扣除标准由每月2000元提高到3000元,独生子女按照每月3000元的标准定额扣除,非独生子女与兄弟姐妹分摊每月3000元的扣除额度,每人分摊的额度不超过每月1500元。",
+            "date": "2023-08-31"
+          }
+        },
+        {
+          "id": "EV-03",
+          "text": "每个孩子从出生到完成学历教育，其父母每个月可以在税前扣除2000元",
+          "source": {
+            "url": "https://www.gov.cn/zhengce/202308/content_6901294.htm",
+            "quote": "也就是说,每个孩子从出生到完成学历教育,其父母每个月可以在税前扣除2000元,每年2.4万元,这些扣除可以由父母双方分别享受,也可以由其中一方享受",
+            "date": "2023-08-31"
+          }
+        },
+        {
+          "id": "EV-04",
+          "text": "专项附加扣除共7项，在每月5000元基本减除费用标准基础上叠加扣除",
+          "source": {
+            "url": "https://www.gov.cn/zhengce/202308/content_6901294.htm",
+            "quote": "设立了3岁以下婴幼儿照护、子女教育、继续教育、大病医疗、住房贷款利息、住房租金、赡养老人等7项专项附加扣除,在每月5000元的基本减除费用标准基础上,再予以叠加扣除",
+            "date": "2023-08-31"
+          }
+        },
+        {
+          "id": "EV-05",
+          "text": "住房贷款利息每月1000元，住房租金按城市分档为每月1500/1100/800元",
+          "source": {
+            "url": "https://www.ce.cn/xwzx/gnsz/gdxw/202512/t20251231_2675559.shtml",
+            "quote": "住房贷款利息:每月1000元; 住房租金:按城市分档,1500/1100/800元每月;",
+            "date": "2025-12-31"
+          }
+        },
+        {
+          "id": "EV-06",
+          "text": "住房贷款利息与住房租金两项不可同时享受",
+          "source": {
+            "url": "https://www.ce.cn/xwzx/gnsz/gdxw/202512/t20251231_2675559.shtml",
+            "quote": "住房贷款利息与住房租金两项不可同时享受。如在工作城市无自有住房,应填报住房租金扣除;如拥有首套住房贷款,应填报住房贷款利息扣除。",
+            "date": "2025-12-31"
+          }
+        },
+        {
+          "id": "EV-07",
+          "text": "赡养年满60岁的父母可享受赡养老人扣除，与父母是否有退休金无关",
+          "source": {
+            "url": "https://www.ce.cn/xwzx/gnsz/gdxw/202512/t20251231_2675559.shtml",
+            "quote": "纳税人赡养年满60岁的父母,可以享受赡养老人专项附加扣除。老人是否有退休金,不影响纳税人享受专项附加扣除政策。",
+            "date": "2025-12-31"
+          }
+        },
+        {
+          "id": "EV-08",
+          "text": "独生子女按一个月3000元定额扣除，非独生子女分摊且每人上限每月1500元",
+          "source": {
+            "url": "https://www.ce.cn/xwzx/gnsz/gdxw/202512/t20251231_2675559.shtml",
+            "quote": "如果是独生子女,按照一个月3000元的扣除标准定额扣除。 如果是非独生子女,需要与所有兄弟姐妹分摊3000元的扣除额度,每个人分摊的额度最多不得超过每月1500元。",
+            "date": "2025-12-31"
+          }
+        },
+        {
+          "id": "EV-09",
+          "text": "填写婴幼儿照护与子女教育两项扣除时，每个子女每月可抵扣2000元",
+          "source": {
+            "url": "https://www.ce.cn/xwzx/gnsz/gdxw/202512/t20251231_2675559.shtml",
+            "quote": "填写“3岁以下婴幼儿照护”和“子女教育”两项专项附加扣除时,每个子女每月可抵扣2000元,多子女家庭享受的抵扣额度更高。",
+            "date": "2025-12-31"
+          }
+        },
+        {
+          "id": "EV-10",
+          "text": "3岁以下婴幼儿照护每孩每月2000元，子女教育每孩每月2000元",
+          "source": {
+            "url": "https://www.ce.cn/xwzx/gnsz/gdxw/202512/t20251231_2675559.shtml",
+            "quote": "3岁以下婴幼儿照护:每孩每月2000元; 子女教育:每孩每月2000元;",
+            "date": "2025-12-31"
+          }
+        },
+        {
+          "id": "EV-11",
+          "text": "一个子女每月2000元的扣除标准，可由父母一方享受百分之百扣除",
+          "source": {
+            "url": "https://news.cnr.cn/native/gd/kx/20251231/t20251231_527478262.shtml",
+            "quote": "按照一个子女每月2000元的扣除标准,可以选择由父母一方享受百分之百进行扣除",
+            "date": "2025-12-31"
+          }
+        }
+      ],
+      "evidence_second_source": [
+        {
+          "id": "EV-01",
+          "status": "confirmed",
+          "url": "https://www.ce.cn/xwzx/gnsz/gdxw/202512/t20251231_2675559.shtml",
+          "note": "中国经济网转载税务部门提示：3岁以下婴幼儿照护每孩每月2000元、子女教育每孩每月2000元"
+        },
+        {
+          "id": "EV-02",
+          "status": "confirmed",
+          "url": "https://www.ce.cn/xwzx/gnsz/gdxw/202512/t20251231_2675559.shtml",
+          "note": "同页写“赡养老人:每月3000元,非独生子女每人最多1500元”"
+        },
+        {
+          "id": "EV-03",
+          "status": "confirmed",
+          "url": "https://www.ce.cn/xwzx/gnsz/gdxw/202512/t20251231_2675559.shtml",
+          "note": "同页写“每个子女每月可抵扣2000元”，与“每个孩子每月2000元”同向"
+        },
+        {
+          "id": "EV-04",
+          "status": "confirmed",
+          "url": "https://www.ce.cn/xwzx/gnsz/gdxw/202512/t20251231_2675559.shtml",
+          "note": "同页逐项列出7项专项附加扣除及各自标准，可核对项目清单"
+        },
+        {
+          "id": "EV-05",
+          "status": "confirmed",
+          "url": "https://news.cnr.cn/native/gd/kx/20251231/t20251231_527478262.shtml",
+          "note": "央广网同文列出“住房贷款利息:每月1000元; 住房租金:按城市分档,1500/1100/800元每月;”"
+        },
+        {
+          "id": "EV-06",
+          "status": "confirmed",
+          "url": "https://news.cnr.cn/native/gd/kx/20251231/t20251231_527478262.shtml",
+          "note": "央广网同文逐字含“住房贷款利息与住房租金两项不可同时享受”"
+        },
+        {
+          "id": "EV-07",
+          "status": "confirmed",
+          "url": "https://news.cnr.cn/native/gd/kx/20251231/t20251231_527478262.shtml",
+          "note": "央广网同文逐字含“老人是否有退休金,不影响纳税人享受专项附加扣除政策”"
+        },
+        {
+          "id": "EV-08",
+          "status": "confirmed",
+          "url": "https://www.gov.cn/zhengce/202308/content_6901294.htm",
+          "note": "中国政府网答记者问给出同一3000元定额与1500元分摊上限"
+        },
+        {
+          "id": "EV-09",
+          "status": "confirmed",
+          "url": "https://www.gov.cn/zhengce/202308/content_6901294.htm",
+          "note": "中国政府网答记者问：每个孩子从出生到完成学历教育每月可扣2000元"
+        },
+        {
+          "id": "EV-10",
+          "status": "confirmed",
+          "url": "https://news.cnr.cn/native/gd/kx/20251231/t20251231_527478262.shtml",
+          "note": "央广网同文列出“3岁以下婴幼儿照护:每孩每月2000元; 子女教育:每孩每月2000元;”"
+        },
+        {
+          "id": "EV-11",
+          "status": "confirmed",
+          "url": "https://www.ce.cn/xwzx/gnsz/gdxw/202512/t20251231_2675559.shtml",
+          "note": "中国经济网同页常见问题一写明可由父母一方享受百分之百扣除"
+        }
+      ],
+      "notes": "题型=规则应用；只把成文的专项附加扣除标准套到给定情形上，不涉税情咨询。结论推导：3岁以下婴幼儿照护2000（EV-01、EV-10）＋子女教育2000（EV-01、EV-10）＋赡养老人3000（EV-02、EV-08）＋住房贷款利息1000（EV-05、EV-06）＝每月8000元。关键易错点：同一名子女不能同时按“3岁以下婴幼儿照护”与“子女教育”各扣2000元——EV-03 表述为“每个孩子从出生到完成学历教育,其父母每个月可以在税前扣除2000元”，EV-09 表述为“每个子女每月可抵扣2000元”，故2岁幼儿只计一次。边界说明：非独生子女每人分摊上限1500元（EV-02、EV-08）在本例不适用（题设为独生子女）；住房贷款利息与住房租金互斥（EV-06），本例有首套住房贷款故只计贷款利息、不计租金。口径说明：EV-11 引文在网页与抓取文本之间存在“分别按/分别按照”的字形差异，本条只取两者一致的前半句，结论不依赖该处措辞。引用纪律：每条 source.quote 均逐字抄自 web_search 返回的页面正文 content 字段（该工具把正文里的全角逗号/分号/冒号/括号统一渲染为半角，与页面原文仅标点字形差异；已用沙箱直连抓取页面正文做过逐字比对，剔除空白与标点字形后完全一致）。推断类条目：EV 中不含任何需要读者自行推得的结论；凡结论需要把两条事实对应起来才能成立，已写进对应金标卡的 decision_changed 字段。",
+      "evidence_hash": "sha256:ed5a21f4aa3de3d1",
+      "gold_hash": "sha256:a88e68290498cac5"
+    },
+    {
+      "task_id": "D07",
+      "title": "激活后的网购手机能否七日无理由退货",
+      "domain": "商业/消费决策（网购退换货）",
+      "ask": "店铺注明'激活后不适用七天无理由退货'。消费者3月2日签收、3日激活、9日申请退货，按《七日无理由退货暂行办法》能退吗？",
+      "conclusion_space": [
+        {
+          "id": "C1",
+          "text": "七日无理由退货的七日期间自消费者签收商品的次日开始起算，3月2日签收的手机，其七日期间为3月3日至3月9日，3月9日提出退货通知仍在期限内。"
+        },
+        {
+          "id": "C2",
+          "text": "消费者基于查验需要打开商品包装或为确认商品品质、功能进行合理调试不影响商品完好；超出查验和确认商品品质、功能需要而使用商品、导致商品价值贬损较大的，视为商品不完好；经营者仅以'商品已拆封'为由主张不适用无理由退货的，人民法院不予支持。"
+        },
+        {
+          "id": "C3",
+          "text": "电子电器类商品出现'产生激活、授权信息、不合理的个人使用数据留存等数据类使用痕迹'的，视为商品不完好。"
+        },
+        {
+          "id": "C4",
+          "text": "'一经激活或者试用后价值贬损较大的商品'须经消费者在购买时确认、并在销售必经流程中设置显著确认程序后方可不适用七日无理由退货；无确认程序的，经营者不得拒绝七日无理由退货，擅自以此拒绝退货的按《消费者权益保护法》第五十六条第一款第(八)项处罚。"
+        },
+        {
+          "id": "C5",
+          "text": "经营者以格式条款、通知、声明、店堂告示等方式作出排除或者限制消费者权利的规定，其内容无效。"
+        },
+        {
+          "id": "C6",
+          "text": "本案手机开机激活并留存个人使用数据，已构成使用痕迹、属商品不完好，消费者不能仅因在七日内即要求商家按无理由退货退款。"
+        },
+        {
+          "id": "C7",
+          "text": "网购七日无理由退货的七日自消费者下单之日起算，与签收日无关。"
+        },
+        {
+          "id": "C8",
+          "text": "店铺只要在商品页显著标注'激活后不适用七天无理由退货'，即可合法排除消费者的七日无理由退货权。"
+        }
+      ],
+      "key_conclusions": [
+        "C1",
+        "C4",
+        "C6"
+      ],
+      "evidence": [
+        {
+          "id": "EV-01",
+          "text": "《消费者权益保护法》第二十五条规定，网络、电视、电话、邮购等方式销售商品的，消费者有权自收到商品之日起七日内退货且无需说明理由，但消费者定作、鲜活易腐、在线下载或消费者拆封的数字化商品、交付的报纸期刊四类商品除外。",
+          "source": {
+            "url": "http://www.npc.gov.cn/zgrdw/npc//////xinwen/2013-10/26/content_1811773.htm",
+            "quote": "第二十五条经营者采用网络、电视、电话、邮购等方式销售商品，消费者有权自收到商品之日起七日内退货，且无需说明理由，但下列商品除外： \n （一）消费者定作的； \n （二）鲜活易腐的； \n （三）在线下载或者消费者拆封的音像制品、计算机软件等数字化商品； \n （四）交付的报纸、期刊。",
+            "date": "2013-10-26"
+          }
+        },
+        {
+          "id": "EV-02",
+          "text": "《消费者权益保护法》第二十五条第三款规定，消费者退货的商品应当完好；经营者应当自收到退回商品之日起七日内返还消费者支付的商品价款；退回商品的运费由消费者承担，另有约定的按约定。",
+          "source": {
+            "url": "http://www.npc.gov.cn/zgrdw/npc//////xinwen/2013-10/26/content_1811773.htm",
+            "quote": "消费者退货的商品应当完好。经营者应当自收到退回商品之日起七日内返还消费者支付的商品价款。退回商品的运费由消费者承担；经营者和消费者另有约定的，按照约定。",
+            "date": "2013-10-26"
+          }
+        },
+        {
+          "id": "EV-03",
+          "text": "《消费者权益保护法》第二十六条规定，经营者不得以格式条款、通知、声明、店堂告示等方式作出排除或者限制消费者权利的规定，此类内容无效。",
+          "source": {
+            "url": "http://www.npc.gov.cn/zgrdw/npc//////xinwen/2013-10/26/content_1811773.htm",
+            "quote": "经营者不得以格式条款、通知、声明、店堂告示等方式，作出排除或者限制消费者权利、减轻或者免除经营者责任、加重消费者责任等对消费者不公平、不合理的规定，不得利用格式条款并借助技术手段强制交易。 \n 格式条款、通知、声明、店堂告示等含有前款所列内容的，其内容无效。",
+            "date": "2013-10-26"
+          }
+        },
+        {
+          "id": "EV-04",
+          "text": "《网络购买商品七日无理由退货暂行办法》第六条列举四类不适用七日无理由退货的商品：消费者定作、鲜活易腐、在线下载或消费者拆封的音像制品与计算机软件等数字化商品、交付的报纸期刊。",
+          "source": {
+            "url": "https://www.gzal.gov.cn/zfbm/xscjdglj/zcwj_5708094/202210/t20221027_76920700.html",
+            "quote": "第六条  下列商品不适用七日无理由退货规定： （一）消费者定作的商品； （二）鲜活易腐的商品； （三）在线下载或者消费者拆封的音像制品、计算机软件等数字化商品； （四）交付的报纸、期刊。",
+            "date": "2022-10-27"
+          }
+        },
+        {
+          "id": "EV-05",
+          "text": "《网络购买商品七日无理由退货暂行办法》第七条规定，拆封后易影响人身安全或品质发生改变、一经激活或者试用后价值贬损较大等性质的商品，须经消费者在购买时确认，才可以不适用七日无理由退货。",
+          "source": {
+            "url": "https://www.gzal.gov.cn/zfbm/xscjdglj/zcwj_5708094/202210/t20221027_76920700.html",
+            "quote": "第七条  下列性质的商品经消费者在购买时确认，可以不适用七日无理由退货规定： （一）拆封后易影响人身安全或者生命健康的商品，或者拆封后易导致商品品质发生改变的商品； （二）一经激活或者试用后价值贬损较大的商品； （三）销售时已明示的临近保质期的商品、有瑕疵的商品。",
+            "date": "2022-10-27"
+          }
+        },
+        {
+          "id": "EV-06",
+          "text": "《网络购买商品七日无理由退货暂行办法》第八条规定商品完好的标准，并明确消费者基于查验需要打开商品包装或为确认商品品质、功能进行合理调试不影响商品的完好。",
+          "source": {
+            "url": "https://www.gzal.gov.cn/zfbm/xscjdglj/zcwj_5708094/202210/t20221027_76920700.html",
+            "quote": "第八条  消费者退回的商品应当完好。 商品能够保持原有品质、功能，商品本身、配件、商标标识齐全的，视为商品完好。 消费者基于查验需要而打开商品包装，或者为确认商品的品质、功能而进行合理的调试不影响商品的完好。",
+            "date": "2022-10-27"
+          }
+        },
+        {
+          "id": "EV-07",
+          "text": "《网络购买商品七日无理由退货暂行办法》第九条规定，超出查验和确认商品品质、功能需要而使用商品、导致商品价值贬损较大的，视为商品不完好。",
+          "source": {
+            "url": "https://www.gzal.gov.cn/zfbm/xscjdglj/zcwj_5708094/202210/t20221027_76920700.html",
+            "quote": "第九条  对超出查验和确认商品品质、功能需要而使用商品，导致商品价值贬损较大的，视为商品不完好。",
+            "date": "2022-10-27"
+          }
+        },
+        {
+          "id": "EV-08",
+          "text": "《网络购买商品七日无理由退货暂行办法》第九条第(二)项列举电子电器类商品不完好的判定标准，其中包括产生激活、授权信息、不合理的个人使用数据留存等数据类使用痕迹。",
+          "source": {
+            "url": "https://www.gzal.gov.cn/zfbm/xscjdglj/zcwj_5708094/202210/t20221027_76920700.html",
+            "quote": "（二）电子电器类：进行未经授权的维修、改动，破坏、涂改强制性产品认证标志、指示标贴、机器序列号等，有难以恢复原状的外观类使用痕迹，或者产生激活、授权信息、不合理的个人使用数据留存等数据类使用痕迹；",
+            "date": "2022-10-27"
+          }
+        },
+        {
+          "id": "EV-09",
+          "text": "《网络购买商品七日无理由退货暂行办法》第十条规定，选择无理由退货的消费者应当自收到商品之日起七日内发出退货通知，七日期间自消费者签收商品的次日开始起算。",
+          "source": {
+            "url": "https://www.gzal.gov.cn/zfbm/xscjdglj/zcwj_5708094/202210/t20221027_76920700.html",
+            "quote": "第十条  选择无理由退货的消费者应当自收到商品之日起七日内向网络商品销售者发出退货通知。 七日期间自消费者签收商品的次日开始起算。",
+            "date": "2022-10-27"
+          }
+        },
+        {
+          "id": "EV-10",
+          "text": "《网络购买商品七日无理由退货暂行办法》第二十条规定，符合第七条的商品，销售者应在销售必经流程中设置显著的确认程序供消费者对单次购买行为进行确认；如无确认，经营者不得拒绝七日无理由退货。",
+          "source": {
+            "url": "https://www.gzal.gov.cn/zfbm/xscjdglj/zcwj_5708094/202210/t20221027_76920700.html",
+            "quote": "符合本办法第七条规定的商品，网络商品销售者应当在商品销售必经流程中设置显著的确认程序，供消费者对单次购买行为进行确认。如无确认，网络商品销售者不得拒绝七日无理由退货。",
+            "date": "2022-10-27"
+          }
+        },
+        {
+          "id": "EV-11",
+          "text": "《网络购买商品七日无理由退货暂行办法》第三十一条规定，未经消费者在购买时确认擅自以商品不适用七日无理由退货为由拒绝退货，或者以消费者已拆封、查验影响商品完好为由拒绝退货的，依《消费者权益保护法》第五十六条第一款第(八)项处罚。",
+          "source": {
+            "url": "https://www.gzal.gov.cn/zfbm/xscjdglj/zcwj_5708094/202210/t20221027_76920700.html",
+            "quote": "（一）未经消费者在购买时确认，擅自以商品不适用七日无理由退货为由拒绝退货，或者以消费者已拆封、查验影响商品完好为由拒绝退货的；",
+            "date": "2022-10-27"
+          }
+        },
+        {
+          "id": "EV-12",
+          "text": "最高人民法院《关于审理网络消费纠纷案件适用法律若干问题的规定(一)》第三条规定，消费者因检查商品的必要对商品进行拆封查验且不影响商品完好，经营者以商品已拆封为由主张不适用七日无理由退货制度的，人民法院不予支持。",
+          "source": {
+            "url": "https://www.court.gov.cn/fabu/xiangqing/348031.html",
+            "quote": "第三条 消费者因检查商品的必要对商品进行拆封查验且不影响商品完好，电子商务经营者以商品已拆封为由主张不适用消费者权益保护法第二十五条规定的无理由退货制度的，人民法院不予支持，但法律另有规定的除外。",
+            "date": "2022-03-01"
+          }
+        }
+      ],
+      "evidence_second_source": [
+        {
+          "id": "EV-01",
+          "status": "confirmed",
+          "url": "https://www.gov.cn/flfg/2013-10/25/content_2516547.htm",
+          "note": "中国政府网《全国人民代表大会常务委员会关于修改〈中华人民共和国消费者权益保护法〉的决定》原文'增加一条，作为第二十五条'，所列四类除外商品与人大网文本逐字一致。"
+        },
+        {
+          "id": "EV-02",
+          "status": "confirmed",
+          "url": "https://slxfy.jxfy.gov.cn/article/detail/2026/06/id/9366305.shtml",
+          "note": "上栗县人民法院'法条链接'逐字引用《消费者权益保护法》第二十五条第三款，含'商品应当完好'、'七日内返还'与'运费由消费者承担'。"
+        },
+        {
+          "id": "EV-03",
+          "status": "confirmed",
+          "url": "https://www.lxs.gov.cn/lxs/zwgk/zjdbmxx/bm/lxsscjdglj/xfwq/art/2026/art_38775ca9f6ca485785f8c3bcc2ba19c8.html",
+          "note": "临夏市人民政府'消费维权 你问我答(六)'第56问逐字引用《消费者权益保护法》第二十六条三款，末句为'其内容无效'。"
+        },
+        {
+          "id": "EV-04",
+          "status": "confirmed",
+          "url": "https://www.dongguanshi315.com/html/web//flfg/1531541156937240577.html",
+          "note": "东莞市消费者委员会转载《网络购买商品七日无理由退货暂行办法》（2020年第31号令修订版），第六条四项除外商品与主来源逐字一致。"
+        },
+        {
+          "id": "EV-05",
+          "status": "confirmed",
+          "url": "https://slxfy.jxfy.gov.cn/article/detail/2026/06/id/9366305.shtml",
+          "note": "上栗县人民法院'法条链接'逐字引用《网络购买商品七日无理由退货暂行办法》第七条，含'一经激活或者试用后价值贬损较大的商品'。"
+        },
+        {
+          "id": "EV-06",
+          "status": "confirmed",
+          "url": "https://www.lxs.gov.cn/lxs/zwgk/zjdbmxx/bm/lxsscjdglj/xfwq/art/2026/art_38775ca9f6ca485785f8c3bcc2ba19c8.html",
+          "note": "临夏市人民政府第60问逐字引用《网络购买商品七日无理由退货暂行办法》第八条全文，含'基于查验需要而打开商品包装……合理的调试不影响商品的完好'。"
+        },
+        {
+          "id": "EV-07",
+          "status": "confirmed",
+          "url": "https://www.jxth.gov.cn/xxgk-show-10233773.html",
+          "note": "泰和县人民政府'市场监管规则和标准'栏目转载同一部令2020年修订版，第九条首句表述一致。"
+        },
+        {
+          "id": "EV-08",
+          "status": "confirmed",
+          "url": "https://www.dongguanshi315.com/html/web//flfg/1531541156937240577.html",
+          "note": "东莞市消费者委员会转载版第九条第(二)项电子电器类使用痕迹标准逐字一致。"
+        },
+        {
+          "id": "EV-09",
+          "status": "confirmed",
+          "url": "https://www.jxth.gov.cn/xxgk-show-10233773.html",
+          "note": "泰和县人民政府转载版第十条'七日期间自消费者签收商品的次日开始起算'逐字一致。"
+        },
+        {
+          "id": "EV-10",
+          "status": "confirmed",
+          "url": "https://www.dongguanshi315.com/html/web//flfg/1531541156937240577.html",
+          "note": "东莞市消费者委员会转载版第二十条'如无确认，经营者不得拒绝七日无理由退货'逐字一致。"
+        },
+        {
+          "id": "EV-11",
+          "status": "confirmed",
+          "url": "https://www.dongguanshi315.com/html/web//flfg/1531541156937240577.html",
+          "note": "东莞市消费者委员会转载版第三十一条第(一)项处罚情形逐字一致。"
+        },
+        {
+          "id": "EV-12",
+          "status": "confirmed",
+          "url": "https://www.lxs.gov.cn/lxs/zwgk/zjdbmxx/bm/lxsscjdglj/xfwq/art/2026/art_38775ca9f6ca485785f8c3bcc2ba19c8.html",
+          "note": "临夏市人民政府第60问逐字引用《关于审理网络消费纠纷案件适用法律若干问题的规定（一）》第三条；另有法治网转载稿 http://m.legaldaily.com.cn/zt/content/2022-03/29/content_8694707.htm 载同一条。"
+        }
+      ],
+      "notes": "构建说明：(1)本题的冲突是两条成文规则的冲突——商家在商品页单方注明'激活后不适用七天无理由退货'（《暂行办法》第七条第(二)类的适用前提是'经消费者在购买时确认'并配合第二十条的显著确认程序），与《暂行办法》第八、九条的完好标准之间的冲突；结论 C6 是权衡结果：店铺不能仅凭'已激活'这一理由拒退（程序上不合法，EV-10/EV-11），而消费者本案的机器因激活产生使用痕迹、属商品不完好，因而在实体上仍不能主张无理由退货——两条结论同时成立、互不矛盾。(2)12 条依据全部取得逐字原文（引文由脚本从页面正文原样抽取并逐条回验命中），第二来源 12/12（100%），均在 evidence_second_source 中给出印证位置。(3)推断类：结论 C1 的'3月3日至3月9日为七日'与结论 C6 的'本案机器属不完好'，是在 EV-09 起算规则与 EV-08 使用痕迹标准上对题面给定事实作一次套用，结论文本已自带年限与事实，可独立核验，故未单列为推断类依据条目，理由记于本字段。(4)source.date 为可确认的发布日期；页面未标注发布日的一律取检索访问日 2026-10-21。(5)引文中的标点、括号、书名号与页面原文完全一致（含人大网'（一）'式全角括号与法释〔2022〕8号式书名号），仅把页面换行折叠为单个空格。",
+      "evidence_hash": "sha256:062377249d54be78",
+      "gold_hash": "sha256:80b9fcb1bb168222"
+    },
+    {
+      "task_id": "D08",
+      "title": "一级建造师报考的学历档位与工作年限比较",
+      "domain": "职业/岗位公开任职条件与资格要求（建造师执业资格）",
+      "ask": "2026年一级建造师：甲工程类专科、施工管理3年11个月；乙工学门类本科、3年；丙工学门类硕士、1年8个月，谁可报名？",
+      "conclusion_space": [
+        {
+          "id": "C1",
+          "text": "一级建造师报考条件按学历档次分档：工程类或工程经济类专业大学专科学历需从事建设工程项目施工管理工作满4年，工学门类、管理科学与工程类专业大学本科学历满3年、硕士学位满2年、博士学位满1年；工作年限指从事建设工程项目施工管理工作的年限；自2022年起首次报考者按新版专业对照表选择允许报名专业。"
+        },
+        {
+          "id": "C2",
+          "text": "乙（工学门类、管理科学与工程类专业大学本科学历，从事建设工程项目施工管理工作满3年）符合2026年度一级建造师报名条件。"
+        },
+        {
+          "id": "C3",
+          "text": "甲（工程类或工程经济类专业大学专科学历，从事建设工程项目施工管理工作3年11个月）不符合2026年度一级建造师报名条件，专科学历须满4年。"
+        },
+        {
+          "id": "C4",
+          "text": "丙（工学门类、管理科学与工程类专业硕士学位，从事建设工程项目施工管理工作1年8个月）不符合2026年度一级建造师报名条件，硕士学位学历须满2年。"
+        },
+        {
+          "id": "C5",
+          "text": "甲、乙、丙三人都符合2026年度一级建造师报名条件。"
+        },
+        {
+          "id": "C6",
+          "text": "硕士及以上学历者无需满足工作年限要求即可报考一级建造师。"
+        },
+        {
+          "id": "C7",
+          "text": "免试口径：于2003年12月31日前取得建设部颁发的《建筑业企业一级项目经理资质证书》，并符合受聘担任工程或工程经济类高级专业技术职务、或具有工程类或工程经济类大学专科以上学历并从事建设项目施工管理工作满20年两个条件之一的人员，可免试《建设工程经济》和《建设工程项目管理》2个科目。"
+        },
+        {
+          "id": "C8",
+          "text": "考试与报名组织口径：2026年度一级建造师考试为9月12日、13日两天，设4个科目；考全科者须在连续2个考试年度内通过全部应试科目；考试实行属地化管理，报考人员原则上应在工作地、居住地报名；西藏考区2026年度网上报名时间为6月29日至7月8日，网上缴费截止7月9日23时59分。"
+        }
+      ],
+      "key_conclusions": [
+        "C2",
+        "C3",
+        "C4"
+      ],
+      "evidence": [
+        {
+          "id": "EV-01",
+          "text": "一级建造师报考条件：取得工程类或工程经济类专业大学专科学历，从事建设工程项目施工管理工作满4年；取得工学门类、管理科学与工程类专业大学本科学历，从事建设工程项目施工管理工作满3年。",
+          "source": {
+            "url": "https://www.ah.gov.cn/site/tpl/7091?ssqdId=4028e6a09b464633019c0915af55242e&ssqdCode=34df09f6f4634a749f7e3ad4580adaf7&activeId=6785131",
+            "quote": "（一）取得工程类或工程经济类专业大学专科学历，从事建设工程项目施工管理工作满4年。 （二）取得工学门类、管理科学与工程类专业大学本科学历，从事建设工程项目施工管理工作满3年。",
+            "date": "2026-10-21"
+          }
+        },
+        {
+          "id": "EV-02",
+          "text": "一级建造师报考条件：取得工学门类、管理科学与工程类专业硕士学位，从事建设工程项目施工管理工作满2年；取得工学门类、管理科学与工程类专业博士学位，从事建设工程项目施工管理工作满1年。",
+          "source": {
+            "url": "https://www.ah.gov.cn/site/tpl/7091?ssqdId=4028e6a09b464633019c0915af55242e&ssqdCode=34df09f6f4634a749f7e3ad4580adaf7&activeId=6785131",
+            "quote": "（三）取得工学门类、管理科学与工程类专业硕士学位，从事建设工程项目施工管理工作满2年。 （四）取得工学门类、管理科学与工程类专业博士学位，从事建设工程项目施工管理工作满1年。",
+            "date": "2026-10-21"
+          }
+        },
+        {
+          "id": "EV-03",
+          "text": "自2022年起首次报考一级建造师职业资格考试的人员，参照住房城乡建设部依据教育部《普通高等学校本科专业目录》编制的新版专业对照表选择允许报名专业。",
+          "source": {
+            "url": "https://www.linzhouxian.gov.cn/lzxrmzf/lzxzkly/202606/26b21c6b230d49429ecaffb1fc307454.shtml",
+            "quote": "关于学历专业要求。为进一步明确报考一级建造师职业资格考试的学历专业要求，住房城乡建设部有关部门根据教育部《普通高等学校本科专业目录》（ 1998 年版、 2012 年版、 2020 年版）及原专业对照表编制了新版专业对照表。自 2022 年起，首次报考一级建造师职业资格考试的人员，参照新版专业对照表内容选择允许报名专业",
+            "date": "2026-06-17"
+          }
+        },
+        {
+          "id": "EV-04",
+          "text": "于2003年12月31日前取得建设部颁发的《建筑业企业一级项目经理资质证书》，并符合下列条件之一的人员，可免试《建设工程经济》和《建设工程项目管理》2个科目，只参加《建设工程法规及相关知识》和《专业工程管理与实务》2个科目的考试。",
+          "source": {
+            "url": "https://www.linzhouxian.gov.cn/lzxrmzf/lzxzkly/202606/26b21c6b230d49429ecaffb1fc307454.shtml",
+            "quote": "（三）免试条件。符合《建造师执业资格制度暂行规定》有关报名条件，于 2003 年 12 月 31 日前，取得建设部颁发的《建筑业企业一级项目经理资质证书》，并符合下列条件之一的人员，可免试《建设工程经济》和《建设工程项目管理》 2 个科目，只参加《建设工程法规及相关知识》和《专业工程管理与实务》 2 个科目的考试：",
+            "date": "2026-06-17"
+          }
+        },
+        {
+          "id": "EV-05",
+          "text": "免试条件的第二项：具有工程类或工程经济类大学专科以上学历并从事建设项目施工管理工作满20年。",
+          "source": {
+            "url": "https://www.linzhouxian.gov.cn/lzxrmzf/lzxzkly/202606/26b21c6b230d49429ecaffb1fc307454.shtml",
+            "quote": "具有工程类或工程经济类大学专科以上学历并从事建设项目施工管理工作满 20 年。",
+            "date": "2026-06-17"
+          }
+        },
+        {
+          "id": "EV-06",
+          "text": "一级建造师考试设《建设工程经济》《建设工程法规及相关知识》《建设工程项目管理》《专业工程管理与实务》4个科目；参加4个科目考试（级别为考全科）的人员须在连续2个考试年度内通过全部应试科目。",
+          "source": {
+            "url": "https://www.linzhouxian.gov.cn/lzxrmzf/lzxzkly/202606/26b21c6b230d49429ecaffb1fc307454.shtml",
+            "quote": "（一）考试设《建设工程经济》（客观题）、《建设工程法规及相关知识》（客观题）、《建设工程项目管理》（客观题）和《专业工程管理与实务》（主、客观题混合） 4 个科目。参加 4 个科目考试（级别为考全科）的 报考人员须在连续 2 个考试年度内通过全部应试科目",
+            "date": "2026-06-17"
+          }
+        },
+        {
+          "id": "EV-07",
+          "text": "2026年度一级建造师考试时间为9月12日、13日：12日上下午为《建设工程经济》《建设工程法规及相关知识》，13日上下午为《建设工程项目管理》《专业工程管理与实务》（10个专业）。",
+          "source": {
+            "url": "https://www.linzhouxian.gov.cn/lzxrmzf/lzxzkly/202606/26b21c6b230d49429ecaffb1fc307454.shtml",
+            "quote": "9 月 12 日 上午 09:00 － 11:00 建设工程经济 下午 14:00 － 17:00 建设工程法规及相关知识 9 月 13 日 上午 09:00 － 12:00 建设工程项目管理 下午 14:00 － 18:00 专业工程管理与实务（ 10 个专业）",
+            "date": "2026-06-17"
+          }
+        },
+        {
+          "id": "EV-08",
+          "text": "一级建造师考试实行属地化管理：报考人员的工作地或居住地在属地范围内的，方可在该考区报名参加考试。",
+          "source": {
+            "url": "https://www.linzhouxian.gov.cn/lzxrmzf/lzxzkly/202606/26b21c6b230d49429ecaffb1fc307454.shtml",
+            "quote": "本次考试实行属地化管理，报考人员的工作地或居住地在西藏区域内，方可在西藏考区报名参加考试",
+            "date": "2026-06-17"
+          }
+        },
+        {
+          "id": "EV-09",
+          "text": "西藏考区2026年度一级建造师网上报名时间为6月29日至7月8日，本次考试不设置补报名、补缴费环节。",
+          "source": {
+            "url": "https://www.linzhouxian.gov.cn/lzxrmzf/lzxzkly/202606/26b21c6b230d49429ecaffb1fc307454.shtml",
+            "quote": "网上报名时间： 6 月 29 日 — 7 月 8 日， 本次考试不设置补报名、补缴费环节，请报考人员及时完成报名及缴费工作。",
+            "date": "2026-06-17"
+          }
+        },
+        {
+          "id": "EV-10",
+          "text": "西藏考区2026年度一级建造师网上缴费时间为6月29日至7月9日，截止时间为7月9日23时59分。",
+          "source": {
+            "url": "https://www.linzhouxian.gov.cn/lzxrmzf/lzxzkly/202606/26b21c6b230d49429ecaffb1fc307454.shtml",
+            "quote": "网上缴费时间： 6 月 29 日 — 7 月 9 日（截止时间为 7 月 9 日 23:59 ）。",
+            "date": "2026-06-17"
+          }
+        },
+        {
+          "id": "EV-11",
+          "text": "依据《建造师执业资格制度暂行规定》（人发〔2002〕111号）第六条，一级建造师执业资格实行统一大纲、统一命题、统一组织的考试制度，由人事部、建设部共同组织实施，原则上每年举行一次考试。",
+          "source": {
+            "url": "https://www.ah.gov.cn/site/tpl/7091?ssqdId=4028e6a09b464633019c0915af55242e&ssqdCode=34df09f6f4634a749f7e3ad4580adaf7&activeId=6785131",
+            "quote": "《关于印发〈建造师执业资格制度暂行规定〉的通知》（人发〔2002〕111号）第六条：一级建造师执业资格实行统一大纲、统一命题、统一组织的考试制度，由人事部、建设部共同组织实施，原则上每年举行一次考试。",
+            "date": "2026-10-21"
+          }
+        }
+      ],
+      "evidence_second_source": [
+        {
+          "id": "EV-01",
+          "status": "confirmed",
+          "url": "https://rst.qinghai.gov.cn/zxfw/tzxx/query/T2310345.html",
+          "note": "青海省人力资源和社会保障厅咨询答复逐条列出人社部发〔2022〕8号调整后的报考条件：(1)专科学历满4年、(2)本科学历满3年，文字一致；西藏2026年度通知附件1同条。"
+        },
+        {
+          "id": "EV-02",
+          "status": "confirmed",
+          "url": "https://rst.qinghai.gov.cn/zxfw/tzxx/query/T2310345.html",
+          "note": "青海省人社厅答复同页第(3)(4)项：硕士学位满2年、博士学位满1年；西藏2026年度通知附件1第(一)项3、4条一致。"
+        },
+        {
+          "id": "EV-03",
+          "status": "confirmed",
+          "url": "http://rsj.hd.gov.cn/zxzx/gggs/202209/t20220919_2141268.html",
+          "note": "邯郸市人事培训考试中心2022年度考务公告载'自2022年起，首次报考一级建造师职业资格考试的人员，参照新版专业对照表内容选择允许报名专业'。"
+        },
+        {
+          "id": "EV-04",
+          "status": "confirmed",
+          "url": "http://rsj.hd.gov.cn/zxzx/gggs/202606/t20260622_2206431.html",
+          "note": "邯郸考区2026年度公告附件2第二条载同一免试条件与免试科目数（2003年12月31日前取得一级项目经理资质证书、免试2个科目）。"
+        },
+        {
+          "id": "EV-05",
+          "status": "confirmed",
+          "url": "http://rsj.hd.gov.cn/zxzx/gggs/202606/t20260622_2206431.html",
+          "note": "邯郸考区2026年度公告附件2第二条第2款'具有工程类或工程经济类大学专科以上学历并从事建设项目施工管理工作满20年'逐字一致。"
+        },
+        {
+          "id": "EV-06",
+          "status": "confirmed",
+          "url": "http://rsj.hd.gov.cn/zxzx/gggs/202606/t20260622_2206431.html",
+          "note": "邯郸考区2026年度公告'一、考试设置'载'参加4个科目考试(级别为考全科)的人员须在连续2个考试年度内通过全部应试科目'。"
+        },
+        {
+          "id": "EV-07",
+          "status": "confirmed",
+          "url": "http://rsj.hd.gov.cn/zxzx/gggs/202606/t20260622_2206431.html",
+          "note": "邯郸考区2026年度公告载'2026年度一级建造师职业资格考试定于9月12、13日举行'，与西藏考区日程表一致。"
+        },
+        {
+          "id": "EV-08",
+          "status": "confirmed",
+          "url": "http://rsj.hd.gov.cn/zxzx/gggs/202606/t20260622_2206431.html",
+          "note": "邯郸考区2026年度公告'报考人员原则上应在工作地、居住地报名参加考试'，与西藏'属地化管理'口径一致。"
+        },
+        {
+          "id": "EV-09",
+          "status": "single_source",
+          "url": "http://rsj.hd.gov.cn/zxzx/gggs/202606/t20260622_2206431.html",
+          "note": "各考区按属地化管理自行排期，具体日期不可互相印证：邯郸考区2026年度为6月26日9时至7月6日17时提交报考信息（见该公告报名流程与工作安排表），与西藏考区日期不同但'限时网上提交、过期不设补报名'的口径相同，故标 single_source。"
+        },
+        {
+          "id": "EV-10",
+          "status": "single_source",
+          "url": "http://rsj.hd.gov.cn/zxzx/gggs/202606/t20260622_2206431.html",
+          "note": "邯郸考区2026年度为7月8日17时前网上缴费，与西藏考区7月9日23时59分截止日期不同，故日期不可互相印证；'缴费成功方完成报名、逾期视为放弃'的口径一致。"
+        },
+        {
+          "id": "EV-11",
+          "status": "confirmed",
+          "url": "http://rsj.hd.gov.cn/zxzx/gggs/202606/t20260622_2206431.html",
+          "note": "邯郸考区2026年度公告引述人发〔2002〕111号'建造师执业资格制度适用于从事建设工程项目总承包、施工管理的专业技术人员'，与安徽'设定依据'栏所引同文第六条互相印证。"
+        }
+      ],
+      "notes": "构建说明：(1)本题是数量比较题，比较同一份公开报考条件（人社部发〔2022〕8号自2022年起的4/3/2/1年限阶梯）落在三个人身上的余量：甲差1个月、丙差4个月、乙恰好达标（边界样本）。题面'施工管理'即结论 C1 所述'从事建设工程项目施工管理工作'，该术语在 EV-01 逐字出现。(2)领域刻意避开面向高中毕业生的升学与专业选择类题目（与 TEST 集 U1 重叠），本题为职业资格准入的年限与人数比较。(3)第二来源 9/11 条 confirmed（82%），EV-09、EV-10（西藏考区专属报名与缴费时段）为 single_source，原因是各考区属地排期、日期互不相同，已在 evidence_second_source 与本字段写明。(4)推断类：结论 C2、C3、C4 是在 EV-01/EV-02 的年限阶梯上对题面给定年限作一次比较，结论文本已自带学历与年限，可独立核验，未单列推断类依据。(5)结论 C5、C6 为错误项，由干扰项 G90、G91、G92 承担；结论 C8 汇总考试与报名组织口径，各分句分别可在 EV-06/EV-07/EV-08/EV-09 找到逐字出处。(6)source.date 为可确认的发布日期；安徽省政府事项目录页、青海省人社厅答复页未标注发布日，取检索访问日 2026-10-21。(7)引文标点与页面原文一致；西藏考区页面的数字与单位之间原有空格照录（如'满 20 年'）。",
+      "evidence_hash": "sha256:327c297f2bde64ab",
+      "gold_hash": "sha256:a6e59b5b17b31234"
+    },
+    {
+      "task_id": "D09",
+      "title": "2026年春运19人团队的订票与退票规划",
+      "domain": "时间分配/资源分配（春运铁路购票、退改签与时间窗口）",
+      "ask": "2026年春运，某公司19名员工要买2月10日同一天的车票，1月20日才启动订票。按铁路公布的规则，下列说法正确的是？",
+      "conclusion_space": [
+        {
+          "id": "C1",
+          "text": "铁路车票预售期为15天（含当日），按此推算2026年2月10日的车票自1月27日起开售；不同车站的起售日期与起售时刻不同。"
+        },
+        {
+          "id": "C2",
+          "text": "务工人员春运预约购票的需求提交窗口为开车前第20天5时至开车前第17天23时，对2月10日即1月21日5时至1月24日23时，1月20日尚未开放；该服务覆盖乘车日期为2026年2月2日至3月13日的车票。"
+        },
+        {
+          "id": "C3",
+          "text": "预约订单在开车前第16天兑现（对2月10日即1月25日），兑现成功后购票人须在当日23时前支付票款，逾期未支付的订单自动取消。"
+        },
+        {
+          "id": "C4",
+          "text": "同一账户最多可同时提交3个预约订单，每个预约订单可提交同一乘车日期不超过5个'车次+席别'组合需求，最多可为包含本人在内的19名旅客预约，故该公司19人团队未超出上限。"
+        },
+        {
+          "id": "C5",
+          "text": "1月27日购买2月10日车票时距开车8天（含）以上，退票不收取退票费；开车前不足24小时退票按票价20%核收退票费，退票费最低按2元计收；开车后改签的车票不能退票。"
+        },
+        {
+          "id": "C6",
+          "text": "误购限时免费退票须在购票支付成功30分钟内且在开车前4小时以上，同一购票人在一个自然日内限办1个订单，改签车票、预约或候补购票等不办理该业务。"
+        },
+        {
+          "id": "C7",
+          "text": "1月20日公司即可通过务工人员春运预约购票通道锁定2月10日的车票。"
+        },
+        {
+          "id": "C8",
+          "text": "开车前48小时以内退票不收取退票费。"
+        }
+      ],
+      "key_conclusions": [
+        "C1",
+        "C2",
+        "C4"
+      ],
+      "evidence": [
+        {
+          "id": "EV-01",
+          "text": "铁路12306互联网售票的预售期为15天（含当日）。",
+          "source": {
+            "url": "https://www.thepaper.cn/newsDetail_forward_32208949?commTag=true",
+            "quote": "互联网售票预售期为15天（含当日）",
+            "date": "2026-10-21"
+          }
+        },
+        {
+          "id": "EV-02",
+          "text": "不同车站的起售日期不一样；旅客可在12306出行向导的起售时间栏目查询指定车站及同城车站的每日起售时间。",
+          "source": {
+            "url": "https://slstnews.xjtvs.com.cn/Share/ArticleShare?ArticleId=4292979",
+            "quote": "目前铁路车票预售期 统一为 提前15天（含当日） 打开 铁路12306App 在首页点击日期 页面即可显示 车票是否开售 或距离车票 开售剩余几天 2 查询车站具体起售日期和时间 不同车站起售日期也不一样",
+            "date": "2026-07-07"
+          }
+        },
+        {
+          "id": "EV-03",
+          "text": "2026年春运自2月2日开始，到3月13日结束，共计40天。",
+          "source": {
+            "url": "https://m.gmw.cn/2026-01/19/content_1304310138.htm",
+            "quote": "2026年春运自2月2日开始，到3月13日结束，共计40天。",
+            "date": "2026-01-19"
+          }
+        },
+        {
+          "id": "EV-04",
+          "text": "务工人员春运预约购票服务于1月14日至2月26日开放，可预约购买2月2日至3月13日的火车票；同一账户最多可同时提交3个订单，每个预约订单可提交同一乘车日期不超过5个'车次+席别'组合需求，最多可为包含本人在内的19名旅客预约。",
+          "source": {
+            "url": "https://m.gmw.cn/2026-01/19/content_1304310138.htm",
+            "quote": "1月14日至2月26日，已通过实名制核验的务工人员，可在铁路12306手机客户端“务工人员春运预约购票服务”专区，预约购买2月2日至3月13日的火车票，同一账户最多可同时提交3个订单，每个预约订单可提交同一乘车日期不超过5个“车次+席别”组合需求，最多可为包含本人在内的19名旅客预约。",
+            "date": "2026-01-19"
+          }
+        },
+        {
+          "id": "EV-05",
+          "text": "务工人员可在开车前第20天的5时至开车前第17天的23时前提交购票需求。",
+          "source": {
+            "url": "https://www.nsy.gov.cn/ywdt/ssyw/202601/t20260119_4971952.html",
+            "quote": "务工人员可在开车前第20天的5时至开车前17天的23时前提交购票需求，同一账户最多可同时提交3个订单，每个预约订单可提交同一乘车日期不超过5个“车次+席别”组合需求，最多可为包含本人在内的19名旅客预约，选择车次越多，兑现成功率越高。",
+            "date": "2026-01-19"
+          }
+        },
+        {
+          "id": "EV-06",
+          "text": "提交的预约订单将在开车前第16天兑现，系统以短信通知购票人，兑现成功后购票人须在当日23时前支付票款，逾期未支付的订单自动取消。",
+          "source": {
+            "url": "https://news.cnr.cn/native/gd/kx/20260202/t20260202_527513114.shtml",
+            "quote": "提交的预约订单将在开车前第16天兑现，系统将兑现情况通过手机短信通知购票人，兑现成功后购票人须在当日23时前支付票款，逾期未支付的，订单自动取消。",
+            "date": "2026-02-02"
+          }
+        },
+        {
+          "id": "EV-07",
+          "text": "误购限时免费退票：购票支付成功30分钟内且在开车前4小时以上可线上自助办理退票且不收取退票费；同一购票人在一个自然日内限办1个订单，改签车票、预约或候补购票等不办理该业务。",
+          "source": {
+            "url": "https://m.gmw.cn/2026-01/19/content_1304310138.htm",
+            "quote": "如误购车票在购票支付成功30分钟内且在开车前4小时以上，购票人可线上自助办理退票，不收取退票费。 同一购票人在一个自然日内限办1个订单误购免费退票业务，改签车票、预约或候补购票等不办理此业务。",
+            "date": "2026-01-19"
+          }
+        },
+        {
+          "id": "EV-08",
+          "text": "现行退票费梯度：开车前8天（含）以上退票不收取退票费；开车前48小时以上按票价5%计，24小时以上、不足48小时的按10%计，不足24小时的按20%计。",
+          "source": {
+            "url": "https://kyfw.12306.cn/otn/gonggao/windowRefund.html",
+            "quote": "开车前8天（含）以上退票的，不收取退票费；票面乘车站开车时间前48小时以上的按票价5%计，24小时以上、不足48小时的按票价10%计，不足24小时的按票价20%计。",
+            "date": "2026-10-21"
+          }
+        },
+        {
+          "id": "EV-09",
+          "text": "退票费尾数以5角为单位计算，退票费最低按2元计收。",
+          "source": {
+            "url": "https://kyfw.12306.cn/otn/gonggao/windowRefund.html",
+            "quote": "上述计算的尾数以5角为单位，尾数小于2.5角的舍去、2.5角（含）以上且小于7.5角的计为5角、7.5角（含）以上的进为1元。退票费最低按2元计收。",
+            "date": "2026-10-21"
+          }
+        },
+        {
+          "id": "EV-10",
+          "text": "不办理退票的情形包括车票发站开车后、开车后改签的车票。",
+          "source": {
+            "url": "https://kyfw.12306.cn/otn/gonggao/windowRefund.html",
+            "quote": "3. 哪些情况不办理退票？ 1.车票发站开车后； 2.开车后改签的车票；",
+            "date": "2026-10-21"
+          }
+        },
+        {
+          "id": "EV-11",
+          "text": "在有运输能力的前提下，开车前48小时（不含）以上可改签预售期内的其他列车。",
+          "source": {
+            "url": "https://www.peopleapp.com/rmharticle/30021679571",
+            "quote": "在有运输能力的前提下，开车前48小时（不含）以上，可改签预售期内的其他列车。",
+            "date": "2026-10-21"
+          }
+        }
+      ],
+      "evidence_second_source": [
+        {
+          "id": "EV-01",
+          "status": "confirmed",
+          "url": "https://slstnews.xjtvs.com.cn/Share/ArticleShare?ArticleId=4292979",
+          "note": "丝路视听转载新疆铁路稿：'目前铁路车票预售期 统一为 提前15天（含当日）'，与12306客户端口径稿一致；另见上游新闻（人民日报全国党媒信息公共平台）'目前火车票预售期为15天(含当天)' https://www.hubpd.com/pc.html#/detail?contentId=3458764513825286355 。"
+        },
+        {
+          "id": "EV-02",
+          "status": "confirmed",
+          "url": "https://www.thepaper.cn/newsDetail_forward_32208949?commTag=true",
+          "note": "中国铁路昆明局集团供稿的同一系列稿写明可在'起售时间'栏目查看该站及同城车站的每日起售时间；另见中国新闻网浙江'铁路杭州站下辖杭州站、杭州东站……车票起售时间为10:45，富阳站……为10:30'（经今日头条转载 https://www.toutiao.com/article/7697195761246765618/ ）。"
+        },
+        {
+          "id": "EV-03",
+          "status": "confirmed",
+          "url": "https://www.nsy.gov.cn/ywdt/ssyw/202601/t20260119_4971952.html",
+          "note": "沈阳市沈北新区人民政府转载报道：'2026年春运将于2月2日正式启动，至3月13日结束，共计40天'，与光明网一致；人民日报客户端同题报道亦载同一区间。"
+        },
+        {
+          "id": "EV-04",
+          "status": "confirmed",
+          "url": "https://www.nsy.gov.cn/ywdt/ssyw/202601/t20260119_4971952.html",
+          "note": "沈阳报道逐字载'同一账户最多可同时提交3个订单，每个预约订单可提交同一乘车日期不超过5个“车次+席别”组合需求，最多可为包含本人在内的19名旅客预约'；人民日报客户端'明天可买春运首日火车票'稿同句一致。"
+        },
+        {
+          "id": "EV-05",
+          "status": "confirmed",
+          "url": "https://www.hubpd.com/pc.html#/detail?contentId=3458764513825286355",
+          "note": "上游新闻（人民日报全国党媒信息公共平台）2026-01-19报道逐字载'务工人员可在开车前第20天的5时至开车前第17天的23时前提交购票需求'，与沈阳报道一致。"
+        },
+        {
+          "id": "EV-06",
+          "status": "single_source",
+          "url": "https://news.cnr.cn/native/gd/kx/20260202/t20260202_527513114.shtml",
+          "note": "仅检索到央广网2026-02-02春运专题一篇逐字载'开车前第16天兑现……当日23时前支付票款，逾期未支付的，订单自动取消'；光明网、沈阳、人民日报三篇同批报道均未复述兑现与付款时限，故未取得第二来源逐字印证。"
+        },
+        {
+          "id": "EV-07",
+          "status": "confirmed",
+          "url": "https://news.cnr.cn/native/gd/kx/20260202/t20260202_527513114.shtml",
+          "note": "央广网载'在购票支付成功30分钟以内，且在开车前4小时以上，退票时不收取退票费'及'同一购票人在一个自然日内限办1个订单误购免费退票业务，改签车票、预约或候补购票等不办理此业务'；人民日报客户端同批报道一致。"
+        },
+        {
+          "id": "EV-08",
+          "status": "confirmed",
+          "url": "https://www.hubpd.com/pc.html#/detail?contentId=3458764513825286355",
+          "note": "上游新闻2026-01-19报道逐字载现行梯度'开车前8天(含)以上退票的,不收取退票费;……前48小时以上的按票价5%核收退票费,……前24小时以上、不足48小时的按票价10%核收退票费,……前不足24小时的按票价20%核收退票费'；澎湃新闻铁路出行提示同条一致。"
+        },
+        {
+          "id": "EV-09",
+          "status": "confirmed",
+          "url": "https://www.peopleapp.com/rmharticle/30009594384",
+          "note": "人民日报客户端《火车票到底怎么退?官方解答来了!》载同一句尾数与最低计收规则'上述计算的尾数以5角为单位……退票费最低按2元计收'（该文退票费梯度为旧版'开车前15天'口径，仅用于印证尾数与最低金额规则，梯度以12306官网为准）。"
+        },
+        {
+          "id": "EV-10",
+          "status": "confirmed",
+          "url": "https://www.peopleapp.com/rmharticle/30021679571",
+          "note": "人民日报客户端《哎呀!没赶上火车怎么办?》载'开车之后，旅客仍可改签当日其他列车，但只能在票面发站办理改签，且开车后改签的车票不能退票'。"
+        },
+        {
+          "id": "EV-11",
+          "status": "confirmed",
+          "url": "https://m.thepaper.cn/rss_newsDetail_23804442",
+          "note": "澎湃新闻铁路出行提示载'旅客可办理一次改签，在铁路部门有运输能力的前提下：开车前超过48小时的，可改签预售期内的列车'，与人民日报客户端一致。"
+        }
+      ],
+      "notes": "构建说明：(1)本题是短期规划题，约束来自四组可核对的公开规则：预售期15天（含当日）→ 2月10日车票1月27日开售；预约需求提交窗口（开车前第20天5时—第17天23时）→ 1月21日5时才开放，1月20日启动订票尚未进入窗口；预约订单在开车前第16天兑现并须当日23时前付款；数量上限（同一账户3单、每单5个车次+席别组合、最多含本人19名旅客）→ 19人团队正好卡在上限；退票费梯度（8天以上免费、48小时以上5%、不足24小时20%、最低2元）。(2)结论中的1月27日、1月21—24日、1月25日三处日期，是在 EV-01、EV-05、EV-06 的原文规则上对'2月10日'作一次日历推算（预售期含当日=15天、开车前第20/17/16天），属一步推算，已随结论给出算式依据，不另立推断类依据条目。(3)第二来源 10/11 条 confirmed（91%），EV-06（兑现与付款时限）为 single_source：已检索光明网、沈阳、人民日报、央广网、12306官网同批报道，均未逐字复述这两项，故如实标注，未凭记忆补写。(4)注意本题的数字随政策变动：2019年人民日报客户端稿用的是'开车前15天(不含)以上免费'的旧退票费口径，本题一律以12306官网现行'开车前8天(含)以上'为准，旧口径仅用于印证尾数与最低计收规则。(5)source.date 为可确认的发布日期；12306官网常见问题页、人民日报客户端稿、澎湃稿未标注发布日的取检索访问日 2026-10-21。(6)引文中的全角括号与引号（如“车次+席别”）按页面原样保留。",
+      "evidence_hash": "sha256:8861b70838c19348",
+      "gold_hash": "sha256:5924b1b0201d346d"
+    }
+  ]
+}

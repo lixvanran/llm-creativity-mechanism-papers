@@ -1,0 +1,87 @@
+Problem: 这是一份陈会昌气质量表的最终得分：胆汁质-6，多血质23，粘液质-4，抑郁质-1。
+
+Wide set
+  harden-the-scale integrity plays
+    - Make every score carry a signed provenance token linking it to a specific response window and timestamp. [N6 V7 F5]
+    - Define a hard refusal condition: any profile where the dominant dimension is also the most negative, since the scale presumably cannot encode that. [N7 V6 F7]
+    - Require the sum of dimensions to equal a published constant within tolerance; flag this profile if it drifts. [N5 V7 F6]
+    - Publish the cryptographic hash of the scoring algorithm alongside the result so the score can be reproduced by any auditor. [N8 V6 F6]
+    - Invert: design a competing scale where all four scores are normalized to 0–25 range, removing the 'negative score' attack surface entirely [N8 V4 F6]
+  re-test-and-validate methodology
+    - Treat the negative values as a failed-assurance flag rather than a personality verdict. [N6 V8 F9]
+    - Force a re-test whenever any subscale falls below zero, and log the reason code. [N4 V9 F9]
+    - Force re-taken with options weighted toward only one temperament, then compare — differential exposes original test's anchoring bias [N9 V3 F3]
+  attack-the-scale exploits
+    - Pile all 26 points into 粘液质 since you can 'accumulate' negative scores through repeated invalidation attempts [N5 V2 F1]
+    - Sabotage the test by having respondents click randomly — guarantees every temperament ends up near zero, looking 'healthy' to reviewers [N5 V1 F1]
+    - Register as 抑郁质 -1 by claiming ONLY negative life events — game the surrounding theoretical peaks by staying negative under all counting [N7 V2 F1]
+    - Flood the assessment with thousands of synthetic responses tilted to 多血质 until mean and variance collapse into noise [N4 V1 F1]
+  childlike visualizations of the four scores
+    - Put the four numbers on a see-saw to see which side is heaviest [N8 V1 F1]
+    - Draw each temperament as a monster and let them fight [N9 V0 F1]
+    - Pretend the negative ones are shy and hide them behind the positive ones [N8 V0 F0]
+    - Color the biggest number red like a warning light on a toy [N7 V1 F1]
+    - Stack the four names in a tower and the tallest one wins [N6 V2 F2]
+    - Ask which one sounds like a Pokémon and pick that as the real you [N10 V0 F0]
+
+Converge — shortlist
+
+Traps (watch-outs, not verdicts)
+  ⚠ Make every score carry a signed provenance token linking it to a specific response window and timestamp.
+    Heavy infrastructure for what may just be a scoring/rounding artifact on a single result; risks becoming theatre if the underlying scale has no response-window concept.
+    + Adds real auditability infrastructure (provenance + timestamps) rather than chasing symptoms — broadly applicable to any future validity concern.
+  ⚠ Define a hard refusal condition: any profile where the dominant dimension is also the most negative, since the scale presumably cannot encode that.
+    Premature as a 'hard refusal' until you verify the scale's claim that negatives can't co-occur with dominance — you'll be silently dropping legitimate edge-case profiles.
+    + Targets the exact pathology in the data (a single dimension scoring both highest and most negative), which a domain expert would actually recognize as suspicious.
+  ⚠ Require the sum of dimensions to equal a published constant within tolerance; flag this profile if it drifts.
+    Only works if a published constant actually exists and is known to the checker; many legacy scales don't publish one, making this a paper safeguard.
+    + Catches a concrete invariant violation (dimension sum drift) that would flag the specific anomaly — −6 − 4 − 1 = −11 vs. published constant is the easiest mathematical tell.
+  ⚠ Treat the negative values as a failed-assurance flag rather than a personality verdict.
+    Useless without a concrete downstream action (re-test? manual review? drop the row?) — on its own it's a label, not a fix.
+    + Most honest framing: a negative subscale isn't a personality verdict, it's a signal that something went wrong in scoring — directly matches what the numbers show.
+  ⚠ Force a re-test whenever any subscale falls below zero, and log the reason code.
+    Forces retests on potentially-vanginminor artifacts (any subscale < 0) — could spam users for trivial rounding noise.
+    + Operationalizes the previous idea: a clear, automatable rule with a reason code, auditable and easy to wire into any pipeline.
+  ⚠ Publish the cryptographic hash of the scoring algorithm alongside the result so the score can be reproduced by any auditor.
+    Algorithm versioning, parameter sets, and input normalization have to be pinned too, or the hash attests to something useless. Looks robust but inherits all the soft underbelly.
+    + Reproducibility-by-design — auditors and downstream consumers can verify the score without trusting the issuer, which solves a class of problems beyond this one.
+  ⚠ Pile all 26 points into 粘液质 since you can 'accumulate' negative scores through repeated invalidation attempts
+    Describes manipulation, not a defense. As written, this *is* the exploit; shipping it as a solution is self-defeating.
+    + Names a concrete attack vector (negative accumulation by repeated invalidation) that defenders would otherwise miss — useful as a threat-model item.
+  ⚠ Sabotage the test by having respondents click randomly — guarantees every temperament ends up near zero, looking 'healthy' to reviewers
+    Sabotage proposal, not a solution. Treating respondents as adversaries is the wrong frame; also, random responses don't produce 'near zero' on every dimension — they produce flat means by population, not by individual.
+    + Identifies that random responding produces a recognizable signature — an actually useful defensive insight even though the idea itself is the attack.
+  ⚠ Force re-taken with options weighted toward only one temperament, then compare — differential exposes original test's anchoring bias
+    Requires building a parallel instrument and ethical re-testing, with no guarantee the bias you expose is the one producing the anomaly. Heavy lift for one suspicious result.
+    + A genuine methodological move — differential testing with anchored variants can expose item-construction bias, a real psychometric concern.
+  ⚠ Register as 抑郁质 -1 by claiming ONLY negative life events — game the surrounding theoretical peaks by staying negative under all counting
+    Again: this is the attack, not the defense. Also unrealistic — the scoring math in 陈会昌 doesn't have a 'negative-life-events only' path that yields 抑郁质 -1.
+    + Demonstrates specific knowledge of how scoring formulas can be inverted — useful to know as an attacker when designing defenses.
+  ⚠ Invert: design a competing scale where all four scores are normalized to 0–25 range, removing the 'negative score' attack surface entirely
+    Building a competing scale is years of validation work and obsoletes the existing comparative literature — solving the wrong problem at enormous cost.
+    + Cleanest root-cause fix: by construction, negative scores can't exist, so the 'anomaly' class collapses. Would also make the scale more comparable across populations.
+  ⚠ Flood the assessment with thousands of synthetic responses tilted to 多血质 until mean and variance collapse into noise
+    Pure attack vector. Aggregating mean/variance to noise requires volume and access the user describing a single result is unlikely to have; not actionable as a 'fix.'
+    + None worth claiming as a defense — describes a population-scale integrity attack.
+  ⚠ Put the four numbers on a see-saw to see which side is heaviest
+    A see-saw with signed numbers doesn't sum — you can't just 'see which side is heaviest' with negatives; the analogy collapses on this exact data.
+    + Silly metaphor but it does gesture at the right intuition: comparing across dimensions to find which weight dominates.
+  ⚠ Draw each temperament as a monster and let them fight
+    Non-solution. Produces entertainment output, not diagnostic or corrective action; null relevance to validity of these specific scores.
+    + Strong novelty — nobody else thought of grading personalities by monster battle, so it stands out as a creative format idea.
+  ⚠ Pretend the negative ones are shy and hide them behind the positive ones
+    Picture-book logic, not analysis. You can't render 抑郁质 -1 invisible by stacking 23 — the numbers are still there for any honest review.
+    + Cute framing — the urge to 'hide' negative traits behind positive ones mirrors a real psychological coping pattern.
+  ⚠ Color the biggest number red like a warning light on a toy
+    Doesn't engage with the actual anomaly (the negatives). Coloring 23 red while letting −6 and −4 pass unflagged would actively mislead a reviewer.
+    + Acknowledges the 'largest number' as salient — which in this dataset (多血质 23) at least picks the right cell to flag.
+  ⚠ Stack the four names in a tower and the tallest one wins
+    Ignores the sign on negative scores, which is exactly the anomaly. A literal 'tallest tower' view would crown 多血质 and quietly bury the integrity problem.
+    + The 'tallest tower wins' heuristic is essentially the standard interpretation of this scale — correctly identifies 多血质 23 as the dominant dimension.
+  ⚠ Ask which one sounds like a Pokémon and pick that as the real you
+    Completely non-actionable; produces nothing a reviewer can use. The point should be diagnosing −6/−4/−1, not a vibes-based pick.
+    + Maximum novelty — this framing has literally never appeared in psychometric literature, and Pokémon evocation is genuinely funny here.
+
+Focus — deepened branches
+Provocation
+  What if we took this seriously: Ask which one sounds like a Pokémon and pick that as the real you

@@ -1,0 +1,115 @@
+Problem: 湖北考生，物理类620分，想学AI，应当如何选择大学？
+Reframed for divergence: 湖北考生，物理类620分，想学习人工智能相关方向，应当如何选择大学？
+
+Wide set
+  分数卡位与位次博弈
+    - 把620分当作可以'卡位'的资源，直接锁定上一年录取最低分在615-625区间、且AI是新设专业的院校，用分数贴线挤进去 [N5 V6 F7]
+    - 硬编码把湖北近三年物理类620分对应的录取位次区间（约8000-12000名）查出来贴在桌面上 [N4 V8 F8]
+  擦边专业替代直接选AI
+    - 无视'人工智能'这个标签字面，搜索课程表里含'机器学习/深度学习/计算机图形学'的擦边专业，名字土但内核新 [N7 V7 F8]
+    - 只盯人工智能专业，但同时接受'智能科学与技术''数据科学与大数据技术''自动化'三个擦边专业 [N3 V8 F9]
+    - 暂时放弃985光环，把'人工智能强基计划/试验班'作为锚点反向倒推可接受的保底院校 [N6 V5 F7]
+  降一档院校或特殊项目冲门槛
+    - 跳过985的AI门槛，转攻211的'智能科学与技术'或'数据科学与大数据技术'——保研率高且竞争少一档 [N6 V7 F8]
+    - 考虑中外合办院校的AI方向（如西交利物浦、宁波诺丁汉），用学费换分数门槛，620可能直冲 [N5 V5 F6]
+    - 盯紧'本硕博连读'或'强基计划'的AI相关专业，620在湖北可能是入围而非录取线，用综合评价冲一下 [N4 V5 F7]
+  冲稳保分层填报策略
+    - 把志愿填成'冲-稳-保'三阶，前两个冲顶尖AI院校的边缘专业（如自动化/信计），最后一个兜底武理工/中南的AI [N3 V9 F9]
+    - 手写一个Python脚本，把Excel里的院校投档线按'分差=620-投档线'排序输出前30行 [N4 V8 F8]
+  硬件比喻类比选校（讽刺/类比）
+    - Treat the 620 score as a clock-cycle budget — every university choice must fit within it without timing violations [N2 V1 F1]
+    - Map universities to memory hierarchy: L1 (清北复交浙) is unreachable, L2 (武大华科中科大) is the cache line to hit [N3 V2 F3]
+    - Check bus bandwidth between Hubei and target campus — how many cycles per round-trip home matters for support latency [N4 V1 F2]
+    - Profile the university's DMA channels: which ones have direct memory access to industry AI labs and GPU clusters [N5 V3 F5]
+    - Look for interrupt handlers — schools with strong 交叉学科 will handle interrupts from other fields faster [N6 V2 F3]
+    - Verify the watchdog timer — does the AI program's industry reputation actually reset if a graduate falls behind [N6 V3 F4]
+  手工收集与核实院校招生数据
+    - 用浏览器收藏夹人工筛出每所目标院校官网招生网的'历年分数'页面，做成扁平HTML [N5 V7 F6]
+    - 在武汉本地的'七校联盟'（武大华科等）招生办电话旁边贴张纸条，分批午休时间拨打问询AI专业分流情况 [N7 V4 F5]
+  完全不靠谱/戏谑选校法
+    - Just pick the school with the shiniest robot on its brochure [N2 V0 F0]
+    - Go to whichever campus has the most vending machines with AI soda [N1 V0 F0]
+    - Choose the university whose library is biggest because AI reads books [N1 V0 F0]
+    - Follow the friend who already owns a gaming PC [N1 V0 F0]
+    - Pick the school closest to a place that sells cool robot toys [N1 V0 F0]
+    - Just type 'AI university' into Baidu and click the first link [N1 V0 F0]
+
+Converge — shortlist
+
+Traps (watch-outs, not verdicts)
+  ⚠ 把620分当作可以'卡位'的资源，直接锁定上一年录取最低分在615-625区间、且AI是新设专业的院校，用分数贴线挤进去
+    贴线挤进新设AI专业的院校，新设专业师资、课程、就业出口尚未验证，存在'分数到位但教育质量不到位'的风险
+    + 明确把分数当作可调度资源，量化目标（615-625区间）比凭感觉选校更可执行，避免浪费分数
+  ⚠ 无视'人工智能'这个标签字面，搜索课程表里含'机器学习/深度学习/计算机图形学'的擦边专业，名字土但内核新
+    查课程表耗时极大（每所院校都要翻培养方案），且老牌强校课程迭代慢，'土名字+新内核'的院校往往是双非，就业认可度仍受名校光环影响
+    + 直接绕开热门标签造成的内卷，用课程表而非专业名做判断，对考生而言是非常实用的反直觉策略
+  ⚠ 跳过985的AI门槛，转攻211的'智能科学与技术'或'数据科学与大数据技术'——保研率高且竞争少一档
+    '智能科学与技术'在不同院校的培养方向差异极大，有的偏控制有的偏认知科学，进了才发现跟想象的不一样，需要逐校核对课程
+    + 211档'智能科学与技术'是性价比最高的AI入口，保研率与院校层级兼顾，比硬冲985边缘专业更稳
+  ⚠ 考虑中外合办院校的AI方向（如西交利物浦、宁波诺丁汉），用学费换分数门槛，620可能直冲
+    中外合办每年学费6-10万，四年下来40万+，且部分院校的AI师资是外包的，学历在考研/考公时认可度有差异，需家庭财务层面真正可行
+    + 中外合办确实提供了一条'分数换学费'的差异化路径，对家境允许的考生是真实可选项
+  ⚠ 盯紧'本硕博连读'或'强基计划'的AI相关专业，620在湖北可能是入围而非录取线，用综合评价冲一下
+    强基计划的入围≠录取，校测刷人比例很高，且部分院校强基不允许转专业，把AI方向'赌'在单一通道上风险集中
+    + 强基/本硕博是低分搏长线培养周期的合法通道，对620分这个'卡线段'是有价值的补充策略
+  ⚠ 把志愿填成'冲-稳-保'三阶，前两个冲顶尖AI院校的边缘专业（如自动化/信计），最后一个兜底武理工/中南的AI
+    把自动化/信计当成'冲顶尖'的筹码容易高估其AI含量，这两个专业传统课程占比高，大三分流时可能发现跟AI关系不大
+    + '冲-稳-保'是经过多年验证的标准志愿填报框架，明确点出边缘专业作为冲档入口，可执行性最强
+  ⚠ Treat the 620 score as a clock-cycle budget — every university choice must fit within it without timing violations
+    纯隐喻，没有给出任何可操作的院校建议，对一个具体的填报决策毫无帮助
+    + 隐喻本身是个有趣的思维游戏，把分数当成预算来分配
+  ⚠ Map universities to memory hierarchy: L1 (清北复交浙) is unreachable, L2 (武大华科中科大) is the cache line to hit
+    L1/L2的划分过于武断，620分在湖北物理类的真实定位需要查具体位次而不是按学校档次拍脑袋
+    + 用存储分层隐喻区分了'完全够不到'和'有机会够到'的院校，至少给出了优先级思路
+  ⚠ Check bus bandwidth between Hubei and target campus — how many cycles per round-trip home matters for support latency
+    用'cycles per round-trip'这种比喻完全脱离现实，把'回家方便'当成选校核心维度会严重偏离AI学习目标
+    + 提醒了'地理位置'这个常被忽略的变量，离家近对部分家庭是真实考量
+  ⚠ Profile the university's DMA channels: which ones have direct memory access to industry AI labs and GPU clusters
+    考生很难在填报阶段真正核实'DMA通道'（GPU集群、实验室合作），多数信息只能从招生简章字面判断，存在信息不对称
+    + 把'产业资源'作为院校选择维度是正确的，AI专业的实验室/算力直接决定学习上限
+  ⚠ Look for interrupt handlers — schools with strong 交叉学科 will handle interrupts from other fields faster
+    '交叉学科'在本科阶段往往是噱头大于实质，多数院校的AI+xx只是选修课组合，没有真正的跨院系培养机制
+    + 提示了'交叉学科'这一被低估的维度——AI的核心进展越来越多来自跨领域
+  ⚠ Verify the watchdog timer — does the AI program's industry reputation actually reset if a graduate falls behind
+    行业口碑是滞后指标，本科新生4年后才有意义，对620分这个具体填报决策没有给出可操作的筛选标准
+    + 点出了'行业口碑'这个关键变量，提醒不要只看录取分不看出口质量
+  ⚠ 硬编码把湖北近三年物理类620分对应的录取位次区间（约8000-12000名）查出来贴在桌面上
+    湖北物理类2024年改革后位次参考体系变了，直接套用旧数据可能误判，需要指明数据年份
+    + 把'位次'作为硬约束前置——620分在不同年份对应的位次波动很大，固定位次区间比固定分数更靠谱
+  ⚠ 用浏览器收藏夹人工筛出每所目标院校官网招生网的'历年分数'页面，做成扁平HTML
+    纯人工整理50+院校的历年分数工作量极大，且扁平HTML只是组织形式不解决问题，需要排序/筛选逻辑才能用
+    + 收藏历年分数页是真正会做的硬功夫，比看排名榜单更接近一手数据
+  ⚠ 只盯人工智能专业，但同时接受'智能科学与技术''数据科学与大数据技术''自动化'三个擦边专业
+    把4个专业平铺会模糊焦点，需要再叠加院校层级/地域/分数匹配等维度，否则选出来的还是一堆乱麻
+    + 明确扩展了'AI相关'的定义边界，自动化和大数据确实是AI的合理近邻专业，扩大了可选项
+  ⚠ 手写一个Python脚本，把Excel里的院校投档线按'分差=620-投档线'排序输出前30行
+    脚本的输出质量完全取决于输入Excel的字段（投档线/最低分/专业分含义不同），如果数据来源混乱，脚本只是加速了错误结论
+    + 用脚本量化'分差'比肉眼比对靠谱得多，能在5分钟内出结果
+  ⚠ 在武汉本地的'七校联盟'（武大华科等）招生办电话旁边贴张纸条，分批午休时间拨打问询AI专业分流情况
+    午休时间批量拨打很可能被敷衍或转接，且招生办老师回答的话术经过培训，对'分流情况'这种敏感问题不会说真话
+    + 招生办电话是少数能问到'AI专业分流'等具体细节的渠道，比官网信息更鲜活
+  ⚠ 暂时放弃985光环，把'人工智能强基计划/试验班'作为锚点反向倒推可接受的保底院校
+    强基计划本身有严格的限报限转条款，且多数要求高考后立刻确认，'反向倒推'在时间窗口上可能来不及
+    + 把'强基/试验班'作为锚点反向倒推保底，是少见的逆向规划思路，比正向海选更聚焦
+  ⚠ Just pick the school with the shiniest robot on its brochure
+    完全是反讽/无意义答案，对填报决策零信息量
+    + 诚实地指出了部分考生家长的真实决策模式
+  ⚠ Go to whichever campus has the most vending machines with AI soda
+    完全的胡扯答案，不构成任何决策依据
+    + 无
+  ⚠ Choose the university whose library is biggest because AI reads books
+    图书馆大小与AI专业质量无任何相关性
+    + 无
+  ⚠ Follow the friend who already owns a gaming PC
+    把人生决策外包给朋友的硬件配置，是彻底的甩锅
+    + 无
+  ⚠ Pick the school closest to a place that sells cool robot toys
+    儿童化的决策标准，无法严肃对待
+    + 无
+  ⚠ Just type 'AI university' into Baidu and click the first link
+    百度首条结果是广告或SEO内容，几乎一定是垃圾信息源
+    + 无
+
+Focus — deepened branches
+Provocation
+  What if we took this seriously: 无视'人工智能'这个标签字面，搜索课程表里含'机器学习/深度学习/计算机图形学'的擦边专业，名字土但内核新

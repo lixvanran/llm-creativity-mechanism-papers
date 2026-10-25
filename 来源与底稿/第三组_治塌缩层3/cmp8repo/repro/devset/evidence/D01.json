@@ -1,0 +1,221 @@
+{
+  "task_id": "D01",
+  "title": "990 PRO 1TB 固态硬盘官方标称参数判断",
+  "domain": "技术/存储设备选购",
+  "ask": "990 PRO 1TB：①顺序读7450MB/s ②随机读140万IOPS ③保修5年 ④耐久600TBW。哪些正确？",
+  "conclusion_space": [
+    {
+      "id": "C1",
+      "text": "①成立：该型号官方标称顺序读取 7450 MB/s、顺序写入 6900 MB/s，接口为 PCIe Gen 4.0 x4 / NVMe 2.0，形态为 M.2 (2280)"
+    },
+    {
+      "id": "C2",
+      "text": "②不成立：1TB 版本官方标称 4KB QD32 随机读取为 1,200,000 IOPS，140 万 IOPS 对应 2TB 版本"
+    },
+    {
+      "id": "C3",
+      "text": "③成立：官方保修标称为 5 年有限保修，并同时标称 600 TBW 有限保修"
+    },
+    {
+      "id": "C4",
+      "text": "④成立：1TB 版本耐久度标称为 600 TBW（2TB 为 1,200TBW、4TB 为 2,400TBW）"
+    },
+    {
+      "id": "C5",
+      "text": "该型号采用 Samsung 自研 V-NAND（3-bit MLC / TLC）闪存、配 1GB LPDDR4 缓存，QD32 随机写标称 1,550,000 IOPS"
+    },
+    {
+      "id": "C6",
+      "text": "该型号 7450 MB/s 的顺序读标称接近但未达到 PCIe 4.0 的 8000 MB/s 理论顺序读上限，即未跑满该接口"
+    }
+  ],
+  "key_conclusions": [
+    "C1",
+    "C2"
+  ],
+  "evidence": [
+    {
+      "id": "EV-01",
+      "text": "990 PRO 规格表中，1TB 与 2TB 两档的顺序读取标称均为 7,450MB/s，顺序写入标称均为 6,900MB/s。",
+      "source": {
+        "url": "https://www.storagereview.com/review/samsung-990-pro-ssd-review-2tb",
+        "quote": "Sequential Read 7,450MB/s 7,450MB/s Sequential Write 6,900MB/s 6,900MB/s",
+        "date": "2026-10-21"
+      }
+    },
+    {
+      "id": "EV-02",
+      "text": "厂商官网 1TB 规格表中，4KB QD32 随机读取标称为 1,200,000 IOPS。",
+      "source": {
+        "url": "https://www.samsung.com/sg/memory-storage/nvme-ssd/980-pro-pcle-4-0-nvme-m-2-ssd-1tb-mz-v8p1t0bw/",
+        "quote": "Random Read (4KB, QD32) Up to 1,200,000 IOPS * Performance may vary based on system hardware & configuration",
+        "date": "2026-10-21"
+      }
+    },
+    {
+      "id": "EV-03",
+      "text": "厂商官网 1TB 规格表中，4KB QD32 随机写入标称为 1,550,000 IOPS。",
+      "source": {
+        "url": "https://www.samsung.com/sg/memory-storage/nvme-ssd/980-pro-pcle-4-0-nvme-m-2-ssd-1tb-mz-v8p1t0bw/",
+        "quote": "Random Write (4KB, QD32) Up to 1,550,000 IOPS * Performance may vary based on system hardware & configuration",
+        "date": "2026-10-21"
+      }
+    },
+    {
+      "id": "EV-04",
+      "text": "厂商官网 1TB 规格表把保修写成 5 年有限保修或 600 TBW 有限保修。",
+      "source": {
+        "url": "https://www.samsung.com/sg/memory-storage/nvme-ssd/980-pro-pcle-4-0-nvme-m-2-ssd-1tb-mz-v8p1t0bw/",
+        "quote": "Warranty 5-Year Limited Warranty or 600 TBW Limited Warranty",
+        "date": "2026-10-21"
+      }
+    },
+    {
+      "id": "EV-05",
+      "text": "厂商官网 1TB 规格表中形态为 M.2 (2280)，接口为 PCIe Gen 4.0 x4、NVMe 2.0。",
+      "source": {
+        "url": "https://www.samsung.com/sg/memory-storage/nvme-ssd/980-pro-pcle-4-0-nvme-m-2-ssd-1tb-mz-v8p1t0bw/",
+        "quote": "Form Factor M.2 (2280) Interface PCIe Gen 4.0 x4, NVMe 2.0",
+        "date": "2026-10-21"
+      }
+    },
+    {
+      "id": "EV-06",
+      "text": "厂商官网 1TB 规格表中存储颗粒为 Samsung V-NAND 3-bit MLC，控制器为三星自研主控。",
+      "source": {
+        "url": "https://www.samsung.com/sg/memory-storage/nvme-ssd/980-pro-pcle-4-0-nvme-m-2-ssd-1tb-mz-v8p1t0bw/",
+        "quote": "Storage Memory Samsung V-NAND 3-bit MLC Controller Samsung in-house Controller",
+        "date": "2026-10-21"
+      }
+    },
+    {
+      "id": "EV-07",
+      "text": "第三方评测按容量列出随机读取（4KB、QD32）标称值：1TB 为 1,200K IOPS，2TB 为 1,400K IOPS，4TB 为 1,600K IOPS。",
+      "source": {
+        "url": "https://hardvance.co.uk/samsung-990-pro-review",
+        "quote": "Random read (4KB, QD32) 1,200K IOPS 1,400K IOPS 1,600K IOPS",
+        "date": "2026-10-21"
+      }
+    },
+    {
+      "id": "EV-08",
+      "text": "第三方评测按容量列出耐久度标称值：1TB 为 600TB，2TB 为 1,200TB，4TB 为 2,400TB。",
+      "source": {
+        "url": "https://hardvance.co.uk/samsung-990-pro-review",
+        "quote": "Endurance (TBW) 600TB 1,200TB 2,400TB",
+        "date": "2026-10-21"
+      }
+    },
+    {
+      "id": "EV-09",
+      "text": "第三方评测给出的保修口径是 5 年，或以 TBW 数值先到者为准。",
+      "source": {
+        "url": "https://hardvance.co.uk/samsung-990-pro-review",
+        "quote": "Warranty 5 years, or the TBW figure, whichever comes first",
+        "date": "2026-10-21"
+      }
+    },
+    {
+      "id": "EV-10",
+      "text": "第三方评测指出各容量均标称最高 7,450MB/s 读取、6,900MB/s 写入，接近 PCIe 4.0 的 8,000MB/s 上限。",
+      "source": {
+        "url": "https://hardvance.co.uk/samsung-990-pro-review",
+        "quote": "Samsung rates every size at up to 7,450MB/s reads and 6,900MB/s writes, close to the 8,000MB/s limit of PCIe 4.0.",
+        "date": "2026-10-21"
+      }
+    },
+    {
+      "id": "EV-11",
+      "text": "评测规格表列出缓存容量：1TB 配 1GB LPDDR4，2TB 配 2GB LPDDR4。",
+      "source": {
+        "url": "https://www.storagereview.com/review/samsung-990-pro-ssd-review-2tb",
+        "quote": "DRAM Cache Memory 1GB LPDDR4 2GB LPDDR4",
+        "date": "2026-10-21"
+      }
+    },
+    {
+      "id": "EV-12",
+      "text": "评测规格表的保修栏写明：保修期 5 years limited，TBW 为 600TB（1TB）与 1,200TB（2TB）。",
+      "source": {
+        "url": "https://www.storagereview.com/review/samsung-990-pro-ssd-review-2tb",
+        "quote": "Warranty TBW 600TB 1,200TB Period 5 years limited",
+        "date": "2026-10-21"
+      }
+    }
+  ],
+  "evidence_second_source": [
+    {
+      "id": "EV-01",
+      "status": "confirmed",
+      "url": "https://www.bhphotovideo.com/spanish/c/product/1726547-REG/samsung_mz_v9p1t0b_am_1tb_990_pro_pcie.html",
+      "note": "B&H Photo 的 1TB 990 PRO 规格表同样列出读取上限 7450 MB/s、写入上限 6900 MB/s，与评测规格表一致。"
+    },
+    {
+      "id": "EV-02",
+      "status": "confirmed",
+      "url": "https://www.storagereview.com/review/samsung-990-pro-ssd-review-2tb",
+      "note": "评测规格表在 QD 32 Thread 16 行给出 1,200K IOPS（1TB）与 1400K IOPS（2TB），与官网 1,200,000 IOPS 一致。"
+    },
+    {
+      "id": "EV-03",
+      "status": "confirmed",
+      "url": "https://www.storagereview.com/review/samsung-990-pro-ssd-review-2tb",
+      "note": "评测规格表随机写行为 1,550K IOPS（1TB 与 2TB 相同），与官网 1,550,000 IOPS 一致。"
+    },
+    {
+      "id": "EV-04",
+      "status": "confirmed",
+      "url": "https://hardvance.co.uk/samsung-990-pro-review",
+      "note": "评测同样把保修写成 5 年或以 TBW 数值先到者为准，1TB 档 TBW 为 600TB。"
+    },
+    {
+      "id": "EV-05",
+      "status": "confirmed",
+      "url": "https://hardvance.co.uk/samsung-990-pro-review",
+      "note": "评测接口与尺寸一行写明 PCIe 4.0 x4、NVMe 2.0、M.2 2280，与官网规格表一致。"
+    },
+    {
+      "id": "EV-06",
+      "status": "confirmed",
+      "url": "https://www.storagereview.com/review/samsung-990-pro-ssd-review-2tb",
+      "note": "评测规格表写 NAND Flash Memory Samsung V-NAND TLC、DRAM Cache Memory 1GB LPDDR4（1TB），与官网一致。"
+    },
+    {
+      "id": "EV-07",
+      "status": "confirmed",
+      "url": "https://www.samsung.com/ie/business/memory-storage/nvme-ssd/990-pro-2tb-nvme-pcie-gen-4-mz-v9p2t0bw/",
+      "note": "厂商营销页同样写 2TB 最高 1,400K/1,550K IOPS、4TB 随机读最高 1,600K IOPS，与评测的分档数字一致。"
+    },
+    {
+      "id": "EV-08",
+      "status": "confirmed",
+      "url": "https://www.storagereview.com/review/samsung-990-pro-ssd-review-2tb",
+      "note": "评测规格表 TBW 栏为 600TB（1TB）、1,200TB（2TB），与分档耐久度一致。"
+    },
+    {
+      "id": "EV-09",
+      "status": "confirmed",
+      "url": "https://www.samsung.com/sg/memory-storage/nvme-ssd/980-pro-pcle-4-0-nvme-m-2-ssd-1tb-mz-v8p1t0bw/",
+      "note": "官网 1TB 页保修栏写 5-Year Limited Warranty or 600 TBW Limited Warranty，与评测口径一致。"
+    },
+    {
+      "id": "EV-10",
+      "status": "confirmed",
+      "url": "https://www.samsung.com/ie/business/memory-storage/nvme-ssd/990-pro-2tb-nvme-pcie-gen-4-mz-v9p2t0bw/",
+      "note": "厂商页脚注写 PCIe 4.0 理论最高顺序读 8000 MB/s，990 PRO 为 7,450 MB/s，与评测的 8,000MB/s 上限一致。"
+    },
+    {
+      "id": "EV-11",
+      "status": "confirmed",
+      "url": "https://hardvance.co.uk/samsung-990-pro-review",
+      "note": "评测缓存一行写 1GB LPDDR4（1TB）、2GB LPDDR4（2TB）、4GB LPDDR4（4TB），与官网 1GB LPDDR4 一致。"
+    },
+    {
+      "id": "EV-12",
+      "status": "confirmed",
+      "url": "https://www.samsung.com/sg/memory-storage/nvme-ssd/980-pro-pcle-4-0-nvme-m-2-ssd-1tb-mz-v8p1t0bw/",
+      "note": "厂商官网 1TB 页保修栏写 5-Year Limited Warranty or 600 TBW Limited Warranty，与评测规格表的 5 years limited、600TB(1TB)/1,200TB(2TB) 一致。"
+    }
+  ],
+  "notes": "全部 12 条依据都是页面原句的逐字引用（source.quote 已按抓取结果的真实字符核对，含半角逗号与分号），没有一条是推断型条目。推断只发生在结论层面：EV-10 同句给出 7,450MB/s 与 8,000MB/s 两个数，C6 由二者比较得出，因此 C6 不单列为依据条目。题面刻意把『随机读 140 万 IOPS』写成待判断项，因为该数字属于 2TB 档（EV-07），而 1TB 档是 120 万（EV-02），这是本题的主要区分点。刻意不收『工作温度』：厂商官网 1TB 页写 0-70℃，B&H 零售页写 0-65℃，两家口径不一致，为避免依据包内部矛盾，该项未纳入。第二来源 12/12 全部 confirmed；其中 EV-01/02/03/05/06 的第二来源是零售与评测站（独立于厂商），EV-07 至 EV-12 的第二来源是厂商官网或另一家评测站。"
+}

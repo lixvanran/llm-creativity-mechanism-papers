@@ -1,0 +1,111 @@
+{
+  "datasets": {
+    "audit_objects": {
+      "bytes": 11005,
+      "file": "data/audit_objects.jsonl",
+      "format": "jsonl",
+      "rows": 23,
+      "schema": {
+        "字段": {
+          "cells": "该行各格原文",
+          "file": "复核链文件",
+          "line": "行号",
+          "sha": "16 位前缀或 40 位全量",
+          "sha_len": "16 或 40"
+        },
+        "注意": "★ 判定的效力锚；★ 对象一改、★ 判定不自动继承",
+        "粒度": "一次「被审的是哪一版」的记录"
+      },
+      "sha256": "97955780faeb6b3fdf6f186198eb8b7fb3ef78afc7eb22d4b987afcc7e28f2c8"
+    },
+    "audit_verdicts": {
+      "bytes": 53626,
+      "file": "data/audit_verdicts.jsonl",
+      "format": "jsonl",
+      "rows": 108,
+      "schema": {
+        "字段": {
+          "cells": "该行各格原文（★ 判定/复验/证据）",
+          "file": "复核链文件",
+          "item_id": "条目号",
+          "line": "行号"
+        },
+        "注意": "★ 只覆盖复核链目录；★ 具体哪一版被绑、★ 看 audit_objects",
+        "粒度": "一条审稿判定（★ 首列是条目号）"
+      },
+      "sha256": "be3859557d8312208042169011cab3666f131e23505e8263225fccce859e1836"
+    },
+    "negative_results": {
+      "bytes": 298359,
+      "file": "data/negative_results.jsonl",
+      "format": "jsonl",
+      "rows": 475,
+      "schema": {
+        "字段": {
+          "file": "相对路径",
+          "line": "行号",
+          "markers": "命中的阴性/未定标记",
+          "numbers": "该行出现的数字",
+          "paper": "篇号",
+          "section": "最近的上级标题",
+          "text": "该行原文（截断 600 字）"
+        },
+        "注意": "这是阴性结果的索引；★ 不代表该行每个数字都已独立核过",
+        "粒度": "正文里的一行"
+      },
+      "sha256": "84db49c62e57fa2229976ad8020b2a0583dbabfe4c42ff762491cb5616ac9925"
+    },
+    "open_tasks": {
+      "bytes": 26883,
+      "file": "data/open_tasks.jsonl",
+      "format": "jsonl",
+      "rows": 45,
+      "schema": {
+        "字段": {
+          "columns": "表头",
+          "fields": "该行各格原文",
+          "file": "定义所在文件",
+          "line": "行号",
+          "task_id": "T-A-02 式编号"
+        },
+        "注意": "columns 与 fields 按位置对应；★ 有些表的列名不同，★ 用 fields[0] 当编号",
+        "粒度": "一条待取证任务"
+      },
+      "sha256": "3443129b77173cdd698dcebd46b1b463289e4f05baf3a65d3af23cb9d52c35d4"
+    },
+    "pointer_migrations": {
+      "bytes": 124,
+      "file": "data/pointer_migrations.json",
+      "format": "json",
+      "rows": 1,
+      "schema": {
+        "字段": {
+          "（原样保留）": "tools/.pointer_migration_state.json 的内容"
+        },
+        "注意": "活文档改指针、★ 历史留痕不改内容、★ 只在入口文档声明",
+        "粒度": "一条指针迁移记录"
+      },
+      "sha256": "edb15e71a7f7250190c042d559e5cb9886194a11ada5c992831f7ff9585f08ee"
+    },
+    "readings": {
+      "bytes": 1149330,
+      "file": "data/readings.jsonl",
+      "format": "jsonl",
+      "rows": 1678,
+      "schema": {
+        "字段": {
+          "paper": "篇号 L1/A/C/D/L3",
+          "source_class": "出处等级（一手材料/审稿留痕/复算底稿/改稿规格/前作基线）",
+          "sources": "出处列表（文件 + 行号 + 等级）",
+          "token": "数字字面量"
+        },
+        "注意": "只收录【在仓内找得到出处】的 token；无出处的由 verify_new_readings.py 单独报",
+        "粒度": "一个数字 token × 一篇正文"
+      },
+      "sha256": "7afe815faf742b4ade71f73a9c612a0ff3cf361ab730e7c45784ed54131ea478"
+    }
+  },
+  "generated_by": "tools/build_data_package.py",
+  "generator_cmd": "python3 tools/build_data_package.py",
+  "validator_cmd": "python3 tools/check_data_package.py"
+}

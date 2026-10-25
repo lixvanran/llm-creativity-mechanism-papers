@@ -1,0 +1,187 @@
+{
+  "task_id": "D03",
+  "n_cards": 14,
+  "cards": [
+    {
+      "card_id": "G01",
+      "claim": "条例规定小型无人驾驶航空器为空机重量不超过15千克且最大起飞重量不超过25千克。",
+      "supports_conclusions": [
+        "C1"
+      ],
+      "evidence_ref": "EV-01",
+      "evidence_class": "事实",
+      "is_load_bearing": true,
+      "decision_changed": "支撑 C1：给出分类阈值，6 千克/12 千克落入小型区间"
+    },
+    {
+      "card_id": "G02",
+      "claim": "条例规定轻型无人驾驶航空器为空机重量不超过4千克且最大起飞重量不超过7千克。",
+      "supports_conclusions": [
+        "C1"
+      ],
+      "evidence_ref": "EV-02",
+      "evidence_class": "事实",
+      "is_load_bearing": true,
+      "decision_changed": "支撑 C1：排除『属轻型』的误判（本机起飞重 12 千克已超轻型上限）"
+    },
+    {
+      "card_id": "G03",
+      "claim": "条例规定中型无人驾驶航空器为最大起飞重量不超过150千克且不属微型、轻型、小型。",
+      "supports_conclusions": [
+        "C1"
+      ],
+      "evidence_ref": "EV-03",
+      "evidence_class": "事实",
+      "is_load_bearing": true,
+      "decision_changed": "支撑 C1：排除『属中型』的误判，并说明小型与中型之间的分界"
+    },
+    {
+      "card_id": "G04",
+      "claim": "条例第三十一条列明微型、轻型、小型无人驾驶航空器在适飞空域内的飞行活动无需提出飞行活动申请。",
+      "supports_conclusions": [
+        "C2"
+      ],
+      "evidence_ref": "EV-06",
+      "evidence_class": "事实",
+      "is_load_bearing": true,
+      "decision_changed": "支撑 C2：给出免申请的直接条文，是『无需申请』结论的根据"
+    },
+    {
+      "card_id": "G05",
+      "claim": "条例规定管制空域范围以外的空域为微型、轻型、小型无人驾驶航空器的适飞空域。",
+      "supports_conclusions": [
+        "C2"
+      ],
+      "evidence_ref": "EV-05",
+      "evidence_class": "事实",
+      "is_load_bearing": true,
+      "decision_changed": "支撑 C2：确认该机所在空域的性质属适飞空域"
+    },
+    {
+      "card_id": "G06",
+      "claim": "条例规定真高120米以上空域应划设为管制空域。",
+      "supports_conclusions": [
+        "C2"
+      ],
+      "evidence_ref": "EV-04",
+      "evidence_class": "事实",
+      "is_load_bearing": true,
+      "decision_changed": "支撑 C2：把真高90米与120米阈值比对，确认该高度仍在适飞空域内"
+    },
+    {
+      "card_id": "G07",
+      "claim": "条例第十六条要求操控小型、中型、大型民用无人驾驶航空器的人员申请取得操控员执照。",
+      "supports_conclusions": [
+        "C3"
+      ],
+      "evidence_ref": "EV-11",
+      "evidence_class": "事实",
+      "is_load_bearing": true,
+      "decision_changed": "支撑 C3：给出执照义务，使『无执照操控』成为可判定的违规"
+    },
+    {
+      "card_id": "G08",
+      "claim": "条例规定未取得操控员执照操控民用无人驾驶航空器飞行的，处5000元以上5万元以下罚款。",
+      "supports_conclusions": [
+        "C3"
+      ],
+      "evidence_ref": "EV-12",
+      "evidence_class": "事实",
+      "is_load_bearing": true,
+      "decision_changed": "支撑 C3：给出无照操控对应的罚则区间"
+    },
+    {
+      "card_id": "G09",
+      "claim": "条例第十二条要求使用小型、中型、大型民用无人驾驶航空器从事非经营性飞行活动的，应当依法投保责任保险。",
+      "supports_conclusions": [
+        "C4"
+      ],
+      "evidence_ref": "EV-09",
+      "evidence_class": "事实",
+      "is_load_bearing": true,
+      "decision_changed": "支撑 C4：给出投保义务，题面未写经营性也能据此判定应投保"
+    },
+    {
+      "card_id": "G10",
+      "claim": "条例规定未依法投保责任保险的，处2000元以上2万元以下罚款。",
+      "supports_conclusions": [
+        "C4"
+      ],
+      "evidence_ref": "EV-10",
+      "evidence_class": "事实",
+      "is_load_bearing": true,
+      "decision_changed": "支撑 C4：给出未投保的法律后果，使该义务具备可判定性"
+    },
+    {
+      "card_id": "G11",
+      "claim": "条例第十条要求民用无人驾驶航空器所有者依法进行实名登记。",
+      "supports_conclusions": [
+        "C5"
+      ],
+      "evidence_ref": "EV-07",
+      "evidence_class": "事实",
+      "is_load_bearing": true,
+      "decision_changed": "支撑 C5：给出所有者登记义务"
+    },
+    {
+      "card_id": "G12",
+      "claim": "条例规定民用无人驾驶航空器未经实名登记实施飞行活动的，可处200元以下罚款。",
+      "supports_conclusions": [
+        "C5"
+      ],
+      "evidence_ref": "EV-08",
+      "evidence_class": "事实",
+      "is_load_bearing": true,
+      "decision_changed": "支撑 C5：给出未登记的罚则，使该结论可判定"
+    },
+    {
+      "card_id": "G13",
+      "claim": "条例规定真高120米以上空域应划设为管制空域。",
+      "supports_conclusions": [
+        "C6"
+      ],
+      "evidence_ref": "EV-04",
+      "evidence_class": "事实",
+      "is_load_bearing": false,
+      "decision_changed": "支撑 C6：把反事实高度130米与120米阈值比对，判定其落入管制空域"
+    },
+    {
+      "card_id": "G14",
+      "claim": "条例规定适飞空域是管制空域范围以外的空域。",
+      "supports_conclusions": [
+        "C6"
+      ],
+      "evidence_ref": "EV-05",
+      "evidence_class": "事实",
+      "is_load_bearing": false,
+      "decision_changed": "支撑 C6：说明真高130米处已不再是适飞空域，需走批准流程"
+    }
+  ],
+  "distractors": [
+    {
+      "card_id": "G90",
+      "claim": "该机属轻型无人驾驶航空器。",
+      "why_wrong": "EV-02 把轻型的上限定为最大起飞重量 7 千克，本机 12 千克已超出；EV-01 显示它落在小型区间"
+    },
+    {
+      "card_id": "G91",
+      "claim": "在适飞空域内飞行也必须提前1日12时前提出飞行活动申请。",
+      "why_wrong": "EV-06（条例第三十一条）明确微、轻、小型在适飞空域内的飞行活动无需提出飞行活动申请"
+    },
+    {
+      "card_id": "G92",
+      "claim": "真高150米的空域仍属适飞空域。",
+      "why_wrong": "EV-04 把真高120米以上空域划为管制空域，EV-05 说适飞空域是管制空域以外的空域"
+    },
+    {
+      "card_id": "G93",
+      "claim": "操控员未取执照操控该小型机，可处500元以下罚款。",
+      "why_wrong": "EV-12 把无照操控的罚则定为5000元以上5万元以下；500元以下是条例第五十一条对管制空域内未经批准飞行的罚则档"
+    },
+    {
+      "card_id": "G94",
+      "claim": "小型无人驾驶航空器可以免除实名登记。",
+      "why_wrong": "EV-07 要求所有者依法实名登记，EV-08 规定未登记飞行的罚则，免除登记没有依据"
+    }
+  ]
+}
