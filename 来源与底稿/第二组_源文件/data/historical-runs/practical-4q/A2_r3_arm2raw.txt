@@ -1,0 +1,109 @@
+Problem: 公路自行车个人比赛（无车队），单圈1.6km共计15圈，单圈由两个800m直路和两个回头弯构成，本人在大集团里处于中上等水平，该如何安排战术？
+Reframed for divergence: 如何在24公里（约15圈）的公路自行车个人赛中，针对中等偏上的业余选手，制定高效的战术方案？赛道由两个长直道和两个回头弯组成，无车队配合。
+
+Wide set
+  (unclustered)
+    - Mark the two straights as independent 'food sources' and race them as alternating 7-loop sprints instead of one 15-loop endurance grind. [N6 V4 F5]
+    - Release a staggered invisible pacer every 2 laps so you always have a draft to chase without depending on teammates. [N7 V2 F3]
+    - Probe 3 different cornering lines in warm-up laps, then commit to whichever leaves the freshest legs at lap 10. [N4 V7 F7]
+    - Let your heart rate (not the field) dictate when to attack: surge only on the uphill tailwind straight, sit otherwise. [N4 V7 F9]
+    - Carve the race into 'forage' laps (soft, surging only inside the draft zone) and 'recruit' laps (hard pulls to break stragglers). [N5 V4 F5]
+    - Ignore the lead group entirely; shadow the rider 3 places back whose wheel keeps reappearing in your peripheral vision. [N6 V5 F6]
+    - 故意在第一个回头弯外线切入，慢到逼后面的选手超车，超车再切回内线，节奏全乱 [N7 V6 F8]
+    - 前五圈维持第二集团末尾直到没人愿意领骑，然后在反方向直道突然加速冲刺单飞 [N3 V5 F8]
+    - 每个回头弯故意在外道多切0.5米，迫使对手必须从内线超车，磨损其轮胎和心理 [N5 V4 F4]
+    - 用极度稳定的踏频(比如恒定85rpm)骑行前三圈，让所有想跟你节奏的人都掉队 [N6 V3 F4]
+    - 假装体能崩溃掉出第一集团，最后两圈再爆发把还在混战的领先集团一锅端 [N3 V5 F7]
+    - 在第二个回头弯加速突围时，故意压住一位实力选手但又不真正拉开，让他在跟风中被消耗却无法进攻 [N7 V3 F5]
+    - 将15圈设计为3个5圈章节，每章节末设'存档点'评估心率与位置，决定下章是高耗能强攻还是节能模式 [N4 V7 F8]
+    - 利用回头弯设计'赛道任务链'：每次过弯完成瞬时功率峰值，积累combo奖励虚拟体能 [N9 V1 F2]
+    - 采用前12圈'收集模式'积累位置优势，最后3圈解锁'冲刺技能树'集中爆发 [N5 V4 F5]
+    - 把长直道当作'刷怪练级区'用稳态节奏磨对手，靠AI般的功率曲线让旁人无法读牌 [N5 V5 F5]
+    - 设计'复活机制'心态：前10圈任何掉队都视为新开一局solo run，重置心理起点 [N6 V6 F6]
+    - 视对手为NPC：识别3类行为模式（早起爆型、冲刺型、跟随型），对应3套最优解路径 [N6 V6 F7]
+    - Build a per-meter digital twin of the course, then run 10^9 simulated races against your physiology model to discover the unique Nash-optimal power curve that no human coach would ever intuit. [N10 V1 F1]
+    - Engineer a custom metabolic on-bike fuel synthesis rig that converts lactate and CO2 from your own exhale back into glucose mid-race, removing the bonk cliff as a constraint. [N10 V0 F0]
+    - Pre-shape the wind across both straights with a kilometer-long array of micro-turbines and wind vanes calibrated to your exact drag coefficient, turning solo riding into a permanent slipstream. [N10 V0 F0]
+    - Run a continuous full-body EEG/EMG neuromuscular loop that micro-adjusts gearing, cadence, and posture 1000 times per second to ride each meter at the literal ceiling of your instantaneous power-to-fatigue ratio. [N10 V0 F1]
+    - Genetic + cellular engineering to grow extra slow-twitch motor units and mitochondrial density in your quads pre-season, so the 'medium amateur' baseline itself is shifted a full category upward. [N10 V0 F0]
+    - Train a fleet of identical decoy doppelgängers via exosuits and remote riders positioned at every corner, forcing the field to chase a phantom while you ride the actual race at threshold behind them. [N10 V0 F0]
+
+Converge — shortlist
+
+Traps (watch-outs, not verdicts)
+  ⚠ Mark the two straights as independent 'food sources' and race them as alternating 7-loop sprints instead of one 15-loop endurance grind.
+    Tactically incoherent in road racing — you can't unilaterally 'sprint the straights and cruise the curves'; the peloton's pace dictates when you get to sprint, and breaking rhythm that hard without team cover usually gets you shelled out the back before the backstraight ends.
+    + Reframes a 15-loop grind into alternating mini-efforts, which actually matches the course's 2-straight/2-curve rhythm better than a monolithic pacing plan.
+  ⚠ Release a staggered invisible pacer every 2 laps so you always have a draft to chase without depending on teammates.
+    Spending 15 laps chasing your own self-set rabbit means the field behind is drafting each other for free at lower wattage, while you're burning matches on a phantom. You'll be the first rider popped when the real race starts.
+    + Solves the actual solo problem — no teammates to set tempo — by manufacturing a moving target you can chase lap after lap.
+  ⚠ Probe 3 different cornering lines in warm-up laps, then commit to whichever leaves the freshest legs at lap 10.
+    Realistically you'll pick a line in warm-up by feel and stick with it; 'freshest legs at lap 10' is the wrong metric — what matters is which line has the lowest cumulative time over 15 laps at race intensity, which warm-up doesn't reveal.
+    + Only idea grounded in actual course reconnaissance — most 'tactics' ignore that 180° hairpins have multiple viable lines and line choice costs real watts every lap.
+  ⚠ Let your heart rate (not the field) dictate when to attack: surge only on the uphill tailwind straight, sit otherwise.
+    If the problem doesn't actually have a meaningful uphill tailwind straight, the whole plan reduces to 'sprint randomly'; verify the elevation/wind profile before committing, and HR lags effort so you'll react to surges a beat too late.
+    + Heart-rate-gated surges on the back straight are textbook counter-attack tactics and the highest-fit idea here: it matches 'mid-pack amateur' to a real, executable move (jump when the elastic snaps on the tailwind stretch).
+  ⚠ Carve the race into 'forage' laps (soft, surging only inside the draft zone) and 'recruit' laps (hard pulls to break stragglers).
+    'Recruit laps' require the legs and positioning to actually break someone; as a mid-pack amateur you usually can't, and the framing invites you to over-commit to attrition moves that just put you in the wind.
+    + Binary lap-state model is closer to how pros actually race a criterium — most laps are conservative with selective hard pulls — and gives a mid-pack rider a clear decision rule per lap.
+  ⚠ Ignore the lead group entirely; shadow the rider 3 places back whose wheel keeps reappearing in your peripheral vision.
+    Sounds like cycling wisdom but it's actually backwards in a 15-lap crit: the leader's group has the best tactical position, and being 3 deep means you enter every corner at the back of the queue, losing time every hairpin.
+    + Counterintuitively smart — the rider 3 wheels back often has better legs and is about to attack; trailing them lets you ride their move for free instead of chasing the front group into headwind.
+  ⚠ 故意在第一个回头弯外线切入，慢到逼后面的选手超车，超车再切回内线，节奏全乱
+    It's a one-trick pony that loses effect by lap 5 once the field reads you, and 'going slow on the outside' to force a pass is technically a blocking maneuver — borderline DSQ risk and definitely paints a target on your jersey.
+    + Active racecraft rather than passive pacing — uses the two 180° hairpins (which the course actually has) as disruption tools, and at amateur level it genuinely rattles people into bad lines.
+  ⚠ 前五圈维持第二集团末尾直到没人愿意领骑，然后在反方向直道突然加速冲刺单飞
+    Hanging at the back for 5 laps in a crit with two tight hairpins is dangerous — you'll either get gapped at the pin or end up at the tail going into the final bell, with nowhere to launch from.
+    + The cleanest, most realistic plan in the set: hide in the bunch, let others burn matches leading, then counter on a straight — this is exactly how mid-pack amateurs actually win crits.
+  ⚠ 每个回头弯故意在外道多切0.5米，迫使对手必须从内线超车，磨损其轮胎和心理
+    Outside-line-into-inside doesn't 'wear out tires' (no tire wear happens in 24km of racing) and the psychological-pressure claim is hand-waving — strong riders will simply take the inside you left open and drop you.
+    + Frames the hairpin as a tactical choke point instead of just a corner, which is the correct way to think about 180° turns in a crit — the inside line matters.
+  ⚠ 用极度稳定的踏频(比如恒定85rpm)骑行前三圈，让所有想跟你节奏的人都掉队
+    Holding a fixed cadence ignores power fluctuations through corners and accelerations out of hairpins; you'll either blow up trying to maintain 85rpm at 350W out of a turn, or fail to drop anyone who simply shifts to a harder gear.
+    + Using an unvarying cadence as a selection tool is a real, used-by-amateurs tactic — riders who can't hold a specific rhythm will yo-yo off the back.
+  ⚠ 假装体能崩溃掉出第一集团，最后两圈再爆发把还在混战的领先集团一锅端
+    Recovering from 10 laps of soft-pedaling to produce a 2-lap winning attack requires FTP you probably don't have as a mid-pack rider; more often this just turns into 'getting dropped for real and never coming back.'
+    + The 'fake-crisis-then-attack' play has a long history in racing and works specifically in criteriums where the field sits up near the end — a real, executable amateur tactic.
+  ⚠ 在第二个回头弯加速突围时，故意压住一位实力选手但又不真正拉开，让他在跟风中被消耗却无法进攻
+    Requires you to out-sprint a stronger rider on the straight AND hold a steady threshold effort — that's two capacities a mid-pack amateur typically doesn't have simultaneously; you'll get dragged back and shelled.
+    + Holding a stronger rider 'in no-man's land' between you and the field is one of the few real solo tactics in road racing — it genuinely costs them more than it costs you.
+  ⚠ 将15圈设计为3个5圈章节，每章节末设'存档点'评估心率与位置，决定下章是高耗能强攻还是节能模式
+    In-race HR lags real effort by 30–60 seconds, so by the time your HR tells you you've gone too hard you're already paying for it; also, '5-lap chapters' ignores that the decisive moves in a crit usually come on laps 11–13, not at clean chapter boundaries.
+    + Chunking 15 laps into 3 named segments with explicit HR/position checkpoints is the kind of structured decision-making most amateurs skip — it's the most coachable plan here.
+  ⚠ 利用回头弯设计'赛道任务链'：每次过弯完成瞬时功率峰值，积累combo奖励虚拟体能
+    Gamified 'combo' framing is pure fantasy mechanics — there's no compounding benefit to repeated power spikes, and chasing a 'combo' will make you sprint every corner, blow up by lap 6, and finish DFL.
+    + It correctly identifies that cornering is the under-utilized performance lever in a 4-corner crit — most amateurs leave seconds per lap on the table just on line choice.
+  ⚠ 采用前12圈'收集模式'积累位置优势，最后3圈解锁'冲刺技能树'集中爆发
+    The 'sprint skill tree' metaphor obscures the real constraint: in a 15-lap crit, the move that wins usually goes on lap 12–13 with a solo break, not a field sprint; saving everything for lap 15 means the race is decided without you.
+    + A 12-lap patience / 3-lap execution split matches how mid-pack crits are actually won — survival first, sprint last — and is far more honest than 'go hard from the gun' plans.
+  ⚠ 把长直道当作'刷怪练级区'用稳态节奏磨对手，靠AI般的功率曲线让旁人无法读牌
+    Steady tempo on the straights without ever surging means you'll never actually get out of the draft; you need at least one real acceleration to drop someone, and 'AI-like' steadiness often reads as 'easy to mark.'
+    + Unreadable power curves genuinely defeat reactive racing — most amateurs telegraph attacks and get marked; riding steady is a real tactical weapon.
+  ⚠ 设计'复活机制'心态：前10圈任何掉队都视为新开一局solo run，重置心理起点
+    In a 15-lap crit there's no time to 'reset' after being gapped; if you're off the back at lap 10 the race is functionally over, and pretending it's a 'new solo run' is cope that costs you a proper team time trial to limit losses.
+    + Reframes a mid-race gap as a fresh start instead of a death sentence — psychologically valuable because amateur racing is mostly a panic-management problem.
+  ⚠ 视对手为NPC：识别3类行为模式（早起爆型、冲刺型、跟随型），对应3套最优解路径
+    At amateur level the archetypes blur fast and riders swap roles mid-race; spending mental bandwidth classifying opponents takes attention away from the actually-difficult task of holding your line through 30 hairpins at speed.
+    + Categorizing the field into 3 archetypes is a real racecraft skill — most amateurs treat everyone the same and get marked by sprinters when they should be following opportunists.
+  ⚠ Build a per-meter digital twin of the course, then run 10^9 simulated races against your physiology model to discover the unique Nash-optimal power curve that no human coach would ever intuit.
+    You cannot run 10^9 simulated races before a weekend crit; the physics of peloton dynamics (drafting, swerving, attacks from others) is not in any physiology model you'd build, so the 'Nash-optimal' curve will be optimized against a world that doesn't exist on race day.
+    + Correctly identifies that pacing on a known course with known physiology is a small finite optimization problem — the framing is more rigorous than anything else here.
+  ⚠ Engineer a custom metabolic on-bike fuel synthesis rig that converts lactate and CO2 from your own exhale back into glucose mid-race, removing the bonk cliff as a constraint.
+    A lactate-to-glucose bioreactor mid-race is not a thing that exists, won't weigh what a bike can carry, and is orders of magnitude beyond current biochemical engineering — this is science fiction, not a tactic.
+    + Solves the actual limiting factor (glycogen depletion over a hard effort) instead of working around it.
+  ⚠ Pre-shape the wind across both straights with a kilometer-long array of micro-turbines and wind vanes calibrated to your exact drag coefficient, turning solo riding into a permanent slipstream.
+    You cannot deploy a kilometer of micro-turbines on a public road; this is a wind-tunnel fantasy and also not a tactic, it's infrastructure engineering at municipal scale.
+    + Identifies aero drag as the single biggest variable in solo cycling performance, which is more honest than any of the 'tactical' ideas.
+  ⚠ Run a continuous full-body EEG/EMG neuromuscular loop that micro-adjusts gearing, cadence, and posture 1000 times per second to ride each meter at the literal ceiling of your instantaneous power-to-fatigue ratio.
+    1000Hz neuromuscular optimization on a bicycle is meaningless — your muscles respond over hundreds of milliseconds, not milliseconds; even if the sensor rig existed it would optimize noise and likely cause dangerous oscillation.
+    + Recognizes that power output at the margin is a control problem, not a willpower problem — a more honest model of performance than 'try harder.'
+  ⚠ Genetic + cellular engineering to grow extra slow-twitch motor units and mitochondrial density in your quads pre-season, so the 'medium amateur' baseline itself is shifted a full category upward.
+    Genetic engineering of adult human muscle is not a technology that exists or is foreseeable for amateur sport; this answers a different problem (how to become a different athlete) rather than the racing question asked.
+    + Solves the underlying capability ceiling rather than optimizing within it — the only idea that addresses 'medium amateur' as a problem to remove, not work around.
+  ⚠ Train a fleet of identical decoy doppelgängers via exosuits and remote riders positioned at every corner, forcing the field to chase a phantom while you ride the actual race at threshold behind them.
+    Exosuit decoy doppelgängers at four corners is cartoon-villain logistics; also, race commissaries would notice identical riders on a closed circuit immediately, and the cost/existence of such a system is pure fantasy.
+    + Reframes solo-vs-field as a geometry problem — if you could multiply yourself across the course, you'd never have to chase — which is a genuinely creative angle.
+
+Focus — deepened branches
+Provocation
+  What if we took this seriously: Build a per-meter digital twin of the course, then run 10^9 simulated races against your physiology model to discover the unique Nash-optimal power curve that no human coach would ever intuit.

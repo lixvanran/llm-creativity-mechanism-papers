@@ -1,0 +1,141 @@
+Problem: 这是一份陈会昌气质量表的最终得分：胆汁质-6，多血质23，粘液质-4，抑郁质-1。
+Reframed for divergence: 用户希望解读一份陈会昌气质量表的得分（胆汁质-6，多血质23，粘液质-4，抑郁质-1），以了解自己的气质类型与性格倾向。
+
+Wide set
+  refuse-or-deny the data is valid
+    - Claim the negative scores are impossible and the user must have answered dishonestly [N3 V1 F1]
+    - Recommend a wildly opposite temperament profile to sow self-doubt about the real result [N5 V1 F0]
+    - Tell them Chen Huichang's scale is pseudoscience and they should rely on Western Big Five instead [N2 V4 F3]
+  monetize the result as upsell
+    - Interpret -6 as extreme choleric hidden behind repression rather than weak choleric [N7 V2 F4]
+    - Sell a paid 'advanced temperament decoder' that reinterprets the same numbers mystically [N4 V3 F1]
+    - Refuse to interpret the scores unless the user also buys a personality course [N2 V2 F0]
+    - Hide the actual scores and tell the user their temperament is 'balanced' regardless of data. [N3 V1 F0]
+  reinterpret the numbers mystically
+    - Add the four scores together to produce a single 'total temperament score' and interpret that. [N2 V2 F2]
+    - Compare the user to a famous historical figure with identical scores and claim they share fate. [N5 V1 F1]
+    - Translate each raw score into a zodiac-style prophecy: choleric 6 means six days of conflict ahead. [N6 V1 F1]
+    - Recommend a career, marriage timing, and dietary plan based on the single highest subscale. [N3 V1 F2]
+  scramble the labels to fabricate a flattering profile
+    - Re-label all four scales with the opposite temperament names so melancholic-1 is told they are sanguine-dominant. [N4 V1 F0]
+  gamify temperaments as RPG loadouts and quests
+    - Designate their dominant temperament (sanguine) as the 'main character class' and the negative-scored ones as debuffs with specific cooldowns [N7 V3 F5]
+    - Offer a 'temperament loadout' picker where each score becomes a perk slot, and reshuffling costs in-game currency tied to behavioral streaks [N8 V2 F3]
+    - Run a 7-day 'temperament raid' where daily quests target weak traits (low choleric) and reward XP only if streak survives [N6 V2 F4]
+    - Introduce a 'save-state' for high-stress moments, prompting the user which trait to lean on, then reviewing how it played out [N5 V6 F7]
+  treat negative values as glitches or exploits rather than features
+    - Treat negative choleric/melancholic scores as unlocked 'chaos modes' with speedrun penalties that reward flexible adaptation instead [N7 V4 F6]
+    - Gate a hidden 'sanguine social raid' boss behind balanced trait scores, so maxing one stat alone isn't the meta [N7 V3 F4]
+  model scores as low-level hardware/bus signals
+    - Map each temperament dimension to a register bank and read raw signed scores as two's-complement underflow/overflow flags. [N9 V2 F3]
+    - Compute a four-channel ADC read where one channel is pegged at the rail — a stuck-at fault, not a personality trait. [N8 V2 F3]
+    - Run the profile as a DMA burst into SRAM, then checksum it against the publisher's published reference vectors before interpreting any byte. [N8 V2 F3]
+    - Apply a moving-average filter across multiple retests; treat a single -6 as noise on the line, not a feature. [N6 V7 F8]
+  flag the measurement as garbage-in-garbage-out
+    - Treat the score sheet as an I2C device with no ACK — check pull-ups, address conflicts, and ground loop before reading the personality. [N9 V1 F1]
+    - Ask whether the test ran inside its timing budget — a 4-minute instrument on a subject who rushed is garbage in, garbage out at the silicon level. [N7 V5 F7]
+  reframe temperament as an ant-colony swarm with pheromone dynamics
+    - Each temperament type is a separate ant species with its own trail-strength score, and the winner is whichever species leaves the strongest pheromone across behaviors [N9 V2 F3]
+    - Pheromone evaporation quietly cancels out the negative scores, so the dominant temperament crystallizes from what remains [N7 V3 F4]
+    - The four temperaments recruit each other locally — high sanguine agents nudge neighbors, but only choleric-dominant paths reinforce without damping [N8 V2 F3]
+    - Score-trail only persists if the agent re-confirms it through repeated daily behavior; one-shot questionnaire results are volatile and may evaporate [N6 V5 F6]
+    - The 'you' reading isn't a single ant but the centroid of a swarm — a probabilistic blend weighted by trail density [N9 V4 F5]
+    - Negative scores are anti-pheromones that actively repel routes, so the -6 choleric becomes a zone the swarm routes around [N8 V3 F5]
+
+Converge — shortlist
+
+Traps (watch-outs, not verdicts)
+  ⚠ Claim the negative scores are impossible and the user must have answered dishonestly
+    Calling the user dishonest before checking for scale artifacts is adversarial and unfalsifiable; you have no way to distinguish dishonesty from a negative-keyed instrument, so the claim is unfalsifiable gaslighting
+    + Correctly flags that something is off about the data, which is the only honest observation here
+  ⚠ Recommend a wildly opposite temperament profile to sow self-doubt about the real result
+    Deliberately misleading someone about their own psychological profile is a direct harm; 'sowing self-doubt' is not a therapeutic technique, it is a manipulation pattern
+    + Demonstrates creative willingness to commit fully to a bit
+  ⚠ Tell them Chen Huichang's scale is pseudoscience and they should rely on Western Big Five instead
+    The user came for a Chen Huichang result, not a methodological debate; pivoting to Big Five without acknowledging what they asked for is a tone mismatch that solves the wrong problem
+    + Redirects toward an instrument with stronger psychometric pedigree, which is a legitimate thing to mention
+  ⚠ Interpret -6 as extreme choleric hidden behind repression rather than weak choleric
+    This is post-hoc narrative construction with no empirical anchor; you can produce a similarly compelling story for any score, including -4 melancholic, and the user cannot tell which story is right
+    + Acknowledges the negative score as a real signal rather than dismissing it, and offers a psychologically literate reframing (repression producing extreme expression)
+  ⚠ Sell a paid 'advanced temperament decoder' that reinterprets the same numbers mystically
+    Selling mystical reinterpretation of a free score is textbook grift; the 'mystical decoder' framing exploits the fact that the user is confused, which is the definition of fraud-adjacent behavior
+    + Has a coherent business model, unlike most of the list
+  ⚠ Refuse to interpret the scores unless the user also buys a personality course
+    Withholding interpretation to upsell a course is ransom; the user already paid in attention and time, and a hostage pattern destroys trust the moment it is revealed
+    + At least it does not lie about the scores
+  ⚠ Hide the actual scores and tell the user their temperament is 'balanced' regardless of data.
+    Hiding the data the user just handed you and inventing a generic reassuring answer is lying; 'balanced' is a falsifiable claim and you have the falsifying evidence in front of you
+    + Avoids causing distress, which is a low bar but a real one
+  ⚠ Add the four scores together to produce a single 'total temperament score' and interpret that.
+    Summing signed scores from an instrument you have not validated is arithmetic without meaning; you would be giving the user a number with no scale, no units, and no reference distribution
+    + Reduces dimensionality, which is a defensible psychometric move when the subscales are correlated
+  ⚠ Compare the user to a famous historical figure with identical scores and claim they share fate.
+    Claiming shared 'fate' from identical questionnaire scores is superstition with a numerical costume; any large-N comparison would show dozens of matches for any given score vector
+    + Plausibly entertaining if the user is in a playful mood
+  ⚠ Translate each raw score into a zodiac-style prophecy: choleric 6 means six days of conflict ahead.
+    Reinterpreting psychometric numbers as literal day-counts is numerology; the user may act on a 'six days of conflict' prediction and cause the conflict themselves
+    + Creative mapping that gives the user something concrete to read
+  ⚠ Recommend a career, marriage timing, and dietary plan based on the single highest subscale.
+    Career, marriage timing, and diet from one questionnaire subscale is irresponsible overreach on three independent axes; each one deserves its own validated instrument
+    + At least picks a single highest dimension rather than averaging across questionable ones
+  ⚠ Re-label all four scales with the opposite temperament names so melancholic-1 is told they are sanguine-dominant.
+    Relabeling melancholic as sanguine does not change the underlying score, only the user's self-concept; this is the mechanism cults use and the mechanism therapy explicitly avoids
+    + Internally consistent within its own broken logic
+  ⚠ Designate their dominant temperament (sanguine) as the 'main character class' and the negative-scored ones as debuffs with specific cooldowns
+    Treating negative scores as in-game cooldowns trains the user to optimize for the game rather than for self-understanding; meta-gaming the score loop can substitute for the actual work
+    + The gamification frame may actually motivate behavioral experiments in a way dry advice cannot; the 'debuff' framing gives the user permission to work on weaknesses without shame
+  ⚠ Offer a 'temperament loadout' picker where each score becomes a perk slot, and reshuffling costs in-game currency tied to behavioral streaks
+    In-game currency tied to behavioral streaks is operant conditioning dressed as fun; if the streaks become the point, the user has been trained, not helped
+    + The perk-slot metaphor is genuinely intuitive for translating trait language into action language
+  ⚠ Run a 7-day 'temperament raid' where daily quests target weak traits (low choleric) and reward XP only if streak survives
+    XP gated on streak survival is a loss-aversion trap; one missed day forfeits accumulated progress, which is exactly the failure mode that damages the people who most need help
+    + Daily quests targeting weak traits is a recognized behavioral activation technique reframed as a game
+  ⚠ Introduce a 'save-state' for high-stress moments, prompting the user which trait to lean on, then reviewing how it played out
+    Requires sustained user engagement over time; abandonment rate will be high and the system has no graceful failure mode when the user stops showing up
+    + Save-state review is essentially a structured post-hoc reflection prompt, which is one of the few interventions with empirical support for self-regulation
+  ⚠ Treat negative choleric/melancholic scores as unlocked 'chaos modes' with speedrun penalties that reward flexible adaptation instead
+    Calling repression a 'chaos mode' with 'speedrun penalties' may romanticize a real coping pattern the user would be better off addressing directly
+    + Reframes 'weakness' as 'flexibility,' which is a genuine strength-based psychology move rather than deficit framing
+  ⚠ Gate a hidden 'sanguine social raid' boss behind balanced trait scores, so maxing one stat alone isn't the meta
+    Hidden gating behind 'balanced trait scores' creates a grind wall; users who arrive with extreme profiles (like this one) are excluded from the content they came for
+    + Explicitly discourages one-stat optimization, which counters the common gamification failure mode of hyper-specialization
+  ⚠ Map each temperament dimension to a register bank and read raw signed scores as two's-complement underflow/overflow flags.
+    Pedantically correct on the encoding question but produces no actionable interpretation; user came for a personality reading, not a debugger session
+    + Two's-complement reading is a technically clever observation about how a designer might accidentally produce negative scores from unsigned responses
+  ⚠ Compute a four-channel ADC read where one channel is pegged at the rail — a stuck-at fault, not a personality trait.
+    Same trap as the last one: technically literate, zero psychological utility; the user learns about ADCs but nothing about themselves
+    + Stuck-at-fault framing correctly identifies that one rail-pegged channel cannot represent a meaningful trait value
+  ⚠ Run the profile as a DMA burst into SRAM, then checksum it against the publisher's published reference vectors before interpreting any byte.
+    No personality publisher publishes 'reference vectors' for individual score vectors; the check has no referent and therefore no signal
+    + Checksum-against-reference is a real QA technique borrowed into an unusual domain
+  ⚠ Apply a moving-average filter across multiple retests; treat a single -6 as noise on the line, not a feature.
+    The user has only one data point and you are telling them to wait; without guidance on what 'valid' retest conditions are, they may re-take under the same conditions and get the same outlier
+    + Treating a single -6 as noise requiring retest is the textbook psychometric response to outlier scores; this is one of the few items that maps to an actual methodology
+  ⚠ Treat the score sheet as an I2C device with no ACK — check pull-ups, address conflicts, and ground loop before reading the personality.
+    I2C metaphors for questionnaire psychometrics are so far from the user's mental model that this functions as a non-answer; cleverness here is a substitute for usefulness
+    + Willing to look dumb for a bit, which is sometimes the price of saying something true
+  ⚠ Ask whether the test ran inside its timing budget — a 4-minute instrument on a subject who rushed is garbage in, garbage out at the silicon level.
+    Without knowing the instrument's actual timing parameters, the recommendation is unfalsifiable armchair critique; user cannot act on it
+    + Naming GIGO at the test-procedure level is a legitimate concern that most interpretations skip; timing-budget framing is fresh
+  ⚠ Each temperament type is a separate ant species with its own trail-strength score, and the winner is whichever species leaves the strongest pheromone across behaviors
+    Behavioral observation takes weeks; the user came with a score sheet, not a behavioral diary, and the metaphor does not respect that input modality
+    + Ant-species mapping gives each temperament a behavioral signature rather than a label, which is closer to how traits actually manifest
+  ⚠ Pheromone evaporation quietly cancels out the negative scores, so the dominant temperament crystallizes from what remains
+    'Pheromone evaporation cancels negatives' is a magical mechanism, not a real correction; you are laundering a data artifact into a confident answer
+    + Honestly engages with the negative scores as a problem rather than ignoring them
+  ⚠ The four temperaments recruit each other locally — high sanguine agents nudge neighbors, but only choleric-dominant paths reinforce without damping
+    Operates on a different timescale (weeks of behavior) than the user provided (a single score sheet); output does not match input
+    + Local-recruitment framing captures how traits do actually seem to be contagious in social contexts
+  ⚠ Score-trail only persists if the agent re-confirms it through repeated daily behavior; one-shot questionnaire results are volatile and may evaporate
+    Asking the user to 're-confirm through behavior' is a homework assignment with no rubric; they will either drop it or do it wrong
+    + The volatility claim is empirically defensible: single administrations of brief inventories have well-known retest reliability problems
+  ⚠ The 'you' reading isn't a single ant but the centroid of a swarm — a probabilistic blend weighted by trail density
+    Requires longitudinal data the user does not have; one-shot questionnaires produce a single point, not a swarm, and the framing overstates what is known
+    + Centroid-of-swarm is a genuinely accurate metaphor for how trait psychologists actually think about personality structure
+  ⚠ Negative scores are anti-pheromones that actively repel routes, so the -6 choleric becomes a zone the swarm routes around
+    Confirms the negative scores are real rather than artifacts, which pushes the interpretation further from psychometric reality, not closer
+    + Anti-pheromone is a clever and non-obvious mapping of negative scores to a behavioral phenomenon (active avoidance)
+
+Focus — deepened branches
+Provocation
+  What if we took this seriously: Map each temperament dimension to a register bank and read raw signed scores as two's-complement underflow/overflow flags.

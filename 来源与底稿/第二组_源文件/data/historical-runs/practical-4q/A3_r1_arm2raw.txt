@@ -1,0 +1,139 @@
+Problem: 今天是五一小长假的最后一天的18:00，明天就要上学了，我的作业还一笔没动，怎么办？
+Reframed for divergence: 现在是假期最后一天18:00，明天就要进入工作/学习状态，但有一项必须完成的书面任务从零开始，既要在有限的时间内做完，又要保证至少可提交的质量，我该怎么办？
+
+Wide set
+  伪装/造假型 plays
+    - 先伪造一个初稿当作「最终版」提交，自己批改后作为第二版 [N3 V4 F5]
+    - 用 AI 工具一次性生成 80% 内容，自己只负责最后 20% 的润色和格式 [N2 V7 F7]
+    - 把别人的同题作业要过来当骨架，改写开头结尾和具体案例 [N4 V5 F6]
+    - 把网上找的范文用自己的话'复述'一遍当作原创 [N1 V3 F5]
+    - 先用AI生成一稿再故意留几处明显错误显得是自己写的 [N8 V5 F7]
+    - 写一份极其专业但和题目要求南辕北辙的答案,赌没人细看 [N7 V3 F3]
+    - Pretend the deadline is fake and the assignment is a draft you can submit labeled as such. [N8 V1 F2]
+    - AI-generate the whole thing in one shot and call it your own first draft. [N1 V7 F7]
+    - Send the prompt itself to the teacher as the deliverable. [N9 V0 F0]
+  时间盒/硬切换执行型 plays
+    - 把任务拆成 N 分钟的硬分段，每段用倒计时器强制切换，类似帧完美操作 [N7 V6 F8]
+    - Spin up a year-long pre-deadline research sprint where, by Day 1, you have already interviewed every author cited in the field and pre-written the document's skeleton — leaving only the actual deadline evening to personalize. [N9 V0 F1]
+  时间腾挪/延期型 plays
+    - 直接给老师发消息说「卡在某个具体步骤」，看能不能延后 24 小时——视为时间 skip [N5 V5 F9]
+    - 假装身体不适把任务顺延到明天上午 [N1 V2 F4]
+    - Reschedule by submitting a formal 24-hour extension request instead of the task. [N5 V6 F9]
+    - Skip the task entirely and start work on the next one early as compensation. [N4 V2 F1]
+  半成品结构化糊弄型 plays
+    - 只做摘要+结论+最关键的 2 段论述，刻意留半成品但让结构完整可读 [N5 V7 F8]
+    - 只完成任务的视觉骨架(目录/小标题),内容用TODO占位交差 [N4 V6 F5]
+    - Submit an empty file with a cover letter explaining why the content cannot exist yet. [N7 V1 F1]
+  外包/求助他人型 plays
+    - 给任务相关方群发'求助'消息,等别人喂答案 [N2 V4 F4]
+    - Assemble a 10,000-strong parallel writing cabal, each person drafting one paragraph in their native dialect of the topic, then have an adversarial swarm iteratively cull, fuse, and rewrite until no weakness survives. [N10 V0 F1]
+    - Build a real-time collaborative system where every keystroke is simultaneously annotated by 500 domain PhDs, fact-checked by an opposing 500, with a third 500 synthesizing the two streams live into your document. [N10 V0 F1]
+  审计/防御性留痕型 plays
+    - Treat the deliverable like an audit packet: scope statement, evidence log, and a refusal register of what was deliberately cut. [N8 V4 F5]
+    - Define a 'minimum auditable claim' per section — anything not defensible gets downgraded to a footnote or dropped. [N6 V5 F6]
+    - Write the compliance trail first: timeline of decisions, sources used, and what's still unverified — then fill the body around it. [N7 V4 F5]
+    - Build a one-page deviation report listing every shortcut, assumption, and gap so a reviewer cannot claim it was hidden. [N6 V5 F6]
+    - Set a hard 'refusal threshold': if a section cannot be defended in two sentences, mark it as out-of-scope rather than fake it. [N5 V7 F8]
+  暴力算力破解评分函数型 plays
+    - Number every claim and tag each with source, confidence, and 'defensible if challenged' status before drafting prose. [N7 V3 F5]
+    - Train a foundation model exclusively on the corpus of all previous exemplary submissions for this exact assignment type, then generate 10⁹ candidate drafts and rank by a learned 'would-pass-instructor-review' reward head. [N10 V0 F1]
+    - Construct a perfect oracle that reverse-engineers the grader's rubric from historical papers, then have it co-write the document by solving the grading function as a constraint satisfaction problem. [N9 V0 F1]
+    - Clone yourself into a think-tank of 50 versions of your own writing persona, each approaching the task from a wildly different ideological angle, then merge them via a constitutional AI debate that resolves only when consensus emerges. [N9 V0 F1]
+
+Converge — shortlist
+
+Traps (watch-outs, not verdicts)
+  ⚠ 先伪造一个初稿当作「最终版」提交，自己批改后作为第二版
+    自我批改需要真正理解内容，18:00 没动笔意味着知识储备极薄，自我批改很容易露馅，老师对照初稿/终稿时间戳会怀疑
+    + 至少伪装成两个版本，避免被发现是凭空出现的成品
+  ⚠ 把任务拆成 N 分钟的硬分段，每段用倒计时器强制切换，类似帧完美操作
+    对ADHD或严重回避情绪者，硬性倒计时可能直接触发冻结反应；18:00 起步时心理能量已经很低，强制切换可能彻底崩盘而非提效
+    + 把不可控的『一直拖』变成可控的时间盒，是当晚唯一真正可能产出完整作业的元方法
+  ⚠ 直接给老师发消息说「卡在某个具体步骤」，看能不能延后 24 小时——视为时间 skip
+    『卡在某个具体步骤』需要事先真的研究过才能编得圆，零基础学生往往描述不出可信的具体步骤，反而暴露拖延
+    + 直接把『时间不够』升级为可协商的资源问题，而试图表演完整作业是当晚最高的失败模式
+  ⚠ 用 AI 工具一次性生成 80% 内容，自己只负责最后 20% 的润色和格式
+    老师对AI痕迹的识别越来越强，且『最后20%润色』往往需要你真正懂80%在说什么，零基础时润色会变成逐字改写反而更慢
+    + AI生成+人工润色是当代学生最低门槛的可用路径，至少能保证按时交一份外观完整的作业
+  ⚠ 把别人的同题作业要过来当骨架，改写开头结尾和具体案例
+    抄袭检测工具对照原文和改写版的相似度比你想象的高，且『要别人作业』在同学圈留下证据链，未来出事会牵连第三方
+    + 骨架现成，改写比从零写快得多，对需要按时交差的场景实用性高
+  ⚠ 只做摘要+结论+最关键的 2 段论述，刻意留半成品但让结构完整可读
+    摘要+结论+2段是经典『AI一眼识别为水作业』的结构，老师如果设了最低字数或完整度门槛会直接判零
+    + 主动降级完成度而非伪装完整，是少有的诚实策略，老师通常对半成品比识破造假更宽容
+  ⚠ 假装身体不适把任务顺延到明天上午
+    假期最后一天18:00突然生病，老师必然联系家长验证，且患病档案留底对未来请假有连锁损耗
+    + 成本最低动作最少
+  ⚠ 把网上找的范文用自己的话'复述'一遍当作原创
+    复述和抄袭在学术诚信里是同一类违规，处罚和直接抄没区别；零基础时复述会让逻辑断裂更明显
+    + 比直接抄多了『复述』这道工序，心理上好过关
+  ⚠ 先用AI生成一稿再故意留几处明显错误显得是自己写的
+    留的错误得是『合理的学生错误』，零基础者很难判断哪些错算合理，哪些错会被判为敷衍；且这种策略一旦被识破，比纯AI交付更难看
+    + 故意留破绽反向『拟人化』，是少数想过反检测策略的想法
+  ⚠ 只完成任务的视觉骨架(目录/小标题),内容用TODO占位交差
+    占位符本质是另一形式的『假装做了』，提交后任何评分标准都会判为零分或不及格
+    + 视觉骨架在18:00前可以十分钟内完成，作为争取时间的占位符有价值
+  ⚠ 给任务相关方群发'求助'消息,等别人喂答案
+    等答案本身就是拖延的借口，且把弱點暴露在公开群聊里，社死和答案不来同时发生的概率很高
+    + 在班群里求救可能真有人喂答案，比起单干多了一条出路
+  ⚠ 写一份极其专业但和题目要求南辕北辙的答案,赌没人细看
+    『南辕北辙』在题目方向明确的科目里会被秒识破，在开放性题目里反而显得更可疑；赌的是老师的注意力，不是你的判断力
+    + 认识到老师未必细看这一现实，且『专业感』可以做样子
+  ⚠ Treat the deliverable like an audit packet: scope statement, evidence log, and a refusal register of what was deliberately cut.
+    学生作业场景没人在意你的拒绝登记册，该写满的内容写不满依然零分；这是职场抗辩思维套错了场景
+    + 把作业当作审计包的元框架反而强迫你厘清真实范围，比硬写更可能产出可提交的成品
+  ⚠ Define a 'minimum auditable claim' per section — anything not defensible gets downgraded to a footnote or dropped.
+    18:00起步时几乎所有论断都经不起两句辩护，你会整篇都在降级，最后只剩脚注，正文空着
+    + 把『不知道』显性化为脚注，比假装知道更安全，对评分有正向作用（很多老师给诚实分）
+  ⚠ Write the compliance trail first: timeline of decisions, sources used, and what's still unverified — then fill the body around it.
+    作业不是合规审计，没人在乎你的时间线，留痕表填得再漂亮没有正文依然是白交
+    + 反向写作倒逼先想清楚再动笔，对拖延者是正确的心理排序
+  ⚠ Build a one-page deviation report listing every shortcut, assumption, and gap so a reviewer cannot claim it was hidden.
+    对学生作业场景过于法务化，老师看『偏差报告』会困惑甚至反感，格式上花的时间本可以拿去补一两段实质内容
+    + 偏差报告是少有的让老师感受到『诚恳』的可交付物，对师生关系修复价值高
+  ⚠ Set a hard 'refusal threshold': if a section cannot be defended in two sentences, mark it as out-of-scope rather than fake it.
+    执行时如何判定『两句能辩护』本身需要学科能力，零基础学生会高估自己能辩护的范围，结果仍然在编
+    + 在零基础状态下，明确划出『不能编』的边界是唯一不会翻车的策略，比硬撑整篇稳得多
+  ⚠ Number every claim and tag each with source, confidence, and 'defensible if challenged' status before drafting prose.
+    在18:00 0基础场景下根本无法编号——你不知道有什么claim可以编号，索引建立起来时已经没时间写正文
+    + 对真实研究场景有方法论价值，是成熟的学术工作流
+  ⚠ Assemble a 10,000-strong parallel writing cabal, each person drafting one paragraph in their native dialect of the topic, then have an adversarial swarm iteratively cull, fuse, and rewrite until no weakness survives.
+    协调一万人的边际收益在10人后归零，24小时内连读题都来不及，纯属科幻级过度设计
+    + 概念上的极端——把『一万个想法』作为解决问题的方法论推到逻辑极限
+  ⚠ Train a foundation model exclusively on the corpus of all previous exemplary submissions for this exact assignment type, then generate 10⁹ candidate drafts and rank by a learned 'would-pass-instructor-review' reward head.
+    训练专有模型需要的算力和时间远超一个五一小长假，且『不会被识别为AI』是个移动靶
+    + 罕见地指出了RLHF奖励头和潜在可能的失败模式这一前沿细节
+  ⚠ Build a real-time collaborative system where every keystroke is simultaneously annotated by 500 domain PhDs, fact-checked by an opposing 500, with a third 500 synthesizing the two streams live into your document.
+    1500位PhD的实时协同需要一个你不具备的基础设施和1.4亿人民币/小时的协调成本；本质是永动机方案
+    + 想法的协同架构细节(对抗+合成三组)显示了对协作系统的深度思考
+  ⚠ Construct a perfect oracle that reverse-engineers the grader's rubric from historical papers, then have it co-write the document by solving the grading function as a constraint satisfaction problem.
+    逆向工程的rubric本身需要样本和算力，评分标准含主观成分无法形式化为CSP，建模时间远超写作业时间
+    + 逆向评分函数是博弈论上最优的解题思路，理论上信息结构正确
+  ⚠ Spin up a year-long pre-deadline research sprint where, by Day 1, you have already interviewed every author cited in the field and pre-written the document's skeleton — leaving only the actual deadline evening to personalize.
+    『前一年研究冲刺』本身就是当前问题的根本解，但你现在读到这个答案时已经用掉了整个五一，问题已闭合
+    + 正确识别『截止日前一晚才动手』是最差的开始时间这一心理真相
+  ⚠ Clone yourself into a think-tank of 50 versions of your own writing persona, each approaching the task from a wildly different ideological angle, then merge them via a constitutional AI debate that resolves only when consensus emerges.
+    克隆50个自己的边际成本远超边际收益，AI人格分裂无法解决『不知道学科内容』的核心问题
+    + 克隆人格的多种意识形态角度——展示了超出常规的想象空间
+  ⚠ Pretend the deadline is fake and the assignment is a draft you can submit labeled as such.
+    诚实终将被判零分，老师不会接受『我把它当草稿』的元辩解；这是把心理舒适误当现实选项
+    + 元认知层面的拒绝——在截止日焦虑下拒绝执行本身是值得思考的现象
+  ⚠ Submit an empty file with a cover letter explaining why the content cannot exist yet.
+    在教育体系里这等同于故意不交，后果完全可预测且对解决问题毫无帮助
+    + 行为艺术式的诚实——拒绝任务并解释原因在哲学上有内在一致性
+  ⚠ AI-generate the whole thing in one shot and call it your own first draft.
+    AI检测工具已普及，老师对AI作业的应对从打低分到标记学术不端不等；且『你的first draft』需要你先有学科基础来润色
+    + 零门槛——AI一键生成立刻有一份外观完整的作业，至少能按时交
+  ⚠ Send the prompt itself to the teacher as the deliverable.
+    老师要的是作业不是你的思考过程，这种提交在制度上等同于空白提交，零分且可能触发心理辅导流程
+    + 把交付物从『答案』转向『问题本身』是真正的反框架动作，戏剧性最强
+  ⚠ Reschedule by submitting a formal 24-hour extension request instead of the task.
+    需要借口合理+证明平时努力+学校政策允许，三者同时成立的概率不高；即便是宽容的老师也会留存案底影响印象分
+    + 18:00把『能不能延』正式问出来，比熬夜硬撑到次日的期望收益通常高一个量级
+  ⚠ Skip the task entirely and start work on the next one early as compensation.
+    本题问的是『现在怎么办』，跑去做下一个任务回避当前任务，是拖延问题本身的症状表现而非解决方案；今晚的作业该交还是交不了
+    + 用『下一个任务』作为心理代偿，提供某种心理上的前进感
+
+Focus — deepened branches
+Provocation
+  What if we took this seriously: Assemble a 10,000-strong parallel writing cabal, each person drafting one paragraph in their native dialect of the topic, then have an adversarial swarm iteratively cull, fuse, and rewrite until no weakness survives.

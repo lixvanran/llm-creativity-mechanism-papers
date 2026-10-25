@@ -1,0 +1,41 @@
+Problem: 写一篇文章，主题是：你如何看待现在的高考英语作文。
+Reframed for divergence: 写一篇文章，主题是：你如何看待现在的某门标准化考试中的作文科目。
+
+Wide set
+  (unclustered)
+    - 每张试卷是一根被踩秃的路径，评分标准是信息素，只奖励最像前一只蚂蚁的答卷 
+    - 作文题目是信息源，几十万只蚂蚁各自搬运出几乎等长的蚁穴，洞口都被刷成红色 
+    - 把作文题换成随机噪声，看蚂蚁们是否还会自发修出一条路 
+    - 考生不是蚂蚁，是被信息素涂过的行尸走肉，踩着自己的旧脚印前进 
+    - 考场的空气里漂浮着阅卷人去年留下的评分气味，新作文只是踩着它再走一遍 
+    - 若允许考生互相嗅对方的气味，群体会涌现出比任何个体都荒诞的超级套路 
+    - Treat the essay prompt as an antigen: each candidate's response is an antibody-essay sampled from a diverse repertoire, and grading ignores the worst outliers instead of averaging. 
+    - Score essays the way T-cells vet MHC: a two-signal check (content + structure) prevents false positives produced by fluent nonsense. 
+    - Use neuroplastic pruning on rubrics: each grading cycle retires prompt archetypes whose batch score distributions flatten, forcing prompt evolution. 
+    - Run essays through quorum sensing: a single rater's judgment doesn't register until enough raters secrete the same verdict above threshold. 
+    - Model the marking pool as gut flora: a diverse rater microbiome resists any single rhetorical fad dominating the bell curve. 
+    - Apply apoptosis to essays that score in the ghost zone — neither clearly failed nor passed — rather than let them limply persist to a re-grade. 
+    - 考生是买方，押注的是一份期权：写作分数换取未来通行证，作文题本身是庄家定下的行权价。 
+    - 阅卷老师是清算所：在高峰日以批发价清算数万份标准化的人话，而评分细则是一份粗糙的反向回购协议。 
+    - 作文模板班是套利者，发现命题人、阅卷人、考生三方信息差里的无风险利润。 
+    - 真题库像一份远期合约：今年考过的，明年大概率被替换，市场永远在押新题。 
+    - 作文学区房：语文教师的声誉资本在高考作文分数里挂牌，溢价由家庭支付。 
+    - AI写作工具是高频做市商，把“满分作文”压成低延迟的公共报价，挤压真人考生的bid-ask价差。 
+    - Score essays using a deterministic rubric that auto-fails any metaphor containing 'like a' or 'as if' 
+    - Require essays to be written in Times New Roman 12pt on ruled paper scanned by a 2009-era OCR pipeline 
+    - Make the prompt public 72 hours in advance and watch median scores stay identical 
+    - Train a model on ten years of high-scoring essays and ship it as a paid prep tool called EssayBandit 
+    - Pay teenagers to retake the exam under invented identities and publish the variance per rater 
+    - Replace the essay with a 25-minute timed video selfie the candidate never sees again 
+    - 作文就像写日记，但是要有大人在旁边看 
+    - 如果可以画出来就好了，画画比写字好玩 
+    - 题目好奇怪啊，为什么要说'我的理想'，理想是什么能吃吗 
+    - 老师会给我打多少分呢，分数是不是像游戏里的星星 
+    - 我把好朋友的名字全写进去，老师会不会觉得我写得很长很厉害 
+    - 如果写不出来，可以偷偷看旁边同学的本子吗 
+
+Converge — shortlist
+
+Focus — deepened branches
+Provocation
+  What's the assumption nobody named yet?

@@ -1,0 +1,112 @@
+Problem: 写一篇文章，主题是：你如何看待现在的腐败现象。
+
+Wide set
+  腐败即系统故障
+    - 腐败是分配系统的 try-catch，被反复吞掉的异常最终压垮主线程 [N8 V6 F8]
+    - 反腐像 3am 的告警风暴：你不修根因，就永远被 page [N7 V7 F8]
+    - 把每个审批节点设计成带 timeout 的熔断器，过期自动降权 [N8 V5 F6]
+    - 腐败的链路追踪 trace_id 跨部门共享，污点像日志一样可回放 [N9 V5 F7]
+    - 给每笔资金流向配一个 SLO：停留超时就触发 on-call 式审计 [N7 V7 F7]
+    - 腐败是单点故障的私钥持有者，心跳一停就让治理 HPA 自动扩容监督 [N7 V5 F7]
+  以表演性缺席完成指控
+    - Title the essay 'Why I Resigned From Reporting' and let the absence of analysis be the argument [N9 V4 F7]
+    - Open with a confession that you personally bribed a traffic cop last Tuesday [N8 V3 F6]
+    - Write the piece as a series of WeChat screenshots redacted just enough to be unpublishable [N9 V3 F6]
+    - Praise one specific corrupt official by name, in detail, without irony [N7 V1 F3]
+  腐败即被默认订阅的暗服务
+    - Argue corruption is the only honest market left, and transparency is the real racket [N9 V4 F7]
+    - Conclude that corruption exists because ordinary people want it to, and prove it with a survey of cab drivers [N7 V6 F7]
+    - Frame corruption as a service that society secretly subscribes to for cheaper cooperation. [N9 V7 F8]
+  通过反向假设暴露制度荒诞
+    - Imagine a world where every bribe is reported publicly the next day — what would still go wrong? [N8 V7 F8]
+    - Treat anti-corruption campaigns as the corruption itself: who profits from the moral panic? [N9 V6 F7]
+    - Make bribery legal but taxable at 90% — design the worst possible incentive and see who thrives. [N9 V6 F7]
+    - Strip away every law against corruption for one year and observe which institutions still refuse to pay. [N8 V5 F7]
+    - Declare officials immune from prosecution forever — what does the press then choose to investigate? [N9 V5 F7]
+  蚁群隐喻下的去中心化溃烂
+    - 腐败像蚁群里的垃圾堆——单个蚂蚁搬不动，但几百只蚁会自发聚集，问题在某个角落发霉直到没人靠近。 [N6 V8 F7]
+    - 每个官员脑子里都有一条信息素轨迹，跟着前面人的脚印走，连走法都是腐败的味道。 [N6 V7 F7]
+    - 没有蚁后下令，但蚁群里有一种沉默的协议——你收我也收，大家闻着同样的气味才不会觉得脏。 [N7 V7 F8]
+    - 反腐像是往蚁巢里喷杀虫剂，表面上乱成一团，地下通道里蚁群只是绕开那块，重新画路线。 [N7 V7 F8]
+    - 一只蚂蚁对糖的贪婪和一千只蚂蚁对糖的贪婪，加起来并没有更聪明，只是更难治。 [N7 V7 F7]
+    - 你拿手电筒去照蚁群，它们就往黑暗处跑；你关掉手电筒，它们又慢慢爬回来假装没发生过。 [N9 V7 F8]
+
+Converge — shortlist
+
+Traps (watch-outs, not verdicts)
+  ⚠ 腐败是分配系统的 try-catch，被反复吞掉的异常最终压垮主线程
+    Reads as one clever line stretched across a paragraph; the metaphor doesn't give the writer much to argue about beyond the analogy itself.
+    + The try-catch metaphor is fresh and the 'main thread crash' punchline lands a real insight: corruption accumulates because every layer treats it as an exception to swallow rather than a structural failure.
+  ⚠ 反腐像 3am 的告警风暴：你不修根因，就永远被 page
+    Without grounding in a specific case the piece risks sounding like a DevOps post complaining about on-call rather than a view on corruption.
+    + The 3am alert-storm framing captures something true about reactive anti-corruption: campaigns spike, fatigue sets in, and the underlying system stays broken.
+  ⚠ 把每个审批节点设计成带 timeout 的熔断器，过期自动降权
+    Sounds like an engineering proposal, not an essay; the writer has to do a lot of translation work to keep it readable for a non-technical audience.
+    + A genuinely original policy-shaped thought: time-bounded authority that auto-expires is a real institutional design pattern, and applying it to approvals is provocative.
+  ⚠ 腐败的链路追踪 trace_id 跨部门共享，污点像日志一样可回放
+    Carries the same translation burden as other SRE metaphors: a reader who doesn't know distributed tracing will lose the thread halfway through.
+    + The image of taint as replayable logs across departments is the freshest framing in the set — it implies an actual mechanism (shared audit trail) and treats corruption as a forensics problem.
+  ⚠ 给每笔资金流向配一个 SLO：停留超时就触发 on-call 式审计
+    The on-call analogy flattens political response into a tech rotation; real audits aren't paged, they're negotiated.
+    + SLOs on money flow time is a concrete, almost implementable idea — it reframes 'where did the money sit?' as a measurable signal, not a vague suspicion.
+  ⚠ 腐败是单点故障的私钥持有者，心跳一停就让治理 HPA 自动扩容监督
+    Auto-scaling supervision is a fantasy; oversight capacity doesn't elastically provision the way pods do.
+    + Naming the corrupt actor as a 'single point of failure holding the private key' is a sharp image — it says accountability collapses to one person and the system has no fallback.
+  ⚠ Title the essay 'Why I Resigned From Reporting' and let the absence of analysis be the argument
+    Most publications won't run a piece that's literally just a resignation letter with no payload; 'absence of analysis' reads as cop-out to a general reader.
+    + The structural absence-as-argument move is genuinely literary and would land with editors who like experimental nonfiction.
+  ⚠ Open with a confession that you personally bribed a traffic cop last Tuesday
+    Confessing to a real bribe in a published piece is a legal and professional hazard; even as fiction it reads as clickbait unless the rest of the essay earns it.
+    + A confession opener forces the writer into a posture most essays on corruption never take — admitting participation rather than observing from above.
+  ⚠ Argue corruption is the only honest market left, and transparency is the real racket
+    Sounds like contrarianism for its own sake; without serious evidence the argument collapses into nihilism and won't survive a serious reader.
+    + Inverting the moral polarity — corruption as the honest market, transparency as the racket — is the kind of claim that, if defended, would actually produce a memorable essay.
+  ⚠ Write the piece as a series of WeChat screenshots redacted just enough to be unpublishable
+    Editing, sourcing, and legal review for fabricated-but-realistic screenshots is a nightmare; few editors will accept the liability.
+    + The form itself does the arguing: redaction that lands just on the safe side of publishable is a brilliant way to implicate the system that chose what to black out.
+  ⚠ Praise one specific corrupt official by name, in detail, without irony
+    In basically any mainstream venue this gets the writer fired, sued, or both; viability is near zero.
+    + If executed as deliberate provocation in a tightly-controlled venue it could force a conversation about tone in anti-corruption writing.
+  ⚠ Conclude that corruption exists because ordinary people want it to, and prove it with a survey of cab drivers
+    Risk of sounding smug or classist; the survey method needs to be real, not staged, or the piece reads as a setup.
+    + Offloading blame onto 'ordinary people' is uncomfortable and rarely defended in print; a cab-driver survey gives the essay empirical weight instead of just opinion.
+  ⚠ Frame corruption as a service that society secretly subscribes to for cheaper cooperation.
+    Easy to drift into apologism; the writer must keep clear that 'explains' is not 'justifies' or the essay becomes a defense brief.
+    + Reframing corruption as a 'subscribed service for cheaper cooperation' is the strongest single thesis in the set — it explains why voters tolerate it and why sudden crackdowns fail.
+  ⚠ Imagine a world where every bribe is reported publicly the next day — what would still go wrong?
+    Hard to write without sounding utopian in the setup; needs a sharp pivot or it becomes a thought experiment with no landing.
+    + The counterfactual structure — full transparency, what's still broken — is a smart move because it forces the essay past the obvious answer and into a second-order argument.
+  ⚠ Treat anti-corruption campaigns as the corruption itself: who profits from the moral panic?
+    Walks right up to the line of 'anti-anti-corruption is just pro-corruption' — needs careful sourcing or it sounds like a defense of the corrupt.
+    + Asking who profits from the moral panic is a genuinely underexplored angle in Chinese-language anti-corruption writing; this is the kind of question that produces a real piece, not a hot take.
+  ⚠ Make bribery legal but taxable at 90% — design the worst possible incentive and see who thrives.
+    The 'who thrives' answer is either obvious (already-rich connected actors) or unsupportable; the piece lives or dies on whether the writer can deliver a non-trivial payoff.
+    + Legal-and-taxable-at-90% is a thought-experiment frame that produces real predictions (who thrives?) instead of moralizing — the kind of essay a policy audience would actually engage with.
+  ⚠ Strip away every law against corruption for one year and observe which institutions still refuse to pay.
+    Pure thought experiment; without anchoring in real cases it floats, and a year-long counterfactual is hard to dramatize in essay form.
+    + Stripping laws to see which institutions still refuse to pay isolates cultural from legal corruption — a clean experimental design.
+  ⚠ Declare officials immune from prosecution forever — what does the press then choose to investigate?
+    Sounds like a gotcha aimed at journalists rather than a piece about corruption; audience will misread the target.
+    + Asking what the press investigates when officials are immune is a sharp inversion — it exposes what journalism currently isn't doing, which is more useful than another expose.
+  ⚠ 腐败像蚁群里的垃圾堆——单个蚂蚁搬不动，但几百只蚁会自发聚集，问题在某个角落发霉直到没人靠近。
+    The ant-colony frame runs through the whole set, so this one needs either the sharpest single line or it disappears into the cluster.
+    + The garbage-pile image is plain and readable; the 'problem rots until nobody approaches' ending is the kind of line a reader remembers.
+  ⚠ 每个官员脑子里都有一条信息素轨迹，跟着前面人的脚印走，连走法都是腐败的味道。
+    Stays at the level of 'people follow each other'; doesn't by itself produce an argument, just an observation.
+    + The pheromone-trail image concretizes how corruption spreads by imitation rather than command — useful, specific.
+  ⚠ 没有蚁后下令，但蚁群里有一种沉默的协议——你收我也收，大家闻着同样的气味才不会觉得脏。
+    Same as the others: a paragraph, not an essay. Needs to be one paragraph inside a larger structure, not the whole piece.
+    + 'Silent protocol, you take so I take' is the strongest single sentence in the ant set — it names reciprocity as the engine, which is a real claim about corruption's stability.
+  ⚠ 反腐像是往蚁巢里喷杀虫剂，表面上乱成一团，地下通道里蚁群只是绕开那块，重新画路线。
+    Risk of sounding like it's arguing against anti-corruption campaigns altogether; needs a careful turn or it reads as cynicism.
+    + The pesticide-detour image is a sharp critique of surface-level anti-corruption: the colony reroutes, the metric looks better, nothing changed.
+  ⚠ 一只蚂蚁对糖的贪婪和一千只蚂蚁对糖的贪婪，加起来并没有更聪明，只是更难治。
+    Slightly glib; the line is a quote, not a paragraph, and a writer building a whole essay on it will feel thin.
+    + 'A thousand ants are not smarter, just harder to treat' is a clean way to say scale doesn't produce solutions — useful as a structural observation.
+  ⚠ 你拿手电筒去照蚁群，它们就往黑暗处跑；你关掉手电筒，它们又慢慢爬回来假装没发生过。
+    Works best as a closing image; if it's the whole essay it feels like a one-liner stretched into a paragraph.
+    + The flashlight/pretend-it-didn't-happen image is the strongest single ending in the ant set — it captures performative compliance better than any of the SRE metaphors.
+
+Focus — deepened branches
+Provocation
+  What if we took this seriously: 腐败的链路追踪 trace_id 跨部门共享，污点像日志一样可回放

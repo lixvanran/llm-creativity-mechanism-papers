@@ -1,0 +1,134 @@
+Problem: 今天是五一小长假的最后一天的18:00，明天就要上学了，我的作业还一笔没动，怎么办？
+Reframed for divergence: 今天是长假最后一天的18:00，明天必须恢复学业义务，但所有需要提交的任务均未开始。怎么办？
+
+Wide set
+  game-the-frame-as-an-rpg-with-phases-and-rules
+    - Treat the night as a raid boss with three phases (18-21, 21-24, 00-03), each with its own save point and loot table. [N7 V6 F7]
+    - Enable permadeath mode: if you close the laptop for 30 min, the assignment self-deletes (commit to it with a friend watching). [N8 V2 F4]
+    - Spawn a side-quest generator: turn each task into 'defeat X mini-bosses' so progress renders as a visible XP bar. 
+    - Run a 25-minute speedrun timer per task with a fail screen if you tab away; leaderboard = your past selves. [N5 V5 F6]
+    - Designate one task as the 'tutorial boss' — do it ugly, fast, unfinished — to unlock the 'expert mode' momentum buff. [N6 V7 F7]
+    - Roll a D20 every hour: 1-5 = mandatory rest (lock the apps), 6-20 = forced submission sprint, no save and quit. [N8 V3 F5]
+  pick-the-heaviest-hunk-and-just-start
+    - Drop a crumb on every open task; follow the strongest scent until each loses smell. [N4 V5 F6]
+    - Surround yourself with five panicked friends; tasks leach through gossip. [N6 V2 F2]
+    - Tear the syllabus into leaf-cutter pieces and haul the smallest fragment first. [N4 V8 F7]
+    - Stop circling. Pick the assignment that the room already feels heaviest. [N4 V8 F8]
+    - Write one bullet per task on the wall, then erase any bullet you haven't chewed in 20 minutes. [N6 V7 F7]
+    - Whisper each task to a different future hour and let whichever hour answers first win. [N7 V2 F3]
+    - Inoculate with a weakened version of the task at 18:05 — start the easiest 1%, like a vaccine dose [N5 V9 F9]
+  use-bio-and-body-pressure-to-force-output
+    - Trigger a cytokine storm of guilt, then let monocytes clean up the wreckage into one executable plan [N9 V1 F2]
+    - Apply neuroplasticity: rewire tonight's identity from 'student' to 'sprint-mode organism' via 90-min sleep chunks [N7 V4 F5]
+    - Treat each unfinished assignment as gut flora competing for colonization; starve the time-wasters and feed the winners [N6 V4 F5]
+    - Use quorum sensing: post draft publicly at 19:00 so peer-pressure signals force the rest to completion [N5 V6 F7]
+    - Trigger apoptosis on social media and other apps; let the deadline do the job a chaperone molecule would [N6 V8 F8]
+  self-sabotage-as-submission-strategy
+    - Submit a confession-style paper that documents the procrastination as the assignment [N9 V3 F2]
+    - Forge a brief power outage to reset the deadline to next week [N7 V1 F1]
+    - Mass-download pre-written essays and trigger a plagiarism investigation on yourself [N8 V1 F1]
+    - Convince yourself the tasks are actually optional and submit nothing proudly [N6 V2 F1]
+    - Start the assignment but corrupt the file with intentional errors so it's auto-flagged [N6 V1 F1]
+    - Go to a 24h internet cafe, lose your bag, and claim all files were on it [N7 V1 F1]
+  treat-the-deadline-as-a-market-to-trade-against
+    - Short the semester: bet against completion, profit from partial credit curve. [N8 V2 F2]
+    - Open an auction: top bid for the most threatening assignment gets handled first. [N7 V5 F6]
+    - Issue IOUs to yourself — convert tasks into tradable debt with interest. [N8 V3 F4]
+    - Spin up a dark pool: do the worst work where the professor (auditor) can't see the process. [N7 V4 F5]
+    - Run a Dutch auction on sleep — sell hours downward until study time is purchased. [N8 V3 F4]
+    - Hire a market-maker: pay a friend to guarantee minimum completion floor. [N7 V4 F5]
+
+Converge — shortlist
+
+Traps (watch-outs, not verdicts)
+  ⚠ Treat the night as a raid boss with three phases (18-21, 21-24, 00-03), each with its own save point and loot table.
+    Three 3-hour phases assume roughly nine hours of focused output — if the workload is actually large across many subjects, the loot-table framing won't save you from running out the clock on phase two.
+    + Chunks the panic into bounded sprints with explicit transitions, which prevents the all-or-nothing freeze that makes tonight feel impossible.
+  ⚠ Enable permadeath mode: if you close the laptop for 30 min, the assignment self-deletes (commit to it with a friend watching).
+    You cannot actually implement self-deleting assignments in a school's LMS, and a 'friend watching' is theater — when willpower fails at 23:00, no observer will step in, the assignment just doesn't get done with no recoverable artifact.
+    + Skin-in-the-game commitment is real psychology; making abandonment costly is one of the few things that overrides phone-scrolling.
+  ⚠ Run a 25-minute speedrun timer per task with a fail screen if you tab away; leaderboard = your past selves.
+    A 25-minute timer that fails when you tab is hostile to the research, reading, and look-up steps that most assignments actually require — you'll sabotage yourself the moment you need a source.
+    + Pomodoro-style timeboxing is the most evidence-backed technique in the list and the leaderboard-against-past-self framing is a clean motivational hook.
+  ⚠ Designate one task as the 'tutorial boss' — do it ugly, fast, unfinished — to unlock the 'expert mode' momentum buff.
+    For subjects where the first task is a math problem set or language drill, 'do it ugly' doesn't translate — there is no tutorial boss that unlocks momentum for rote work.
+    + Naming the first attempt 'ugly and unfinished' gives explicit permission to ship a draft, which is the single biggest unlock for procrastinators who freeze on perfectionism.
+  ⚠ Roll a D20 every hour: 1-5 = mandatory rest (lock the apps), 6-20 = forced submission sprint, no save and quit.
+    A 1-in-5 chance of forced rest can fire right when you've finally broken in, and rolling 'work' six hours in a row doesn't actually produce work — dice aren't a productivity system, they're a coin flip wearing a costume.
+    + Externalizing the decision to a die roll genuinely bypasses the 'should I work or rest' meta-deliberation that consumes willpower.
+  ⚠ Drop a crumb on every open task; follow the strongest scent until each loses smell.
+    Gut-priority picking works for writing tasks where momentum compounds; it fails badly for sequential dependencies like problem 3 requiring problems 1-2.
+    + Pick-the-strongest-scent is a clean heuristic against the optimization trap of spending 40 minutes choosing what to start.
+  ⚠ Surround yourself with five panicked friends; tasks leach through gossip.
+    Five panicked friends produces five competing panic loops and gossip about who hasn't started; collective anxiety compounds instead of converting to output, and nobody actually does homework.
+    + Body-doubling via co-working is genuinely one of the few evidence-based procrastination busters — the framing has a real kernel.
+  ⚠ Tear the syllabus into leaf-cutter pieces and haul the smallest fragment first.
+    Without a rule for stitching fragments back into the assignment, you can finish six tiny intros and never produce a single submitted whole.
+    + Smallest-fragment-first is classic task-initiation psychology: starting anything, no matter how trivial, collapses the activation energy.
+  ⚠ Stop circling. Pick the assignment that the room already feels heaviest.
+    If the heaviest task is also the one requiring the most unbroken cognition (e.g., a thesis draft), front-loading it at 18:00 when you're freshest is correct — but if it's heaviest because it's ambiguous, you'll burn two hours and ship nothing.
+    + Heaviest-in-the-room cuts through prioritization theater and matches sunk-cost intuition to actual effort — the task you're avoiding is usually the biggest.
+  ⚠ Write one bullet per task on the wall, then erase any bullet you haven't chewed in 20 minutes.
+    A 20-minute erasure window incentivizes busywork to keep bullets alive rather than deep work; you'll learn to game it with low-effort activity that counts as 'chewing.'
+    + Forces visible progress with a built-in accountability mechanism and prevents any single task from becoming an indefinite parking spot.
+  ⚠ Whisper each task to a different future hour and let whichever hour answers first win.
+    Future hours don't answer; you'll sit in 18:00 waiting for 21:00 to respond while nothing gets done. It's a contemplative frame dressed as a plan.
+    + The poetic reframe of 'which hour is ready' is the only idea here that respects circadian reality — some hours genuinely are better for analytic vs creative work.
+  ⚠ Trigger a cytokine storm of guilt, then let monocytes clean up the wreckage into one executable plan
+    Waiting for monocytes to convert guilt into a plan is not a technique; it requires the very executive function that's currently offline. You'll spend an hour feeling bad and still face 23:00 with no plan.
+    + Acknowledges guilt as a real physiological signal that needs processing before planning — most advice skips straight to 'just start,' which fails when shame is the blocker.
+  ⚠ Apply neuroplasticity: rewire tonight's identity from 'student' to 'sprint-mode organism' via 90-min sleep chunks
+    Going to sleep in 90-min chunks at 18:00 means you're not working at 18:00 — you only have ~3 sleep cycles before school. Identity framing doesn't manufacture the eight hours you've already burned.
+    + Identity-reframe ('tonight I am a sprint-mode organism') is empirically one of the strongest psychological levers for behavior change, and the 90-min sleep chunking is real ultradian-cycle science.
+  ⚠ Inoculate with a weakened version of the task at 18:05 — start the easiest 1%, like a vaccine dose
+    Only works if you genuinely start and stop at one task — if the 'easiest 1%' lets you bounce around to all of them, you've inoculated against zero and just produced nine false starts.
+    + The 1% vaccine dose is the single most actionable item in the entire list: it triggers the Zeigarnik effect, where a started task creates its own pull to return.
+  ⚠ Treat each unfinished assignment as gut flora competing for colonization; starve the time-wasters and feed the winners
+    You don't actually know which assignments are 'time-wasters' until you've started them, and starving the wrong one at 18:00 means a guaranteed zero at 06:00.
+    + Starve-the-losers reframes quitting distractions as a deliberate biological act rather than willpower, which makes it feel less like deprivation.
+  ⚠ Use quorum sensing: post draft publicly at 19:00 so peer-pressure signals force the rest to completion
+    Drafts posted publicly are still drafts — you'll get social credit for 'starting' and the completion pressure drops precisely because you've already signaled progress.
+    + Public commitment at a hard deadline is one of the strongest known accountability mechanisms, and 19:00 is early enough that the rest of the evening is salvageable.
+  ⚠ Trigger apoptosis on social media and other apps; let the deadline do the job a chaperone molecule would
+    Forced app deletion can be undone in 30 seconds by re-downloading, and without a follow-up commitment rule, you'll redownload within an hour.
+    + Killing the apps is the highest-leverage single action available — every other idea assumes a working brain that the phone is currently dismantling.
+  ⚠ Submit a confession-style paper that documents the procrastination as the assignment
+    No teacher accepts 'I documented my procrastination' as fulfillment of an unrelated assignment; this trades one problem (incomplete work) for a worse one (zero in the gradebook plus a disciplinary conversation).
+    + Reframing the meta-procrastination as the assignment itself is genuinely clever — it converts an unwinnable guilt loop into a winnable creative task.
+  ⚠ Forge a brief power outage to reset the deadline to next week
+    Committing fraud (forging a power outage report, lying to the school) is the one option in this list with real-world consequences beyond a bad grade. Discard immediately.
+    + Honestly flags itself as forgery — at least it doesn't pretend to be a real plan.
+  ⚠ Mass-download pre-written essays and trigger a plagiarism investigation on yourself
+    This is academic misconduct that can result in expulsion; the 'investigation on yourself' framing is a tell that the proposer knew it was self-harm dressed as cleverness.
+    + None. The idea actively destroys the student's academic record and reputation.
+  ⚠ Convince yourself the tasks are actually optional and submit nothing proudly
+    Pride in submitting nothing is a posture, not a plan; tomorrow's zero and parent's reaction are still coming. Feelings-based reframing can't override a hard deadline.
+    + At least it isn't fraudulent — accepting consequences is honest, and the cognitive reframing might actually reduce tonight's suffering.
+  ⚠ Start the assignment but corrupt the file with intentional errors so it's auto-flagged
+    Auto-flagged submissions trigger integrity reviews, not extensions; you'd be exchanging incomplete work for an academic-misconduct hearing.
+    + None — this is deliberate sabotage of one's own work.
+  ⚠ Go to a 24h internet cafe, lose your bag, and claim all files were on it
+    Internet cafes have CCTV; bag-loss claims are routinely investigated; and even a successful lie produces no recovered homework. Pure downside.
+    + None. Filing a false claim is fraud and a police-reportable offense in most jurisdictions.
+  ⚠ Short the semester: bet against completion, profit from partial credit curve.
+    You don't actually know the partial-credit curve, can't 'short' your own semester in any tradable sense, and gambling-thinking usually produces worse outcomes than straightforward triage.
+    + Cleverly flips the failure-aversion frame into a calculated-loss frame, which can reduce the emotional charge that causes the freeze in the first place.
+  ⚠ Open an auction: top bid for the most threatening assignment gets handled first.
+    If you only have one bidder (yourself), this is just prioritization with extra steps; if you recruit others, you've spent 30 minutes on a bidding ceremony instead of working.
+    + Bidding surfaces honest threat-perception instead of pretending all tasks are equal — and you usually do know which one would hurt most to skip.
+  ⚠ Issue IOUs to yourself — convert tasks into tradable debt with interest.
+    Self-issued IOUs are unenforceable on yourself — when willpower fails at 02:00, you don't actually pay the interest, the whole ledger collapses, and you're back to square one with extra guilt.
+    + Turning tasks into debt instruments with interest is a sharp reframe that makes avoidance feel like accumulating a real financial cost.
+  ⚠ Spin up a dark pool: do the worst work where the professor (auditor) can't see the process.
+    Professors grade the output, not the process; the 'auditor' framing is mostly in your head, and hiding your work can become the new avoidance behavior.
+    + Correctly identifies that scrutiny during the process is part of what makes it aversive — reducing exposure to the perceived audience has real psychological value.
+  ⚠ Run a Dutch auction on sleep — sell hours downward until study time is purchased.
+    Selling sleep downward until study time is 'purchased' is just another way of saying 'skip sleep,' and the cognitive deficit from 02:00 onward makes the work worse, not better — you're auctioning tomorrow's output capacity to buy tonight's.
+    + Dutch-auction-on-sleep correctly observes that sleep is a real budget tonight, not a free resource, which most procrastination advice ignores.
+  ⚠ Hire a market-maker: pay a friend to guarantee minimum completion floor.
+    Friends aren't a market-maker; the guarantee is informal, the quality is unpredictable, and you've now added a coordination tax on top of execution — plus you've lost the learning the assignment was supposed to produce.
+    + Outsourcing the floor of completion (even one assignment) is a legitimate escape valve and reduces the all-or-nothing feeling.
+
+Focus — deepened branches
+Provocation
+  What if we took this seriously: Trigger a cytokine storm of guilt, then let monocytes clean up the wreckage into one executable plan

@@ -992,7 +992,7 @@ Spearman(巡练分, 留出分) = +0.166
 | 批 | 数据位置 | 臂名 | 现状 | 可否零 API |
 |---|---|---|---|---|
 | **批 1 · 层3 那批 20 条**（★ 仓内已就位）| `来源与底稿/第三组_治塌缩层3/cmp8repo/repro/readings/main_big_arms.jsonl`（★ **20 行 = 5 臂 × 2 rep × 2 题**：`D01` / `D02`）| `B0_direct`（直调基线）/ `W_design_L2`（层2 设计臂）/ `W_train_L3`（层3 训练臂）/ `B0_bestof3` / `B0_frames_vote` | 每行已有 `cards[].supports_conclusions` / `load_bearing` / `verdict` / `verify_status` / `stage`，另有 `n_load_bearing` / `n_dims` / `anchor_out` / `vd_anchor_out` | ✔ **可以，零 API**　★ **✅ 已回填（见下）** |
-| **批 2 · 法律域 944 条**（★ **本篇 R2 的那一批**）| 原始产出**不在本仓** ⇒ 需从 drive / 公开仓 `lixvanran/agent-creativity-mechanism-study` 捞 | `direct` / `dual_select` / `dual_fuse` | 结论空间（口径 A 的输入）在仓内：`来源与底稿/第三组_治塌缩层3/顶层/creativity_lab/data/conclusion_spaces_legal.json`（★ 5 个法条 / 32 条命题 / 18 题跨题引用）| ✔ 纯匹配计算，零 API（前提：产出捞得回来）　★ **⚠️ 未捞到 ⇒ 只剩代数推导（见下）** |
+| **批 2 · 法律域 944 条**（★ **本篇 R2 的那一批**）| 原始产出**不在本仓** ⇒ 需从 drive / 公开仓 `lixvanran/agent-creativity-mechanism-study` 捞 | ★ **【逐条判决】（★ `claims.json` / `texts.json` / `verdicts_v4_full.json`）★ 在本环境不可达** ⇒ ★ **但【公开读数的一手出处】现已进仓**（★ ★ 2026-10-25 补进）：★ ① `来源与底稿/第二组_源文件/docs/CORRECTION-2026-10-18-breadth.md`（★ 三轴实测 18 题 × 36 份/臂、★ 944 条断言、★ 「多报出来 9 条」）★ ② `来源与底稿/第二组_源文件/REPORT-DRILL-2026-10-18.md §4.1`（★ 944 断言全量重判表）★ ③ **【跑批脚本】** `来源与底稿/第二组_源文件/creativity_lab/drill.py` / `drill_confirm.py`★ ④ **【历史产出】128 个文件**（★ `来源与底稿/第二组_源文件/data/historical-runs/`）⇒ ★ ★ **⇒ 「要补什么」现已完全可执行（★ 零 API 的纯匹配计算脚本在手）；★ 「读数从哪来」现已可核。** | 结论空间（口径 A 的输入）在仓内：`来源与底稿/第三组_治塌缩层3/顶层/creativity_lab/data/conclusion_spaces_legal.json`（★ 5 个法条 / 32 条命题 / 18 题跨题引用）| ✔ 纯匹配计算，零 API（前提：产出捞得回来）　★ **⚠️ 未捞到 ⇒ 只剩代数推导（见下）** |
 
 **③ 算法（照抄现成实现，不要另发明）**：`来源与底稿/第三组_治塌缩层3/cmp8repo/repro/src/judge/measure.py:494-508`；★ **本轮的实际执行脚本 = `tools/calc_net_gain.py`**（★ 自检六项全绿：dims 重算 20/20 命中、集合差恒等式 PASS、与仓内模块对拍 146 例 0 处不一致、承重分层完整划分 PASS ＋ 变异注入可检出）
 
@@ -1032,7 +1032,7 @@ Spearman(巡练分, 留出分) = +0.166
 ##### ★ 批 2 回填（法律域 944 条）—— ★ 必须写成「代数推导 ＋ 符号未定」，不能写成"为正"
 
 > **★ 批 2 回填（法律域 944 条）——★ 必须写成「代数推导 ＋ 符号未定」，不能写成"为正"**
-> ★ **原始产出未捞到** ⇒ 下列数字是**【仓内一手文档读数的代数推导】**（恒等式 `|W\B|−|B\W| ≡ |W|−|B|`），★ **不是观测量**；
+> ★ **【逐条判决】未捞到**（★ **三处查证留痕**（★ E1 `net_gain_out.json` 的 `task2.raw_search_log`）：★ ① 仓内 `来源与底稿/第二组_源文件/runs/` 只有 `n-baseline-2026-10-24` 与 `nested-calibration-2026-10-24`；★ ② drive 的两个第二组交付包（★ `第二组交付包_2026-10-24.zip` / `_2026-10-26.zip`）内含 CORRECTION 与 `data/historical-runs/**`、★ **但不含** `runs/drill/` 与 `runs/train2/`；★ ③ GitHub `cmp8-handover-2026-10-20`（★ sha `6307ca8d`）的 `runs/` 已被 gitignore）★ ⇒ ★ **下列数字是【仓内一手文档读数的代数推导】**（★ 恒等式 `|W\B|−|B\W| ≡ |W|−|B|`），★ **不是观测量**；★ ★ **且【三处查证的材料本身现已进仓】**（★ CORRECTION ＋ historical-runs ＋ drill 脚本）⇒ ★ **第三方可自行复核这次「不可达」的结论**。
 > 推导链：§5 R4 的去重并集宽度（direct **5.2** / dual_select **5.4** / dual_fuse **5.8**）× 18 题 ⇒ `|U| = 93.6 / 97.2 / 104.4` ⇒ 净增益 **+3.6 / +10.8**（舍入带 **±0.9**）；
 > ⇒ ★★ **方向与单边口径相反**（单边下 direct **2.65** > dual_select **2.10**）⇒ ★★ **但不可回填为"净增益为正"**：① `|U| = 宽度/题 × 18` 是**逐题并集之和**，跨题去重使真实跨题并集 ≤ 该值 ⇒ ★ **两个上界之差不是净增益的上下界 ⇒ 符号未定**；② 该值落在**第三个口径**（去重并集宽度的代数推导），非口径 A / 口径 B；
 > ⇒ ⇒ **正确写法**：「**代数推导给出方向为正的上界，但符号未定 ⇒ 判决仍是「不可分辨」⇒ 仍待原始产出**」。

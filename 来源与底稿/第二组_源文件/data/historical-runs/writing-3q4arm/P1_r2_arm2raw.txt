@@ -1,0 +1,38 @@
+Problem: 写一篇文章，主题是：你如何看待现在的高考英语作文。
+Reframed for divergence: 写一篇文章，主题是：你如何评价当前的英语写作选拔考试（一种用于高校招生的大规模标准化写作测试）。
+
+Wide set
+  frame-essay-writing-as-collaborative-or-persistent-game
+    - Replace timed essays with a feed of real emails a student has to send to a fictional university admin over a week. 
+    - Score the test using a model trained only on writing produced by people who later dropped out of college. 
+    - Make the test collaborative: pairs of strangers co-write a single essay in real time, scored on how the voices entangle. 
+    - Pay applicants per word accepted into a shared public corpus, then rank by what the corpus chose to keep. 
+    - Administer the prompt in the applicant's strongest non-English language, then translate via a model the grader must read aloud. 
+  reframe-the-student-as-inversionary-writer
+    - Have applicants argue, in writing, against their own admission — then rate the rebuttal, not the original essay. 
+    - 考生的真正评分发生在test-taker意识到rubric被反编译后那个瞬间——meta层解锁 
+    - 写作考试是单人boss rush：90分钟内连续挑战四个隐藏机制各异的小boss（论证、结构、词汇、语法） 
+    - 模板句式是合法外挂：玩家共享的buff宏，让本应随机生成的内容变成可重复刷的farm路线 
+    - 评分员是NPC，每天要批改500份相同剧情的脚本——可想他们的quest log早已红屏 
+    - 考试是一次roguelike：每次进入都要从零拼凑论点，而玩家携带的唯一永久道具是上次复盘的经验值 
+  treat-the-test-as-a-formula-to-exploit
+    - 真正的高分玩家不看题目，而是从prompt里读出设计师藏的捷径关键词，像解谜游戏找隐藏路径 
+    - 通过OOB（out-of-bounds）论证：将考试还原为评分函数，跳过学生实际写作能力的整个讨论 
+    - 帧完美捷径：用GPT-4生成30篇范文求平均值作为唯一评判基准，让分数在第一分钟内稳定 
+    - 穿墙术：指出写作选拔考的存在本身是glitch——它在衡量可训练模式而非语言能力 
+    - 主线破坏：如果评分rubric可以被反向工程，那么考试就是一个可以被破解的密码锁而非能力测试 
+    - 任何速度记录方法：让考生用5分钟完成原本40分钟的写作任务，迫使考试自我解构 
+    - 逆向冲刺：从招生结果反推考题分布规律，把评价对象从写作转移到选拔机制本身 
+  design-the-exam-so-3am-cannot-reach-anyone
+    - Score the exam on a hermetically sealed air-gapped box that physically cannot phone out, eliminating 3am pages from network flaps. 
+    - Make every essay scored by a frozen, hash-pinned model so a silent bit-rot is the only way it breaks at 3am. 
+    - Ship the test as a one-shot cron with no daemon, so there is literally nothing alive at 3am to page. 
+    - Replace per-proctor paging with a single daily digest email — if it doesn't send, an intern notices Monday. 
+    - Run scoring on append-only idempotent jobs with monotonic IDs so a retry is always safe and never alerts. 
+    - Build a runbook entry titled 'What to do if the English exam is down at 3am' whose only step is 'go back to sleep, it resumes at 9am'. 
+
+Converge — shortlist
+
+Focus — deepened branches
+Provocation
+  What's the assumption nobody named yet?

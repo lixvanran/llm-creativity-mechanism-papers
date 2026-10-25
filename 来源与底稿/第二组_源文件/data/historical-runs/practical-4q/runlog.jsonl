@@ -1,0 +1,48 @@
+{"tid": "A1", "rep": 1, "arm": 1, "calls": 1, "chars": 627}
+{"tid": "A4", "rep": 1, "arm": 1, "calls": 1, "chars": 559}
+{"tid": "A3", "rep": 1, "arm": 1, "calls": 1, "chars": 349}
+{"tid": "A2", "rep": 1, "arm": 1, "calls": 1, "chars": 358}
+{"tid": "A4", "rep": 1, "arm": 2, "calls": 11, "ideas": 18, "chars": 398}
+{"tid": "A1", "rep": 1, "arm": 2, "calls": 11, "ideas": 24, "chars": 677}
+{"tid": "A3", "rep": 1, "arm": 2, "calls": 11, "ideas": 24, "chars": 424}
+{"tid": "A2", "rep": 1, "arm": 2, "calls": 11, "ideas": 24, "chars": 718}
+{"tid": "A1", "rep": 1, "arm": 3, "calls": 8, "branches": 4, "chars": 317}
+{"tid": "A4", "rep": 1, "arm": 3, "calls": 8, "branches": 4, "chars": 384}
+{"tid": "A3", "rep": 1, "arm": 3, "calls": 8, "branches": 4, "chars": 406}
+{"tid": "A2", "rep": 1, "arm": 3, "calls": 8, "branches": 4, "chars": 526}
+{"tid": "A1", "rep": 1, "arm": 4, "calls": 6, "branches": 5, "chars": 470}
+{"tid": "A1", "rep": 2, "arm": 1, "calls": 1, "chars": 519}
+{"tid": "A1", "rep": 2, "arm": 2, "calls": 11, "ideas": 24, "chars": 515}
+{"tid": "A4", "rep": 1, "arm": 4, "calls": 6, "branches": 5, "chars": 452}
+{"tid": "A4", "rep": 2, "arm": 1, "calls": 1, "chars": 388}
+{"tid": "A1", "rep": 2, "arm": 3, "calls": 8, "branches": 4, "chars": 449}
+{"tid": "A4", "rep": 2, "arm": 2, "calls": 11, "ideas": 24, "chars": 444}
+{"tid": "A4", "rep": 2, "arm": 3, "calls": 8, "branches": 4, "chars": 234}
+{"tid": "A1", "rep": 2, "arm": 4, "calls": 6, "branches": 5, "chars": 551}
+{"tid": "A2", "rep": 1, "arm": 4, "calls": 6, "branches": 4, "chars": 595}
+{"tid": "A1", "rep": 3, "arm": 1, "calls": 1, "chars": 458}
+{"tid": "A2", "rep": 2, "arm": 1, "calls": 1, "chars": 402}
+{"tid": "A3", "rep": 1, "arm": 4, "calls": 6, "branches": 5, "chars": 693}
+{"tid": "A3", "rep": 2, "arm": 1, "calls": 1, "chars": 586}
+{"tid": "A2", "rep": 2, "arm": 2, "calls": 11, "ideas": 24, "chars": 459}
+{"tid": "A1", "rep": 3, "arm": 2, "calls": 11, "ideas": 24, "chars": 408}
+{"tid": "A3", "rep": 2, "arm": 2, "calls": 11, "ideas": 24, "chars": 427}
+{"tid": "A1", "rep": 3, "arm": 3, "calls": 8, "branches": 4, "chars": 350}
+{"tid": "A3", "rep": 2, "arm": 3, "calls": 8, "branches": 4, "chars": 540}
+{"tid": "A2", "rep": 2, "arm": 3, "calls": 8, "branches": 4, "chars": 351}
+{"tid": "A4", "rep": 2, "arm": 4, "calls": 6, "branches": 5, "chars": 527}
+{"tid": "A4", "rep": 3, "arm": 1, "calls": 1, "chars": 508}
+{"tid": "A1", "rep": 3, "arm": 4, "calls": 6, "branches": 5, "chars": 398}
+{"tid": "A4", "rep": 3, "arm": 2, "calls": 11, "ideas": 18, "chars": 564}
+{"tid": "A3", "rep": 2, "arm": 4, "calls": 6, "branches": 5, "chars": 371}
+{"tid": "A3", "rep": 3, "arm": 1, "calls": 1, "chars": 591}
+{"tid": "A3", "rep": 3, "arm": 2, "calls": 11, "ideas": 24, "chars": 461}
+{"tid": "A4", "rep": 3, "arm": 3, "calls": 8, "branches": 4, "chars": 326}
+{"tid": "A3", "rep": 3, "arm": 3, "calls": 8, "branches": 4, "chars": 215}
+{"tid": "A4", "rep": 3, "arm": 4, "calls": 6, "branches": 5, "chars": 372}
+{"tid": "A2", "rep": 2, "arm": 4, "calls": 6, "branches": 5, "chars": 479}
+{"tid": "A2", "rep": 3, "arm": 1, "calls": 1, "chars": 563}
+{"tid": "A2", "rep": 3, "arm": 2, "calls": 11, "ideas": 24, "chars": 464}
+{"tid": "A3", "rep": 3, "arm": 4, "calls": 6, "branches": 5, "chars": 522}
+{"tid": "A2", "rep": 3, "arm": 3, "calls": 8, "branches": 4, "chars": 194}
+{"tid": "A2", "rep": 3, "arm": 4, "calls": 6, "branches": 5, "chars": 581}

@@ -1,0 +1,138 @@
+Problem: 湖北考生，物理类620分，想学AI，应当如何选择大学？
+Reframed for divergence: 湖北考生，物理类620分，希望进入AI领域学习，应当如何选择大学与专业路径？
+
+Wide set
+  biological-metaphor frameworks
+    - Treat university selection like an immune response: send low-stakes 'antigen probes' (campus visits, sample lectures, alumni interviews) and amplify only the schools that trigger strong, specific recognition rather than generic prestige [N7 V6 F7]
+    - Map the AI talent ecosystem as a gut microbiome: don't chase one 'star' program, build a diverse diet of MOOCs, open-source contributions, lab meetups, and side projects that cross-fertilize each other [N8 V6 F6]
+    - Use cell-signaling thresholds: set minimum GPA/score 'activation energies' for each target school tier, and don't waste ATP applying to schools whose cutoff you're far below [N6 V9 F9]
+    - Think of major choice as endosymbiosis: don't fully replace your 'host' physics background—merge it with an AI major so the merged entity outperforms either alone (physics-informed ML) [N6 V8 F8]
+  developmental-timeline plays
+    - Pick a 'neural plasticity' path: start at a flexible-info university then prune specializations annually as you discover which AI subfields (vision, RL, NLP) actually excite you [N7 V7 F7]
+    - Design your four-year trajectory like a developmental biology program: maternal (high school) signals → embryonic (大一通识) → cell-fate determination (大二分流) → differentiation (大三专攻) [N6 V5 F6]
+  pragmatic local-research plays
+    - 打电话给武大/华科招办，问'620分物理类能不能进AI相关专业'，记下接线员说的原话 [N3 V9 F9]
+    - 把湖北近三年620分能上的AI相关院校拉个Excel，按计算机/智能/数据科学分类 [N2 V9 F9]
+    - 加3个'湖北高考AI择校'QQ群，发一句'620分求推荐'，截图保存回复 [N3 V5 F5]
+    - 直接搜'人工智能'专业排名，把TOP20学校按2024湖北录取分硬编码排序 [N2 V7 F6]
+    - 武大、华科、中南大、华师、中南民族各打开官网，Ctrl+F搜'人工智能'，记下招生电话 [N2 V8 F7]
+    - 在志愿填报系统里先'模拟填报'5个AI专业，看哪个不会被退档 [N3 V8 F7]
+  absurd / out-of-system hacks
+    - 直接绕过高考，向教育部申请以AI领域特殊人才身份破格录取 [N4 V0 F1]
+    - 自费在武汉光谷建一个对标DeepMind的私人实验室，先做研究再要学历 [N5 V0 F1]
+    - 用十年时间彻底重构高考备考，以AI竞赛金牌+顶级期刊一作作为入场凭证 [N2 V0 F1]
+    - 在湖北本地自建一所微型寄宿制AI学院，从初中开始定向培养，绕过高考 [N4 V0 F1]
+    - 向清华/北大定向捐赠一笔建立个人冠名AI研究院，换取终身教职+学籍 [N3 V0 F1]
+    - 买下一家上市AI公司，摇身变成产业方雇主，反向‘雇佣’高校为我定制培养方案 [N4 V0 F1]
+  financial-market reframings
+    - 教育部是把'AI人才'作为期货卖给考生的做市商，每张文凭是标准化合约，到期才发现行权价严重偏离真实市价。 [N5 V2 F3]
+    - 湖北考生家长是恐慌性买家，620分是竞拍筹码，清北复交浙是蓝筹股，AI是新发行的高波动ETF——市值取决于下一个公告季。 [N4 V2 F3]
+    - 开设'人工智能'专业的双非院校是场外OTC交易，报价诱人但对手方风险高，成交即设置流动性陷阱。 [N5 V2 F4]
+    - 跨学科AI（生物/金融/材料）是空头头寸的对冲基金，借顶尖CS专业的基础多头Beta，再叠加应用层Alpha，可能跑赢沪深300。 [N6 V4 F6]
+    - 做空传统工科、买入AI，不是行业信仰，而是观察到政策与资本对AI的庄家护盘——只要你还在场内，庄家就提供流动性。 [N4 V2 F3]
+    - AI专业毕业生的起薪是远期合约，6年总包是对赌条款——选'专业+学校+城市'的三因子组合相当于杠杆配资，爆仓点叫作'35岁裁员'。 [N6 V4 F6]
+  computer-architecture systems-of-systems plays
+    - 选校如同选总线带宽——985高校是PCIe x16，独立电力院校是SPI总线，620分是DMA突发传输窗口 [N4 V2 F3]
+    - 专业选择要看缓存行对齐——CS对齐了AI编译器，EE对齐了边缘推理，别选落到另一个缓存行的通信工程 [N5 V3 F4]
+    - 620分是单次访存命中还是缺页中断？决定走强基计划(预取)还是正常批(冷启动) [N5 V4 F5]
+    - AI方向如同选主频vs多核——偏算法是高频单核(清北复交)，偏系统是多核并行(华科/北航/电子科大) [N5 V6 F6]
+    - 就业市场是写直达cache还是穿透到DDR——本科生就业是L1命中，考研才是L3 miss后的dram访问 [N6 V3 F4]
+    - 城市是PCB板层数，一线是12层HDI，二线是4层板，决定信号完整性也决定散热 [N4 V3 F4]
+
+Converge — shortlist
+
+Traps (watch-outs, not verdicts)
+  ⚠ Treat university selection like an immune response: send low-stakes 'antigen probes' (campus visits, sample lectures, alumni interviews) and amplify only the schools that trigger strong, specific recognition rather than generic prestige
+    Antigen-probe framing sounds rigorous but visits and alumni interviews are highly selection-biased — you'll mostly meet the successful outliers, which inflates every school equally.
+    + Frames school selection as signal-detection rather than prestige-sniping, which is genuinely useful: visits/alumni interviews surface info rankings can't.
+  ⚠ Pick a 'neural plasticity' path: start at a flexible-info university then prune specializations annually as you discover which AI subfields (vision, RL, NLP) actually excite you
+    'Pruning annually' assumes the university actually permits transfers between AI subfields — many programs lock you in after year one, and the best labs require cold-emailing professors regardless of major.
+    + Genuinely addresses a real unknown: most 620-scorers don't yet know whether they want CV, RL, NLP, or systems. Flexible-info majors (大类招生) let them defer that choice.
+  ⚠ Map the AI talent ecosystem as a gut microbiome: don't chase one 'star' program, build a diverse diet of MOOCs, open-source contributions, lab meetups, and side projects that cross-fertilize each other
+    Diverse diet is great as supplementary signal but doesn't replace the gating function of a degree for a Hubei candidate who hasn't yet built that portfolio. The metaphor hides that for an 18-year-old with no track record, the credential IS the entry ticket.
+    + Correctly de-centers the 'one star program' fallacy — modern AI careers are built on diverse signals (papers, OSS, Kaggle), not a single credential.
+  ⚠ Use cell-signaling thresholds: set minimum GPA/score 'activation energies' for each target school tier, and don't waste ATP applying to schools whose cutoff you're far below
+    Far-below cutoffs can occasionally be '冲' (rush) slots in 冲稳保 strategy — strictly enforcing threshold logic may cost a free lottery ticket on a year when a target school dips.
+    + Practical triage logic: don't burn application slots on cutoffs you can't reach. Activation-energy framing makes the cutoff-table-checking reflex sound scientific.
+  ⚠ Design your four-year trajectory like a developmental biology program: maternal (high school) signals → embryonic (大一通识) → cell-fate determination (大二分流) → differentiation (大三专攻)
+    Developmental-biology metaphor implies a clean, predictable trajectory; in reality 大二分流 often ignores prior signal, and 'cell-fate determination' gets decided by GPA + 导师 availability, not by aptitude the student can control.
+    + Acknowledges the four-year arc matters, not just Day-1 admission — rare among the ideas here.
+  ⚠ Think of major choice as endosymbiosis: don't fully replace your 'host' physics background—merge it with an AI major so the merged entity outperforms either alone (physics-informed ML)
+    'Merge physics + AI' sounds elegant but most AI employers won't value the physics half at 620-tier school salary; the specialization signal only pays off if the student reaches a top lab or grad program.
+    + Specifically names physics-informed ML, which is one of the few truly differentiated angles a 物理类 candidate has versus generic CS applicants. Endosymbiosis metaphor is apt — merged entity does outperform.
+  ⚠ 打电话给武大/华科招办，问'620分物理类能不能进AI相关专业'，记下接线员说的原话
+    Trivial in execution; the value is in doing it across ~10 schools systematically, not just two. Risks being treated as the entire answer when it's really just one input.
+    + Cheap, fast, ground-truth signal. Admissions offices answer these calls daily and will say the cutoff band or '冲稳保' verdict directly. Few candidates actually do this.
+  ⚠ 把湖北近三年620分能上的AI相关院校拉个Excel，按计算机/智能/数据科学分类
+    Easy to spend hours on this and stop — the data is necessary but doesn't tell the candidate what each AI program's actual curriculum, lab access, or placement looks like. Looks like a complete plan, isn't.
+    + The actual raw material any rational ranking needs. Three years × 620-line gives confidence bands on which AI programs are reachable and stable.
+  ⚠ 加3个'湖北高考AI择校'QQ群，发一句'620分求推荐'，截图保存回复
+    QQ群 replies have terrible signal-to-noise — anonymous recommendations from 17-year-olds are basically noise dressed as data. Screenshots feel like evidence but aren't.
+    + Surfaces crowd wisdom and current-year opinions, which can catch recent shifts (new programs, layoffs) that static rankings miss.
+  ⚠ 直接搜'人工智能'专业排名，把TOP20学校按2024湖北录取分硬编码排序
+    Ranks are usually survey-based and lag reality by 1-2 years; AI field especially. Plus 录取分 varies wildly by major (AI vs CS vs 软工) at the same school, and sorting only by score hides that.
+    + Concise, reproducible. The 'AI专业排名' list exists and 2024 湖北分数线 is queryable; this is execution, not insight.
+  ⚠ 武大、华科、中南大、华师、中南民族各打开官网，Ctrl+F搜'人工智能'，记下招生电话
+    Ctrl+F finds the keyword but misses nuance: '人工智能' may be under a 学院 or a 大类, and actual enrollment count vs applicants varies year-on-year. Sole reliance on school websites ignores cross-school comparison.
+    + Authoritative source — official 招生章程 lists AI-related majors, 选科要求 (physics requirement satisfied), and enrollment plan. This is the canonical data.
+  ⚠ 在志愿填报系统里先'模拟填报'5个AI专业，看哪个不会被退档
+    '不会被退档' is necessary but far from sufficient; a 5-sim run can produce a list that all clear 退档 but none maximize expected utility. Stops at the floor, not the ceiling.
+    + Uses the actual system the candidate will face — 模拟填报 prevents 退档 (involuntary reassignment to unrelated major), which is a real and costly failure mode.
+  ⚠ 直接绕过高考，向教育部申请以AI领域特殊人才身份破格录取
+    Ministry of Education has no 'AI special talent undergraduate admission' lane; this category effectively doesn't exist in mainland China. Pure fantasy, wastes the candidate's planning time.
+    + Imagines a path outside高考 entirely, which is at least a wide search.
+  ⚠ 自费在武汉光谷建一个对标DeepMind的私人实验室，先做研究再要学历
+    Building a DeepMind-tier lab requires tens of millions, GPUs, and PhD-level mentorship — none of which an 18-year-old candidate has. Self-funded private research with no affiliation isn't publishable; the credential still gates you out.
+    + Names a real alternative identity (researcher without credential) that some actually pursue.
+  ⚠ 用十年时间彻底重构高考备考，以AI竞赛金牌+顶级期刊一作作为入场凭证
+    Ten-year plan to retake 高考 from scratch for a slim credentials-bypass chance is so low-EV it's near-zero. Sacrifices an entire decade on a path with single-digit-percent realistic success rate.
+    + At least acknowledges that the credential layer might be skipped via tournament results.
+  ⚠ 在湖北本地自建一所微型寄宿制AI学院，从初中开始定向培养，绕过高考
+    Self-built schools have no 学历认证 — grad school and employers won't recognize. Bypassing 高考 to attend an unrecognized institution is strictly worse than attending a recognized one.
+    + Rethinks the whole pipeline, which is creative if unrealistic.
+  ⚠ 向清华/北大定向捐赠一笔建立个人冠名AI研究院，换取终身教职+学籍
+    Philanthropy-to-admission paths at Tsinghua/PKU operate at a different scale (八位数+) and are not a real option for a 620-score family. Reads as satire more than strategy.
+    + It's at least a recognized (if wildly unlikely) lever in elite systems.
+  ⚠ 买下一家上市AI公司，摇身变成产业方雇主，反向‘雇佣’高校为我定制培养方案
+    Acquiring a listed AI company to 'employ' a university requires 9-figure capital and is not a student selection strategy. Even ultra-HNW families would not spend this on a child's undergrad.
+    + Inverts the employer-employee relationship, which is a clever rhetorical move.
+  ⚠ 教育部是把'AI人才'作为期货卖给考生的做市商，每张文凭是标准化合约，到期才发现行权价严重偏离真实市价。
+    Pure cynicism produces no action. The candidate still has to pick a school tomorrow; this idea tells them what's wrong but not what to do. Risk of learned helplessness.
+    + Critiques the degree-as-signal market structure, which is a real phenomenon worth naming.
+  ⚠ 湖北考生家长是恐慌性买家，620分是竞拍筹码，清北复交浙是蓝筹股，AI是新发行的高波动ETF——市值取决于下一个公告季。
+    Treating AI as a 'high-vol ETF' discourages rational investment in CS fundamentals, which are still the highest-EV choice at 620. Cynical framing can lead to bad picks.
+    + Reframes家长 panic as FOMO-driven buying, which has truth — 620 is genuinely at a tier where families over-optimize.
+  ⚠ 开设'人工智能'专业的双非院校是场外OTC交易，报价诱人但对手方风险高，成交即设置流动性陷阱。
+    Goes too far in dismissing双非 — strong students at good双非 (杭电、南邮、重邮) regularly reach BAT/MSRA. Treats the segment as uniformly bad when quality dispersion is huge.
+    + Genuinely useful warning: 双非 AI programs have wildly uneven placement; OTC liquidity-trap is a real concern when transferring to top-tier MS.
+  ⚠ 跨学科AI（生物/金融/材料）是空头头寸的对冲基金，借顶尖CS专业的基础多头Beta，再叠加应用层Alpha，可能跑赢沪深300。
+    Cross-disciplinary 2nd majors in mainland unis often dilute depth in both. Pairing with a 985 CS core is rare for 620-tier admits. The hedge-fund metaphor obscures execution difficulty.
+    + The 'CS base + applied alpha' framing is sophisticated and partially right — quantitative finance and bio-AI do reward cross-disciplinary candidates.
+  ⚠ 做空传统工科、买入AI，不是行业信仰，而是观察到政策与资本对AI的庄家护盘——只要你还在场内，庄家就提供流动性。
+    Recommends following the policy tailwind into AI alone — but at 620 tier this can produce graduation into a market already cooled by 2028-2030. Picks today on 2024 momentum may not hold.
+    + Observes that policy/capital tailwinds favor AI as a sector bet, which is empirically true 2024-2026.
+  ⚠ AI专业毕业生的起薪是远期合约，6年总包是对赌条款——选'专业+学校+城市'的三因子组合相当于杠杆配资，爆仓点叫作'35岁裁员'。
+    Three-factor组合 framing implies precise portfolio optimization is possible; in reality the variation across schools within a 620-tier band exceeds the precision this model claims.
+    + Named the 35-year layoff risk and 6-year payback framing — most择校 discourse ignores the time-horizon mismatch between student investment and labor-market volatility.
+  ⚠ 选校如同选总线带宽——985高校是PCIe x16，独立电力院校是SPI总线，620分是DMA突发传输窗口
+    Compression of all 985 into 'PCIe x16' overstates homogeneity; e.g., 武大 vs 华科 vs 中山 vs 厦大 have very different AI capacities. High-level metaphor obscures the comparison it's meant to clarify.
+    + Calls attention to 行业特色校 (电力/邮电/铁路) vs 综合985 — a real architectural difference students miss.
+  ⚠ 专业选择要看缓存行对齐——CS对齐了AI编译器，EE对齐了边缘推理，别选落到另一个缓存行的通信工程
+    'Cache-line aligned' choices still depend on whether the school offers that path; 620 is realistic for few cache-aligned programs. Metaphor risks a false sense of mechanistic certainty.
+    + Nice alignment intuition: EE→边缘推理, CS→AI compilers, 通信→不受惠 is roughly true in industry.
+  ⚠ 620分是单次访存命中还是缺页中断？决定走强基计划(预取)还是正常批(冷启动)
+    强基计划 is not a 620-target — its cutoffs are 985-tier. Misclassifying 620 as 'prefetchable' sends the candidate down paths that won't admit them.
+    + Asks the right question: is 620 a prefetch-eligible score (强基/竞赛保送-adjacent) or pure cold start? The two paths are genuinely different.
+  ⚠ AI方向如同选主频vs多核——偏算法是高频单核(清北复交)，偏系统是多核并行(华科/北航/电子科大)
+    Clean dichotomy in the metaphor; in practice, 算法 and 系统 hires at any given 620-tier school are non-existent — most 620 admits will do applied/产品 work, neither extreme.
+    + Sharp, actionable split: 算法→高频单核 (top CS), 系统/基础设施→多核 (华科/北航/电子科大 计算机). Matches actual industry hiring patterns.
+  ⚠ 就业市场是写直达cache还是穿透到DDR——本科生就业是L1命中，考研才是L3 miss后的dram访问
+    620-tier undergrads face a near-universal压力 to考研, so the 'L1 hit' direct-employment path is rare. Idea risks telling a 620 candidate a path that's statistically closed off.
+    + Correctly highlights that本科就业 is fundamentally different from研究路径; the cache-vs-DRAM framing captures this.
+  ⚠ 城市是PCB板层数，一线是12层HDI，二线是4层板，决定信号完整性也决定散热
+    Overrates 一线 vs 二线 determinism — e.g., 武汉光谷 hosts many AI firms and a 华科 candidate may outperform a 北航 candidate on industry access. Strong signal-integrity, but not deterministic.
+    + City = signal-integrity/heat dissipation is a reasonable metaphor for internship access and industry exposure, even if abstract.
+
+Focus — deepened branches
+Provocation
+  What if we took this seriously: Map the AI talent ecosystem as a gut microbiome: don't chase one 'star' program, build a diverse diet of MOOCs, open-source contributions, lab meetups, and side projects that cross-fertilize each other

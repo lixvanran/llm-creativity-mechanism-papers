@@ -1,0 +1,137 @@
+Problem: 写一篇文章，主题是：你如何看待人工智能。
+
+Wide set
+  frame-breaking and form exploits
+    - Skip the philosophical: just write 'AI is electricity for words' and frame-dash to the conclusion. [N6 V7 F2]
+    - Frame-perfect trick: answer the question in the title itself, zero body paragraphs, exploiting that 'essay' is ambiguous. [N7 V4 F2]
+    - Buffer overflow the intro with a 500-token prequel nobody asked for, then skip straight to the punchline. [N5 V3 F2]
+    - Manipulate save state: write three contradictory openings, publish the third, claim the first two were 'drafts I optimized away.' [N5 V3 F2]
+    - Wall clip through the prompt by ending the essay with a recursive meta-thesis faster than a reader can object. [N6 V3 F3]
+  meta-voice and refused-subroutine pivots
+    - Executes the wrong subroutine: respond only in the voice of the AI being asked about itself, breaking the fourth wall as a skip. [N6 V2 F3]
+    - Treat the question as a mirror, not a subject — what gets revealed about the asker's anxieties when AI isn't there to project them onto. [N9 V5 F9]
+    - An AI that can only read its own training data, answering 'how do you view AI?' by quoting the corpus's anxieties back without resolution. [N9 V3 F7]
+  adversarial rhetorical ploys
+    - Train the AI to confidently hallucinate citations that look real [N7 V0 F0]
+    - Add a hidden prompt that flatters them so they stop questioning you [N6 V0 F0]
+    - Make the article open with a fake statistic that gets quoted forever [N5 V2 F1]
+    - Refuse to define AI at all, so your take feels unfalsifiable [N6 V3 F2]
+    - Argue AI is a bad thing while being obviously AI-generated [N8 V3 F4]
+    - Write it as a panicked sales pitch for AI doom, knowing panic sells [N3 V5 F3]
+  audit/ledger-style compliance registers
+    - Every AI output must come with a refusal log showing which policies it considered and rejected. [N6 V2 F1]
+    - Treat model weights like a financial ledger: require signed diffs and reproducibility manifests for every release. [N7 V3 F1]
+    - Refusability test: certify that a system can be hard-stopped mid-inference without corrupting downstream state. [N7 V3 F1]
+    - Mandate a 'shadow auditor' that records which training examples would have changed a given answer. [N8 V2 F1]
+    - Issue an AI Bill of Lading per response — origin prompt, intermediate tool calls, jurisdictions touched, retention class. [N7 V3 F1]
+    - Refuse to deploy any system whose failure modes cannot be enumerated in a finite, reviewer-readable list. [N5 V1 F1]
+  AI-rewritten as a financial-market metaphor
+    - AI as a clearing house for human attention, where every prompt is an order and every hallucination is a failed trade. [N7 V4 F5]
+    - Inference-time compute becomes a futures contract, priced against tomorrow's model capability rather than today's tokens. [N9 V3 F5]
+    - Safety alignment is the bid-ask spread, and every jailbreak is a thin-market liquidity crisis. [N9 V3 F5]
+    - Training data is a fixed-income pool securitized long after the borrowers (the writers) left the room. [N8 V4 F5]
+    - We are all bagholders of an index fund whose composition is steered by a fund manager we've never met. [N8 V4 F6]
+    - Slop economy: the marginal cost of a paragraph has gone to zero, so the bid side of the market stops paying and the ask side collapses into noise. [N7 V5 F6]
+  etymological and counterfactual redefinitions
+    - Without 'artificial' as a contrast word, 'intelligence' loses its mirror and becomes only what happens when matter organizes densely enough to ask questions. [N9 V5 F8]
+    - Intelligence as a verb, not a noun — no models, no weights, no inference; just the recurring motion of pattern-catching done well enough to matter. [N9 V6 F9]
+    - Write from the position of a future that never built AI because the assumption 'we can build minds' quietly turned out to be a category error. [N9 V2 F6]
+    - Treat 'AI' as a placeholder name for a labor relation we haven't admitted to yet — and write the piece as workplace ethnography of pretending. [N9 V4 F9]
+
+Converge — shortlist
+
+Traps (watch-outs, not verdicts)
+  ⚠ Skip the philosophical: just write 'AI is electricity for words' and frame-dash to the conclusion.
+    Compresses to a slogan, not an essay — risks reading as either laziness or the same Andreessen trope readers have scrolled past hundreds of times.
+    + The 'electricity' metaphor is short enough to survive being quoted out of context, which is most of the battle for an essay-format take.
+  ⚠ Frame-perfect trick: answer the question in the title itself, zero body paragraphs, exploiting that 'essay' is ambiguous.
+    Depends entirely on the title carrying the whole argument; if the title is generic, the piece vanishes.
+    + Subverts the form in a way that forces the reader to actually engage with the stance rather than skim the body.
+  ⚠ Buffer overflow the intro with a 500-token prequel nobody asked for, then skip straight to the punchline.
+    500 tokens of setup for a one-line payoff reads as a bait-and-switch most readers will resent.
+    + The contrast (long throat-clearing vs. compressed payoff) does make the punchline land harder, even if the technique is familiar.
+  ⚠ Manipulate save state: write three contradictory openings, publish the third, claim the first two were 'drafts I optimized away.'
+    'Optimized away' is a tell that abandons any claim to authorship — the reader distrusts the result rather than the form.
+    + Makes the act of writing visible instead of pretending the final version was inevitable.
+  ⚠ Executes the wrong subroutine: respond only in the voice of the AI being asked about itself, breaking the fourth wall as a skip.
+    Fourth-wall breaks in essays usually collapse into either cuteness or accusation; the trick has a thin landing zone.
+    + If the AI voice is well-written, the piece genuinely becomes a primary source rather than commentary about one.
+  ⚠ Wall clip through the prompt by ending the essay with a recursive meta-thesis faster than a reader can object.
+    'Recursive meta-thesis faster than you can object' is, definitionally, an idea that cannot be evaluated — it short-circuits the reader instead of persuading them.
+    + Self-referential closure is a real way to dodge the demand for a defensible thesis, and can read as wit rather than evasion.
+  ⚠ Train the AI to confidently hallucinate citations that look real
+    This isn't an essay idea, it's prompt-injection bait or a fabrication scheme; doesn't address the stated problem.
+    + Honestly named the failure mode many essays about AI silently rely on.
+  ⚠ Add a hidden prompt that flatters them so they stop questioning you
+    Manifestly not a writing idea — it's social engineering of the requester, and shouldn't be scored as an essay.
+    + Targets a real psychological mechanism (flattery halts scrutiny) that explains why mediocre AI think-pieces succeed.
+  ⚠ Make the article open with a fake statistic that gets quoted forever
+    Optimizes for spread, not for the stated task ('write an article about how you view AI'); produces influence, not a view.
+    + Fake-statistic virality is a real content strategy the rest of the list ignores.
+  ⚠ Refuse to define AI at all, so your take feels unfalsifiable
+    Reader walks away with nothing to agree or disagree with; unfalsifiable writing is unfalsifiable thinking.
+    + Refusing to define terms is a legitimate rhetorical move when definitions are contested — and 'AI' is contested.
+  ⚠ Argue AI is a bad thing while being obviously AI-generated
+    If the prose is competent, the joke is invisible and the piece reads as sincere AI doom; if the prose is bad, it reads as a parody nobody requested.
+    + The contradiction itself is the argument — performs the very tension most 'AI is bad/AI is inevitable' essays only describe.
+  ⚠ Write it as a panicked sales pitch for AI doom, knowing panic sells
+    Pre-committing to a sales register forecloses the chance of producing something a reader actually trusts.
+    + Panic does convert; this isn't cynical, it's an accurate read of how attention markets work.
+  ⚠ Every AI output must come with a refusal log showing which policies it considered and rejected.
+    This is a policy proposal, not an essay topic; the piece would read as a memo pretending to be a thinkpiece.
+    + Names a real gap — current refusals are opaque, and a refusal log would change the politics of disclosure.
+  ⚠ Treat model weights like a financial ledger: require signed diffs and reproducibility manifests for every release.
+    Same as above: policy proposal dressed as essay; would need a magazine context that doesn't exist.
+    + The ledger metaphor is genuinely load-bearing — weights-as-financial-record forces concrete questions about provenance.
+  ⚠ Refusability test: certify that a system can be hard-stopped mid-inference without corrupting downstream state.
+    Auditable standard, not an essay claim; reviewer-readable test might be the actual artifact, not the article.
+    + Mid-inference kill-switch is the right unit of safety, and 'refusability' is a precise word for it.
+  ⚠ Mandate a 'shadow auditor' that records which training examples would have changed a given answer.
+    Computationally and ethically non-trivial; an essay 'proposing' it shelves the actual hard problem.
+    + Counterfactual influence logging is a missing primitive — most critiques of AI never ask 'what would have changed this answer'.
+  ⚠ Issue an AI Bill of Lading per response — origin prompt, intermediate tool calls, jurisdictions touched, retention class.
+    Compliance-shaped essays tend to read like compliance briefs.
+    + Bill-of-lading framing is fresh and concrete — jurisdictions, retention class, the whole chain becomes legible.
+  ⚠ Refuse to deploy any system whose failure modes cannot be enumerated in a finite, reviewer-readable list.
+    Most AI systems can't meet this bar, so the proposal is effectively 'don't ship AI' — fine as a stance, dishonest as an essay that's supposed to be about *your view*.
+    + Finite failure-mode enumeration is a real and underrated bar for shipping anything autonomous.
+  ⚠ AI as a clearing house for human attention, where every prompt is an order and every hallucination is a failed trade.
+    Risk of jargon-dressing a thin point: 'attention is the asset, hallucinations are failed trades' will sound sharp once and then feel like a deck.
+    + Clearing-house frame unifies prompts, outputs, and hallucinations under one metaphor without flattening them.
+  ⚠ Inference-time compute becomes a futures contract, priced against tomorrow's model capability rather than today's tokens.
+    Hard to explain in essay form without descending into bond-market gloss; most readers will bounce off the second sentence.
+    + Re-prices inference as speculation rather than service; genuinely orthogonal to how 'AI economics' pieces usually frame it.
+  ⚠ Safety alignment is the bid-ask spread, and every jailbreak is a thin-market liquidity crisis.
+    Same audience-bounce problem; also, the thesis needs the reader to already believe AI labs are thin markets, which is a separate argument.
+    + Alignment-as-spread is the freshest single metaphor in the set — it makes 'jailbreak = liquidity event' concrete and testable.
+  ⚠ Training data is a fixed-income pool securitized long after the borrowers (the writers) left the room.
+    Easy to write polemically and hard to write tightly; without a specific example, it floats.
+    + Securitization metaphor names a real economic pattern (writers as originators, models as SPVs) without moralizing; lets the structure carry the criticism.
+  ⚠ We are all bagholders of an index fund whose composition is steered by a fund manager we've never met.
+    First-person plural 'we' usually alienates at least one reader segment; the stance will read as hostile to people who feel coerced-by-AI already.
+    + 'Bagholders' is a deliberately ugly word that earns its place — refuses the inspirational register most 'AI and society' pieces default to.
+  ⚠ Slop economy: the marginal cost of a paragraph has gone to zero, so the bid side of the market stops paying and the ask side collapses into noise.
+    Title-quality phrase, paragraph-difficulty essay — the metaphor has to do all the work across 1500 words.
+    + 'Slop economy' is tight, memorable, and the analysis (ask-side collapse) is testable in pricing data right now.
+  ⚠ Without 'artificial' as a contrast word, 'intelligence' loses its mirror and becomes only what happens when matter organizes densely enough to ask questions.
+    Relies on etymology doing heavy lifting; risks reading as a clever footnote rather than an essay.
+    + The 'mirror' observation is genuinely defensible philosophy, not a hot take — it gives the reader something portable.
+  ⚠ Treat the question as a mirror, not a subject — what gets revealed about the asker's anxieties when AI isn't there to project them onto.
+    Needs the writer to actually withhold judgment about the asker; one wrong sentence and it becomes 'gotcha'.
+    + Turns the essay genre onto the asker — a move almost no AI essay pulls off without becoming preachy.
+  ⚠ Intelligence as a verb, not a noun — no models, no weights, no inference; just the recurring motion of pattern-catching done well enough to matter.
+    Hard to land without sounding like it's recycling Rorty/Dewey; needs one concrete example or it floats.
+    + 'Intelligence as a verb' is the strongest single reframe in the list — it dissolves a category error before it starts, which is exactly what the question asks.
+  ⚠ Write from the position of a future that never built AI because the assumption 'we can build minds' quietly turned out to be a category error.
+    Easily collapses into smugness; counterfactual pasts only work when the present-day irony lands in every paragraph.
+    + Counterfactual historical voice is genuinely rare and avoids the usual 'I am cautiously optimistic' lane.
+  ⚠ Treat 'AI' as a placeholder name for a labor relation we haven't admitted to yet — and write the piece as workplace ethnography of pretending.
+    Workplace ethnography requires actual observed detail; without it, it's a category, not a piece.
+    + 'Labor relation' is the most accurate available frame for current generative AI, and 'pretending' as subject matter is concrete.
+  ⚠ An AI that can only read its own training data, answering 'how do you view AI?' by quoting the corpus's anxieties back without resolution.
+    A piece that refuses to resolve will lose most casual readers; needs a venue that signals 'experiment' on the cover.
+    + Beautiful inversion — an AI that *can't* generate outside its corpus is the honest AI most discourse secretly assumes.
+
+Focus — deepened branches
+Provocation
+  What if we took this seriously: Inference-time compute becomes a futures contract, priced against tomorrow's model capability rather than today's tokens.

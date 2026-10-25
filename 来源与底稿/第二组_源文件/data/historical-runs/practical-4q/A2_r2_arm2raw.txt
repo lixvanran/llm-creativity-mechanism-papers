@@ -1,0 +1,109 @@
+Problem: 公路自行车个人比赛（无车队），单圈1.6km共计15圈，单圈由两个800m直路和两个回头弯构成，本人在大集团里处于中上等水平，该如何安排战术？
+Reframed for divergence: 在24公里（15圈×1.6km）的平路绕圈赛中，每圈含两个800m直道和两个U-turn弯道，选手自评在大集团中处于中上水平（无队友），应采用何种比赛战术？
+
+Wide set
+  (unclustered)
+    - Treat the peloton as a quorum-sensing biofilm: release energy only when local rider density crosses a signaling threshold, then surge to harvest slipstream gains. [N8 V4 F5]
+    - Run an MHC-class diversification strategy: mimic the jersey colors and wheel-surfing cadence of multiple teams so no single squad can identify you as a threat to chase. [N9 V1 F1]
+    - Exploit neural plasticity of drafting reflexes: train your peripheral-vision gap-closing response until corner entry feels autonomous, freeing cognition for U-turn attacks. [N6 V7 F8]
+    - Act as a microbial keystone species: make a single mid-race attack that reorganizes the entire peloton's energy economy, then slip back into the chaos you created. [N8 V3 F5]
+    - Use cytotoxic-T-cell timing: launch your effort at the exact lap where attacking riders are physiologically depleted from prior breakaways, like attacking infected cells at peak vulnerability. [N9 V6 F7]
+    - Cultivate gut-flora-style pacing microbes by training at three distinct cadence zones so race-day power naturally fluctuates instead of holding one steady threshold. [N9 V4 F3]
+    - Ride the invisible wake behind a rotating cast of strangers, like ants cycling through a swarm [N6 V6 F7]
+    - Stay mid-pack where the peloton's slipstream edits itself, only surfacing at U-turns to avoid splits [N5 V8 F9]
+    - Lurk at the far edge of the swarm and slide diagonally across corners to gain 2 bike lengths per lap [N7 V4 F5]
+    - Mimic the jersey color of whoever's currently leading, visually camouflaging as 'the group's body' [N7 V1 F1]
+    - Stutter-pulse the pedals to match the chaotic rhythm of nearby riders, becoming indistinguishable from background noise [N8 V2 F2]
+    - Hide inside gaps that close themselves around you, conserving energy until the swarm collapses at the line [N6 V5 F7]
+    - Sit on the front third and refuse to pull through, bleeding the peloton's morale until 3 laps to go [N5 V3 F4]
+    - Fake a mechanical at the exact moment a break goes, forcing yours to be the one the bunch lets dangle [N7 V3 F4]
+    - Attack on the U-turn exit every single lap to keep everyone in the red without ever committing [N6 V5 F7]
+    - Lurk in the second row at 200m-to-go on every lap to accustom the bunch, then attack the actual line on lap 15 [N6 V6 F7]
+    - Match every early break's first 200m and then soft-pedal, burning one rival's matches instead of your own [N5 V8 F9]
+    - Sit dead last through 12 laps so nobody marks you, then attack the second U-turn when the sprinters' teams finally front up [N5 V6 F8]
+    - Just ride really fast the whole time and hope nobody catches up [N0 V1 F1]
+    - Hide behind the biggest guy you can find and never come out [N0 V2 F2]
+    - Go to the front and yell at everyone to go faster [N2 V1 F1]
+    - Save all your energy for the very last corner and zoom [N3 V5 F7]
+    - Try to lap the slow kids to feel cool even if you crash [N9 V0 F0]
+    - Ride next to your friend the whole race even if they are slow [N8 V0 F0]
+
+Converge — shortlist
+
+Traps (watch-outs, not verdicts)
+  ⚠ Treat the peloton as a quorum-sensing biofilm: release energy only when local rider density crosses a signaling threshold, then surge to harvest slipstream gains.
+    A 1.6km circuit with 15 laps is short — the signal-threshold window is so narrow that surge timing becomes a coin flip, and surging from mid-pack costs far more energy than a breakaway rider spends.
+    + Correctly identifies that energy should be spent opportunistically rather than uniformly, which matches actual road race tactics.
+  ⚠ Run an MHC-class diversification strategy: mimic the jersey colors and wheel-surfing cadence of multiple teams so no single squad can identify you as a threat to chase.
+    This is explicitly an individual race with no teams — there is no jersey-based threat matrix to exploit, so the entire premise collapses.
+    + Correctly notes that team identification drives chase behavior, which is a real peloton dynamic in team events.
+  ⚠ Exploit neural plasticity of drafting reflexes: train your peripheral-vision gap-closing response until corner entry feels autonomous, freeing cognition for U-turn attacks.
+    Peripheral-vision gap-closing training is real but the payoff is marginal at amateur levels; will not meaningfully change outcomes vs. plain practice.
+    + Addresses the actual cognitive bottleneck of a 1.6km circuit with U-turns: corner entry decision-making and the U-turn is the only realistic attack launch site on this layout.
+  ⚠ Act as a microbial keystone species: make a single mid-race attack that reorganizes the entire peloton's energy economy, then slip back into the chaos you created.
+    A mid-pack rider launching a solo move on a 1.6km circuit gets caught almost immediately — the lap is short enough that no break can survive unless it has a teammate, which this rider doesn't have.
+    + A single mid-race attack to disrupt the peloton is a legitimate tactic (think Stybar-style raids) and fits a circuit format.
+  ⚠ Use cytotoxic-T-cell timing: launch your effort at the exact lap where attacking riders are physiologically depleted from prior breakaways, like attacking infected cells at peak vulnerability.
+    Without visible breakaways depleting the field, there's no 'depleted attackers' window to exploit; in an individual race the field tends to ride uniformly and the signal is weak.
+    + Reading opponent fatigue across laps is genuinely the highest-leverage skill in circuit racing and is rarely articulated this clearly.
+  ⚠ Cultivate gut-flora-style pacing microbes by training at three distinct cadence zones so race-day power naturally fluctuates instead of holding one steady threshold.
+    Race-day power doesn't 'naturally fluctuate' from training — it fluctuates from tactical decisions. This solves a training problem, not a race problem.
+    + Variable-cadence training is a real thing (polarized/periodized) and prevents the most common amateur failure: going too hard too early into threshold.
+  ⚠ Ride the invisible wake behind a rotating cast of strangers, like ants cycling through a swarm
+    Swapping wheels aggressively in a 15-lap criterium can look 'moto-ish' and provoke reactions; also requires anticipating gaps that don't always open on a short lap.
+    + Rotating through different wheels to share draft duty is exactly how experienced circuit racers conserve energy in a no-teams event.
+  ⚠ Stay mid-pack where the peloton's slipstream edits itself, only surfacing at U-turns to avoid splits
+    Sprinters' teams (and solo strong finishers) will punish anyone who surfaces late from mid-pack if the pace stays high; you need either a launch partner or serious top-end power.
+    + U-turn corners are exactly where splits happen on an 800m-straight + hairpin layout — surfacing only at the corners is the textbook positioning move.
+  ⚠ Lurk at the far edge of the swarm and slide diagonally across corners to gain 2 bike lengths per lap
+    On a tight U-turn where the field bunches, taking a diagonal line forces you to brake harder on exit and re-accelerate from a longer line; the 2 lengths become net loss in real pack dynamics.
+    + Inside-line diagonal cornering is a real geometry advantage and 2 bike lengths per lap compounds to 30 bike lengths over 15 laps — mathematically meaningful.
+  ⚠ Mimic the jersey color of whoever's currently leading, visually camouflaging as 'the group's body'
+    Mimicking a leader's color mid-pack does not change who gets marked — marking is based on race position and threat level, not jersey. Wastes attention.
+    + Visual camouflage is a real concept in cycling (e.g., neutral kit riders blending into breakaways).
+  ⚠ Stutter-pulse the pedals to match the chaotic rhythm of nearby riders, becoming indistinguishable from background noise
+    Stutter-pulsing your pedals to match neighbors costs real watts, disrupts your own rhythm, and gains zero tactical benefit since nobody marks you for cadence.
+    + Stylistic novelty is high — rhythm-matching to avoid being singled out is a creative framing.
+  ⚠ Hide inside gaps that close themselves around you, conserving energy until the swarm collapses at the line
+    The peloton doesn't reliably 'collapse at the line' on a 1.6km circuit — it usually organizes a leadout train. Hiding all day and trusting chaos is a losing bet against organized teams.
+    + Conserving energy by letting gaps close around you is the standard amateur criterium survival tactic and works on flat circuits.
+  ⚠ Sit on the front third and refuse to pull through, bleeding the peloton's morale until 3 laps to go
+    You'll absorb wind from the front without sheltering anyone — in a 1.6km lap this bleeds far more than it costs the peloton. Pure energy negative for a mid-pack rider.
+    + Sitting front-third and not pulling is a real form of active resistance and can demoralize a chase, especially in no-team racing.
+  ⚠ Fake a mechanical at the exact moment a break goes, forcing yours to be the one the bunch lets dangle
+    In modern events fake mechanicals are penalized and recognized by experienced riders/commissaires; high social cost, low success rate at amateur levels where everyone watches the front.
+    + Fake-mechanicals are a known (if ethically grey) tactic that does cause bunch hesitation — there's a kernel of tactical realism here.
+  ⚠ Attack on the U-turn exit every single lap to keep everyone in the red without ever committing
+    Attacking every lap for 15 laps is physiologically impossible for a mid-pack rider — you'll be the one in the red by lap 5 and chased down deterministically.
+    + Repeated U-turn-exit attacks are genuinely the highest-frequency attack site on this exact course geometry and keep the field under pressure.
+  ⚠ Lurk in the second row at 200m-to-go on every lap to accustom the bunch, then attack the actual line on lap 15
+    On lap 14, when you actually attack, the field has been trained to expect it and will cover it. Habituation only works if you vary the *real* attack's timing/location.
+    + Habituation tactics ('lap-after-lap feints') are real and the 200m-to-go mark on an 800m straight is a sensible jump point — fits the course geometry.
+  ⚠ Match every early break's first 200m and then soft-pedal, burning one rival's matches instead of your own
+    Doing this on every early break accumulates anaerobic cost that isn't fully 'free' — if two real breaks go consecutively you may have nothing left for the decisive one.
+    + Covering the first 200m of every break then soft-pedaling is the textbook amateur criterium move — forces others to commit, conserves your matches.
+  ⚠ Sit dead last through 12 laps so nobody marks you, then attack the second U-turn when the sprinters' teams finally front up
+    Riding dead-last on a tight 1.6km circuit is dangerous — risk of crashes at the U-turns where the bunch slows; also, sprinters don't always 'front up' on this course if there's a breakaway stick.
+    + Sitting last through 12 laps and attacking the second U-turn at 3-to-go correctly identifies that the race is decided in the last 3 laps on this layout.
+  ⚠ Just ride really fast the whole time and hope nobody catches up
+    Cat-5-style 'just go fast' collapses in any field that includes experienced opponents; guarantees a red-lining blowup before the finish on a 24km race.
+    + At least it's honest about the difficulty — there is a baseline truth that fitness gates everything else.
+  ⚠ Hide behind the biggest guy you can find and never come out
+    Tucking behind one rider the whole race makes you totally dependent on their line and pacing; on a course with U-turns you'll get shunted or dropped at every corner.
+    + Drafting behind big riders is genuinely the single highest-ROI skill for an underpowered rider.
+  ⚠ Go to the front and yell at everyone to go faster
+    Self-destructive at mid-pack fitness level; you pull yourself into the ground while stronger riders simply sit on. Adds zero percent chance of winning.
+    + Captures a real psychological effect — pulling hard on the front does sometimes 'wake up' a passive field.
+  ⚠ Save all your energy for the very last corner and zoom
+    'Saving everything' for the last corner on a 1.6km circuit means riding 14 laps essentially solo-effort in a moving peloton — you'll be dropped or boxed in well before the last corner.
+    + Correctly identifies that the last corner (or final 200m of the finishing straight) is the decisive moment on this course.
+  ⚠ Try to lap the slow kids to feel cool even if you crash
+    Lapping the field is essentially impossible in a 15-lap amateur race and crashes from lapping traffic are a real disqualification/end-of-career risk. Zero tactical content.
+    + Comedic originality is off the charts — actually funny.
+  ⚠ Ride next to your friend the whole race even if they are slow
+    In a 24km race, riding next to a slower friend is a guaranteed DNF or last place. The race format punishes loyalty completely.
+    + Friendship and pack cohesion are real performance factors in amateur cycling — the social-bike concept has merit in long fondos.
+
+Focus — deepened branches
+Provocation
+  What if we took this seriously: Run an MHC-class diversification strategy: mimic the jersey colors and wheel-surfing cadence of multiple teams so no single squad can identify you as a threat to chase.

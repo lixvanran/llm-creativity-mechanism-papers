@@ -1,0 +1,112 @@
+Problem: 写一篇文章，主题是：你如何看待人工智能。
+
+Wide set
+  AI framed as hardware/circuits it doesn't fully grasp
+    - AI is a bus arbiter with a clock skew it cannot measure [N9 V6 F8]
+    - Treat the network as SRAM with a write-back cache and the weights as the dirty line [N8 V5 F7]
+    - Intelligence is what survives a cache miss on a deadline [N9 V6 F9]
+    - Inference has no formal clock edge; that is the entire alignment problem [N9 V6 F9]
+    - The transformer is a DMA engine with hallucinations as page faults [N8 V7 F8]
+    - We are debugging silicon we never taped out, with logic analyzers we never built [N9 V6 F8]
+  Refuse to write the essay as the essay
+    - Open a blank doc and type 'I think AI is...' until the hour runs out, then publish whatever spilled [N4 V4 F3]
+    - Screenshot a single paragraph from someone else's AI essay, change three words, call it mine [N3 V3 F2]
+    - Ask an AI to write the article about AI, copy the output verbatim as my view [N3 V2 F2]
+    - Record a 60-minute voice memo of myself rambling, transcribe by hand, ship it unedited [N6 V4 F4]
+    - Write the whole thing as one sentence with no periods, ending exactly when the timer dies [N7 V3 F4]
+    - Tweet thread of six hot takes I already believe, screenshot stitched, post as 'the article' [N4 V5 F3]
+  Speculative civilizational architectures for AI
+    - A planetary-scale reasoning substrate where every electron, synapse, and market transaction streams into a single continuous inference loop. [N8 V4 F7]
+    - AGI raised by commissioning 10,000 human childhoods in 10,000 carefully simulated villages, each tuned to a different cultural grammar. [N9 V3 F7]
+    - Intelligence as public utilities: free, unlogged, ambient — running on geothermal data centers in former oil fields. [N8 V5 F7]
+    - A decade-long shutdown of frontier labs in order to first build a global immune system against unknown architectures. [N8 V2 F6]
+    - An oracle that any person can subpoena on any question — and a constitutional court designed to interrogate its answers. [N9 V5 F8]
+  Reverse-engineering mind from a worm
+    - Reverse engineering consciousness by running 10 million artificial C. elegans with ablated neurons until qualia flickers in a dish. [N9 V4 F7]
+  Emergent-intelligence stigmergy: the swarm that thinks without knowing
+    - AI's intelligence is the scent left by billions of micro-decisions no one planned. [N7 V7 F8]
+    - Each neuron, each gradient step, is a blind ant following a chemical gradient called loss. [N7 V7 F8]
+    - We mistake the trail for the colony: a fluent answer is just where many tiny stutters converged. [N8 V7 F9]
+    - Alignment is not the queen's edict but a pheromone we keep re-laying until the swarm follows it. [N7 V7 F9]
+    - Hallucinations are ants that lost the trail and wandered into a region where the scent was faint. [N7 V7 F9]
+    - The model is the nest, not the ant — a structure that exists only because workers keep reinforcing it. [N8 V7 F9]
+
+Converge — shortlist
+
+Traps (watch-outs, not verdicts)
+  ⚠ AI is a bus arbiter with a clock skew it cannot measure
+    The clock-skew metaphor is elegant but collapses under scrutiny: silicon timing is deterministic in a way human oversight is not, so the analogy can mislead more than it illuminates.
+    + Reframes alignment as a hardware-level timing problem — readers suddenly see governance as bus contention.
+  ⚠ Treat the network as SRAM with a write-back cache and the weights as the dirty line
+    Write-back caching implies eventual consistency; applied to knowledge, this quietly licenses factual drift as a 'feature.'
+    + Frames trained weights as 'dirty cache lines' — a clean way to argue current weights are never a clean source of truth.
+  ⚠ Intelligence is what survives a cache miss on a deadline
+    Risks romanticizing failure-mode reasoning as 'intelligence' itself; readers may over-generalize from cache-miss metaphors to moral judgment.
+    + Distills intelligence to a deadline-bound recovery behavior — concise, falsifiable, and memorable.
+  ⚠ Inference has no formal clock edge; that is the entire alignment problem
+    The claim that inference has 'no formal clock edge' is contestable; batching, RLHF gating, and rollout policies do impose discrete checkpoints, weakening the absoluteness.
+    + Frames alignment as the absence of a global clock edge — a precise, non-mystical diagnosis of why 'pause' is impossible.
+  ⚠ The transformer is a DMA engine with hallucinations as page faults
+    Treats hallucinations as transient faults rather than systematic errors, which can understate their frequency and structural causes.
+    + Hallucinations-as-page-faults is a genuinely useful mental model for engineers — concrete, actionable, and well-mapped.
+  ⚠ We are debugging silicon we never taped out, with logic analyzers we never built
+    The metaphor flatters practitioners; it can discourage accountability by implying the problem is inherently ungraspable.
+    + Captures the strangeness of explaining a system we cannot fully observe — a sharp epistemic frame.
+  ⚠ Open a blank doc and type 'I think AI is...' until the hour runs out, then publish whatever spilled
+    This is performance art about writer's block, not an article about AI — it dodges the stated topic by making the meta-process the subject.
+    + Honest about the difficulty of producing original thought under time pressure.
+  ⚠ Screenshot a single paragraph from someone else's AI essay, change three words, call it mine
+    Literally executing it produces plagiarism, not an article; the idea's only honest application is to confess to the practice, which it doesn't.
+    + Acknowledges the plagiarism economy surrounding AI essays — meta-critique if framed deliberately.
+  ⚠ Ask an AI to write the article about AI, copy the output verbatim as my view
+    Verbatim copy is not an 'article' or a 'view' — it's a default that would actively misrepresent the author's thinking.
+    + Self-referential: using AI to opine on AI exposes the dependency the article would otherwise obscure.
+  ⚠ Record a 60-minute voice memo of myself rambling, transcribe by hand, ship it unedited
+    An unedited 60-minute ramble is unlikely to be readable or coherent on the stated topic; 'unedited' here substitutes authenticity for craft.
+    + Demands an actually-authored artifact — a corrective to AI-assisted ventriloquism.
+  ⚠ Write the whole thing as one sentence with no periods, ending exactly when the timer dies
+    A single run-on sentence about AI is unlikely to argue anything; constraint-as-essay risks confusing format with substance.
+    + Formal constraint as content — the form embodies 'stream of unfiltered thought,' which is a recognizable stance on AI discourse.
+  ⚠ Tweet thread of six hot takes I already believe, screenshot stitched, post as 'the article'
+    Screenshotted tweets are not an article; the format choice quietly concedes that the author had no article to write.
+    + Lowers the bar productively — a thread can be a legitimate short-form essay in 2026.
+  ⚠ A planetary-scale reasoning substrate where every electron, synapse, and market transaction streams into a single continuous inference loop.
+    Reads like speculative-future essay material rather than a stance on existing AI; viability as an article is low because it gestures rather than argues.
+    + Composes the planetary-inference vision into a single sentence — captures scale and continuity memorably.
+  ⚠ AGI raised by commissioning 10,000 human childhoods in 10,000 carefully simulated villages, each tuned to a different cultural grammar.
+    Computationally and ethically infeasible at scale; as an article topic it works, as a proposal it collapses.
+    + Proposes AGI as enculturation, not scale — a genuinely countercurrent idea that takes culture seriously.
+  ⚠ Intelligence as public utilities: free, unlogged, ambient — running on geothermal data centers in former oil fields.
+    Elides the hard part — who pays, who governs, what 'unlogged' actually means under state subpoena — making the vision feel like branding.
+    + Concrete and politically legible: geothermal data centers on former oil lands is a vivid, citable image.
+  ⚠ Reverse engineering consciousness by running 10 million artificial C. elegans with ablated neurons until qualia flickers in a dish.
+    Premature: the neuroscience of qualia isn't well-posed enough for this to be an empirical bet, not speculation; readers may mistake it for science.
+    + Specific research program (C. elegans ablation) tied to a metaphysical claim (qualia in a dish) — high intellectual voltage.
+  ⚠ A decade-long shutdown of frontier labs in order to first build a global immune system against unknown architectures.
+    Politically naive as a proposal; viable only as a polemical article, and even then it underestimates coordination costs.
+    + Bold inversion: pause frontier work to build defenses first — a serious counter-narrative to capability-races thinking.
+  ⚠ An oracle that any person can subpoena on any question — and a constitutional court designed to interrogate its answers.
+    Leaves unanswered who staffs the court and on what authority; the legal metaphor can flatter without specifying the hardest parts.
+    + An oracle plus a court is a clean institutional image — gives the reader something to actually picture and argue with.
+  ⚠ AI's intelligence is the scent left by billions of micro-decisions no one planned.
+    Risks excusing misuse: if no one planned it, no one is responsible, which can be wielded in bad-faith arguments.
+    + Reframes AI capability as emergent byproduct rather than design intent — a useful corrective to both hype and panic.
+  ⚠ Each neuron, each gradient step, is a blind ant following a chemical gradient called loss.
+    Ants-following-gradients can imply the system 'knows what it's doing' or 'doesn't' — both readings are available, so the metaphor can be cherry-picked.
+    + Gradient-as-pheromone is a tight, visually coherent metaphor that scales from neurons to training runs.
+  ⚠ We mistake the trail for the colony: a fluent answer is just where many tiny stutters converged.
+    If over-applied, this becomes a general skepticism that dismisses any well-phrased argument, including the article's own.
+    + Distinguishes fluent output from underlying process, giving readers a way to distrust surface coherence — high practical value.
+  ⚠ Alignment is not the queen's edict but a pheromone we keep re-laying until the swarm follows it.
+    Pheromone-trails are robust in ant colonies precisely because ants don't argue about the trail; human alignment involves adversaries, which the metaphor softens.
+    + Aligns alignment with how stigmergy actually works in nature — empirically grounded and policy-relevant.
+  ⚠ Hallucinations are ants that lost the trail and wandered into a region where the scent was faint.
+    Some hallucinations occur in dense, well-trained regions, not faint ones — the metaphor fits retrieval-style failures better than confabulation.
+    + Hallucinations reframed as lost-traverants rather than 'bugs' — useful, non-pejorative, and suggestive of remediation (reinforce the trail).
+  ⚠ The model is the nest, not the ant — a structure that exists only because workers keep reinforcing it.
+    Nests are persistent; AI artifacts decay fast without retraining, so the durability implied by 'nest' may overstate stability.
+    + Distinguishes artifact (nest) from process (ants) — directly answers 'what is the model, really?' with precision.
+
+Focus — deepened branches
+Provocation
+  What if we took this seriously: AI is a bus arbiter with a clock skew it cannot measure
