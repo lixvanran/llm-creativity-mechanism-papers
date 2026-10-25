@@ -1,0 +1,161 @@
+{
+  "report": {
+    "audit_commit": "e012f1e2574cd28a5e64fc4609786a46a534efd4\t2026-10-18 23:27\t训练方法 v3：可学习架构（架构本身是学习产物）",
+    "repo_latest_commit": "d490a9fa8926849e434c2f420c2f1a970ce26a85\t2026-10-25 15:34",
+    "T-L3-03": {
+      "commit": "e012f1e2",
+      "dim14": true,
+      "dim14_at": [
+        67
+      ],
+      "f6_overwrites_stop": true,
+      "onehot_at": [
+        68
+      ],
+      "f6_at": [
+        81
+      ],
+      "f6_indent": 4,
+      "target_block_indent": 4,
+      "cand_has_merge": false,
+      "cand_ops": [
+        [
+          89,
+          "GEN_PLAIN"
+        ],
+        [
+          90,
+          "GEN_ANGLE"
+        ],
+        [
+          94,
+          "EXTRACT"
+        ],
+        [
+          97,
+          "VERIFY"
+        ],
+        [
+          100,
+          "SPLIT"
+        ],
+        [
+          105,
+          "STOP"
+        ]
+      ],
+      "ops_tuple": [
+        "GEN_PLAIN",
+        "GEN_ANGLE",
+        "EXTRACT",
+        "SPLIT",
+        "VERIFY",
+        "MERGE",
+        "STOP"
+      ],
+      "cand_no_merge": true,
+      "sort_now": [
+        [
+          116,
+          "scored.sort(key=lambda x: -x[0])"
+        ]
+      ],
+      "all_three_hold": true
+    },
+    "T-L3-04": {
+      "rounds": [
+        {
+          "round": 1,
+          "ops": {
+            "GEN_PLAIN": 24,
+            "GEN_ANGLE": 11,
+            "VERIFY": 5,
+            "EXTRACT": 3
+          }
+        },
+        {
+          "round": 2,
+          "ops": {
+            "EXTRACT": 13,
+            "VERIFY": 11,
+            "GEN_ANGLE": 8,
+            "GEN_PLAIN": 6
+          }
+        },
+        {
+          "round": 3,
+          "ops": {
+            "EXTRACT": 11,
+            "VERIFY": 8,
+            "GEN_ANGLE": 7,
+            "GEN_PLAIN": 6
+          }
+        },
+        {
+          "round": 4,
+          "ops": {
+            "EXTRACT": 12,
+            "GEN_ANGLE": 9,
+            "VERIFY": 9,
+            "GEN_PLAIN": 4
+          }
+        },
+        {
+          "round": 5,
+          "ops": {
+            "EXTRACT": 18,
+            "GEN_PLAIN": 9,
+            "GEN_ANGLE": 8,
+            "VERIFY": 7
+          }
+        },
+        {
+          "round": 6,
+          "ops": {
+            "EXTRACT": 16,
+            "GEN_ANGLE": 11,
+            "VERIFY": 6,
+            "GEN_PLAIN": 3
+          }
+        },
+        {
+          "round": 7,
+          "ops": {
+            "VERIFY": 14,
+            "EXTRACT": 13,
+            "GEN_PLAIN": 8,
+            "GEN_ANGLE": 7
+          }
+        }
+      ],
+      "changed_by_round": true,
+      "no_round_all_gen_plain": true,
+      "has_verify_round": true,
+      "anchors": {
+        "r1 GEN_PLAIN=24": true,
+        "r5 EXTRACT=18": true,
+        "r7 VERIFY=14": true,
+        "GEN_PLAIN 24→3": true
+      },
+      "judge": true
+    },
+    "T-L3-06": {
+      "bug_line_bug": [
+        136,
+        "scored.sort(key=lambda x: -x[1][0])   # x[1] = (op, tgt) → x[1][0] 是 op 的**字符串**"
+      ],
+      "git_hist_sort_lines": [
+        {
+          "commit": "e012f1e2",
+          "line": "scored.sort(key=lambda x: -x[0])"
+        }
+      ],
+      "bug_version_in_git_history": false,
+      "judge1_verbatim": true,
+      "judge2_histogram": true,
+      "close_t_l3_04": true,
+      "note": "★ 逐字引用的载体是【作者自述报告】，不是 git 对象；⇒ 形态可从 L2 升到 L1′，但 git 历史里仍无该版本"
+    }
+  },
+  "fails": []
+}

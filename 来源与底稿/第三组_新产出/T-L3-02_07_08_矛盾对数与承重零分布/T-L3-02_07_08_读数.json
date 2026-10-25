@@ -1,0 +1,193 @@
+{
+  "report": {
+    "15题版": {
+      "n_samples_total": 88,
+      "n_valid": 88,
+      "n_failed": 0,
+      "n_nonzero": 2,
+      "nonzero_ratio": 0.022727272727272728,
+      "judge_gt_0_5": false,
+      "n_field_missing": 0,
+      "note": "★ 分母 = 有效样本（已剔失败生成）；★ 派活给的 86/88、98/100 用的是【总样本】口径 ⇒ 本表给的是【剔失败后】口径",
+      "load_bearing": {
+        "n": 88,
+        "n_cross_slot": 44,
+        "n_slot": 44,
+        "trigger_ratio": 0.5,
+        "judge_trigger_gt_0_5": false,
+        "n_conflicts_gt0": 14,
+        "conflicts_ratio": 0.3181818181818182,
+        "judge_conflicts_gt_0_5": false,
+        "n_ncp_gt0": 1,
+        "ncp_ratio": 0.022727272727272728,
+        "n_kept": 10,
+        "kept_ratio": 0.11363636363636363
+      }
+    },
+    "13题版": {
+      "n_samples_total": 100,
+      "n_valid": 100,
+      "n_failed": 0,
+      "n_nonzero": 2,
+      "nonzero_ratio": 0.02,
+      "judge_gt_0_5": false,
+      "n_field_missing": 0,
+      "note": "★ 分母 = 有效样本（已剔失败生成）；★ 派活给的 86/88、98/100 用的是【总样本】口径 ⇒ 本表给的是【剔失败后】口径",
+      "load_bearing": {
+        "n": 100,
+        "n_cross_slot": 54,
+        "n_slot": 46,
+        "trigger_ratio": 0.54,
+        "judge_trigger_gt_0_5": true,
+        "n_conflicts_gt0": 16,
+        "conflicts_ratio": 0.2962962962962963,
+        "judge_conflicts_gt_0_5": false,
+        "n_ncp_gt0": 2,
+        "ncp_ratio": 0.037037037037037035,
+        "n_kept": 16,
+        "kept_ratio": 0.16
+      }
+    },
+    "field_diagnosis": {
+      "15题版": {
+        "n_conflict_pairs": {
+          "n": 88,
+          "nz": 2,
+          "ratio": 0.022727272727272728
+        },
+        "conflicts": {
+          "n": 88,
+          "nz": 31,
+          "ratio": 0.3522727272727273
+        },
+        "diversity": {
+          "n": 88,
+          "nz": 86,
+          "ratio": 0.9772727272727273
+        },
+        "cover": {
+          "n": 88,
+          "nz": 86,
+          "ratio": 0.9772727272727273
+        },
+        "width": {
+          "n": 88,
+          "nz": 68,
+          "ratio": 0.7727272727272727
+        },
+        "n_trap_hits": {
+          "n": 88,
+          "nz": 16,
+          "ratio": 0.18181818181818182
+        },
+        "n_empty": {
+          "n": 88,
+          "nz": 7,
+          "ratio": 0.07954545454545454
+        }
+      },
+      "13题版": {
+        "n_conflict_pairs": {
+          "n": 100,
+          "nz": 2,
+          "ratio": 0.02
+        },
+        "conflicts": {
+          "n": 100,
+          "nz": 31,
+          "ratio": 0.31
+        },
+        "diversity": {
+          "n": 100,
+          "nz": 100,
+          "ratio": 1.0
+        },
+        "cover": {
+          "n": 100,
+          "nz": 100,
+          "ratio": 1.0
+        },
+        "width": {
+          "n": 100,
+          "nz": 78,
+          "ratio": 0.78
+        },
+        "n_trap_hits": {
+          "n": 100,
+          "nz": 13,
+          "ratio": 0.13
+        },
+        "n_empty": {
+          "n": 100,
+          "nz": 5,
+          "ratio": 0.05
+        }
+      }
+    },
+    "denominator_selfproof": [
+      {
+        "seed": "pl_20261101",
+        "hist": 16,
+        "log_rows": 16,
+        "log_failures": 2,
+        "match": true
+      },
+      {
+        "seed": "pl_20261102",
+        "hist": 17,
+        "log_rows": 17,
+        "log_failures": 1,
+        "match": true
+      },
+      {
+        "seed": "pl_20261103",
+        "hist": 18,
+        "log_rows": 18,
+        "log_failures": 0,
+        "match": true
+      },
+      {
+        "seed": "pl_20261104",
+        "hist": 14,
+        "log_rows": 14,
+        "log_failures": 4,
+        "match": true
+      },
+      {
+        "seed": "pl_20261105",
+        "hist": 17,
+        "log_rows": 17,
+        "log_failures": 1,
+        "match": true
+      },
+      {
+        "seed": "pl_20261106",
+        "hist": 18,
+        "log_rows": 18,
+        "log_failures": 0,
+        "match": true
+      }
+    ],
+    "T-L3-07_reachability": {
+      "probes": [
+        {
+          "probe": "① 仓内 runs/ 无",
+          "root": "/workspace/work/exp/L3/来源与底稿/第三组_治塌缩层3/cmp8repo/runs",
+          "found": []
+        },
+        {
+          "probe": "② 本机 lab runs/ 无",
+          "root": "/workspace/lab/routes/COLLAPSE/runs",
+          "found": []
+        }
+      ],
+      "github_runs_gitignored": true,
+      "verdict": "不可达（★ 三路已核；★ 按派活裁决不再找第四遍 ⇒ 要么重跑造数据，要么判决「不可分辨」）"
+    }
+  },
+  "fails": [
+    "15题版：非零比例未过 0.5",
+    "13题版：非零比例未过 0.5",
+    "15题版：承重子层判据（两种口径）均不成立"
+  ]
+}

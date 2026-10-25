@@ -1,0 +1,503 @@
+{
+  "report": {
+    "n_records": 36,
+    "files": [
+      {
+        "file": "A1_r1_A5a.json",
+        "arm": "A1",
+        "variant": "⑤a",
+        "round": 1,
+        "ops": {
+          "GEN_PLAIN": 6,
+          "EXTRACT": 3,
+          "GEN_ANGLE": 1
+        }
+      },
+      {
+        "file": "A1_r1_A5b.json",
+        "arm": "A1",
+        "variant": "⑤b",
+        "round": 1,
+        "ops": {
+          "GEN_ANGLE": 1,
+          "EXTRACT": 3,
+          "SPLIT": 3,
+          "VERIFY": 3
+        }
+      },
+      {
+        "file": "A1_r1_A5c.json",
+        "arm": "A1",
+        "variant": "⑤c",
+        "round": 1,
+        "ops": {
+          "GEN_PLAIN": 3,
+          "EXTRACT": 2,
+          "SPLIT": 2,
+          "GEN_ANGLE": 1,
+          "VERIFY": 2
+        }
+      },
+      {
+        "file": "A1_r2_A5a.json",
+        "arm": "A1",
+        "variant": "⑤a",
+        "round": 2,
+        "ops": {
+          "GEN_PLAIN": 8,
+          "GEN_ANGLE": 1,
+          "EXTRACT": 1
+        }
+      },
+      {
+        "file": "A1_r2_A5b.json",
+        "arm": "A1",
+        "variant": "⑤b",
+        "round": 2,
+        "ops": {
+          "GEN_ANGLE": 2,
+          "EXTRACT": 2,
+          "SPLIT": 4,
+          "VERIFY": 2
+        }
+      },
+      {
+        "file": "A1_r2_A5c.json",
+        "arm": "A1",
+        "variant": "⑤c",
+        "round": 2,
+        "ops": {
+          "GEN_PLAIN": 7,
+          "GEN_ANGLE": 1,
+          "EXTRACT": 1,
+          "VERIFY": 1
+        }
+      },
+      {
+        "file": "A1_r3_A5a.json",
+        "arm": "A1",
+        "variant": "⑤a",
+        "round": 3,
+        "ops": {
+          "GEN_PLAIN": 8,
+          "GEN_ANGLE": 2
+        }
+      },
+      {
+        "file": "A1_r3_A5b.json",
+        "arm": "A1",
+        "variant": "⑤b",
+        "round": 3,
+        "ops": {
+          "GEN_PLAIN": 3,
+          "EXTRACT": 3,
+          "SPLIT": 1,
+          "GEN_ANGLE": 1,
+          "VERIFY": 1,
+          "STOP": 1
+        }
+      },
+      {
+        "file": "A1_r3_A5c.json",
+        "arm": "A1",
+        "variant": "⑤c",
+        "round": 3,
+        "ops": {
+          "GEN_PLAIN": 8,
+          "GEN_ANGLE": 2
+        }
+      },
+      {
+        "file": "A2_r1_A5a.json",
+        "arm": "A2",
+        "variant": "⑤a",
+        "round": 1,
+        "ops": {
+          "GEN_PLAIN": 7,
+          "GEN_ANGLE": 3
+        }
+      },
+      {
+        "file": "A2_r1_A5b.json",
+        "arm": "A2",
+        "variant": "⑤b",
+        "round": 1,
+        "ops": {
+          "GEN_ANGLE": 4,
+          "EXTRACT": 4,
+          "GEN_PLAIN": 1,
+          "SPLIT": 1
+        }
+      },
+      {
+        "file": "A2_r1_A5c.json",
+        "arm": "A2",
+        "variant": "⑤c",
+        "round": 1,
+        "ops": {
+          "GEN_PLAIN": 7,
+          "GEN_ANGLE": 3
+        }
+      },
+      {
+        "file": "A2_r2_A5a.json",
+        "arm": "A2",
+        "variant": "⑤a",
+        "round": 2,
+        "ops": {
+          "GEN_PLAIN": 9,
+          "EXTRACT": 1
+        }
+      },
+      {
+        "file": "A2_r2_A5b.json",
+        "arm": "A2",
+        "variant": "⑤b",
+        "round": 2,
+        "ops": {
+          "GEN_ANGLE": 1,
+          "EXTRACT": 3,
+          "SPLIT": 6
+        }
+      },
+      {
+        "file": "A2_r2_A5c.json",
+        "arm": "A2",
+        "variant": "⑤c",
+        "round": 2,
+        "ops": {
+          "GEN_PLAIN": 9,
+          "EXTRACT": 1
+        }
+      },
+      {
+        "file": "A2_r3_A5a.json",
+        "arm": "A2",
+        "variant": "⑤a",
+        "round": 3,
+        "ops": {
+          "GEN_PLAIN": 8,
+          "EXTRACT": 2
+        }
+      },
+      {
+        "file": "A2_r3_A5b.json",
+        "arm": "A2",
+        "variant": "⑤b",
+        "round": 3,
+        "ops": {
+          "GEN_ANGLE": 3,
+          "EXTRACT": 3,
+          "VERIFY": 3,
+          "GEN_PLAIN": 1
+        }
+      },
+      {
+        "file": "A2_r3_A5c.json",
+        "arm": "A2",
+        "variant": "⑤c",
+        "round": 3,
+        "ops": {
+          "GEN_PLAIN": 9,
+          "EXTRACT": 1
+        }
+      },
+      {
+        "file": "A3_r1_A5a.json",
+        "arm": "A3",
+        "variant": "⑤a",
+        "round": 1,
+        "ops": {
+          "GEN_PLAIN": 5,
+          "EXTRACT": 4,
+          "SPLIT": 1
+        }
+      },
+      {
+        "file": "A3_r1_A5b.json",
+        "arm": "A3",
+        "variant": "⑤b",
+        "round": 1,
+        "ops": {
+          "GEN_PLAIN": 3,
+          "EXTRACT": 3,
+          "SPLIT": 2,
+          "VERIFY": 2
+        }
+      },
+      {
+        "file": "A3_r1_A5c.json",
+        "arm": "A3",
+        "variant": "⑤c",
+        "round": 1,
+        "ops": {
+          "GEN_PLAIN": 5,
+          "EXTRACT": 2,
+          "VERIFY": 2,
+          "GEN_ANGLE": 1
+        }
+      },
+      {
+        "file": "A3_r2_A5a.json",
+        "arm": "A3",
+        "variant": "⑤a",
+        "round": 2,
+        "ops": {
+          "GEN_ANGLE": 1,
+          "GEN_PLAIN": 7,
+          "EXTRACT": 1,
+          "SPLIT": 1
+        }
+      },
+      {
+        "file": "A3_r2_A5b.json",
+        "arm": "A3",
+        "variant": "⑤b",
+        "round": 2,
+        "ops": {
+          "GEN_ANGLE": 3,
+          "EXTRACT": 1,
+          "VERIFY": 3,
+          "GEN_PLAIN": 2,
+          "SPLIT": 1
+        }
+      },
+      {
+        "file": "A3_r2_A5c.json",
+        "arm": "A3",
+        "variant": "⑤c",
+        "round": 2,
+        "ops": {
+          "GEN_ANGLE": 1,
+          "GEN_PLAIN": 6,
+          "EXTRACT": 1,
+          "VERIFY": 1,
+          "STOP": 1
+        }
+      },
+      {
+        "file": "A3_r3_A5a.json",
+        "arm": "A3",
+        "variant": "⑤a",
+        "round": 3,
+        "ops": {
+          "GEN_PLAIN": 8,
+          "GEN_ANGLE": 2
+        }
+      },
+      {
+        "file": "A3_r3_A5b.json",
+        "arm": "A3",
+        "variant": "⑤b",
+        "round": 3,
+        "ops": {
+          "GEN_ANGLE": 2,
+          "EXTRACT": 4,
+          "GEN_PLAIN": 1,
+          "SPLIT": 2,
+          "VERIFY": 1
+        }
+      },
+      {
+        "file": "A3_r3_A5c.json",
+        "arm": "A3",
+        "variant": "⑤c",
+        "round": 3,
+        "ops": {
+          "GEN_PLAIN": 8,
+          "GEN_ANGLE": 2
+        }
+      },
+      {
+        "file": "A4_r1_A5a.json",
+        "arm": "A4",
+        "variant": "⑤a",
+        "round": 1,
+        "ops": {
+          "GEN_PLAIN": 4,
+          "GEN_ANGLE": 4,
+          "EXTRACT": 1,
+          "SPLIT": 1
+        }
+      },
+      {
+        "file": "A4_r1_A5b.json",
+        "arm": "A4",
+        "variant": "⑤b",
+        "round": 1,
+        "ops": {
+          "GEN_PLAIN": 1,
+          "GEN_ANGLE": 6,
+          "EXTRACT": 2,
+          "VERIFY": 1
+        }
+      },
+      {
+        "file": "A4_r1_A5c.json",
+        "arm": "A4",
+        "variant": "⑤c",
+        "round": 1,
+        "ops": {
+          "GEN_PLAIN": 1,
+          "GEN_ANGLE": 6,
+          "EXTRACT": 2,
+          "VERIFY": 1
+        }
+      },
+      {
+        "file": "A4_r2_A5a.json",
+        "arm": "A4",
+        "variant": "⑤a",
+        "round": 2,
+        "ops": {
+          "GEN_ANGLE": 2,
+          "GEN_PLAIN": 8
+        }
+      },
+      {
+        "file": "A4_r2_A5b.json",
+        "arm": "A4",
+        "variant": "⑤b",
+        "round": 2,
+        "ops": {
+          "GEN_ANGLE": 1,
+          "EXTRACT": 2,
+          "VERIFY": 1,
+          "STOP": 1
+        }
+      },
+      {
+        "file": "A4_r2_A5c.json",
+        "arm": "A4",
+        "variant": "⑤c",
+        "round": 2,
+        "ops": {
+          "GEN_ANGLE": 2,
+          "GEN_PLAIN": 8
+        }
+      },
+      {
+        "file": "A4_r3_A5a.json",
+        "arm": "A4",
+        "variant": "⑤a",
+        "round": 3,
+        "ops": {
+          "GEN_PLAIN": 7,
+          "GEN_ANGLE": 3
+        }
+      },
+      {
+        "file": "A4_r3_A5b.json",
+        "arm": "A4",
+        "variant": "⑤b",
+        "round": 3,
+        "ops": {
+          "GEN_PLAIN": 4,
+          "GEN_ANGLE": 2,
+          "EXTRACT": 2,
+          "VERIFY": 2
+        }
+      },
+      {
+        "file": "A4_r3_A5c.json",
+        "arm": "A4",
+        "variant": "⑤c",
+        "round": 3,
+        "ops": {
+          "GEN_PLAIN": 7,
+          "GEN_ANGLE": 3
+        }
+      }
+    ],
+    "matrix": {
+      "⑤a": {
+        "r1": {
+          "GEN_PLAIN": 22,
+          "EXTRACT": 8,
+          "GEN_ANGLE": 8,
+          "SPLIT": 2
+        },
+        "r2": {
+          "GEN_PLAIN": 32,
+          "GEN_ANGLE": 4,
+          "EXTRACT": 3,
+          "SPLIT": 1
+        },
+        "r3": {
+          "GEN_PLAIN": 31,
+          "GEN_ANGLE": 7,
+          "EXTRACT": 2
+        }
+      },
+      "⑤b": {
+        "r1": {
+          "GEN_ANGLE": 11,
+          "EXTRACT": 12,
+          "SPLIT": 6,
+          "VERIFY": 6,
+          "GEN_PLAIN": 5
+        },
+        "r2": {
+          "GEN_ANGLE": 7,
+          "EXTRACT": 8,
+          "SPLIT": 11,
+          "VERIFY": 6,
+          "GEN_PLAIN": 2,
+          "STOP": 1
+        },
+        "r3": {
+          "GEN_PLAIN": 9,
+          "EXTRACT": 12,
+          "SPLIT": 3,
+          "GEN_ANGLE": 8,
+          "VERIFY": 7,
+          "STOP": 1
+        }
+      },
+      "⑤c": {
+        "r1": {
+          "GEN_PLAIN": 16,
+          "EXTRACT": 6,
+          "SPLIT": 2,
+          "GEN_ANGLE": 11,
+          "VERIFY": 5
+        },
+        "r2": {
+          "GEN_PLAIN": 30,
+          "GEN_ANGLE": 4,
+          "EXTRACT": 3,
+          "VERIFY": 2,
+          "STOP": 1
+        },
+        "r3": {
+          "GEN_PLAIN": 32,
+          "GEN_ANGLE": 7,
+          "EXTRACT": 1
+        }
+      }
+    },
+    "ops_distribution_changes_by_round": true,
+    "ops_total": {
+      "GEN_PLAIN": 179,
+      "EXTRACT": 55,
+      "GEN_ANGLE": 67,
+      "SPLIT": 25,
+      "VERIFY": 26,
+      "STOP": 3
+    },
+    "merge_selected_times": 0,
+    "timestamps": {
+      "sort_fix": "2026-10-20 17:03",
+      "batch": "2026-10-20 19:18",
+      "f6_fix": "2026-10-21 00:04"
+    },
+    "order": {
+      "sort_fix_before_batch": true,
+      "f6_fix_after_batch": true
+    },
+    "f6_before_code": "    f[6] = min(depth / 6.0, 1.0)",
+    "sortkey_after_code": "        # ⚠️ 排序键必须是**分数** x[0]。写成 x[1][0] 会按 op 的**字符串**倒序排，\n        scored.sort(key=lambda x: -x[0])",
+    "sortkey_bug_version_found_elsewhere": true
+  },
+  "fails": []
+}
