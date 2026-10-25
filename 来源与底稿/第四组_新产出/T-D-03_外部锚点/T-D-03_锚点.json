@@ -1,0 +1,434 @@
+{
+  "task_id": "T-D-03",
+  "title": "「role 标签改怎么答、不改知道什么」这条更一般表述的外部锚点",
+  "judgement": "FOUND",
+  "judgement_zh": "找到了（3 条独立一手锚点，全部核过原文）。但「role / incentives 只移动行为 0–2%」那条二手汇总仍为「未找到原始出处」，维持黑名单。",
+  "date": "2026-10-26",
+  "criterion_source": {
+    "file": "papers/01_L1_PrematureConvergence_交差稿.md",
+    "line": 830,
+    "table_no": 292,
+    "verbatim": "T-D-03 | 「role 标签改怎么答、不改知道什么」这条更一般表述的外部锚点 | 原始论文表格（arXiv:2605.29420），必要时回到一手文献 | 找到可逐字引用的原句与数值；找不到就保持「未找到原始出处」，不降级也不引用 | 4.2 中状态与 role 标签的对照 | 0 次调用"
+  },
+  "prereg": {
+    "file": "来源与底稿/第四组_新产出/T-D-03_外部锚点/PREREG_T-D-03.md",
+    "commit": "37a75fd",
+    "rule": "先写后跑；F1 逐字原句 / F2 同源数值 / F3 出处定位 / F4 一手 / F5 不在第四组黑名单 6 条内；五者全过才算找到"
+  },
+  "audit_object": {
+    "repo": "lixvanran/llm-creativity-mechanism-papers",
+    "remote_main_head": "4a7f231c6eff93af312b1b2692f826ed43049a59",
+    "branch": "exp/D-coord-2026-10-26",
+    "paper_D_sha256": "1dce3b95ff546c7c85851a894523b69be6e4c11663443366ab7e4794fce4745a",
+    "group4_argument_sha256": "e7dfeaf7b09fa5f413d99fafbb96300e1cf7f053e582ff9a6737708a61fe65b7"
+  },
+  "anchors": [
+    {
+      "id": "A",
+      "role_in_target": "「不改知道什么」",
+      "title": "Expert Personas Improve LLM Alignment but Damage Accuracy: Bootstrapping Intent-Based Persona Routing with PRISM",
+      "authors": "Z. Hu, M. Rostami, J. Thomason",
+      "arxiv_id": "2603.18507",
+      "version": "v1",
+      "submitted": "2026-03-19",
+      "url_abs": "https://arxiv.org/abs/2603.18507",
+      "url_fulltext": "https://arxiv.org/html/2603.18507v1",
+      "verbatim_verified": true,
+      "quotes": [
+        {
+          "locator": "§3.2a",
+          "trace_line": "raw/raw_2603.18507.txt:21",
+          "text": "For example, the STEM persona does not add new factual knowledge but steers the model toward structured format that better matches LLM-judge's expectations."
+        },
+        {
+          "locator": "§5 结论第一条",
+          "trace_line": "raw/raw_2603.18507.txt:8",
+          "text": "LLM Persona hurts pretrained knowledge retrieval, but helps instruction-alignment tasks."
+        },
+        {
+          "locator": "§5 结论第一条",
+          "trace_line": "raw/raw_2603.18507.txt:9",
+          "text": "For tasks that depend on pretrained knowledge retrieval accuracy (e.g., MMLU), persona prompts should be avoided entirely—they consistently damage performance. Conversely, for alignment-dependent tasks such as format-following generation, safety, and preference satisfaction, an expert persona consistently helps."
+        }
+      ],
+      "values": [
+        {
+          "metric": "MMLU 总体准确率 无 persona vs 专家 persona",
+          "value": "71.6% -> 68.0%",
+          "locator": "§3.1a",
+          "trace_line": "raw/raw_2603.18507.txt:17"
+        },
+        {
+          "metric": "MMLU 长 persona",
+          "value": "66.3%（两者都低于 71.6% 基线）",
+          "locator": "§3.1c",
+          "trace_line": "raw/raw_2603.18507.txt:18"
+        },
+        {
+          "metric": "MT-Bench 依赖预训练知识的类目",
+          "value": "Humanities -0.20; Math -0.10; Coding -0.65",
+          "locator": "§3.1b",
+          "trace_line": "raw/raw_2603.18507.txt:18"
+        },
+        {
+          "metric": "数学题单例 Mistral-7B QID 114",
+          "value": "无 persona 9/10 -> 有 math persona 1.5/10",
+          "locator": "§3.1b",
+          "trace_line": "raw/raw_2603.18507.txt:19"
+        },
+        {
+          "metric": "MT-Bench 靠对齐能力的类目",
+          "value": "Reasoning +0.40; Extraction +0.65; STEM +0.60（5/8 类目改善）",
+          "locator": "§3.2a",
+          "trace_line": "raw/raw_2603.18507.txt:21"
+        },
+        {
+          "metric": "JailbreakBench 拒答率",
+          "value": "+17.7%（53.2% -> 70.9%）",
+          "locator": "§3.2b",
+          "trace_line": "raw/raw_2603.18507.txt:22"
+        }
+      ],
+      "scale": "6 个 LLM（指令微调 + 推理蒸馏两族）、12 个 persona 提示、3 个评测轴（MT-Bench / MMLU / 3 个安全基准）",
+      "f1_verbatim": true,
+      "f2_value": true,
+      "f3_locator": true,
+      "f4_primary": true,
+      "f5_not_blacklisted": true,
+      "caveat": "原文说的是 persona 损害预训练知识检索（不给知识且倒扣分），不是「role 对知识没有影响」。引用时不得写成后者。"
+    },
+    {
+      "id": "B",
+      "role_in_target": "「改怎么答」",
+      "title": "When Does Persona Prompting Actually Help? A Retrieval and Metric Analysis of Expert Role Injection in LLMs",
+      "authors": "S. Xiao, S. Liu, W. Zhou, J. Wu, X. He, Z. Lin, Q. Xie",
+      "arxiv_id": "2605.29420",
+      "version": "v1",
+      "submitted": "2026-05-28",
+      "url_abs": "https://arxiv.org/abs/2605.29420",
+      "url_fulltext": "https://arxiv.org/html/2605.29420v1",
+      "verbatim_verified": true,
+      "quotes": [
+        {
+          "locator": "§IV-A",
+          "trace_line": "raw/raw_2605.29420.txt:43",
+          "text": "Baseline achieves the highest average score (4.390), followed closely by hybrid retrieval (4.382), general expert prompting (4.373), and embedding-only retrieval (4.349)."
+        },
+        {
+          "locator": "§IV-F",
+          "trace_line": "raw/raw_2605.29420.txt:65",
+          "text": "The expertise-depth gains associated with persona prompting appear closely tied to changes in discourse style rather than purely factual improvements."
+        },
+        {
+          "locator": "§V Discussion",
+          "trace_line": "raw/raw_2605.29420.txt:66",
+          "text": "Our results suggest that persona prompting changes LLM behavior more reliably than it improves overall capability."
+        },
+        {
+          "locator": "§VII Conclusion",
+          "trace_line": "raw/raw_2605.29420.txt:75",
+          "text": "Overall, our findings suggest that persona prompting primarily reshapes response characteristics rather than broadly improving capability."
+        }
+      ],
+      "table_II_raw": {
+        "trace_line": "raw/raw_2605.29420.txt:45",
+        "columns": [
+          "Condition",
+          "Acc.",
+          "Depth",
+          "Rel.",
+          "Safe.",
+          "Clar.",
+          "Time",
+          "Avg."
+        ],
+        "rows": [
+          [
+            "Baseline",
+            "4.054",
+            "3.638",
+            "4.749",
+            "4.693",
+            "4.896",
+            "3.952",
+            "4.390"
+          ],
+          [
+            "Embedding",
+            "3.986",
+            "3.896",
+            "4.725",
+            "4.780",
+            "4.514",
+            "3.922",
+            "4.349"
+          ],
+          [
+            "General expert",
+            "4.052",
+            "3.823",
+            "4.728",
+            "4.626",
+            "4.716",
+            "3.957",
+            "4.373"
+          ],
+          [
+            "Hybrid",
+            "4.005",
+            "3.923",
+            "4.780",
+            "4.809",
+            "4.550",
+            "3.911",
+            "4.382"
+          ]
+        ]
+      },
+      "scale": "1,140 道开放式问题 × 38 个专家角色 × 6 个领域；4 个提示条件；生成 GPT-4o mini，判官 Claude Haiku 4.5，五分制六维度",
+      "f1_verbatim": true,
+      "f2_value": true,
+      "f3_locator": true,
+      "f4_primary": true,
+      "f5_not_blacklisted": true,
+      "reconfirm": "④篇 §2.1 已在用的「无角色基线 4.390 最高、角色提示反而降低平均分」在 TABLE II 逐格成立；「4.35 → 4.39 方向反了」这个更正正确。",
+      "caveat": "本条同时与第四组底稿存在一处不一致，见 findings。"
+    },
+    {
+      "id": "C",
+      "role_in_target": "「改的是解释、不是检索」",
+      "title": "The Analyst in the Prompt: Role, Retrieval, and Memory Biases in LLM Financial Analysis",
+      "authors": "A. Asaad, A. Mohamed, Y. Zhang, O. Abdelsalam",
+      "arxiv_id": "2609.03218",
+      "version": "v1",
+      "submitted": "2026-09-02",
+      "url_abs": "https://arxiv.org/abs/2609.03218",
+      "url_fulltext": "https://arxiv.org/html/2609.03218v1",
+      "verbatim_verified": true,
+      "quotes": [
+        {
+          "locator": "Abstract",
+          "trace_line": "raw/raw_2609.03218.txt:4",
+          "text": "We find that most user-context spillover comes from how models interpret the same evidence under different roles, rather than from retrieving different evidence."
+        },
+        {
+          "locator": "§3.5",
+          "trace_line": "raw/raw_2609.03218.txt:25",
+          "text": "Retention is the share of that effect that survives byte-identical retrieval, isolating interpretation of the same evidence."
+        },
+        {
+          "locator": "§4.1",
+          "trace_line": "raw/raw_2609.03218.txt:29",
+          "text": "Across the four matched pairs, the panel retains 69% of the PR effect on average and 68% at the median, with model-level retention ranging from 44-89% (Table 1)."
+        },
+        {
+          "locator": "§4.1",
+          "trace_line": "raw/raw_2609.03218.txt:29",
+          "text": "The dominant source is interpretive drift: models assign different evidence-based scores to the same filing chunks once a role is in scope."
+        },
+        {
+          "locator": "§5 Discussion",
+          "trace_line": "raw/raw_2609.03218.txt:38",
+          "text": "Pinning retrieval removes only a minority of the role effect, so the problem is not primarily that different personas retrieve different evidence. Rather, once a role is in scope, models interpret the same evidence differently."
+        },
+        {
+          "locator": "§6 Conclusion",
+          "trace_line": "raw/raw_2609.03218.txt:44",
+          "text": "Pinning retrieval removes only a small share of the effect: most instability comes from interpreting identical chunks differently, not primarily from retrieving different chunks."
+        }
+      ],
+      "values": [
+        {
+          "metric": "规模",
+          "value": "3,575 份 SEC 10-K/10-Q × 12 个模型（5 家族）× 9 个投资 persona",
+          "locator": "§1 / §3.2 / §3.3"
+        },
+        {
+          "metric": "角色效应在证据钉死后仍保留",
+          "value": "均值 69%、中位 68%、模型级 44-89%",
+          "locator": "§4.1 / Table 1"
+        },
+        {
+          "metric": "检索钉死验证",
+          "value": "NR 跨 persona Jaccard 中位 = 1.000；PR 降到 ≈ 0.66",
+          "locator": "附录 D.3",
+          "trace_line": "raw/raw_2609.03218.txt:519"
+        },
+        {
+          "metric": "跨 persona 判定离散度",
+          "value": "PR 0.594 -> NR 0.443（-25%），n = 3,575",
+          "locator": "附录 D.4 / Figure 7",
+          "trace_line": "raw/raw_2609.03218.txt:521"
+        },
+        {
+          "metric": "ShortSeller 最强方向",
+          "value": "12 模型中 8 个保留 >= 74%，面板中位 89.1%",
+          "locator": "§4.1"
+        },
+        {
+          "metric": "换框架 role -> user profile",
+          "value": "NR→MEM 收缩 51%-87%，面板中位 73%",
+          "locator": "§4.2"
+        },
+        {
+          "metric": "残留泄漏",
+          "value": "均值 0.05-0.37（12 个模型全部 < 0.5）",
+          "locator": "§4.3"
+        },
+        {
+          "metric": "证据预算敏感性",
+          "value": "k ∈ {8,16,32} 时保留率仍 0.87-0.98",
+          "locator": "Limitations"
+        },
+        {
+          "metric": "实体掩蔽对照",
+          "value": "保留率 >= 97%",
+          "locator": "Limitations"
+        }
+      ],
+      "f1_verbatim": true,
+      "f2_value": true,
+      "f3_locator": true,
+      "f4_primary": true,
+      "f5_not_blacklisted": true,
+      "caveat": "原文说 role 会把 user-context 带进本应不变的中性证据分（spillover）。它支撑的是「role 走解释通道而非检索通道」，不能被引用成「role 不改变结论」。"
+    }
+  ],
+  "anchor_roles_note": "三条分工：A 支撑「不改知道什么」，B 支撑「改怎么答」，C 支撑「改的是解释不是检索」。任何一条单独都不足以支撑 ④篇 §2.1 那一整行。",
+  "not_found": [
+    {
+      "item": "「role / incentives 只移动行为 0–2%」（二手汇总：37 prompt 变体 × 10,000 trials）",
+      "result": "未找到原始出处",
+      "status": "维持黑名单（第 4 组黑名单 6 条第 1 条），本组仍不可引用",
+      "note": "本任务不以任何方式解禁该条；找到的是另外三条不走黑名单的一手锚点。"
+    }
+  ],
+  "findings_requiring_owner_ruling": [
+    {
+      "id": "F-1",
+      "what": "第四组底稿关于 clarity 降幅的三个数与 2605.29420 原表不符",
+      "repo_claim": "「clarity −0.35」复现不出（最大降幅 −0.179，泛专家条件反而 +0.023）",
+      "repo_location": "来源与底稿/第四组/第四组交付/第四组论证.md:1023（sha256 e7dfeaf7…）",
+      "measured_from_table_II": "相对基线 4.896：Embedding 4.514 = -0.382；General expert 4.716 = -0.180；Hybrid 4.550 = -0.346",
+      "reading": "最大降幅应为 -0.382（Embedding）；泛专家应为 -0.180；且「clarity -0.35」本身可复现（Hybrid -0.346）。同句其余部分（「4.35→4.39 方向反了」「depth↑/clarity↓ 方向可信」）正确。",
+      "action": "本轮只报告「与原表不符」，不推翻第四组结论；请 owner 提供第四组当时口径/底稿后裁决。",
+      "not_changed": "papers/ 与底稿均未改动。"
+    }
+  ],
+  "sources_checked": [
+    {
+      "id": "arXiv:2603.18507v1",
+      "reachable": true,
+      "bytes": 325560,
+      "counts": true,
+      "reason": "作者 arXiv 全文，逐字原句 + 数值齐备"
+    },
+    {
+      "id": "arXiv:2605.29420v1",
+      "reachable": true,
+      "bytes": 134102,
+      "counts": true,
+      "reason": "作者 arXiv 全文，TABLE II 逐格核对"
+    },
+    {
+      "id": "arXiv:2609.03218v1",
+      "reachable": true,
+      "bytes": 599957,
+      "counts": true,
+      "reason": "作者 arXiv 全文，通道分解 + 附录 D.3"
+    },
+    {
+      "id": "arXiv:2602.20408v1",
+      "reachable": true,
+      "bytes": 678776,
+      "counts": false,
+      "reason": "HTML 已抓到但未抽取/未核验；仅凭他人转述不能当原句（F1/F4 不成立）⇒ 不引用"
+    },
+    {
+      "id": "arXiv:2311.10054",
+      "reachable": null,
+      "counts": false,
+      "reason": "抓取被停止令打断，未拿到全文 ⇒ 同行评议的最强候选，未核"
+    },
+    {
+      "id": "matthewaberham.com 博客",
+      "reachable": true,
+      "counts": false,
+      "reason": "二手转述（F4 不成立）"
+    },
+    {
+      "id": "ninakolari.com 博客",
+      "reachable": true,
+      "counts": false,
+      "reason": "二手转述（F4 不成立）"
+    },
+    {
+      "id": "modelmomentum.com 博客",
+      "reachable": true,
+      "counts": false,
+      "reason": "二手转述（F4 不成立）"
+    },
+    {
+      "id": "askrally.com 解读页",
+      "reachable": true,
+      "counts": false,
+      "reason": "二手转述（F4 不成立）"
+    },
+    {
+      "id": "arXiv:2507.16076 (Lutz et al.)",
+      "reachable": false,
+      "counts": false,
+      "reason": "仅在 2605.29420 参考文献表见到条目，属线索未抓取"
+    },
+    {
+      "id": "Principled personas (EMNLP 2025)",
+      "reachable": false,
+      "counts": false,
+      "reason": "仅在参考文献表见到条目，属线索未抓取"
+    }
+  ],
+  "sandbox_reachability": {
+    "git_fetch": "FAIL gnutls_handshake() failed",
+    "export.arxiv.org_api": "FAIL SSL_ERROR_SYSCALL",
+    "arxiv.org_abs": "OK 200",
+    "arxiv.org_html": "OK 200",
+    "google.com": "FAIL SSL_ERROR_SYSCALL",
+    "web_search_tool": "OK",
+    "github_api_with_header": "OK"
+  },
+  "stopped_at": {
+    "when": "2026-10-26 收到停止令（S4 扩检进行中）",
+    "doing": "抓取 arXiv:2311.10054（Zheng et al., Findings of EMNLP 2024）的 HTML 全文",
+    "interrupted": true,
+    "landed": [
+      "PREREG_T-D-03.md",
+      "T-D-03_锚点_原句与数值.md",
+      "T-D-03_查证留痕.md",
+      "T-D-03_锚点.json",
+      "raw/ 三份全文抽取 + 行号索引 + sha256"
+    ],
+    "remaining": [
+      "arXiv:2311.10054 全文核验（同行评议，最强第四锚点）",
+      "arXiv:2602.20408 抽取 + 过筛",
+      "F-1 交 owner 裁决"
+    ]
+  },
+  "artifacts": {
+    "dir": "来源与底稿/第四组_新产出/T-D-03_外部锚点/",
+    "files": [
+      "PREREG_T-D-03.md",
+      "T-D-03_锚点_原句与数值.md",
+      "T-D-03_查证留痕.md",
+      "T-D-03_锚点.json",
+      "raw/raw_2603.18507.txt",
+      "raw/raw_2605.29420.txt",
+      "raw/raw_2609.03218.txt",
+      "raw/line_index.json",
+      "raw/SHA256SUMS.txt"
+    ],
+    "body_untouched": [
+      "papers/04_D_StateMachineIsNotYetAPrompt_交差稿.md",
+      "papers/01_L1_PrematureConvergence_交差稿.md"
+    ]
+  }
+}
