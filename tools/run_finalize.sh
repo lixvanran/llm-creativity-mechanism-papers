@@ -115,6 +115,8 @@ PYEOF
 hr "⑧b 合订本（★ 生成 + 「没改一个字」判据）"
 python3 tools/build_anthology.py 2>&1 | tail -7
 python3 tools/check_anthology.py 2>&1 | tail -3
+# ★ 合订本也是【交付面 md】⇒ ★ 一样要 docx（★ 否则 check_docx 报「缺 docx」、★ 且用户拿不到 Word 版）
+bash tools/build_docx.sh 四篇正文合订本_2026-10-25.md 2>&1 | tail -3
 
 hr "⑧c 新增读数回源核验（★ v3.1 的「核不到 ⑧」★ 本轮补上）"
 python3 tools/verify_new_readings.py 2>&1 | tail -3
