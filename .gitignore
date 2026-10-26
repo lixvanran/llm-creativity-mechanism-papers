@@ -9,3 +9,6 @@ __pycache__/
 
 # 交付包本体（★ 体积大、且内容集合由 git ls-files 定义 ⇒ 绝不能进受管集）
 dist/
+
+# ★ L0 Agent 的跑批产物（★ 原始 JSONL 不进仓、★ 只留代码与说明 ★）
+l0/runs/
