@@ -37,6 +37,24 @@ def tracked_files():
     return [p.decode("utf-8") for p in out.split(b"\0") if p]
 
 
+def untracked_not_ignored():
+    """★ 未暂存、但也不被 ignore 的文件 ★
+
+    ★★ 为什么必须查这个（★ 本轮实测抓到的真 bug ★★）：
+    内容集合 = `git ls-files` ⇒ **只含【已跟踪】的文件** ⇒
+    一个新建但忘了 `git add` 的文件**不会进清单** ⇒
+    `sha256sum -c` 对它**根本不会报错** ⇒ **漏文件是静默的** ★
+    ⇒ 违反「失败路径不许静默归零」的同族纪律 ⇒
+    ★ 这里让它【响亮】：未暂存的文件一律报出来、--check 判非 0 ★
+    """
+    out = subprocess.run(
+        ["git", "-C", REPO, "-c", "core.quotePath=false", "ls-files", "-z",
+         "--others", "--exclude-standard"],
+        capture_output=True, check=True,
+    ).stdout
+    return [p.decode("utf-8") for p in out.split(b"\0") if p]
+
+
 def sha256_of(path):
     h = hashlib.sha256()
     with open(path, "rb") as f:
@@ -62,6 +80,7 @@ def build():
 def main():
     check_only = "--check" in sys.argv
     rows, missing = build()
+    extra = untracked_not_ignored()
 
     if missing:
         print("❌ git 跟踪但工作区缺失（%d 个）：" % len(missing), file=sys.stderr)
@@ -72,6 +91,17 @@ def main():
     lines = ["%s  %s" % (h, rel) for h, rel in rows]
     body = "\n".join(lines) + "\n"
 
+    def report_extra():
+        if not extra:
+            return
+        print("⚠️  有 %d 个【未暂存】的文件不在清单里" % len(extra), file=sys.stderr)
+        print("   ★ 内容集合 = git 跟踪的文件 ⇒ 它们还没 git add ⇒ 清单漏了它们",
+              file=sys.stderr)
+        for e in extra[:30]:
+            print("   ★ %s" % e, file=sys.stderr)
+        if len(extra) > 30:
+            print("   ★ … 还有 %d 个" % (len(extra) - 30), file=sys.stderr)
+
     if check_only:
         try:
             with open(MANIFEST, encoding="utf-8") as f:
@@ -79,17 +109,24 @@ def main():
         except FileNotFoundError:
             print("❌ SHA256SUMS.txt 不存在", file=sys.stderr)
             return 1
-        if cur == body:
-            print("✅ 清单与工作区一致（%d 个受管文件）" % len(rows))
-            return 0
-        print("❌ 清单过期：与工作区不一致（清单 %d 行 / 现算 %d 行）"
-              % (len(cur.splitlines()), len(rows)), file=sys.stderr)
-        return 1
+        if cur != body:
+            print("❌ 清单过期：与工作区不一致（清单 %d 行 / 现算 %d 行）"
+                  % (len(cur.splitlines()), len(rows)), file=sys.stderr)
+            report_extra()
+            return 1
+        if extra:
+            print("❌ 清单与已跟踪文件一致，★ 但有未暂存文件没进清单 ⇒ 漏文件会静默",
+                  file=sys.stderr)
+            report_extra()
+            return 1
+        print("✅ 清单与工作区一致（%d 个受管文件、★ 无未暂存遗漏 ★）" % len(rows))
+        return 0
 
     with open(MANIFEST, "w", encoding="utf-8") as f:
         f.write(body)
     print("✔ SHA256SUMS.txt 已重生成：%d 个受管文件（%d 字节）"
           % (len(rows), len(body.encode("utf-8"))))
+    report_extra()
     return 0
 
 
