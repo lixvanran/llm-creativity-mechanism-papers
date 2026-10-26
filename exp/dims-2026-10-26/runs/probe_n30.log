@@ -1,0 +1,31 @@
+  [ 1/30] ok=True chars= 2873 39.4s
+  [ 2/30] ok=True chars= 2385 56.3s
+  [ 3/30] ok=True chars= 2912 43.5s
+  [ 4/30] ok=True chars= 3328 33.3s
+  [ 5/30] ok=True chars= 2486 43.3s
+  [ 6/30] ok=True chars= 2458 34.1s
+  [ 7/30] ok=True chars= 2450 72.1s
+  [ 8/30] ok=True chars= 2391 40.9s
+  [ 9/30] ok=True chars= 1958 42.6s
+  [10/30] ok=True chars= 2876 62.4s
+  [11/30] ok=True chars= 2823 56.8s
+  [12/30] ok=True chars= 2352 30.6s
+  [13/30] ok=True chars= 2827 48.8s
+  [14/30] ok=True chars= 2362 50.4s
+  [15/30] ok=True chars= 2268 58.7s
+  [16/30] ok=True chars= 2511 38.9s
+  [17/30] ok=True chars= 2372 42.1s
+  [18/30] ok=True chars= 2430 40.0s
+  [19/30] ok=True chars= 2477 40.0s
+  [20/30] ok=True chars= 2739 67.2s
+  [21/30] ok=True chars= 2351 51.2s
+  [22/30] ok=True chars= 2447 59.6s
+  [23/30] ok=True chars= 2639 29.6s
+  [24/30] ok=True chars= 2991 47.2s
+  [25/30] ok=True chars= 3426 34.7s
+  [26/30] ok=True chars= 2128 44.2s
+  [27/30] ok=True chars= 2115 35.5s
+  [28/30] ok=True chars= 3711 44.3s
+  [29/30] ok=True chars= 3365 65.6s
+  [30/30] ok=True chars= 1650 41.7s
+通道统计: {"prompt_tokens": 6420, "completion_tokens": 115756, "reasoning_tokens": 74362} 失败: 0
