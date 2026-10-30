@@ -43,7 +43,7 @@ class LLM:
     """
 
     def __init__(self, model=MODEL, temperature=0.7, max_tokens=6000, retries=2,
-                 reasoning_effort="medium"):
+                 reasoning_effort="medium", thinking_disabled=False):
         self.key = os.environ.get("MINIMAX_SUBSCRIPTION_KEY", "")
         if not self.key:
             raise RuntimeError("MINIMAX_SUBSCRIPTION_KEY 不在 env 里（★ 不落盘 ★）")
@@ -52,6 +52,7 @@ class LLM:
         self.max_tokens = max_tokens
         self.retries = retries
         self.reasoning_effort = reasoning_effort
+        self.thinking_disabled = thinking_disabled
         self.calls = 0
         self.failures = 0
         self.usage = {"prompt_tokens": 0, "completion_tokens": 0, "reasoning_tokens": 0}
@@ -72,6 +73,10 @@ class LLM:
             # ★ 显式固定档位：★ 省略 = 默认 max = 吃光 token ★
             "reasoning_effort": reasoning_effort or self.reasoning_effort,
         }
+        # ★★ 关思考：★ M2.5/M3 的推理 token 会【随机暴涨】⇒ 正文被截断 ★★
+        # （★ 实测：thinking disabled ⇒ reasoning=0、finish_reason=stop、12s/次 ★）
+        if self.thinking_disabled:
+            body["thinking"] = {"type": "disabled"}
         last = ""
         for attempt in range(self.retries + 1):
             self.calls += 1
