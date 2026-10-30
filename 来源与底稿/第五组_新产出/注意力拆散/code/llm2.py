@@ -12,6 +12,7 @@
 import json
 import os
 import re
+import threading
 import time
 import urllib.error
 import urllib.request
@@ -39,7 +40,7 @@ class LLM2:
     """★ 通道参数必须【显式固定】★（★ 省略 reasoning_effort ⇒ 默认 max ⇒ 思考吃光预算 ★）"""
 
     def __init__(self, model="MiniMax-M3", temperature=1.0, max_tokens=12000,
-                 retries=2, timeout=60):
+                 retries=2, timeout=60, deadline=75):
         self.key = os.environ.get("MINIMAX_SUBSCRIPTION_KEY", "")
         if not self.key:
             raise RuntimeError("MINIMAX_SUBSCRIPTION_KEY 不在 env 里（★ 不落盘 ★）")
@@ -48,6 +49,7 @@ class LLM2:
         self.max_tokens = max_tokens
         self.retries = retries
         self.timeout = timeout
+        self.deadline = deadline
         self.calls = 0
         self.failures = 0
         self.usage = {"prompt_tokens": 0, "completion_tokens": 0, "reasoning_tokens": 0}
@@ -66,6 +68,36 @@ class LLM2:
         }
         return body
 
+    def _http(self, body, deadline_s):
+        """★ 硬墙钟 deadline（★ 必需：★ socket timeout 挡不住「慢滴响应」 ★）
+
+        ★ 实测（2026-10-30）：★ 服务端半关闭后仍在滴水（socket 进 CLOSE_WAIT）
+        ⇒ ★ socket timeout 被一次次重置 ⇒ ★ 调用永久挂住 ⇒ ★ 必须有墙钟上限 ★
+        """
+        out = {}
+
+        def worker():
+            try:
+                req = urllib.request.Request(
+                    ENDPOINT + "/chat/completions",
+                    data=json.dumps(body).encode("utf-8"),
+                    headers={"Authorization": "Bearer " + self.key,
+                             "Content-Type": "application/json"},
+                )
+                with urllib.request.urlopen(req, timeout=self.timeout) as r:
+                    out["data"] = r.read()
+            except Exception as e:                # noqa: BLE001
+                out["err"] = e
+
+        t = threading.Thread(target=worker, daemon=True)
+        t.start()
+        t.join(deadline_s)
+        if t.is_alive():
+            raise TimeoutError("hard_deadline_%ds_exceeded" % deadline_s)
+        if "err" in out:
+            raise out["err"]
+        return out["data"]
+
     def chat(self, prompt, system=None, model=None, max_tokens=None, temperature=None):
         """★ 返回 (text, ok) —— ★ 失败不抛（★ 但计入 failures ★）；额度上限抛 QuotaExhausted ★"""
         msgs = []
@@ -79,14 +111,7 @@ class LLM2:
         for attempt in range(self.retries + 1):
             self.calls += 1
             try:
-                req = urllib.request.Request(
-                    ENDPOINT + "/chat/completions",
-                    data=json.dumps(body).encode("utf-8"),
-                    headers={"Authorization": "Bearer " + self.key,
-                             "Content-Type": "application/json"},
-                )
-                with urllib.request.urlopen(req, timeout=self.timeout) as r:
-                    d = json.loads(r.read().decode("utf-8"))
+                d = json.loads(self._http(body, self.deadline).decode("utf-8"))
                 u = d.get("usage") or {}
                 self.usage["prompt_tokens"] += u.get("prompt_tokens", 0) or 0
                 self.usage["completion_tokens"] += u.get("completion_tokens", 0) or 0
