@@ -1,0 +1,24 @@
+{
+  "question": "湖北物理类620分，想学AI，怎么选择大学？",
+  "arm": "shared_frame",
+  "reps": 20,
+  "routes": 6,
+  "model": "MiniMax-M3",
+  "temperature": 1.0,
+  "max_tokens": 12000,
+  "reasoning_effort": "medium",
+  "thinking_disabled": true,
+  "rows": 137,
+  "ok_rows": 102,
+  "fail_rows": 18,
+  "reps_with_full_N_answers": 17,
+  "reps_total": 17,
+  "calls": 9,
+  "failures": 9,
+  "usage": {
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "reasoning_tokens": 0
+  },
+  "price_table_date": "2026-10-30（MiniMax 订阅侧 $0 ⇒ 成本轴退化为 token 轴）"
+}

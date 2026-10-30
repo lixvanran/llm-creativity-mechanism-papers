@@ -22,6 +22,7 @@ import glob
 import json
 import os
 import re
+import random
 import statistics
 import sys
 
@@ -36,7 +37,24 @@ def load(path):
         line = line.strip()
         if line:
             rows.append(json.loads(line))
-    return rows
+    return dedupe(rows)
+
+
+def dedupe(rows):
+    """★ 同 (rep, route) 保留最后一行（★ 续跑会重跑半截 rep 的路 ⇒ 会出现重复行 ★）"""
+    by, markers, plain = {}, [], []
+    for i, r in enumerate(rows):
+        if r.get("marker") == "rep_done":
+            markers.append(r)
+            continue
+        if "rep" not in r:
+            plain.append(r)          # ★ 无 rep 字段的行（★ 旧地板）★ 原样保留、★ 不合并 ★
+            continue
+        by[(r.get("rep"), r.get("route"))] = r
+    out = list(by.values()) + plain + markers
+    out.sort(key=lambda r: (r.get("rep") if r.get("rep") is not None else -1,
+                            r.get("route") if r.get("route") is not None else -1))
+    return out
 
 
 def coverage_table(ok_rows, out=sys.stdout):
@@ -102,7 +120,7 @@ def main():
     all_rep = {}
     for path in args:
         rows = load(path)
-        ok = [r for r in rows if r.get("ok")]
+        ok = [r for r in rows if r.get("ok") and not r.get("marker")]
         bad = len(rows) - len(ok)
         arm = os.path.basename(path).replace(".jsonl", "")
         print("\n═══ 臂：%s ═══" % arm)
@@ -127,6 +145,48 @@ def main():
               % (sum(unions) / len(unions), statistics.median(unions),
                  min(unions), max(unions)))
         print("  ★ 含跨域分支的 rep: %d/%d" % (sum(r["offdomain"] for r in rr), len(rr)))
+
+    # ---- 逐维配对比较（★ rep 级聚类 bootstrap：★ 同一 rep 的 6 份答案不独立 ★）----
+    if len(all_rep) >= 2:
+        print("\n═══ 逐维配对比较（★ rep 级聚类 bootstrap 95% CI，★ 10000 次重抽 ★）═══")
+        names = list(all_rep)
+        # 每 rep 的逐维覆盖（该 rep 内命中的答案比例）
+        repdim = {}
+        for arm in names:
+            rows = load([p for p in args if arm in p][0])
+            ok = [r for r in rows if r.get("ok") and r.get("text")]
+            by = {}
+            for r in ok:
+                by.setdefault(r.get("rep"), []).append(r)
+            for rep, rs in by.items():
+                for c, _n, _d, _k in dimtax.CANDIDATE_DIMS:
+                    n_hit = sum(1 for r in rs if c in dimtax.mentioned(r["text"]))
+                    repdim.setdefault(arm, {}).setdefault(rep, {})[c] = n_hit / len(rs)
+        rng = random.Random(20261030)
+        for i in range(len(names)):
+            for j in range(i + 1, len(names)):
+                A, B = names[i], names[j]
+                common = sorted(set(repdim[A]) & set(repdim[B]))
+                if not common:
+                    continue
+                print("  ── %s − %s（n=%d rep）" % (A, B, len(common)))
+                print("     %-5s %-28s %-28s %-8s %s"
+                      % ("维度", "A 覆盖率", "B 覆盖率", "Δ(中位)", "95% CI（rep 聚类 bootstrap）"))
+                for c, nm, _d, _k in dimtax.CANDIDATE_DIMS:
+                    da = [repdim[A][r][c] for r in common]
+                    db = [repdim[B][r][c] for r in common]
+                    diff = [x - y for x, y in zip(da, db)]
+                    med = statistics.median(diff)
+                    bs = []
+                    for _ in range(10000):
+                        idx = [rng.randrange(len(diff)) for _ in range(len(diff))]
+                        bs.append(statistics.median([diff[k] for k in idx]))
+                    bs.sort()
+                    lo, hi = bs[int(0.025 * len(bs))], bs[int(0.975 * len(bs))]
+                    star = "★" if (lo > 0 or hi < 0) else " "
+                    print("     %-5s %-28s %-28s %+8.3f [%+.3f, %+.3f] %s"
+                          % (c, "%.1f%%" % (100 * sum(da) / len(da)),
+                             "%.1f%%" % (100 * sum(db) / len(db)), med, lo, hi, star))
 
     # ---- 臂间配对比较（★ 判决线 = 2 × θ₀，★ θ₀ 来自同臂同题不同 rep ★）----
     if len(all_rep) >= 2:

@@ -109,7 +109,12 @@ class LLM:
             except Exception as e:                # noqa: BLE001
                 last = "%s: %s" % (type(e).__name__, str(e)[:80])
                 self._fail(last, attempt)
-                time.sleep(1.5 * (attempt + 1))
+                # ★ 429 = 速率限制（★ 实测 HTTP 429 Too Many Requests ★）⇒ 短退避扛不住
+                # ★ ⇒ 长退避；非 429 仍是短退避（★ 不浪费墙钟 ★）
+                if "429" in str(e):
+                    time.sleep(10 * (attempt + 1))
+                else:
+                    time.sleep(1.5 * (attempt + 1))
         return "", False
 
     def _fail(self, reason, attempt):
