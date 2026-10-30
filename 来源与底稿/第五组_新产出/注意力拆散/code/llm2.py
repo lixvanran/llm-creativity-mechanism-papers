@@ -39,7 +39,7 @@ class LLM2:
     """★ 通道参数必须【显式固定】★（★ 省略 reasoning_effort ⇒ 默认 max ⇒ 思考吃光预算 ★）"""
 
     def __init__(self, model="MiniMax-M3", temperature=1.0, max_tokens=12000,
-                 retries=2, timeout=180):
+                 retries=2, timeout=60):
         self.key = os.environ.get("MINIMAX_SUBSCRIPTION_KEY", "")
         if not self.key:
             raise RuntimeError("MINIMAX_SUBSCRIPTION_KEY 不在 env 里（★ 不落盘 ★）")
