@@ -1,0 +1,106 @@
+{
+ "run_id": "sc2-v1",
+ "dev_sha": "fec9a415062483bf",
+ "devset": "/workspace/work/devset/devset.json",
+ "reps": 3,
+ "arms": [
+  "B0",
+  "S1",
+  "S2",
+  "S3",
+  "S4"
+ ],
+ "n_tasks": 9,
+ "n_routes": 4,
+ "views": [
+  "事实与参数核对",
+  "数值与量级计算",
+  "条件、例外与时序",
+  "主体资格与适用范围"
+ ],
+ "models_s4": [
+  "MiniMax-M3",
+  "MiniMax-M2.7",
+  "MiniMax-M2.5-highspeed",
+  "MiniMax-M1"
+ ],
+ "prompt_p0_sha": "92639f5ad7c68597",
+ "channel": {
+  "model": "MiniMax-M3",
+  "thinking": "disabled",
+  "max_tokens": 12000,
+  "temperature": 1.0
+ },
+ "stats": {
+  "calls": 219,
+  "failures": 10,
+  "usage": {
+   "prompt_tokens": 65438,
+   "completion_tokens": 150961,
+   "reasoning_tokens": 110040
+  },
+  "failure_log": [
+   {
+    "call_no": 4,
+    "attempt": 0,
+    "model": "MiniMax-M3",
+    "reason": "TimeoutError: The read operation timed out"
+   },
+   {
+    "call_no": 5,
+    "attempt": 1,
+    "model": "MiniMax-M3",
+    "reason": "TimeoutError: The read operation timed out"
+   },
+   {
+    "call_no": 50,
+    "attempt": 0,
+    "model": "MiniMax-M2.5-highspeed",
+    "reason": "TimeoutError: The read operation timed out"
+   },
+   {
+    "call_no": 51,
+    "attempt": 1,
+    "model": "MiniMax-M2.5-highspeed",
+    "reason": "TimeoutError: The read operation timed out"
+   },
+   {
+    "call_no": 65,
+    "attempt": 0,
+    "model": "MiniMax-M3",
+    "reason": "TimeoutError: The read operation timed out"
+   },
+   {
+    "call_no": 135,
+    "attempt": 0,
+    "model": "MiniMax-M3",
+    "reason": "TimeoutError: The read operation timed out"
+   },
+   {
+    "call_no": 156,
+    "attempt": 0,
+    "model": "MiniMax-M3",
+    "reason": "TimeoutError: The read operation timed out"
+   },
+   {
+    "call_no": 157,
+    "attempt": 1,
+    "model": "MiniMax-M3",
+    "reason": "TimeoutError: The read operation timed out"
+   },
+   {
+    "call_no": 158,
+    "attempt": 2,
+    "model": "MiniMax-M3",
+    "reason": "TimeoutError: The read operation timed out"
+   },
+   {
+    "call_no": 174,
+    "attempt": 0,
+    "model": "MiniMax-M3",
+    "reason": "TimeoutError: The read operation timed out"
+   }
+  ]
+ },
+ "ts": 1793374659.5545194
+}

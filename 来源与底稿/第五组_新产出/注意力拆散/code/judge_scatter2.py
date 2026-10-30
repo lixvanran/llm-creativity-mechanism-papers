@@ -90,7 +90,8 @@ def main():
                     rows.append(json.loads(line))
                 except Exception:                # noqa: BLE001
                     pass
-    seen = {(r["arm"], r["task_id"], r["rep"], r["route"]): r for r in rows}
+    # ★ 只把【判成功】的行算作已判 ⇒ ★ 判失败的行下次会被重判（★ 否则失败被固化 ★）
+    seen = {(r["arm"], r["task_id"], r["rep"], r["route"]): r for r in rows if r.get("ok")}
     rows = list(seen.values())
 
     answers = []

@@ -1,0 +1,2544 @@
+{
+ "run_id": "sc2-v1",
+ "arms": [
+  "B0",
+  "S1",
+  "S2",
+  "S3",
+  "S4"
+ ],
+ "n_units": 27,
+ "n_answers": 459,
+ "n_judged": 290,
+ "call_failures": {
+  "S3/call_failed_or_truncated": 2
+ },
+ "judge_failures": 0,
+ "judge_parsefail_mean": 0.0,
+ "judge_fail_by_arm": {},
+ "judge_n_by_arm": {
+  "B0": 22,
+  "S1": 87,
+  "S2": 57,
+  "S3": 60,
+  "S4": 64
+ },
+ "excluded_units": [
+  "S1|D01|2",
+  "S2|D01|2",
+  "S2|D01|3",
+  "S3|D01|3",
+  "S4|D01|3",
+  "S2|D02|1",
+  "S3|D02|1",
+  "S2|D02|2",
+  "S2|D02|3",
+  "S3|D02|3",
+  "S4|D02|3",
+  "S4|D03|1",
+  "B0|D03|2",
+  "S1|D03|2",
+  "S2|D03|2",
+  "S3|D03|2",
+  "S4|D03|2",
+  "B0|D03|3",
+  "S1|D03|3",
+  "S2|D03|3",
+  "S3|D03|3",
+  "S4|D03|3",
+  "S3|D04|1",
+  "B0|D04|2",
+  "S1|D04|2",
+  "S1|D04|3",
+  "S2|D04|3",
+  "S3|D04|3",
+  "S4|D04|3",
+  "S1|D05|2",
+  "S2|D05|2",
+  "S2|D05|3",
+  "S3|D05|3",
+  "S4|D05|3",
+  "S3|D06|1",
+  "S4|D06|1",
+  "S2|D06|2",
+  "S3|D06|2",
+  "B0|D06|3",
+  "S1|D06|3",
+  "S2|D06|3",
+  "S3|D06|3",
+  "S4|D06|3",
+  "S1|D07|1",
+  "S4|D07|1",
+  "S1|D07|2",
+  "B0|D07|3",
+  "S1|D07|3",
+  "S2|D07|3",
+  "S3|D07|3",
+  "S4|D07|3",
+  "S2|D08|2",
+  "S3|D08|2",
+  "S4|D08|2",
+  "S1|D08|3",
+  "S2|D08|3",
+  "S3|D08|3",
+  "S4|D08|3",
+  "S1|D09|1",
+  "S2|D09|1",
+  "S3|D09|1",
+  "S1|D09|2",
+  "S2|D09|2",
+  "S3|D09|2",
+  "S4|D09|2",
+  "S1|D09|3",
+  "S2|D09|3",
+  "S3|D09|3",
+  "S4|D09|3"
+ ],
+ "comparisons": [
+  {
+   "A": "B0",
+   "B": "S1",
+   "metric": "miss",
+   "n": 13,
+   "med": 0.09090909090909083,
+   "ci": [
+    0.0,
+    0.36363636363636365
+   ],
+   "theta_a": 0.19509142822220302,
+   "theta_b": 0.07454569192907919,
+   "line": 0.39018285644440603,
+   "verdict": "不可分辨",
+   "same_sign": 9,
+   "mean_a": 0.5914918414918415,
+   "mean_b": 0.38986013986013984,
+   "pred": null
+  },
+  {
+   "A": "B0",
+   "B": "S1",
+   "metric": "single",
+   "n": 13,
+   "med": 3.5,
+   "ci": [
+    1.5,
+    4.25
+   ],
+   "theta_a": 2.266767154635282,
+   "theta_b": 0.2236370757872376,
+   "line": 4.533534309270564,
+   "verdict": "不可分辨",
+   "same_sign": 12,
+   "mean_a": 4.769230769230769,
+   "mean_b": 1.7884615384615385,
+   "pred": null
+  },
+  {
+   "A": "B0",
+   "B": "S1",
+   "metric": "ccov",
+   "n": 13,
+   "med": 0,
+   "ci": [
+    -1,
+    0
+   ],
+   "theta_a": 0.8461579836728679,
+   "theta_b": 1.0859404526338756,
+   "line": 2.1718809052677512,
+   "verdict": "不可分辨",
+   "same_sign": 4,
+   "mean_a": 1,
+   "mean_b": 1.2307692307692308,
+   "pred": null
+  },
+  {
+   "A": "B0",
+   "B": "S1",
+   "metric": "kchit",
+   "n": 13,
+   "med": 0.0,
+   "ci": [
+    0.0,
+    0.0
+   ],
+   "theta_a": 0.2714851131584689,
+   "theta_b": 0.2294467984813328,
+   "line": 0.5429702263169378,
+   "verdict": "不可分辨",
+   "same_sign": 2,
+   "mean_a": 0.24358974358974358,
+   "mean_b": 0.2692307692307692,
+   "pred": null
+  },
+  {
+   "A": "B0",
+   "B": "S1",
+   "metric": "contrad",
+   "n": 13,
+   "med": -0.05434782608695654,
+   "ci": [
+    -0.06818181818181819,
+    0.02777777777777779
+   ],
+   "theta_a": 0.11497469378608033,
+   "theta_b": 0.10156575875913304,
+   "line": 0.22994938757216066,
+   "verdict": "不可分辨",
+   "same_sign": 9,
+   "mean_a": 0.16585081585081585,
+   "mean_b": 0.22225192748648126,
+   "pred": null
+  },
+  {
+   "A": "B0",
+   "B": "S2",
+   "metric": "miss",
+   "n": 8,
+   "med": 0.215909090909091,
+   "ci": [
+    -0.08333333333333326,
+    0.5000000000000001
+   ],
+   "theta_a": null,
+   "theta_b": null,
+   "line": null,
+   "verdict": "未测",
+   "same_sign": 5,
+   "mean_a": 0.5965909090909091,
+   "mean_b": 0.334280303030303,
+   "pred": null
+  },
+  {
+   "A": "B0",
+   "B": "S2",
+   "metric": "single",
+   "n": 8,
+   "med": 2.625,
+   "ci": [
+    1.5,
+    5.5
+   ],
+   "theta_a": null,
+   "theta_b": null,
+   "line": null,
+   "verdict": "未测",
+   "same_sign": 7,
+   "mean_a": 4.75,
+   "mean_b": 1.96875,
+   "pred": null
+  },
+  {
+   "A": "B0",
+   "B": "S2",
+   "metric": "ccov",
+   "n": 8,
+   "med": 0.0,
+   "ci": [
+    0.0,
+    1.0
+   ],
+   "theta_a": null,
+   "theta_b": null,
+   "line": null,
+   "verdict": "未测",
+   "same_sign": 1,
+   "mean_a": 0.875,
+   "mean_b": 0.625,
+   "pred": null
+  },
+  {
+   "A": "B0",
+   "B": "S2",
+   "metric": "kchit",
+   "n": 8,
+   "med": 0.0,
+   "ci": [
+    0.0,
+    0.5
+   ],
+   "theta_a": null,
+   "theta_b": null,
+   "line": null,
+   "verdict": "未测",
+   "same_sign": 0,
+   "mean_a": 0.2708333333333333,
+   "mean_b": 0.0625,
+   "pred": null
+  },
+  {
+   "A": "B0",
+   "B": "S2",
+   "metric": "contrad",
+   "n": 8,
+   "med": -0.016146016146016143,
+   "ci": [
+    -0.09999999999999998,
+    0.2772727272727273
+   ],
+   "theta_a": null,
+   "theta_b": null,
+   "line": null,
+   "verdict": "未测",
+   "same_sign": 4,
+   "mean_a": 0.2213924963924964,
+   "mean_b": 0.14987101372970937,
+   "pred": null
+  },
+  {
+   "A": "B0",
+   "B": "S3",
+   "metric": "miss",
+   "n": 9,
+   "med": 0.41666666666666663,
+   "ci": [
+    0.08333333333333337,
+    0.6666666666666666
+   ],
+   "theta_a": 0.296707823299972,
+   "theta_b": 0.11971368234558959,
+   "line": 0.593415646599944,
+   "verdict": "不可分辨",
+   "same_sign": 8,
+   "mean_a": 0.664983164983165,
+   "mean_b": 0.3308080808080808,
+   "pred": null
+  },
+  {
+   "A": "B0",
+   "B": "S3",
+   "metric": "single",
+   "n": 9,
+   "med": 1.5,
+   "ci": [
+    0.25,
+    4.25
+   ],
+   "theta_a": 3.5604938795996635,
+   "theta_b": 0.3591410470367689,
+   "line": 7.120987759199327,
+   "verdict": "不可分辨",
+   "same_sign": 8,
+   "mean_a": 4.0,
+   "mean_b": 2.0,
+   "pred": null
+  },
+  {
+   "A": "B0",
+   "B": "S3",
+   "metric": "ccov",
+   "n": 9,
+   "med": 0,
+   "ci": [
+    -1,
+    0
+   ],
+   "theta_a": 0.0,
+   "theta_b": 0.9404520189781082,
+   "line": 1.8809040379562163,
+   "verdict": "不可分辨",
+   "same_sign": 3,
+   "mean_a": 0.6666666666666666,
+   "mean_b": 1.1111111111111112,
+   "pred": null
+  },
+  {
+   "A": "B0",
+   "B": "S3",
+   "metric": "kchit",
+   "n": 9,
+   "med": 0.0,
+   "ci": [
+    -0.33333333333333337,
+    0.0
+   ],
+   "theta_a": 0.2714851131584689,
+   "theta_b": 0.2714851131584689,
+   "line": 0.5429702263169378,
+   "verdict": "不可分辨",
+   "same_sign": 2,
+   "mean_a": 0.12962962962962962,
+   "mean_b": 0.16666666666666666,
+   "pred": null
+  },
+  {
+   "A": "B0",
+   "B": "S3",
+   "metric": "contrad",
+   "n": 9,
+   "med": 0.05681818181818182,
+   "ci": [
+    -0.023809523809523808,
+    0.18571428571428575
+   ],
+   "theta_a": 0.2720134689538059,
+   "theta_b": 0.10384964293164943,
+   "line": 0.5440269379076118,
+   "verdict": "不可分辨",
+   "same_sign": 7,
+   "mean_a": 0.2264229597562931,
+   "mean_b": 0.12379100529255328,
+   "pred": null
+  },
+  {
+   "A": "B0",
+   "B": "S4",
+   "metric": "miss",
+   "n": 11,
+   "med": 0.2727272727272727,
+   "ci": [
+    0.08333333333333326,
+    0.41666666666666674
+   ],
+   "theta_a": 0.25192752301376653,
+   "theta_b": 0.09049503771948962,
+   "line": 0.5038550460275331,
+   "verdict": "不可分辨",
+   "same_sign": 9,
+   "mean_a": 0.5902203856749312,
+   "mean_b": 0.3236914600550964,
+   "pred": null
+  },
+  {
+   "A": "B0",
+   "B": "S4",
+   "metric": "single",
+   "n": 11,
+   "med": 1.75,
+   "ci": [
+    1.0,
+    5.0
+   ],
+   "theta_a": 3.023130276165198,
+   "theta_b": 0.2714851131584689,
+   "line": 6.046260552330396,
+   "verdict": "不可分辨",
+   "same_sign": 10,
+   "mean_a": 4.818181818181818,
+   "mean_b": 2.0,
+   "pred": null
+  },
+  {
+   "A": "B0",
+   "B": "S4",
+   "metric": "ccov",
+   "n": 11,
+   "med": 0,
+   "ci": [
+    0,
+    0
+   ],
+   "theta_a": 0.0,
+   "theta_b": 0.0,
+   "line": 0.0,
+   "verdict": "显著（方向未预注册）",
+   "same_sign": 2,
+   "mean_a": 0.8181818181818182,
+   "mean_b": 0.8181818181818182,
+   "pred": null
+  },
+  {
+   "A": "B0",
+   "B": "S4",
+   "metric": "kchit",
+   "n": 11,
+   "med": 0.0,
+   "ci": [
+    0.0,
+    0.0
+   ],
+   "theta_a": 0.2714851131584689,
+   "theta_b": 0.0,
+   "line": 0.5429702263169378,
+   "verdict": "不可分辨",
+   "same_sign": 2,
+   "mean_a": 0.15151515151515152,
+   "mean_b": 0.12121212121212122,
+   "pred": null
+  },
+  {
+   "A": "B0",
+   "B": "S4",
+   "metric": "contrad",
+   "n": 11,
+   "med": 0.06818181818181818,
+   "ci": [
+    -0.08888888888888889,
+    0.1323529411764706
+   ],
+   "theta_a": 0.08585507249198988,
+   "theta_b": 0.038051511171102774,
+   "line": 0.17171014498397977,
+   "verdict": "不可分辨",
+   "same_sign": 6,
+   "mean_a": 0.19535615899252262,
+   "mean_b": 0.1698709597835898,
+   "pred": null
+  },
+  {
+   "A": "S1",
+   "B": "S2",
+   "metric": "miss",
+   "n": 6,
+   "med": 0.041666666666666685,
+   "ci": [
+    -0.13257575757575757,
+    0.25
+   ],
+   "theta_a": null,
+   "theta_b": null,
+   "line": null,
+   "verdict": "未测",
+   "same_sign": 3,
+   "mean_a": 0.45707070707070707,
+   "mean_b": 0.40404040404040403,
+   "pred": null
+  },
+  {
+   "A": "S1",
+   "B": "S2",
+   "metric": "redund",
+   "n": 27,
+   "med": 0.11067842003235391,
+   "ci": [
+    0.05710089112803901,
+    0.21305837487135298
+   ],
+   "theta_a": 0.06793383462916179,
+   "theta_b": 0.05407405155871192,
+   "line": 0.13586766925832358,
+   "verdict": "不可分辨",
+   "same_sign": 24,
+   "mean_a": 0.30164392550028024,
+   "mean_b": 0.1602436368750422,
+   "pred": -1
+  },
+  {
+   "A": "S1",
+   "B": "S2",
+   "metric": "single",
+   "n": 6,
+   "med": -0.125,
+   "ci": [
+    -0.75,
+    0.375
+   ],
+   "theta_a": null,
+   "theta_b": null,
+   "line": null,
+   "verdict": "未测",
+   "same_sign": 3,
+   "mean_a": 1.5833333333333333,
+   "mean_b": 1.75,
+   "pred": null
+  },
+  {
+   "A": "S1",
+   "B": "S2",
+   "metric": "ccov",
+   "n": 6,
+   "med": 0.5,
+   "ci": [
+    0.0,
+    2.0
+   ],
+   "theta_a": null,
+   "theta_b": null,
+   "line": null,
+   "verdict": "未测",
+   "same_sign": 3,
+   "mean_a": 1.5,
+   "mean_b": 0.6666666666666666,
+   "pred": null
+  },
+  {
+   "A": "S1",
+   "B": "S2",
+   "metric": "kchit",
+   "n": 6,
+   "med": 0.25,
+   "ci": [
+    0.0,
+    0.5833333333333333
+   ],
+   "theta_a": null,
+   "theta_b": null,
+   "line": null,
+   "verdict": "未测",
+   "same_sign": 3,
+   "mean_a": 0.3611111111111111,
+   "mean_b": 0.08333333333333333,
+   "pred": null
+  },
+  {
+   "A": "S1",
+   "B": "S2",
+   "metric": "contrad",
+   "n": 6,
+   "med": 0.07516367298975996,
+   "ci": [
+    -0.12955917874396133,
+    0.19117395762132605
+   ],
+   "theta_a": null,
+   "theta_b": null,
+   "line": null,
+   "verdict": "未测",
+   "same_sign": 4,
+   "mean_a": 0.18986528003976516,
+   "mean_b": 0.1442724627507236,
+   "pred": null
+  },
+  {
+   "A": "S1",
+   "B": "S3",
+   "metric": "miss",
+   "n": 5,
+   "med": 0.09090909090909083,
+   "ci": [
+    0.0,
+    0.25
+   ],
+   "theta_a": null,
+   "theta_b": null,
+   "line": null,
+   "verdict": "未测",
+   "same_sign": 3,
+   "mean_a": 0.4803030303030303,
+   "mean_b": 0.3787878787878788,
+   "pred": null
+  },
+  {
+   "A": "S1",
+   "B": "S3",
+   "metric": "redund",
+   "n": 27,
+   "med": 0.04911551234382944,
+   "ci": [
+    0.016680135792476194,
+    0.1199095670529835
+   ],
+   "theta_a": 0.06793383462916179,
+   "theta_b": 0.042511725899664086,
+   "line": 0.13586766925832358,
+   "verdict": "不可分辨",
+   "same_sign": 23,
+   "mean_a": 0.30164392550028024,
+   "mean_b": 0.193806822998176,
+   "pred": -1
+  },
+  {
+   "A": "S1",
+   "B": "S3",
+   "metric": "single",
+   "n": 5,
+   "med": -0.25,
+   "ci": [
+    -0.75,
+    0.0
+   ],
+   "theta_a": null,
+   "theta_b": null,
+   "line": null,
+   "verdict": "未测",
+   "same_sign": 3,
+   "mean_a": 1.55,
+   "mean_b": 1.85,
+   "pred": null
+  },
+  {
+   "A": "S1",
+   "B": "S3",
+   "metric": "ccov",
+   "n": 5,
+   "med": 0,
+   "ci": [
+    -4,
+    1
+   ],
+   "theta_a": null,
+   "theta_b": null,
+   "line": null,
+   "verdict": "未测",
+   "same_sign": 2,
+   "mean_a": 0.6,
+   "mean_b": 1.4,
+   "pred": null
+  },
+  {
+   "A": "S1",
+   "B": "S3",
+   "metric": "kchit",
+   "n": 5,
+   "med": 0.0,
+   "ci": [
+    -1.0,
+    0.5
+   ],
+   "theta_a": null,
+   "theta_b": null,
+   "line": null,
+   "verdict": "未测",
+   "same_sign": 1,
+   "mean_a": 0.1,
+   "mean_b": 0.2,
+   "pred": null
+  },
+  {
+   "A": "S1",
+   "B": "S3",
+   "metric": "contrad",
+   "n": 5,
+   "med": 0.1141141141141141,
+   "ci": [
+    0.031746031746031744,
+    0.21052631578947367
+   ],
+   "theta_a": null,
+   "theta_b": null,
+   "line": null,
+   "verdict": "未测",
+   "same_sign": 5,
+   "mean_a": 0.20978278049216265,
+   "mean_b": 0.096678582204898,
+   "pred": null
+  },
+  {
+   "A": "S1",
+   "B": "S4",
+   "metric": "miss",
+   "n": 7,
+   "med": 0.16666666666666663,
+   "ci": [
+    0.0,
+    0.25
+   ],
+   "theta_a": null,
+   "theta_b": null,
+   "line": null,
+   "verdict": "未测",
+   "same_sign": 5,
+   "mean_a": 0.4036796536796537,
+   "mean_b": 0.28679653679653677,
+   "pred": null
+  },
+  {
+   "A": "S1",
+   "B": "S4",
+   "metric": "redund",
+   "n": 27,
+   "med": 0.026775015703329796,
+   "ci": [
+    0.012149431882537254,
+    0.057124495439755146
+   ],
+   "theta_a": 0.06793383462916179,
+   "theta_b": 0.08627234636389398,
+   "line": 0.17254469272778797,
+   "verdict": "不可分辨",
+   "same_sign": 19,
+   "mean_a": 0.30164392550028024,
+   "mean_b": 0.2546603650109894,
+   "pred": 1
+  },
+  {
+   "A": "S1",
+   "B": "S4",
+   "metric": "single",
+   "n": 7,
+   "med": -0.5,
+   "ci": [
+    -0.75,
+    0.0
+   ],
+   "theta_a": null,
+   "theta_b": null,
+   "line": null,
+   "verdict": "未测",
+   "same_sign": 5,
+   "mean_a": 1.75,
+   "mean_b": 2.107142857142857,
+   "pred": null
+  },
+  {
+   "A": "S1",
+   "B": "S4",
+   "metric": "ccov",
+   "n": 7,
+   "med": 0,
+   "ci": [
+    0,
+    1
+   ],
+   "theta_a": null,
+   "theta_b": null,
+   "line": null,
+   "verdict": "未测",
+   "same_sign": 1,
+   "mean_a": 1,
+   "mean_b": 0.8571428571428571,
+   "pred": null
+  },
+  {
+   "A": "S1",
+   "B": "S4",
+   "metric": "kchit",
+   "n": 7,
+   "med": 0.0,
+   "ci": [
+    0.0,
+    0.3333333333333333
+   ],
+   "theta_a": null,
+   "theta_b": null,
+   "line": null,
+   "verdict": "未测",
+   "same_sign": 1,
+   "mean_a": 0.23809523809523808,
+   "mean_b": 0.19047619047619047,
+   "pred": null
+  },
+  {
+   "A": "S1",
+   "B": "S4",
+   "metric": "contrad",
+   "n": 7,
+   "med": 0.1045751633986928,
+   "ci": [
+    -0.11721611721611724,
+    0.13397129186602869
+   ],
+   "theta_a": null,
+   "theta_b": null,
+   "line": null,
+   "verdict": "未测",
+   "same_sign": 4,
+   "mean_a": 0.2131582120344788,
+   "mean_b": 0.17591428179663474,
+   "pred": null
+  },
+  {
+   "A": "S2",
+   "B": "S3",
+   "metric": "miss",
+   "n": 7,
+   "med": 0.0,
+   "ci": [
+    -0.33333333333333326,
+    0.09090909090909083
+   ],
+   "theta_a": null,
+   "theta_b": null,
+   "line": null,
+   "verdict": "未测",
+   "same_sign": 3,
+   "mean_a": 0.29545454545454547,
+   "mean_b": 0.3658008658008658,
+   "pred": null
+  },
+  {
+   "A": "S2",
+   "B": "S3",
+   "metric": "redund",
+   "n": 27,
+   "med": -0.04206663725908122,
+   "ci": [
+    -0.06325179451309783,
+    -0.0019483955459299596
+   ],
+   "theta_a": 0.05407405155871192,
+   "theta_b": 0.042511725899664086,
+   "line": 0.10814810311742384,
+   "verdict": "不可分辨",
+   "same_sign": 19,
+   "mean_a": 0.1602436368750422,
+   "mean_b": 0.193806822998176,
+   "pred": -1
+  },
+  {
+   "A": "S2",
+   "B": "S3",
+   "metric": "single",
+   "n": 7,
+   "med": 0.0,
+   "ci": [
+    -0.25,
+    1.0
+   ],
+   "theta_a": null,
+   "theta_b": null,
+   "line": null,
+   "verdict": "未测",
+   "same_sign": 3,
+   "mean_a": 2.107142857142857,
+   "mean_b": 1.8928571428571428,
+   "pred": null
+  },
+  {
+   "A": "S2",
+   "B": "S3",
+   "metric": "ccov",
+   "n": 7,
+   "med": 0,
+   "ci": [
+    -1,
+    0
+   ],
+   "theta_a": null,
+   "theta_b": null,
+   "line": null,
+   "verdict": "未测",
+   "same_sign": 3,
+   "mean_a": 0.42857142857142855,
+   "mean_b": 1.1428571428571428,
+   "pred": null
+  },
+  {
+   "A": "S2",
+   "B": "S3",
+   "metric": "kchit",
+   "n": 7,
+   "med": 0.0,
+   "ci": [
+    -0.3333333333333333,
+    0.0
+   ],
+   "theta_a": null,
+   "theta_b": null,
+   "line": null,
+   "verdict": "未测",
+   "same_sign": 2,
+   "mean_a": 0.0,
+   "mean_b": 0.19047619047619047,
+   "pred": null
+  },
+  {
+   "A": "S2",
+   "B": "S3",
+   "metric": "contrad",
+   "n": 7,
+   "med": 0.028665028665028625,
+   "ci": [
+    -0.06954887218045112,
+    0.12836438923395446
+   ],
+   "theta_a": null,
+   "theta_b": null,
+   "line": null,
+   "verdict": "未测",
+   "same_sign": 5,
+   "mean_a": 0.19162747889455964,
+   "mean_b": 0.16428665478864507,
+   "pred": null
+  },
+  {
+   "A": "S2",
+   "B": "S4",
+   "metric": "miss",
+   "n": 6,
+   "med": 0.08333333333333331,
+   "ci": [
+    -0.08333333333333331,
+    0.20833333333333331
+   ],
+   "theta_a": null,
+   "theta_b": null,
+   "line": null,
+   "verdict": "未测",
+   "same_sign": 3,
+   "mean_a": 0.40025252525252525,
+   "mean_b": 0.3308080808080808,
+   "pred": null
+  },
+  {
+   "A": "S2",
+   "B": "S4",
+   "metric": "redund",
+   "n": 27,
+   "med": -0.07043374369453834,
+   "ci": [
+    -0.12738642276593437,
+    -0.0396766264081726
+   ],
+   "theta_a": 0.05407405155871192,
+   "theta_b": 0.08627234636389398,
+   "line": 0.17254469272778797,
+   "verdict": "不可分辨",
+   "same_sign": 22,
+   "mean_a": 0.1602436368750422,
+   "mean_b": 0.2546603650109894,
+   "pred": null
+  },
+  {
+   "A": "S2",
+   "B": "S4",
+   "metric": "single",
+   "n": 6,
+   "med": -0.25,
+   "ci": [
+    -0.625,
+    0.25
+   ],
+   "theta_a": null,
+   "theta_b": null,
+   "line": null,
+   "verdict": "未测",
+   "same_sign": 3,
+   "mean_a": 1.7916666666666667,
+   "mean_b": 2.0,
+   "pred": null
+  },
+  {
+   "A": "S2",
+   "B": "S4",
+   "metric": "ccov",
+   "n": 6,
+   "med": -0.5,
+   "ci": [
+    -2.0,
+    0.0
+   ],
+   "theta_a": null,
+   "theta_b": null,
+   "line": null,
+   "verdict": "未测",
+   "same_sign": 3,
+   "mean_a": 0.3333333333333333,
+   "mean_b": 1.1666666666666667,
+   "pred": null
+  },
+  {
+   "A": "S2",
+   "B": "S4",
+   "metric": "kchit",
+   "n": 6,
+   "med": 0.0,
+   "ci": [
+    -0.5,
+    0.0
+   ],
+   "theta_a": null,
+   "theta_b": null,
+   "line": null,
+   "verdict": "未测",
+   "same_sign": 2,
+   "mean_a": 0.0,
+   "mean_b": 0.16666666666666666,
+   "pred": null
+  },
+  {
+   "A": "S2",
+   "B": "S4",
+   "metric": "contrad",
+   "n": 6,
+   "med": 0.05761653805132066,
+   "ci": [
+    -0.06471861471861473,
+    0.09603729603729602
+   ],
+   "theta_a": null,
+   "theta_b": null,
+   "line": null,
+   "verdict": "未测",
+   "same_sign": 5,
+   "mean_a": 0.23777768125594212,
+   "mean_b": 0.20813260813260814,
+   "pred": null
+  },
+  {
+   "A": "S3",
+   "B": "S4",
+   "metric": "miss",
+   "n": 8,
+   "med": 0.0,
+   "ci": [
+    0.0,
+    0.08333333333333326
+   ],
+   "theta_a": 0.16624999999999993,
+   "theta_b": 0.11083333333333331,
+   "line": 0.33249999999999985,
+   "verdict": "不可分辨",
+   "same_sign": 1,
+   "mean_a": 0.35132575757575757,
+   "mean_b": 0.3314393939393939,
+   "pred": null
+  },
+  {
+   "A": "S3",
+   "B": "S4",
+   "metric": "redund",
+   "n": 27,
+   "med": -0.022193316360345355,
+   "ci": [
+    -0.05477766576064573,
+    0.0051022179907161125
+   ],
+   "theta_a": 0.042511725899664086,
+   "theta_b": 0.08627234636389398,
+   "line": 0.17254469272778797,
+   "verdict": "不可分辨",
+   "same_sign": 17,
+   "mean_a": 0.193806822998176,
+   "mean_b": 0.2546603650109894,
+   "pred": null
+  },
+  {
+   "A": "S3",
+   "B": "S4",
+   "metric": "single",
+   "n": 8,
+   "med": 0.0,
+   "ci": [
+    -0.25,
+    0.0
+   ],
+   "theta_a": 0.49874999999999997,
+   "theta_b": 0.3325,
+   "line": 0.9974999999999999,
+   "verdict": "不可分辨",
+   "same_sign": 2,
+   "mean_a": 1.9375,
+   "mean_b": 2.0,
+   "pred": null
+  },
+  {
+   "A": "S3",
+   "B": "S4",
+   "metric": "ccov",
+   "n": 8,
+   "med": 0.0,
+   "ci": [
+    -1.0,
+    1.0
+   ],
+   "theta_a": 1.33,
+   "theta_b": 0.0,
+   "line": 2.66,
+   "verdict": "不可分辨",
+   "same_sign": 2,
+   "mean_a": 1.375,
+   "mean_b": 1,
+   "pred": null
+  },
+  {
+   "A": "S3",
+   "B": "S4",
+   "metric": "kchit",
+   "n": 8,
+   "med": 0.0,
+   "ci": [
+    0.0,
+    0.5
+   ],
+   "theta_a": 0.3325,
+   "theta_b": 0.0,
+   "line": 0.665,
+   "verdict": "不可分辨",
+   "same_sign": 1,
+   "mean_a": 0.22916666666666666,
+   "mean_b": 0.08333333333333333,
+   "pred": null
+  },
+  {
+   "A": "S3",
+   "B": "S4",
+   "metric": "contrad",
+   "n": 8,
+   "med": -0.015273677038382921,
+   "ci": [
+    -0.06561085972850679,
+    0.06437534097108565
+   ],
+   "theta_a": 0.07036858974358975,
+   "theta_b": 0.053569234270110365,
+   "line": 0.1407371794871795,
+   "verdict": "不可分辨",
+   "same_sign": 5,
+   "mean_a": 0.1599241766134181,
+   "mean_b": 0.16652915989586828,
+   "pred": null
+  }
+ ],
+ "detail": {
+  "B0|D01|1": {
+   "n_routes": 1,
+   "n_touched": 4,
+   "n_ev": 12,
+   "n_contrad": 1,
+   "n_cards": 4,
+   "touched": [
+    4,
+    8,
+    9,
+    12
+   ],
+   "touched_contrad": [],
+   "n_ccov": 0,
+   "ccov_hits": []
+  },
+  "S1|D01|1": {
+   "n_routes": 4,
+   "n_touched": 6,
+   "n_ev": 12,
+   "n_contrad": 6,
+   "n_cards": 19,
+   "touched": [
+    1,
+    4,
+    8,
+    9,
+    10,
+    12
+   ],
+   "touched_contrad": [
+    1,
+    4,
+    8,
+    9,
+    10,
+    12
+   ],
+   "n_ccov": 0,
+   "ccov_hits": []
+  },
+  "S2|D01|1": {
+   "n_routes": 4,
+   "n_touched": 7,
+   "n_ev": 12,
+   "n_contrad": 1,
+   "n_cards": 28,
+   "touched": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    7,
+    10
+   ],
+   "touched_contrad": [],
+   "n_ccov": 0,
+   "ccov_hits": []
+  },
+  "S3|D01|1": {
+   "n_routes": 4,
+   "n_touched": 9,
+   "n_ev": 12,
+   "n_contrad": 4,
+   "n_cards": 38,
+   "touched": [
+    1,
+    2,
+    3,
+    4,
+    7,
+    8,
+    9,
+    10,
+    12
+   ],
+   "touched_contrad": [],
+   "n_ccov": 1,
+   "ccov_hits": [
+    "C3"
+   ]
+  },
+  "S4|D01|1": {
+   "n_routes": 4,
+   "n_touched": 9,
+   "n_ev": 12,
+   "n_contrad": 4,
+   "n_cards": 22,
+   "touched": [
+    1,
+    2,
+    4,
+    5,
+    7,
+    8,
+    9,
+    10,
+    12
+   ],
+   "touched_contrad": [],
+   "n_ccov": 0,
+   "ccov_hits": []
+  },
+  "B0|D01|2": {
+   "n_routes": 1,
+   "n_touched": 6,
+   "n_ev": 12,
+   "n_contrad": 2,
+   "n_cards": 5,
+   "touched": [
+    1,
+    4,
+    8,
+    9,
+    10,
+    12
+   ],
+   "touched_contrad": [
+    1,
+    4,
+    8,
+    9,
+    10,
+    12
+   ],
+   "n_ccov": 0,
+   "ccov_hits": []
+  },
+  "S3|D01|2": {
+   "n_routes": 4,
+   "n_touched": 7,
+   "n_ev": 12,
+   "n_contrad": 6,
+   "n_cards": 28,
+   "touched": [
+    1,
+    3,
+    4,
+    8,
+    9,
+    10,
+    12
+   ],
+   "touched_contrad": [],
+   "n_ccov": 0,
+   "ccov_hits": []
+  },
+  "S4|D01|2": {
+   "n_routes": 4,
+   "n_touched": 7,
+   "n_ev": 12,
+   "n_contrad": 4,
+   "n_cards": 17,
+   "touched": [
+    1,
+    3,
+    4,
+    8,
+    9,
+    10,
+    12
+   ],
+   "touched_contrad": [
+    2
+   ],
+   "n_ccov": 0,
+   "ccov_hits": []
+  },
+  "B0|D01|3": {
+   "n_routes": 1,
+   "n_touched": 0,
+   "n_ev": 12,
+   "n_contrad": 0,
+   "n_cards": 4,
+   "touched": [],
+   "touched_contrad": [],
+   "n_ccov": 0,
+   "ccov_hits": []
+  },
+  "S1|D01|3": {
+   "n_routes": 4,
+   "n_touched": 7,
+   "n_ev": 12,
+   "n_contrad": 9,
+   "n_cards": 21,
+   "touched": [
+    1,
+    3,
+    4,
+    8,
+    9,
+    10,
+    12
+   ],
+   "touched_contrad": [
+    1,
+    2,
+    3,
+    4,
+    8,
+    9
+   ],
+   "n_ccov": 0,
+   "ccov_hits": []
+  },
+  "B0|D02|1": {
+   "n_routes": 1,
+   "n_touched": 6,
+   "n_ev": 12,
+   "n_contrad": 1,
+   "n_cards": 4,
+   "touched": [
+    1,
+    2,
+    5,
+    6,
+    7,
+    8
+   ],
+   "touched_contrad": [],
+   "n_ccov": 0,
+   "ccov_hits": []
+  },
+  "S1|D02|1": {
+   "n_routes": 4,
+   "n_touched": 9,
+   "n_ev": 12,
+   "n_contrad": 7,
+   "n_cards": 23,
+   "touched": [
+    1,
+    2,
+    3,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "touched_contrad": [
+    1,
+    2,
+    3,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "n_ccov": 0,
+   "ccov_hits": []
+  },
+  "S4|D02|1": {
+   "n_routes": 4,
+   "n_touched": 11,
+   "n_ev": 12,
+   "n_contrad": 2,
+   "n_cards": 18,
+   "touched": [
+    1,
+    2,
+    3,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "touched_contrad": [
+    11,
+    12
+   ],
+   "n_ccov": 0,
+   "ccov_hits": []
+  },
+  "B0|D02|2": {
+   "n_routes": 1,
+   "n_touched": 3,
+   "n_ev": 12,
+   "n_contrad": 2,
+   "n_cards": 8,
+   "touched": [
+    1,
+    2,
+    3
+   ],
+   "touched_contrad": [],
+   "n_ccov": 0,
+   "ccov_hits": []
+  },
+  "S1|D02|2": {
+   "n_routes": 4,
+   "n_touched": 9,
+   "n_ev": 12,
+   "n_contrad": 4,
+   "n_cards": 18,
+   "touched": [
+    1,
+    2,
+    3,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "touched_contrad": [
+    3,
+    9,
+    10
+   ],
+   "n_ccov": 0,
+   "ccov_hits": []
+  },
+  "S3|D02|2": {
+   "n_routes": 4,
+   "n_touched": 11,
+   "n_ev": 12,
+   "n_contrad": 4,
+   "n_cards": 37,
+   "touched": [
+    1,
+    2,
+    3,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "touched_contrad": [],
+   "n_ccov": 0,
+   "ccov_hits": []
+  },
+  "S4|D02|2": {
+   "n_routes": 4,
+   "n_touched": 11,
+   "n_ev": 12,
+   "n_contrad": 2,
+   "n_cards": 17,
+   "touched": [
+    1,
+    2,
+    3,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "touched_contrad": [],
+   "n_ccov": 0,
+   "ccov_hits": []
+  },
+  "B0|D02|3": {
+   "n_routes": 1,
+   "n_touched": 3,
+   "n_ev": 12,
+   "n_contrad": 2,
+   "n_cards": 6,
+   "touched": [
+    1,
+    2,
+    3
+   ],
+   "touched_contrad": [],
+   "n_ccov": 0,
+   "ccov_hits": []
+  },
+  "S1|D02|3": {
+   "n_routes": 4,
+   "n_touched": 11,
+   "n_ev": 12,
+   "n_contrad": 4,
+   "n_cards": 19,
+   "touched": [
+    1,
+    2,
+    3,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "touched_contrad": [],
+   "n_ccov": 0,
+   "ccov_hits": []
+  },
+  "B0|D03|1": {
+   "n_routes": 1,
+   "n_touched": 6,
+   "n_ev": 12,
+   "n_contrad": 1,
+   "n_cards": 11,
+   "touched": [
+    1,
+    4,
+    5,
+    6,
+    7,
+    11
+   ],
+   "touched_contrad": [],
+   "n_ccov": 0,
+   "ccov_hits": []
+  },
+  "S1|D03|1": {
+   "n_routes": 4,
+   "n_touched": 7,
+   "n_ev": 12,
+   "n_contrad": 11,
+   "n_cards": 46,
+   "touched": [
+    1,
+    2,
+    4,
+    5,
+    6,
+    7,
+    11
+   ],
+   "touched_contrad": [],
+   "n_ccov": 0,
+   "ccov_hits": []
+  },
+  "S2|D03|1": {
+   "n_routes": 4,
+   "n_touched": 12,
+   "n_ev": 12,
+   "n_contrad": 6,
+   "n_cards": 37,
+   "touched": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "touched_contrad": [],
+   "n_ccov": 0,
+   "ccov_hits": []
+  },
+  "S3|D03|1": {
+   "n_routes": 4,
+   "n_touched": 7,
+   "n_ev": 12,
+   "n_contrad": 4,
+   "n_cards": 33,
+   "touched": [
+    1,
+    2,
+    4,
+    5,
+    6,
+    11,
+    12
+   ],
+   "touched_contrad": [],
+   "n_ccov": 0,
+   "ccov_hits": []
+  },
+  "B0|D04|1": {
+   "n_routes": 1,
+   "n_touched": 8,
+   "n_ev": 12,
+   "n_contrad": 2,
+   "n_cards": 8,
+   "touched": [
+    2,
+    3,
+    5,
+    7,
+    8,
+    9,
+    10,
+    11
+   ],
+   "touched_contrad": [],
+   "n_ccov": 0,
+   "ccov_hits": []
+  },
+  "S1|D04|1": {
+   "n_routes": 4,
+   "n_touched": 6,
+   "n_ev": 12,
+   "n_contrad": 6,
+   "n_cards": 32,
+   "touched": [
+    2,
+    3,
+    5,
+    7,
+    9,
+    12
+   ],
+   "touched_contrad": [],
+   "n_ccov": 2,
+   "ccov_hits": [
+    "C1",
+    "C3"
+   ]
+  },
+  "S2|D04|1": {
+   "n_routes": 4,
+   "n_touched": 7,
+   "n_ev": 12,
+   "n_contrad": 14,
+   "n_cards": 40,
+   "touched": [
+    1,
+    2,
+    3,
+    4,
+    7,
+    9,
+    11
+   ],
+   "touched_contrad": [],
+   "n_ccov": 0,
+   "ccov_hits": []
+  },
+  "S4|D04|1": {
+   "n_routes": 4,
+   "n_touched": 10,
+   "n_ev": 12,
+   "n_contrad": 10,
+   "n_cards": 30,
+   "touched": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    7,
+    9,
+    10,
+    11,
+    12
+   ],
+   "touched_contrad": [
+    2
+   ],
+   "n_ccov": 1,
+   "ccov_hits": [
+    "C3"
+   ]
+  },
+  "S2|D04|2": {
+   "n_routes": 4,
+   "n_touched": 11,
+   "n_ev": 12,
+   "n_contrad": 17,
+   "n_cards": 33,
+   "touched": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "touched_contrad": [
+    12
+   ],
+   "n_ccov": 0,
+   "ccov_hits": []
+  },
+  "S3|D04|2": {
+   "n_routes": 4,
+   "n_touched": 7,
+   "n_ev": 12,
+   "n_contrad": 18,
+   "n_cards": 37,
+   "touched": [
+    1,
+    5,
+    7,
+    8,
+    9,
+    11,
+    12
+   ],
+   "touched_contrad": [],
+   "n_ccov": 1,
+   "ccov_hits": [
+    "C3"
+   ]
+  },
+  "S4|D04|2": {
+   "n_routes": 4,
+   "n_touched": 9,
+   "n_ev": 12,
+   "n_contrad": 14,
+   "n_cards": 35,
+   "touched": [
+    1,
+    2,
+    5,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "touched_contrad": [],
+   "n_ccov": 3,
+   "ccov_hits": [
+    "C1",
+    "C3",
+    "C4"
+   ]
+  },
+  "B0|D04|3": {
+   "n_routes": 1,
+   "n_touched": 6,
+   "n_ev": 12,
+   "n_contrad": 2,
+   "n_cards": 6,
+   "touched": [
+    2,
+    5,
+    6,
+    7,
+    8,
+    9
+   ],
+   "touched_contrad": [],
+   "n_ccov": 0,
+   "ccov_hits": []
+  },
+  "B0|D05|1": {
+   "n_routes": 1,
+   "n_touched": 7,
+   "n_ev": 12,
+   "n_contrad": 2,
+   "n_cards": 11,
+   "touched": [
+    1,
+    2,
+    3,
+    5,
+    6,
+    7,
+    9
+   ],
+   "touched_contrad": [],
+   "n_ccov": 2,
+   "ccov_hits": [
+    "C1",
+    "C3"
+   ]
+  },
+  "S1|D05|1": {
+   "n_routes": 4,
+   "n_touched": 7,
+   "n_ev": 12,
+   "n_contrad": 8,
+   "n_cards": 37,
+   "touched": [
+    1,
+    2,
+    3,
+    5,
+    6,
+    7,
+    9
+   ],
+   "touched_contrad": [],
+   "n_ccov": 3,
+   "ccov_hits": [
+    "C1",
+    "C3",
+    "C4"
+   ]
+  },
+  "S2|D05|1": {
+   "n_routes": 4,
+   "n_touched": 6,
+   "n_ev": 12,
+   "n_contrad": 3,
+   "n_cards": 21,
+   "touched": [
+    1,
+    2,
+    3,
+    6,
+    7,
+    9
+   ],
+   "touched_contrad": [],
+   "n_ccov": 2,
+   "ccov_hits": [
+    "C3",
+    "C4"
+   ]
+  },
+  "S3|D05|1": {
+   "n_routes": 4,
+   "n_touched": 7,
+   "n_ev": 12,
+   "n_contrad": 5,
+   "n_cards": 40,
+   "touched": [
+    1,
+    2,
+    3,
+    5,
+    6,
+    7,
+    9
+   ],
+   "touched_contrad": [
+    8
+   ],
+   "n_ccov": 2,
+   "ccov_hits": [
+    "C3",
+    "C4"
+   ]
+  },
+  "S4|D05|1": {
+   "n_routes": 4,
+   "n_touched": 8,
+   "n_ev": 12,
+   "n_contrad": 3,
+   "n_cards": 33,
+   "touched": [
+    1,
+    2,
+    3,
+    5,
+    6,
+    7,
+    8,
+    9
+   ],
+   "touched_contrad": [],
+   "n_ccov": 2,
+   "ccov_hits": [
+    "C3",
+    "C4"
+   ]
+  },
+  "B0|D05|2": {
+   "n_routes": 1,
+   "n_touched": 3,
+   "n_ev": 12,
+   "n_contrad": 2,
+   "n_cards": 12,
+   "touched": [
+    2,
+    6,
+    7
+   ],
+   "touched_contrad": [],
+   "n_ccov": 2,
+   "ccov_hits": [
+    "C3",
+    "C4"
+   ]
+  },
+  "S3|D05|2": {
+   "n_routes": 4,
+   "n_touched": 8,
+   "n_ev": 12,
+   "n_contrad": 5,
+   "n_cards": 39,
+   "touched": [
+    1,
+    2,
+    3,
+    5,
+    6,
+    7,
+    8,
+    9
+   ],
+   "touched_contrad": [],
+   "n_ccov": 3,
+   "ccov_hits": [
+    "C1",
+    "C3",
+    "C4"
+   ]
+  },
+  "S4|D05|2": {
+   "n_routes": 4,
+   "n_touched": 8,
+   "n_ev": 12,
+   "n_contrad": 3,
+   "n_cards": 47,
+   "touched": [
+    1,
+    2,
+    3,
+    5,
+    6,
+    7,
+    8,
+    9
+   ],
+   "touched_contrad": [],
+   "n_ccov": 2,
+   "ccov_hits": [
+    "C3",
+    "C4"
+   ]
+  },
+  "B0|D05|3": {
+   "n_routes": 1,
+   "n_touched": 6,
+   "n_ev": 12,
+   "n_contrad": 1,
+   "n_cards": 12,
+   "touched": [
+    1,
+    2,
+    3,
+    5,
+    6,
+    7
+   ],
+   "touched_contrad": [],
+   "n_ccov": 3,
+   "ccov_hits": [
+    "C1",
+    "C3",
+    "C4"
+   ]
+  },
+  "S1|D05|3": {
+   "n_routes": 4,
+   "n_touched": 7,
+   "n_ev": 12,
+   "n_contrad": 5,
+   "n_cards": 33,
+   "touched": [
+    1,
+    2,
+    5,
+    6,
+    7,
+    9,
+    11
+   ],
+   "touched_contrad": [],
+   "n_ccov": 3,
+   "ccov_hits": [
+    "C1",
+    "C3",
+    "C4"
+   ]
+  },
+  "B0|D06|1": {
+   "n_routes": 1,
+   "n_touched": 6,
+   "n_ev": 11,
+   "n_contrad": 3,
+   "n_cards": 10,
+   "touched": [
+    1,
+    2,
+    3,
+    5,
+    8,
+    10
+   ],
+   "touched_contrad": [
+    1,
+    2,
+    3,
+    5,
+    8
+   ],
+   "n_ccov": 3,
+   "ccov_hits": [
+    "C1",
+    "C2",
+    "C4"
+   ]
+  },
+  "S1|D06|1": {
+   "n_routes": 4,
+   "n_touched": 10,
+   "n_ev": 11,
+   "n_contrad": 6,
+   "n_cards": 48,
+   "touched": [
+    1,
+    2,
+    3,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+   ],
+   "touched_contrad": [
+    3,
+    9
+   ],
+   "n_ccov": 4,
+   "ccov_hits": [
+    "C1",
+    "C2",
+    "C3",
+    "C4"
+   ]
+  },
+  "S2|D06|1": {
+   "n_routes": 4,
+   "n_touched": 8,
+   "n_ev": 11,
+   "n_contrad": 1,
+   "n_cards": 44,
+   "touched": [
+    1,
+    2,
+    3,
+    5,
+    8,
+    9,
+    10,
+    11
+   ],
+   "touched_contrad": [
+    1
+   ],
+   "n_ccov": 2,
+   "ccov_hits": [
+    "C2",
+    "C4"
+   ]
+  },
+  "B0|D06|2": {
+   "n_routes": 1,
+   "n_touched": 9,
+   "n_ev": 11,
+   "n_contrad": 2,
+   "n_cards": 12,
+   "touched": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    8,
+    9,
+    10,
+    11
+   ],
+   "touched_contrad": [
+    4
+   ],
+   "n_ccov": 3,
+   "ccov_hits": [
+    "C1",
+    "C3",
+    "C4"
+   ]
+  },
+  "S1|D06|2": {
+   "n_routes": 4,
+   "n_touched": 10,
+   "n_ev": 11,
+   "n_contrad": 8,
+   "n_cards": 42,
+   "touched": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    8,
+    9,
+    10,
+    11
+   ],
+   "touched_contrad": [
+    3
+   ],
+   "n_ccov": 2,
+   "ccov_hits": [
+    "C2",
+    "C4"
+   ]
+  },
+  "S4|D06|2": {
+   "n_routes": 4,
+   "n_touched": 8,
+   "n_ev": 11,
+   "n_contrad": 12,
+   "n_cards": 39,
+   "touched": [
+    1,
+    2,
+    3,
+    5,
+    6,
+    8,
+    9,
+    10
+   ],
+   "touched_contrad": [
+    3,
+    5,
+    10
+   ],
+   "n_ccov": 3,
+   "ccov_hits": [
+    "C1",
+    "C2",
+    "C4"
+   ]
+  },
+  "B0|D07|1": {
+   "n_routes": 1,
+   "n_touched": 1,
+   "n_ev": 12,
+   "n_contrad": 5,
+   "n_cards": 9,
+   "touched": [
+    9
+   ],
+   "touched_contrad": [],
+   "n_ccov": 0,
+   "ccov_hits": []
+  },
+  "S2|D07|1": {
+   "n_routes": 4,
+   "n_touched": 11,
+   "n_ev": 12,
+   "n_contrad": 4,
+   "n_cards": 39,
+   "touched": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    12
+   ],
+   "touched_contrad": [],
+   "n_ccov": 1,
+   "ccov_hits": [
+    "C8"
+   ]
+  },
+  "S3|D07|1": {
+   "n_routes": 4,
+   "n_touched": 10,
+   "n_ev": 12,
+   "n_contrad": 9,
+   "n_cards": 45,
+   "touched": [
+    1,
+    2,
+    3,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+   ],
+   "touched_contrad": [],
+   "n_ccov": 0,
+   "ccov_hits": []
+  },
+  "B0|D07|2": {
+   "n_routes": 1,
+   "n_touched": 4,
+   "n_ev": 12,
+   "n_contrad": 1,
+   "n_cards": 7,
+   "touched": [
+    3,
+    5,
+    9,
+    10
+   ],
+   "touched_contrad": [],
+   "n_ccov": 0,
+   "ccov_hits": []
+  },
+  "S2|D07|2": {
+   "n_routes": 4,
+   "n_touched": 10,
+   "n_ev": 12,
+   "n_contrad": 6,
+   "n_cards": 26,
+   "touched": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    12
+   ],
+   "touched_contrad": [],
+   "n_ccov": 0,
+   "ccov_hits": []
+  },
+  "S3|D07|2": {
+   "n_routes": 4,
+   "n_touched": 10,
+   "n_ev": 12,
+   "n_contrad": 3,
+   "n_cards": 34,
+   "touched": [
+    1,
+    2,
+    3,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+   ],
+   "touched_contrad": [
+    6,
+    9,
+    12
+   ],
+   "n_ccov": 0,
+   "ccov_hits": []
+  },
+  "S4|D07|2": {
+   "n_routes": 4,
+   "n_touched": 10,
+   "n_ev": 12,
+   "n_contrad": 6,
+   "n_cards": 39,
+   "touched": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "touched_contrad": [],
+   "n_ccov": 1,
+   "ccov_hits": [
+    "C8"
+   ]
+  },
+  "B0|D08|1": {
+   "n_routes": 1,
+   "n_touched": 2,
+   "n_ev": 11,
+   "n_contrad": 0,
+   "n_cards": 12,
+   "touched": [
+    1,
+    2
+   ],
+   "touched_contrad": [],
+   "n_ccov": 2,
+   "ccov_hits": [
+    "C2",
+    "C4"
+   ]
+  },
+  "S1|D08|1": {
+   "n_routes": 4,
+   "n_touched": 2,
+   "n_ev": 11,
+   "n_contrad": 2,
+   "n_cards": 36,
+   "touched": [
+    1,
+    2
+   ],
+   "touched_contrad": [],
+   "n_ccov": 0,
+   "ccov_hits": []
+  },
+  "S2|D08|1": {
+   "n_routes": 4,
+   "n_touched": 2,
+   "n_ev": 11,
+   "n_contrad": 7,
+   "n_cards": 46,
+   "touched": [
+    1,
+    2
+   ],
+   "touched_contrad": [],
+   "n_ccov": 0,
+   "ccov_hits": []
+  },
+  "S3|D08|1": {
+   "n_routes": 4,
+   "n_touched": 3,
+   "n_ev": 11,
+   "n_contrad": 1,
+   "n_cards": 42,
+   "touched": [
+    1,
+    2,
+    6
+   ],
+   "touched_contrad": [],
+   "n_ccov": 4,
+   "ccov_hits": [
+    "C2",
+    "C3",
+    "C4",
+    "C5"
+   ]
+  },
+  "S4|D08|1": {
+   "n_routes": 4,
+   "n_touched": 2,
+   "n_ev": 11,
+   "n_contrad": 4,
+   "n_cards": 45,
+   "touched": [
+    1,
+    2
+   ],
+   "touched_contrad": [],
+   "n_ccov": 0,
+   "ccov_hits": []
+  },
+  "B0|D08|2": {
+   "n_routes": 1,
+   "n_touched": 2,
+   "n_ev": 11,
+   "n_contrad": 0,
+   "n_cards": 12,
+   "touched": [
+    1,
+    2
+   ],
+   "touched_contrad": [],
+   "n_ccov": 0,
+   "ccov_hits": []
+  },
+  "S1|D08|2": {
+   "n_routes": 4,
+   "n_touched": 2,
+   "n_ev": 11,
+   "n_contrad": 8,
+   "n_cards": 33,
+   "touched": [
+    1,
+    2
+   ],
+   "touched_contrad": [],
+   "n_ccov": 2,
+   "ccov_hits": [
+    "C2",
+    "C5"
+   ]
+  },
+  "B0|D08|3": {
+   "n_routes": 1,
+   "n_touched": 2,
+   "n_ev": 11,
+   "n_contrad": 1,
+   "n_cards": 12,
+   "touched": [
+    1,
+    2
+   ],
+   "touched_contrad": [],
+   "n_ccov": 0,
+   "ccov_hits": []
+  },
+  "B0|D09|1": {
+   "n_routes": 1,
+   "n_touched": 1,
+   "n_ev": 11,
+   "n_contrad": 1,
+   "n_cards": 11,
+   "touched": [
+    1
+   ],
+   "touched_contrad": [],
+   "n_ccov": 0,
+   "ccov_hits": []
+  },
+  "S4|D09|1": {
+   "n_routes": 4,
+   "n_touched": 4,
+   "n_ev": 11,
+   "n_contrad": 7,
+   "n_cards": 38,
+   "touched": [
+    1,
+    4,
+    5,
+    6
+   ],
+   "touched_contrad": [
+    1
+   ],
+   "n_ccov": 0,
+   "ccov_hits": []
+  },
+  "B0|D09|2": {
+   "n_routes": 1,
+   "n_touched": 2,
+   "n_ev": 11,
+   "n_contrad": 1,
+   "n_cards": 6,
+   "touched": [
+    1,
+    2
+   ],
+   "touched_contrad": [],
+   "n_ccov": 0,
+   "ccov_hits": []
+  },
+  "B0|D09|3": {
+   "n_routes": 1,
+   "n_touched": 2,
+   "n_ev": 11,
+   "n_contrad": 4,
+   "n_cards": 9,
+   "touched": [
+    1,
+    4
+   ],
+   "touched_contrad": [],
+   "n_ccov": 0,
+   "ccov_hits": []
+  }
+ }
+}

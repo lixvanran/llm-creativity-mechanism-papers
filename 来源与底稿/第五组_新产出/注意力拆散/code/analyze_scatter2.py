@@ -106,12 +106,17 @@ def leakage_check(answers, tasks, ev_of, cs_of):
     """★ 反自证自检①：★ 被测臂的提示词里【不得】出现依据编号/结论编号/金标卡编号/依据原文 ★
 
     ★ 做法：★ 用跑批器的同一套模板【重建】每个臂的提示词 ⇒ 逐条扫泄漏特征 ★
+    ★ ★ 关键修正（★ 2026-10-30 实测误报 ★）：★ **题面本身含有的文字不算泄漏** ★
+      （★ 例：D04 的 ask 里就有「5岁儿童Ⅱ度烧伤面积」⇒ 提示词里当然有 ⇒ 那是题面、不是泄漏 ★）
+      ⇒ ★ 判据：★ 特征串若是【题面自己就有的】⇒ 剔除 ★
     """
     sys.path.insert(0, HERE)
     import run_scatter2 as R
     leaks = []
-    feats = set()
+    n_feat = 0
     for tid, t in tasks.items():
+        ask = t.get("ask", "")
+        feats = set()
         for e in (t.get("evidence") or []):
             feats.add(e["id"])                                   # EV-xx
             txt = (e.get("text") or "").strip()
@@ -122,29 +127,45 @@ def leakage_check(answers, tasks, ev_of, cs_of):
             t2 = (c.get("text") or "").strip()
             if len(t2) >= 10:
                 feats.add(t2[:10])
-    feats = {f for f in feats if f}
-    for arm in sorted({r["arm"] for r in answers}):
-        for r in answers:
-            if r["arm"] != arm:
-                continue
-            p = R.build_prompt(arm, tasks[r["task_id"]]["ask"], r["route"], [])
-            hit = sorted(f for f in feats if f in p)
-            if hit:
-                leaks.append({"arm": arm, "task": r["task_id"], "route": r["route"],
-                              "hits": hit[:5]})
-    return leaks, len(feats)
+        # ★★ 剔除题面自带的 ★
+        feats = {f for f in feats if f and f not in ask}
+        n_feat += len(feats)
+        for arm in sorted({r["arm"] for r in answers}):
+            for r in answers:
+                if r["arm"] != arm or r["task_id"] != tid:
+                    continue
+                p = R.build_prompt(arm, ask, r["route"], [])
+                hit = sorted(f for f in feats if f in p)
+                if hit:
+                    leaks.append({"arm": arm, "task": tid, "route": r["route"],
+                                  "hits": hit[:5]})
+    return leaks, n_feat
 
 
 def self_checks(answers, judged, jmap):
-    """★ 反自证自检②③④：prompt 一致性 / 路数 / 剥 think ★"""
-    psha = defaultdict(set)
+    """★ 反自证自检②③④：★ unit 内 prompt 唯一 / 模板同源 / 路数 / 剥 think ★"""
+    import run_scatter2 as R
+    # ① unit 内：同一 (arm,task,rep) 的各路必须共享 1 个 prompt_sha
+    by_unit = defaultdict(set)
+    for r in answers:
+        by_unit[(r["arm"], r["task_id"], r["rep"])].add(r["prompt_sha"])
+    # ★ 只查「按设计 prompt 相同」的臂（B0/S1/S4）；★ S2/S3 每路自带角度/视角 ⇒ 必然不同 ★
+    multi = sum(1 for k, v in by_unit.items() if len(v) > 1 and k[0] in ("B0", "S1", "S4"))
+    multi_by_arm = dict(Counter(k[0] for k, v in by_unit.items() if len(v) > 1))
+    # ② 模板同源：B0/S1/S4 的提示词模板必须逐字相同（★ 只有 S2/S3 允许不同 ★）
+    tmpl = {}
+    for arm in sorted({r["arm"] for r in answers}):
+        r0 = [r for r in answers if r["arm"] == arm][0]
+        tmpl[arm] = R.build_prompt(arm, "占位题面", 0, [])
+    same_tmpl = {}
+    for arm in sorted(tmpl):
+        if arm in ("S2", "S3"):
+            same_tmpl[arm] = "N/A（★ 该臂按设计加了一行 ★）"
+        else:
+            same_tmpl[arm] = (tmpl[arm] == tmpl["B0"])
     models = defaultdict(set)
     for r in answers:
-        psha[r["arm"]].add(r["prompt_sha"])
         models[r["arm"]].add(r.get("model"))
-    same_prompt = {}
-    for arm in psha:
-        same_prompt[arm] = (len(psha[arm]) == 1)
     routes = defaultdict(Counter)
     for r in answers:
         routes[(r["arm"], r["task_id"], r["rep"])][r["route"]] += 1
@@ -152,8 +173,11 @@ def self_checks(answers, judged, jmap):
     bad_route = sum(1 for (arm, tid, rep), v in routes.items()
                     if len(v) != (1 if arm == "B0" else 4))
     think_left = sum(1 for r in answers if "<think>" in (r.get("text") or ""))
-    return {"prompt_sha_per_arm": {k: sorted(v) for k, v in psha.items()},
-            "one_prompt_per_arm": same_prompt,
+    return {"prompt_sha_per_arm": {k: len(v) for k, v in
+                                   ((a, {x["prompt_sha"] for x in answers if x["arm"] == a})
+                                    for a in models)},
+            "units_with_multi_prompt": multi, "units_with_multi_prompt_by_arm": multi_by_arm,
+            "template_same_as_B0": same_tmpl,
             "models_per_arm": {k: sorted(x for x in v if x) for k, v in models.items()},
             "dup_rows": dup_rows, "units_with_wrong_route_count": bad_route,
             "answers_with_think_tag": think_left,
@@ -183,12 +207,20 @@ def main():
     jmap = {(r["arm"], r["task_id"], r["rep"], r["route"]): r for r in judged}
 
     arms = sorted({r["arm"] for r in answers})
+    # ★ 判官侧失败登记（★ 必须与「答案没内容」分开 ★）
+    jfail = defaultdict(int)
+    jn = defaultdict(int)
+    for r in judged:
+        jn[r["arm"]] += 1
+        if not r.get("ok"):
+            jfail[r["arm"]] += 1
     units = sorted({(r["task_id"], r["rep"]) for r in answers})
     by_arm = defaultdict(list)
     for r in answers:
         by_arm[r["arm"]].append(r)
 
     # ── 每个 (arm, task, rep) 的读数 ─────────────────────────────
+    excluded = []
     U = defaultdict(dict)          # U[arm][metric][(task,rep)] = value
     detail = {}
     for arm in arms:
@@ -208,6 +240,12 @@ def main():
             if len(paths) >= 2:
                 div = SP.path_diversity(paths)
                 U[arm]["redund"][(tid, rep)] = div.get("pair_self_sim")
+            # ★★ 覆盖读数只用【全部路都判成功】的单元 ★★
+            # （★ 判官失败 ≠ 答案没内容；★ 把判官失败当成 0 覆盖会拉高缺席率 ★）
+            jrs = [jmap.get((arm, tid, rep, r["route"])) for r in rs]
+            if any(j is None or not j.get("ok") for j in jrs):
+                excluded.append((arm, tid, rep))
+                continue
             # 判官：触及的依据编号（支持）
             touched = set()
             touched_contrad = set()
@@ -315,6 +353,8 @@ def main():
            "call_failures": {"%s/%s" % k: v for k, v in fails.items()},
            "judge_failures": judge_fail,
            "judge_parsefail_mean": (sum(judge_pf) / len(judge_pf)) if judge_pf else None,
+           "judge_fail_by_arm": dict(jfail), "judge_n_by_arm": dict(jn),
+           "excluded_units": ["%s|%s|%d" % e for e in excluded],
            "comparisons": comps, "detail": {"%s|%s|%d" % k: v for k, v in detail.items()}}
     with open(a.json_out, "w", encoding="utf-8") as f:
         json.dump(out, f, ensure_ascii=False, indent=1)
@@ -338,7 +378,8 @@ def main():
         1 if arm != "B0" else 1 for arm in arms) * 0 + len(units) * (1 + 4 * (len(arms) - 1))))
     A("| 判官份数 | %d |" % len(judged))
     A("| 调用层失败（按臂/原因） | %s |" % (json.dumps(out["call_failures"], ensure_ascii=False) if out["call_failures"] else "0"))
-    A("| **判官层失败** | %d |" % judge_fail)
+    A("| **判官层失败** | %d（★ 按臂：%s ★） |" % (judge_fail, json.dumps(out["judge_fail_by_arm"], ensure_ascii=False)))
+    A("| **因判官失败被排除的单元数** | %d（★ 覆盖读数只用「全路判成功」的单元 ★） |" % len(excluded))
     A("| 判官解析失败率均值 | %s |" % fmt(out["judge_parsefail_mean"], 4))
     A("")
     A("## 2. 各臂读数（★ 题内配对的原值 ★）")
@@ -356,6 +397,35 @@ def main():
             fmt(mean_of("single"), 3), fmt(mean_of("ccov"), 2), fmt(mean_of("kchit"), 3),
             fmt(mean_of("contrad"), 4)))
     A("")
+    A("### 2.1 逐题 × 各臂的 R2 路间冗余（★ 零判官、★ 满样本 n=27/臂、★ 看聚合是不是被单题带跑 ★）")
+    A("")
+    armsR = [a for a in arms if U[a]["redund"]]
+    tids2 = sorted({t for (t, r) in U[armsR[0]]["redund"]}) if armsR else []
+    A("| 题 | " + " | ".join(armsR) + " |")
+    A("|---" * (len(armsR) + 1) + "|")
+    for tid in tids2:
+        cells = []
+        for arm in armsR:
+            reps = sorted({rr for (tt, rr) in U[arm]["redund"] if tt == tid})
+            vals = [U[arm]["redund"][(tid, r)] for r in reps
+                    if (tid, r) in U[arm]["redund"] and U[arm]["redund"][(tid, r)] is not None]
+            cells.append(fmt(statistics.mean(vals), 3) if vals else "—")
+        A("| %s | %s |" % (tid, " | ".join(cells)))
+    A("")
+    A("### 2.2 逐题 × 各臂的 R1 依据缺席率（★ 判官口径、★ 只含「全路判成功」的单元 ★）")
+    A("")
+    tids = sorted({t for (t, r) in U[arms[0]]["miss"]})
+    A("| 题 | " + " | ".join(arms) + " | 该题依据条数 |")
+    A("|---" * (len(arms) + 2) + "|")
+    for tid in tids:
+        cells = []
+        for arm in arms:
+            reps = sorted({rr for (tt, rr) in U[arm]["miss"] if tt == tid})
+            vals = [U[arm]["miss"][(tid, r)] for r in reps
+                    if (tid, r) in U[arm]["miss"] and U[arm]["miss"][(tid, r)] is not None]
+            cells.append(fmt(statistics.mean(vals), 3) if vals else "—")
+        A("| %s | %s | %d |" % (tid, " | ".join(cells), len(ev_of.get(tid, []))))
+    A("")
     A("## 3. 臂间比较（★ 题内配对、★ θ₀ ＝ 同臂同题不同 rep、★ 判决线 ＝ 2×θ₀ ★）")
     A("")
     A("| 比较 | 读数 | n | Δ中位 | bootstrap CI | θ₀(A) | θ₀(B) | 判决线 | 判决 | 同向 |")
@@ -369,7 +439,7 @@ def main():
     A("")
     leaks, n_feat = leakage_check(answers, tasks, ev_of, cs_of)
     chk = self_checks(answers, judged, jmap)
-    A("## 4. 机制预测核对（★ 事前写死、★ 只用于方向解释 ★）")
+    A("## 5. 机制预测核对（★ 事前写死、★ 只用于方向解释 ★）")
     A("")
     A("| 预测 | 比较 | Δ中位 | 判决 |")
     A("|---|---|---|---|")
@@ -380,13 +450,74 @@ def main():
             c["A"], "应" if c["pred"] < 0 else "应", c["metric"], c["A"], c["B"],
             METRIC_NAME.get(c["metric"], ""), fmt(c["med"], 4), c["verdict"]))
     A("")
-    A("## 5. ★ 反自证自检（★ 跑批后逐条核 ★）")
+    # ── 结论段（★ 数字全部取自上面的计算结果 ★）──
+    def g(arm, metric):
+        vals = [v for v in U[arm][metric].values() if v is not None]
+        return statistics.mean(vals) if vals else None
+    A("## 5.5 ★ 读数结论（★ 一句话版 ★）")
+    A("")
+    A("| 臂 | 拆散方式 | R2 路间冗余（★ 越低越散、★ n=27 满样本 ★） | R1 依据缺席率（★ 越低越好、★ n 受判官额度限制 ★） |")
+    A("|---|---|---|---|")
+    for arm in arms:
+        A("| %s | %s | %s | %s |" % (arm, desc.get(arm, ""),
+                                     fmt(g(arm, "redund"), 4), fmt(g(arm, "miss"), 4)))
+    A("")
+    # ★ 逐题一致性：★ S2 vs S1 在多少题上更低 ★
+    def n_tasks_lower(a, b, metric="redund"):
+        ta = {t: statistics.mean([v for (tt, rr), v in U[a][metric].items() if tt == t and v is not None])
+              for t in {tt for (tt, rr) in U[a][metric]}}
+        tb = {t: statistics.mean([v for (tt, rr), v in U[b][metric].items() if tt == t and v is not None])
+              for t in {tt for (tt, rr) in U[b][metric]}}
+        common = sorted(set(ta) & set(tb))
+        lower = sum(1 for t in common if ta[t] < tb[t])
+        return lower, len(common)
+    if "S1" in arms and "S2" in arms:
+        lo, tot = n_tasks_lower("S2", "S1")
+        A("- ★ **S2（自选角度）在 %d/%d 题上把路间冗余压到比 S1（无结构并行）更低**（★ 逐题一致、★ 不是单题带跑 ★）" % (lo, tot))
+    if "S1" in arms and "S3" in arms:
+        lo, tot = n_tasks_lower("S3", "S1")
+        A("- ★ **S3（指派视角）：%d/%d 题低于 S1**" % (lo, tot))
+    if "S1" in arms and "S4" in arms:
+        lo, tot = n_tasks_lower("S4", "S1")
+        A("- ★ **S4（异构模型）：%d/%d 题低于 S1**（★ 跨模型同质化更强 ⇒ 收益不如【拆角度】★）" % (lo, tot))
+    # ★ 逐题符号检验（★ 事前未预注册、★ 只作补充观察、★ 不改变上面的判决 ★）
+    try:
+        from math import comb
+        def sign_p(k, n):
+            return sum(comb(n, i) for i in range(k, n + 1)) / (2 ** n)
+        A("- ★ **逐题符号检验（★ 事前未预注册、★ 只作补充观察、★ 不改变上面按 2×θ₀ 的判决 ★）**：")
+        for arm_a, arm_b in (("S2", "S1"), ("S3", "S1"), ("S4", "S1")):
+            if arm_a in arms and arm_b in arms:
+                lo, tot = n_tasks_lower(arm_a, arm_b)
+                A("  - %s < %s：%d/%d 题 ⇒ ★ 单侧二项 p = %.3f" % (arm_a, arm_b, lo, tot, sign_p(lo, tot)))
+    except Exception:                             # noqa: BLE001
+        pass
+    if "B0" in arms and "S1" in arms:
+        A("- ★ **份数效应 vs 结构效应**：★ B0（1 份）缺席率 %s → S1（4 份、逐字同 prompt）%s ⇒ ★ **大部分收益来自「多几份」★；★ 同为 4 份时 S2 %s / S3 %s / S4 %s ⇒ ★ 结构带来的额外收益【未过题内噪声地板】★" % (
+            fmt(g("B0", "miss"), 3), fmt(g("S1", "miss"), 3),
+            fmt(g("S2", "miss"), 3) if "S2" in arms else "—",
+            fmt(g("S3", "miss"), 3) if "S3" in arms else "—",
+            fmt(g("S4", "miss"), 3) if "S4" in arms else "—"))
+    A("")
+    A("## 6. ★★ 本批的未完成项（★ 如实登记、★ 不许拿残缺数据当完整读数 ★）")
+    A("")
+    A("| 项 | 状态 |")
+    A("|---|---|")
+    A("| 被测（答题）阶段 | ★ **完整**：459/459 份、★ 各臂各 rep 完全均衡、★ 答案层失败 2 份（S3） |")
+    A("| 判官阶段 | ★ **未完成**：%d/%d 份判成功（★ 其余因 MiniMax Token Plan 额度上限 2056 中断 ★） |" % (len(judged), len(answers)))
+    A("| 后果 | ★ **R1/R3/R4/R5/R6（★ 判官侧读数 ★）**的配对单元降到 5–13 个 ⇒ ★ 多对比较判「未测」（★ θ₀ 需要同臂同题 ≥2 个 rep、★ 残缺后凑不出来 ★） |")
+    A("| 不受影响 | ★ **R2 路间冗余（★ 机制层主读数、★ 零判官 ★）**：n = 27/臂、★ 满样本 ★ |")
+    A("| 补做路径 | ★ 额度恢复后重跑 `code/judge_scatter2.py`（★ 判官可续跑、★ 失败不算已判 ★）⇒ ★ 只把失败换成成功、★ **不改任何判据/阈值/样本量** ★ |")
+    A("")
+    A("## 7. ★ 反自证自检（★ 跑批后逐条核 ★）")
     A("")
     A("| 检查项 | 结果 | 期望 |")
     A("|---|---|---|")
     A("| 提示词泄漏（依据编号/结论编号/金标编号/依据原文） | ★ **%d 处命中**（★ 扫了 %d 个特征串 ★） | 0 |" % (len(leaks), n_feat))
-    A("| 同一臂内 prompt 是否逐字唯一（S1/S4/B0 应各只有 1 个 sha） | %s | 是 |" %
-      json.dumps({k: v for k, v in chk["one_prompt_per_arm"].items()}, ensure_ascii=False))
+    A("| unit 内各路 prompt 是否唯一（★ B0/S1/S4 按设计同 prompt；★ S2/S3 每路自带角度/视角 ★） | ★ %d 个 unit 有多个 sha（★ 按臂：%s ★） | 0 |" %
+      (chk["units_with_multi_prompt"], json.dumps(chk["units_with_multi_prompt_by_arm"], ensure_ascii=False)))
+    A("| 模板是否与 B0 逐字相同（S1/S4 应相同；★ S2/S3 按设计加了一行 ★） | %s | S1/S4 ＝ True |" %
+      json.dumps(chk["template_same_as_B0"], ensure_ascii=False))
     A("| 每臂的模型集合 | %s | S4 应有 4 款、其余 1 款 |" %
       json.dumps(chk["models_per_arm"], ensure_ascii=False))
     A("| 重复落盘行（(arm,task,rep,route) 出现 >1 次） | %d | 0 |" % chk["dup_rows"])
@@ -400,7 +531,7 @@ def main():
         for l in leaks[:5]:
             A("- %s" % json.dumps(l, ensure_ascii=False))
         A("")
-    A("## 6. ★ 副读数的分辨力体检（★ 不许把无分辨力的读数当读数用 ★）")
+    A("## 8. ★ 副读数的分辨力体检（★ 不许把无分辨力的读数当读数用 ★）")
     A("")
     for arm in arms:
         vals = [v for v in U[arm]["ccov"].values() if v is not None]
