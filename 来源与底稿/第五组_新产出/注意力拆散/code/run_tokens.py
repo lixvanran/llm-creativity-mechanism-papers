@@ -142,24 +142,49 @@ def units_block(units):
 
 
 def parse_json_obj(text):
+    """★ 宽容 JSON 解析（★ 实测踩坑：★ 模型输出常带前言/尾注/代码围栏 ★）
+
+    ★ 依次尝试：① 整段 json.loads ② 第一个 `{` 到最后一个 `}` 的切片
+      ③ 从每个 `{` 起、到其后第一个 `}` 结束的候选
+    ★ 返回 (obj, err)；★ obj 可能是 dict、也可能是 list（★ 裸数组也接受 ★）
+    """
     if not text:
         return None, "empty_text"
-    blob = None
-    for i in range(len(text) - 1, -1, -1):
-        if text[i] == "{":
-            cand = text[i:]
-            if cand.rstrip().endswith("}"):
-                blob = cand
-                break
-    if blob is None:
-        return None, "no_json_block"
-    try:
-        obj = json.loads(blob)
-    except Exception:                            # noqa: BLE001
-        return None, "json_parse_error"
-    if not isinstance(obj, dict):
-        return None, "json_not_object"
-    return obj, None
+    tries = []
+    t = text.strip()
+    tries.append(t)
+    a = t.find("{")
+    b = t.rfind("}")
+    if a != -1 and b > a:
+        tries.append(t[a:b + 1])
+    a2 = t.find("[")
+    b2 = t.rfind("]")
+    if a2 != -1 and b2 > a2:
+        tries.append(t[a2:b2 + 1])
+    for cand in tries:
+        try:
+            obj = json.loads(cand)
+        except Exception:                        # noqa: BLE001
+            continue
+        if isinstance(obj, (dict, list)):
+            return obj, None
+    return None, "json_parse_error"
+
+
+def pick_items(obj, key):
+    """★ 从解析结果里取条目数组（★ 兼容 {"ann":[...]} 与 裸 [...] ★）"""
+    if isinstance(obj, dict):
+        v = obj.get(key)
+        if isinstance(v, list):
+            return [x for x in v if isinstance(x, dict)]
+        # ★ 兜底：找第一个 list 类型的值
+        for vv in obj.values():
+            if isinstance(vv, list) and vv and isinstance(vv[0], dict):
+                return [x for x in vv if isinstance(x, dict)]
+        return []
+    if isinstance(obj, list):
+        return [x for x in obj if isinstance(x, dict)]
+    return []
 
 
 def fmt_checklist(units, ann, probe, mode):
@@ -251,10 +276,9 @@ def main():
         p = P_TAG.replace("{ask}", ask).replace("{units}", units_block(units))
         txt, ok = call(p, "tag")
         obj, err = (parse_json_obj(txt) if ok else (None, "call_failed"))
-        ann = (obj or {}).get("ann") or []
-        ann = [a for a in ann if isinstance(a, dict)]
+        ann = pick_items(obj, "ann") if obj is not None else []
         rec = {"task_id": tid, "rep": rep, "kind": kind, "units": units,
-               "ann": ann, "ok": bool(ok and ann), "err": err,
+               "ann": ann, "ok": bool(ok and ann), "err": err, "raw": (txt or "")[:4000],
                "n_units": len(units), "n_ann": len(ann),
                "prompt_sha": sha(p), "ts": time.time()}
         tmp = fp + ".tmp"
@@ -275,10 +299,10 @@ def main():
              x.get("decisive")) for x in ann]))
         txt, ok = call(p, "probe")
         obj, err = (parse_json_obj(txt) if ok else (None, "call_failed"))
-        probe = (obj or {}).get("probe") or []
-        probe = [x for x in probe if isinstance(x, dict)]
+        probe = pick_items(obj, "probe") if obj is not None else []
         rec = {"task_id": tid, "rep": rep, "kind": kind, "probe": probe,
                "ok": bool(ok and probe), "err": err, "n_probe": len(probe),
+               "raw": (txt or "")[:4000],
                "prompt_sha": sha(p), "ts": time.time()}
         tmp = fp + ".tmp"
         with open(tmp, "w", encoding="utf-8") as f:
