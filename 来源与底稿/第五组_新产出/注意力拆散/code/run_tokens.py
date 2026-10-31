@@ -353,24 +353,49 @@ def main():
     for rep in range(1, a.reps + 1):
         if stop["flag"]:
             break
+        # ★★ 阶段0：★ 预先生成【共享】的阶段1 产物（★ 避免并发写同一文件 ★）
+        #   kind: tok（T1/T2 共用）｜ tok_shuf（T3）｜ sent（T4）
+        need = set()
         for arm in arms:
-            if stop["flag"]:
+            st = ARM_STAGES[arm]
+            if st and st[0] in ("tag", "tag_shuf", "tag_sent"):
+                kind = {"tag": "tok", "tag_shuf": "tok_shuf", "tag_sent": "sent"}[st[0]]
+                for task in tasks:
+                    need.add((task["task_id"], kind))
+        pending = [(t, [x for x in tasks if x["task_id"] == t][0]["ask"], k)
+                   for t, k in sorted(need)
+                   if not os.path.exists(os.path.join(a.out_dir, "ann",
+                                                      "%s_%s_rep%d.json" % (t, k, rep)))]
+        if pending:
+            print("[rep %d] 预生成阶段1：%d 次（★ 并发 %d ★）" % (rep, len(pending), a.max_workers), flush=True)
+            try:
+                with ThreadPoolExecutor(max_workers=a.max_workers) as ex:
+                    list(ex.map(lambda x: stage_tag(x[0], x[1], rep, x[2]), pending))
+            except QuotaExhausted:
+                print("[QUOTA] 2056 用量上限 ⇒ 立即停", flush=True)
+                stop["flag"] = True
                 break
-            for task in tasks:
-                if stop["flag"]:
-                    break
-                tid = task["task_id"]
-                if (arm, tid, rep) in seen:
-                    continue
-                try:
-                    run_arm_unit(arm, task, rep)
-                except QuotaExhausted:
-                    print("[QUOTA] 2056 用量上限 ⇒ 立即停", flush=True)
-                    stop["flag"] = True
-                    break
-                flush()
-                print("[%6.1fs] %s %s rep%d | rows=%d fails=%d" %
-                      (time.time() - t0, arm, tid, rep, len(_rows), llm.failures), flush=True)
+            flush()
+        # ★★ 阶段1：★ 单元并行（★ 各臂 × 各题 同时跑 ★）★★
+        units = [(arm, task) for arm in arms for task in tasks
+                 if (arm, task["task_id"], rep) not in seen]
+        if units:
+            print("[rep %d] 跑 %d 个单元（★ 并发 %d ★）" % (rep, len(units), a.max_workers), flush=True)
+
+            def _one(u):
+                arm, task = u
+                run_arm_unit(arm, task, rep)
+            try:
+                with ThreadPoolExecutor(max_workers=a.max_workers) as ex:
+                    futs = [ex.submit(_one, u) for u in units]
+                    for f in futs:
+                        f.result()
+            except QuotaExhausted:
+                print("[QUOTA] 2056 用量上限 ⇒ 立即停", flush=True)
+                stop["flag"] = True
+            flush()
+            print("[%6.1fs] rep%d 单元完成 | rows=%d fails=%d" %
+                  (time.time() - t0, rep, len(_rows), llm.failures), flush=True)
         flush()
         st = llm.stats()
         meta = {"run_id": a.run_id, "dev_sha": dev_sha, "reps": a.reps, "arms": arms,
