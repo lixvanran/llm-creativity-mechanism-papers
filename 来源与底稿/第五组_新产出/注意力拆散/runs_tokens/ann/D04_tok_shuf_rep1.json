@@ -1,0 +1,387 @@
+{
+ "task_id": "D04",
+ "rep": 1,
+ "kind": "tok_shuf",
+ "units": [
+  "岁",
+  "？",
+  "童",
+  "人",
+  "5",
+  "按",
+  "成",
+  "急",
+  "Ⅱ",
+  "烧",
+  "哪",
+  "12%",
+  "一",
+  "面",
+  "伤",
+  "120",
+  "部",
+  "伤",
+  "级",
+  "积",
+  "是",
+  "公",
+  "标",
+  "：",
+  "？",
+  "度",
+  "？",
+  "度",
+  "烧",
+  "指",
+  "属",
+  "烧",
+  "哪",
+  "判",
+  "度",
+  "属",
+  "否",
+  "级",
+  "定",
+  "Ⅱ",
+  "Ⅲ",
+  "面",
+  "面",
+  "征",
+  "伤",
+  "开",
+  "18%",
+  "准",
+  "儿",
+  "属",
+  "诊",
+  "积",
+  "一"
+ ],
+ "ann": [
+  {
+   "i": 1,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "限定儿童年龄主体"
+  },
+  {
+   "i": 2,
+   "role": "其他",
+   "decisive": true,
+   "gloss": "年龄单位“岁”"
+  },
+  {
+   "i": 3,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "限定儿童为5岁"
+  },
+  {
+   "i": 4,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "限定成人伤情判断"
+  },
+  {
+   "i": 5,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "给出儿童年龄数值"
+  },
+  {
+   "i": 6,
+   "role": "动作",
+   "decisive": false,
+   "gloss": "引出按公开标准判定"
+  },
+  {
+   "i": 7,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "限定成人烧伤分级"
+  },
+  {
+   "i": 8,
+   "role": "条件",
+   "decisive": true,
+   "gloss": "构成急诊120判断条件"
+  },
+  {
+   "i": 9,
+   "role": "修饰",
+   "decisive": true,
+   "gloss": "标明成人为Ⅱ度烧伤"
+  },
+  {
+   "i": 10,
+   "role": "修饰",
+   "decisive": true,
+   "gloss": "指明成人烧伤伤情"
+  },
+  {
+   "i": 11,
+   "role": "动作",
+   "decisive": true,
+   "gloss": "询问成人烧伤等级"
+  },
+  {
+   "i": 12,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "给出成人Ⅱ度面积比例"
+  },
+  {
+   "i": 13,
+   "role": "其他",
+   "decisive": true,
+   "gloss": "表示一级烧伤等级"
+  },
+  {
+   "i": 14,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "限定发生Ⅲ度烧伤的部位"
+  },
+  {
+   "i": 15,
+   "role": "修饰",
+   "decisive": true,
+   "gloss": "指明面部烧伤伤情"
+  },
+  {
+   "i": 16,
+   "role": "其他",
+   "decisive": true,
+   "gloss": "指代急救医疗服务"
+  },
+  {
+   "i": 17,
+   "role": "修饰",
+   "decisive": true,
+   "gloss": "指明烧伤发生在面部"
+  },
+  {
+   "i": 18,
+   "role": "修饰",
+   "decisive": true,
+   "gloss": "指明面部烧伤伤情"
+  },
+  {
+   "i": 19,
+   "role": "其他",
+   "decisive": true,
+   "gloss": "表示烧伤严重程度等级"
+  },
+  {
+   "i": 20,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "给出成人烧伤面积比例"
+  },
+  {
+   "i": 21,
+   "role": "动作",
+   "decisive": false,
+   "gloss": "询问是否属于该指征"
+  },
+  {
+   "i": 22,
+   "role": "其他",
+   "decisive": true,
+   "gloss": "限定采用公开判定标准"
+  },
+  {
+   "i": 23,
+   "role": "其他",
+   "decisive": true,
+   "gloss": "构成“公开标准”表述"
+  },
+  {
+   "i": 24,
+   "role": "标点",
+   "decisive": false,
+   "gloss": "分隔判定要求与问题"
+  },
+  {
+   "i": 25,
+   "role": "其他",
+   "decisive": true,
+   "gloss": "表示面部Ⅲ度急诊指征问题"
+  },
+  {
+   "i": 26,
+   "role": "修饰",
+   "decisive": true,
+   "gloss": "标明成人为Ⅱ度烧伤"
+  },
+  {
+   "i": 27,
+   "role": "其他",
+   "decisive": true,
+   "gloss": "表示成人烧伤等级问题"
+  },
+  {
+   "i": 28,
+   "role": "修饰",
+   "decisive": true,
+   "gloss": "标明儿童为Ⅱ度烧伤"
+  },
+  {
+   "i": 29,
+   "role": "修饰",
+   "decisive": true,
+   "gloss": "指明儿童烧伤伤情"
+  },
+  {
+   "i": 30,
+   "role": "其他",
+   "decisive": true,
+   "gloss": "表示急诊120指征判定"
+  },
+  {
+   "i": 31,
+   "role": "动作",
+   "decisive": true,
+   "gloss": "询问是否属于急诊指征"
+  },
+  {
+   "i": 32,
+   "role": "修饰",
+   "decisive": true,
+   "gloss": "指明儿童烧伤伤情"
+  },
+  {
+   "i": 33,
+   "role": "动作",
+   "decisive": true,
+   "gloss": "询问儿童烧伤等级"
+  },
+  {
+   "i": 34,
+   "role": "动作",
+   "decisive": true,
+   "gloss": "指明按标准进行判定"
+  },
+  {
+   "i": 35,
+   "role": "修饰",
+   "decisive": true,
+   "gloss": "标明儿童为Ⅱ度烧伤"
+  },
+  {
+   "i": 36,
+   "role": "动作",
+   "decisive": true,
+   "gloss": "询问儿童烧伤等级"
+  },
+  {
+   "i": 37,
+   "role": "动作",
+   "decisive": false,
+   "gloss": "给出否定急诊指征答案"
+  },
+  {
+   "i": 38,
+   "role": "其他",
+   "decisive": true,
+   "gloss": "表示烧伤严重程度等级"
+  },
+  {
+   "i": 39,
+   "role": "动作",
+   "decisive": true,
+   "gloss": "指明依据公开标准判定"
+  },
+  {
+   "i": 40,
+   "role": "修饰",
+   "decisive": true,
+   "gloss": "标明成人为Ⅱ度烧伤"
+  },
+  {
+   "i": 41,
+   "role": "修饰",
+   "decisive": true,
+   "gloss": "标明面部为Ⅲ度烧伤"
+  },
+  {
+   "i": 42,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "限定发生Ⅲ度烧伤的部位"
+  },
+  {
+   "i": 43,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "限定面部急诊指征判断"
+  },
+  {
+   "i": 44,
+   "role": "其他",
+   "decisive": true,
+   "gloss": "表示急诊120指征"
+  },
+  {
+   "i": 45,
+   "role": "修饰",
+   "decisive": true,
+   "gloss": "指明面部烧伤伤情"
+  },
+  {
+   "i": 46,
+   "role": "动作",
+   "decisive": false,
+   "gloss": "引出公开判定标准"
+  },
+  {
+   "i": 47,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "给出儿童Ⅱ度面积比例"
+  },
+  {
+   "i": 48,
+   "role": "其他",
+   "decisive": true,
+   "gloss": "构成“公开标准”表述"
+  },
+  {
+   "i": 49,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "限定儿童烧伤分级"
+  },
+  {
+   "i": 50,
+   "role": "动作",
+   "decisive": true,
+   "gloss": "询问是否属于该等级"
+  },
+  {
+   "i": 51,
+   "role": "其他",
+   "decisive": true,
+   "gloss": "指代急诊医疗服务"
+  },
+  {
+   "i": 52,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "给出成人烧伤面积比例"
+  },
+  {
+   "i": 53,
+   "role": "其他",
+   "decisive": true,
+   "gloss": "表示一级烧伤等级"
+  }
+ ],
+ "ok": true,
+ "err": null,
+ "raw": "{\"ann\":[{\"i\":1,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"限定儿童年龄主体\"},{\"i\":2,\"role\":\"其他\",\"decisive\":true,\"gloss\":\"年龄单位“岁”\"},{\"i\":3,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"限定儿童为5岁\"},{\"i\":4,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"限定成人伤情判断\"},{\"i\":5,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"给出儿童年龄数值\"},{\"i\":6,\"role\":\"动作\",\"decisive\":false,\"gloss\":\"引出按公开标准判定\"},{\"i\":7,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"限定成人烧伤分级\"},{\"i\":8,\"role\":\"条件\",\"decisive\":true,\"gloss\":\"构成急诊120判断条件\"},{\"i\":9,\"role\":\"修饰\",\"decisive\":true,\"gloss\":\"标明成人为Ⅱ度烧伤\"},{\"i\":10,\"role\":\"修饰\",\"decisive\":true,\"gloss\":\"指明成人烧伤伤情\"},{\"i\":11,\"role\":\"动作\",\"decisive\":true,\"gloss\":\"询问成人烧伤等级\"},{\"i\":12,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"给出成人Ⅱ度面积比例\"},{\"i\":13,\"role\":\"其他\",\"decisive\":true,\"gloss\":\"表示一级烧伤等级\"},{\"i\":14,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"限定发生Ⅲ度烧伤的部位\"},{\"i\":15,\"role\":\"修饰\",\"decisive\":true,\"gloss\":\"指明面部烧伤伤情\"},{\"i\":16,\"role\":\"其他\",\"decisive\":true,\"gloss\":\"指代急救医疗服务\"},{\"i\":17,\"role\":\"修饰\",\"decisive\":true,\"gloss\":\"指明烧伤发生在面部\"},{\"i\":18,\"role\":\"修饰\",\"decisive\":true,\"gloss\":\"指明面部烧伤伤情\"},{\"i\":19,\"role\":\"其他\",\"decisive\":true,\"gloss\":\"表示烧伤严重程度等级\"},{\"i\":20,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"给出成人烧伤面积比例\"},{\"i\":21,\"role\":\"动作\",\"decisive\":false,\"gloss\":\"询问是否属于该指征\"},{\"i\":22,\"role\":\"其他\",\"decisive\":true,\"gloss\":\"限定采用公开判定标准\"},{\"i\":23,\"role\":\"其他\",\"decisive\":true,\"gloss\":\"构成“公开标准”表述\"},{\"i\":24,\"role\":\"标点\",\"decisive\":false,\"gloss\":\"分隔判定要求与问题\"},{\"i\":25,\"role\":\"其他\",\"decisive\":true,\"gloss\":\"表示面部Ⅲ度急诊指征问题\"},{\"i\":26,\"role\":\"修饰\",\"decisive\":true,\"gloss\":\"标明成人为Ⅱ度烧伤\"},{\"i\":27,\"role\":\"其他\",\"decisive\":true,\"gloss\":\"表示成人烧伤等级问题\"},{\"i\":28,\"role\":\"修饰\",\"decisive\":true,\"gloss\":\"标明儿童为Ⅱ度烧伤\"},{\"i\":29,\"role\":\"修饰\",\"decisive\":true,\"gloss\":\"指明儿童烧伤伤情\"},{\"i\":30,\"role\":\"其他\",\"decisive\":true,\"gloss\":\"表示急诊120指征判定\"},{\"i\":31,\"role\":\"动作\",\"decisive\":true,\"gloss\":\"询问是否属于急诊指征\"},{\"i\":32,\"role\":\"修饰\",\"decisive\":true,\"gloss\":\"指明儿童烧伤伤情\"},{\"i\":33,\"role\":\"动作\",\"decisive\":true,\"gloss\":\"询问儿童烧伤等级\"},{\"i\":34,\"role\":\"动作\",\"decisive\":true,\"gloss\":\"指明按标准进行判定\"},{\"i\":35,\"role\":\"修饰\",\"decisive\":true,\"gloss\":\"标明儿童为Ⅱ度烧伤\"},{\"i\":36,\"role\":\"动作\",\"decisive\":true,\"gloss\":\"询问儿童烧伤等级\"},{\"i\":37,\"role\":\"动作\",\"decisive\":false,\"gloss\":\"给出否定急诊指征答案\"},{\"i\":38,\"role\":\"其他\",\"decisive\":true,\"gloss\":\"表示烧伤严重程度等级\"},{\"i\":39,\"role\":\"动作\",\"decisive\":true,\"gloss\":\"指明依据公开标准判定\"},{\"i\":40,\"role\":\"修饰\",\"decisive\":true,\"gloss\":\"标明成人为Ⅱ度烧伤\"},{\"i\":41,\"role\":\"修饰\",\"decisive\":true,\"gloss\":\"标明面部为Ⅲ度烧伤\"},{\"i\":42,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"限定发生Ⅲ度烧伤的部位\"},{\"i\":43,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"限定面部急诊指征判断\"},{\"i\":44,\"role\":\"其他\",\"decisive\":true,\"gloss\":\"表示急诊120指征\"},{\"i\":45,\"role\":\"修饰\",\"decisive\":true,\"gloss\":\"指明面部烧伤伤情\"},{\"i\":46,\"role\":\"动作\",\"decisive\":false,\"gloss\":\"引出公开判定标准\"},{\"i\":47,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"给出儿童Ⅱ度面积比例\"},{\"i\":48,\"role\":\"其他\",\"decisive\":true,\"gloss\":\"构成“公开标准”表述\"},{\"i\":49,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"限定儿童烧伤分级\"},{\"i\":50,\"role\":\"动作\",\"decisive\":true,\"gloss\":\"询问是否属于该等级\"},{\"i\":51,\"role\":\"其他\",\"decisive\":true,\"gloss\":\"指代急诊医疗服务\"},{\"i\":52,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"给出成人烧伤面积比例\"},{\"i\":53,\"role\":\"其他\",\"decisive\":true,\"gloss\":\"表示一级烧伤等级\"}]}",
+ "n_units": 53,
+ "n_ann": 53,
+ "prompt_sha": "ccea72034ac49f3f",
+ "ts": 1793408928.0943124
+}

@@ -1,0 +1,30 @@
+{
+ "task_id": "D02",
+ "rep": 3,
+ "kind": "sent",
+ "units": [
+  "网关：①上游无效响应→502 ②上游未响应→504 ③后端过载→503 ④请求过多→503。",
+  "哪几项正确？"
+ ],
+ "ann": [
+  {
+   "i": 1,
+   "role": "条件",
+   "decisive": true,
+   "gloss": "列出四类网关响应映射"
+  },
+  {
+   "i": 2,
+   "role": "动作",
+   "decisive": true,
+   "gloss": "要求逐项判断映射正确性"
+  }
+ ],
+ "ok": true,
+ "err": null,
+ "raw": "{\"ann\":[{\"i\":1,\"role\":\"条件\",\"decisive\":true,\"gloss\":\"列出四类网关响应映射\"},{\"i\":2,\"role\":\"动作\",\"decisive\":true,\"gloss\":\"要求逐项判断映射正确性\"}]}",
+ "n_units": 2,
+ "n_ann": 2,
+ "prompt_sha": "05443d96ba2c25d4",
+ "ts": 1793410355.9869795
+}

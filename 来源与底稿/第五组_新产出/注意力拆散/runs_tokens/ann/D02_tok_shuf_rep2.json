@@ -1,0 +1,303 @@
+{
+ "task_id": "D02",
+ "rep": 2,
+ "kind": "tok_shuf",
+ "units": [
+  "后",
+  "过",
+  "？",
+  "项",
+  "多",
+  "应",
+  "502",
+  "无",
+  "网",
+  "端",
+  "请",
+  "应",
+  "响",
+  "→",
+  "。",
+  "②",
+  "求",
+  "503",
+  "几",
+  "哪",
+  "效",
+  "响",
+  "关",
+  "503",
+  "→",
+  "④",
+  "→",
+  "正",
+  "①",
+  "游",
+  "③",
+  "游",
+  "过",
+  "确",
+  "上",
+  "：",
+  "→",
+  "上",
+  "载",
+  "未",
+  "504"
+ ],
+ "ann": [
+  {
+   "i": 1,
+   "role": "动作",
+   "decisive": false,
+   "gloss": "组成“后端过载”"
+  },
+  {
+   "i": 2,
+   "role": "动作",
+   "decisive": false,
+   "gloss": "组成“后端过载”"
+  },
+  {
+   "i": 3,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "待判定项"
+  },
+  {
+   "i": 4,
+   "role": "量词",
+   "decisive": true,
+   "gloss": "限定可判定项数量"
+  },
+  {
+   "i": 5,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "表示多项"
+  },
+  {
+   "i": 6,
+   "role": "动作",
+   "decisive": false,
+   "gloss": "构成“应”"
+  },
+  {
+   "i": 7,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "上游无效响应对应502"
+  },
+  {
+   "i": 8,
+   "role": "修饰",
+   "decisive": false,
+   "gloss": "修饰响应"
+  },
+  {
+   "i": 9,
+   "role": "主体",
+   "decisive": false,
+   "gloss": "组成“网关”"
+  },
+  {
+   "i": 10,
+   "role": "主体",
+   "decisive": false,
+   "gloss": "组成“网关”"
+  },
+  {
+   "i": 11,
+   "role": "动作",
+   "decisive": false,
+   "gloss": "构成“请求”"
+  },
+  {
+   "i": 12,
+   "role": "动作",
+   "decisive": false,
+   "gloss": "构成“请求”"
+  },
+  {
+   "i": 13,
+   "role": "动作",
+   "decisive": false,
+   "gloss": "构成“响应”"
+  },
+  {
+   "i": 14,
+   "role": "连接",
+   "decisive": false,
+   "gloss": "连接条件与状态码"
+  },
+  {
+   "i": 15,
+   "role": "标点",
+   "decisive": false,
+   "gloss": "句末标点"
+  },
+  {
+   "i": 16,
+   "role": "其他",
+   "decisive": true,
+   "gloss": "第二项判定条件"
+  },
+  {
+   "i": 17,
+   "role": "动作",
+   "decisive": false,
+   "gloss": "构成“请求”"
+  },
+  {
+   "i": 18,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "上游未响应对应504"
+  },
+  {
+   "i": 19,
+   "role": "动作",
+   "decisive": false,
+   "gloss": "构成问句"
+  },
+  {
+   "i": 20,
+   "role": "动作",
+   "decisive": false,
+   "gloss": "构成问句"
+  },
+  {
+   "i": 21,
+   "role": "修饰",
+   "decisive": false,
+   "gloss": "修饰响应"
+  },
+  {
+   "i": 22,
+   "role": "动作",
+   "decisive": false,
+   "gloss": "构成“响应”"
+  },
+  {
+   "i": 23,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "关联条件与状态码"
+  },
+  {
+   "i": 24,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "后端过载对应503"
+  },
+  {
+   "i": 25,
+   "role": "连接",
+   "decisive": false,
+   "gloss": "连接条件与状态码"
+  },
+  {
+   "i": 26,
+   "role": "其他",
+   "decisive": true,
+   "gloss": "第四项判定条件"
+  },
+  {
+   "i": 27,
+   "role": "连接",
+   "decisive": false,
+   "gloss": "连接条件与状态码"
+  },
+  {
+   "i": 28,
+   "role": "动作",
+   "decisive": false,
+   "gloss": "构成“正确”"
+  },
+  {
+   "i": 29,
+   "role": "其他",
+   "decisive": true,
+   "gloss": "第一项判定条件"
+  },
+  {
+   "i": 30,
+   "role": "主体",
+   "decisive": false,
+   "gloss": "指向上游"
+  },
+  {
+   "i": 31,
+   "role": "其他",
+   "decisive": true,
+   "gloss": "第三项判定条件"
+  },
+  {
+   "i": 32,
+   "role": "主体",
+   "decisive": false,
+   "gloss": "指向上游"
+  },
+  {
+   "i": 33,
+   "role": "动作",
+   "decisive": false,
+   "gloss": "构成“过载”"
+  },
+  {
+   "i": 34,
+   "role": "动作",
+   "decisive": false,
+   "gloss": "构成“正确”"
+  },
+  {
+   "i": 35,
+   "role": "主体",
+   "decisive": false,
+   "gloss": "指向上游"
+  },
+  {
+   "i": 36,
+   "role": "标点",
+   "decisive": false,
+   "gloss": "引出映射内容"
+  },
+  {
+   "i": 37,
+   "role": "连接",
+   "decisive": false,
+   "gloss": "连接条件与状态码"
+  },
+  {
+   "i": 38,
+   "role": "主体",
+   "decisive": false,
+   "gloss": "指向上游"
+  },
+  {
+   "i": 39,
+   "role": "动作",
+   "decisive": false,
+   "gloss": "构成“过载”"
+  },
+  {
+   "i": 40,
+   "role": "动作",
+   "decisive": false,
+   "gloss": "构成“未响应”"
+  },
+  {
+   "i": 41,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "上游未响应对应504"
+  }
+ ],
+ "ok": true,
+ "err": null,
+ "raw": "{\"ann\":[{\"i\":1,\"role\":\"动作\",\"decisive\":false,\"gloss\":\"组成“后端过载”\"},{\"i\":2,\"role\":\"动作\",\"decisive\":false,\"gloss\":\"组成“后端过载”\"},{\"i\":3,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"待判定项\"},{\"i\":4,\"role\":\"量词\",\"decisive\":true,\"gloss\":\"限定可判定项数量\"},{\"i\":5,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"表示多项\"},{\"i\":6,\"role\":\"动作\",\"decisive\":false,\"gloss\":\"构成“应”\"},{\"i\":7,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"上游无效响应对应502\"},{\"i\":8,\"role\":\"修饰\",\"decisive\":false,\"gloss\":\"修饰响应\"},{\"i\":9,\"role\":\"主体\",\"decisive\":false,\"gloss\":\"组成“网关”\"},{\"i\":10,\"role\":\"主体\",\"decisive\":false,\"gloss\":\"组成“网关”\"},{\"i\":11,\"role\":\"动作\",\"decisive\":false,\"gloss\":\"构成“请求”\"},{\"i\":12,\"role\":\"动作\",\"decisive\":false,\"gloss\":\"构成“请求”\"},{\"i\":13,\"role\":\"动作\",\"decisive\":false,\"gloss\":\"构成“响应”\"},{\"i\":14,\"role\":\"连接\",\"decisive\":false,\"gloss\":\"连接条件与状态码\"},{\"i\":15,\"role\":\"标点\",\"decisive\":false,\"gloss\":\"句末标点\"},{\"i\":16,\"role\":\"其他\",\"decisive\":true,\"gloss\":\"第二项判定条件\"},{\"i\":17,\"role\":\"动作\",\"decisive\":false,\"gloss\":\"构成“请求”\"},{\"i\":18,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"上游未响应对应504\"},{\"i\":19,\"role\":\"动作\",\"decisive\":false,\"gloss\":\"构成问句\"},{\"i\":20,\"role\":\"动作\",\"decisive\":false,\"gloss\":\"构成问句\"},{\"i\":21,\"role\":\"修饰\",\"decisive\":false,\"gloss\":\"修饰响应\"},{\"i\":22,\"role\":\"动作\",\"decisive\":false,\"gloss\":\"构成“响应”\"},{\"i\":23,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"关联条件与状态码\"},{\"i\":24,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"后端过载对应503\"},{\"i\":25,\"role\":\"连接\",\"decisive\":false,\"gloss\":\"连接条件与状态码\"},{\"i\":26,\"role\":\"其他\",\"decisive\":true,\"gloss\":\"第四项判定条件\"},{\"i\":27,\"role\":\"连接\",\"decisive\":false,\"gloss\":\"连接条件与状态码\"},{\"i\":28,\"role\":\"动作\",\"decisive\":false,\"gloss\":\"构成“正确”\"},{\"i\":29,\"role\":\"其他\",\"decisive\":true,\"gloss\":\"第一项判定条件\"},{\"i\":30,\"role\":\"主体\",\"decisive\":false,\"gloss\":\"指向上游\"},{\"i\":31,\"role\":\"其他\",\"decisive\":true,\"gloss\":\"第三项判定条件\"},{\"i\":32,\"role\":\"主体\",\"decisive\":false,\"gloss\":\"指向上游\"},{\"i\":33,\"role\":\"动作\",\"decisive\":false,\"gloss\":\"构成“过载”\"},{\"i\":34,\"role\":\"动作\",\"decisive\":false,\"gloss\":\"构成“正确”\"},{\"i\":35,\"role\":\"主体\",\"decisive\":false,\"gloss\":\"指向上游\"},{\"i\":36,\"role\":\"标点\",\"decisive\":false,\"gloss\":\"引出映射内容\"},{\"i\":37,\"role\":\"连接\",\"decisive\":false,\"gloss\":\"连接条件与状态码\"},{\"i\":38,\"role\":\"主体\",\"decisive\":false,\"gloss\":\"指向上游\"},{\"i\":39,\"role\":\"动作\",\"decisive\":false,\"gloss\":\"构成“过载”\"},{\"i\":40,\"role\":\"动作\",\"decisive\":false,\"gloss\":\"构成“未响应”\"},{\"i\":41,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"上游未响应对应504\"}]}",
+ "n_units": 41,
+ "n_ann": 41,
+ "prompt_sha": "270060c850901510",
+ "ts": 1793409577.4144585
+}

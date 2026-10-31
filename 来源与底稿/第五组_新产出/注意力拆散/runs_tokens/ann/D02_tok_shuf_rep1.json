@@ -1,0 +1,303 @@
+{
+ "task_id": "D02",
+ "rep": 1,
+ "kind": "tok_shuf",
+ "units": [
+  "后",
+  "过",
+  "？",
+  "项",
+  "多",
+  "应",
+  "502",
+  "无",
+  "网",
+  "端",
+  "请",
+  "应",
+  "响",
+  "→",
+  "。",
+  "②",
+  "求",
+  "503",
+  "几",
+  "哪",
+  "效",
+  "响",
+  "关",
+  "503",
+  "→",
+  "④",
+  "→",
+  "正",
+  "①",
+  "游",
+  "③",
+  "游",
+  "过",
+  "确",
+  "上",
+  "：",
+  "→",
+  "上",
+  "载",
+  "未",
+  "504"
+ ],
+ "ann": [
+  {
+   "i": 1,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "题项作“后端过载”"
+  },
+  {
+   "i": 2,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "题项作“后端过载”"
+  },
+  {
+   "i": 3,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "题项作“后端过载”"
+  },
+  {
+   "i": 4,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "题项作“后端过载”"
+  },
+  {
+   "i": 5,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "题项作“后端过载”"
+  },
+  {
+   "i": 6,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "题项作“后端过载”"
+  },
+  {
+   "i": 7,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "无效响应对应502"
+  },
+  {
+   "i": 8,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "题项作“后端过载”"
+  },
+  {
+   "i": 9,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "题项作“后端过载”"
+  },
+  {
+   "i": 10,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "题项作“后端过载”"
+  },
+  {
+   "i": 11,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "题项作“后端过载”"
+  },
+  {
+   "i": 12,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "题项作“后端过载”"
+  },
+  {
+   "i": 13,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "题项作“后端过载”"
+  },
+  {
+   "i": 14,
+   "role": "连接",
+   "decisive": false,
+   "gloss": "连接情形与状态码"
+  },
+  {
+   "i": 15,
+   "role": "标点",
+   "decisive": false,
+   "gloss": "句末标点"
+  },
+  {
+   "i": 16,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "列出第二项情形"
+  },
+  {
+   "i": 17,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "题项作“后端过载”"
+  },
+  {
+   "i": 18,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "请求过多对应503"
+  },
+  {
+   "i": 19,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "题项作“后端过载”"
+  },
+  {
+   "i": 20,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "题项作“后端过载”"
+  },
+  {
+   "i": 21,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "题项作“后端过载”"
+  },
+  {
+   "i": 22,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "题项作“后端过载”"
+  },
+  {
+   "i": 23,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "题项作“后端过载”"
+  },
+  {
+   "i": 24,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "后端过载对应503"
+  },
+  {
+   "i": 25,
+   "role": "连接",
+   "decisive": false,
+   "gloss": "连接情形与状态码"
+  },
+  {
+   "i": 26,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "列出第四项情形"
+  },
+  {
+   "i": 27,
+   "role": "连接",
+   "decisive": false,
+   "gloss": "连接情形与状态码"
+  },
+  {
+   "i": 28,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "题项作“后端过载”"
+  },
+  {
+   "i": 29,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "列出第一项情形"
+  },
+  {
+   "i": 30,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "题项作“后端过载”"
+  },
+  {
+   "i": 31,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "列出第三项情形"
+  },
+  {
+   "i": 32,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "题项作“后端过载”"
+  },
+  {
+   "i": 33,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "题项作“后端过载”"
+  },
+  {
+   "i": 34,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "题项作“后端过载”"
+  },
+  {
+   "i": 35,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "题项作“后端过载”"
+  },
+  {
+   "i": 36,
+   "role": "标点",
+   "decisive": false,
+   "gloss": "引出映射内容"
+  },
+  {
+   "i": 37,
+   "role": "连接",
+   "decisive": false,
+   "gloss": "连接情形与状态码"
+  },
+  {
+   "i": 38,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "题项作“后端过载”"
+  },
+  {
+   "i": 39,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "题项作“后端过载”"
+  },
+  {
+   "i": 40,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "题项作“后端过载”"
+  },
+  {
+   "i": 41,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "上游未响应对应504"
+  }
+ ],
+ "ok": true,
+ "err": null,
+ "raw": "{\"ann\":[{\"i\":1,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"题项作“后端过载”\"},{\"i\":2,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"题项作“后端过载”\"},{\"i\":3,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"题项作“后端过载”\"},{\"i\":4,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"题项作“后端过载”\"},{\"i\":5,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"题项作“后端过载”\"},{\"i\":6,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"题项作“后端过载”\"},{\"i\":7,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"无效响应对应502\"},{\"i\":8,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"题项作“后端过载”\"},{\"i\":9,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"题项作“后端过载”\"},{\"i\":10,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"题项作“后端过载”\"},{\"i\":11,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"题项作“后端过载”\"},{\"i\":12,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"题项作“后端过载”\"},{\"i\":13,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"题项作“后端过载”\"},{\"i\":14,\"role\":\"连接\",\"decisive\":false,\"gloss\":\"连接情形与状态码\"},{\"i\":15,\"role\":\"标点\",\"decisive\":false,\"gloss\":\"句末标点\"},{\"i\":16,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"列出第二项情形\"},{\"i\":17,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"题项作“后端过载”\"},{\"i\":18,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"请求过多对应503\"},{\"i\":19,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"题项作“后端过载”\"},{\"i\":20,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"题项作“后端过载”\"},{\"i\":21,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"题项作“后端过载”\"},{\"i\":22,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"题项作“后端过载”\"},{\"i\":23,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"题项作“后端过载”\"},{\"i\":24,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"后端过载对应503\"},{\"i\":25,\"role\":\"连接\",\"decisive\":false,\"gloss\":\"连接情形与状态码\"},{\"i\":26,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"列出第四项情形\"},{\"i\":27,\"role\":\"连接\",\"decisive\":false,\"gloss\":\"连接情形与状态码\"},{\"i\":28,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"题项作“后端过载”\"},{\"i\":29,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"列出第一项情形\"},{\"i\":30,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"题项作“后端过载”\"},{\"i\":31,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"列出第三项情形\"},{\"i\":32,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"题项作“后端过载”\"},{\"i\":33,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"题项作“后端过载”\"},{\"i\":34,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"题项作“后端过载”\"},{\"i\":35,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"题项作“后端过载”\"},{\"i\":36,\"role\":\"标点\",\"decisive\":false,\"gloss\":\"引出映射内容\"},{\"i\":37,\"role\":\"连接\",\"decisive\":false,\"gloss\":\"连接情形与状态码\"},{\"i\":38,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"题项作“后端过载”\"},{\"i\":39,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"题项作“后端过载”\"},{\"i\":40,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"题项作“后端过载”\"},{\"i\":41,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"上游未响应对应504\"}]}",
+ "n_units": 41,
+ "n_ann": 41,
+ "prompt_sha": "270060c850901510",
+ "ts": 1793408930.614255
+}

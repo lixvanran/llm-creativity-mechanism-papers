@@ -1,0 +1,233 @@
+{
+ "task_id": "D01",
+ "rep": 2,
+ "kind": "tok",
+ "units": [
+  "990",
+  "PRO",
+  "1TB",
+  "：",
+  "①",
+  "顺",
+  "序",
+  "读",
+  "7450MB/s",
+  "②",
+  "随",
+  "机",
+  "读",
+  "140",
+  "万",
+  "IOPS",
+  "③",
+  "保",
+  "修",
+  "5",
+  "年",
+  "④",
+  "耐",
+  "久",
+  "600TBW",
+  "。",
+  "哪",
+  "些",
+  "正",
+  "确",
+  "？"
+ ],
+ "ann": [
+  {
+   "i": 1,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "固态硬盘型号"
+  },
+  {
+   "i": 2,
+   "role": "修饰",
+   "decisive": true,
+   "gloss": "标识产品系列等级"
+  },
+  {
+   "i": 3,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "标称存储容量"
+  },
+  {
+   "i": 4,
+   "role": "标点",
+   "decisive": false,
+   "gloss": "引出规格说明"
+  },
+  {
+   "i": 5,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "标记第一项规格"
+  },
+  {
+   "i": 6,
+   "role": "动作",
+   "decisive": true,
+   "gloss": "限定读取方式"
+  },
+  {
+   "i": 7,
+   "role": "动作",
+   "decisive": true,
+   "gloss": "限定读取方式"
+  },
+  {
+   "i": 8,
+   "role": "动作",
+   "decisive": true,
+   "gloss": "限定性能指标"
+  },
+  {
+   "i": 9,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "顺序读取速度"
+  },
+  {
+   "i": 10,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "标记第二项规格"
+  },
+  {
+   "i": 11,
+   "role": "动作",
+   "decisive": true,
+   "gloss": "限定读取方式"
+  },
+  {
+   "i": 12,
+   "role": "动作",
+   "decisive": true,
+   "gloss": "限定读取方式"
+  },
+  {
+   "i": 13,
+   "role": "动作",
+   "decisive": true,
+   "gloss": "限定性能指标"
+  },
+  {
+   "i": 14,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "随机读取次数"
+  },
+  {
+   "i": 15,
+   "role": "单位",
+   "decisive": true,
+   "gloss": "表示一万次"
+  },
+  {
+   "i": 16,
+   "role": "单位",
+   "decisive": true,
+   "gloss": "每秒读写次数单位"
+  },
+  {
+   "i": 17,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "标记第三项规格"
+  },
+  {
+   "i": 18,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "售后保障项目"
+  },
+  {
+   "i": 19,
+   "role": "动作",
+   "decisive": true,
+   "gloss": "表示提供保修"
+  },
+  {
+   "i": 20,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "保修期限长度"
+  },
+  {
+   "i": 21,
+   "role": "单位",
+   "decisive": true,
+   "gloss": "表示年"
+  },
+  {
+   "i": 22,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "标记第四项规格"
+  },
+  {
+   "i": 23,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "使用寿命指标"
+  },
+  {
+   "i": 24,
+   "role": "动作",
+   "decisive": true,
+   "gloss": "表示耐久特性"
+  },
+  {
+   "i": 25,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "额定写入总量"
+  },
+  {
+   "i": 26,
+   "role": "标点",
+   "decisive": false,
+   "gloss": "结束规格列举"
+  },
+  {
+   "i": 27,
+   "role": "动作",
+   "decisive": true,
+   "gloss": "提出判断要求"
+  },
+  {
+   "i": 28,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "询问符合项数量"
+  },
+  {
+   "i": 29,
+   "role": "动作",
+   "decisive": true,
+   "gloss": "要求判定真伪"
+  },
+  {
+   "i": 30,
+   "role": "动作",
+   "decisive": true,
+   "gloss": "要求判断符合性"
+  },
+  {
+   "i": 31,
+   "role": "标点",
+   "decisive": false,
+   "gloss": "结束疑问句"
+  }
+ ],
+ "ok": true,
+ "err": null,
+ "raw": "{\"ann\":[{\"i\":1,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"固态硬盘型号\"},{\"i\":2,\"role\":\"修饰\",\"decisive\":true,\"gloss\":\"标识产品系列等级\"},{\"i\":3,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"标称存储容量\"},{\"i\":4,\"role\":\"标点\",\"decisive\":false,\"gloss\":\"引出规格说明\"},{\"i\":5,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"标记第一项规格\"},{\"i\":6,\"role\":\"动作\",\"decisive\":true,\"gloss\":\"限定读取方式\"},{\"i\":7,\"role\":\"动作\",\"decisive\":true,\"gloss\":\"限定读取方式\"},{\"i\":8,\"role\":\"动作\",\"decisive\":true,\"gloss\":\"限定性能指标\"},{\"i\":9,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"顺序读取速度\"},{\"i\":10,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"标记第二项规格\"},{\"i\":11,\"role\":\"动作\",\"decisive\":true,\"gloss\":\"限定读取方式\"},{\"i\":12,\"role\":\"动作\",\"decisive\":true,\"gloss\":\"限定读取方式\"},{\"i\":13,\"role\":\"动作\",\"decisive\":true,\"gloss\":\"限定性能指标\"},{\"i\":14,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"随机读取次数\"},{\"i\":15,\"role\":\"单位\",\"decisive\":true,\"gloss\":\"表示一万次\"},{\"i\":16,\"role\":\"单位\",\"decisive\":true,\"gloss\":\"每秒读写次数单位\"},{\"i\":17,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"标记第三项规格\"},{\"i\":18,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"售后保障项目\"},{\"i\":19,\"role\":\"动作\",\"decisive\":true,\"gloss\":\"表示提供保修\"},{\"i\":20,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"保修期限长度\"},{\"i\":21,\"role\":\"单位\",\"decisive\":true,\"gloss\":\"表示年\"},{\"i\":22,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"标记第四项规格\"},{\"i\":23,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"使用寿命指标\"},{\"i\":24,\"role\":\"动作\",\"decisive\":true,\"gloss\":\"表示耐久特性\"},{\"i\":25,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"额定写入总量\"},{\"i\":26,\"role\":\"标点\",\"decisive\":false,\"gloss\":\"结束规格列举\"},{\"i\":27,\"role\":\"动作\",\"decisive\":true,\"gloss\":\"提出判断要求\"},{\"i\":28,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"询问符合项数量\"},{\"i\":29,\"role\":\"动作\",\"decisive\":true,\"gloss\":\"要求判定真伪\"},{\"i\":30,\"role\":\"动作\",\"decisive\":true,\"gloss\":\"要求判断符合性\"},{\"i\":31,\"role\":\"标点\",\"decisive\":false,\"gloss\":\"结束疑问句\"}]}",
+ "n_units": 31,
+ "n_ann": 31,
+ "prompt_sha": "ac5af3bca7709d3f",
+ "ts": 1793409565.7004688
+}

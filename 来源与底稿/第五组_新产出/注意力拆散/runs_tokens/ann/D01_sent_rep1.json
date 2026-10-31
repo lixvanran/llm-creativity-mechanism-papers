@@ -1,0 +1,102 @@
+{
+ "task_id": "D01",
+ "rep": 1,
+ "kind": "sent",
+ "units": [
+  "990 PRO 1TB：①顺序读7450MB/s ②随机读140万IOPS ③保修5年 ④耐久600TBW。",
+  "哪些正确？"
+ ],
+ "ann": [
+  {
+   "i": 1,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "产品主体为990 PRO 1TB"
+  },
+  {
+   "i": 2,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "给出顺序读取速度数值"
+  },
+  {
+   "i": 3,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "给出顺序读取速度单位"
+  },
+  {
+   "i": 4,
+   "role": "动作",
+   "decisive": true,
+   "gloss": "限定为顺序读取"
+  },
+  {
+   "i": 5,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "给出随机读取IOPS数值"
+  },
+  {
+   "i": 6,
+   "role": "单位",
+   "decisive": true,
+   "gloss": "给出随机读取IOPS单位"
+  },
+  {
+   "i": 7,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "给出随机读取性能数值"
+  },
+  {
+   "i": 8,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "给出保修年限数值"
+  },
+  {
+   "i": 9,
+   "role": "单位",
+   "decisive": true,
+   "gloss": "给出保修年限单位"
+  },
+  {
+   "i": 10,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "给出耐久写入量数值"
+  },
+  {
+   "i": 11,
+   "role": "单位",
+   "decisive": true,
+   "gloss": "给出耐久写入量单位"
+  },
+  {
+   "i": 12,
+   "role": "连接",
+   "decisive": false,
+   "gloss": "连接产品与性能参数"
+  },
+  {
+   "i": 13,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "题问各项是否正确"
+  },
+  {
+   "i": 14,
+   "role": "动作",
+   "decisive": true,
+   "gloss": "要求判定正确性"
+  }
+ ],
+ "ok": true,
+ "err": null,
+ "raw": "{\"ann\":[{\"i\":1,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"产品主体为990 PRO 1TB\"},{\"i\":2,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"给出顺序读取速度数值\"},{\"i\":3,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"给出顺序读取速度单位\"},{\"i\":4,\"role\":\"动作\",\"decisive\":true,\"gloss\":\"限定为顺序读取\"},{\"i\":5,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"给出随机读取IOPS数值\"},{\"i\":6,\"role\":\"单位\",\"decisive\":true,\"gloss\":\"给出随机读取IOPS单位\"},{\"i\":7,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"给出随机读取性能数值\"},{\"i\":8,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"给出保修年限数值\"},{\"i\":9,\"role\":\"单位\",\"decisive\":true,\"gloss\":\"给出保修年限单位\"},{\"i\":10,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"给出耐久写入量数值\"},{\"i\":11,\"role\":\"单位\",\"decisive\":true,\"gloss\":\"给出耐久写入量单位\"},{\"i\":12,\"role\":\"连接\",\"decisive\":false,\"gloss\":\"连接产品与性能参数\"},{\"i\":13,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"题问各项是否正确\"},{\"i\":14,\"role\":\"动作\",\"decisive\":true,\"gloss\":\"要求判定正确性\"}]}",
+ "n_units": 2,
+ "n_ann": 14,
+ "prompt_sha": "f40b518f0be09086",
+ "ts": 1793408924.007378
+}

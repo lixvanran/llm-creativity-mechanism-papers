@@ -1,0 +1,233 @@
+{
+ "task_id": "D01",
+ "rep": 3,
+ "kind": "tok_shuf",
+ "units": [
+  "机",
+  "随",
+  "哪",
+  "990",
+  "140",
+  "①",
+  "年",
+  "修",
+  "耐",
+  "。",
+  "5",
+  "？",
+  "万",
+  "正",
+  "保",
+  "7450MB/s",
+  "些",
+  "：",
+  "顺",
+  "④",
+  "IOPS",
+  "确",
+  "序",
+  "PRO",
+  "③",
+  "1TB",
+  "读",
+  "久",
+  "600TBW",
+  "读",
+  "②"
+ ],
+ "ann": [
+  {
+   "i": 1,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "指代题述产品"
+  },
+  {
+   "i": 2,
+   "role": "条件",
+   "decisive": true,
+   "gloss": "引出随机读性能"
+  },
+  {
+   "i": 3,
+   "role": "动作",
+   "decisive": true,
+   "gloss": "提出询问哪些正确"
+  },
+  {
+   "i": 4,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "产品型号数值"
+  },
+  {
+   "i": 5,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "随机读性能数值"
+  },
+  {
+   "i": 6,
+   "role": "其他",
+   "decisive": true,
+   "gloss": "标记第一项说法"
+  },
+  {
+   "i": 7,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "保修年限数值"
+  },
+  {
+   "i": 8,
+   "role": "动作",
+   "decisive": true,
+   "gloss": "表示保修行为"
+  },
+  {
+   "i": 9,
+   "role": "动作",
+   "decisive": true,
+   "gloss": "表示耐久性能"
+  },
+  {
+   "i": 10,
+   "role": "标点",
+   "decisive": false,
+   "gloss": "句末标点"
+  },
+  {
+   "i": 11,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "保修年限数值"
+  },
+  {
+   "i": 12,
+   "role": "标点",
+   "decisive": false,
+   "gloss": "疑问标点"
+  },
+  {
+   "i": 13,
+   "role": "单位",
+   "decisive": true,
+   "gloss": "表示随机读数量单位"
+  },
+  {
+   "i": 14,
+   "role": "动作",
+   "decisive": true,
+   "gloss": "表示读取行为"
+  },
+  {
+   "i": 15,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "指保修服务"
+  },
+  {
+   "i": 16,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "顺序读速度数值"
+  },
+  {
+   "i": 17,
+   "role": "动作",
+   "decisive": true,
+   "gloss": "指代需要判定的项目"
+  },
+  {
+   "i": 18,
+   "role": "标点",
+   "decisive": false,
+   "gloss": "提示列举内容"
+  },
+  {
+   "i": 19,
+   "role": "条件",
+   "decisive": true,
+   "gloss": "限定读取为顺序读"
+  },
+  {
+   "i": 20,
+   "role": "其他",
+   "decisive": true,
+   "gloss": "标记第四项说法"
+  },
+  {
+   "i": 21,
+   "role": "单位",
+   "decisive": true,
+   "gloss": "随机读性能单位"
+  },
+  {
+   "i": 22,
+   "role": "动作",
+   "decisive": true,
+   "gloss": "表示判断动作"
+  },
+  {
+   "i": 23,
+   "role": "条件",
+   "decisive": true,
+   "gloss": "限定读取为顺序读"
+  },
+  {
+   "i": 24,
+   "role": "修饰",
+   "decisive": true,
+   "gloss": "标识产品系列等级"
+  },
+  {
+   "i": 25,
+   "role": "其他",
+   "decisive": true,
+   "gloss": "标记第三项说法"
+  },
+  {
+   "i": 26,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "产品容量数值"
+  },
+  {
+   "i": 27,
+   "role": "动作",
+   "decisive": true,
+   "gloss": "表示读取行为"
+  },
+  {
+   "i": 28,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "保修年限数值"
+  },
+  {
+   "i": 29,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "耐久写入量数值"
+  },
+  {
+   "i": 30,
+   "role": "动作",
+   "decisive": true,
+   "gloss": "表示读取行为"
+  },
+  {
+   "i": 31,
+   "role": "其他",
+   "decisive": true,
+   "gloss": "标记第二项说法"
+  }
+ ],
+ "ok": true,
+ "err": null,
+ "raw": "{\"ann\":[{\"i\":1,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"指代题述产品\"},{\"i\":2,\"role\":\"条件\",\"decisive\":true,\"gloss\":\"引出随机读性能\"},{\"i\":3,\"role\":\"动作\",\"decisive\":true,\"gloss\":\"提出询问哪些正确\"},{\"i\":4,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"产品型号数值\"},{\"i\":5,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"随机读性能数值\"},{\"i\":6,\"role\":\"其他\",\"decisive\":true,\"gloss\":\"标记第一项说法\"},{\"i\":7,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"保修年限数值\"},{\"i\":8,\"role\":\"动作\",\"decisive\":true,\"gloss\":\"表示保修行为\"},{\"i\":9,\"role\":\"动作\",\"decisive\":true,\"gloss\":\"表示耐久性能\"},{\"i\":10,\"role\":\"标点\",\"decisive\":false,\"gloss\":\"句末标点\"},{\"i\":11,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"保修年限数值\"},{\"i\":12,\"role\":\"标点\",\"decisive\":false,\"gloss\":\"疑问标点\"},{\"i\":13,\"role\":\"单位\",\"decisive\":true,\"gloss\":\"表示随机读数量单位\"},{\"i\":14,\"role\":\"动作\",\"decisive\":true,\"gloss\":\"表示读取行为\"},{\"i\":15,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"指保修服务\"},{\"i\":16,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"顺序读速度数值\"},{\"i\":17,\"role\":\"动作\",\"decisive\":true,\"gloss\":\"指代需要判定的项目\"},{\"i\":18,\"role\":\"标点\",\"decisive\":false,\"gloss\":\"提示列举内容\"},{\"i\":19,\"role\":\"条件\",\"decisive\":true,\"gloss\":\"限定读取为顺序读\"},{\"i\":20,\"role\":\"其他\",\"decisive\":true,\"gloss\":\"标记第四项说法\"},{\"i\":21,\"role\":\"单位\",\"decisive\":true,\"gloss\":\"随机读性能单位\"},{\"i\":22,\"role\":\"动作\",\"decisive\":true,\"gloss\":\"表示判断动作\"},{\"i\":23,\"role\":\"条件\",\"decisive\":true,\"gloss\":\"限定读取为顺序读\"},{\"i\":24,\"role\":\"修饰\",\"decisive\":true,\"gloss\":\"标识产品系列等级\"},{\"i\":25,\"role\":\"其他\",\"decisive\":true,\"gloss\":\"标记第三项说法\"},{\"i\":26,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"产品容量数值\"},{\"i\":27,\"role\":\"动作\",\"decisive\":true,\"gloss\":\"表示读取行为\"},{\"i\":28,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"保修年限数值\"},{\"i\":29,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"耐久写入量数值\"},{\"i\":30,\"role\":\"动作\",\"decisive\":true,\"gloss\":\"表示读取行为\"},{\"i\":31,\"role\":\"其他\",\"decisive\":true,\"gloss\":\"标记第二项说法\"}]}",
+ "n_units": 31,
+ "n_ann": 31,
+ "prompt_sha": "2646f7cdb0354f9f",
+ "ts": 1793410354.3112924
+}

@@ -1,0 +1,85 @@
+{
+ "task_id": "D08",
+ "rep": 2,
+ "kind": "sent",
+ "units": [
+  "2026年一级建造师：甲工程类专科、施工管理3年11个月；",
+  "乙工学门类本科、3年；",
+  "丙工学门类硕士、1年8个月，谁可报名？"
+ ],
+ "ann": [
+  {
+   "i": 1,
+   "role": "条件",
+   "decisive": true,
+   "gloss": "限定2026年一级建造师"
+  },
+  {
+   "i": 2,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "甲为工程类专科"
+  },
+  {
+   "i": 3,
+   "role": "条件",
+   "decisive": true,
+   "gloss": "甲从事施工管理"
+  },
+  {
+   "i": 4,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "甲工作满三年十一个月"
+  },
+  {
+   "i": 5,
+   "role": "标点",
+   "decisive": false,
+   "gloss": "分隔甲的信息"
+  },
+  {
+   "i": 6,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "乙为工学门类本科"
+  },
+  {
+   "i": 7,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "乙工作满三年"
+  },
+  {
+   "i": 8,
+   "role": "标点",
+   "decisive": false,
+   "gloss": "分隔乙的信息"
+  },
+  {
+   "i": 9,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "丙为工学门类硕士"
+  },
+  {
+   "i": 10,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "丙工作一年八个月"
+  },
+  {
+   "i": 11,
+   "role": "动作",
+   "decisive": false,
+   "gloss": "询问三人的报名资格"
+  }
+ ],
+ "ok": true,
+ "err": null,
+ "raw": "{\"ann\":[{\"i\":1,\"role\":\"条件\",\"decisive\":true,\"gloss\":\"限定2026年一级建造师\"},{\"i\":2,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"甲为工程类专科\"},{\"i\":3,\"role\":\"条件\",\"decisive\":true,\"gloss\":\"甲从事施工管理\"},{\"i\":4,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"甲工作满三年十一个月\"},{\"i\":5,\"role\":\"标点\",\"decisive\":false,\"gloss\":\"分隔甲的信息\"},{\"i\":6,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"乙为工学门类本科\"},{\"i\":7,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"乙工作满三年\"},{\"i\":8,\"role\":\"标点\",\"decisive\":false,\"gloss\":\"分隔乙的信息\"},{\"i\":9,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"丙为工学门类硕士\"},{\"i\":10,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"丙工作一年八个月\"},{\"i\":11,\"role\":\"动作\",\"decisive\":false,\"gloss\":\"询问三人的报名资格\"}]}",
+ "n_units": 3,
+ "n_ann": 11,
+ "prompt_sha": "c9ec61a98c05391a",
+ "ts": 1793409693.8377337
+}

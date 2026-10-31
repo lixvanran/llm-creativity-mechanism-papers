@@ -1,0 +1,401 @@
+{
+ "task_id": "D08",
+ "rep": 2,
+ "kind": "tok",
+ "units": [
+  "2026",
+  "年",
+  "一",
+  "级",
+  "建",
+  "造",
+  "师",
+  "：",
+  "甲",
+  "工",
+  "程",
+  "类",
+  "专",
+  "科",
+  "、",
+  "施",
+  "工",
+  "管",
+  "理",
+  "3",
+  "年",
+  "11",
+  "个",
+  "月",
+  "；",
+  "乙",
+  "工",
+  "学",
+  "门",
+  "类",
+  "本",
+  "科",
+  "、",
+  "3",
+  "年",
+  "；",
+  "丙",
+  "工",
+  "学",
+  "门",
+  "类",
+  "硕",
+  "士",
+  "、",
+  "1",
+  "年",
+  "8",
+  "个",
+  "月",
+  "，",
+  "谁",
+  "可",
+  "报",
+  "名",
+  "？"
+ ],
+ "ann": [
+  {
+   "i": 1,
+   "role": "条件",
+   "decisive": true,
+   "gloss": "限定考试年份"
+  },
+  {
+   "i": 2,
+   "role": "单位",
+   "decisive": false,
+   "gloss": "年份单位"
+  },
+  {
+   "i": 3,
+   "role": "修饰",
+   "decisive": true,
+   "gloss": "表示执业资格等级"
+  },
+  {
+   "i": 4,
+   "role": "修饰",
+   "decisive": false,
+   "gloss": "构成等级名称"
+  },
+  {
+   "i": 5,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "考试名称用字"
+  },
+  {
+   "i": 6,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "考试名称用字"
+  },
+  {
+   "i": 7,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "考试名称用字"
+  },
+  {
+   "i": 8,
+   "role": "标点",
+   "decisive": false,
+   "gloss": "引出考生情形"
+  },
+  {
+   "i": 9,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "考生甲"
+  },
+  {
+   "i": 10,
+   "role": "条件",
+   "decisive": true,
+   "gloss": "限定专业类别"
+  },
+  {
+   "i": 11,
+   "role": "条件",
+   "decisive": true,
+   "gloss": "限定工程专业类别"
+  },
+  {
+   "i": 12,
+   "role": "修饰",
+   "decisive": true,
+   "gloss": "限定报考专业"
+  },
+  {
+   "i": 13,
+   "role": "条件",
+   "decisive": true,
+   "gloss": "限定第一学历层次"
+  },
+  {
+   "i": 14,
+   "role": "条件",
+   "decisive": true,
+   "gloss": "表示专科学历"
+  },
+  {
+   "i": 15,
+   "role": "标点",
+   "decisive": false,
+   "gloss": "分隔学历与年限"
+  },
+  {
+   "i": 16,
+   "role": "条件",
+   "decisive": true,
+   "gloss": "限定工作或专业领域"
+  },
+  {
+   "i": 17,
+   "role": "条件",
+   "decisive": true,
+   "gloss": "限定施工管理类别"
+  },
+  {
+   "i": 18,
+   "role": "条件",
+   "decisive": true,
+   "gloss": "限定施工管理类别"
+  },
+  {
+   "i": 19,
+   "role": "条件",
+   "decisive": true,
+   "gloss": "限定工作年限类别"
+  },
+  {
+   "i": 20,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "工作年限数值"
+  },
+  {
+   "i": 21,
+   "role": "单位",
+   "decisive": true,
+   "gloss": "工作年限单位"
+  },
+  {
+   "i": 22,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "剩余工作月数"
+  },
+  {
+   "i": 23,
+   "role": "单位",
+   "decisive": true,
+   "gloss": "工作月数单位"
+  },
+  {
+   "i": 24,
+   "role": "单位",
+   "decisive": true,
+   "gloss": "工作月数单位"
+  },
+  {
+   "i": 25,
+   "role": "标点",
+   "decisive": false,
+   "gloss": "分隔考生情形"
+  },
+  {
+   "i": 26,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "考生乙"
+  },
+  {
+   "i": 27,
+   "role": "条件",
+   "decisive": true,
+   "gloss": "限定学科门类"
+  },
+  {
+   "i": 28,
+   "role": "条件",
+   "decisive": true,
+   "gloss": "限定工学学科门类"
+  },
+  {
+   "i": 29,
+   "role": "条件",
+   "decisive": true,
+   "gloss": "限定学科门类"
+  },
+  {
+   "i": 30,
+   "role": "条件",
+   "decisive": true,
+   "gloss": "限定工学门类"
+  },
+  {
+   "i": 31,
+   "role": "条件",
+   "decisive": true,
+   "gloss": "限定第一学历层次"
+  },
+  {
+   "i": 32,
+   "role": "条件",
+   "decisive": true,
+   "gloss": "表示本科学历"
+  },
+  {
+   "i": 33,
+   "role": "标点",
+   "decisive": false,
+   "gloss": "分隔学历与年限"
+  },
+  {
+   "i": 34,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "工作年限数值"
+  },
+  {
+   "i": 35,
+   "role": "单位",
+   "decisive": true,
+   "gloss": "工作年限单位"
+  },
+  {
+   "i": 36,
+   "role": "标点",
+   "decisive": false,
+   "gloss": "分隔考生情形"
+  },
+  {
+   "i": 37,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "考生丙"
+  },
+  {
+   "i": 38,
+   "role": "条件",
+   "decisive": true,
+   "gloss": "限定学科门类"
+  },
+  {
+   "i": 39,
+   "role": "条件",
+   "decisive": true,
+   "gloss": "限定工学学科门类"
+  },
+  {
+   "i": 40,
+   "role": "条件",
+   "decisive": true,
+   "gloss": "限定学科门类"
+  },
+  {
+   "i": 41,
+   "role": "条件",
+   "decisive": true,
+   "gloss": "限定工学门类"
+  },
+  {
+   "i": 42,
+   "role": "条件",
+   "decisive": true,
+   "gloss": "限定最高学历层次"
+  },
+  {
+   "i": 43,
+   "role": "条件",
+   "decisive": true,
+   "gloss": "表示硕士学历"
+  },
+  {
+   "i": 44,
+   "role": "标点",
+   "decisive": false,
+   "gloss": "分隔学历与年限"
+  },
+  {
+   "i": 45,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "工作年限数值"
+  },
+  {
+   "i": 46,
+   "role": "单位",
+   "decisive": true,
+   "gloss": "工作年限单位"
+  },
+  {
+   "i": 47,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "剩余工作月数"
+  },
+  {
+   "i": 48,
+   "role": "单位",
+   "decisive": true,
+   "gloss": "工作月数单位"
+  },
+  {
+   "i": 49,
+   "role": "单位",
+   "decisive": true,
+   "gloss": "工作月数单位"
+  },
+  {
+   "i": 50,
+   "role": "标点",
+   "decisive": false,
+   "gloss": "分隔情形与问题"
+  },
+  {
+   "i": 51,
+   "role": "动作",
+   "decisive": true,
+   "gloss": "询问具备报名资格者"
+  },
+  {
+   "i": 52,
+   "role": "动作",
+   "decisive": true,
+   "gloss": "表示报考行为"
+  },
+  {
+   "i": 53,
+   "role": "动作",
+   "decisive": true,
+   "gloss": "表示报名行为"
+  },
+  {
+   "i": 54,
+   "role": "动作",
+   "decisive": true,
+   "gloss": "表示报名行为"
+  },
+  {
+   "i": 55,
+   "role": "标点",
+   "decisive": false,
+   "gloss": "结束疑问句"
+  }
+ ],
+ "ok": true,
+ "err": null,
+ "raw": "{\"ann\":[{\"i\":1,\"role\":\"条件\",\"decisive\":true,\"gloss\":\"限定考试年份\"},{\"i\":2,\"role\":\"单位\",\"decisive\":false,\"gloss\":\"年份单位\"},{\"i\":3,\"role\":\"修饰\",\"decisive\":true,\"gloss\":\"表示执业资格等级\"},{\"i\":4,\"role\":\"修饰\",\"decisive\":false,\"gloss\":\"构成等级名称\"},{\"i\":5,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"考试名称用字\"},{\"i\":6,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"考试名称用字\"},{\"i\":7,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"考试名称用字\"},{\"i\":8,\"role\":\"标点\",\"decisive\":false,\"gloss\":\"引出考生情形\"},{\"i\":9,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"考生甲\"},{\"i\":10,\"role\":\"条件\",\"decisive\":true,\"gloss\":\"限定专业类别\"},{\"i\":11,\"role\":\"条件\",\"decisive\":true,\"gloss\":\"限定工程专业类别\"},{\"i\":12,\"role\":\"修饰\",\"decisive\":true,\"gloss\":\"限定报考专业\"},{\"i\":13,\"role\":\"条件\",\"decisive\":true,\"gloss\":\"限定第一学历层次\"},{\"i\":14,\"role\":\"条件\",\"decisive\":true,\"gloss\":\"表示专科学历\"},{\"i\":15,\"role\":\"标点\",\"decisive\":false,\"gloss\":\"分隔学历与年限\"},{\"i\":16,\"role\":\"条件\",\"decisive\":true,\"gloss\":\"限定工作或专业领域\"},{\"i\":17,\"role\":\"条件\",\"decisive\":true,\"gloss\":\"限定施工管理类别\"},{\"i\":18,\"role\":\"条件\",\"decisive\":true,\"gloss\":\"限定施工管理类别\"},{\"i\":19,\"role\":\"条件\",\"decisive\":true,\"gloss\":\"限定工作年限类别\"},{\"i\":20,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"工作年限数值\"},{\"i\":21,\"role\":\"单位\",\"decisive\":true,\"gloss\":\"工作年限单位\"},{\"i\":22,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"剩余工作月数\"},{\"i\":23,\"role\":\"单位\",\"decisive\":true,\"gloss\":\"工作月数单位\"},{\"i\":24,\"role\":\"单位\",\"decisive\":true,\"gloss\":\"工作月数单位\"},{\"i\":25,\"role\":\"标点\",\"decisive\":false,\"gloss\":\"分隔考生情形\"},{\"i\":26,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"考生乙\"},{\"i\":27,\"role\":\"条件\",\"decisive\":true,\"gloss\":\"限定学科门类\"},{\"i\":28,\"role\":\"条件\",\"decisive\":true,\"gloss\":\"限定工学学科门类\"},{\"i\":29,\"role\":\"条件\",\"decisive\":true,\"gloss\":\"限定学科门类\"},{\"i\":30,\"role\":\"条件\",\"decisive\":true,\"gloss\":\"限定工学门类\"},{\"i\":31,\"role\":\"条件\",\"decisive\":true,\"gloss\":\"限定第一学历层次\"},{\"i\":32,\"role\":\"条件\",\"decisive\":true,\"gloss\":\"表示本科学历\"},{\"i\":33,\"role\":\"标点\",\"decisive\":false,\"gloss\":\"分隔学历与年限\"},{\"i\":34,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"工作年限数值\"},{\"i\":35,\"role\":\"单位\",\"decisive\":true,\"gloss\":\"工作年限单位\"},{\"i\":36,\"role\":\"标点\",\"decisive\":false,\"gloss\":\"分隔考生情形\"},{\"i\":37,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"考生丙\"},{\"i\":38,\"role\":\"条件\",\"decisive\":true,\"gloss\":\"限定学科门类\"},{\"i\":39,\"role\":\"条件\",\"decisive\":true,\"gloss\":\"限定工学学科门类\"},{\"i\":40,\"role\":\"条件\",\"decisive\":true,\"gloss\":\"限定学科门类\"},{\"i\":41,\"role\":\"条件\",\"decisive\":true,\"gloss\":\"限定工学门类\"},{\"i\":42,\"role\":\"条件\",\"decisive\":true,\"gloss\":\"限定最高学历层次\"},{\"i\":43,\"role\":\"条件\",\"decisive\":true,\"gloss\":\"表示硕士学历\"},{\"i\":44,\"role\":\"标点\",\"decisive\":false,\"gloss\":\"分隔学历与年限\"},{\"i\":45,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"工作年限数值\"},{\"i\":46,\"role\":\"单位\",\"decisive\":true,\"gloss\":\"工作年限单位\"},{\"i\":47,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"剩余工作月数\"},{\"i\":48,\"role\":\"单位\",\"decisive\":true,\"gloss\":\"工作月数单位\"},{\"i\":49,\"role\":\"单位\",\"decisive\":true,\"gloss\":\"工作月数单位\"},{\"i\":50,\"role\":\"标点\",\"decisive\":false,\"gloss\":\"分隔情形与问题\"},{\"i\":51,\"role\":\"动作\",\"decisive\":true,\"gloss\":\"询问具备报名资格者\"},{\"i\":52,\"role\":\"动作\",\"decisive\":true,\"gloss\":\"表示报考行为\"},{\"i\":53,\"role\":\"动作\",\"decisive\":true,\"gloss\":\"表示报名行为\"},{\"i\":54,\"role\":\"动作\",\"decisive\":true,\"gloss\":\"表示报名行为\"},{\"i\":55,\"role\":\"标点\",\"decisive\":false,\"gloss\":\"结束疑问句\"}]}",
+ "n_units": 55,
+ "n_ann": 55,
+ "prompt_sha": "036220a8994cfda5",
+ "ts": 1793409701.8912256
+}

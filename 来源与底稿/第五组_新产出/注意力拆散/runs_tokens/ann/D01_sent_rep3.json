@@ -1,0 +1,144 @@
+{
+ "task_id": "D01",
+ "rep": 3,
+ "kind": "sent",
+ "units": [
+  "990 PRO 1TB：①顺序读7450MB/s ②随机读140万IOPS ③保修5年 ④耐久600TBW。",
+  "哪些正确？"
+ ],
+ "ann": [
+  {
+   "i": 1,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "限定受测产品型号与容量"
+  },
+  {
+   "i": 2,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "给出顺序读取速度"
+  },
+  {
+   "i": 3,
+   "role": "单位",
+   "decisive": true,
+   "gloss": "标明速度单位"
+  },
+  {
+   "i": 4,
+   "role": "修饰",
+   "decisive": true,
+   "gloss": "限定读取为顺序方式"
+  },
+  {
+   "i": 5,
+   "role": "动作",
+   "decisive": true,
+   "gloss": "表示读取操作"
+  },
+  {
+   "i": 6,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "给出随机读取性能"
+  },
+  {
+   "i": 7,
+   "role": "单位",
+   "decisive": true,
+   "gloss": "标明每秒操作次数"
+  },
+  {
+   "i": 8,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "给出随机读取IOPS"
+  },
+  {
+   "i": 9,
+   "role": "修饰",
+   "decisive": true,
+   "gloss": "限定读取为随机方式"
+  },
+  {
+   "i": 10,
+   "role": "动作",
+   "decisive": true,
+   "gloss": "表示读取操作"
+  },
+  {
+   "i": 11,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "给出保修年限"
+  },
+  {
+   "i": 12,
+   "role": "单位",
+   "decisive": true,
+   "gloss": "标明保修期限单位"
+  },
+  {
+   "i": 13,
+   "role": "动作",
+   "decisive": true,
+   "gloss": "表示提供保修服务"
+  },
+  {
+   "i": 14,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "给出耐久写入总量"
+  },
+  {
+   "i": 15,
+   "role": "单位",
+   "decisive": true,
+   "gloss": "标明耐久写入单位"
+  },
+  {
+   "i": 16,
+   "role": "动作",
+   "decisive": true,
+   "gloss": "表示耐久指标"
+  },
+  {
+   "i": 17,
+   "role": "标点",
+   "decisive": false,
+   "gloss": "分隔并列的产品规格"
+  },
+  {
+   "i": 18,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "标识待判断的规格集合"
+  },
+  {
+   "i": 19,
+   "role": "动作",
+   "decisive": true,
+   "gloss": "提出判断正确与否"
+  },
+  {
+   "i": 20,
+   "role": "标点",
+   "decisive": false,
+   "gloss": "结束提问句"
+  },
+  {
+   "i": 21,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "标识回答内容"
+  }
+ ],
+ "ok": true,
+ "err": null,
+ "raw": "{\"ann\":[{\"i\":1,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"限定受测产品型号与容量\"},{\"i\":2,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"给出顺序读取速度\"},{\"i\":3,\"role\":\"单位\",\"decisive\":true,\"gloss\":\"标明速度单位\"},{\"i\":4,\"role\":\"修饰\",\"decisive\":true,\"gloss\":\"限定读取为顺序方式\"},{\"i\":5,\"role\":\"动作\",\"decisive\":true,\"gloss\":\"表示读取操作\"},{\"i\":6,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"给出随机读取性能\"},{\"i\":7,\"role\":\"单位\",\"decisive\":true,\"gloss\":\"标明每秒操作次数\"},{\"i\":8,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"给出随机读取IOPS\"},{\"i\":9,\"role\":\"修饰\",\"decisive\":true,\"gloss\":\"限定读取为随机方式\"},{\"i\":10,\"role\":\"动作\",\"decisive\":true,\"gloss\":\"表示读取操作\"},{\"i\":11,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"给出保修年限\"},{\"i\":12,\"role\":\"单位\",\"decisive\":true,\"gloss\":\"标明保修期限单位\"},{\"i\":13,\"role\":\"动作\",\"decisive\":true,\"gloss\":\"表示提供保修服务\"},{\"i\":14,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"给出耐久写入总量\"},{\"i\":15,\"role\":\"单位\",\"decisive\":true,\"gloss\":\"标明耐久写入单位\"},{\"i\":16,\"role\":\"动作\",\"decisive\":true,\"gloss\":\"表示耐久指标\"},{\"i\":17,\"role\":\"标点\",\"decisive\":false,\"gloss\":\"分隔并列的产品规格\"},{\"i\":18,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"标识待判断的规格集合\"},{\"i\":19,\"role\":\"动作\",\"decisive\":true,\"gloss\":\"提出判断正确与否\"},{\"i\":20,\"role\":\"标点\",\"decisive\":false,\"gloss\":\"结束提问句\"},{\"i\":21,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"标识回答内容\"}]}",
+ "n_units": 2,
+ "n_ann": 21,
+ "prompt_sha": "f40b518f0be09086",
+ "ts": 1793410355.0188005
+}

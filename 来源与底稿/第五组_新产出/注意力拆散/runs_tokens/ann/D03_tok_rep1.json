@@ -1,0 +1,422 @@
+{
+ "task_id": "D03",
+ "rep": 1,
+ "kind": "tok",
+ "units": [
+  "空",
+  "机",
+  "6",
+  "千",
+  "克",
+  "、",
+  "起",
+  "飞",
+  "重",
+  "12",
+  "千",
+  "克",
+  "无",
+  "人",
+  "机",
+  "在",
+  "适",
+  "飞",
+  "空",
+  "域",
+  "真",
+  "高",
+  "90",
+  "米",
+  "飞",
+  "行",
+  "，",
+  "操",
+  "控",
+  "员",
+  "无",
+  "执",
+  "照",
+  "。",
+  "依",
+  "无",
+  "人",
+  "驾",
+  "驶",
+  "航",
+  "空",
+  "器",
+  "飞",
+  "行",
+  "管",
+  "理",
+  "暂",
+  "行",
+  "条",
+  "例",
+  "，",
+  "哪",
+  "些",
+  "说",
+  "法",
+  "正",
+  "确",
+  "？"
+ ],
+ "ann": [
+  {
+   "i": 1,
+   "role": "修饰",
+   "decisive": true,
+   "gloss": "限定无载荷状态"
+  },
+  {
+   "i": 2,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "构成空机表述"
+  },
+  {
+   "i": 3,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "给出空机重量数值"
+  },
+  {
+   "i": 4,
+   "role": "单位",
+   "decisive": true,
+   "gloss": "标识重量单位"
+  },
+  {
+   "i": 5,
+   "role": "单位",
+   "decisive": true,
+   "gloss": "标识重量单位"
+  },
+  {
+   "i": 6,
+   "role": "标点",
+   "decisive": false,
+   "gloss": "分隔并列事实"
+  },
+  {
+   "i": 7,
+   "role": "动作",
+   "decisive": true,
+   "gloss": "提出起飞动作"
+  },
+  {
+   "i": 8,
+   "role": "动作",
+   "decisive": true,
+   "gloss": "提出起飞动作"
+  },
+  {
+   "i": 9,
+   "role": "修饰",
+   "decisive": true,
+   "gloss": "限定起飞状态"
+  },
+  {
+   "i": 10,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "给出起飞重量数值"
+  },
+  {
+   "i": 11,
+   "role": "单位",
+   "decisive": true,
+   "gloss": "标识重量单位"
+  },
+  {
+   "i": 12,
+   "role": "单位",
+   "decisive": true,
+   "gloss": "标识重量单位"
+  },
+  {
+   "i": 13,
+   "role": "修饰",
+   "decisive": true,
+   "gloss": "限定无人驾驶属性"
+  },
+  {
+   "i": 14,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "指向无人机主体"
+  },
+  {
+   "i": 15,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "指向无人机主体"
+  },
+  {
+   "i": 16,
+   "role": "连接",
+   "decisive": false,
+   "gloss": "引出飞行情境"
+  },
+  {
+   "i": 17,
+   "role": "修饰",
+   "decisive": true,
+   "gloss": "限定可飞行空域"
+  },
+  {
+   "i": 18,
+   "role": "修饰",
+   "decisive": true,
+   "gloss": "限定空域属性"
+  },
+  {
+   "i": 19,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "指向空域主体"
+  },
+  {
+   "i": 20,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "指向空域主体"
+  },
+  {
+   "i": 21,
+   "role": "修饰",
+   "decisive": true,
+   "gloss": "限定高度基准"
+  },
+  {
+   "i": 22,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "给出真实高度数值"
+  },
+  {
+   "i": 23,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "给出真实高度数值"
+  },
+  {
+   "i": 24,
+   "role": "单位",
+   "decisive": true,
+   "gloss": "标识高度单位"
+  },
+  {
+   "i": 25,
+   "role": "动作",
+   "decisive": true,
+   "gloss": "提出飞行动作"
+  },
+  {
+   "i": 26,
+   "role": "动作",
+   "decisive": true,
+   "gloss": "提出飞行动作"
+  },
+  {
+   "i": 27,
+   "role": "标点",
+   "decisive": false,
+   "gloss": "分隔事实条件"
+  },
+  {
+   "i": 28,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "指向操控人员"
+  },
+  {
+   "i": 29,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "指向操控人员"
+  },
+  {
+   "i": 30,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "指向操控人员"
+  },
+  {
+   "i": 31,
+   "role": "修饰",
+   "decisive": true,
+   "gloss": "限定执照状态"
+  },
+  {
+   "i": 32,
+   "role": "动作",
+   "decisive": false,
+   "gloss": "构成执照表述"
+  },
+  {
+   "i": 33,
+   "role": "主体",
+   "decisive": false,
+   "gloss": "构成执照表述"
+  },
+  {
+   "i": 34,
+   "role": "标点",
+   "decisive": false,
+   "gloss": "结束事实陈述"
+  },
+  {
+   "i": 35,
+   "role": "连接",
+   "decisive": false,
+   "gloss": "引出判断依据"
+  },
+  {
+   "i": 36,
+   "role": "修饰",
+   "decisive": true,
+   "gloss": "限定管理对象属性"
+  },
+  {
+   "i": 37,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "指向管理对象"
+  },
+  {
+   "i": 38,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "指向管理对象"
+  },
+  {
+   "i": 39,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "指向管理对象"
+  },
+  {
+   "i": 40,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "指向管理对象"
+  },
+  {
+   "i": 41,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "指向管理对象"
+  },
+  {
+   "i": 42,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "指向管理对象"
+  },
+  {
+   "i": 43,
+   "role": "动作",
+   "decisive": false,
+   "gloss": "构成法规名称"
+  },
+  {
+   "i": 44,
+   "role": "动作",
+   "decisive": false,
+   "gloss": "构成法规名称"
+  },
+  {
+   "i": 45,
+   "role": "动作",
+   "decisive": false,
+   "gloss": "构成法规名称"
+  },
+  {
+   "i": 46,
+   "role": "动作",
+   "decisive": false,
+   "gloss": "构成法规名称"
+  },
+  {
+   "i": 47,
+   "role": "修饰",
+   "decisive": false,
+   "gloss": "构成法规名称"
+  },
+  {
+   "i": 48,
+   "role": "修饰",
+   "decisive": false,
+   "gloss": "构成法规名称"
+  },
+  {
+   "i": 49,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "指向所依法规"
+  },
+  {
+   "i": 50,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "指向所依法规"
+  },
+  {
+   "i": 51,
+   "role": "标点",
+   "decisive": false,
+   "gloss": "分隔依据与问题"
+  },
+  {
+   "i": 52,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "引出判断问题"
+  },
+  {
+   "i": 53,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "引出判断问题"
+  },
+  {
+   "i": 54,
+   "role": "动作",
+   "decisive": false,
+   "gloss": "提出说法判断"
+  },
+  {
+   "i": 55,
+   "role": "动作",
+   "decisive": false,
+   "gloss": "提出说法判断"
+  },
+  {
+   "i": 56,
+   "role": "修饰",
+   "decisive": false,
+   "gloss": "限定判断结果"
+  },
+  {
+   "i": 57,
+   "role": "动作",
+   "decisive": false,
+   "gloss": "构成正确表述"
+  },
+  {
+   "i": 58,
+   "role": "标点",
+   "decisive": false,
+   "gloss": "结束疑问句"
+  }
+ ],
+ "ok": true,
+ "err": null,
+ "raw": "{\"ann\":[{\"i\":1,\"role\":\"修饰\",\"decisive\":true,\"gloss\":\"限定无载荷状态\"},{\"i\":2,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"构成空机表述\"},{\"i\":3,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"给出空机重量数值\"},{\"i\":4,\"role\":\"单位\",\"decisive\":true,\"gloss\":\"标识重量单位\"},{\"i\":5,\"role\":\"单位\",\"decisive\":true,\"gloss\":\"标识重量单位\"},{\"i\":6,\"role\":\"标点\",\"decisive\":false,\"gloss\":\"分隔并列事实\"},{\"i\":7,\"role\":\"动作\",\"decisive\":true,\"gloss\":\"提出起飞动作\"},{\"i\":8,\"role\":\"动作\",\"decisive\":true,\"gloss\":\"提出起飞动作\"},{\"i\":9,\"role\":\"修饰\",\"decisive\":true,\"gloss\":\"限定起飞状态\"},{\"i\":10,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"给出起飞重量数值\"},{\"i\":11,\"role\":\"单位\",\"decisive\":true,\"gloss\":\"标识重量单位\"},{\"i\":12,\"role\":\"单位\",\"decisive\":true,\"gloss\":\"标识重量单位\"},{\"i\":13,\"role\":\"修饰\",\"decisive\":true,\"gloss\":\"限定无人驾驶属性\"},{\"i\":14,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"指向无人机主体\"},{\"i\":15,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"指向无人机主体\"},{\"i\":16,\"role\":\"连接\",\"decisive\":false,\"gloss\":\"引出飞行情境\"},{\"i\":17,\"role\":\"修饰\",\"decisive\":true,\"gloss\":\"限定可飞行空域\"},{\"i\":18,\"role\":\"修饰\",\"decisive\":true,\"gloss\":\"限定空域属性\"},{\"i\":19,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"指向空域主体\"},{\"i\":20,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"指向空域主体\"},{\"i\":21,\"role\":\"修饰\",\"decisive\":true,\"gloss\":\"限定高度基准\"},{\"i\":22,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"给出真实高度数值\"},{\"i\":23,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"给出真实高度数值\"},{\"i\":24,\"role\":\"单位\",\"decisive\":true,\"gloss\":\"标识高度单位\"},{\"i\":25,\"role\":\"动作\",\"decisive\":true,\"gloss\":\"提出飞行动作\"},{\"i\":26,\"role\":\"动作\",\"decisive\":true,\"gloss\":\"提出飞行动作\"},{\"i\":27,\"role\":\"标点\",\"decisive\":false,\"gloss\":\"分隔事实条件\"},{\"i\":28,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"指向操控人员\"},{\"i\":29,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"指向操控人员\"},{\"i\":30,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"指向操控人员\"},{\"i\":31,\"role\":\"修饰\",\"decisive\":true,\"gloss\":\"限定执照状态\"},{\"i\":32,\"role\":\"动作\",\"decisive\":false,\"gloss\":\"构成执照表述\"},{\"i\":33,\"role\":\"主体\",\"decisive\":false,\"gloss\":\"构成执照表述\"},{\"i\":34,\"role\":\"标点\",\"decisive\":false,\"gloss\":\"结束事实陈述\"},{\"i\":35,\"role\":\"连接\",\"decisive\":false,\"gloss\":\"引出判断依据\"},{\"i\":36,\"role\":\"修饰\",\"decisive\":true,\"gloss\":\"限定管理对象属性\"},{\"i\":37,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"指向管理对象\"},{\"i\":38,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"指向管理对象\"},{\"i\":39,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"指向管理对象\"},{\"i\":40,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"指向管理对象\"},{\"i\":41,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"指向管理对象\"},{\"i\":42,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"指向管理对象\"},{\"i\":43,\"role\":\"动作\",\"decisive\":false,\"gloss\":\"构成法规名称\"},{\"i\":44,\"role\":\"动作\",\"decisive\":false,\"gloss\":\"构成法规名称\"},{\"i\":45,\"role\":\"动作\",\"decisive\":false,\"gloss\":\"构成法规名称\"},{\"i\":46,\"role\":\"动作\",\"decisive\":false,\"gloss\":\"构成法规名称\"},{\"i\":47,\"role\":\"修饰\",\"decisive\":false,\"gloss\":\"构成法规名称\"},{\"i\":48,\"role\":\"修饰\",\"decisive\":false,\"gloss\":\"构成法规名称\"},{\"i\":49,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"指向所依法规\"},{\"i\":50,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"指向所依法规\"},{\"i\":51,\"role\":\"标点\",\"decisive\":false,\"gloss\":\"分隔依据与问题\"},{\"i\":52,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"引出判断问题\"},{\"i\":53,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"引出判断问题\"},{\"i\":54,\"role\":\"动作\",\"decisive\":false,\"gloss\":\"提出说法判断\"},{\"i\":55,\"role\":\"动作\",\"decisive\":false,\"gloss\":\"提出说法判断\"},{\"i\":56,\"role\":\"修饰\",\"decisive\":false,\"gloss\":\"限定判断结果\"},{\"i\":57,\"role\":\"动作\",\"decisive\":false,\"gloss\":\"构成正确表述\"},{\"i\":58,\"role\":\"标点\",\"decisive\":false,\"gloss\":\"结束疑问句\"}]}",
+ "n_units": 58,
+ "n_ann": 58,
+ "prompt_sha": "468786a9744858a6",
+ "ts": 1793408502.1635647
+}

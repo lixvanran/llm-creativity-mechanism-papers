@@ -1,0 +1,387 @@
+{
+ "task_id": "D04",
+ "rep": 2,
+ "kind": "tok_shuf",
+ "units": [
+  "岁",
+  "？",
+  "童",
+  "人",
+  "5",
+  "按",
+  "成",
+  "急",
+  "Ⅱ",
+  "烧",
+  "哪",
+  "12%",
+  "一",
+  "面",
+  "伤",
+  "120",
+  "部",
+  "伤",
+  "级",
+  "积",
+  "是",
+  "公",
+  "标",
+  "：",
+  "？",
+  "度",
+  "？",
+  "度",
+  "烧",
+  "指",
+  "属",
+  "烧",
+  "哪",
+  "判",
+  "度",
+  "属",
+  "否",
+  "级",
+  "定",
+  "Ⅱ",
+  "Ⅲ",
+  "面",
+  "面",
+  "征",
+  "伤",
+  "开",
+  "18%",
+  "准",
+  "儿",
+  "属",
+  "诊",
+  "积",
+  "一"
+ ],
+ "ann": [
+  {
+   "i": 1,
+   "role": "单位",
+   "decisive": true,
+   "gloss": "表示年龄单位"
+  },
+  {
+   "i": 2,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "题目分隔符"
+  },
+  {
+   "i": 3,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "指儿童人群"
+  },
+  {
+   "i": 4,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "指成人人群"
+  },
+  {
+   "i": 5,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "标示儿童年龄"
+  },
+  {
+   "i": 6,
+   "role": "动作",
+   "decisive": false,
+   "gloss": "引出判定依据"
+  },
+  {
+   "i": 7,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "指成年人"
+  },
+  {
+   "i": 8,
+   "role": "其他",
+   "decisive": true,
+   "gloss": "提示需紧急救治"
+  },
+  {
+   "i": 9,
+   "role": "条件",
+   "decisive": true,
+   "gloss": "限定烧伤深度"
+  },
+  {
+   "i": 10,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "指烧伤事件"
+  },
+  {
+   "i": 11,
+   "role": "动作",
+   "decisive": false,
+   "gloss": "提出分级询问"
+  },
+  {
+   "i": 12,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "成人烧伤面积比例"
+  },
+  {
+   "i": 13,
+   "role": "其他",
+   "decisive": true,
+   "gloss": "表示级别"
+  },
+  {
+   "i": 14,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "限定受伤部位"
+  },
+  {
+   "i": 15,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "指受伤情况"
+  },
+  {
+   "i": 16,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "表示急救呼叫编号"
+  },
+  {
+   "i": 17,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "限定受伤部位"
+  },
+  {
+   "i": 18,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "指受伤情况"
+  },
+  {
+   "i": 19,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "表示分级结论"
+  },
+  {
+   "i": 20,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "指面积估算"
+  },
+  {
+   "i": 21,
+   "role": "动作",
+   "decisive": false,
+   "gloss": "提出是否判断"
+  },
+  {
+   "i": 22,
+   "role": "其他",
+   "decisive": true,
+   "gloss": "限定采用公开标准"
+  },
+  {
+   "i": 23,
+   "role": "其他",
+   "decisive": true,
+   "gloss": "指标准内容"
+  },
+  {
+   "i": 24,
+   "role": "标点",
+   "decisive": false,
+   "gloss": "分隔提示与问题"
+  },
+  {
+   "i": 25,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "题目分隔符"
+  },
+  {
+   "i": 26,
+   "role": "条件",
+   "decisive": true,
+   "gloss": "限定烧伤深度"
+  },
+  {
+   "i": 27,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "题目分隔符"
+  },
+  {
+   "i": 28,
+   "role": "条件",
+   "decisive": true,
+   "gloss": "限定烧伤深度"
+  },
+  {
+   "i": 29,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "指烧伤事件"
+  },
+  {
+   "i": 30,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "指判断对象"
+  },
+  {
+   "i": 31,
+   "role": "动作",
+   "decisive": false,
+   "gloss": "提出归属判断"
+  },
+  {
+   "i": 32,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "指烧伤事件"
+  },
+  {
+   "i": 33,
+   "role": "动作",
+   "decisive": false,
+   "gloss": "提出分级询问"
+  },
+  {
+   "i": 34,
+   "role": "动作",
+   "decisive": false,
+   "gloss": "引出分级判断"
+  },
+  {
+   "i": 35,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "指烧伤深度"
+  },
+  {
+   "i": 36,
+   "role": "动作",
+   "decisive": false,
+   "gloss": "提出归属判断"
+  },
+  {
+   "i": 37,
+   "role": "其他",
+   "decisive": true,
+   "gloss": "表示否定结论"
+  },
+  {
+   "i": 38,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "表示分级结论"
+  },
+  {
+   "i": 39,
+   "role": "动作",
+   "decisive": false,
+   "gloss": "提出标准判定"
+  },
+  {
+   "i": 40,
+   "role": "条件",
+   "decisive": true,
+   "gloss": "限定烧伤深度"
+  },
+  {
+   "i": 41,
+   "role": "条件",
+   "decisive": true,
+   "gloss": "限定烧伤深度"
+  },
+  {
+   "i": 42,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "限定受伤部位"
+  },
+  {
+   "i": 43,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "限定受伤部位"
+  },
+  {
+   "i": 44,
+   "role": "其他",
+   "decisive": true,
+   "gloss": "表示急救指征"
+  },
+  {
+   "i": 45,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "指受伤情况"
+  },
+  {
+   "i": 46,
+   "role": "动作",
+   "decisive": false,
+   "gloss": "引出公开标准"
+  },
+  {
+   "i": 47,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "儿童烧伤面积比例"
+  },
+  {
+   "i": 48,
+   "role": "其他",
+   "decisive": true,
+   "gloss": "指公开规范"
+  },
+  {
+   "i": 49,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "指儿童人群"
+  },
+  {
+   "i": 50,
+   "role": "动作",
+   "decisive": false,
+   "gloss": "提出归属判断"
+  },
+  {
+   "i": 51,
+   "role": "其他",
+   "decisive": true,
+   "gloss": "表示医疗救治类别"
+  },
+  {
+   "i": 52,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "指面积估算"
+  },
+  {
+   "i": 53,
+   "role": "其他",
+   "decisive": true,
+   "gloss": "表示级别"
+  }
+ ],
+ "ok": true,
+ "err": null,
+ "raw": "{\"ann\":[{\"i\":1,\"role\":\"单位\",\"decisive\":true,\"gloss\":\"表示年龄单位\"},{\"i\":2,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"题目分隔符\"},{\"i\":3,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"指儿童人群\"},{\"i\":4,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"指成人人群\"},{\"i\":5,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"标示儿童年龄\"},{\"i\":6,\"role\":\"动作\",\"decisive\":false,\"gloss\":\"引出判定依据\"},{\"i\":7,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"指成年人\"},{\"i\":8,\"role\":\"其他\",\"decisive\":true,\"gloss\":\"提示需紧急救治\"},{\"i\":9,\"role\":\"条件\",\"decisive\":true,\"gloss\":\"限定烧伤深度\"},{\"i\":10,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"指烧伤事件\"},{\"i\":11,\"role\":\"动作\",\"decisive\":false,\"gloss\":\"提出分级询问\"},{\"i\":12,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"成人烧伤面积比例\"},{\"i\":13,\"role\":\"其他\",\"decisive\":true,\"gloss\":\"表示级别\"},{\"i\":14,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"限定受伤部位\"},{\"i\":15,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"指受伤情况\"},{\"i\":16,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"表示急救呼叫编号\"},{\"i\":17,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"限定受伤部位\"},{\"i\":18,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"指受伤情况\"},{\"i\":19,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"表示分级结论\"},{\"i\":20,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"指面积估算\"},{\"i\":21,\"role\":\"动作\",\"decisive\":false,\"gloss\":\"提出是否判断\"},{\"i\":22,\"role\":\"其他\",\"decisive\":true,\"gloss\":\"限定采用公开标准\"},{\"i\":23,\"role\":\"其他\",\"decisive\":true,\"gloss\":\"指标准内容\"},{\"i\":24,\"role\":\"标点\",\"decisive\":false,\"gloss\":\"分隔提示与问题\"},{\"i\":25,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"题目分隔符\"},{\"i\":26,\"role\":\"条件\",\"decisive\":true,\"gloss\":\"限定烧伤深度\"},{\"i\":27,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"题目分隔符\"},{\"i\":28,\"role\":\"条件\",\"decisive\":true,\"gloss\":\"限定烧伤深度\"},{\"i\":29,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"指烧伤事件\"},{\"i\":30,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"指判断对象\"},{\"i\":31,\"role\":\"动作\",\"decisive\":false,\"gloss\":\"提出归属判断\"},{\"i\":32,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"指烧伤事件\"},{\"i\":33,\"role\":\"动作\",\"decisive\":false,\"gloss\":\"提出分级询问\"},{\"i\":34,\"role\":\"动作\",\"decisive\":false,\"gloss\":\"引出分级判断\"},{\"i\":35,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"指烧伤深度\"},{\"i\":36,\"role\":\"动作\",\"decisive\":false,\"gloss\":\"提出归属判断\"},{\"i\":37,\"role\":\"其他\",\"decisive\":true,\"gloss\":\"表示否定结论\"},{\"i\":38,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"表示分级结论\"},{\"i\":39,\"role\":\"动作\",\"decisive\":false,\"gloss\":\"提出标准判定\"},{\"i\":40,\"role\":\"条件\",\"decisive\":true,\"gloss\":\"限定烧伤深度\"},{\"i\":41,\"role\":\"条件\",\"decisive\":true,\"gloss\":\"限定烧伤深度\"},{\"i\":42,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"限定受伤部位\"},{\"i\":43,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"限定受伤部位\"},{\"i\":44,\"role\":\"其他\",\"decisive\":true,\"gloss\":\"表示急救指征\"},{\"i\":45,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"指受伤情况\"},{\"i\":46,\"role\":\"动作\",\"decisive\":false,\"gloss\":\"引出公开标准\"},{\"i\":47,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"儿童烧伤面积比例\"},{\"i\":48,\"role\":\"其他\",\"decisive\":true,\"gloss\":\"指公开规范\"},{\"i\":49,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"指儿童人群\"},{\"i\":50,\"role\":\"动作\",\"decisive\":false,\"gloss\":\"提出归属判断\"},{\"i\":51,\"role\":\"其他\",\"decisive\":true,\"gloss\":\"表示医疗救治类别\"},{\"i\":52,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"指面积估算\"},{\"i\":53,\"role\":\"其他\",\"decisive\":true,\"gloss\":\"表示级别\"}]}",
+ "n_units": 53,
+ "n_ann": 53,
+ "prompt_sha": "ccea72034ac49f3f",
+ "ts": 1793409621.628481
+}

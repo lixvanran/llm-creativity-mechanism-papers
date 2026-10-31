@@ -1,0 +1,108 @@
+{
+ "task_id": "D01",
+ "rep": 2,
+ "kind": "sent",
+ "units": [
+  "990 PRO 1TB：①顺序读7450MB/s ②随机读140万IOPS ③保修5年 ④耐久600TBW。",
+  "哪些正确？"
+ ],
+ "ann": [
+  {
+   "i": 1,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "被评测的固态硬盘型号容量"
+  },
+  {
+   "i": 2,
+   "role": "条件",
+   "decisive": true,
+   "gloss": "限定为顺序读取场景"
+  },
+  {
+   "i": 3,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "顺序读取速度数值"
+  },
+  {
+   "i": 4,
+   "role": "单位",
+   "decisive": false,
+   "gloss": "速度数据单位"
+  },
+  {
+   "i": 5,
+   "role": "条件",
+   "decisive": true,
+   "gloss": "限定为随机读取场景"
+  },
+  {
+   "i": 6,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "随机读取性能数值"
+  },
+  {
+   "i": 7,
+   "role": "单位",
+   "decisive": false,
+   "gloss": "每秒操作次数单位"
+  },
+  {
+   "i": 8,
+   "role": "条件",
+   "decisive": true,
+   "gloss": "限定保修期限"
+  },
+  {
+   "i": 9,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "保修年限数值"
+  },
+  {
+   "i": 10,
+   "role": "单位",
+   "decisive": false,
+   "gloss": "保修期限单位"
+  },
+  {
+   "i": 11,
+   "role": "条件",
+   "decisive": true,
+   "gloss": "限定耐久指标"
+  },
+  {
+   "i": 12,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "耐久写入量数值"
+  },
+  {
+   "i": 13,
+   "role": "单位",
+   "decisive": false,
+   "gloss": "耐久写入量单位"
+  },
+  {
+   "i": 14,
+   "role": "标点",
+   "decisive": false,
+   "gloss": "分隔并列的规格条目"
+  },
+  {
+   "i": 15,
+   "role": "动作",
+   "decisive": true,
+   "gloss": "询问哪些规格正确"
+  }
+ ],
+ "ok": true,
+ "err": null,
+ "raw": "{\"ann\":[{\"i\":1,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"被评测的固态硬盘型号容量\"},{\"i\":2,\"role\":\"条件\",\"decisive\":true,\"gloss\":\"限定为顺序读取场景\"},{\"i\":3,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"顺序读取速度数值\"},{\"i\":4,\"role\":\"单位\",\"decisive\":false,\"gloss\":\"速度数据单位\"},{\"i\":5,\"role\":\"条件\",\"decisive\":true,\"gloss\":\"限定为随机读取场景\"},{\"i\":6,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"随机读取性能数值\"},{\"i\":7,\"role\":\"单位\",\"decisive\":false,\"gloss\":\"每秒操作次数单位\"},{\"i\":8,\"role\":\"条件\",\"decisive\":true,\"gloss\":\"限定保修期限\"},{\"i\":9,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"保修年限数值\"},{\"i\":10,\"role\":\"单位\",\"decisive\":false,\"gloss\":\"保修期限单位\"},{\"i\":11,\"role\":\"条件\",\"decisive\":true,\"gloss\":\"限定耐久指标\"},{\"i\":12,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"耐久写入量数值\"},{\"i\":13,\"role\":\"单位\",\"decisive\":false,\"gloss\":\"耐久写入量单位\"},{\"i\":14,\"role\":\"标点\",\"decisive\":false,\"gloss\":\"分隔并列的规格条目\"},{\"i\":15,\"role\":\"动作\",\"decisive\":true,\"gloss\":\"询问哪些规格正确\"}]}",
+ "n_units": 2,
+ "n_ann": 15,
+ "prompt_sha": "f40b518f0be09086",
+ "ts": 1793409565.5952156
+}

@@ -1,0 +1,303 @@
+{
+ "task_id": "D02",
+ "rep": 3,
+ "kind": "tok",
+ "units": [
+  "网",
+  "关",
+  "：",
+  "①",
+  "上",
+  "游",
+  "无",
+  "效",
+  "响",
+  "应",
+  "→",
+  "502",
+  "②",
+  "上",
+  "游",
+  "未",
+  "响",
+  "应",
+  "→",
+  "504",
+  "③",
+  "后",
+  "端",
+  "过",
+  "载",
+  "→",
+  "503",
+  "④",
+  "请",
+  "求",
+  "过",
+  "多",
+  "→",
+  "503",
+  "。",
+  "哪",
+  "几",
+  "项",
+  "正",
+  "确",
+  "？"
+ ],
+ "ann": [
+  {
+   "i": 1,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "提出判断网关状态码的情境"
+  },
+  {
+   "i": 2,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "与“网”共同指网关"
+  },
+  {
+   "i": 3,
+   "role": "标点",
+   "decisive": false,
+   "gloss": "引出各状态码对应情形"
+  },
+  {
+   "i": 4,
+   "role": "其他",
+   "decisive": true,
+   "gloss": "标记第一项待判断内容"
+  },
+  {
+   "i": 5,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "指出响应来源为上游"
+  },
+  {
+   "i": 6,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "指向上游服务或系统"
+  },
+  {
+   "i": 7,
+   "role": "条件",
+   "decisive": true,
+   "gloss": "限定上游响应无效"
+  },
+  {
+   "i": 8,
+   "role": "条件",
+   "decisive": true,
+   "gloss": "描述上游返回无效"
+  },
+  {
+   "i": 9,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "指上游返回的内容"
+  },
+  {
+   "i": 10,
+   "role": "动作",
+   "decisive": true,
+   "gloss": "表示上游产生响应行为"
+  },
+  {
+   "i": 11,
+   "role": "连接",
+   "decisive": false,
+   "gloss": "连接情形与对应状态码"
+  },
+  {
+   "i": 12,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "上游无效响应对应502"
+  },
+  {
+   "i": 13,
+   "role": "其他",
+   "decisive": true,
+   "gloss": "标记第二项待判断内容"
+  },
+  {
+   "i": 14,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "指出响应来源为上游"
+  },
+  {
+   "i": 15,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "指向上游服务或系统"
+  },
+  {
+   "i": 16,
+   "role": "条件",
+   "decisive": true,
+   "gloss": "限定上游没有响应"
+  },
+  {
+   "i": 17,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "指上游应返回的内容"
+  },
+  {
+   "i": 18,
+   "role": "动作",
+   "decisive": true,
+   "gloss": "表示上游执行响应行为"
+  },
+  {
+   "i": 19,
+   "role": "连接",
+   "decisive": false,
+   "gloss": "连接情形与对应状态码"
+  },
+  {
+   "i": 20,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "上游未响应对应504"
+  },
+  {
+   "i": 21,
+   "role": "其他",
+   "decisive": true,
+   "gloss": "标记第三项待判断内容"
+  },
+  {
+   "i": 22,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "指出故障发生在后端"
+  },
+  {
+   "i": 23,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "指处理请求的后端系统"
+  },
+  {
+   "i": 24,
+   "role": "条件",
+   "decisive": true,
+   "gloss": "限定后端承载能力不足"
+  },
+  {
+   "i": 25,
+   "role": "动作",
+   "decisive": true,
+   "gloss": "描述后端因负载过重"
+  },
+  {
+   "i": 26,
+   "role": "连接",
+   "decisive": false,
+   "gloss": "连接情形与对应状态码"
+  },
+  {
+   "i": 27,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "后端过载对应503"
+  },
+  {
+   "i": 28,
+   "role": "其他",
+   "decisive": true,
+   "gloss": "标记第四项待判断内容"
+  },
+  {
+   "i": 29,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "指出请求为客户端发出"
+  },
+  {
+   "i": 30,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "指向网关的请求"
+  },
+  {
+   "i": 31,
+   "role": "条件",
+   "decisive": true,
+   "gloss": "限定请求数量超过承受范围"
+  },
+  {
+   "i": 32,
+   "role": "动作",
+   "decisive": true,
+   "gloss": "描述请求数量过多"
+  },
+  {
+   "i": 33,
+   "role": "连接",
+   "decisive": false,
+   "gloss": "连接情形与对应状态码"
+  },
+  {
+   "i": 34,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "请求过多对应503"
+  },
+  {
+   "i": 35,
+   "role": "标点",
+   "decisive": false,
+   "gloss": "结束四项陈述"
+  },
+  {
+   "i": 36,
+   "role": "动作",
+   "decisive": true,
+   "gloss": "要求识别正确项目"
+  },
+  {
+   "i": 37,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "询问符合条件项目的数量"
+  },
+  {
+   "i": 38,
+   "role": "动作",
+   "decisive": true,
+   "gloss": "要求判断陈述是否正确"
+  },
+  {
+   "i": 39,
+   "role": "修饰",
+   "decisive": true,
+   "gloss": "限定所判断陈述的性质"
+  },
+  {
+   "i": 40,
+   "role": "动作",
+   "decisive": true,
+   "gloss": "表达各陈述正确与否"
+  },
+  {
+   "i": 41,
+   "role": "标点",
+   "decisive": false,
+   "gloss": "结束询问"
+  }
+ ],
+ "ok": true,
+ "err": null,
+ "raw": "{\"ann\":[{\"i\":1,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"提出判断网关状态码的情境\"},{\"i\":2,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"与“网”共同指网关\"},{\"i\":3,\"role\":\"标点\",\"decisive\":false,\"gloss\":\"引出各状态码对应情形\"},{\"i\":4,\"role\":\"其他\",\"decisive\":true,\"gloss\":\"标记第一项待判断内容\"},{\"i\":5,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"指出响应来源为上游\"},{\"i\":6,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"指向上游服务或系统\"},{\"i\":7,\"role\":\"条件\",\"decisive\":true,\"gloss\":\"限定上游响应无效\"},{\"i\":8,\"role\":\"条件\",\"decisive\":true,\"gloss\":\"描述上游返回无效\"},{\"i\":9,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"指上游返回的内容\"},{\"i\":10,\"role\":\"动作\",\"decisive\":true,\"gloss\":\"表示上游产生响应行为\"},{\"i\":11,\"role\":\"连接\",\"decisive\":false,\"gloss\":\"连接情形与对应状态码\"},{\"i\":12,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"上游无效响应对应502\"},{\"i\":13,\"role\":\"其他\",\"decisive\":true,\"gloss\":\"标记第二项待判断内容\"},{\"i\":14,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"指出响应来源为上游\"},{\"i\":15,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"指向上游服务或系统\"},{\"i\":16,\"role\":\"条件\",\"decisive\":true,\"gloss\":\"限定上游没有响应\"},{\"i\":17,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"指上游应返回的内容\"},{\"i\":18,\"role\":\"动作\",\"decisive\":true,\"gloss\":\"表示上游执行响应行为\"},{\"i\":19,\"role\":\"连接\",\"decisive\":false,\"gloss\":\"连接情形与对应状态码\"},{\"i\":20,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"上游未响应对应504\"},{\"i\":21,\"role\":\"其他\",\"decisive\":true,\"gloss\":\"标记第三项待判断内容\"},{\"i\":22,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"指出故障发生在后端\"},{\"i\":23,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"指处理请求的后端系统\"},{\"i\":24,\"role\":\"条件\",\"decisive\":true,\"gloss\":\"限定后端承载能力不足\"},{\"i\":25,\"role\":\"动作\",\"decisive\":true,\"gloss\":\"描述后端因负载过重\"},{\"i\":26,\"role\":\"连接\",\"decisive\":false,\"gloss\":\"连接情形与对应状态码\"},{\"i\":27,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"后端过载对应503\"},{\"i\":28,\"role\":\"其他\",\"decisive\":true,\"gloss\":\"标记第四项待判断内容\"},{\"i\":29,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"指出请求为客户端发出\"},{\"i\":30,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"指向网关的请求\"},{\"i\":31,\"role\":\"条件\",\"decisive\":true,\"gloss\":\"限定请求数量超过承受范围\"},{\"i\":32,\"role\":\"动作\",\"decisive\":true,\"gloss\":\"描述请求数量过多\"},{\"i\":33,\"role\":\"连接\",\"decisive\":false,\"gloss\":\"连接情形与对应状态码\"},{\"i\":34,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"请求过多对应503\"},{\"i\":35,\"role\":\"标点\",\"decisive\":false,\"gloss\":\"结束四项陈述\"},{\"i\":36,\"role\":\"动作\",\"decisive\":true,\"gloss\":\"要求识别正确项目\"},{\"i\":37,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"询问符合条件项目的数量\"},{\"i\":38,\"role\":\"动作\",\"decisive\":true,\"gloss\":\"要求判断陈述是否正确\"},{\"i\":39,\"role\":\"修饰\",\"decisive\":true,\"gloss\":\"限定所判断陈述的性质\"},{\"i\":40,\"role\":\"动作\",\"decisive\":true,\"gloss\":\"表达各陈述正确与否\"},{\"i\":41,\"role\":\"标点\",\"decisive\":false,\"gloss\":\"结束询问\"}]}",
+ "n_units": 41,
+ "n_ann": 41,
+ "prompt_sha": "56cf11142c425f79",
+ "ts": 1793410359.226447
+}

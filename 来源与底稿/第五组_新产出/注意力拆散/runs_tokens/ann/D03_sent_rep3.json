@@ -1,0 +1,72 @@
+{
+ "task_id": "D03",
+ "rep": 3,
+ "kind": "sent",
+ "units": [
+  "空机6千克、起飞重12千克无人机在适飞空域真高90米飞行，操控员无执照。",
+  "依无人驾驶航空器飞行管理暂行条例，哪些说法正确？"
+ ],
+ "ann": [
+  {
+   "i": 1,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "给定无人机空机重量"
+  },
+  {
+   "i": 2,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "给定无人机起飞重量"
+  },
+  {
+   "i": 3,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "指涉被操控的无人机"
+  },
+  {
+   "i": 4,
+   "role": "条件",
+   "decisive": true,
+   "gloss": "限定飞行环境为适飞空域"
+  },
+  {
+   "i": 5,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "给定实际飞行真高"
+  },
+  {
+   "i": 6,
+   "role": "单位",
+   "decisive": false,
+   "gloss": "表示真高的计量单位"
+  },
+  {
+   "i": 7,
+   "role": "动作",
+   "decisive": false,
+   "gloss": "描述无人机正在飞行"
+  },
+  {
+   "i": 8,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "指代无人机操控员"
+  },
+  {
+   "i": 9,
+   "role": "修饰",
+   "decisive": true,
+   "gloss": "限定操控员无执照状态"
+  }
+ ],
+ "ok": true,
+ "err": null,
+ "raw": "{\"ann\":[{\"i\":1,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"给定无人机空机重量\"},{\"i\":2,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"给定无人机起飞重量\"},{\"i\":3,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"指涉被操控的无人机\"},{\"i\":4,\"role\":\"条件\",\"decisive\":true,\"gloss\":\"限定飞行环境为适飞空域\"},{\"i\":5,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"给定实际飞行真高\"},{\"i\":6,\"role\":\"单位\",\"decisive\":false,\"gloss\":\"表示真高的计量单位\"},{\"i\":7,\"role\":\"动作\",\"decisive\":false,\"gloss\":\"描述无人机正在飞行\"},{\"i\":8,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"指代无人机操控员\"},{\"i\":9,\"role\":\"修饰\",\"decisive\":true,\"gloss\":\"限定操控员无执照状态\"}]}",
+ "n_units": 2,
+ "n_ann": 9,
+ "prompt_sha": "71480588fd3b19a9",
+ "ts": 1793410362.4912715
+}

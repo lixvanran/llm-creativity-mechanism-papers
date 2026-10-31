@@ -1,0 +1,387 @@
+{
+ "task_id": "D09",
+ "rep": 2,
+ "kind": "tok_shuf",
+ "units": [
+  "票",
+  "路",
+  "1",
+  "名",
+  "车",
+  "2026",
+  "19",
+  "法",
+  "月",
+  "日",
+  "同",
+  "10",
+  "按",
+  "公",
+  "才",
+  "确",
+  "布",
+  "，",
+  "天",
+  "动",
+  "下",
+  "年",
+  "运",
+  "司",
+  "？",
+  "工",
+  "的",
+  "20",
+  "要",
+  "的",
+  "票",
+  "则",
+  "。",
+  "某",
+  "规",
+  "日",
+  "列",
+  "铁",
+  "公",
+  "员",
+  "的",
+  "2",
+  "启",
+  "是",
+  "买",
+  "春",
+  "订",
+  "，",
+  "，",
+  "说",
+  "正",
+  "月",
+  "一"
+ ],
+ "ann": [
+  {
+   "i": 1,
+   "role": "动作",
+   "decisive": true,
+   "gloss": "购票行为"
+  },
+  {
+   "i": 2,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "铁路运营主体"
+  },
+  {
+   "i": 3,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "员工人数"
+  },
+  {
+   "i": 4,
+   "role": "单位",
+   "decisive": true,
+   "gloss": "人员计数单位"
+  },
+  {
+   "i": 5,
+   "role": "动作",
+   "decisive": true,
+   "gloss": "乘坐列车"
+  },
+  {
+   "i": 6,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "乘车年份"
+  },
+  {
+   "i": 7,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "员工人数"
+  },
+  {
+   "i": 8,
+   "role": "其他",
+   "decisive": true,
+   "gloss": "适用规则依据"
+  },
+  {
+   "i": 9,
+   "role": "单位",
+   "decisive": true,
+   "gloss": "月份单位"
+  },
+  {
+   "i": 10,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "乘车日期中的日"
+  },
+  {
+   "i": 11,
+   "role": "修饰",
+   "decisive": true,
+   "gloss": "限定同日乘车"
+  },
+  {
+   "i": 12,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "乘车日期中的日"
+  },
+  {
+   "i": 13,
+   "role": "动作",
+   "decisive": true,
+   "gloss": "依照执行"
+  },
+  {
+   "i": 14,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "铁路运营主体"
+  },
+  {
+   "i": 15,
+   "role": "动作",
+   "decisive": true,
+   "gloss": "公布信息"
+  },
+  {
+   "i": 16,
+   "role": "动作",
+   "decisive": true,
+   "gloss": "确认规则内容"
+  },
+  {
+   "i": 17,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "铁路运营主体"
+  },
+  {
+   "i": 18,
+   "role": "标点",
+   "decisive": false,
+   "gloss": "分隔语境"
+  },
+  {
+   "i": 19,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "提前天数"
+  },
+  {
+   "i": 20,
+   "role": "动作",
+   "decisive": true,
+   "gloss": "启动订票"
+  },
+  {
+   "i": 21,
+   "role": "动作",
+   "decisive": true,
+   "gloss": "发起订票"
+  },
+  {
+   "i": 22,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "乘车年份"
+  },
+  {
+   "i": 23,
+   "role": "其他",
+   "decisive": true,
+   "gloss": "春运场景"
+  },
+  {
+   "i": 24,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "购票员工所属公司"
+  },
+  {
+   "i": 25,
+   "role": "标点",
+   "decisive": false,
+   "gloss": "提问结束"
+  },
+  {
+   "i": 26,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "受规则约束员工"
+  },
+  {
+   "i": 27,
+   "role": "修饰",
+   "decisive": true,
+   "gloss": "所属关系"
+  },
+  {
+   "i": 28,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "启动年份"
+  },
+  {
+   "i": 29,
+   "role": "动作",
+   "decisive": true,
+   "gloss": "提出购票需求"
+  },
+  {
+   "i": 30,
+   "role": "修饰",
+   "decisive": true,
+   "gloss": "限定购买对象"
+  },
+  {
+   "i": 31,
+   "role": "动作",
+   "decisive": true,
+   "gloss": "车票购买行为"
+  },
+  {
+   "i": 32,
+   "role": "条件",
+   "decisive": true,
+   "gloss": "规则适用前提"
+  },
+  {
+   "i": 33,
+   "role": "标点",
+   "decisive": false,
+   "gloss": "句子结束"
+  },
+  {
+   "i": 34,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "特定公司"
+  },
+  {
+   "i": 35,
+   "role": "其他",
+   "decisive": true,
+   "gloss": "铁路规则体系"
+  },
+  {
+   "i": 36,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "日期中的日"
+  },
+  {
+   "i": 37,
+   "role": "动作",
+   "decisive": true,
+   "gloss": "列举规则"
+  },
+  {
+   "i": 38,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "铁路运营主体"
+  },
+  {
+   "i": 39,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "铁路运营主体"
+  },
+  {
+   "i": 40,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "受规则约束员工"
+  },
+  {
+   "i": 41,
+   "role": "修饰",
+   "decisive": true,
+   "gloss": "所属关系"
+  },
+  {
+   "i": 42,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "启动月份"
+  },
+  {
+   "i": 43,
+   "role": "动作",
+   "decisive": true,
+   "gloss": "启动订票"
+  },
+  {
+   "i": 44,
+   "role": "动作",
+   "decisive": true,
+   "gloss": "发起购票"
+  },
+  {
+   "i": 45,
+   "role": "动作",
+   "decisive": true,
+   "gloss": "购票行为"
+  },
+  {
+   "i": 46,
+   "role": "其他",
+   "decisive": true,
+   "gloss": "春运场景"
+  },
+  {
+   "i": 47,
+   "role": "动作",
+   "decisive": true,
+   "gloss": "预订车票"
+  },
+  {
+   "i": 48,
+   "role": "标点",
+   "decisive": false,
+   "gloss": "分隔语境"
+  },
+  {
+   "i": 49,
+   "role": "标点",
+   "decisive": false,
+   "gloss": "分隔语境"
+  },
+  {
+   "i": 50,
+   "role": "动作",
+   "decisive": true,
+   "gloss": "表达判断"
+  },
+  {
+   "i": 51,
+   "role": "修饰",
+   "decisive": true,
+   "gloss": "限定答案为正确"
+  },
+  {
+   "i": 52,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "启动月份"
+  },
+  {
+   "i": 53,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "启动日期中的日"
+  }
+ ],
+ "ok": true,
+ "err": null,
+ "raw": "{\"ann\":[{\"i\":1,\"role\":\"动作\",\"decisive\":true,\"gloss\":\"购票行为\"},{\"i\":2,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"铁路运营主体\"},{\"i\":3,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"员工人数\"},{\"i\":4,\"role\":\"单位\",\"decisive\":true,\"gloss\":\"人员计数单位\"},{\"i\":5,\"role\":\"动作\",\"decisive\":true,\"gloss\":\"乘坐列车\"},{\"i\":6,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"乘车年份\"},{\"i\":7,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"员工人数\"},{\"i\":8,\"role\":\"其他\",\"decisive\":true,\"gloss\":\"适用规则依据\"},{\"i\":9,\"role\":\"单位\",\"decisive\":true,\"gloss\":\"月份单位\"},{\"i\":10,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"乘车日期中的日\"},{\"i\":11,\"role\":\"修饰\",\"decisive\":true,\"gloss\":\"限定同日乘车\"},{\"i\":12,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"乘车日期中的日\"},{\"i\":13,\"role\":\"动作\",\"decisive\":true,\"gloss\":\"依照执行\"},{\"i\":14,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"铁路运营主体\"},{\"i\":15,\"role\":\"动作\",\"decisive\":true,\"gloss\":\"公布信息\"},{\"i\":16,\"role\":\"动作\",\"decisive\":true,\"gloss\":\"确认规则内容\"},{\"i\":17,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"铁路运营主体\"},{\"i\":18,\"role\":\"标点\",\"decisive\":false,\"gloss\":\"分隔语境\"},{\"i\":19,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"提前天数\"},{\"i\":20,\"role\":\"动作\",\"decisive\":true,\"gloss\":\"启动订票\"},{\"i\":21,\"role\":\"动作\",\"decisive\":true,\"gloss\":\"发起订票\"},{\"i\":22,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"乘车年份\"},{\"i\":23,\"role\":\"其他\",\"decisive\":true,\"gloss\":\"春运场景\"},{\"i\":24,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"购票员工所属公司\"},{\"i\":25,\"role\":\"标点\",\"decisive\":false,\"gloss\":\"提问结束\"},{\"i\":26,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"受规则约束员工\"},{\"i\":27,\"role\":\"修饰\",\"decisive\":true,\"gloss\":\"所属关系\"},{\"i\":28,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"启动年份\"},{\"i\":29,\"role\":\"动作\",\"decisive\":true,\"gloss\":\"提出购票需求\"},{\"i\":30,\"role\":\"修饰\",\"decisive\":true,\"gloss\":\"限定购买对象\"},{\"i\":31,\"role\":\"动作\",\"decisive\":true,\"gloss\":\"车票购买行为\"},{\"i\":32,\"role\":\"条件\",\"decisive\":true,\"gloss\":\"规则适用前提\"},{\"i\":33,\"role\":\"标点\",\"decisive\":false,\"gloss\":\"句子结束\"},{\"i\":34,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"特定公司\"},{\"i\":35,\"role\":\"其他\",\"decisive\":true,\"gloss\":\"铁路规则体系\"},{\"i\":36,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"日期中的日\"},{\"i\":37,\"role\":\"动作\",\"decisive\":true,\"gloss\":\"列举规则\"},{\"i\":38,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"铁路运营主体\"},{\"i\":39,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"铁路运营主体\"},{\"i\":40,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"受规则约束员工\"},{\"i\":41,\"role\":\"修饰\",\"decisive\":true,\"gloss\":\"所属关系\"},{\"i\":42,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"启动月份\"},{\"i\":43,\"role\":\"动作\",\"decisive\":true,\"gloss\":\"启动订票\"},{\"i\":44,\"role\":\"动作\",\"decisive\":true,\"gloss\":\"发起购票\"},{\"i\":45,\"role\":\"动作\",\"decisive\":true,\"gloss\":\"购票行为\"},{\"i\":46,\"role\":\"其他\",\"decisive\":true,\"gloss\":\"春运场景\"},{\"i\":47,\"role\":\"动作\",\"decisive\":true,\"gloss\":\"预订车票\"},{\"i\":48,\"role\":\"标点\",\"decisive\":false,\"gloss\":\"分隔语境\"},{\"i\":49,\"role\":\"标点\",\"decisive\":false,\"gloss\":\"分隔语境\"},{\"i\":50,\"role\":\"动作\",\"decisive\":true,\"gloss\":\"表达判断\"},{\"i\":51,\"role\":\"修饰\",\"decisive\":true,\"gloss\":\"限定答案为正确\"},{\"i\":52,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"启动月份\"},{\"i\":53,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"启动日期中的日\"}]}",
+ "n_units": 53,
+ "n_ann": 53,
+ "prompt_sha": "f37ece696e09795e",
+ "ts": 1793409723.5728881
+}

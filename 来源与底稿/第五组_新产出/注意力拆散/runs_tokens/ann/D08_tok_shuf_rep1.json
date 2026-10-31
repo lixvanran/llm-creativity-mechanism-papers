@@ -1,0 +1,401 @@
+{
+ "task_id": "D08",
+ "rep": 1,
+ "kind": "tok_shuf",
+ "units": [
+  "月",
+  "学",
+  "工",
+  "工",
+  "个",
+  "2026",
+  "甲",
+  "，",
+  "门",
+  "类",
+  "理",
+  "工",
+  "门",
+  "士",
+  "报",
+  "3",
+  "硕",
+  "年",
+  "年",
+  "年",
+  "可",
+  "年",
+  "级",
+  "：",
+  "？",
+  "乙",
+  "科",
+  "11",
+  "学",
+  "专",
+  "谁",
+  "类",
+  "1",
+  "；",
+  "造",
+  "、",
+  "管",
+  "个",
+  "工",
+  "丙",
+  "师",
+  "程",
+  "类",
+  "、",
+  "本",
+  "名",
+  "科",
+  "一",
+  "、",
+  "建",
+  "；",
+  "8",
+  "月",
+  "施",
+  "3"
+ ],
+ "ann": [
+  {
+   "i": 1,
+   "role": "单位",
+   "decisive": false,
+   "gloss": "时间单位"
+  },
+  {
+   "i": 2,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "切分片段"
+  },
+  {
+   "i": 3,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "切分片段"
+  },
+  {
+   "i": 4,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "切分片段"
+  },
+  {
+   "i": 5,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "切分片段"
+  },
+  {
+   "i": 6,
+   "role": "条件",
+   "decisive": true,
+   "gloss": "限定报考年份"
+  },
+  {
+   "i": 7,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "考生甲"
+  },
+  {
+   "i": 8,
+   "role": "标点",
+   "decisive": false,
+   "gloss": "分隔条件"
+  },
+  {
+   "i": 9,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "切分片段"
+  },
+  {
+   "i": 10,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "切分片段"
+  },
+  {
+   "i": 11,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "切分片段"
+  },
+  {
+   "i": 12,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "切分片段"
+  },
+  {
+   "i": 13,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "切分片段"
+  },
+  {
+   "i": 14,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "切分片段"
+  },
+  {
+   "i": 15,
+   "role": "动作",
+   "decisive": true,
+   "gloss": "报名行为"
+  },
+  {
+   "i": 16,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "年限数值"
+  },
+  {
+   "i": 17,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "切分片段"
+  },
+  {
+   "i": 18,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "切分片段"
+  },
+  {
+   "i": 19,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "切分片段"
+  },
+  {
+   "i": 20,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "切分片段"
+  },
+  {
+   "i": 21,
+   "role": "条件",
+   "decisive": true,
+   "gloss": "报考资格判断"
+  },
+  {
+   "i": 22,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "切分片段"
+  },
+  {
+   "i": 23,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "切分片段"
+  },
+  {
+   "i": 24,
+   "role": "标点",
+   "decisive": false,
+   "gloss": "分隔题面"
+  },
+  {
+   "i": 25,
+   "role": "标点",
+   "decisive": false,
+   "gloss": "疑问标记"
+  },
+  {
+   "i": 26,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "考生乙"
+  },
+  {
+   "i": 27,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "切分片段"
+  },
+  {
+   "i": 28,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "工作年限数值"
+  },
+  {
+   "i": 29,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "切分片段"
+  },
+  {
+   "i": 30,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "切分片段"
+  },
+  {
+   "i": 31,
+   "role": "动作",
+   "decisive": true,
+   "gloss": "询问报考资格"
+  },
+  {
+   "i": 32,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "切分片段"
+  },
+  {
+   "i": 33,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "工作年限数值"
+  },
+  {
+   "i": 34,
+   "role": "标点",
+   "decisive": false,
+   "gloss": "分隔条件"
+  },
+  {
+   "i": 35,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "切分片段"
+  },
+  {
+   "i": 36,
+   "role": "标点",
+   "decisive": false,
+   "gloss": "分隔专业"
+  },
+  {
+   "i": 37,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "切分片段"
+  },
+  {
+   "i": 38,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "切分片段"
+  },
+  {
+   "i": 39,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "切分片段"
+  },
+  {
+   "i": 40,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "考生丙"
+  },
+  {
+   "i": 41,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "切分片段"
+  },
+  {
+   "i": 42,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "切分片段"
+  },
+  {
+   "i": 43,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "切分片段"
+  },
+  {
+   "i": 44,
+   "role": "标点",
+   "decisive": false,
+   "gloss": "分隔专业"
+  },
+  {
+   "i": 45,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "切分片段"
+  },
+  {
+   "i": 46,
+   "role": "动作",
+   "decisive": true,
+   "gloss": "报名资格判断"
+  },
+  {
+   "i": 47,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "切分片段"
+  },
+  {
+   "i": 48,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "切分片段"
+  },
+  {
+   "i": 49,
+   "role": "标点",
+   "decisive": false,
+   "gloss": "分隔资格"
+  },
+  {
+   "i": 50,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "切分片段"
+  },
+  {
+   "i": 51,
+   "role": "标点",
+   "decisive": false,
+   "gloss": "分隔条件"
+  },
+  {
+   "i": 52,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "工作年限数值"
+  },
+  {
+   "i": 53,
+   "role": "单位",
+   "decisive": false,
+   "gloss": "时间单位"
+  },
+  {
+   "i": 54,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "切分片段"
+  },
+  {
+   "i": 55,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "工作年限数值"
+  }
+ ],
+ "ok": true,
+ "err": null,
+ "raw": "{\"ann\":[{\"i\":1,\"role\":\"单位\",\"decisive\":false,\"gloss\":\"时间单位\"},{\"i\":2,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"切分片段\"},{\"i\":3,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"切分片段\"},{\"i\":4,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"切分片段\"},{\"i\":5,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"切分片段\"},{\"i\":6,\"role\":\"条件\",\"decisive\":true,\"gloss\":\"限定报考年份\"},{\"i\":7,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"考生甲\"},{\"i\":8,\"role\":\"标点\",\"decisive\":false,\"gloss\":\"分隔条件\"},{\"i\":9,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"切分片段\"},{\"i\":10,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"切分片段\"},{\"i\":11,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"切分片段\"},{\"i\":12,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"切分片段\"},{\"i\":13,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"切分片段\"},{\"i\":14,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"切分片段\"},{\"i\":15,\"role\":\"动作\",\"decisive\":true,\"gloss\":\"报名行为\"},{\"i\":16,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"年限数值\"},{\"i\":17,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"切分片段\"},{\"i\":18,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"切分片段\"},{\"i\":19,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"切分片段\"},{\"i\":20,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"切分片段\"},{\"i\":21,\"role\":\"条件\",\"decisive\":true,\"gloss\":\"报考资格判断\"},{\"i\":22,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"切分片段\"},{\"i\":23,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"切分片段\"},{\"i\":24,\"role\":\"标点\",\"decisive\":false,\"gloss\":\"分隔题面\"},{\"i\":25,\"role\":\"标点\",\"decisive\":false,\"gloss\":\"疑问标记\"},{\"i\":26,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"考生乙\"},{\"i\":27,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"切分片段\"},{\"i\":28,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"工作年限数值\"},{\"i\":29,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"切分片段\"},{\"i\":30,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"切分片段\"},{\"i\":31,\"role\":\"动作\",\"decisive\":true,\"gloss\":\"询问报考资格\"},{\"i\":32,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"切分片段\"},{\"i\":33,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"工作年限数值\"},{\"i\":34,\"role\":\"标点\",\"decisive\":false,\"gloss\":\"分隔条件\"},{\"i\":35,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"切分片段\"},{\"i\":36,\"role\":\"标点\",\"decisive\":false,\"gloss\":\"分隔专业\"},{\"i\":37,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"切分片段\"},{\"i\":38,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"切分片段\"},{\"i\":39,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"切分片段\"},{\"i\":40,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"考生丙\"},{\"i\":41,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"切分片段\"},{\"i\":42,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"切分片段\"},{\"i\":43,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"切分片段\"},{\"i\":44,\"role\":\"标点\",\"decisive\":false,\"gloss\":\"分隔专业\"},{\"i\":45,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"切分片段\"},{\"i\":46,\"role\":\"动作\",\"decisive\":true,\"gloss\":\"报名资格判断\"},{\"i\":47,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"切分片段\"},{\"i\":48,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"切分片段\"},{\"i\":49,\"role\":\"标点\",\"decisive\":false,\"gloss\":\"分隔资格\"},{\"i\":50,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"切分片段\"},{\"i\":51,\"role\":\"标点\",\"decisive\":false,\"gloss\":\"分隔条件\"},{\"i\":52,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"工作年限数值\"},{\"i\":53,\"role\":\"单位\",\"decisive\":false,\"gloss\":\"时间单位\"},{\"i\":54,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"切分片段\"},{\"i\":55,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"工作年限数值\"}]}",
+ "n_units": 55,
+ "n_ann": 55,
+ "prompt_sha": "c46d4deb1c7339b8",
+ "ts": 1793408951.178644
+}

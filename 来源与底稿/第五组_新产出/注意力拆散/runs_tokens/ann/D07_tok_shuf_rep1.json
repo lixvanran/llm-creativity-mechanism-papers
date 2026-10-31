@@ -1,0 +1,436 @@
+{
+ "task_id": "D07",
+ "rep": 1,
+ "kind": "tok_shuf",
+ "units": [
+  "活",
+  "后",
+  "者",
+  "日",
+  "适",
+  "2",
+  "收",
+  "退",
+  "、",
+  "'",
+  "法",
+  "《",
+  "日",
+  "店",
+  "按",
+  "不",
+  "明",
+  "？",
+  "签",
+  "费",
+  "天",
+  "9",
+  "请",
+  "能",
+  "，",
+  "办",
+  "、",
+  "消",
+  "退",
+  "暂",
+  "铺",
+  "日",
+  "货",
+  "3",
+  "》",
+  "七",
+  "退",
+  "七",
+  "理",
+  "激",
+  "退",
+  "货",
+  "行",
+  "申",
+  "日",
+  "活",
+  "用",
+  "货",
+  "理",
+  "3",
+  "吗",
+  "无",
+  "注",
+  "激",
+  "'",
+  "月",
+  "无",
+  "由",
+  "由",
+  "。"
+ ],
+ "ann": [
+  {
+   "i": 1,
+   "role": "动作",
+   "decisive": false,
+   "gloss": "激活这一行为"
+  },
+  {
+   "i": 2,
+   "role": "连接",
+   "decisive": false,
+   "gloss": "表示动作先后关系"
+  },
+  {
+   "i": 3,
+   "role": "条件",
+   "decisive": true,
+   "gloss": "激活完成后"
+  },
+  {
+   "i": 4,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "表示七天期限"
+  },
+  {
+   "i": 5,
+   "role": "动作",
+   "decisive": false,
+   "gloss": "适用某项规则"
+  },
+  {
+   "i": 6,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "表示期限长度"
+  },
+  {
+   "i": 7,
+   "role": "动作",
+   "decisive": false,
+   "gloss": "消费者签收商品"
+  },
+  {
+   "i": 8,
+   "role": "动作",
+   "decisive": false,
+   "gloss": "申请退货"
+  },
+  {
+   "i": 9,
+   "role": "标点",
+   "decisive": false,
+   "gloss": "分隔事件与依据"
+  },
+  {
+   "i": 10,
+   "role": "标点",
+   "decisive": false,
+   "gloss": "标示店铺声明内容"
+  },
+  {
+   "i": 11,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "引用退货规则"
+  },
+  {
+   "i": 12,
+   "role": "标点",
+   "decisive": false,
+   "gloss": "标示法规名称开头"
+  },
+  {
+   "i": 13,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "法规名称组成部分"
+  },
+  {
+   "i": 14,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "作出退换货说明"
+  },
+  {
+   "i": 15,
+   "role": "动作",
+   "decisive": false,
+   "gloss": "依据相关规则判断"
+  },
+  {
+   "i": 16,
+   "role": "修饰",
+   "decisive": false,
+   "gloss": "否定无理由退货"
+  },
+  {
+   "i": 17,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "构成店铺声明"
+  },
+  {
+   "i": 18,
+   "role": "标点",
+   "decisive": false,
+   "gloss": "结束疑问句"
+  },
+  {
+   "i": 19,
+   "role": "动作",
+   "decisive": false,
+   "gloss": "消费者签收商品"
+  },
+  {
+   "i": 20,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "承担退货消费关系"
+  },
+  {
+   "i": 21,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "表示七日期间"
+  },
+  {
+   "i": 22,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "表示申请退货日期"
+  },
+  {
+   "i": 23,
+   "role": "动作",
+   "decisive": false,
+   "gloss": "消费者提出请求"
+  },
+  {
+   "i": 24,
+   "role": "动作",
+   "decisive": false,
+   "gloss": "询问能否退货"
+  },
+  {
+   "i": 25,
+   "role": "标点",
+   "decisive": false,
+   "gloss": "分隔请求与办法"
+  },
+  {
+   "i": 26,
+   "role": "动作",
+   "decisive": false,
+   "gloss": "申请办理退货"
+  },
+  {
+   "i": 27,
+   "role": "标点",
+   "decisive": false,
+   "gloss": "分隔并列事项"
+  },
+  {
+   "i": 28,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "提出退货的一方"
+  },
+  {
+   "i": 29,
+   "role": "动作",
+   "decisive": false,
+   "gloss": "要求返还商品"
+  },
+  {
+   "i": 30,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "法规名称组成部分"
+  },
+  {
+   "i": 31,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "作出退货规则说明"
+  },
+  {
+   "i": 32,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "表示某一日"
+  },
+  {
+   "i": 33,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "表示收货事件"
+  },
+  {
+   "i": 34,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "表示签收日期"
+  },
+  {
+   "i": 35,
+   "role": "标点",
+   "decisive": false,
+   "gloss": "结束法规名称"
+  },
+  {
+   "i": 36,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "表示七日期间"
+  },
+  {
+   "i": 37,
+   "role": "动作",
+   "decisive": false,
+   "gloss": "消费者申请退货"
+  },
+  {
+   "i": 38,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "表示无理由退货期限"
+  },
+  {
+   "i": 39,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "构成法规名称"
+  },
+  {
+   "i": 40,
+   "role": "动作",
+   "decisive": false,
+   "gloss": "激活商品"
+  },
+  {
+   "i": 41,
+   "role": "动作",
+   "decisive": false,
+   "gloss": "消费者要求退货"
+  },
+  {
+   "i": 42,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "构成退货事件"
+  },
+  {
+   "i": 43,
+   "role": "动作",
+   "decisive": false,
+   "gloss": "提出退货申请"
+  },
+  {
+   "i": 44,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "表示某一日"
+  },
+  {
+   "i": 45,
+   "role": "动作",
+   "decisive": false,
+   "gloss": "消费者激活商品"
+  },
+  {
+   "i": 46,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "表示激活日期"
+  },
+  {
+   "i": 47,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "表示商品被启用"
+  },
+  {
+   "i": 48,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "构成商品状态"
+  },
+  {
+   "i": 49,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "构成管理办法名称"
+  },
+  {
+   "i": 50,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "表示申请退货日期"
+  },
+  {
+   "i": 51,
+   "role": "动作",
+   "decisive": false,
+   "gloss": "询问处理结果"
+  },
+  {
+   "i": 52,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "表示无理由期限"
+  },
+  {
+   "i": 53,
+   "role": "动作",
+   "decisive": false,
+   "gloss": "店铺注明退货限制"
+  },
+  {
+   "i": 54,
+   "role": "动作",
+   "decisive": false,
+   "gloss": "消费者激活商品"
+  },
+  {
+   "i": 55,
+   "role": "标点",
+   "decisive": false,
+   "gloss": "结束店铺声明"
+  },
+  {
+   "i": 56,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "表示签收月份"
+  },
+  {
+   "i": 57,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "表示无理由退货期限"
+  },
+  {
+   "i": 58,
+   "role": "动作",
+   "decisive": false,
+   "gloss": "消费者申请退货"
+  },
+  {
+   "i": 59,
+   "role": "动作",
+   "decisive": false,
+   "gloss": "询问退货资格"
+  },
+  {
+   "i": 60,
+   "role": "标点",
+   "decisive": false,
+   "gloss": "结束问题"
+  }
+ ],
+ "ok": true,
+ "err": null,
+ "raw": "{\"ann\":[{\"i\":1,\"role\":\"动作\",\"decisive\":false,\"gloss\":\"激活这一行为\"},{\"i\":2,\"role\":\"连接\",\"decisive\":false,\"gloss\":\"表示动作先后关系\"},{\"i\":3,\"role\":\"条件\",\"decisive\":true,\"gloss\":\"激活完成后\"},{\"i\":4,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"表示七天期限\"},{\"i\":5,\"role\":\"动作\",\"decisive\":false,\"gloss\":\"适用某项规则\"},{\"i\":6,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"表示期限长度\"},{\"i\":7,\"role\":\"动作\",\"decisive\":false,\"gloss\":\"消费者签收商品\"},{\"i\":8,\"role\":\"动作\",\"decisive\":false,\"gloss\":\"申请退货\"},{\"i\":9,\"role\":\"标点\",\"decisive\":false,\"gloss\":\"分隔事件与依据\"},{\"i\":10,\"role\":\"标点\",\"decisive\":false,\"gloss\":\"标示店铺声明内容\"},{\"i\":11,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"引用退货规则\"},{\"i\":12,\"role\":\"标点\",\"decisive\":false,\"gloss\":\"标示法规名称开头\"},{\"i\":13,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"法规名称组成部分\"},{\"i\":14,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"作出退换货说明\"},{\"i\":15,\"role\":\"动作\",\"decisive\":false,\"gloss\":\"依据相关规则判断\"},{\"i\":16,\"role\":\"修饰\",\"decisive\":false,\"gloss\":\"否定无理由退货\"},{\"i\":17,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"构成店铺声明\"},{\"i\":18,\"role\":\"标点\",\"decisive\":false,\"gloss\":\"结束疑问句\"},{\"i\":19,\"role\":\"动作\",\"decisive\":false,\"gloss\":\"消费者签收商品\"},{\"i\":20,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"承担退货消费关系\"},{\"i\":21,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"表示七日期间\"},{\"i\":22,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"表示申请退货日期\"},{\"i\":23,\"role\":\"动作\",\"decisive\":false,\"gloss\":\"消费者提出请求\"},{\"i\":24,\"role\":\"动作\",\"decisive\":false,\"gloss\":\"询问能否退货\"},{\"i\":25,\"role\":\"标点\",\"decisive\":false,\"gloss\":\"分隔请求与办法\"},{\"i\":26,\"role\":\"动作\",\"decisive\":false,\"gloss\":\"申请办理退货\"},{\"i\":27,\"role\":\"标点\",\"decisive\":false,\"gloss\":\"分隔并列事项\"},{\"i\":28,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"提出退货的一方\"},{\"i\":29,\"role\":\"动作\",\"decisive\":false,\"gloss\":\"要求返还商品\"},{\"i\":30,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"法规名称组成部分\"},{\"i\":31,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"作出退货规则说明\"},{\"i\":32,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"表示某一日\"},{\"i\":33,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"表示收货事件\"},{\"i\":34,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"表示签收日期\"},{\"i\":35,\"role\":\"标点\",\"decisive\":false,\"gloss\":\"结束法规名称\"},{\"i\":36,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"表示七日期间\"},{\"i\":37,\"role\":\"动作\",\"decisive\":false,\"gloss\":\"消费者申请退货\"},{\"i\":38,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"表示无理由退货期限\"},{\"i\":39,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"构成法规名称\"},{\"i\":40,\"role\":\"动作\",\"decisive\":false,\"gloss\":\"激活商品\"},{\"i\":41,\"role\":\"动作\",\"decisive\":false,\"gloss\":\"消费者要求退货\"},{\"i\":42,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"构成退货事件\"},{\"i\":43,\"role\":\"动作\",\"decisive\":false,\"gloss\":\"提出退货申请\"},{\"i\":44,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"表示某一日\"},{\"i\":45,\"role\":\"动作\",\"decisive\":false,\"gloss\":\"消费者激活商品\"},{\"i\":46,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"表示激活日期\"},{\"i\":47,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"表示商品被启用\"},{\"i\":48,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"构成商品状态\"},{\"i\":49,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"构成管理办法名称\"},{\"i\":50,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"表示申请退货日期\"},{\"i\":51,\"role\":\"动作\",\"decisive\":false,\"gloss\":\"询问处理结果\"},{\"i\":52,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"表示无理由期限\"},{\"i\":53,\"role\":\"动作\",\"decisive\":false,\"gloss\":\"店铺注明退货限制\"},{\"i\":54,\"role\":\"动作\",\"decisive\":false,\"gloss\":\"消费者激活商品\"},{\"i\":55,\"role\":\"标点\",\"decisive\":false,\"gloss\":\"结束店铺声明\"},{\"i\":56,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"表示签收月份\"},{\"i\":57,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"表示无理由退货期限\"},{\"i\":58,\"role\":\"动作\",\"decisive\":false,\"gloss\":\"消费者申请退货\"},{\"i\":59,\"role\":\"动作\",\"decisive\":false,\"gloss\":\"询问退货资格\"},{\"i\":60,\"role\":\"标点\",\"decisive\":false,\"gloss\":\"结束问题\"}]}",
+ "n_units": 60,
+ "n_ann": 60,
+ "prompt_sha": "f84bb25c83a5056f",
+ "ts": 1793408938.1903172
+}

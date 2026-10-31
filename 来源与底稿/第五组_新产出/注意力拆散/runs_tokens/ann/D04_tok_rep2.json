@@ -1,0 +1,387 @@
+{
+ "task_id": "D04",
+ "rep": 2,
+ "kind": "tok",
+ "units": [
+  "按",
+  "公",
+  "开",
+  "标",
+  "准",
+  "判",
+  "定",
+  "：",
+  "成",
+  "人",
+  "Ⅱ",
+  "度",
+  "烧",
+  "伤",
+  "面",
+  "积",
+  "12%",
+  "属",
+  "哪",
+  "一",
+  "级",
+  "？",
+  "5",
+  "岁",
+  "儿",
+  "童",
+  "Ⅱ",
+  "度",
+  "烧",
+  "伤",
+  "面",
+  "积",
+  "18%",
+  "属",
+  "哪",
+  "一",
+  "级",
+  "？",
+  "面",
+  "部",
+  "Ⅲ",
+  "度",
+  "烧",
+  "伤",
+  "是",
+  "否",
+  "属",
+  "急",
+  "诊",
+  "120",
+  "指",
+  "征",
+  "？"
+ ],
+ "ann": [
+  {
+   "i": 1,
+   "role": "动作",
+   "decisive": false,
+   "gloss": "提出按标准判定的要求"
+  },
+  {
+   "i": 2,
+   "role": "修饰",
+   "decisive": true,
+   "gloss": "限定依据为公开标准"
+  },
+  {
+   "i": 3,
+   "role": "动作",
+   "decisive": false,
+   "gloss": "引出公开标准判定"
+  },
+  {
+   "i": 4,
+   "role": "修饰",
+   "decisive": true,
+   "gloss": "限定标准为公开标准"
+  },
+  {
+   "i": 5,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "构成公开标准判定"
+  },
+  {
+   "i": 6,
+   "role": "动作",
+   "decisive": false,
+   "gloss": "引出公开标准判定"
+  },
+  {
+   "i": 7,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "构成公开标准判定"
+  },
+  {
+   "i": 8,
+   "role": "标点",
+   "decisive": false,
+   "gloss": "分隔判定要求与问题"
+  },
+  {
+   "i": 9,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "指明成人这一适用主体"
+  },
+  {
+   "i": 10,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "与度组合标示伤情程度"
+  },
+  {
+   "i": 11,
+   "role": "条件",
+   "decisive": true,
+   "gloss": "限定为Ⅱ度烧伤"
+  },
+  {
+   "i": 12,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "与罗马数字组合标示程度"
+  },
+  {
+   "i": 13,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "标示所受损伤"
+  },
+  {
+   "i": 14,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "与面部面积构成伤情"
+  },
+  {
+   "i": 15,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "标示受累部位"
+  },
+  {
+   "i": 16,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "标示烧伤覆盖范围"
+  },
+  {
+   "i": 17,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "给出成人烧伤面积比例"
+  },
+  {
+   "i": 18,
+   "role": "动作",
+   "decisive": false,
+   "gloss": "提出分级询问"
+  },
+  {
+   "i": 19,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "构成分级询问"
+  },
+  {
+   "i": 20,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "构成分级询问"
+  },
+  {
+   "i": 21,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "构成分级询问"
+  },
+  {
+   "i": 22,
+   "role": "标点",
+   "decisive": false,
+   "gloss": "结束第一项询问"
+  },
+  {
+   "i": 23,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "给出儿童年龄"
+  },
+  {
+   "i": 24,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "与岁构成年龄"
+  },
+  {
+   "i": 25,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "指明五岁儿童主体"
+  },
+  {
+   "i": 26,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "与五岁构成儿童主体"
+  },
+  {
+   "i": 27,
+   "role": "条件",
+   "decisive": true,
+   "gloss": "限定为Ⅱ度烧伤"
+  },
+  {
+   "i": 28,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "与罗马数字组合标示程度"
+  },
+  {
+   "i": 29,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "标示所受损伤"
+  },
+  {
+   "i": 30,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "与面部面积构成伤情"
+  },
+  {
+   "i": 31,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "标示受累部位"
+  },
+  {
+   "i": 32,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "标示烧伤覆盖范围"
+  },
+  {
+   "i": 33,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "给出儿童烧伤面积比例"
+  },
+  {
+   "i": 34,
+   "role": "动作",
+   "decisive": false,
+   "gloss": "提出分级询问"
+  },
+  {
+   "i": 35,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "构成分级询问"
+  },
+  {
+   "i": 36,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "构成分级询问"
+  },
+  {
+   "i": 37,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "构成分级询问"
+  },
+  {
+   "i": 38,
+   "role": "标点",
+   "decisive": false,
+   "gloss": "结束第二项询问"
+  },
+  {
+   "i": 39,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "标示受累部位"
+  },
+  {
+   "i": 40,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "与Ⅲ度烧伤构成伤情"
+  },
+  {
+   "i": 41,
+   "role": "条件",
+   "decisive": true,
+   "gloss": "限定为Ⅲ度烧伤"
+  },
+  {
+   "i": 42,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "与罗马数字组合标示程度"
+  },
+  {
+   "i": 43,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "标示所受损伤"
+  },
+  {
+   "i": 44,
+   "role": "动作",
+   "decisive": false,
+   "gloss": "提出是否属于急诊指征"
+  },
+  {
+   "i": 45,
+   "role": "动作",
+   "decisive": false,
+   "gloss": "构成是否判断"
+  },
+  {
+   "i": 46,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "构成是否属于询问"
+  },
+  {
+   "i": 47,
+   "role": "动作",
+   "decisive": false,
+   "gloss": "提出急诊指征归属判断"
+  },
+  {
+   "i": 48,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "标示需要紧急处置"
+  },
+  {
+   "i": 49,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "标示急救呼叫系统"
+  },
+  {
+   "i": 50,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "标示急救呼叫号码"
+  },
+  {
+   "i": 51,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "构成急诊急救指征"
+  },
+  {
+   "i": 52,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "构成急诊急救指征"
+  },
+  {
+   "i": 53,
+   "role": "标点",
+   "decisive": false,
+   "gloss": "结束第三项询问"
+  }
+ ],
+ "ok": true,
+ "err": null,
+ "raw": "{\"ann\":[{\"i\":1,\"role\":\"动作\",\"decisive\":false,\"gloss\":\"提出按标准判定的要求\"},{\"i\":2,\"role\":\"修饰\",\"decisive\":true,\"gloss\":\"限定依据为公开标准\"},{\"i\":3,\"role\":\"动作\",\"decisive\":false,\"gloss\":\"引出公开标准判定\"},{\"i\":4,\"role\":\"修饰\",\"decisive\":true,\"gloss\":\"限定标准为公开标准\"},{\"i\":5,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"构成公开标准判定\"},{\"i\":6,\"role\":\"动作\",\"decisive\":false,\"gloss\":\"引出公开标准判定\"},{\"i\":7,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"构成公开标准判定\"},{\"i\":8,\"role\":\"标点\",\"decisive\":false,\"gloss\":\"分隔判定要求与问题\"},{\"i\":9,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"指明成人这一适用主体\"},{\"i\":10,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"与度组合标示伤情程度\"},{\"i\":11,\"role\":\"条件\",\"decisive\":true,\"gloss\":\"限定为Ⅱ度烧伤\"},{\"i\":12,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"与罗马数字组合标示程度\"},{\"i\":13,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"标示所受损伤\"},{\"i\":14,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"与面部面积构成伤情\"},{\"i\":15,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"标示受累部位\"},{\"i\":16,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"标示烧伤覆盖范围\"},{\"i\":17,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"给出成人烧伤面积比例\"},{\"i\":18,\"role\":\"动作\",\"decisive\":false,\"gloss\":\"提出分级询问\"},{\"i\":19,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"构成分级询问\"},{\"i\":20,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"构成分级询问\"},{\"i\":21,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"构成分级询问\"},{\"i\":22,\"role\":\"标点\",\"decisive\":false,\"gloss\":\"结束第一项询问\"},{\"i\":23,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"给出儿童年龄\"},{\"i\":24,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"与岁构成年龄\"},{\"i\":25,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"指明五岁儿童主体\"},{\"i\":26,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"与五岁构成儿童主体\"},{\"i\":27,\"role\":\"条件\",\"decisive\":true,\"gloss\":\"限定为Ⅱ度烧伤\"},{\"i\":28,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"与罗马数字组合标示程度\"},{\"i\":29,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"标示所受损伤\"},{\"i\":30,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"与面部面积构成伤情\"},{\"i\":31,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"标示受累部位\"},{\"i\":32,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"标示烧伤覆盖范围\"},{\"i\":33,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"给出儿童烧伤面积比例\"},{\"i\":34,\"role\":\"动作\",\"decisive\":false,\"gloss\":\"提出分级询问\"},{\"i\":35,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"构成分级询问\"},{\"i\":36,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"构成分级询问\"},{\"i\":37,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"构成分级询问\"},{\"i\":38,\"role\":\"标点\",\"decisive\":false,\"gloss\":\"结束第二项询问\"},{\"i\":39,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"标示受累部位\"},{\"i\":40,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"与Ⅲ度烧伤构成伤情\"},{\"i\":41,\"role\":\"条件\",\"decisive\":true,\"gloss\":\"限定为Ⅲ度烧伤\"},{\"i\":42,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"与罗马数字组合标示程度\"},{\"i\":43,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"标示所受损伤\"},{\"i\":44,\"role\":\"动作\",\"decisive\":false,\"gloss\":\"提出是否属于急诊指征\"},{\"i\":45,\"role\":\"动作\",\"decisive\":false,\"gloss\":\"构成是否判断\"},{\"i\":46,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"构成是否属于询问\"},{\"i\":47,\"role\":\"动作\",\"decisive\":false,\"gloss\":\"提出急诊指征归属判断\"},{\"i\":48,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"标示需要紧急处置\"},{\"i\":49,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"标示急救呼叫系统\"},{\"i\":50,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"标示急救呼叫号码\"},{\"i\":51,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"构成急诊急救指征\"},{\"i\":52,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"构成急诊急救指征\"},{\"i\":53,\"role\":\"标点\",\"decisive\":false,\"gloss\":\"结束第三项询问\"}]}",
+ "n_units": 53,
+ "n_ann": 53,
+ "prompt_sha": "a004764f3a0f90ae",
+ "ts": 1793409616.7463157
+}

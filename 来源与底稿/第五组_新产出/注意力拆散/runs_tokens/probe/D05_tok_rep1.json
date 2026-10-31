@@ -1,0 +1,12 @@
+{
+ "task_id": "D05",
+ "rep": 1,
+ "kind": "tok",
+ "probe": [],
+ "ok": false,
+ "err": "call_failed",
+ "n_probe": 0,
+ "raw": "",
+ "prompt_sha": "cb6d3190be04ff31",
+ "ts": 1793409508.3682377
+}

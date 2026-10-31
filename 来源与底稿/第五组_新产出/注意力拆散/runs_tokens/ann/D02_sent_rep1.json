@@ -1,0 +1,30 @@
+{
+ "task_id": "D02",
+ "rep": 1,
+ "kind": "sent",
+ "units": [
+  "网关：①上游无效响应→502 ②上游未响应→504 ③后端过载→503 ④请求过多→503。",
+  "哪几项正确？"
+ ],
+ "ann": [
+  {
+   "i": 1,
+   "role": "其他",
+   "decisive": true,
+   "gloss": "列出四种状态码对应关系"
+  },
+  {
+   "i": 2,
+   "role": "动作",
+   "decisive": true,
+   "gloss": "要求判断对应关系正误"
+  }
+ ],
+ "ok": true,
+ "err": null,
+ "raw": "{\"ann\":[{\"i\":1,\"role\":\"其他\",\"decisive\":true,\"gloss\":\"列出四种状态码对应关系\"},{\"i\":2,\"role\":\"动作\",\"decisive\":true,\"gloss\":\"要求判断对应关系正误\"}]}",
+ "n_units": 2,
+ "n_ann": 2,
+ "prompt_sha": "05443d96ba2c25d4",
+ "ts": 1793408921.6294663
+}

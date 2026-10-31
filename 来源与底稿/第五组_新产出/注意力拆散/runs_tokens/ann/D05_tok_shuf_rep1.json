@@ -1,0 +1,422 @@
+{
+ "task_id": "D05",
+ "rep": 1,
+ "kind": "tok_shuf",
+ "units": [
+  "仅",
+  "有",
+  "记",
+  "，",
+  "登",
+  "住",
+  "丁",
+  "需",
+  "动",
+  "可",
+  "按",
+  "领",
+  "交",
+  "丙",
+  "记",
+  "居",
+  "6",
+  "？",
+  "地",
+  "月",
+  "在",
+  "谁",
+  "申",
+  "小",
+  "同",
+  "劳",
+  "月",
+  "，",
+  "？",
+  "规",
+  "，",
+  "材",
+  "在",
+  "哪",
+  "个",
+  "住",
+  "读",
+  "居",
+  "类",
+  "满",
+  "丙",
+  "地",
+  "住",
+  "住",
+  "3",
+  "学",
+  "乙",
+  "合",
+  "料",
+  "，",
+  "定",
+  "，",
+  "甲",
+  "居",
+  "居",
+  "证",
+  "登",
+  "个"
+ ],
+ "ann": [
+  {
+   "i": 1,
+   "role": "连接",
+   "decisive": false,
+   "gloss": "限定仅有甲符合"
+  },
+  {
+   "i": 2,
+   "role": "动作",
+   "decisive": true,
+   "gloss": "具有申领居住证的可能"
+  },
+  {
+   "i": 3,
+   "role": "动作",
+   "decisive": false,
+   "gloss": "记载居住登记行为"
+  },
+  {
+   "i": 4,
+   "role": "标点",
+   "decisive": false,
+   "gloss": "分隔甲登记时长"
+  },
+  {
+   "i": 5,
+   "role": "动作",
+   "decisive": false,
+   "gloss": "记载登记行为"
+  },
+  {
+   "i": 6,
+   "role": "修饰",
+   "decisive": false,
+   "gloss": "限定登记地点或状态"
+  },
+  {
+   "i": 7,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "申领居住证的主体之一"
+  },
+  {
+   "i": 8,
+   "role": "动作",
+   "decisive": false,
+   "gloss": "引出丁所需材料"
+  },
+  {
+   "i": 9,
+   "role": "动作",
+   "decisive": false,
+   "gloss": "表示需要采取行动"
+  },
+  {
+   "i": 10,
+   "role": "动作",
+   "decisive": true,
+   "gloss": "表示具备申领资格"
+  },
+  {
+   "i": 11,
+   "role": "动作",
+   "decisive": false,
+   "gloss": "表示可以办理"
+  },
+  {
+   "i": 12,
+   "role": "动作",
+   "decisive": true,
+   "gloss": "申领居住证的行为"
+  },
+  {
+   "i": 13,
+   "role": "动作",
+   "decisive": false,
+   "gloss": "表示提交材料"
+  },
+  {
+   "i": 14,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "申领居住证的主体之一"
+  },
+  {
+   "i": 15,
+   "role": "动作",
+   "decisive": false,
+   "gloss": "记载登记行为"
+  },
+  {
+   "i": 16,
+   "role": "修饰",
+   "decisive": false,
+   "gloss": "限定登记地点或状态"
+  },
+  {
+   "i": 17,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "乙登记满六个月"
+  },
+  {
+   "i": 18,
+   "role": "标点",
+   "decisive": false,
+   "gloss": "结束询问丁的资格"
+  },
+  {
+   "i": 19,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "说明居住所在地点"
+  },
+  {
+   "i": 20,
+   "role": "单位",
+   "decisive": true,
+   "gloss": "登记时长计量单位"
+  },
+  {
+   "i": 21,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "引出居住所在地"
+  },
+  {
+   "i": 22,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "询问居住证申领主体"
+  },
+  {
+   "i": 23,
+   "role": "动作",
+   "decisive": true,
+   "gloss": "申请居住证的行为"
+  },
+  {
+   "i": 24,
+   "role": "修饰",
+   "decisive": false,
+   "gloss": "限定丁所处情形"
+  },
+  {
+   "i": 25,
+   "role": "连接",
+   "decisive": false,
+   "gloss": "连接丁与其状态"
+  },
+  {
+   "i": 26,
+   "role": "其他",
+   "decisive": true,
+   "gloss": "丙的劳动合同条件"
+  },
+  {
+   "i": 27,
+   "role": "单位",
+   "decisive": true,
+   "gloss": "登记时长计量单位"
+  },
+  {
+   "i": 28,
+   "role": "标点",
+   "decisive": false,
+   "gloss": "分隔丙的登记条件"
+  },
+  {
+   "i": 29,
+   "role": "标点",
+   "decisive": false,
+   "gloss": "结束询问申领主体"
+  },
+  {
+   "i": 30,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "引出登记时长规定"
+  },
+  {
+   "i": 31,
+   "role": "标点",
+   "decisive": false,
+   "gloss": "分隔规定与甲的情况"
+  },
+  {
+   "i": 32,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "询问所需材料类型"
+  },
+  {
+   "i": 33,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "引出居住所在地点"
+  },
+  {
+   "i": 34,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "询问材料的具体类别"
+  },
+  {
+   "i": 35,
+   "role": "量词",
+   "decisive": true,
+   "gloss": "标示材料类别数量单位"
+  },
+  {
+   "i": 36,
+   "role": "修饰",
+   "decisive": false,
+   "gloss": "限定登记地点或状态"
+  },
+  {
+   "i": 37,
+   "role": "动作",
+   "decisive": false,
+   "gloss": "表示就读行为"
+  },
+  {
+   "i": 38,
+   "role": "修饰",
+   "decisive": false,
+   "gloss": "限定登记地点或状态"
+  },
+  {
+   "i": 39,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "标示所问材料类别"
+  },
+  {
+   "i": 40,
+   "role": "动作",
+   "decisive": true,
+   "gloss": "表示达到六个月门槛"
+  },
+  {
+   "i": 41,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "申领居住证的主体之一"
+  },
+  {
+   "i": 42,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "说明居住所在地点"
+  },
+  {
+   "i": 43,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "构成居住地表达"
+  },
+  {
+   "i": 44,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "构成居住地表达"
+  },
+  {
+   "i": 45,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "甲登记三个月"
+  },
+  {
+   "i": 46,
+   "role": "动作",
+   "decisive": false,
+   "gloss": "表示就读行为"
+  },
+  {
+   "i": 47,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "申领居住证的主体之一"
+  },
+  {
+   "i": 48,
+   "role": "其他",
+   "decisive": true,
+   "gloss": "丙的劳动合同条件"
+  },
+  {
+   "i": 49,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "指需要提交的材料"
+  },
+  {
+   "i": 50,
+   "role": "标点",
+   "decisive": false,
+   "gloss": "分隔问题两部分"
+  },
+  {
+   "i": 51,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "引出规定内容"
+  },
+  {
+   "i": 52,
+   "role": "标点",
+   "decisive": false,
+   "gloss": "分隔规定与乙的情况"
+  },
+  {
+   "i": 53,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "申领居住证的主体之一"
+  },
+  {
+   "i": 54,
+   "role": "修饰",
+   "decisive": false,
+   "gloss": "限定登记地点或状态"
+  },
+  {
+   "i": 55,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "构成居住地表达"
+  },
+  {
+   "i": 56,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "申领的证件名称"
+  },
+  {
+   "i": 57,
+   "role": "动作",
+   "decisive": false,
+   "gloss": "记载登记行为"
+  },
+  {
+   "i": 58,
+   "role": "量词",
+   "decisive": true,
+   "gloss": "标示居住登记数量单位"
+  }
+ ],
+ "ok": true,
+ "err": null,
+ "raw": "{\"ann\":[{\"i\":1,\"role\":\"连接\",\"decisive\":false,\"gloss\":\"限定仅有甲符合\"},{\"i\":2,\"role\":\"动作\",\"decisive\":true,\"gloss\":\"具有申领居住证的可能\"},{\"i\":3,\"role\":\"动作\",\"decisive\":false,\"gloss\":\"记载居住登记行为\"},{\"i\":4,\"role\":\"标点\",\"decisive\":false,\"gloss\":\"分隔甲登记时长\"},{\"i\":5,\"role\":\"动作\",\"decisive\":false,\"gloss\":\"记载登记行为\"},{\"i\":6,\"role\":\"修饰\",\"decisive\":false,\"gloss\":\"限定登记地点或状态\"},{\"i\":7,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"申领居住证的主体之一\"},{\"i\":8,\"role\":\"动作\",\"decisive\":false,\"gloss\":\"引出丁所需材料\"},{\"i\":9,\"role\":\"动作\",\"decisive\":false,\"gloss\":\"表示需要采取行动\"},{\"i\":10,\"role\":\"动作\",\"decisive\":true,\"gloss\":\"表示具备申领资格\"},{\"i\":11,\"role\":\"动作\",\"decisive\":false,\"gloss\":\"表示可以办理\"},{\"i\":12,\"role\":\"动作\",\"decisive\":true,\"gloss\":\"申领居住证的行为\"},{\"i\":13,\"role\":\"动作\",\"decisive\":false,\"gloss\":\"表示提交材料\"},{\"i\":14,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"申领居住证的主体之一\"},{\"i\":15,\"role\":\"动作\",\"decisive\":false,\"gloss\":\"记载登记行为\"},{\"i\":16,\"role\":\"修饰\",\"decisive\":false,\"gloss\":\"限定登记地点或状态\"},{\"i\":17,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"乙登记满六个月\"},{\"i\":18,\"role\":\"标点\",\"decisive\":false,\"gloss\":\"结束询问丁的资格\"},{\"i\":19,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"说明居住所在地点\"},{\"i\":20,\"role\":\"单位\",\"decisive\":true,\"gloss\":\"登记时长计量单位\"},{\"i\":21,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"引出居住所在地\"},{\"i\":22,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"询问居住证申领主体\"},{\"i\":23,\"role\":\"动作\",\"decisive\":true,\"gloss\":\"申请居住证的行为\"},{\"i\":24,\"role\":\"修饰\",\"decisive\":false,\"gloss\":\"限定丁所处情形\"},{\"i\":25,\"role\":\"连接\",\"decisive\":false,\"gloss\":\"连接丁与其状态\"},{\"i\":26,\"role\":\"其他\",\"decisive\":true,\"gloss\":\"丙的劳动合同条件\"},{\"i\":27,\"role\":\"单位\",\"decisive\":true,\"gloss\":\"登记时长计量单位\"},{\"i\":28,\"role\":\"标点\",\"decisive\":false,\"gloss\":\"分隔丙的登记条件\"},{\"i\":29,\"role\":\"标点\",\"decisive\":false,\"gloss\":\"结束询问申领主体\"},{\"i\":30,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"引出登记时长规定\"},{\"i\":31,\"role\":\"标点\",\"decisive\":false,\"gloss\":\"分隔规定与甲的情况\"},{\"i\":32,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"询问所需材料类型\"},{\"i\":33,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"引出居住所在地点\"},{\"i\":34,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"询问材料的具体类别\"},{\"i\":35,\"role\":\"量词\",\"decisive\":true,\"gloss\":\"标示材料类别数量单位\"},{\"i\":36,\"role\":\"修饰\",\"decisive\":false,\"gloss\":\"限定登记地点或状态\"},{\"i\":37,\"role\":\"动作\",\"decisive\":false,\"gloss\":\"表示就读行为\"},{\"i\":38,\"role\":\"修饰\",\"decisive\":false,\"gloss\":\"限定登记地点或状态\"},{\"i\":39,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"标示所问材料类别\"},{\"i\":40,\"role\":\"动作\",\"decisive\":true,\"gloss\":\"表示达到六个月门槛\"},{\"i\":41,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"申领居住证的主体之一\"},{\"i\":42,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"说明居住所在地点\"},{\"i\":43,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"构成居住地表达\"},{\"i\":44,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"构成居住地表达\"},{\"i\":45,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"甲登记三个月\"},{\"i\":46,\"role\":\"动作\",\"decisive\":false,\"gloss\":\"表示就读行为\"},{\"i\":47,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"申领居住证的主体之一\"},{\"i\":48,\"role\":\"其他\",\"decisive\":true,\"gloss\":\"丙的劳动合同条件\"},{\"i\":49,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"指需要提交的材料\"},{\"i\":50,\"role\":\"标点\",\"decisive\":false,\"gloss\":\"分隔问题两部分\"},{\"i\":51,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"引出规定内容\"},{\"i\":52,\"role\":\"标点\",\"decisive\":false,\"gloss\":\"分隔规定与乙的情况\"},{\"i\":53,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"申领居住证的主体之一\"},{\"i\":54,\"role\":\"修饰\",\"decisive\":false,\"gloss\":\"限定登记地点或状态\"},{\"i\":55,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"构成居住地表达\"},{\"i\":56,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"申领的证件名称\"},{\"i\":57,\"role\":\"动作\",\"decisive\":false,\"gloss\":\"记载登记行为\"},{\"i\":58,\"role\":\"量词\",\"decisive\":true,\"gloss\":\"标示居住登记数量单位\"}]}",
+ "n_units": 58,
+ "n_ann": 58,
+ "prompt_sha": "db1f8c5d879c532b",
+ "ts": 1793408930.1559086
+}

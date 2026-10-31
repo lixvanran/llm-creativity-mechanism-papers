@@ -1,0 +1,30 @@
+{
+ "task_id": "D09",
+ "rep": 1,
+ "kind": "sent",
+ "units": [
+  "2026年春运，某公司19名员工要买2月10日同一天的车票，1月20日才启动订票。",
+  "按铁路公布的规则，下列说法正确的是？"
+ ],
+ "ann": [
+  {
+   "i": 1,
+   "role": "条件",
+   "decisive": true,
+   "gloss": "限定春运及购票情形"
+  },
+  {
+   "i": 2,
+   "role": "动作",
+   "decisive": true,
+   "gloss": "要求依铁路规则判断正误"
+  }
+ ],
+ "ok": true,
+ "err": null,
+ "raw": "{\"ann\":[{\"i\":1,\"role\":\"条件\",\"decisive\":true,\"gloss\":\"限定春运及购票情形\"},{\"i\":2,\"role\":\"动作\",\"decisive\":true,\"gloss\":\"要求依铁路规则判断正误\"}]}",
+ "n_units": 2,
+ "n_ann": 2,
+ "prompt_sha": "6fcfae3b34d54d06",
+ "ts": 1793408938.5179489
+}

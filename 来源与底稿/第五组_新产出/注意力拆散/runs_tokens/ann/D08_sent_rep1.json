@@ -1,0 +1,37 @@
+{
+ "task_id": "D08",
+ "rep": 1,
+ "kind": "sent",
+ "units": [
+  "2026年一级建造师：甲工程类专科、施工管理3年11个月；",
+  "乙工学门类本科、3年；",
+  "丙工学门类硕士、1年8个月，谁可报名？"
+ ],
+ "ann": [
+  {
+   "i": 1,
+   "role": "条件",
+   "decisive": true,
+   "gloss": "限定年份、学历专业及工作年限"
+  },
+  {
+   "i": 2,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "乙具备报名条件"
+  },
+  {
+   "i": 3,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "丙具备报名条件"
+  }
+ ],
+ "ok": true,
+ "err": null,
+ "raw": "{\"ann\":[{\"i\":1,\"role\":\"条件\",\"decisive\":true,\"gloss\":\"限定年份、学历专业及工作年限\"},{\"i\":2,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"乙具备报名条件\"},{\"i\":3,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"丙具备报名条件\"}]}",
+ "n_units": 3,
+ "n_ann": 3,
+ "prompt_sha": "c9ec61a98c05391a",
+ "ts": 1793408937.3266914
+}

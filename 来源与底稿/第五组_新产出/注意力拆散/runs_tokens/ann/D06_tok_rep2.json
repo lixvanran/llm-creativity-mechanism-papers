@@ -1,0 +1,422 @@
+{
+ "task_id": "D06",
+ "rep": 2,
+ "kind": "tok",
+ "units": [
+  "个",
+  "税",
+  "专",
+  "项",
+  "附",
+  "加",
+  "扣",
+  "除",
+  "：",
+  "独",
+  "生",
+  "子",
+  "女",
+  "、",
+  "父",
+  "母",
+  "满",
+  "60",
+  "岁",
+  "、",
+  "2",
+  "岁",
+  "幼",
+  "儿",
+  "、",
+  "6",
+  "岁",
+  "在",
+  "读",
+  "子",
+  "女",
+  "、",
+  "首",
+  "套",
+  "住",
+  "房",
+  "贷",
+  "款",
+  "，",
+  "每",
+  "月",
+  "可",
+  "扣",
+  "多",
+  "少",
+  "元",
+  "？",
+  "幼",
+  "儿",
+  "可",
+  "否",
+  "再",
+  "扣",
+  "子",
+  "女",
+  "教",
+  "育",
+  "？"
+ ],
+ "ann": [
+  {
+   "i": 1,
+   "role": "主体",
+   "decisive": false,
+   "gloss": "提出个税扣除问题"
+  },
+  {
+   "i": 2,
+   "role": "主体",
+   "decisive": false,
+   "gloss": "个税"
+  },
+  {
+   "i": 3,
+   "role": "主体",
+   "decisive": false,
+   "gloss": "专项附加扣除"
+  },
+  {
+   "i": 4,
+   "role": "主体",
+   "decisive": false,
+   "gloss": "专项项目"
+  },
+  {
+   "i": 5,
+   "role": "主体",
+   "decisive": false,
+   "gloss": "附加扣除"
+  },
+  {
+   "i": 6,
+   "role": "动作",
+   "decisive": false,
+   "gloss": "实施扣除"
+  },
+  {
+   "i": 7,
+   "role": "动作",
+   "decisive": false,
+   "gloss": "表示扣除行为"
+  },
+  {
+   "i": 8,
+   "role": "主体",
+   "decisive": false,
+   "gloss": "扣除事项"
+  },
+  {
+   "i": 9,
+   "role": "标点",
+   "decisive": false,
+   "gloss": "引出具体情形"
+  },
+  {
+   "i": 10,
+   "role": "条件",
+   "decisive": true,
+   "gloss": "独生子女家庭"
+  },
+  {
+   "i": 11,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "独生子女"
+  },
+  {
+   "i": 12,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "子女身份"
+  },
+  {
+   "i": 13,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "子女身份"
+  },
+  {
+   "i": 14,
+   "role": "标点",
+   "decisive": false,
+   "gloss": "分隔并列情形"
+  },
+  {
+   "i": 15,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "父母一方"
+  },
+  {
+   "i": 16,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "父母另一方"
+  },
+  {
+   "i": 17,
+   "role": "条件",
+   "decisive": true,
+   "gloss": "父母达到年龄阈值"
+  },
+  {
+   "i": 18,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "年龄阈值"
+  },
+  {
+   "i": 19,
+   "role": "单位",
+   "decisive": true,
+   "gloss": "年龄计量单位"
+  },
+  {
+   "i": 20,
+   "role": "标点",
+   "decisive": false,
+   "gloss": "分隔并列情形"
+  },
+  {
+   "i": 21,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "幼儿年龄"
+  },
+  {
+   "i": 22,
+   "role": "单位",
+   "decisive": true,
+   "gloss": "年龄计量单位"
+  },
+  {
+   "i": 23,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "两岁幼儿"
+  },
+  {
+   "i": 24,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "幼儿身份"
+  },
+  {
+   "i": 25,
+   "role": "标点",
+   "decisive": false,
+   "gloss": "分隔并列情形"
+  },
+  {
+   "i": 26,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "子女年龄"
+  },
+  {
+   "i": 27,
+   "role": "单位",
+   "decisive": true,
+   "gloss": "年龄计量单位"
+  },
+  {
+   "i": 28,
+   "role": "条件",
+   "decisive": true,
+   "gloss": "子女正在就读"
+  },
+  {
+   "i": 29,
+   "role": "动作",
+   "decisive": true,
+   "gloss": "处于学习状态"
+  },
+  {
+   "i": 30,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "六岁子女"
+  },
+  {
+   "i": 31,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "子女身份"
+  },
+  {
+   "i": 32,
+   "role": "标点",
+   "decisive": false,
+   "gloss": "分隔并列情形"
+  },
+  {
+   "i": 33,
+   "role": "条件",
+   "decisive": true,
+   "gloss": "住房贷款为首套"
+  },
+  {
+   "i": 34,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "住房套数限定"
+  },
+  {
+   "i": 35,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "住房贷款事项"
+  },
+  {
+   "i": 36,
+   "role": "动作",
+   "decisive": true,
+   "gloss": "贷款行为"
+  },
+  {
+   "i": 37,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "贷款行为"
+  },
+  {
+   "i": 38,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "借款关系"
+  },
+  {
+   "i": 39,
+   "role": "标点",
+   "decisive": false,
+   "gloss": "分隔条件与问题"
+  },
+  {
+   "i": 40,
+   "role": "动作",
+   "decisive": false,
+   "gloss": "询问月度扣除"
+  },
+  {
+   "i": 41,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "计算周期"
+  },
+  {
+   "i": 42,
+   "role": "动作",
+   "decisive": false,
+   "gloss": "询问可扣除金额"
+  },
+  {
+   "i": 43,
+   "role": "动作",
+   "decisive": true,
+   "gloss": "申请扣除"
+  },
+  {
+   "i": 44,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "待求扣除金额"
+  },
+  {
+   "i": 45,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "金额大小"
+  },
+  {
+   "i": 46,
+   "role": "单位",
+   "decisive": true,
+   "gloss": "金额计量单位"
+  },
+  {
+   "i": 47,
+   "role": "标点",
+   "decisive": false,
+   "gloss": "结束首个问句"
+  },
+  {
+   "i": 48,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "两岁幼儿"
+  },
+  {
+   "i": 49,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "幼儿身份"
+  },
+  {
+   "i": 50,
+   "role": "动作",
+   "decisive": true,
+   "gloss": "询问是否允许"
+  },
+  {
+   "i": 51,
+   "role": "动作",
+   "decisive": false,
+   "gloss": "表示可否判断"
+  },
+  {
+   "i": 52,
+   "role": "动作",
+   "decisive": true,
+   "gloss": "表示重复扣除"
+  },
+  {
+   "i": 53,
+   "role": "动作",
+   "decisive": true,
+   "gloss": "扣除子女教育"
+  },
+  {
+   "i": 54,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "被扣除教育费用"
+  },
+  {
+   "i": 55,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "教育费用事项"
+  },
+  {
+   "i": 56,
+   "role": "动作",
+   "decisive": true,
+   "gloss": "实施扣除"
+  },
+  {
+   "i": 57,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "子女教育身份"
+  },
+  {
+   "i": 58,
+   "role": "标点",
+   "decisive": false,
+   "gloss": "结束第二个问句"
+  }
+ ],
+ "ok": true,
+ "err": null,
+ "raw": "{\"ann\":[{\"i\":1,\"role\":\"主体\",\"decisive\":false,\"gloss\":\"提出个税扣除问题\"},{\"i\":2,\"role\":\"主体\",\"decisive\":false,\"gloss\":\"个税\"},{\"i\":3,\"role\":\"主体\",\"decisive\":false,\"gloss\":\"专项附加扣除\"},{\"i\":4,\"role\":\"主体\",\"decisive\":false,\"gloss\":\"专项项目\"},{\"i\":5,\"role\":\"主体\",\"decisive\":false,\"gloss\":\"附加扣除\"},{\"i\":6,\"role\":\"动作\",\"decisive\":false,\"gloss\":\"实施扣除\"},{\"i\":7,\"role\":\"动作\",\"decisive\":false,\"gloss\":\"表示扣除行为\"},{\"i\":8,\"role\":\"主体\",\"decisive\":false,\"gloss\":\"扣除事项\"},{\"i\":9,\"role\":\"标点\",\"decisive\":false,\"gloss\":\"引出具体情形\"},{\"i\":10,\"role\":\"条件\",\"decisive\":true,\"gloss\":\"独生子女家庭\"},{\"i\":11,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"独生子女\"},{\"i\":12,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"子女身份\"},{\"i\":13,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"子女身份\"},{\"i\":14,\"role\":\"标点\",\"decisive\":false,\"gloss\":\"分隔并列情形\"},{\"i\":15,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"父母一方\"},{\"i\":16,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"父母另一方\"},{\"i\":17,\"role\":\"条件\",\"decisive\":true,\"gloss\":\"父母达到年龄阈值\"},{\"i\":18,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"年龄阈值\"},{\"i\":19,\"role\":\"单位\",\"decisive\":true,\"gloss\":\"年龄计量单位\"},{\"i\":20,\"role\":\"标点\",\"decisive\":false,\"gloss\":\"分隔并列情形\"},{\"i\":21,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"幼儿年龄\"},{\"i\":22,\"role\":\"单位\",\"decisive\":true,\"gloss\":\"年龄计量单位\"},{\"i\":23,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"两岁幼儿\"},{\"i\":24,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"幼儿身份\"},{\"i\":25,\"role\":\"标点\",\"decisive\":false,\"gloss\":\"分隔并列情形\"},{\"i\":26,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"子女年龄\"},{\"i\":27,\"role\":\"单位\",\"decisive\":true,\"gloss\":\"年龄计量单位\"},{\"i\":28,\"role\":\"条件\",\"decisive\":true,\"gloss\":\"子女正在就读\"},{\"i\":29,\"role\":\"动作\",\"decisive\":true,\"gloss\":\"处于学习状态\"},{\"i\":30,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"六岁子女\"},{\"i\":31,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"子女身份\"},{\"i\":32,\"role\":\"标点\",\"decisive\":false,\"gloss\":\"分隔并列情形\"},{\"i\":33,\"role\":\"条件\",\"decisive\":true,\"gloss\":\"住房贷款为首套\"},{\"i\":34,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"住房套数限定\"},{\"i\":35,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"住房贷款事项\"},{\"i\":36,\"role\":\"动作\",\"decisive\":true,\"gloss\":\"贷款行为\"},{\"i\":37,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"贷款行为\"},{\"i\":38,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"借款关系\"},{\"i\":39,\"role\":\"标点\",\"decisive\":false,\"gloss\":\"分隔条件与问题\"},{\"i\":40,\"role\":\"动作\",\"decisive\":false,\"gloss\":\"询问月度扣除\"},{\"i\":41,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"计算周期\"},{\"i\":42,\"role\":\"动作\",\"decisive\":false,\"gloss\":\"询问可扣除金额\"},{\"i\":43,\"role\":\"动作\",\"decisive\":true,\"gloss\":\"申请扣除\"},{\"i\":44,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"待求扣除金额\"},{\"i\":45,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"金额大小\"},{\"i\":46,\"role\":\"单位\",\"decisive\":true,\"gloss\":\"金额计量单位\"},{\"i\":47,\"role\":\"标点\",\"decisive\":false,\"gloss\":\"结束首个问句\"},{\"i\":48,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"两岁幼儿\"},{\"i\":49,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"幼儿身份\"},{\"i\":50,\"role\":\"动作\",\"decisive\":true,\"gloss\":\"询问是否允许\"},{\"i\":51,\"role\":\"动作\",\"decisive\":false,\"gloss\":\"表示可否判断\"},{\"i\":52,\"role\":\"动作\",\"decisive\":true,\"gloss\":\"表示重复扣除\"},{\"i\":53,\"role\":\"动作\",\"decisive\":true,\"gloss\":\"扣除子女教育\"},{\"i\":54,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"被扣除教育费用\"},{\"i\":55,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"教育费用事项\"},{\"i\":56,\"role\":\"动作\",\"decisive\":true,\"gloss\":\"实施扣除\"},{\"i\":57,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"子女教育身份\"},{\"i\":58,\"role\":\"标点\",\"decisive\":false,\"gloss\":\"结束第二个问句\"}]}",
+ "n_units": 58,
+ "n_ann": 58,
+ "prompt_sha": "1b7111d01b5b5bcf",
+ "ts": 1793409660.1572156
+}

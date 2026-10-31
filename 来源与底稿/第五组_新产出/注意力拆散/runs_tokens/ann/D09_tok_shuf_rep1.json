@@ -1,0 +1,387 @@
+{
+ "task_id": "D09",
+ "rep": 1,
+ "kind": "tok_shuf",
+ "units": [
+  "票",
+  "路",
+  "1",
+  "名",
+  "车",
+  "2026",
+  "19",
+  "法",
+  "月",
+  "日",
+  "同",
+  "10",
+  "按",
+  "公",
+  "才",
+  "确",
+  "布",
+  "，",
+  "天",
+  "动",
+  "下",
+  "年",
+  "运",
+  "司",
+  "？",
+  "工",
+  "的",
+  "20",
+  "要",
+  "的",
+  "票",
+  "则",
+  "。",
+  "某",
+  "规",
+  "日",
+  "列",
+  "铁",
+  "公",
+  "员",
+  "的",
+  "2",
+  "启",
+  "是",
+  "买",
+  "春",
+  "订",
+  "，",
+  "，",
+  "说",
+  "正",
+  "月",
+  "一"
+ ],
+ "ann": [
+  {
+   "i": 1,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "待分配的标注项"
+  },
+  {
+   "i": 2,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "待分配的标注项"
+  },
+  {
+   "i": 3,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "员工人数"
+  },
+  {
+   "i": 4,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "公司员工"
+  },
+  {
+   "i": 5,
+   "role": "动作",
+   "decisive": true,
+   "gloss": "购买车票"
+  },
+  {
+   "i": 6,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "年份"
+  },
+  {
+   "i": 7,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "员工人数"
+  },
+  {
+   "i": 8,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "待分配的标注项"
+  },
+  {
+   "i": 9,
+   "role": "单位",
+   "decisive": true,
+   "gloss": "月份单位"
+  },
+  {
+   "i": 10,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "日期数值"
+  },
+  {
+   "i": 11,
+   "role": "条件",
+   "decisive": true,
+   "gloss": "同一日期条件"
+  },
+  {
+   "i": 12,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "日期数值"
+  },
+  {
+   "i": 13,
+   "role": "动作",
+   "decisive": true,
+   "gloss": "依照"
+  },
+  {
+   "i": 14,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "铁路部门"
+  },
+  {
+   "i": 15,
+   "role": "动作",
+   "decisive": true,
+   "gloss": "公布"
+  },
+  {
+   "i": 16,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "待分配的标注项"
+  },
+  {
+   "i": 17,
+   "role": "动作",
+   "decisive": true,
+   "gloss": "公布规则"
+  },
+  {
+   "i": 18,
+   "role": "标点",
+   "decisive": false,
+   "gloss": "句内标点"
+  },
+  {
+   "i": 19,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "待分配的标注项"
+  },
+  {
+   "i": 20,
+   "role": "动作",
+   "decisive": true,
+   "gloss": "启动"
+  },
+  {
+   "i": 21,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "待分配的标注项"
+  },
+  {
+   "i": 22,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "年份"
+  },
+  {
+   "i": 23,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "待分配的标注项"
+  },
+  {
+   "i": 24,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "公司"
+  },
+  {
+   "i": 25,
+   "role": "标点",
+   "decisive": false,
+   "gloss": "疑问标点"
+  },
+  {
+   "i": 26,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "员工"
+  },
+  {
+   "i": 27,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "待分配的标注项"
+  },
+  {
+   "i": 28,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "年份"
+  },
+  {
+   "i": 29,
+   "role": "动作",
+   "decisive": true,
+   "gloss": "需要购买"
+  },
+  {
+   "i": 30,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "待分配的标注项"
+  },
+  {
+   "i": 31,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "待分配的标注项"
+  },
+  {
+   "i": 32,
+   "role": "连接",
+   "decisive": false,
+   "gloss": "条件连接"
+  },
+  {
+   "i": 33,
+   "role": "标点",
+   "decisive": false,
+   "gloss": "句末标点"
+  },
+  {
+   "i": 34,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "某公司"
+  },
+  {
+   "i": 35,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "待分配的标注项"
+  },
+  {
+   "i": 36,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "日期数值"
+  },
+  {
+   "i": 37,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "待分配的标注项"
+  },
+  {
+   "i": 38,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "铁路部门"
+  },
+  {
+   "i": 39,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "公司"
+  },
+  {
+   "i": 40,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "员工"
+  },
+  {
+   "i": 41,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "待分配的标注项"
+  },
+  {
+   "i": 42,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "日期数值"
+  },
+  {
+   "i": 43,
+   "role": "动作",
+   "decisive": true,
+   "gloss": "启动"
+  },
+  {
+   "i": 44,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "待分配的标注项"
+  },
+  {
+   "i": 45,
+   "role": "动作",
+   "decisive": true,
+   "gloss": "购买"
+  },
+  {
+   "i": 46,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "待分配的标注项"
+  },
+  {
+   "i": 47,
+   "role": "动作",
+   "decisive": true,
+   "gloss": "预订"
+  },
+  {
+   "i": 48,
+   "role": "标点",
+   "decisive": false,
+   "gloss": "句内标点"
+  },
+  {
+   "i": 49,
+   "role": "标点",
+   "decisive": false,
+   "gloss": "句内标点"
+  },
+  {
+   "i": 50,
+   "role": "动作",
+   "decisive": true,
+   "gloss": "认为"
+  },
+  {
+   "i": 51,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "待分配的标注项"
+  },
+  {
+   "i": 52,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "月份数值"
+  },
+  {
+   "i": 53,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "日期数值"
+  }
+ ],
+ "ok": true,
+ "err": null,
+ "raw": "{\"ann\":[{\"i\":1,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"待分配的标注项\"},{\"i\":2,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"待分配的标注项\"},{\"i\":3,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"员工人数\"},{\"i\":4,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"公司员工\"},{\"i\":5,\"role\":\"动作\",\"decisive\":true,\"gloss\":\"购买车票\"},{\"i\":6,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"年份\"},{\"i\":7,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"员工人数\"},{\"i\":8,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"待分配的标注项\"},{\"i\":9,\"role\":\"单位\",\"decisive\":true,\"gloss\":\"月份单位\"},{\"i\":10,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"日期数值\"},{\"i\":11,\"role\":\"条件\",\"decisive\":true,\"gloss\":\"同一日期条件\"},{\"i\":12,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"日期数值\"},{\"i\":13,\"role\":\"动作\",\"decisive\":true,\"gloss\":\"依照\"},{\"i\":14,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"铁路部门\"},{\"i\":15,\"role\":\"动作\",\"decisive\":true,\"gloss\":\"公布\"},{\"i\":16,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"待分配的标注项\"},{\"i\":17,\"role\":\"动作\",\"decisive\":true,\"gloss\":\"公布规则\"},{\"i\":18,\"role\":\"标点\",\"decisive\":false,\"gloss\":\"句内标点\"},{\"i\":19,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"待分配的标注项\"},{\"i\":20,\"role\":\"动作\",\"decisive\":true,\"gloss\":\"启动\"},{\"i\":21,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"待分配的标注项\"},{\"i\":22,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"年份\"},{\"i\":23,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"待分配的标注项\"},{\"i\":24,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"公司\"},{\"i\":25,\"role\":\"标点\",\"decisive\":false,\"gloss\":\"疑问标点\"},{\"i\":26,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"员工\"},{\"i\":27,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"待分配的标注项\"},{\"i\":28,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"年份\"},{\"i\":29,\"role\":\"动作\",\"decisive\":true,\"gloss\":\"需要购买\"},{\"i\":30,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"待分配的标注项\"},{\"i\":31,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"待分配的标注项\"},{\"i\":32,\"role\":\"连接\",\"decisive\":false,\"gloss\":\"条件连接\"},{\"i\":33,\"role\":\"标点\",\"decisive\":false,\"gloss\":\"句末标点\"},{\"i\":34,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"某公司\"},{\"i\":35,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"待分配的标注项\"},{\"i\":36,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"日期数值\"},{\"i\":37,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"待分配的标注项\"},{\"i\":38,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"铁路部门\"},{\"i\":39,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"公司\"},{\"i\":40,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"员工\"},{\"i\":41,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"待分配的标注项\"},{\"i\":42,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"日期数值\"},{\"i\":43,\"role\":\"动作\",\"decisive\":true,\"gloss\":\"启动\"},{\"i\":44,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"待分配的标注项\"},{\"i\":45,\"role\":\"动作\",\"decisive\":true,\"gloss\":\"购买\"},{\"i\":46,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"待分配的标注项\"},{\"i\":47,\"role\":\"动作\",\"decisive\":true,\"gloss\":\"预订\"},{\"i\":48,\"role\":\"标点\",\"decisive\":false,\"gloss\":\"句内标点\"},{\"i\":49,\"role\":\"标点\",\"decisive\":false,\"gloss\":\"句内标点\"},{\"i\":50,\"role\":\"动作\",\"decisive\":true,\"gloss\":\"认为\"},{\"i\":51,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"待分配的标注项\"},{\"i\":52,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"月份数值\"},{\"i\":53,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"日期数值\"}]}",
+ "n_units": 53,
+ "n_ann": 53,
+ "prompt_sha": "f37ece696e09795e",
+ "ts": 1793408941.4467793
+}

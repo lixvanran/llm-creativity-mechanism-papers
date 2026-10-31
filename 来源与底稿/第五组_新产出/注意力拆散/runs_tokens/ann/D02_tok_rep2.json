@@ -1,0 +1,297 @@
+{
+ "task_id": "D02",
+ "rep": 2,
+ "kind": "tok",
+ "units": [
+  "网",
+  "关",
+  "：",
+  "①",
+  "上",
+  "游",
+  "无",
+  "效",
+  "响",
+  "应",
+  "→",
+  "502",
+  "②",
+  "上",
+  "游",
+  "未",
+  "响",
+  "应",
+  "→",
+  "504",
+  "③",
+  "后",
+  "端",
+  "过",
+  "载",
+  "→",
+  "503",
+  "④",
+  "请",
+  "求",
+  "过",
+  "多",
+  "→",
+  "503",
+  "。",
+  "哪",
+  "几",
+  "项",
+  "正",
+  "确",
+  "？"
+ ],
+ "ann": [
+  {
+   "i": 1,
+   "role": "主体",
+   "decisive": false,
+   "gloss": "提出网关状态码判断题"
+  },
+  {
+   "i": 2,
+   "role": "主体",
+   "decisive": false,
+   "gloss": "与网构成被判断对象"
+  },
+  {
+   "i": 3,
+   "role": "标点",
+   "decisive": false,
+   "gloss": "分隔题干与选项"
+  },
+  {
+   "i": 4,
+   "role": "其他",
+   "decisive": true,
+   "gloss": "标记第一项条件"
+  },
+  {
+   "i": 5,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "上游系统"
+  },
+  {
+   "i": 6,
+   "role": "主体",
+   "decisive": false,
+   "gloss": "修饰上游响应状态"
+  },
+  {
+   "i": 7,
+   "role": "条件",
+   "decisive": true,
+   "gloss": "上游响应无效"
+  },
+  {
+   "i": 8,
+   "role": "动作",
+   "decisive": true,
+   "gloss": "响应处于无效状态"
+  },
+  {
+   "i": 9,
+   "role": "主体",
+   "decisive": false,
+   "gloss": "上游返回的内容"
+  },
+  {
+   "i": 10,
+   "role": "动作",
+   "decisive": true,
+   "gloss": "上游返回响应"
+  },
+  {
+   "i": 11,
+   "role": "连接",
+   "decisive": false,
+   "gloss": "连接条件与状态码"
+  },
+  {
+   "i": 12,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "表示网关错误状态码"
+  },
+  {
+   "i": 13,
+   "role": "其他",
+   "decisive": true,
+   "gloss": "标记第二项条件"
+  },
+  {
+   "i": 14,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "上游系统"
+  },
+  {
+   "i": 15,
+   "role": "主体",
+   "decisive": false,
+   "gloss": "修饰上游响应状态"
+  },
+  {
+   "i": 16,
+   "role": "条件",
+   "decisive": true,
+   "gloss": "上游没有响应"
+  },
+  {
+   "i": 17,
+   "role": "主体",
+   "decisive": false,
+   "gloss": "上游返回的内容"
+  },
+  {
+   "i": 18,
+   "role": "动作",
+   "decisive": true,
+   "gloss": "上游未返回响应"
+  },
+  {
+   "i": 19,
+   "role": "连接",
+   "decisive": false,
+   "gloss": "连接条件与状态码"
+  },
+  {
+   "i": 20,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "表示网关超时状态码"
+  },
+  {
+   "i": 21,
+   "role": "其他",
+   "decisive": true,
+   "gloss": "标记第三项条件"
+  },
+  {
+   "i": 22,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "后端服务系统"
+  },
+  {
+   "i": 23,
+   "role": "动作",
+   "decisive": true,
+   "gloss": "后端承载服务请求"
+  },
+  {
+   "i": 24,
+   "role": "条件",
+   "decisive": true,
+   "gloss": "后端负载超过能力"
+  },
+  {
+   "i": 25,
+   "role": "主体",
+   "decisive": false,
+   "gloss": "承载后端服务请求"
+  },
+  {
+   "i": 26,
+   "role": "连接",
+   "decisive": false,
+   "gloss": "连接条件与状态码"
+  },
+  {
+   "i": 27,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "表示服务不可用状态码"
+  },
+  {
+   "i": 28,
+   "role": "其他",
+   "decisive": true,
+   "gloss": "标记第四项条件"
+  },
+  {
+   "i": 29,
+   "role": "主体",
+   "decisive": false,
+   "gloss": "发起请求的客户端"
+  },
+  {
+   "i": 30,
+   "role": "动作",
+   "decisive": true,
+   "gloss": "客户端发起访问"
+  },
+  {
+   "i": 31,
+   "role": "条件",
+   "decisive": true,
+   "gloss": "请求数量超过限制"
+  },
+  {
+   "i": 32,
+   "role": "主体",
+   "decisive": false,
+   "gloss": "向网关发出的访问请求"
+  },
+  {
+   "i": 33,
+   "role": "连接",
+   "decisive": false,
+   "gloss": "连接条件与状态码"
+  },
+  {
+   "i": 34,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "表示服务不可用状态码"
+  },
+  {
+   "i": 35,
+   "role": "标点",
+   "decisive": false,
+   "gloss": "结束题干"
+  },
+  {
+   "i": 36,
+   "role": "动作",
+   "decisive": false,
+   "gloss": "询问符合者数量"
+  },
+  {
+   "i": 37,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "询问正确项的数目"
+  },
+  {
+   "i": 38,
+   "role": "动作",
+   "decisive": false,
+   "gloss": "要求判断选项正误"
+  },
+  {
+   "i": 39,
+   "role": "条件",
+   "decisive": true,
+   "gloss": "以正确为判断标准"
+  },
+  {
+   "i": 40,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "构成疑问语气"
+  }
+ ],
+ "ok": true,
+ "err": null,
+ "raw": "{\"ann\":[{\"i\":1,\"role\":\"主体\",\"decisive\":false,\"gloss\":\"提出网关状态码判断题\"},{\"i\":2,\"role\":\"主体\",\"decisive\":false,\"gloss\":\"与网构成被判断对象\"},{\"i\":3,\"role\":\"标点\",\"decisive\":false,\"gloss\":\"分隔题干与选项\"},{\"i\":4,\"role\":\"其他\",\"decisive\":true,\"gloss\":\"标记第一项条件\"},{\"i\":5,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"上游系统\"},{\"i\":6,\"role\":\"主体\",\"decisive\":false,\"gloss\":\"修饰上游响应状态\"},{\"i\":7,\"role\":\"条件\",\"decisive\":true,\"gloss\":\"上游响应无效\"},{\"i\":8,\"role\":\"动作\",\"decisive\":true,\"gloss\":\"响应处于无效状态\"},{\"i\":9,\"role\":\"主体\",\"decisive\":false,\"gloss\":\"上游返回的内容\"},{\"i\":10,\"role\":\"动作\",\"decisive\":true,\"gloss\":\"上游返回响应\"},{\"i\":11,\"role\":\"连接\",\"decisive\":false,\"gloss\":\"连接条件与状态码\"},{\"i\":12,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"表示网关错误状态码\"},{\"i\":13,\"role\":\"其他\",\"decisive\":true,\"gloss\":\"标记第二项条件\"},{\"i\":14,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"上游系统\"},{\"i\":15,\"role\":\"主体\",\"decisive\":false,\"gloss\":\"修饰上游响应状态\"},{\"i\":16,\"role\":\"条件\",\"decisive\":true,\"gloss\":\"上游没有响应\"},{\"i\":17,\"role\":\"主体\",\"decisive\":false,\"gloss\":\"上游返回的内容\"},{\"i\":18,\"role\":\"动作\",\"decisive\":true,\"gloss\":\"上游未返回响应\"},{\"i\":19,\"role\":\"连接\",\"decisive\":false,\"gloss\":\"连接条件与状态码\"},{\"i\":20,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"表示网关超时状态码\"},{\"i\":21,\"role\":\"其他\",\"decisive\":true,\"gloss\":\"标记第三项条件\"},{\"i\":22,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"后端服务系统\"},{\"i\":23,\"role\":\"动作\",\"decisive\":true,\"gloss\":\"后端承载服务请求\"},{\"i\":24,\"role\":\"条件\",\"decisive\":true,\"gloss\":\"后端负载超过能力\"},{\"i\":25,\"role\":\"主体\",\"decisive\":false,\"gloss\":\"承载后端服务请求\"},{\"i\":26,\"role\":\"连接\",\"decisive\":false,\"gloss\":\"连接条件与状态码\"},{\"i\":27,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"表示服务不可用状态码\"},{\"i\":28,\"role\":\"其他\",\"decisive\":true,\"gloss\":\"标记第四项条件\"},{\"i\":29,\"role\":\"主体\",\"decisive\":false,\"gloss\":\"发起请求的客户端\"},{\"i\":30,\"role\":\"动作\",\"decisive\":true,\"gloss\":\"客户端发起访问\"},{\"i\":31,\"role\":\"条件\",\"decisive\":true,\"gloss\":\"请求数量超过限制\"},{\"i\":32,\"role\":\"主体\",\"decisive\":false,\"gloss\":\"向网关发出的访问请求\"},{\"i\":33,\"role\":\"连接\",\"decisive\":false,\"gloss\":\"连接条件与状态码\"},{\"i\":34,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"表示服务不可用状态码\"},{\"i\":35,\"role\":\"标点\",\"decisive\":false,\"gloss\":\"结束题干\"},{\"i\":36,\"role\":\"动作\",\"decisive\":false,\"gloss\":\"询问符合者数量\"},{\"i\":37,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"询问正确项的数目\"},{\"i\":38,\"role\":\"动作\",\"decisive\":false,\"gloss\":\"要求判断选项正误\"},{\"i\":39,\"role\":\"条件\",\"decisive\":true,\"gloss\":\"以正确为判断标准\"},{\"i\":40,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"构成疑问语气\"}]}",
+ "n_units": 41,
+ "n_ann": 40,
+ "prompt_sha": "56cf11142c425f79",
+ "ts": 1793409585.4823153
+}

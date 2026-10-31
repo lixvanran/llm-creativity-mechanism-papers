@@ -1,0 +1,72 @@
+{
+ "task_id": "D06",
+ "rep": 1,
+ "kind": "sent",
+ "units": [
+  "个税专项附加扣除：独生子女、父母满60岁、2岁幼儿、6岁在读子女、首套住房贷款，每月可扣多少元？",
+  "幼儿可否再扣子女教育？"
+ ],
+ "ann": [
+  {
+   "i": 1,
+   "role": "其他",
+   "decisive": true,
+   "gloss": "提出个税专项附加扣除问题"
+  },
+  {
+   "i": 1,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "限定独生子女纳税人"
+  },
+  {
+   "i": 1,
+   "role": "条件",
+   "decisive": true,
+   "gloss": "父母年满六十岁"
+  },
+  {
+   "i": 1,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "指向两岁幼儿"
+  },
+  {
+   "i": 1,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "指向六岁在读子女"
+  },
+  {
+   "i": 1,
+   "role": "条件",
+   "decisive": true,
+   "gloss": "适用首套住房贷款"
+  },
+  {
+   "i": 1,
+   "role": "动作",
+   "decisive": true,
+   "gloss": "询问每月扣除金额"
+  },
+  {
+   "i": 2,
+   "role": "动作",
+   "decisive": true,
+   "gloss": "询问幼儿能否扣除子女教育"
+  },
+  {
+   "i": 2,
+   "role": "修饰",
+   "decisive": true,
+   "gloss": "限定教育扣除适用对象"
+  }
+ ],
+ "ok": true,
+ "err": null,
+ "raw": "{\"ann\":[{\"i\":1,\"role\":\"其他\",\"decisive\":true,\"gloss\":\"提出个税专项附加扣除问题\"},{\"i\":1,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"限定独生子女纳税人\"},{\"i\":1,\"role\":\"条件\",\"decisive\":true,\"gloss\":\"父母年满六十岁\"},{\"i\":1,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"指向两岁幼儿\"},{\"i\":1,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"指向六岁在读子女\"},{\"i\":1,\"role\":\"条件\",\"decisive\":true,\"gloss\":\"适用首套住房贷款\"},{\"i\":1,\"role\":\"动作\",\"decisive\":true,\"gloss\":\"询问每月扣除金额\"},{\"i\":2,\"role\":\"动作\",\"decisive\":true,\"gloss\":\"询问幼儿能否扣除子女教育\"},{\"i\":2,\"role\":\"修饰\",\"decisive\":true,\"gloss\":\"限定教育扣除适用对象\"}]}",
+ "n_units": 2,
+ "n_ann": 9,
+ "prompt_sha": "1e5a6aa80716b94c",
+ "ts": 1793408929.4714649
+}

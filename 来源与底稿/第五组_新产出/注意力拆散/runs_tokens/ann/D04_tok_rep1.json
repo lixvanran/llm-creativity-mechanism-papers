@@ -1,0 +1,387 @@
+{
+ "task_id": "D04",
+ "rep": 1,
+ "kind": "tok",
+ "units": [
+  "按",
+  "公",
+  "开",
+  "标",
+  "准",
+  "判",
+  "定",
+  "：",
+  "成",
+  "人",
+  "Ⅱ",
+  "度",
+  "烧",
+  "伤",
+  "面",
+  "积",
+  "12%",
+  "属",
+  "哪",
+  "一",
+  "级",
+  "？",
+  "5",
+  "岁",
+  "儿",
+  "童",
+  "Ⅱ",
+  "度",
+  "烧",
+  "伤",
+  "面",
+  "积",
+  "18%",
+  "属",
+  "哪",
+  "一",
+  "级",
+  "？",
+  "面",
+  "部",
+  "Ⅲ",
+  "度",
+  "烧",
+  "伤",
+  "是",
+  "否",
+  "属",
+  "急",
+  "诊",
+  "120",
+  "指",
+  "征",
+  "？"
+ ],
+ "ann": [
+  {
+   "i": 1,
+   "role": "连接",
+   "decisive": false,
+   "gloss": "引出判定方式"
+  },
+  {
+   "i": 2,
+   "role": "修饰",
+   "decisive": true,
+   "gloss": "限定公开标准"
+  },
+  {
+   "i": 3,
+   "role": "修饰",
+   "decisive": true,
+   "gloss": "限定公开标准"
+  },
+  {
+   "i": 4,
+   "role": "修饰",
+   "decisive": true,
+   "gloss": "限定公开标准"
+  },
+  {
+   "i": 5,
+   "role": "修饰",
+   "decisive": true,
+   "gloss": "限定公开标准"
+  },
+  {
+   "i": 6,
+   "role": "动作",
+   "decisive": false,
+   "gloss": "提出判定要求"
+  },
+  {
+   "i": 7,
+   "role": "动作",
+   "decisive": false,
+   "gloss": "提出判定要求"
+  },
+  {
+   "i": 8,
+   "role": "标点",
+   "decisive": false,
+   "gloss": "分隔问题与条件"
+  },
+  {
+   "i": 9,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "指明成人主体"
+  },
+  {
+   "i": 10,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "指明成人主体"
+  },
+  {
+   "i": 11,
+   "role": "条件",
+   "decisive": true,
+   "gloss": "限定烧伤深度"
+  },
+  {
+   "i": 12,
+   "role": "修饰",
+   "decisive": true,
+   "gloss": "限定烧伤深度"
+  },
+  {
+   "i": 13,
+   "role": "其他",
+   "decisive": true,
+   "gloss": "指明损伤类型"
+  },
+  {
+   "i": 14,
+   "role": "其他",
+   "decisive": true,
+   "gloss": "指明损伤类型"
+  },
+  {
+   "i": 15,
+   "role": "其他",
+   "decisive": true,
+   "gloss": "指明评估面积"
+  },
+  {
+   "i": 16,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "指明评估面积"
+  },
+  {
+   "i": 17,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "成人烧伤面积百分比"
+  },
+  {
+   "i": 18,
+   "role": "动作",
+   "decisive": false,
+   "gloss": "询问分级结果"
+  },
+  {
+   "i": 19,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "询问等级"
+  },
+  {
+   "i": 20,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "询问等级"
+  },
+  {
+   "i": 21,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "询问分级类别"
+  },
+  {
+   "i": 22,
+   "role": "标点",
+   "decisive": false,
+   "gloss": "结束第一问"
+  },
+  {
+   "i": 23,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "指明儿童年龄"
+  },
+  {
+   "i": 24,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "指明主体年龄"
+  },
+  {
+   "i": 25,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "指明儿童主体"
+  },
+  {
+   "i": 26,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "指明儿童主体"
+  },
+  {
+   "i": 27,
+   "role": "条件",
+   "decisive": true,
+   "gloss": "限定烧伤深度"
+  },
+  {
+   "i": 28,
+   "role": "修饰",
+   "decisive": true,
+   "gloss": "限定烧伤深度"
+  },
+  {
+   "i": 29,
+   "role": "其他",
+   "decisive": true,
+   "gloss": "指明损伤类型"
+  },
+  {
+   "i": 30,
+   "role": "其他",
+   "decisive": true,
+   "gloss": "指明损伤类型"
+  },
+  {
+   "i": 31,
+   "role": "其他",
+   "decisive": true,
+   "gloss": "指明评估面积"
+  },
+  {
+   "i": 32,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "指明评估面积"
+  },
+  {
+   "i": 33,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "儿童烧伤面积百分比"
+  },
+  {
+   "i": 34,
+   "role": "动作",
+   "decisive": false,
+   "gloss": "询问分级结果"
+  },
+  {
+   "i": 35,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "询问等级"
+  },
+  {
+   "i": 36,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "询问等级"
+  },
+  {
+   "i": 37,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "询问分级类别"
+  },
+  {
+   "i": 38,
+   "role": "标点",
+   "decisive": false,
+   "gloss": "结束第二问"
+  },
+  {
+   "i": 39,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "指明面部部位"
+  },
+  {
+   "i": 40,
+   "role": "修饰",
+   "decisive": true,
+   "gloss": "限定受伤部位"
+  },
+  {
+   "i": 41,
+   "role": "条件",
+   "decisive": true,
+   "gloss": "限定烧伤深度"
+  },
+  {
+   "i": 42,
+   "role": "修饰",
+   "decisive": true,
+   "gloss": "限定烧伤深度"
+  },
+  {
+   "i": 43,
+   "role": "其他",
+   "decisive": true,
+   "gloss": "指明损伤类型"
+  },
+  {
+   "i": 44,
+   "role": "其他",
+   "decisive": true,
+   "gloss": "指明损伤类型"
+  },
+  {
+   "i": 45,
+   "role": "动作",
+   "decisive": false,
+   "gloss": "提出是否判断"
+  },
+  {
+   "i": 46,
+   "role": "连接",
+   "decisive": false,
+   "gloss": "连接询问与判断"
+  },
+  {
+   "i": 47,
+   "role": "动作",
+   "decisive": false,
+   "gloss": "提出急诊指征判断"
+  },
+  {
+   "i": 48,
+   "role": "修饰",
+   "decisive": true,
+   "gloss": "限定紧急救治性质"
+  },
+  {
+   "i": 49,
+   "role": "修饰",
+   "decisive": true,
+   "gloss": "指明急救呼叫类别"
+  },
+  {
+   "i": 50,
+   "role": "其他",
+   "decisive": true,
+   "gloss": "指明急救呼叫类别"
+  },
+  {
+   "i": 51,
+   "role": "其他",
+   "decisive": true,
+   "gloss": "指明急救指征"
+  },
+  {
+   "i": 52,
+   "role": "其他",
+   "decisive": true,
+   "gloss": "指明急救指征"
+  },
+  {
+   "i": 53,
+   "role": "标点",
+   "decisive": false,
+   "gloss": "结束第三问"
+  }
+ ],
+ "ok": true,
+ "err": null,
+ "raw": "{\"ann\":[{\"i\":1,\"role\":\"连接\",\"decisive\":false,\"gloss\":\"引出判定方式\"},{\"i\":2,\"role\":\"修饰\",\"decisive\":true,\"gloss\":\"限定公开标准\"},{\"i\":3,\"role\":\"修饰\",\"decisive\":true,\"gloss\":\"限定公开标准\"},{\"i\":4,\"role\":\"修饰\",\"decisive\":true,\"gloss\":\"限定公开标准\"},{\"i\":5,\"role\":\"修饰\",\"decisive\":true,\"gloss\":\"限定公开标准\"},{\"i\":6,\"role\":\"动作\",\"decisive\":false,\"gloss\":\"提出判定要求\"},{\"i\":7,\"role\":\"动作\",\"decisive\":false,\"gloss\":\"提出判定要求\"},{\"i\":8,\"role\":\"标点\",\"decisive\":false,\"gloss\":\"分隔问题与条件\"},{\"i\":9,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"指明成人主体\"},{\"i\":10,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"指明成人主体\"},{\"i\":11,\"role\":\"条件\",\"decisive\":true,\"gloss\":\"限定烧伤深度\"},{\"i\":12,\"role\":\"修饰\",\"decisive\":true,\"gloss\":\"限定烧伤深度\"},{\"i\":13,\"role\":\"其他\",\"decisive\":true,\"gloss\":\"指明损伤类型\"},{\"i\":14,\"role\":\"其他\",\"decisive\":true,\"gloss\":\"指明损伤类型\"},{\"i\":15,\"role\":\"其他\",\"decisive\":true,\"gloss\":\"指明评估面积\"},{\"i\":16,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"指明评估面积\"},{\"i\":17,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"成人烧伤面积百分比\"},{\"i\":18,\"role\":\"动作\",\"decisive\":false,\"gloss\":\"询问分级结果\"},{\"i\":19,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"询问等级\"},{\"i\":20,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"询问等级\"},{\"i\":21,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"询问分级类别\"},{\"i\":22,\"role\":\"标点\",\"decisive\":false,\"gloss\":\"结束第一问\"},{\"i\":23,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"指明儿童年龄\"},{\"i\":24,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"指明主体年龄\"},{\"i\":25,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"指明儿童主体\"},{\"i\":26,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"指明儿童主体\"},{\"i\":27,\"role\":\"条件\",\"decisive\":true,\"gloss\":\"限定烧伤深度\"},{\"i\":28,\"role\":\"修饰\",\"decisive\":true,\"gloss\":\"限定烧伤深度\"},{\"i\":29,\"role\":\"其他\",\"decisive\":true,\"gloss\":\"指明损伤类型\"},{\"i\":30,\"role\":\"其他\",\"decisive\":true,\"gloss\":\"指明损伤类型\"},{\"i\":31,\"role\":\"其他\",\"decisive\":true,\"gloss\":\"指明评估面积\"},{\"i\":32,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"指明评估面积\"},{\"i\":33,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"儿童烧伤面积百分比\"},{\"i\":34,\"role\":\"动作\",\"decisive\":false,\"gloss\":\"询问分级结果\"},{\"i\":35,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"询问等级\"},{\"i\":36,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"询问等级\"},{\"i\":37,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"询问分级类别\"},{\"i\":38,\"role\":\"标点\",\"decisive\":false,\"gloss\":\"结束第二问\"},{\"i\":39,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"指明面部部位\"},{\"i\":40,\"role\":\"修饰\",\"decisive\":true,\"gloss\":\"限定受伤部位\"},{\"i\":41,\"role\":\"条件\",\"decisive\":true,\"gloss\":\"限定烧伤深度\"},{\"i\":42,\"role\":\"修饰\",\"decisive\":true,\"gloss\":\"限定烧伤深度\"},{\"i\":43,\"role\":\"其他\",\"decisive\":true,\"gloss\":\"指明损伤类型\"},{\"i\":44,\"role\":\"其他\",\"decisive\":true,\"gloss\":\"指明损伤类型\"},{\"i\":45,\"role\":\"动作\",\"decisive\":false,\"gloss\":\"提出是否判断\"},{\"i\":46,\"role\":\"连接\",\"decisive\":false,\"gloss\":\"连接询问与判断\"},{\"i\":47,\"role\":\"动作\",\"decisive\":false,\"gloss\":\"提出急诊指征判断\"},{\"i\":48,\"role\":\"修饰\",\"decisive\":true,\"gloss\":\"限定紧急救治性质\"},{\"i\":49,\"role\":\"修饰\",\"decisive\":true,\"gloss\":\"指明急救呼叫类别\"},{\"i\":50,\"role\":\"其他\",\"decisive\":true,\"gloss\":\"指明急救呼叫类别\"},{\"i\":51,\"role\":\"其他\",\"decisive\":true,\"gloss\":\"指明急救指征\"},{\"i\":52,\"role\":\"其他\",\"decisive\":true,\"gloss\":\"指明急救指征\"},{\"i\":53,\"role\":\"标点\",\"decisive\":false,\"gloss\":\"结束第三问\"}]}",
+ "n_units": 53,
+ "n_ann": 53,
+ "prompt_sha": "a004764f3a0f90ae",
+ "ts": 1793408514.7121387
+}

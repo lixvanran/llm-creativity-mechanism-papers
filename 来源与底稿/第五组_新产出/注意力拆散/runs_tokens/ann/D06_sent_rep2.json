@@ -1,0 +1,102 @@
+{
+ "task_id": "D06",
+ "rep": 2,
+ "kind": "sent",
+ "units": [
+  "个税专项附加扣除：独生子女、父母满60岁、2岁幼儿、6岁在读子女、首套住房贷款，每月可扣多少元？",
+  "幼儿可否再扣子女教育？"
+ ],
+ "ann": [
+  {
+   "i": 1,
+   "role": "其他",
+   "decisive": false,
+   "gloss": "个税专项附加扣除主题"
+  },
+  {
+   "i": 2,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "独生子女家庭"
+  },
+  {
+   "i": 3,
+   "role": "条件",
+   "decisive": true,
+   "gloss": "父母年满六十岁"
+  },
+  {
+   "i": 4,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "两岁幼儿"
+  },
+  {
+   "i": 5,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "六岁在读子女"
+  },
+  {
+   "i": 6,
+   "role": "条件",
+   "decisive": true,
+   "gloss": "家庭使用首套住房贷款"
+  },
+  {
+   "i": 7,
+   "role": "动作",
+   "decisive": true,
+   "gloss": "按月计算可扣除金额"
+  },
+  {
+   "i": 8,
+   "role": "数值",
+   "decisive": true,
+   "gloss": "每月合计三千元"
+  },
+  {
+   "i": 9,
+   "role": "连接",
+   "decisive": false,
+   "gloss": "并列各项扣除情形"
+  },
+  {
+   "i": 10,
+   "role": "标点",
+   "decisive": false,
+   "gloss": "分隔并列条件"
+  },
+  {
+   "i": 11,
+   "role": "动作",
+   "decisive": true,
+   "gloss": "查验能否申报子女教育扣除"
+  },
+  {
+   "i": 12,
+   "role": "主体",
+   "decisive": true,
+   "gloss": "两岁幼儿"
+  },
+  {
+   "i": 13,
+   "role": "动作",
+   "decisive": true,
+   "gloss": "重复申报子女教育扣除"
+  },
+  {
+   "i": 14,
+   "role": "标点",
+   "decisive": false,
+   "gloss": "标记疑问语气"
+  }
+ ],
+ "ok": true,
+ "err": null,
+ "raw": "{\"ann\":[{\"i\":1,\"role\":\"其他\",\"decisive\":false,\"gloss\":\"个税专项附加扣除主题\"},{\"i\":2,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"独生子女家庭\"},{\"i\":3,\"role\":\"条件\",\"decisive\":true,\"gloss\":\"父母年满六十岁\"},{\"i\":4,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"两岁幼儿\"},{\"i\":5,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"六岁在读子女\"},{\"i\":6,\"role\":\"条件\",\"decisive\":true,\"gloss\":\"家庭使用首套住房贷款\"},{\"i\":7,\"role\":\"动作\",\"decisive\":true,\"gloss\":\"按月计算可扣除金额\"},{\"i\":8,\"role\":\"数值\",\"decisive\":true,\"gloss\":\"每月合计三千元\"},{\"i\":9,\"role\":\"连接\",\"decisive\":false,\"gloss\":\"并列各项扣除情形\"},{\"i\":10,\"role\":\"标点\",\"decisive\":false,\"gloss\":\"分隔并列条件\"},{\"i\":11,\"role\":\"动作\",\"decisive\":true,\"gloss\":\"查验能否申报子女教育扣除\"},{\"i\":12,\"role\":\"主体\",\"decisive\":true,\"gloss\":\"两岁幼儿\"},{\"i\":13,\"role\":\"动作\",\"decisive\":true,\"gloss\":\"重复申报子女教育扣除\"},{\"i\":14,\"role\":\"标点\",\"decisive\":false,\"gloss\":\"标记疑问语气\"}]}",
+ "n_units": 2,
+ "n_ann": 14,
+ "prompt_sha": "1e5a6aa80716b94c",
+ "ts": 1793409651.9967935
+}
