@@ -104,6 +104,8 @@ def main():
         except Exception:                        # noqa: BLE001
             pass
     todo = [r for r in answers if (r["arm"], r["task_id"], r["rep"], r["route"]) not in seen]
+    # ★ 排序：★ 先 rep、再臂、★ 后题 ⇒ ★ 额度不够时【先保住完整的 rep】（★ θ₀ 至少要 2 个 rep ★）
+    todo.sort(key=lambda r: (r["rep"], r["arm"], r["task_id"], r["route"]))
     if a.limit:
         todo = todo[:a.limit]
     print("[judge] 待判 %d 份（已判 %d）| judge_model=%s" % (len(todo), len(rows), JUDGE_MODEL), flush=True)

@@ -62,6 +62,10 @@ def unit_readings(answers, jmap, tasks, ev_n):
     by_unit = defaultdict(list)
     for r in answers:
         by_unit[(r["arm"], r["task_id"], r["rep"])].append(r)
+    # ★ 预初始化各臂的度量字典（★ 避免 KeyError ★）
+    for arm in {k[0] for k in by_unit}:
+        for metric in ("miss", "single", "contrad"):
+            U[arm].setdefault(metric, {})
     for (arm, tid, rep), rs in by_unit.items():
         rs = sorted(rs, key=lambda x: x["route"])
         jr = [jmap.get((arm, tid, rep, r["route"])) for r in rs]
@@ -96,6 +100,8 @@ def tok_coverage(ann_dir, arms, reps, tasks):
     for arm in arms:
         if arm not in kind_of:
             continue
+        U[arm].setdefault("tokcov", {})
+        U[arm].setdefault("decisive", {})
         k = kind_of[arm]
         for tid in tasks:
             for rep in reps:
@@ -352,7 +358,8 @@ def main():
     A("|---|---|")
     A("| 「token」的定义 | ★ **字符/词级机械切分**、★ 不是模型内部 token（★ 闭源 API 无 tokenizer ★）⇒ ★ **不许写「改变了模型的注意力」** ★ |")
     A("| T3（打乱）的归因限度 | ★ 打乱后模型的「可判定性」判断也一起失效（★ decisive 占比下降 ★）⇒ ★ T3 的差异**混着「清单变得不可用」** ⇒ ★ 只能判为「打乱后失效」、★ **不能反推「逐个看清」是唯一机制** ★ |")
-    A("| T4（句级对照）的污染 | ★ 模型会自行把句子拆得更细 ⇒ ★ 「粒度对照」被部分污染 ★ |")
+    A("| T4（句级对照）的污染 | ★ 模型会自行把句子拆得更细（★ 实测：2 个句子给出 10 条标注 ⇒ ★ R7 比值 >1 ★）⇒ ★ 「粒度对照」被部分污染、★ **R7 对 T4 不适用** ★ |")
+    A("| R7 的适用性 | ★ **只对 T1/T2/T3 适用**（★ 单元是模型给定的切分 ★）；★ T4 的单元是句子而模型自行拆得更细 ⇒ ★ 其比值可 >1、★ **不作读数** ★ |")
     A("| 单 agent | ★ 本批**没有路间冗余读数**（★ 上一批的 R2 不适用 ★）⇒ ★ 机制层读数靠 **R7 token 覆盖率 ＋ T3/T2 对照** ★ |")
     A("| 预算偏差 | ★ 预注册估「被测调用 ≈243」，★ 实际为 %d（★ T4 的句级标注是独立一次调用 ★）★ |" % (
         sum(1 for _ in [1]) * 10 * len(tasks) * len(reps)))
