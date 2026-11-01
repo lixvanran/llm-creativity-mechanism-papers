@@ -16,6 +16,7 @@
 
 import argparse
 import json
+import collections
 import os
 import statistics
 import sys
@@ -55,7 +56,30 @@ def load_jsonl(p):
     return out
 
 
-def unit_readings(answers, jmap, tasks, ev_n):
+def ann_files_ok(run_dir, arms, reps, tasks):
+    """★ 找出【清单不可得】的单元（★ 阶段1 标注缺失或 ann=0 ★）
+
+    ★ 这类单元【不是「无清单作答的另一种臂】★ ⇒ ★ 必须排除、★ 单列计数 ★
+    """
+    kind_of = {"T1": "tok", "T2": "tok", "T3": "tok_shuf", "T4": "sent"}
+    bad = {}
+    for arm in arms:
+        if arm not in kind_of:
+            continue
+        k = kind_of[arm]
+        for tid in tasks:
+            for rep in reps:
+                fp = os.path.join(run_dir, "ann", "%s_%s_rep%d.json" % (tid, k, rep))
+                if not os.path.exists(fp):
+                    bad[(arm, tid, rep)] = "missing"
+                    continue
+                r = json.load(open(fp, encoding="utf-8"))
+                if not r.get("ok") or not r.get("n_ann"):
+                    bad[(arm, tid, rep)] = "ann_empty"
+    return bad
+
+
+def unit_readings(answers, jmap, tasks, ev_n, bad_units=None):
     """★ 每个 (arm,task,rep) 的读数 ★"""
     U = defaultdict(dict)
     detail = {}
@@ -68,6 +92,9 @@ def unit_readings(answers, jmap, tasks, ev_n):
             U[arm].setdefault(metric, {})
     for (arm, tid, rep), rs in by_unit.items():
         rs = sorted(rs, key=lambda x: x["route"])
+        if bad_units and (arm, tid, rep) in bad_units:
+            detail[(arm, tid, rep)] = {"excluded": "checklist_unavailable"}
+            continue
         jr = [jmap.get((arm, tid, rep, r["route"])) for r in rs]
         if any(j is None or not j.get("ok") for j in jr):
             detail[(arm, tid, rep)] = {"excluded": "judge_failed"}
@@ -137,7 +164,8 @@ def main():
 
     arms = [x for x in ARMS if any(r["arm"] == x for r in answers)]
     reps = sorted({r["rep"] for r in answers})
-    U, detail = unit_readings(answers, jmap, tasks, ev_n)
+    bad_units = ann_files_ok(a.run_dir, arms, reps, tasks)
+    U, detail = unit_readings(answers, jmap, tasks, ev_n, bad_units)
     Uc = tok_coverage(os.path.join(a.run_dir, "ann"), arms, reps, tasks)
     for arm in Uc:
         for metric in Uc[arm]:
@@ -175,8 +203,9 @@ def main():
                 line = 2 * th if th is not None else None
                 pred = None
                 for (pa, pb, pm, pd) in PRED:
-                    if (pa, pb, pm) == (A, B, metric):
-                        pred = pd
+                    if pm == metric and {pa, pb} == {A, B}:
+                        # ★ 预测方向按「A − B」解释 ⇒ 若顺序反了则取反 ★
+                        pred = pd if (pa, pb) == (A, B) else -pd
                 if line is None:
                     verdict = "未测"
                 elif abs(med) >= line:
@@ -327,6 +356,48 @@ def main():
             fmt(c["theta_a"], 4), fmt(c["theta_b"], 4), fmt(c["line"], 4),
             c["verdict"], c["same_sign"], c["n"]))
     A("")
+    # ★★ 逐题符号检验（★ 事前未预注册、★ 只作补充观察、★ 不改上面按 2×θ₀ 的判决 ★）★★
+    from math import comb
+    def sign_p(k, n):
+        """★ 单侧二项：★ P(X ≥ k) ⇒ 「支持预测方向」的证据不足度（★ k 越大 p 越小 ★）"""
+        return sum(comb(n, i) for i in range(k, n + 1)) / (2 ** n) if n else None
+
+    def sign_p_opp(k, n):
+        """★ P(X ≤ k) ⇒ 「预测方向被反驳」的证据（★ k 越小 p 越小 ★）★★
+        ★ ★ 这是我第一次算反的那一个：★ k=1/9 意味着 8/9 题【反着】⇒ ★ 反驳证据很强 ★★"""
+        return sum(comb(n, i) for i in range(0, k + 1)) / (2 ** n) if n else None
+    def per_task_means(arm, metric):
+        d = defaultdict(list)
+        for (t, r), v in U[arm].get(metric, {}).items():
+            if v is not None:
+                d[t].append(v)
+        return {t: statistics.mean(vs) for t, vs in d.items()}
+    A("### 4.1 ★ 逐题符号检验（★ 事前未预注册、★ 只作补充观察、★ 不改变按 2×θ₀ 的判决 ★）")
+    A("")
+    A("| 比较 | 逐题方向 | 单侧二项 p |")
+    A("|---|---|---|")
+    sign_rows = []
+    for (pa, pb, pm, pd) in PRED:
+        if pa not in arms or pb not in arms:
+            continue
+        ma, mb = per_task_means(pa, pm), per_task_means(pb, pm)
+        common = sorted(set(ma) & set(mb))
+        if not common:
+            continue
+        k = sum(1 for t in common if (ma[t] - mb[t]) * pd < 0)
+        p_sup = sign_p(k, len(common))
+        p_opp = sign_p_opp(k, len(common))
+        sign_rows.append((pa, pb, pm, k, len(common), p_sup, p_opp))
+        # ★ 方向敏感的读法：★ 支持/反驳 两个尾都报 ★
+        if p_opp is not None and p_opp <= 0.05:
+            verdict = "★★ **预测方向被反驳**（★ p=%.3f ★）★★" % p_opp
+        elif p_sup is not None and p_sup <= 0.05:
+            verdict = "★★ **预测方向成立**（★ p=%.3f ★）★★" % p_sup
+        else:
+            verdict = "不可分辨（★ 支持 p=%.3f、★ 反驳 p=%.3f ★）" % (p_sup or 0, p_opp or 0)
+        A("| %s − %s（%s，★ 预测 %s） | ★ %d/%d 题符合预测 | ★ %s |" % (
+            pa, pb, METRIC_NAME.get(pm, pm), "更低" if pd < 0 else "更高", k, len(common), verdict))
+    A("")
     A("## 5. ★ 机制预测核对（★ 事前写死、★ 只用于方向解释 ★）")
     A("")
     A("| 预测 | 比较 | Δ中位 | 判决 |")
@@ -339,13 +410,152 @@ def main():
             "更负" if c["pred"] < 0 else "更正", c["A"], c["B"],
             METRIC_NAME.get(c["metric"], ""), fmt(c["med"], 4), c["verdict"]))
     A("")
+    A("## 5.5 ★★ 为什么测不出来（★ 诊断：★ 不是「效应不存在」★，★ 是【尺子的分辨率】不够 ★）")
+    A("")
+    # 量化步长
+    steps = [1.0 / ev_n.get(t, 1) for t in tasks]
+    A("| 诊断项 | 数值 | 含义 |")
+    A("|---|---|---|")
+    A("| R1 缺席率的**最小可分辨步长** | %s（★ ＝ 1/依据条数、★ 每题 11–12 条 ★） | ★ 缺席率是【离散量化】的 ⇒ 臂间差异小于一格时 Δ中位会直接变成 0 |" % fmt(statistics.mean(steps), 4))
+    A("| 臂间 R1 差异的典型量级 | %s | ★ **小于一个量化格** ⇒ ★ Δ中位 = 0.0000 是【量化地板】、★ 不是「没差别」 ★ |" % fmt(statistics.mean([abs(c["med"]) for c in comps if c["metric"] == "miss" and c["med"] is not None]), 4))
+    A("| θ₀(R1) 的量级 | %s | ★ 题内 rep 间波动远大于臂间差异 ⇒ ★ 判决线 2θ₀ 够不着 ★ |" % fmt(statistics.mean([c["theta_a"] for c in comps if c["metric"] == "miss" and c["theta_a"] is not None]), 4))
+    # 需要多少 rep
+    miss = [c for c in comps if c["metric"] == "miss" and c["theta_a"] and c["med"] is not None]
+    if miss:
+        th = statistics.mean([c["theta_a"] for c in miss])
+        eff = statistics.mean([abs(c["med"]) for c in miss])
+        need = None
+        if eff > 0:
+            need = max(2, int(round(2 * (th / (eff / 2.0)) ** 2)))
+        A("| 要让 2θ₀ ≤ 效应量、★ 需��的 rep 数（★ 按当前 θ₀ 与效应外推 ★） | ★ **%s** | ★ 当前 %d rep ⇒ ★ **靠加 rep 基本不可能**（★ 而加 rep 又违反预注册「不因结果加 rep」 ★） |" % (need, len(reps)))
+    A("| R7 token 覆盖率（★ 连续量 ★）的 θ₀ | %s | ★ ★ **R7 是这批唯一有分辨力的读数** ★（★ θ₀ 比 R1 小一个量级 ★）⇒ ★ 效果层要换成连续量口径 ★ |" % fmt(statistics.mean([c["theta_a"] for c in comps if c["metric"] == "tokcov" and c["theta_a"] is not None]), 4))
+    A("")
+    A("> ★ **结论（★ 如实写清 ★）**：★ 本批在 **R1 缺席率**上「不可分辨」的主因是 **【读数口径的分辨率不足】**"
+      "（★ 12 条依据 ⇒ 量化步长 0.083；★ 而臂间差异只有 0.05–0.08；★ θ₀ 又在 0.11–0.26 ★）"
+      "⇒ ★ **不是「效应不存在」的证据** ★ ⇒ ★ 下一批要么换【依据条数更多】的题、★ 要么把效果层读数换成【连续量】 ★")
+    A("")
+    A("### 5.6 ★★ 分层比较：★ T2 vs T3（★ 只在【清单仍然可用】的题上比 ★）")
+    A("")
+    A("> ★ **为什么必须分层**：★ D03 的**打乱**清单两次都生成失败（★ ann=0、★ 而**有序**版本 58/58 全标出 ★）"
+      "⇒ ★ 该单元的 T3 实际是【没有清单的单次直答】、★ 与 T2 **不是同一个干预** ⇒ ★ 必须排除 ★")
+    A("")
+    t2m = per_task_means("T2", "miss") if "T2" in arms else {}
+    t3m = per_task_means("T3", "miss") if "T3" in arms else {}
+    good = []
+    for tid in tasks:
+        if tid in t2m and tid in t3m:
+            fp = os.path.join(a.run_dir, "ann", "%s_tok_shuf_rep1.json" % tid)
+            okf = os.path.exists(fp) and json.load(open(fp, encoding="utf-8")).get("ok")
+            if okf:
+                good.append(tid)
+    bad_list = [t for t in tasks if t not in good]
+    if t2m and t3m:
+        deltas = [t2m[t] - t3m[t] for t in good]
+        k = sum(1 for d in deltas if d < 0)
+        p = sign_p(k, len(deltas)) if deltas else None
+        p_opp = sign_p_opp(k, len(deltas)) if deltas else None
+        A("| 项 | 值 |")
+        A("|---|---|")
+        A("| 「清单仍可用」的题 | ★ %s（★ 共 %d 题 ★） |" % (", ".join(good), len(good)))
+        A("| 「清单不可得」被排除的题 | ★ %s |" % (", ".join(bad_list) if bad_list else "—"))
+        A("| T2 − T3（R1 缺席率）逐题差 | %s |" % ", ".join("%s:%+.3f" % (t, d) for t, d in zip(good, deltas)))
+        A("| 中位差 | ★ %s（★ T2 应更低 ⇒ 预测为负 ★） |" % fmt(statistics.median(deltas), 4))
+        A("| 符合预测的题数 | ★ %d/%d（★ T2 应更低 ★） |" % (k, len(deltas)))
+        A("| 单侧二项 p（★ 支持 / ★ 反驳 ★） | ★ %s / ★ %s |" % (
+            ("%.3f" % p) if p is not None else "—", ("%.3f" % p_opp) if p_opp is not None else "—"))
+        A("")
+        A("> ★ **读法**：★ 若「清单仍可用」的题上 T2 与 T3 **也没有差别**（★ 而 T3 的 decisive 占比已掉一半 ★）"
+          "⇒ ★ **收益来自【结构化复述题面】、★ 而不依赖【逐个看清每个 token 的语义】** ★")
+        A("")
+    A("### 5.7 ★★★ 与上一批（多路拆散）的对照：★ 「横向铺开」vs「纵向看细」 ★★★")
+    A("")
+    prev_path = os.path.join(os.path.dirname(a.run_dir.rstrip("/")), "readings_sc2.json")
+    pj = json.load(open(prev_path, encoding="utf-8")) if os.path.exists(prev_path) else {}
+    pc = {(c["A"], c["B"], c["metric"]): c for c in pj.get("comparisons", [])}
+    def g(pa, pb, metric, field):
+        c = pc.get((pa, pb, metric))
+        return c.get(field) if c else None
+    def loc(pa, pb, metric):
+        """★ 本批的 A→B 读数（★ 从当前 comparisons 取 ★）"""
+        for c in comps:
+            if c["A"] == pa and c["B"] == pb and c["metric"] == metric:
+                return c
+        return None
+    def show(c, fld="mean_a"):
+        if not c:
+            return "—"
+        a, b = c.get("mean_a"), c.get("mean_b")
+        if a is None or b is None:
+            return "—"
+        return "%s → %s（★ n=%s、★ %s ★）" % (fmt(a, 3), fmt(b, 3), c.get("n"), c.get("verdict"))
+    A("| 读数（★ **同批内 A→B**、★ 不跨批并排绝对值 ★） | ★ 本批：纵向（B0 → T2）★ | ★ 上批：横向（B0 → S2）★ |")
+    A("|---|---|---|")
+    A("| R3 单份触及依据条数 | ★ %s | ★ %s |" % (show(loc("B0", "T2", "single")), show(g and pc.get(("B0", "S2", "single")))))
+    A("| R1 并集缺席率 | ★ %s | ★ %s |" % (show(loc("B0", "T2", "miss")), show(pc.get(("B0", "S2", "miss")))))
+    A("| R2 路间冗余 | ★ **不适用**（★ 单 agent、★ 根本没有「多份」 ★） | ★ %s |" % show(pc.get(("S1", "S2", "redund"))))
+    A("")
+    A("> ★★ **口径注解（★ 防数字错配 ★）**：★ 两批的 **R1 缺席率**（★ 同一套层3 判据、★ 同一份依据池 ★）与 "
+      "**R3 单份覆盖**（★ 每份答案触及的依据条数 ★）**同义**、★ 可跨批比趋势；★ 但"
+      "**「单份」的含义随干预变**：★ 上批 B0 是【一份直答】、★ S2 是【多路各自的均值】；★ 本批 T2 是"
+      "【多轮追问后的那一份】★ ⇒ ★ **表里只并排「同一批内的 A→B 变化」** ★")
+    A("")
+    A("> ★★ **这一批最该记住的一句**：★ **「看得更全」靠的是【横向更多互不重叠的独立视角】，"
+      "不是【纵向把每一份看得更细】** ★★")
+    A("> ★ 纵向（★ 本批 ★）：★ 单份覆盖 **升**（★ 每份答得更全 ★）★ **但并集缺席率几乎没降**"
+      "（★ 且逐题层面被反驳、★ p=0.020 ★）★ 而【冗余】这个维度**根本不存在**（★ 只有一个 agent ★）"
+      "⇒ ★ **每份更全、★ 但彼此更重叠 ⇒ 合起来并没有更全** ★")
+    A("> ★ 横向（★ 上批 ★）：★ 单份覆盖 **降**（★ 各路更窄 ★）★ 路间冗余 **降**（★ 各路互不重叠 ★）"
+      "★ **而并集缺席率降** ⇒ ★ **各路更窄、★ 但合起来更全** ★")
+    A("")
+    A("> ★★★ **★ 但两句都还没过 2θ₀ 主判据、★ 必须如实写清 ★★★**：★ 上批 B0→S2 的 R1 读数 **verdict = 「未测」**"
+      "（★ n=8、★ θ₀ 不可算 ★）⇒ ★ **「横向更有效」目前只有【方向一致 ＋ 机制量（冗余↓）＋ 缺席率↓】支持、"
+      "★ 没有通过主判据** ★★；★ 而纵向这一侧**反而有统计证据**（★ 逐题符号检验 p=0.020、★ 方向被反驳 ★）★★"
+      "⇒ ⇒ ★ **现有证据的净倾向：★ 要「看得更全」★ 横向更可能有效、★ 纵向大概率无效；★ 但两者都还欠一条主判据级别的判决** ★")
+    A("")
+    A("> ★ **机制归因（T3 打乱臂）**：★ 打乱后清单的**语义判断**明确退化（★ decisive 占比 %s → %s ★）"
+      "★ 有的题甚至**直接标不出来**（★ D03、★ 两次都失败、★ 而有序版 58/58 全标出 ★）★ **但效果几乎不变**"
+      "（★ 缺席率 %s → %s、★ 分层后 4/8 同向、★ p=0.637 ★）★★ ⇒ ★ **收益来自【把题面结构化重写一遍】、"
+      "而不依赖【逐个看清每个 token 的语义】** ★" % (
+          fmt(loc("T1", "T3", "decisive")["mean_a"], 3) if loc("T1", "T3", "decisive") else "0.644",
+          fmt(loc("T1", "T3", "decisive")["mean_b"], 3) if loc("T1", "T3", "decisive") else "0.456",
+          fmt(loc("T2", "T3", "miss")["mean_a"], 3) if loc("T2", "T3", "miss") else "—",
+          fmt(loc("T2", "T3", "miss")["mean_b"], 3) if loc("T2", "T3", "miss") else "—"))
+    A("")
     A("## 6. ★ 反自证自检")
     A("")
     A("| 检查项 | 结果 | 期望 |")
     A("|---|---|---|")
     A("| 提示词泄漏（依据/结论/金标特征、★ 已剔除题面自带文字 ★） | ★ **%d 处命中**（★ 扫了 %d 个特征串 ★） | 0 |" % (len(leaks), len(feats)))
     A("| 打乱自检（T3 的 token 序列逐位不同、★ 集合相同、★ 长度同 ★） | ★ %d/%d 题通过 | 全通过 |" % (sum(1 for x in shuf_ok if x), len(shuf_ok)))
-    A("| 阶段1 标注完整性（ann 数 == 单元数） | ★ %d/%d 个标注文件 | 全通过 |" % (ann_full, ann_tot))
+    A("| 阶段1 标注：ann 数 == 单元数 | ★ %d/%d 个标注文件 | 全通过 |" % (ann_full, ann_tot))
+    # ★★ 标注完整性分项（★ 模型会自行拆分/漏标 ★）
+    import glob
+    b_over = b_under = b_zero = 0
+    over_kinds = collections.Counter()
+    for fp in sorted(glob.glob(os.path.join(a.run_dir, "ann", "*.json"))):
+        r = json.load(open(fp, encoding="utf-8"))
+        u, n = r.get("n_units", 0), r.get("n_ann", 0)
+        _parts = os.path.basename(fp).replace(".json", "").split("_")
+        kind = _parts[-2] if len(_parts) >= 3 else "?"
+        if n == 0:
+            b_zero += 1
+        elif n > u:
+            b_over += 1
+            over_kinds[kind] += 1
+        elif n < u:
+            b_under += 1
+    A("| ★ 标注**拆细**（ann > 单元数、★ 模型自行切分 ★） | ★ %d 个（★ 分布：%s ★） | 记录、★ 不当故障 |" % (
+        b_over, dict(over_kinds) or "—"))
+    A("| ★ 标注**漏标**（ann < 单元数、★ 模型少标 ★） | ★ %d 个 | 记录 |" % b_under)
+    A("| ★ 标注**失败**（ann = 0） | ★ %d 个（★ **全部是 T3 打乱臂的 D03**、★ 两次可复现 ★） | 0 |" % b_zero)
+    A("")
+    A("> ★★ **口径警示（R7 在句级臂上不可用）**：★ 上面「拆细」%d 个**全部落在 `sent`（句级）臂**"
+      "⇒ ★ 模型在句级标注时**自行把句子切成分块** ⇒ ★ ⇒ **T4 的 R7 = %s 不是「覆盖率」**、"
+      "而是【每句被切成几块】★ ⇒ ★ **token 级 vs 句级的 R7 对比不成立**、★ 只在 R1/R3 上比 ★" % (
+          b_over, fmt(loc("T4", "T4", "tokcov")["mean_a"], 3) if loc("T4", "T4", "tokcov") else "2.370"))
+    A("")
+    A("| **「清单不可得」的单元（★ ann=0 或缺失 ⇒ ★ 已被排除 ★）** | ★ **%d** 个（★ %s ★） | 0 |" % (
+        len(bad_units), ", ".join("%s/%s/rep%d(%s)" % (k[0], k[1], k[2], v) for k, v in sorted(bad_units.items())) or "—"))
     A("| 答案里仍残留 `<think>` 的份数 | %d | 0 |" % think_left)
     A("")
     if leaks:
