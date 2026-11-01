@@ -32,7 +32,13 @@ from llm2 import LLM2, QuotaExhausted, atomic_write_jsonl  # noqa: E402
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT_DIR = os.path.join(os.path.dirname(HERE), "runs_tokens")
-DEVSET_DEFAULT = "/workspace/work/devset/devset.json"
+# ★ 交付包自包含：★ 不硬编码绝对路径（★ 环境变量 > 同目录 > 上溯 > 沙箱兜底 ★）
+_HERE = os.path.dirname(os.path.abspath(__file__))
+try:
+    import paths as _PTH
+    DEVSET_DEFAULT = _PTH.find_devset()
+except Exception:
+    DEVSET_DEFAULT = os.path.join(_HERE, "..", "devset", "devset.json")
 
 SHUFFLE_SEED = 20261031
 

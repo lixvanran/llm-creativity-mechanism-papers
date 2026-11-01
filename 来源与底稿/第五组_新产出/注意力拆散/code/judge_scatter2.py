@@ -24,7 +24,12 @@ from concurrent.futures import ThreadPoolExecutor
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.dirname(HERE))
-sys.path.insert(0, "/workspace/work/l3/src")          # ★ 尺子路径（★ 仓内为 repro/src ★）
+# ★ 尺子路径（★ 四级查找、★ 不硬编码 /workspace ★）
+try:
+    import paths as _PTH
+    _PTH.ensure_l3_on_path()
+except Exception as _e:
+    print("★ 警告：★ 层3 路径解析失败（★ %s ★）" % _e)
 
 import measure as M                                    # noqa: E402
 import space as SP                                     # noqa: E402
@@ -68,11 +73,19 @@ def bullet_claims(text):
     return out
 
 
+def _find_devset():
+    try:
+        import paths as _P
+        return _P.find_devset()
+    except Exception:
+        return os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "devset", "devset.json")
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--answers", required=True)
     ap.add_argument("--out", required=True)
-    ap.add_argument("--devset", default="/workspace/work/devset/devset.json")
+    ap.add_argument("--devset", default=_find_devset())
     ap.add_argument("--max-workers", type=int, default=6)
     ap.add_argument("--limit", type=int, default=0)
     ap.add_argument("--fast", action="store_true", help="★ 只换传输层（关 thinking）、★ 判据本体不动 ★")

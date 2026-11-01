@@ -19,7 +19,15 @@ import unicodedata
 from collections import Counter, defaultdict
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-sys.path.insert(0, "/workspace/work/l3/src")
+# ★ 尺子路径（★ 四级查找、★ 不硬编码 /workspace ★）
+try:
+    import paths as _PTH
+    _PTH.ensure_l3_on_path()
+except Exception:
+    _H = os.path.dirname(os.path.abspath(__file__))
+    for _c in (os.path.join(_H, "l3", "src"), os.path.join(_H, "..", "l3", "src")):
+        if os.path.isfile(os.path.join(_c, "space.py")):
+            sys.path.insert(0, _c); break
 import space as SP                                    # noqa: E402
 
 TOKEN_RE = re.compile(r"[0-9A-Za-z]+|[一-鿿]{2,}")
@@ -184,13 +192,23 @@ def self_checks(answers, judged, jmap):
             "judge_rows": len(judged)}
 
 
+def _find_devset():
+    try:
+        import paths as _P
+        return _P.find_devset()
+    except Exception:
+        _H = os.path.dirname(os.path.abspath(__file__))
+        return os.path.join(_H, "..", "devset", "devset.json")
+
+
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--run-dir", default="/workspace/work/dims/runs_scatter2")
+    _HERE = os.path.dirname(os.path.abspath(__file__))
+    ap.add_argument("--run-dir", default=os.path.join(_HERE, "..", "runs_scatter2"))
     ap.add_argument("--run-id", default="sc2-v1")
-    ap.add_argument("--devset", default="/workspace/work/devset/devset.json")
-    ap.add_argument("--out", default="/workspace/work/dims/READINGS_拆散方式对照_2026-10-30.md")
-    ap.add_argument("--json-out", default="/workspace/work/dims/readings_sc2.json")
+    ap.add_argument("--devset", default=_find_devset())
+    ap.add_argument("--out", default=os.path.join(_HERE, "..", "READINGS_拆散方式对照_2026-10-30.md"))
+    ap.add_argument("--json-out", default=os.path.join(_HERE, "..", "readings_sc2.json"))
     a = ap.parse_args()
 
     dev = json.load(open(a.devset, encoding="utf-8"))

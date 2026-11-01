@@ -24,7 +24,8 @@ from collections import Counter, defaultdict
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
-sys.path.insert(0, "/workspace/work/l3/src")
+import paths as PTH                              # noqa: E402
+PTH.ensure_l3_on_path()                         # ★ 层3 路径（★ 四级查找、★ 不硬编码 ★）
 import space as SP                                     # noqa: E402
 from analyze_scatter2 import coarse_cover, theta0, med_ci, fmt   # noqa: E402
 import run_tokens as RT                                # noqa: E402
@@ -145,13 +146,13 @@ def tok_coverage(ann_dir, arms, reps, tasks):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--run-dir", default="/workspace/work/dims/runs_tokens")
+    ap.add_argument("--run-dir", default=os.path.join(HERE, "..", "runs_tokens"))
     ap.add_argument("--run-id", default="tk-v1")
-    ap.add_argument("--prev-dir", default="/workspace/work/dims/runs_scatter2")
+    ap.add_argument("--prev-dir", default=os.path.join(HERE, "..", "runs_scatter2"))
     ap.add_argument("--prev-id", default="sc2-v1")
-    ap.add_argument("--devset", default="/workspace/work/devset/devset.json")
-    ap.add_argument("--out", default="/workspace/work/dims/READINGS_逐token聚焦_2026-10-31.md")
-    ap.add_argument("--json-out", default="/workspace/work/dims/readings_tk.json")
+    ap.add_argument("--devset", default=PTH.find_devset())
+    ap.add_argument("--out", default=os.path.join(HERE, "..", "READINGS_逐token聚焦_2026-10-31.md"))
+    ap.add_argument("--json-out", default=os.path.join(HERE, "..", "readings_tk.json"))
     a = ap.parse_args()
 
     dev = json.load(open(a.devset, encoding="utf-8"))
